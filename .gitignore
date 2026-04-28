@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Streamlit secrets — NEVER commit
+.streamlit/secrets.toml
+
+# Local data cache (regenerated on each run)
+data/store/*.parquet
+data/store/*.csv
+
+# Misc
+.env
+*.log
