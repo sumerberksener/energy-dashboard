@@ -1,5 +1,10 @@
-"""Metric metadata. Single source of truth for the 5 dashboard metrics."""
+"""Metric metadata. Single source of truth for the 7 dashboard/brief metrics.
 
+The metric set is anchored to the brief's thesis: gas + carbon → power curve.
+Five primary metrics are fetched directly; two are derived (clean spark and
+clean dark spreads) — these are the bridge from gas/carbon fundamentals to
+the gas-fired and coal-fired generator economics that drive power pricing.
+"""
 from dataclasses import dataclass
 
 
@@ -12,7 +17,8 @@ class Metric:
     source: str
     definition: str
     color: str
-    higher_is: str  # "bullish-price" | "bearish-price" | "supply-rich" — for cross-metric reasoning
+    higher_is: str   # "bullish-power" | "bearish-power" | "supply-rich" — directional flag for the cross-commodity narrative
+    derived: bool = False
 
 
 METRICS: list[Metric] = [
@@ -25,55 +31,11 @@ METRICS: list[Metric] = [
         definition=(
             "TTF (Title Transfer Facility) is the European wholesale natural gas benchmark, "
             "traded at a virtual hub in the Netherlands. The front-month contract reflects "
-            "expected gas for next-month delivery and is the single most-watched price in "
-            "EU energy markets."
+            "expected gas for next-month delivery and is the dominant input to European "
+            "power generation cost."
         ),
         color="#f9e2af",
-        higher_is="bullish-price",
-    ),
-    Metric(
-        key="brent",
-        name="Brent Crude Front-Month",
-        short_name="Brent",
-        unit="USD/bbl",
-        source="ICE (via Yahoo Finance)",
-        definition=(
-            "Brent is the global oil price benchmark, derived from North Sea crude. The "
-            "front-month futures contract sets the reference for roughly two-thirds of "
-            "internationally traded crude and feeds into refined-product, freight, and "
-            "inflation pricing."
-        ),
-        color="#fab387",
-        higher_is="bullish-price",
-    ),
-    Metric(
-        key="eua",
-        name="EUA December Carbon Futures",
-        short_name="EUA Carbon",
-        unit="EUR/tCO₂",
-        source="ICE (via Yahoo Finance / stooq)",
-        definition=(
-            "European Union Allowances (EUA) are the carbon emission permits traded under "
-            "the EU Emissions Trading System. The December contract is the most liquid; the "
-            "price is a direct input to power-generation marginal cost and drives "
-            "coal-vs-gas fuel switching."
-        ),
-        color="#a6e3a1",
-        higher_is="bullish-price",
-    ),
-    Metric(
-        key="de_power",
-        name="German Day-Ahead Baseload Power",
-        short_name="DE Power",
-        unit="EUR/MWh",
-        source="ENTSO-E Transparency Platform",
-        definition=(
-            "The day-ahead auction sets the price for delivery of one MWh of electricity in "
-            "each hour of the next day. Germany's print is the most-watched in Europe — its "
-            "scale and fuel mix make it the de-facto continental power benchmark."
-        ),
-        color="#89b4fa",
-        higher_is="bullish-price",
+        higher_is="bullish-power",
     ),
     Metric(
         key="storage",
@@ -82,27 +44,121 @@ METRICS: list[Metric] = [
         unit="% full",
         source="GIE AGSI+",
         definition=(
-            "The fill level of EU gas storage facilities, aggregated across member states by "
-            "Gas Infrastructure Europe (AGSI+). Storage trajectory versus the 5-year "
-            "seasonal average is the single most-cited supply/demand balance signal in EU gas."
+            "Fill level of EU gas storage facilities, aggregated across member states by "
+            "Gas Infrastructure Europe (AGSI+). Storage trajectory vs the 5-year seasonal "
+            "average is the most-cited supply/demand balance signal in EU gas — and "
+            "feeds directly into TTF curve shape and winter-power risk."
         ),
         color="#cba6f7",
         higher_is="supply-rich",
+    ),
+    Metric(
+        key="coal",
+        name="API2 / Newcastle Thermal Coal Proxy",
+        short_name="Coal",
+        unit="USD/t",
+        source="ICE Newcastle (proxy via Yahoo Finance)",
+        definition=(
+            "Thermal coal benchmark used for the clean dark spread. API2 (Rotterdam, NAR "
+            "6000) is the canonical European reference; ICE Newcastle is used here as a "
+            "free-data proxy with documented basis. ~0.85 historical correlation with API2."
+        ),
+        color="#7f849c",
+        higher_is="bullish-power",
+    ),
+    Metric(
+        key="eua",
+        name="EUA December Carbon Futures",
+        short_name="EUA Carbon",
+        unit="EUR/tCO2",
+        source="ICE (via stooq / KRBN proxy)",
+        definition=(
+            "European Union Allowances (EUA) are the carbon emission permits traded under "
+            "the EU Emissions Trading System. The December contract is the most liquid "
+            "and is a direct input to power-generation marginal cost — driving coal-vs-gas "
+            "fuel switching and shaping the long end of the power curve."
+        ),
+        color="#a6e3a1",
+        higher_is="bullish-power",
+    ),
+    Metric(
+        key="de_power",
+        name="German Day-Ahead Baseload Power",
+        short_name="DE Power",
+        unit="EUR/MWh",
+        source="ENTSO-E Transparency Platform",
+        definition=(
+            "Day-ahead clearing price for one MWh in each hour of the next delivery day "
+            "in the German-Luxembourg bidding zone, averaged to a daily baseload print. "
+            "Germany is Europe's largest power market and the de-facto continental "
+            "front-curve benchmark."
+        ),
+        color="#89b4fa",
+        higher_is="bullish-power",
+    ),
+    Metric(
+        key="clean_spark",
+        name="Clean Spark Spread (CCGT, day-ahead)",
+        short_name="Clean Spark",
+        unit="EUR/MWh",
+        source="Derived (DE Power − TTF/η_gas − EUA × EF_gas)",
+        definition=(
+            "Margin of a 50%-efficient combined-cycle gas plant, net of carbon cost: "
+            "Power − Gas/η − Carbon × emission factor. When the clean spark is positive "
+            "and rising, gas-fired generation is in-the-money and gas is the marginal "
+            "European fuel — a regime in which TTF moves transmit directly into the power curve."
+        ),
+        color="#fab387",
+        higher_is="bullish-power",
+        derived=True,
+    ),
+    Metric(
+        key="clean_dark",
+        name="Clean Dark Spread (hard coal, day-ahead)",
+        short_name="Clean Dark",
+        unit="EUR/MWh",
+        source="Derived (DE Power − Coal/η_coal − EUA × EF_coal)",
+        definition=(
+            "Margin of a 40%-efficient hard coal plant, net of carbon cost: "
+            "Power − Coal/η − Carbon × emission factor. The dark-spark differential signals "
+            "fuel-switching: when CDS exceeds CSS, coal is cheaper to dispatch than gas, "
+            "shifting the power-curve sensitivity toward coal+carbon."
+        ),
+        color="#f38ba8",
+        higher_is="bullish-power",
+        derived=True,
     ),
 ]
 
 
 METRICS_BY_KEY: dict[str, Metric] = {m.key: m for m in METRICS}
+PRIMARY_KEYS: list[str] = [m.key for m in METRICS if not m.derived]
+DERIVED_KEYS: list[str] = [m.key for m in METRICS if m.derived]
 
 
-# Signal thresholds — kept here so they're tweakable without touching logic.
-PERCENTILE_HIGH = 90  # ≥ this → "historically high"
-PERCENTILE_LOW = 10   # ≤ this → "historically low"
-SIGMA_EXTENDED = 2.0  # |price - 50dMA| / σ ≥ this → "extended"
-ZSCORE_OUTSIZED = 2.0  # |daily move| / σ ≥ this → "outsized move"
+# --- Spread parameters ------------------------------------------------------
+# Industry-standard CCGT and hard-coal plant assumptions. Documented here so
+# they're auditable from a single place.
 
-# Lookback window for percentile / z-score calcs.
+GAS_EFFICIENCY = 0.50           # η for modern CCGT
+GAS_EMISSION_FACTOR = 0.184     # tCO2 per MWh_thermal (natural gas combustion)
+
+COAL_EFFICIENCY = 0.40          # η for modern hard-coal plant
+COAL_EMISSION_FACTOR = 0.34     # tCO2 per MWh_thermal (hard coal NAR 6000)
+COAL_CALORIFIC_MWH_PER_T = 6.978  # 25.12 GJ/t × 0.27778 MWh/GJ → MWh_thermal per tonne
+
+
+# --- Signal thresholds ------------------------------------------------------
+PERCENTILE_HIGH = 90
+PERCENTILE_LOW = 10
+SIGMA_EXTENDED = 2.0
+ZSCORE_OUTSIZED = 2.0
+
 HISTORY_YEARS = 5
+CACHE_TTL_SECONDS = 60 * 60
 
-# Cache TTLs.
-CACHE_TTL_SECONDS = 60 * 60  # 1 hour
+
+# --- Submission identity ----------------------------------------------------
+AUTHOR_NAME = "Sumer Sener"
+AUTHOR_EMAIL = "sumerberksener@gmail.com"
+SUBMISSION_TITLE = "European Cross-Commodity Risk Pack: Gas + Carbon → Power Curve Implications"

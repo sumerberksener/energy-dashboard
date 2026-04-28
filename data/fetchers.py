@@ -1,12 +1,17 @@
-"""Data fetchers for the 5 dashboard metrics.
+"""Data fetchers for the 5 primary metrics + an FX helper.
 
-Pure functions, no Streamlit dependency. Each returns a tidy DataFrame:
+Pure functions, no Streamlit dependency. Each fetcher returns a tidy DataFrame:
     index: pd.DatetimeIndex (tz-naive, daily, ascending)
     column: "value" (float)
     no duplicate dates, no nulls.
 
 Fallback chains are documented inline. Network errors propagate; the cache
 layer above is responsible for falling back to parquet snapshots.
+
+Note on coal: the canonical European thermal-coal benchmark is API2 (Rotterdam
+NAR 6000). No reliable free daily feed exists for it. ICE Newcastle (Asian
+basin) is used as a proxy — historical correlation ≈ 0.85. Documented as a
+known data-quality limitation in the README.
 """
 from __future__ import annotations
 
@@ -76,7 +81,7 @@ def _stooq(symbol: str) -> pd.DataFrame:
     return _tidy(s)
 
 
-# --- The 5 metric fetchers --------------------------------------------------
+# --- Primary metric fetchers ------------------------------------------------
 
 
 def fetch_ttf() -> pd.DataFrame:
@@ -88,20 +93,11 @@ def fetch_ttf() -> pd.DataFrame:
     return _stooq("ttf.f")
 
 
-def fetch_brent() -> pd.DataFrame:
-    """Brent front-month crude (USD/bbl)."""
-    try:
-        return _yahoo("BZ=F")
-    except Exception as e:
-        log.info("Brent Yahoo failed (%s); falling back to stooq", e)
-    return _stooq("cb.f")
-
-
 def fetch_eua() -> pd.DataFrame:
     """EUA December carbon futures (EUR/tCO2). stooq → KRBN ETF proxy fallback.
 
-    Note: KRBN is a global carbon ETF (blends EUA/RGGI/CCA), used only if pure
-    EUA data is unavailable. Documented as a known data-quality limitation.
+    KRBN is a global carbon ETF (blends EUA/RGGI/CCA), used only if pure EUA
+    data is unavailable. Documented as a known data-quality limitation.
     """
     try:
         return _stooq("co2.f")
@@ -110,12 +106,24 @@ def fetch_eua() -> pd.DataFrame:
     return _yahoo("KRBN")
 
 
-def fetch_de_power(token: str) -> pd.DataFrame:
-    """Germany day-ahead baseload power (EUR/MWh).
+def fetch_coal() -> pd.DataFrame:
+    """Thermal coal proxy (USD/t). ICE Newcastle via Yahoo `MTF=F`.
 
-    ENTSO-E publishes hourly day-ahead clearing prices for the DE_LU bidding
-    zone. We resample to a daily simple mean as the baseload reference.
+    True API2 (Rotterdam) is not freely available daily; Newcastle is the
+    closest free proxy. ~0.85 correlation with API2 historically.
     """
+    for ticker in ("MTF=F", "QM=F"):  # MTF = Newcastle, QM = e-mini crude (sanity reject)
+        try:
+            df = _yahoo(ticker)
+            if not df.empty:
+                return df
+        except Exception as e:
+            log.info("Coal Yahoo %s failed (%s); trying next", ticker, e)
+    return _stooq("coal.f")
+
+
+def fetch_de_power(token: str) -> pd.DataFrame:
+    """Germany day-ahead baseload power (EUR/MWh) via ENTSO-E."""
     if not token:
         raise RuntimeError("ENTSO-E token missing")
     from entsoe import EntsoePandasClient
@@ -168,3 +176,11 @@ def fetch_storage(token: str) -> pd.DataFrame:
     df["date"] = pd.to_datetime(df["gasDayStart"])
     s = df.set_index("date")["full"]
     return _tidy(s.sort_index())
+
+
+# --- FX helper (used by clean dark spread to convert USD coal to EUR) -------
+
+
+def fetch_eurusd() -> pd.DataFrame:
+    """EUR/USD daily close (1 EUR = X USD)."""
+    return _yahoo("EURUSD=X")

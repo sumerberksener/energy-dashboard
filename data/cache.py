@@ -6,6 +6,10 @@ Two-tier strategy:
    fallback if a live fetch fails (API down, token missing, network blip).
    When a snapshot is served, df.attrs["is_stale"] = True and the UI shows
    a "stale" badge.
+
+Five primary metrics are fetched directly. Two derived metrics — clean spark
+and clean dark spreads — are computed by analysis.derived from the primaries.
+get_all_with_derived() returns the full 7-metric dict.
 """
 from __future__ import annotations
 
@@ -16,7 +20,8 @@ from typing import Callable
 import pandas as pd
 import streamlit as st
 
-from config import CACHE_TTL_SECONDS
+from analysis import derived as derived_metrics
+from config import CACHE_TTL_SECONDS, PRIMARY_KEYS
 from data import fetchers
 
 log = logging.getLogger(__name__)
@@ -66,7 +71,6 @@ def _safe(key: str, fn: Callable[..., pd.DataFrame], *args, **kwargs) -> pd.Data
             snap.attrs["source"] = "snapshot"
             snap.attrs["error"] = str(e)
             return snap
-        # No snapshot and live fetch failed — return an empty df with metadata.
         empty = pd.DataFrame(columns=["value"], index=pd.DatetimeIndex([], name="date"))
         empty.attrs["is_stale"] = True
         empty.attrs["source"] = "empty"
@@ -87,13 +91,13 @@ def get_ttf() -> pd.DataFrame:
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
-def get_brent() -> pd.DataFrame:
-    return _safe("brent", fetchers.fetch_brent)
+def get_eua() -> pd.DataFrame:
+    return _safe("eua", fetchers.fetch_eua)
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
-def get_eua() -> pd.DataFrame:
-    return _safe("eua", fetchers.fetch_eua)
+def get_coal() -> pd.DataFrame:
+    return _safe("coal", fetchers.fetch_coal)
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
@@ -106,21 +110,42 @@ def get_storage() -> pd.DataFrame:
     return _safe("storage", fetchers.fetch_storage, _secret("AGSI_TOKEN"))
 
 
-GETTERS = {
+@st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
+def get_eurusd() -> pd.DataFrame:
+    return _safe("eurusd", fetchers.fetch_eurusd)
+
+
+PRIMARY_GETTERS = {
     "ttf": get_ttf,
-    "brent": get_brent,
+    "storage": get_storage,
+    "coal": get_coal,
     "eua": get_eua,
     "de_power": get_de_power,
-    "storage": get_storage,
 }
 
 
-def get_all() -> dict[str, pd.DataFrame]:
-    """Fetch all 5 metrics. Returns dict keyed by metric.key."""
-    return {k: g() for k, g in GETTERS.items()}
+def get_primaries() -> dict[str, pd.DataFrame]:
+    return {k: g() for k, g in PRIMARY_GETTERS.items()}
+
+
+def get_all_with_derived() -> dict[str, pd.DataFrame]:
+    """Fetch all 5 primaries + compute the 2 derived spreads. Returns 7-metric dict."""
+    primaries = get_primaries()
+    eurusd = get_eurusd()
+
+    cs = derived_metrics.clean_spark_spread(
+        primaries["de_power"], primaries["ttf"], primaries["eua"]
+    )
+    cd = derived_metrics.clean_dark_spread(
+        primaries["de_power"], primaries["coal"], primaries["eua"], eurusd
+    )
+
+    out = dict(primaries)
+    out["clean_spark"] = cs
+    out["clean_dark"] = cd
+    return out
 
 
 def clear_cache() -> None:
-    """Hook for the refresh button."""
-    for g in GETTERS.values():
+    for g in (*PRIMARY_GETTERS.values(), get_eurusd):
         g.clear()

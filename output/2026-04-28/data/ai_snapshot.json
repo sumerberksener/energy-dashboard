@@ -1,0 +1,56 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 9th-percentile of 5-yr range \u2014 historically low.",
+  "metrics": {
+    "clean_dark": {
+      "available": false
+    },
+    "clean_spark": {
+      "available": false
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "extension_50d_sigma": 0.18,
+      "headline": "9th-percentile of 5-yr range \u2014 historically low",
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 9.0,
+      "unit": "USD/t",
+      "weekly_change_pct": -1.03
+    },
+    "de_power": {
+      "available": false
+    },
+    "eua": {
+      "as_of": "2026-04-27",
+      "available": true,
+      "daily_change_pct": 1.06,
+      "extension_50d_sigma": 1.88,
+      "headline": "Within typical range",
+      "latest": 31.53,
+      "monthly_change_pct": 7.72,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 26.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.67
+    },
+    "storage": {
+      "available": false
+    },
+    "ttf": {
+      "as_of": "2026-04-27",
+      "available": true,
+      "daily_change_pct": -0.48,
+      "extension_50d_sigma": -0.13,
+      "headline": "Within typical range",
+      "latest": 44.65,
+      "monthly_change_pct": -19.15,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 59.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 10.81
+    }
+  }
+}

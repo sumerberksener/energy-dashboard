@@ -1,133 +1,179 @@
-# EU Energy Markets — Morning Brief
+# European Cross-Commodity Risk Pack
 
-A 5-minute morning briefing for an energy trader: today's prints on the five most-watched EU energy metrics, 5-year history, and rule-based observations.
+**Gas + Carbon → Power Curve Implications**
 
-> **🔗 Live demo:** _add your Streamlit Community Cloud URL here once deployed_
->
-> **📸 Screenshot:** _add `screenshot.png` to the repo and embed it here once the app is running with real data_
+Author: **Sumer Sener** · sumerberksener@gmail.com
+Submission for: Cobblestone Energy case study
+Repository: this folder
+
+> An automated cross-commodity monitor that converts public EU gas and carbon fundamentals into a repeatable, AI-narrated daily desk note for European power. Designed to be desk-usable on day one and a foundation the trader can extend.
 
 ---
 
-## What it does
+## How this maps to the brief
 
-- **Today, at a glance.** Five metric cards across the top show the latest print, daily change, a 30-day sparkline, and a rule-based "headline" tag (historically high / extended / outsized move / well-supplied / etc.).
-- **5-year context.** A tab per metric drills into a Plotly chart with the 50-day moving average, 10–90th-percentile band, and a stats table (1d/1w/1m/1y change, 5y high/low, percentile rank).
-- **Morning brief paragraph.** The sidebar surfaces the 3 most-extreme signals across all five metrics in plain language — a one-glance summary the trader can scan in seconds.
-- **Trader-friendly definitions.** Each metric has a 1–2 sentence explanation of what it is and why it matters, so a desk newcomer can ramp up without reading research notes.
-- **Resilient to flaky data.** Each fetcher has a documented fallback chain. If a live fetch fails, the dashboard falls back to a cached parquet snapshot and shows a "stale" badge instead of going blank.
+| Brief deliverable | Where it lives in this repo |
+|---|---|
+| **Fundamentals view** — 1–3 page desk note covering gas tightness, carbon signal, and power-curve implications, with numbers + ≥2 charts | `output/<date>/desk_note_<date>.md` (auto-generated). Sample committed in `output/`. |
+| **Monitor metrics** — 5–8 daily metrics tied to gas, carbon, and power-curve risk | `config.py` defines the 7-metric set. Live view: top row of `app.py`. Tabular form: `output/<date>/data/snapshot.csv`. |
+| **Automation** — runnable Python script that pulls public data, cleans it, generates charts, writes a daily brief | `scripts/generate_brief.py` — single-command CLI (no Streamlit dependency). Cron-scheduled in `.github/workflows/daily.yml`. |
+| **AI/LLM integration** — code-integrated AI workflow with logged prompts and outputs that structures inputs and/or produces a metrics-grounded narrative | `ai/` module: `client.py` wraps Anthropic SDK with append-only JSONL logging; `narrative.py` builds a structured snapshot and asks Claude (Haiku 4.5) to write the executive summary. Prompts versioned in `ai/prompts/`. Logs in `ai/logs/`. |
 
-## The 5 metrics
+## The seven metrics
+
+The set is anchored to the brief's thesis — **four price benchmarks, one fundamental, two derived spreads** that bridge gas + carbon → power.
 
 | # | Metric | Unit | Source (free) | Why it matters |
 |---|---|---|---|---|
-| 1 | **TTF Front-Month Natural Gas** | EUR/MWh | Yahoo Finance → stooq | The European wholesale gas benchmark — the single most-watched price in EU energy markets. |
-| 2 | **Brent Crude Front-Month** | USD/bbl | Yahoo Finance → stooq | The global oil benchmark; sets cross-commodity tone, refined-product economics, and inflation pricing. |
-| 3 | **EUA December Carbon Futures** | EUR/tCO₂ | stooq → KRBN proxy | EU ETS carbon price; direct input to power-generation marginal cost; drives coal-vs-gas fuel switching. |
-| 4 | **German Day-Ahead Baseload Power** | EUR/MWh | ENTSO-E Transparency Platform | Europe's largest power market and de-facto continental power benchmark. |
-| 5 | **EU Aggregate Gas Storage** | % full | GIE AGSI+ | Daily fundamentals signal — storage trajectory vs the 5-year seasonal average is the most-cited supply/demand balance indicator. |
+| 1 | **TTF Front-Month Gas** | EUR/MWh | Yahoo Finance · stooq | The European wholesale gas benchmark; dominant input to power-generation cost. |
+| 2 | **EU Aggregate Gas Storage** | % full | GIE AGSI+ | Daily fundamentals balance signal — storage trajectory vs the 5-yr seasonal average is the most-cited gas balance indicator. |
+| 3 | **API2 / Newcastle Coal (proxy)** | USD/t | ICE Newcastle (Yahoo) | Thermal coal benchmark used in clean dark spread. Newcastle is the cleanest free proxy for API2 (~0.85 historical correlation; documented limitation). |
+| 4 | **EUA December Carbon** | EUR/tCO₂ | stooq · KRBN proxy | EU ETS carbon price — direct input to power generation marginal cost; drives coal-vs-gas fuel switching. |
+| 5 | **German Day-Ahead Baseload Power** | EUR/MWh | ENTSO-E Transparency Platform | Europe's largest power market — the de-facto continental front-curve benchmark. |
+| 6 | **Clean Spark Spread (CCGT, day-ahead)** | EUR/MWh | _Derived_ | Gas-fired margin: P − G/η_gas − C × EF_gas. The bridge from TTF + EUA to gas-plant economics. |
+| 7 | **Clean Dark Spread (hard coal, day-ahead)** | EUR/MWh | _Derived_ | Coal-fired margin: P − Coal/η_coal − C × EF_coal. The dark/spark differential is the single best fuel-switching indicator. |
 
-The mix is deliberate: four price benchmarks (gas, oil, carbon, power) plus one fundamental (storage), giving the trader both market-action and balance signals at a glance.
+Plant assumptions (η_gas=0.50, η_coal=0.40, EF_gas=0.184, EF_coal=0.34 t/MWh_th) live in `config.py` and are auditable at a glance.
 
-## Architecture
+## Repository structure
 
 ```
 energy-dashboard/
-├── app.py                  # Streamlit entrypoint — page layout
-├── config.py               # Metric metadata & signal thresholds
+├── app.py                          # Streamlit interactive dashboard
+├── config.py                       # 7-metric registry, signal thresholds, plant assumptions
 ├── data/
-│   ├── fetchers.py         # 5 fetch functions (no Streamlit dep)
-│   ├── cache.py            # @st.cache_data wrappers + parquet fallback
-│   └── store/              # parquet snapshots (gitignored)
+│   ├── fetchers.py                 # 5 primary fetchers + EUR/USD helper (no Streamlit dep)
+│   ├── cache.py                    # @st.cache_data + parquet snapshots + derived assembly
+│   └── store/                      # parquet snapshots (gitignored)
 ├── analysis/
-│   ├── stats.py            # rolling MA, percentile rank, z-score, etc.
-│   └── signals.py          # rule-based observations + morning brief
-├── ui/
-│   ├── cards.py            # top-row metric cards w/ sparklines
-│   ├── charts.py           # 5-yr Plotly charts + stats tables
-│   └── brief.py            # sidebar morning-brief panel
-├── tests/
-│   └── test_fetchers.py    # live-API smoke tests
-└── .streamlit/
-    ├── config.toml         # dark theme
-    └── secrets.toml.example
+│   ├── stats.py                    # rolling MA, percentile rank, z-score, seasonal deviation
+│   ├── derived.py                  # clean spark / clean dark spread formulas
+│   └── signals.py                  # rule-based observations + aggregate morning brief
+├── ai/
+│   ├── client.py                   # Anthropic SDK wrapper + JSONL prompt/response logging
+│   ├── narrative.py                # structured-snapshot builder + Claude call + fallback
+│   ├── prompts/desk_note_v1.md     # versioned system prompt
+│   └── logs/                       # append-only JSONL request logs (committed by CI)
+├── ui/                             # Streamlit components: cards, charts, sidebar brief
+├── scripts/
+│   └── generate_brief.py           # 🔑 the headless automation — runs the full pipeline
+├── tests/test_fetchers.py          # live-API smoke tests
+├── output/<YYYY-MM-DD>/
+│   ├── desk_note_<date>.md         # 🔑 the daily deliverable
+│   ├── data/snapshot.csv           # pivot of latest values across metrics
+│   ├── data/ai_snapshot.json       # exact JSON payload sent to Claude
+│   ├── data/<metric>.csv           # full 5-yr history per metric
+│   └── charts/*.png                # 3 generated charts referenced by the note
+├── .github/workflows/daily.yml     # cron-scheduled generation + commit
+├── .streamlit/                     # theme + secrets template
+└── requirements.txt
 ```
 
-The codebase intentionally separates concerns: `data/` knows nothing about Streamlit, `analysis/` is pure pandas/numpy, and `ui/` is the only layer that talks to Streamlit. This separation is what makes the planned ML/NLP extensions (see Roadmap) drop-in additions instead of rewrites.
+The codebase splits cleanly into four layers — `data/` knows nothing about Streamlit, `analysis/` is pure pandas/numpy, `ai/` is pure Anthropic SDK, `ui/` and `app.py` are the only Streamlit-aware code. This separation is what lets the same fetchers + analysis power both the interactive dashboard and the headless CLI.
 
-## Run locally
+## Run it
 
-You'll need free API tokens for ENTSO-E and GIE AGSI+ (both take ~2 minutes).
+You'll need three free credentials (each takes ~2 minutes to set up):
 
-1. **Get tokens** (one-time):
-   - ENTSO-E: register at <https://transparency.entsoe.eu/> → My Account Settings → Generate token.
-   - AGSI+: register at <https://agsi.gie.eu/account>.
+| What | Where to get it |
+|---|---|
+| ENTSO-E token | <https://transparency.entsoe.eu> → My Account Settings → Generate token |
+| GIE AGSI+ token | <https://agsi.gie.eu/account> |
+| Anthropic API key | <https://console.anthropic.com> · the daily run uses Claude Haiku 4.5 (~$0.001 per call) |
 
-2. **Clone & install:**
-   ```bash
-   git clone <your-repo-url>
-   cd energy-dashboard
-   python -m venv .venv && source .venv/bin/activate
-   pip install -r requirements.txt
-   ```
+```bash
+git clone <your-repo-url>
+cd energy-dashboard
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 
-3. **Set secrets:**
-   ```bash
-   cp .streamlit/secrets.toml.example .streamlit/secrets.toml
-   # edit .streamlit/secrets.toml and paste your tokens
-   ```
+# Set credentials (or put them in .streamlit/secrets.toml for the dashboard)
+export ENTSOE_TOKEN=...
+export AGSI_TOKEN=...
+export ANTHROPIC_API_KEY=...
+```
 
-4. **Run:**
-   ```bash
-   streamlit run app.py
-   ```
-   Open <http://localhost:8501>. First load takes 20–30 seconds while the five fetchers populate the local parquet cache; subsequent loads are instant.
+### Generate today's desk note (CLI)
 
-## Deploy to Streamlit Community Cloud
+```bash
+python scripts/generate_brief.py
+```
 
-1. Push this repo to GitHub (public or private).
-2. Sign in at <https://share.streamlit.io> with your GitHub account.
-3. Click **Create app** → pick this repo → branch `main` → main file `app.py`.
-4. Click **Advanced settings → Secrets** and paste:
-   ```toml
-   ENTSOE_TOKEN = "..."
-   AGSI_TOKEN   = "..."
-   ```
-5. Deploy. The app sleeps after ~7 days of inactivity; first wake takes ~10 seconds.
+Writes everything under `output/<today>/` — the markdown desk note, three chart PNGs, per-metric CSVs, the JSON payload sent to the AI, and (if `ANTHROPIC_API_KEY` is set) a log entry in `ai/logs/<today>.jsonl`. Designed to be cron-scheduled — the GitHub Actions workflow at `.github/workflows/daily.yml` runs it weekday mornings and commits the artifacts.
 
-## Run the tests
+### Open the interactive dashboard
+
+```bash
+streamlit run app.py
+```
+
+Same data, interactive view: 7 metric cards across the top, a tab per metric with 5-year Plotly charts and stats, and an "AI Desk Note" pane that re-runs the Claude narrative on demand.
+
+### Run the tests
 
 ```bash
 pytest -q tests/test_fetchers.py
 ```
 
-Tests hit live APIs and skip gracefully when offline or when a token isn't set in env vars (`ENTSOE_TOKEN`, `AGSI_TOKEN`).
+Live-API smoke tests; skip gracefully when offline or when tokens aren't set.
 
-## Roadmap
+## AI workflow
 
-The current release is **v0.1**: rule-based observations, no forecasting. The architecture is built to make each next step a self-contained addition rather than a rewrite.
+The AI integration is intentionally narrow — Claude generates the executive-summary paragraph, grounded in a structured numeric snapshot the code produces. This minimises hallucination risk while delivering a measurable productivity gain for the analyst.
 
-| Version | Theme | What ships |
-|---------|-------|------------|
-| **v0.2** | Hands-off mornings | Daily auto-refresh via GitHub Actions cron + emailed morning-brief PDF. |
-| **v0.3** | News awareness | Headline ingestion (Reuters / Bloomberg / Argus RSS) + per-metric sentiment scoring. |
-| **v0.4** | Forecasting | Directional next-day price model (logistic regression baseline → gradient boosting → LSTM). UI displays predicted direction with calibrated confidence. |
-| **v0.5** | NLP trade ideas | Fine-tune a small LM on energy news to extract themes and surface candidate trade ideas with rationale. |
-| **v0.6** | Backtesting | A backtesting harness that replays signals against historical PnL on a simple long/short rule, so signal quality is measured rather than asserted. |
+```
+fetchers + derived ──▶ structured snapshot (JSON) ──▶ Claude (Haiku 4.5)
+                                  │                          │
+                                  └─→ committed as           └─→ paragraph,
+                                      ai_snapshot.json            logged to JSONL
+                                      (auditable input)            (auditable I/O)
+```
+
+- **Versioned prompt**: `ai/prompts/desk_note_v1.md`. Hard rules: cite only numbers from input, no forecasts, 3–5 sentences ending on power-curve implication.
+- **Logged**: every call appends a record to `ai/logs/<date>.jsonl` with timestamp, model, prompt SHA-256, full prompt + response text, token usage, latency, and any errors. The log is the auditable record of what the AI said and why.
+- **Graceful fallback**: when `ANTHROPIC_API_KEY` is missing or the API call fails, a deterministic rule-based narrative is emitted from the same snapshot. The pipeline always produces output.
+- **Cost**: with Haiku 4.5 input/output pricing, a daily call is fractions of a cent. Prompt caching is _not_ used because the system prompt sits below Haiku's 4096-token cacheable prefix; documented in `ai/client.py` for future scaling.
+
+## Automation
+
+`scripts/generate_brief.py` is the unattended workflow. It:
+
+1. Fetches all 5 primaries + EUR/USD (parallel-safe — each fetcher has a documented fallback chain)
+2. Computes the clean spark / clean dark spreads from primaries
+3. Writes per-metric CSVs and a snapshot pivot
+4. Generates three Matplotlib charts (headless `Agg` backend)
+5. Builds the JSON snapshot, calls Claude, logs the round trip
+6. Composes the Markdown desk note, embedding the charts and the AI narrative
+
+`.github/workflows/daily.yml` runs the script at 07:30 UTC on weekdays via GitHub Actions, then commits the new artifacts back to the repo with `[skip ci]`. Configure repo secrets `ENTSOE_TOKEN`, `AGSI_TOKEN`, `ANTHROPIC_API_KEY` to enable the live run.
+
+## Evaluation crosswalk
+
+| Brief criterion | Evidence in this repo |
+|---|---|
+| Fundamental reasoning & market intuition | The 7-metric set is curated for the gas+carbon→power thesis (not a generic dashboard). Clean spark/dark spreads are first-class metrics, not afterthoughts. The desk note explicitly synthesises gas + carbon + spreads → curve implication in section 5. |
+| Desk relevance & clarity of metrics | Each metric has a 1–2 sentence trader-facing definition in `config.py`. Headlines use trading-desk vocabulary ("tight", "in-the-money", "extended"). Cross-market regime tag fires when TTF + storage co-move. |
+| Automation robustness & reproducibility | Single-command CLI · headless (no Streamlit dep) · graceful fallback per fetcher · parquet snapshot fallback · GitHub Actions cron · pinned dependencies · committed sample output. |
+| Communication quality | Markdown desk note: TL;DR → metrics table → 3 themed sections (gas, carbon, power-curve) → methodology → disclaimer. Embedded charts. Numbers always paired with "what it means". |
+| AI/LLM leverage as measurable productivity gain | The AI replaces the analyst's daily 5-minute paragraph-writing task. Prompts are versioned and logged so the workflow is auditable, not magic. Fallback ensures continuity when the API is unavailable. Cost is measurable per call (~ fractions of a cent on Haiku 4.5). |
 
 ## Honest limitations
 
-- **EUA free-data quality is the weakest link.** Stooq's `co2.f` is the cleanest free proxy I've found for ICE EUA December; if it fails, the fallback `KRBN` ETF blends EUA with RGGI and CCA — useful directionally but not a clean EUA print. A paid feed would resolve this.
-- **No intraday data.** Daily granularity by design — the trader uses this as a morning summary, not a live blotter.
-- **Observations are rule-based, not predictive.** Calling them "suggestions" would overstate the rigor; they're descriptive flags. The Roadmap lays out where forecasting actually lives.
-- **No backtesting yet.** Until v0.6, signal quality is asserted by construction, not measured.
+- **API2 coal**: no reliable free daily feed exists. ICE Newcastle is used as a proxy (~0.85 correlation). A paid feed (Argus, Refinitiv) would resolve this. Documented in `data/fetchers.py` and the markdown methodology.
+- **EUA**: free EUA front-Dec data is brittle. Stooq's `co2.f` is the cleanest path; KraneShares KRBN ETF is a blended fallback (EUA + RGGI + CCA). Direction-correct but not a clean EUA print.
+- **Power curve**: ENTSO-E exposes day-ahead, not Cal+1 forwards. The day-ahead is treated as the front of the curve; Cal+1 implications are inferred qualitatively from the spread regime. A paid EEX feed would unlock proper curve work.
+- **Phase 1 = rule-based + AI narrative.** No forecasting model yet. The architecture is built so v0.2 (next-day directional model on technical features) and v0.3 (RSS news ingestion + sentiment) drop in cleanly without rewrites.
 
-## Data sources
+## Roadmap (next two weeks)
 
-- ICE TTF & Brent futures via [Yahoo Finance](https://finance.yahoo.com) and [stooq.com](https://stooq.com)
-- ICE EUA carbon via stooq
-- German day-ahead power via the [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/)
-- EU gas storage via [GIE AGSI+](https://agsi.gie.eu/)
+| Version | Theme | Ships |
+|---|---|---|
+| v0.2 | News awareness | RSS ingestion (Reuters / Argus / ICIS) + Claude-driven theme extraction; surfaced as "today's headlines" in the brief. |
+| v0.3 | Forecasting | Directional next-day model on technical features (logistic regression baseline → gradient boosting). Calibrated confidence in the brief. |
+| v0.4 | Backtesting | Replay rule-based + ML signals against historical PnL on a simple long/short. Signal quality measured, not asserted. |
+| v0.5 | NLP trade ideas | Fine-tune a small LM on energy news; surface candidate trade ideas with rationale + cited sources. |
 
-## Disclaimer
+## License & disclaimer
 
-This dashboard is informational. Rule-based observations are descriptive flags computed from public market data and are **not investment advice, not a recommendation, and not a forecast**. Always do your own analysis.
+Code: MIT-style open source.
+Observations and the AI-generated narrative are informational and **not investment advice**. Always do your own analysis.
