@@ -1,0 +1,96 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 9th-percentile of 5-yr range \u2014 historically low; Clean Spark \u2014 91th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 12.1 pp below the 5-yr seasonal average.",
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_pct": -1.97,
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "latest": 27.95,
+      "monthly_change_pct": 44.97,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -27.36
+    },
+    "clean_spark": {
+      "as_of": "2026-05-05",
+      "available": true,
+      "daily_change_pct": 53.31,
+      "extension_50d_sigma": 1.48,
+      "headline": "91th-percentile of 5-yr range \u2014 historically high",
+      "latest": 35.41,
+      "monthly_change_pct": -11.5,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 91.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -212.36
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "extension_50d_sigma": 0.18,
+      "headline": "9th-percentile of 5-yr range \u2014 historically low",
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 9.0,
+      "unit": "USD/t",
+      "weekly_change_pct": -1.03
+    },
+    "de_power": {
+      "as_of": "2026-05-05",
+      "available": true,
+      "daily_change_pct": 9.39,
+      "extension_50d_sigma": 1.5,
+      "headline": "Within typical range",
+      "latest": 143.42,
+      "monthly_change_pct": 3.86,
+      "name": "DE Power",
+      "percentile_rank_5y": 77.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 99.02
+    },
+    "eua": {
+      "as_of": "2026-05-04",
+      "available": true,
+      "daily_change_pct": 0.82,
+      "extension_50d_sigma": 1.81,
+      "headline": "Within typical range",
+      "latest": 31.87,
+      "monthly_change_pct": 8.33,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 29.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.08
+    },
+    "storage": {
+      "as_of": "2026-05-04",
+      "available": true,
+      "daily_change_pct": 0.83,
+      "extension_50d_sigma": 2.45,
+      "headline": "12.1 pp below the 5-yr seasonal average",
+      "latest": 34.07,
+      "monthly_change_pct": 15.41,
+      "name": "EU Storage",
+      "percentile_rank_5y": 10.0,
+      "unit": "% full",
+      "weekly_change_pct": 4.86
+    },
+    "ttf": {
+      "as_of": "2026-05-04",
+      "available": true,
+      "daily_change_pct": 5.19,
+      "extension_50d_sigma": 0.13,
+      "headline": "Within typical range",
+      "latest": 48.14,
+      "monthly_change_pct": -3.8,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 65.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 7.83
+    }
+  }
+}
