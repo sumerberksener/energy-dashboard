@@ -1,4 +1,4 @@
-"""Data fetchers for the 5 primary metrics + an FX helper.
+"""Data fetchers for the primary metrics.
 
 Pure functions, no Streamlit dependency. Each fetcher returns a tidy DataFrame:
     index: pd.DatetimeIndex (tz-naive, daily, ascending)
@@ -8,10 +8,13 @@ Pure functions, no Streamlit dependency. Each fetcher returns a tidy DataFrame:
 Fallback chains are documented inline. Network errors propagate; the cache
 layer above is responsible for falling back to parquet snapshots.
 
-Note on coal: the canonical European thermal-coal benchmark is API2 (Rotterdam
-NAR 6000). No reliable free daily feed exists for it. ICE Newcastle (Asian
-basin) is used as a proxy — historical correlation ≈ 0.85. Documented as a
-known data-quality limitation in the README.
+Coal note (history): an earlier version of this module fetched a Newcastle
+coal proxy for clean dark spread / switching TTF. As of 2026-05, no usable
+free daily API2/Newcastle feed exists (Yahoo's MTF=F stopped updating; stooq
+gated their CSV API; investpy is dead). Coal-dependent metrics were dropped
+in favour of a Renewable Share metric — a strict desk-relevance upgrade for
+2026 EU power markets, where wind+solar share is the dominant marginal-price
+driver after gas.
 """
 from __future__ import annotations
 
@@ -117,21 +120,20 @@ def fetch_eua() -> pd.DataFrame:
 
 
 def fetch_coal() -> pd.DataFrame:
-    """Thermal coal proxy (USD/t).
+    """Thermal coal proxy (USD/t). Multi-source fallback chain.
 
-    Tries multiple Yahoo Finance tickers for thermal coal futures, in order of
-    preference, then falls back to stooq. Each ticker is checked for both
-    presence AND freshness — Yahoo `MTF=F` (Newcastle) has been observed to
-    return historical-only series with no recent updates, which is worse than
-    a clear failure since downstream analytics silently use stale prices.
-
-    True API2 (Rotterdam) is not freely available daily; the candidates here
-    are Asian-basin proxies historically correlated ~0.85 with API2.
+    Yahoo `MTF=F` (Newcastle) → other Yahoo candidates → stooq. Each is
+    checked for both presence AND freshness — the freshest source wins.
+    Sources older than 7 days set `df.attrs["is_stale"] = True` so the
+    cache + UI surface a STALE badge instead of pretending December prices
+    are current. As of 2026-05, all known free Newcastle/API2 daily feeds
+    are degraded; this fetcher is best-effort, demoted to a fundamentals
+    input only, and downstream metrics (Clean Dark) carry the staleness flag.
     """
     candidates = [
         ("MTF=F", _yahoo, "ICE Newcastle (Yahoo)"),
-        ("LMC.L", _yahoo, "Lloyds coal ETF (Yahoo)"),
-        ("KOL=F", _yahoo, "Coal-vector futures (Yahoo)"),
+        ("LMC.L", _yahoo, "Yahoo coal-related ETF"),
+        ("KOL=F", _yahoo, "Yahoo coal-vector futures"),
         ("coal.f", _stooq, "stooq coal.f"),
     ]
     best: pd.DataFrame | None = None
@@ -146,7 +148,7 @@ def fetch_coal() -> pd.DataFrame:
             age = int((pd.Timestamp.now().normalize() - df.index.max()).days)
             if age < best_age_days:
                 best, best_label, best_age_days = df, label, age
-            if age <= 7:  # fresh enough — accept and stop probing
+            if age <= 7:
                 log.info("Coal: using %s (%d rows, latest %s)",
                          label, len(df), df.index.max().date())
                 df.attrs["coal_source"] = label
@@ -168,6 +170,80 @@ def fetch_coal() -> pd.DataFrame:
 
 def fetch_de_power(token: str) -> pd.DataFrame:
     """Germany day-ahead baseload power (EUR/MWh) via ENTSO-E."""
+    return _fetch_entsoe_dap(token, "DE_LU")
+
+
+def fetch_power_zone(token: str, zone: str) -> pd.DataFrame:
+    """Generic ENTSO-E day-ahead price fetcher for any bidding zone, in EUR/MWh.
+
+    GB is a special case (returns GBP/MWh natively) — handled by `fetch_gb_power`.
+    Other EU zones return EUR/MWh natively.
+    """
+    return _fetch_entsoe_dap(token, zone)
+
+
+def fetch_gb_power(token: str | None = None) -> pd.DataFrame:
+    """GB day-ahead baseload power (EUR/MWh) via Elexon BMRS Insights.
+
+    UK left ENTSO-E membership post-Brexit, so the ENTSO-E `GB` zone returns
+    no data. Elexon's BMRS Market Index Data (MID) is the canonical free
+    feed for GB half-hourly settlement prices, requires no auth, and covers
+    both APX and N2EX. We filter to APXMIDP (the standard GB DA reference)
+    and aggregate to daily mean before converting GBP→EUR via Yahoo's
+    `GBPEUR=X`.
+
+    Elexon enforces a max date range of 7 days per call, so we paginate
+    weekly. To keep cold-start latency reasonable, GB history is capped at
+    1 year (52 weekly calls ≈ 30 s) — enough for percentile rank against
+    a representative window. The `token` arg is accepted but unused for
+    API parity with the ENTSO-E fetchers.
+    """
+    end = datetime.now(timezone.utc).date()
+    start = end - timedelta(days=365)  # 1 year cold-start cap (Elexon weekly chunks)
+
+    all_rows: list[dict] = []
+    chunk_start = start
+    while chunk_start < end:
+        chunk_end = min(chunk_start + timedelta(days=7), end)
+        url = "https://data.elexon.co.uk/bmrs/api/v1/balancing/pricing/market-index"
+        params = {
+            "from": chunk_start.isoformat(),
+            "to": chunk_end.isoformat(),
+            "dataProviders": "APXMIDP",
+            "format": "json",
+        }
+        try:
+            r = requests.get(url, params=params, timeout=20)
+            r.raise_for_status()
+            payload = r.json()
+        except Exception as e:
+            log.info("Elexon MID chunk %s–%s failed: %s", chunk_start, chunk_end, e)
+            chunk_start = chunk_end
+            continue
+        for row in payload.get("data", []) or []:
+            if row.get("dataProvider") != "APXMIDP":
+                continue
+            all_rows.append({
+                "settlementDate": row.get("settlementDate"),
+                "price": row.get("price"),
+            })
+        chunk_start = chunk_end
+
+    if not all_rows:
+        raise RuntimeError("Elexon MID returned no rows for GB")
+
+    df = pd.DataFrame(all_rows)
+    df["settlementDate"] = pd.to_datetime(df["settlementDate"])
+    daily_gbp = df.groupby("settlementDate")["price"].mean()  # daily baseload from half-hourly
+    daily_gbp.index = pd.to_datetime(daily_gbp.index)
+
+    fx = fetch_gbpeur()
+    aligned_fx = fx.reindex(daily_gbp.index, method="ffill")
+    eur_per_mwh = daily_gbp * aligned_fx["value"]
+    return _tidy(eur_per_mwh.dropna())
+
+
+def _fetch_entsoe_dap(token: str, zone: str) -> pd.DataFrame:
     if not token:
         raise RuntimeError("ENTSO-E token missing")
     from entsoe import EntsoePandasClient
@@ -175,9 +251,9 @@ def fetch_de_power(token: str) -> pd.DataFrame:
     client = EntsoePandasClient(api_key=token)
     end = pd.Timestamp.now(tz="Europe/Brussels").normalize()
     start = end - pd.DateOffset(years=HISTORY_YEARS)
-    ts = client.query_day_ahead_prices("DE_LU", start=start, end=end)
+    ts = client.query_day_ahead_prices(zone, start=start, end=end)
     if ts is None or ts.empty:
-        raise RuntimeError("ENTSO-E returned empty for DE_LU")
+        raise RuntimeError(f"ENTSO-E returned empty for {zone}")
     daily = ts.resample("D").mean()
     return _tidy(daily)
 
@@ -226,9 +302,63 @@ def fetch_storage(token: str) -> pd.DataFrame:
     return _tidy(s.sort_index())
 
 
-# --- FX helper (used by clean dark spread to convert USD coal to EUR) -------
+# --- Renewable share fetcher (DE wind+solar forecast / load forecast) -------
+
+
+def fetch_renewable_share(token: str) -> pd.DataFrame:
+    """Day-ahead forecast wind + solar share of load (DE_LU bidding zone, %).
+
+    Calls ENTSO-E twice:
+        - query_wind_and_solar_forecast → MW per renewable generation type
+        - query_load_forecast            → MW load forecast
+    Resamples to daily simple-mean and divides to get a % share. Daily mean
+    of an hourly series is the right aggregation for "what's the typical
+    renewable contribution that day."
+    """
+    if not token:
+        raise RuntimeError("ENTSO-E token missing")
+    from entsoe import EntsoePandasClient
+
+    client = EntsoePandasClient(api_key=token)
+    end = pd.Timestamp.now(tz="Europe/Brussels").normalize()
+    # Renewable forecast history at hourly resolution is heavy — pull 2y.
+    start = end - pd.DateOffset(years=2)
+
+    rs = client.query_wind_and_solar_forecast(
+        "DE_LU", start=start, end=end, psr_type=None,
+    )
+    if rs is None or rs.empty:
+        raise RuntimeError("ENTSO-E returned empty wind+solar forecast for DE_LU")
+    # rs comes as columns per generation type; sum across types per timestamp.
+    if isinstance(rs, pd.DataFrame):
+        renew = rs.sum(axis=1)
+    else:
+        renew = rs
+
+    load = client.query_load_forecast("DE_LU", start=start, end=end)
+    if load is None or len(load) == 0:
+        raise RuntimeError("ENTSO-E returned empty load forecast for DE_LU")
+    if isinstance(load, pd.DataFrame):
+        load = load.iloc[:, 0]
+
+    # Align hourly, then resample to daily mean of hourly share.
+    aligned = pd.concat([renew.rename("renew"), load.rename("load")], axis=1).dropna()
+    hourly_share = (aligned["renew"] / aligned["load"]) * 100.0
+    daily = hourly_share.resample("D").mean()
+    return _tidy(daily)
+
+
+# --- FX helpers ------------------------------------------------------------
 
 
 def fetch_eurusd() -> pd.DataFrame:
-    """EUR/USD daily close (1 EUR = X USD)."""
+    """EUR/USD daily close (1 EUR = X USD). Used by clean dark spread."""
     return _yahoo("EURUSD=X")
+
+
+def fetch_gbpeur() -> pd.DataFrame:
+    """GBP→EUR rate (1 GBP = X EUR). Used to convert GB power to EUR/MWh.
+
+    Yahoo's `GBPEUR=X` returns EUR-per-GBP directly.
+    """
+    return _yahoo("GBPEUR=X")

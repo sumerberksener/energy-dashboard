@@ -1,38 +1,43 @@
 {
-  "freshness_caveat": "Coal (as_of 2025-12-26, 130 days old), clean dark (2025-12-31, 125 days old), and switching TTF (2026-01-05, 120 days old) are stale; merit-order and fuel-switch conclusions should be verified against live coal and spread data before desk decisions.",
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (130 days old); Clean Dark spread stale as of 2025-12-31 (125 days old). Merit-order and fuel-switch signals not current; use caution interpreting coal 9th percentile and Clean Dark 50th percentile rank.",
   "risk_flags": [
-    "Coal snapshot 130 days old (2025-12-26) \u2014 clean dark and switching TTF equally stale; merit-order conclusions should be treated with caution.",
-    "Storage at 34.07 % (10th-percentile, 12.1 pp below seasonal) with 15.41 % monthly gain \u2014 refill pace will determine H2 balancing risk.",
-    "Clean spark +12.31 EUR/MWh daily and +1.48 sigma extension signal potential profit-taking; DE power +31 % weekly suggests locational tightness."
+    "GB Power +24.8% weekly at 94th percentile; renewable share collapsed -24.05% daily to 15th percentile \u2014 fuel-switch regime acute but coal data stale (130 days old, 9th percentile).",
+    "EU Storage at 34.33% full, 12.1 pp below seasonal norm (11th percentile) \u2014 refill pace will govern H2 power duration risk.",
+    "Strait of Hormuz closure since late February reduces Middle Eastern LNG arbitrage to EU, supporting TTF (48.14 EUR/MWh, 65th percentile, +5.19% daily) but offsetting SPR-driven crude bears.",
+    "Clean Dark spread stale as of 2025-12-31 (125 days); coal data stale as of 2025-12-26 (130 days) \u2014 merit-order signals not current."
   ],
   "themes": [
-    "Gas-anchored power merit order \u2014 clean spark extended",
-    "Coal structurally cheap but data stale",
-    "Storage 12 pp below seasonal \u2014 refill risk into summer",
-    "Carbon range-bound, gas weekly momentum +5 %"
+    "GB power spike amid renewable drought",
+    "EU storage deficit with geopolitical LNG premium",
+    "Coal deeply out-of-the-money despite thermal call",
+    "TTF supported by Hormuz closure, SPR downside risk"
   ],
   "top_drivers": [
-    "Clean spark at 91st-percentile drives gas-anchored, high-spread power regime.",
-    "Storage 12 pp below seasonal baseline compresses H2 margin and sustains long-duration tightness narrative.",
-    "TTF +5 % weekly and gas at 65th-percentile keep marginal generation cost elevated."
+    "Renewable forecast collapse (15th percentile, -24.05% daily) keeps thermal merit-order high; GB Power at 94th percentile reflects acute scarcity.",
+    "Strait of Hormuz closure sustaining global LNG tightness and TTF premium (48.14 EUR/MWh, +5.19% daily, 65th percentile) \u2014 offsetting SPR-driven crude bear.",
+    "EU Storage deficit (12.1 pp below seasonal, 34.33% full) compounds gas duration risk; refill pace critical for summer power adequacy."
   ],
-  "top_takeaway": "Clean spark at 91st-percentile (35.41 EUR/MWh) dominates merit order; coal at 9th-percentile (96 USD/t) is deeply in-the-money, but coal data is 130 days stale \u2014 gas anchors power via TTF at 65th-percentile.",
+  "top_takeaway": "GB Power at 94th percentile (128.31 EUR/MWh) with renewables collapsing to 15th percentile; tight storage (12.1 pp below seasonal) and Hormuz closure supporting TTF at 65th percentile \u2014 thermal regime firmly in place.",
   "watchlist": [
     {
-      "metric": "Clean Spark",
-      "why": "91st-percentile (35.41 EUR/MWh) with +12.31 EUR/MWh daily move and +1.48 sigma extension \u2014 reversal risk and fuel-switch inflection point."
+      "metric": "Strait of Hormuz blockade status",
+      "why": "Active since late February; escalation or resolution directly alters global LNG supply arbitrage to EU and TTF scarcity premium magnitude."
     },
     {
-      "metric": "EU Storage",
-      "why": "34.07 % full, 12.1 pp below seasonal average at 10th-percentile \u2014 spring refill momentum critical for summer adequacy signal."
+      "metric": "EU Storage refill pace",
+      "why": "Currently 12.1 pp below seasonal at 34.33% full; trajectory through May\u2013June sets thermal call duration and H2 power tail risk."
     },
     {
-      "metric": "TTF Gas",
-      "why": "65th-percentile, +5.19 % daily and +4.95 % weekly \u2014 anchoring power curve; watch for break above 50 EUR/MWh."
+      "metric": "US SPR release cadence",
+      "why": "17.5M barrels released; continued drawdowns sustain Brent pressure, reducing fuel-oil switching cost and TTF comfort."
     },
     {
-      "metric": "Coal",
-      "why": "9th-percentile (96 USD/t) but 130 days stale \u2014 update urgently to confirm merit-order positioning versus gas."
+      "metric": "GB-DE Power spread",
+      "why": "GB at 128.31 EUR/MWh (94th percentile, +3.29% daily) vs. DE at 128.01 EUR/MWh (73rd percentile) \u2014 convergence or divergence signals localized UK thermal stress."
+    },
+    {
+      "metric": "Renewable share recovery",
+      "why": "Currently 25.62% of load (15th percentile, -24.05% daily); wind/solar rebound will deflate GB and DE power sharply."
     }
   ]
 }

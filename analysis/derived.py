@@ -1,8 +1,13 @@
-"""Derived cross-commodity metrics: clean spark and clean dark spreads.
+"""Derived cross-commodity metrics.
 
-These are the bridge from gas/carbon fundamentals to power-curve risk —
-they're the metric most directly tied to the brief's thesis. Formulas
-below use industry-standard plant assumptions (see config.py).
+These bridge the public inputs into trading-relevant signals:
+- Clean Spark Spread — gas-fired plant margin
+- Clean Dark Spread — coal-fired plant margin (coal is a fundamentals input only)
+- Switching TTF — gas price at which CCGT and coal plant break even
+- Renewable share — wind+solar forecast / load forecast
+- DE−GB power spread — Continent-vs-Island day-ahead differential
+
+Plant assumptions (η, EF, calorific) live in config.py for auditable single-source.
 """
 from __future__ import annotations
 
@@ -33,22 +38,13 @@ def clean_spark_spread(
     gas: pd.DataFrame,
     carbon: pd.DataFrame,
 ) -> pd.DataFrame:
-    """CSS = Power − Gas / η_gas − Carbon × (EF_gas / η_gas)
-
-    Power, Gas in EUR/MWh; Carbon in EUR/tCO2.
-    Returns a DataFrame with a 'value' column in EUR/MWh.
-    """
+    """CSS = Power − Gas / η_gas − Carbon × (EF_gas / η_gas)"""
     if any(df is None or df.empty for df in (power, gas, carbon)):
         return pd.DataFrame(columns=["value"])
-
     p, g, c = align_daily([power, gas, carbon])
-    eff_emission = GAS_EMISSION_FACTOR / GAS_EFFICIENCY  # tCO2 per MWh_electric
+    eff_emission = GAS_EMISSION_FACTOR / GAS_EFFICIENCY
     df = pd.DataFrame(index=p.index)
-    df["value"] = (
-        p["value"]
-        - g["value"] / GAS_EFFICIENCY
-        - c["value"] * eff_emission
-    )
+    df["value"] = p["value"] - g["value"] / GAS_EFFICIENCY - c["value"] * eff_emission
     df.index.name = "date"
     df.attrs["formula"] = (
         f"P - G/{GAS_EFFICIENCY:.2f} - C × {eff_emission:.3f}  "
@@ -63,36 +59,24 @@ def clean_dark_spread(
     carbon: pd.DataFrame,
     eurusd: pd.DataFrame,
 ) -> pd.DataFrame:
-    """CDS = Power − Coal_EUR_per_MWh_thermal / η_coal − Carbon × (EF_coal / η_coal)
-
-    Coal price is converted from USD/t to EUR/MWh_thermal via FX and the
-    calorific value (MWh_th per tonne).
-    """
+    """CDS = Power − Coal_EUR_per_MWh_th / η_coal − Carbon × (EF_coal / η_coal)"""
     if any(df is None or df.empty for df in (power, coal_usd_t, carbon, eurusd)):
         return pd.DataFrame(columns=["value"])
-
     p, coal, c, fx = align_daily([power, coal_usd_t, carbon, eurusd])
     coal_eur_per_mwh_th = (coal["value"] / fx["value"]) / COAL_CALORIFIC_MWH_PER_T
     eff_emission = COAL_EMISSION_FACTOR / COAL_EFFICIENCY
     df = pd.DataFrame(index=p.index)
-    df["value"] = (
-        p["value"]
-        - coal_eur_per_mwh_th / COAL_EFFICIENCY
-        - c["value"] * eff_emission
-    )
+    df["value"] = p["value"] - coal_eur_per_mwh_th / COAL_EFFICIENCY - c["value"] * eff_emission
     df.index.name = "date"
     df.attrs["formula"] = (
         f"P - (Coal_USD/FX/{COAL_CALORIFIC_MWH_PER_T:.2f})/{COAL_EFFICIENCY:.2f} "
-        f"- C × {eff_emission:.3f}  (η_coal={COAL_EFFICIENCY}, EF_coal={COAL_EMISSION_FACTOR} tCO2/MWh_th)"
+        f"- C × {eff_emission:.3f}  (η_coal={COAL_EFFICIENCY}, EF_coal={COAL_EMISSION_FACTOR})"
     )
     return df.dropna()
 
 
 def fuel_switch_indicator(clean_spark: pd.DataFrame, clean_dark: pd.DataFrame) -> pd.DataFrame:
-    """CDS − CSS: positive ⇒ coal in-the-money vs gas, negative ⇒ gas wins.
-
-    Not displayed as a standalone metric, but surfaced in narrative + signals.
-    """
+    """CDS − CSS: positive ⇒ coal in-the-money vs gas, negative ⇒ gas wins."""
     if any(df is None or df.empty for df in (clean_spark, clean_dark)):
         return pd.DataFrame(columns=["value"])
     cs, cd = align_daily([clean_spark, clean_dark])
@@ -107,31 +91,49 @@ def switching_ttf(
     carbon: pd.DataFrame,
     eurusd: pd.DataFrame,
 ) -> pd.DataFrame:
-    """Switching TTF: the gas price at which a CCGT exactly matches a hard-coal
-    plant in the merit order, given current coal and EUA.
+    """Switching TTF = η_gas · ( Coal_EUR/η_coal + (EF_coal/η_coal − EF_gas/η_gas) · EUA )
 
-    Setting CSS = CDS and solving for gas price (in EUR/MWh thermal):
-        G* = η_gas · ( Coal_EUR_per_MWh_th / η_coal
-                       + (EF_coal/η_coal − EF_gas/η_gas) · EUA )
-
-    Where Coal_EUR_per_MWh_th = (Coal_USD_per_t / EURUSD) / calorific.
-    Output in EUR/MWh — directly comparable to the actual TTF print.
+    The TTF gas price at which a CCGT exactly matches a hard-coal plant in
+    the merit order. TTF − Switching TTF is fuel-switch headroom in EUR/MWh.
+    Computed on demand for the regime strip; not a registered top-row metric.
     """
     if any(df is None or df.empty for df in (coal_usd_t, carbon, eurusd)):
         return pd.DataFrame(columns=["value"])
-
     coal, c, fx = align_daily([coal_usd_t, carbon, eurusd])
     coal_eur_per_mwh_th = (coal["value"] / fx["value"]) / COAL_CALORIFIC_MWH_PER_T
-    carbon_intensity_diff = (
-        COAL_EMISSION_FACTOR / COAL_EFFICIENCY
-        - GAS_EMISSION_FACTOR / GAS_EFFICIENCY
-    )
-    gas_thermal = coal_eur_per_mwh_th / COAL_EFFICIENCY + carbon_intensity_diff * c["value"]
+    diff = COAL_EMISSION_FACTOR / COAL_EFFICIENCY - GAS_EMISSION_FACTOR / GAS_EFFICIENCY
     df = pd.DataFrame(index=coal.index)
-    df["value"] = GAS_EFFICIENCY * gas_thermal
+    df["value"] = GAS_EFFICIENCY * (coal_eur_per_mwh_th / COAL_EFFICIENCY + diff * c["value"])
     df.index.name = "date"
     df.attrs["formula"] = (
-        f"η_gas·(Coal_EUR/η_coal + (EF_coal/η_coal − EF_gas/η_gas)·EUA)  "
-        f"(η_gas={GAS_EFFICIENCY}, η_coal={COAL_EFFICIENCY})"
+        f"η_gas·(Coal_EUR/η_coal + (EF_coal/η_coal − EF_gas/η_gas)·EUA)"
     )
+    return df.dropna()
+
+
+def renewable_share_of_load(
+    wind_solar_forecast: pd.DataFrame,
+    load_forecast: pd.DataFrame,
+) -> pd.DataFrame:
+    """Wind+solar / load × 100 (%). Already aligned daily series in MW."""
+    if any(df is None or df.empty for df in (wind_solar_forecast, load_forecast)):
+        return pd.DataFrame(columns=["value"])
+    rs, ld = align_daily([wind_solar_forecast, load_forecast])
+    df = pd.DataFrame(index=rs.index)
+    df["value"] = (rs["value"] / ld["value"]) * 100.0
+    df.index.name = "date"
+    return df.dropna()
+
+
+def power_spread(
+    a: pd.DataFrame,
+    b: pd.DataFrame,
+) -> pd.DataFrame:
+    """Generic power spread: A − B, both in EUR/MWh on the same day grid."""
+    if any(df is None or df.empty for df in (a, b)):
+        return pd.DataFrame(columns=["value"])
+    da, db = align_daily([a, b])
+    df = pd.DataFrame(index=da.index)
+    df["value"] = da["value"] - db["value"]
+    df.index.name = "date"
     return df.dropna()

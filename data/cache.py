@@ -4,12 +4,13 @@ Two-tier strategy:
 1. In-memory: @st.cache_data with a 1-hour TTL keeps repeat reloads instant.
 2. On-disk: parquet snapshot in data/store/ acts as a graceful-degradation
    fallback if a live fetch fails (API down, token missing, network blip).
-   When a snapshot is served, df.attrs["is_stale"] = True and the UI shows
-   a "stale" badge.
 
-Five primary metrics are fetched directly. Two derived metrics — clean spark
-and clean dark spreads — are computed by analysis.derived from the primaries.
-get_all_with_derived() returns the full 7-metric dict.
+Eight registered top-row metrics + one fundamentals input (coal):
+    Top row: TTF, EU Storage, EUA, DE Power, GB Power, Renewables,
+             Clean Spark, Clean Dark
+    Fundamentals: Coal (USD/t), EUR/USD, GBP/EUR (FX helpers, hidden)
+
+`get_all_with_derived()` returns the full dict including derived spreads.
 """
 from __future__ import annotations
 
@@ -21,7 +22,7 @@ import pandas as pd
 import streamlit as st
 
 from analysis import derived as derived_metrics
-from config import CACHE_TTL_SECONDS, PRIMARY_KEYS
+from config import CACHE_TTL_SECONDS
 from data import fetchers
 
 log = logging.getLogger(__name__)
@@ -60,8 +61,8 @@ def _safe(key: str, fn: Callable[..., pd.DataFrame], *args, **kwargs) -> pd.Data
         if df is None or df.empty:
             raise ValueError("empty result")
         _save_snapshot(key, df)
-        df.attrs["is_stale"] = False
-        df.attrs["source"] = "live"
+        df.attrs["is_stale"] = bool(df.attrs.get("is_stale", False))
+        df.attrs.setdefault("source", "live")
         return df
     except Exception as e:
         log.warning("live fetch failed for %s: %s — trying snapshot", key, e)
@@ -85,6 +86,9 @@ def _secret(name: str) -> str | None:
         return None
 
 
+# --- Primary fetchers (registered as METRICS) --------------------------------
+
+
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
 def get_ttf() -> pd.DataFrame:
     return _safe("ttf", fetchers.fetch_ttf)
@@ -96,13 +100,13 @@ def get_eua() -> pd.DataFrame:
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
-def get_coal() -> pd.DataFrame:
-    return _safe("coal", fetchers.fetch_coal)
+def get_de_power() -> pd.DataFrame:
+    return _safe("de_power", fetchers.fetch_de_power, _secret("ENTSOE_TOKEN"))
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
-def get_de_power() -> pd.DataFrame:
-    return _safe("de_power", fetchers.fetch_de_power, _secret("ENTSOE_TOKEN"))
+def get_gb_power() -> pd.DataFrame:
+    return _safe("gb_power", fetchers.fetch_gb_power, _secret("ENTSOE_TOKEN"))
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
@@ -111,16 +115,38 @@ def get_storage() -> pd.DataFrame:
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
+def get_renewable_share() -> pd.DataFrame:
+    return _safe(
+        "renewable_share", fetchers.fetch_renewable_share, _secret("ENTSOE_TOKEN")
+    )
+
+
+# --- Fundamentals inputs (in METRICS but not top row) -----------------------
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
+def get_coal() -> pd.DataFrame:
+    return _safe("coal", fetchers.fetch_coal)
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
 def get_eurusd() -> pd.DataFrame:
     return _safe("eurusd", fetchers.fetch_eurusd)
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
+def get_gbpeur() -> pd.DataFrame:
+    return _safe("gbpeur", fetchers.fetch_gbpeur)
 
 
 PRIMARY_GETTERS = {
     "ttf": get_ttf,
     "storage": get_storage,
-    "coal": get_coal,
     "eua": get_eua,
     "de_power": get_de_power,
+    "gb_power": get_gb_power,
+    "renewable_share": get_renewable_share,
+    "coal": get_coal,
 }
 
 
@@ -129,7 +155,12 @@ def get_primaries() -> dict[str, pd.DataFrame]:
 
 
 def get_all_with_derived() -> dict[str, pd.DataFrame]:
-    """Fetch all 5 primaries + compute the 3 derived metrics. Returns 8-metric dict."""
+    """Fetch all primaries + compute derived metrics. Returns metric dict.
+
+    Includes `switching_ttf` and `de_gb_spread` as auxiliary derived series
+    consumed by the regime strip — not registered as Metrics, but useful
+    enough to compute once and pass through.
+    """
     primaries = get_primaries()
     eurusd = get_eurusd()
 
@@ -142,14 +173,19 @@ def get_all_with_derived() -> dict[str, pd.DataFrame]:
     sw = derived_metrics.switching_ttf(
         primaries["coal"], primaries["eua"], eurusd
     )
+    de_gb = derived_metrics.power_spread(
+        primaries["de_power"], primaries["gb_power"]
+    )
 
     out = dict(primaries)
     out["clean_spark"] = cs
     out["clean_dark"] = cd
     out["switching_ttf"] = sw
+    out["de_gb_spread"] = de_gb
+    out["eurusd"] = eurusd
     return out
 
 
 def clear_cache() -> None:
-    for g in (*PRIMARY_GETTERS.values(), get_eurusd):
+    for g in (*PRIMARY_GETTERS.values(), get_eurusd, get_gbpeur):
         g.clear()

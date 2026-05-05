@@ -43,9 +43,21 @@ class NarrativeResult:
     extract_log_path: str | None = None
 
 
-def _snapshot(data: dict[str, pd.DataFrame]) -> dict[str, Any]:
-    """Build the JSON-serialisable payload sent to the model."""
-    out: dict[str, Any] = {"metrics": {}, "freshness": {"any_stale": False, "stale_metrics": []}}
+def _snapshot(
+    data: dict[str, pd.DataFrame],
+    news: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Build the JSON-serialisable payload sent to the model.
+
+    Includes the structured news block when provided so the narrative pass
+    can synthesise geopolitics + numbers in one shot.
+    """
+    out: dict[str, Any] = {
+        "metrics": {},
+        "freshness": {"any_stale": False, "stale_metrics": []},
+    }
+    if news is not None:
+        out["news"] = news
     for key, df in data.items():
         if df is None or df.empty:
             out["metrics"][key] = {"available": False}
@@ -108,8 +120,9 @@ def _rule_based_fallback(snapshot: dict[str, Any]) -> str:
     eua = snapshot["metrics"].get("eua", {})
     cs = snapshot["metrics"].get("clean_spark", {})
     cd = snapshot["metrics"].get("clean_dark", {})
-    sw = snapshot["metrics"].get("switching_ttf", {})
-    power = snapshot["metrics"].get("de_power", {})
+    de_pow = snapshot["metrics"].get("de_power", {})
+    gb_pow = snapshot["metrics"].get("gb_power", {})
+    rs = snapshot["metrics"].get("renewable_share", {})
 
     if ttf.get("available"):
         parts.append(
@@ -123,6 +136,10 @@ def _rule_based_fallback(snapshot: dict[str, Any]) -> str:
             f"EUA at {eua['latest']} EUR/t "
             f"({eua.get('percentile_rank_5y', 0):.0f}th-pctile)."
         )
+    if rs.get("available") and rs.get("latest") is not None:
+        parts.append(
+            f"DE renewable share forecast at {rs['latest']:.1f}% of load."
+        )
     if (
         cs.get("available") and cd.get("available")
         and cs.get("latest") is not None and cd.get("latest") is not None
@@ -135,15 +152,15 @@ def _rule_based_fallback(snapshot: dict[str, Any]) -> str:
             f"Clean spark at {cs['latest']:+.1f} and clean dark at {cd['latest']:+.1f} "
             f"EUR/MWh — {switch}."
         )
-    if sw.get("available") and ttf.get("available"):
-        gap = ttf["latest"] - sw["latest"]
+    if de_pow.get("available") and gb_pow.get("available"):
+        gap = de_pow["latest"] - gb_pow["latest"]
         parts.append(
-            f"Switching TTF stands at {sw['latest']:.1f} EUR/MWh; actual TTF is "
-            f"{gap:+.1f} vs that level."
+            f"DE day-ahead at {de_pow['latest']:.1f} vs GB at "
+            f"{gb_pow['latest']:.1f} EUR/MWh ({gap:+.1f} cross-border spread)."
         )
-    if power.get("available"):
+    elif de_pow.get("available"):
         parts.append(
-            f"DE day-ahead at {power['latest']:.1f} EUR/MWh anchors the front-curve."
+            f"DE day-ahead at {de_pow['latest']:.1f} EUR/MWh anchors the front-curve."
         )
     if not parts:
         return (
@@ -151,8 +168,8 @@ def _rule_based_fallback(snapshot: dict[str, Any]) -> str:
             "configured and the upstream sources are reachable."
         )
     parts.append(
-        "Power-curve implication: regime is set by the prevailing fuel-switch "
-        "and storage stance above."
+        "Power-curve implication: regime is set by the prevailing fuel-switch, "
+        "storage stance, and renewables forecast above."
     )
     return " ".join(parts)
 
@@ -162,16 +179,19 @@ def _rule_based_top_takeaway(snapshot: dict[str, Any]) -> str | None:
     cs = snapshot["metrics"].get("clean_spark", {})
     cd = snapshot["metrics"].get("clean_dark", {})
     storage = snapshot["metrics"].get("storage", {})
+    rs = snapshot["metrics"].get("renewable_share", {})
+
+    bits: list[str] = []
     if cs.get("available") and cd.get("available") and cs.get("latest") is not None:
         diff = cd["latest"] - cs["latest"]
-        switch = "Coal in-the-money" if diff > 0 else "Gas in-the-money"
-        if storage.get("available") and storage.get("latest") is not None:
-            return (
-                f"{switch} (clean spark {cs['latest']:+.1f} vs clean dark "
-                f"{cd['latest']:+.1f} EUR/MWh); EU storage at {storage['latest']:.0f}%."
-            )
-        return f"{switch} on day-ahead spreads."
-    return None
+        bits.append("Coal in-the-money" if diff > 0 else "Gas in-the-money")
+    if storage.get("available") and storage.get("latest") is not None:
+        bits.append(f"storage {storage['latest']:.0f}%")
+    if rs.get("available") and rs.get("latest") is not None:
+        bits.append(f"renewables {rs['latest']:.0f}% of load")
+    if not bits:
+        return None
+    return "; ".join(bits) + "."
 
 
 # --- Two-pass workflow ------------------------------------------------------
@@ -275,9 +295,14 @@ def generate_narrative(
     *,
     ai_client: AIClient | None = None,
     two_pass: bool = True,
+    news: dict[str, Any] | None = None,
 ) -> NarrativeResult:
-    """Produce the desk-note paragraph. Tries two-pass Claude → single-pass → rule-based."""
-    snapshot = _snapshot(data)
+    """Produce the desk-note paragraph. Tries two-pass Claude → single-pass → rule-based.
+
+    Optional `news` is the dict form of a NewsThemesResult — the prose pass
+    will reference geopolitics if present.
+    """
+    snapshot = _snapshot(data, news=news)
 
     if ai_client is None:
         try:

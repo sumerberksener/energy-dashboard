@@ -1,0 +1,33 @@
+{
+  "geopolitics_summary": "Strait of Hormuz closure since late February elevates global LNG prices; EU gas supply risk via reduced Middle Eastern LNG arbitrage flows.",
+  "themes": [
+    {
+      "headline": "International LNG prices surge following Strait of Hormuz closure",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz blockade reduces Middle Eastern LNG supply to global market, tightening arbitrage between US, Asian, and European LNG, lifting TTF via scarcity premium and reducing US-EU price differential incentive for US LNG exports.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67604"
+    },
+    {
+      "headline": "DOE releases 17.5M barrels from Strategic Petroleum Reserve",
+      "source": "EIA Today in Energy",
+      "tag": "macro",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "SPR release increases global crude supply, moderating oil price risk; lower Brent reduces marginal fuel-switching cost from gas to fuel oil, pressuring European power and TTF via reduced heating oil demand competition.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625"
+    }
+  ],
+  "watchlist": [
+    "Strait of Hormuz blockade status — monitor for supply disruption escalation or resolution.",
+    "US SPR release cadence — continued drawdowns may sustain crude price pressure through May–June."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 6,
+  "error": null
+}

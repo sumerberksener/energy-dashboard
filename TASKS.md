@@ -51,6 +51,48 @@ These are the items that would embarrass the brief if a careful reviewer ran the
 
 ---
 
+## P1 — Metric set alignment with Cobblestone's actual book (added 2026-05-05)
+
+Research confirmed Cobblestone Energy trades **European Power, Gas, and Emissions** — day-ahead through the forward curve, with a short-term / intraday emphasis. They do **not** trade coal as a primary book.
+
+**Decision-utility filter (apply to every metric proposal in this section).** Before adding any tile, answer: *"Does a trader make a different call with this number on screen vs not?"* If no, don't add it. The dashboard's value comes from clarity, not breadth — Sumer has been explicit that an overcrowded screen is worse than a focused one.
+
+Net result: this section is a **structural restructure plus exactly two new metrics**, not a metric land-grab. Anything more lives in Backlog with a "verify decision-utility first" tag.
+
+The post-restructure target shape is:
+- **6 primary cards (top row):** TTF Gas · EU Storage · EUA Carbon · DE Power DA · Clean Spark · Clean Dark
+- **One curve card or strip:** DA / Cal+1 spread + regime tag (the brief's "Day-Ahead to curve" output)
+- **One short-term tightness metric:** wind+solar share of forecast load — single number, lives next to DE Power
+- **One fundamentals strip (small, lower on page):** Coal · EUR/USD · (anything else needed by derived metrics)
+
+That's it. No GB Power tile, no NBP tile, no UKA tile, no load tile, no cross-border spread tile — those were proposed in the first draft and explicitly trimmed because none of them changes a trader's call vs the simpler alternatives.
+
+- [ ] **Demote coal from primary tile to fundamentals input**
+  - Where: `config.py::METRICS` (drop `coal` from the primary list), `app.py::main` (remove the top-row card), new `ui/fundamentals.py` (or a collapsed strip below the primary cards), README + desk note.
+  - Why: Cobblestone doesn't trade coal. Today coal occupies 1/7th of the most expensive screen real estate. It still matters for the clean dark spread, but it should look like an *input*, not a *headline*. This is a removal — it *reduces* clutter, not adds.
+  - Acceptance: Top row shows 6 cards (TTF, EU Storage, EUA, DE Power, Clean Spark, Clean Dark). Coal appears in a small "Fundamentals inputs" strip lower on the page (alongside EUR/USD), not as a top-row card. Clean Dark spread continues to compute correctly. Desk note's metrics table flags coal with `(input only)`.
+
+- [ ] **Add a power forward curve indication (DA / Cal+1) — single new metric, not a series of them**
+  - Where: new `data/fetchers.py::fetch_de_cal1`, register a single `de_cal1` metric (or a derived `da_cal1_spread`) in `config.py`. One card, not a curve panel.
+  - Why: The brief literally says **"Day-Ahead to curve Implications."** Cobblestone trades along the forward curve. Currently you have only day-ahead. This is the single biggest gap between your dashboard and the brief — and it earns its tile because backwardation vs contango directly changes how a trader positions.
+  - Decision-utility test: ✓ Backwardated curve = front strength / curve length opportunity; contango = forward-buying pressure. Different positioning either way.
+  - Source: EEX publishes free daily Cal-Year settlement indications. Scrape the daily CSV at `https://www.eex.com/en/market-data/power/futures` or use `investpy`. Cal-quarter is nice-to-have but **not** part of this task — keep it to one curve point until proven necessary.
+  - Acceptance: One new card showing DA · Cal+1 · Spread with a backwardation/contango chip. No multi-tenor curve panel. Section 5 of the desk note discusses curve shape with numbers, not adjectives.
+
+- [ ] **Add a single short-term tightness metric: renewables share of forecast load**
+  - Where: new `data/fetchers.py::fetch_de_tightness` that combines load + renewable forecast and returns one number, registered as `renewable_share` (or `thermal_call_pct`). One metric, not two cards.
+  - Why: Wind/solar share of next-day load is the dominant short-term DE Power driver after fuel costs, which is Cobblestone's bread and butter. Combining renewables and load into a single "tightness" number keeps the dashboard sparse — the trader doesn't need to mentally divide two cards to get the answer.
+  - Decision-utility test: ✓ Low renewable share = thermal-heavy day = power tracks gas + carbon tightly; high share = power decouples from fuel. Different trade thesis either way.
+  - Source: ENTSO-E `query_wind_and_solar_forecast(country='DE_LU')` and `query_load_forecast(country='DE_LU')` via the existing `entsoe-py` client.
+  - Acceptance: One small chip or strip near DE Power showing tomorrow's renewable share + 1-yr percentile rank. Surfaces in the desk note's short-term commentary when it's an outlier (top/bottom decile). Does **not** become its own top-row card.
+
+- [ ] **Reframe the desk note's section structure to match the leaner metric set**
+  - Where: `scripts/generate_brief.py` (markdown assembly), `ai/prompts/*.md` (prompt updates).
+  - Why: Once coal is demoted and DA/Cal+1 + renewable tightness ship, the desk note's sections should reflect the trade-shaped emphasis. Don't expand sections — retitle and re-anchor existing ones.
+  - Acceptance: Desk note sections: 1. Executive summary, 2. Monitor metrics (tabular), 3. Gas tightness, 4. Carbon, 5. Power — DA & curve (now backed by Cal+1 numbers), 6. Methodology & sources. Renewables tightness is referenced *inside* section 5 (one sentence when it's an outlier), not given its own section. Coal mentioned only as a fundamentals caveat.
+
+---
+
 ## P1 — Dashboard UI/UX upgrades (escalated by Sumer 2026-05-05)
 
 Sumer flagged that the dashboard is unclear about time-frames and lacks hover affordances; he also wants a more "futuristic and appealing" look. Below are bite-sized, prioritised tasks that lift the dashboard substantially without leaving Streamlit.
@@ -181,8 +223,17 @@ Each of these meaningfully strengthens at least one of the five Cobblestone eval
 
 Add freely. Move into P0–P3 when picking up; never silently widen scope on an in-flight task.
 
-- [ ] Replace ICE Newcastle with a working API2 proxy — investigate Refinitiv-free, EEX coal indications, or `investpy`.
-- [ ] TTF–HH spread (TTF vs Henry Hub) as a global LNG-arb sanity check.
+**Reminder for everything below: apply the decision-utility filter before promoting anything from this list to P1. "Does a trader make a different call with this on screen vs not?" If no, leave it here.**
+
+- [ ] Replace ICE Newcastle with a working API2 proxy — investigate Refinitiv-free, EEX coal indications, or `investpy`. Lower priority now that coal is demoted to a fundamentals input.
+- [ ] **GB Power day-ahead.** Considered for P1 and rejected — DE is the continental front-curve benchmark, GB tells a different (UK-specific) story, and adding it doubles power tile count without changing how a trader plays the gas + carbon → DE Power thesis. Promote only if the reviewer-conversation reveals GB-specific interest.
+- [ ] **NBP front-month gas.** Considered for P1 and rejected — TTF is the European benchmark Cobblestone trades; NBP–TTF basis is interesting but is a *second-order* signal that doesn't move the gas + carbon → power thesis. Promote only if a TTF-NBP basis trade thesis is being told in the desk note.
+- [ ] **UKA (UK ETS).** Rejected for P1 — adds carbon complexity with little decision impact unless GB Power is also on screen.
+- [ ] **Cross-border power spread (DE-FR, GB-FR).** Rejected for P1 — pure short-term/intraday signal that doesn't speak to the brief's day-ahead-to-curve framing.
+- [ ] **Imbalance / single-system price.** Rejected for P1 — pure intraday signal, separate trading workflow from the brief's "fundamentals → curve" framing.
+- [ ] TTF–HH spread (TTF vs Henry Hub) as a global LNG-arb sanity check. Useful only if NBP is also in — and NBP is rejected, so this stays parked.
+- [ ] Belgian / Dutch / French power day-ahead — same ENTSO-E client. Adds continental coverage beyond DE without changing the trade thesis.
+- [ ] EUA option implied vol (if a free source exists) — single best risk-regime indicator for emissions. Possibly the strongest candidate in this list to promote later.
 - [ ] German wind speed forecast integration (ICON-EU open data) for D+1 / D+2 power.
 - [ ] Dashboard "alert" pane that highlights any metric crossing a percentile threshold today.
 - [ ] Email/slack the daily brief from the cron (Anthropic could draft a shorter mobile-friendly variant).

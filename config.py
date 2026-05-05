@@ -17,12 +17,14 @@ class Metric:
     source: str
     definition: str
     color: str
-    higher_is: str   # "bullish-power" | "bearish-power" | "supply-rich" — directional flag for the cross-commodity narrative
+    higher_is: str   # "bullish-power" | "bearish-power" | "supply-rich" | "margin-rich"
     derived: bool = False
     delta_unit: str = "pct"   # "pct" (price-like, never crosses 0) or "abs" (spreads — pct meaningless across zero)
+    is_fundamentals_input: bool = False  # True ⇒ feeds derived metrics but isn't a top-row card (coal, EUR/USD, ...)
 
 
 METRICS: list[Metric] = [
+    # --- Primary cards (what Cobblestone actually trades) ----------------
     Metric(
         key="ttf",
         name="TTF Front-Month Natural Gas",
@@ -54,20 +56,6 @@ METRICS: list[Metric] = [
         higher_is="supply-rich",
     ),
     Metric(
-        key="coal",
-        name="API2 / Newcastle Thermal Coal Proxy",
-        short_name="Coal",
-        unit="USD/t",
-        source="ICE Newcastle (proxy via Yahoo Finance)",
-        definition=(
-            "Thermal coal benchmark used for the clean dark spread. API2 (Rotterdam, NAR "
-            "6000) is the canonical European reference; ICE Newcastle is used here as a "
-            "free-data proxy with documented basis. ~0.85 historical correlation with API2."
-        ),
-        color="#7f849c",
-        higher_is="bullish-power",
-    ),
-    Metric(
         key="eua",
         name="EUA December Carbon Futures",
         short_name="EUA Carbon",
@@ -76,8 +64,8 @@ METRICS: list[Metric] = [
         definition=(
             "European Union Allowances (EUA) are the carbon emission permits traded under "
             "the EU Emissions Trading System. The December contract is the most liquid "
-            "and is a direct input to power-generation marginal cost — driving coal-vs-gas "
-            "fuel switching and shaping the long end of the power curve."
+            "and is a direct input to power-generation marginal cost — shaping the long end "
+            "of the power curve via dispatch economics for fossil generation."
         ),
         color="#a6e3a1",
         higher_is="bullish-power",
@@ -96,6 +84,38 @@ METRICS: list[Metric] = [
         ),
         color="#89b4fa",
         higher_is="bullish-power",
+    ),
+    Metric(
+        key="gb_power",
+        name="GB Day-Ahead Baseload Power",
+        short_name="GB Power",
+        unit="EUR/MWh",
+        source="ENTSO-E (GB bidding zone) · GBP→EUR converted",
+        definition=(
+            "Day-ahead clearing price for one MWh in each hour of next-day delivery in "
+            "the GB bidding zone, averaged to a daily baseload print and converted from "
+            "GBP to EUR via the daily FX close. Cobblestone explicitly trades GB power; "
+            "the DE − GB spread captures Continent-vs-Island dynamics and IFA/IFA2 "
+            "interconnector flow signals."
+        ),
+        color="#74c7ec",
+        higher_is="bullish-power",
+    ),
+    Metric(
+        key="renewable_share",
+        name="DE Wind + Solar Forecast Share",
+        short_name="Renewables",
+        unit="% of load",
+        source="ENTSO-E (wind+solar forecast / load forecast)",
+        definition=(
+            "Day-ahead forecast wind + solar generation as a percentage of forecast load "
+            "in the German-Luxembourg bidding zone. After gas, this is the single biggest "
+            "driver of day-ahead power: high renewable share compresses the residual-load "
+            "curve and pushes prices down (or negative); low share lifts gas-fired plants "
+            "into the merit order. Daily aggregation = simple mean across hourly forecasts."
+        ),
+        color="#94e2d5",
+        higher_is="supply-rich",
     ),
     Metric(
         key="clean_spark",
@@ -121,31 +141,33 @@ METRICS: list[Metric] = [
         unit="EUR/MWh",
         source="Derived (DE Power − Coal/η_coal − EUA × EF_coal)",
         definition=(
-            "Margin of a 40%-efficient hard coal plant, net of carbon cost: "
-            "Power − Coal/η − Carbon × emission factor. The dark-spark differential signals "
-            "fuel-switching: when CDS exceeds CSS, coal is cheaper to dispatch than gas, "
-            "shifting the power-curve sensitivity toward coal+carbon."
+            "Margin of a 40%-efficient hard-coal plant, net of carbon cost: "
+            "Power − Coal/η − Carbon × emission factor. The dark-vs-spark differential "
+            "signals fuel switching: when CDS exceeds CSS, coal is in-the-money over gas. "
+            "Coal isn't a Cobblestone book, but the dark spread is still a real desk-watched "
+            "signal because it shapes gas-side risk."
         ),
         color="#f38ba8",
         higher_is="margin-rich",
         derived=True,
         delta_unit="abs",
     ),
+    # --- Fundamentals inputs (inputs to derived metrics; not top-row cards) -----
     Metric(
-        key="switching_ttf",
-        name="Fuel-Switching TTF",
-        short_name="Switch TTF",
-        unit="EUR/MWh",
-        source="Derived (η_gas · (Coal/η_coal + (EF_coal/η_coal − EF_gas/η_gas)·EUA))",
+        key="coal",
+        name="API2 / Newcastle Thermal Coal Proxy",
+        short_name="Coal",
+        unit="USD/t",
+        source="ICE Newcastle (proxy via Yahoo Finance)",
         definition=(
-            "The TTF gas price at which a CCGT just matches a hard-coal plant in the "
-            "merit order, given current coal and EUA. If actual TTF prints below the "
-            "switching TTF, gas is in-the-money vs coal; above, coal wins. The "
-            "TTF − Switching-TTF gap is the cleanest single number for fuel-switch headroom."
+            "Thermal coal benchmark. API2 (Rotterdam, NAR 6000) is the canonical European "
+            "reference; ICE Newcastle is a free-data proxy with documented basis "
+            "(~0.85 historical correlation). Cobblestone doesn't trade coal directly — "
+            "this is a fundamentals input feeding the Clean Dark spread."
         ),
-        color="#fec96f",
-        higher_is="margin-rich",
-        derived=True,
+        color="#7f849c",
+        higher_is="bullish-power",
+        is_fundamentals_input=True,
     ),
 ]
 
@@ -153,6 +175,8 @@ METRICS: list[Metric] = [
 METRICS_BY_KEY: dict[str, Metric] = {m.key: m for m in METRICS}
 PRIMARY_KEYS: list[str] = [m.key for m in METRICS if not m.derived]
 DERIVED_KEYS: list[str] = [m.key for m in METRICS if m.derived]
+TOP_ROW_METRICS: list[Metric] = [m for m in METRICS if not m.is_fundamentals_input]
+FUNDAMENTALS_METRICS: list[Metric] = [m for m in METRICS if m.is_fundamentals_input]
 
 
 # --- Spread parameters ------------------------------------------------------

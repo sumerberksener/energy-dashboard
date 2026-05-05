@@ -104,9 +104,9 @@ def signal_for(metric_key: str, df: pd.DataFrame) -> Signal:
     if pct_rank is not None:
         bits.append(f"{metric.short_name} prints at {last:,.2f} {metric.unit} ({pct_rank:.0f}th-pctile of 5y).")
     if ext_text:
-        bits.append(f"Price is {ext_text}.")
+        bits.append(f"Value is {ext_text}.")
     if move_text:
-        bits.append(f"Yesterday's settlement was an {move_text}.")
+        bits.append(f"Yesterday's print was an {move_text}.")
     if seasonal_text:
         bits.append(f"Storage runs {seasonal_text}.")
 
@@ -129,7 +129,7 @@ def morning_brief(data: dict[str, pd.DataFrame]) -> str:
 
     if not top:
         return (
-            "Markets are quiet this morning — all five tracked metrics sit within "
+            "Markets are quiet this morning — all tracked metrics sit within "
             "typical recent ranges. No standout signals."
         )
 

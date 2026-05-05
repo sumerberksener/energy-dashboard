@@ -1,5 +1,5 @@
 {
-  "aggregate_brief": "Today's standouts: Coal \u2014 9th-percentile of 5-yr range \u2014 historically low; Clean Spark \u2014 91th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 12.1 pp below the 5-yr seasonal average.",
+  "aggregate_brief": "Today's standouts: GB Power \u2014 94th-percentile of 5-yr range \u2014 historically high; Coal \u2014 9th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 12.1 pp below the 5-yr seasonal average.",
   "freshness": {
     "any_stale": true,
     "stale_metrics": [
@@ -12,11 +12,6 @@
         "as_of": "2025-12-31",
         "days_old": 125,
         "key": "clean_dark"
-      },
-      {
-        "as_of": "2026-01-05",
-        "days_old": 120,
-        "key": "switching_ttf"
       }
     ]
   },
@@ -38,20 +33,20 @@
       "weekly_change_abs": 11.63
     },
     "clean_spark": {
-      "as_of": "2026-05-05",
+      "as_of": "2026-05-06",
       "available": true,
-      "daily_change_abs": 12.31,
-      "days_old": 0,
+      "daily_change_abs": -0.57,
+      "days_old": -1,
       "delta_unit": "EUR/MWh",
-      "extension_50d_sigma": 1.48,
-      "headline": "91th-percentile of 5-yr range \u2014 historically high",
+      "extension_50d_sigma": 1.1,
+      "headline": "Within typical range",
       "is_stale": false,
-      "latest": 35.41,
-      "monthly_change_abs": -4.6,
+      "latest": 20.0,
+      "monthly_change_abs": -3.39,
       "name": "Clean Spark",
-      "percentile_rank_5y": 91.0,
+      "percentile_rank_5y": 79.0,
       "unit": "EUR/MWh",
-      "weekly_change_abs": 16.17
+      "weekly_change_abs": 39.64
     },
     "coal": {
       "as_of": "2025-12-26",
@@ -70,20 +65,20 @@
       "weekly_change_pct": 0.08
     },
     "de_power": {
-      "as_of": "2026-05-05",
+      "as_of": "2026-05-06",
       "available": true,
-      "daily_change_pct": 9.39,
-      "days_old": 0,
+      "daily_change_pct": -0.44,
+      "days_old": -1,
       "delta_unit": "pct",
-      "extension_50d_sigma": 1.5,
+      "extension_50d_sigma": 1.12,
       "headline": "Within typical range",
       "is_stale": false,
-      "latest": 143.42,
-      "monthly_change_pct": 3.86,
+      "latest": 128.01,
+      "monthly_change_pct": 8.92,
       "name": "DE Power",
-      "percentile_rank_5y": 77.0,
+      "percentile_rank_5y": 73.0,
       "unit": "EUR/MWh",
-      "weekly_change_pct": 31.31
+      "weekly_change_pct": 71.34
     },
     "eua": {
       "as_of": "2026-05-04",
@@ -101,37 +96,53 @@
       "unit": "EUR/tCO2",
       "weekly_change_pct": 1.22
     },
-    "storage": {
-      "as_of": "2026-05-04",
+    "gb_power": {
+      "as_of": "2026-05-05",
       "available": true,
-      "daily_change_pct": 0.83,
-      "days_old": 1,
+      "daily_change_pct": 3.29,
+      "days_old": 0,
       "delta_unit": "pct",
-      "extension_50d_sigma": 2.45,
+      "extension_50d_sigma": 0.84,
+      "headline": "94th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 128.31,
+      "monthly_change_pct": 10.98,
+      "name": "GB Power",
+      "percentile_rank_5y": 94.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 24.8
+    },
+    "renewable_share": {
+      "as_of": "2026-05-05",
+      "available": true,
+      "daily_change_pct": -24.05,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.28,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 25.62,
+      "monthly_change_pct": -4.77,
+      "name": "Renewables",
+      "percentile_rank_5y": 15.0,
+      "unit": "% of load",
+      "weekly_change_pct": -9.39
+    },
+    "storage": {
+      "as_of": "2026-05-05",
+      "available": true,
+      "daily_change_pct": 0.76,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.39,
       "headline": "12.1 pp below the 5-yr seasonal average",
       "is_stale": false,
-      "latest": 34.07,
-      "monthly_change_pct": 15.41,
+      "latest": 34.33,
+      "monthly_change_pct": 16.33,
       "name": "EU Storage",
-      "percentile_rank_5y": 10.0,
+      "percentile_rank_5y": 11.0,
       "unit": "% full",
-      "weekly_change_pct": 4.5
-    },
-    "switching_ttf": {
-      "as_of": "2026-01-05",
-      "available": true,
-      "daily_change_pct": 0.11,
-      "days_old": 120,
-      "delta_unit": "pct",
-      "extension_50d_sigma": 0.64,
-      "headline": "Within typical range",
-      "is_stale": true,
-      "latest": 23.28,
-      "monthly_change_pct": -0.88,
-      "name": "Switch TTF",
-      "percentile_rank_5y": 18.0,
-      "unit": "EUR/MWh",
-      "weekly_change_pct": -0.28
+      "weekly_change_pct": 4.67
     },
     "ttf": {
       "as_of": "2026-05-04",
@@ -149,5 +160,34 @@
       "unit": "EUR/MWh",
       "weekly_change_pct": 4.95
     }
+  },
+  "news": {
+    "geopolitics_summary": "Strait of Hormuz closure since late February elevates global LNG prices; EU gas supply risk via reduced Middle Eastern LNG arbitrage flows.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "International LNG prices surge following Strait of Hormuz closure",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67604",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Hormuz blockade reduces Middle Eastern LNG supply to global market, tightening arbitrage between US, Asian, and European LNG, lifting TTF via scarcity premium and reducing US-EU price differential incentive for US LNG exports."
+      },
+      {
+        "commodity": "crude",
+        "headline": "DOE releases 17.5M barrels from Strategic Petroleum Reserve",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "macro",
+        "why_it_matters": "SPR release increases global crude supply, moderating oil price risk; lower Brent reduces marginal fuel-switching cost from gas to fuel oil, pressuring European power and TTF via reduced heating oil demand competition."
+      }
+    ],
+    "watchlist": [
+      "Strait of Hormuz blockade status \u2014 monitor for supply disruption escalation or resolution.",
+      "US SPR release cadence \u2014 continued drawdowns may sustain crude price pressure through May\u2013June."
+    ]
   }
 }

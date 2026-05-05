@@ -8,4 +8,5 @@ plotly>=5.20
 matplotlib>=3.8
 pyarrow>=15.0
 anthropic>=0.40
+feedparser>=6.0
 pytest>=8.0

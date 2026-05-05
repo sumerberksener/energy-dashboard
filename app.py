@@ -1,9 +1,9 @@
 """EU Energy Markets — Cross-Commodity Risk Pack.
 
-Interactive view of the same data the CLI (scripts/generate_brief.py) produces:
-eight metrics framed around the gas + carbon → power-curve thesis, a regime
-strip with cross-commodity KPIs, and an on-demand AI-generated desk note
-grounded in the structured snapshot.
+Interactive view of the same data the CLI produces. Eight primary tiles +
+a fundamentals strip + a regime cockpit + an AI desk note + per-metric tabs +
+a European Markets tab covering FR / NL / BE / IT / ES on top of the primary
+DE and GB views.
 """
 from __future__ import annotations
 
@@ -13,11 +13,17 @@ import streamlit as st
 
 from analysis import stats
 from analysis.signals import cross_market_tag, signal_for
-from config import METRICS, STALE_AFTER_DAYS
+from config import (
+    FUNDAMENTALS_METRICS,
+    METRICS,
+    STALE_AFTER_DAYS,
+    TOP_ROW_METRICS,
+)
 from data import cache as data_cache
 from ui import brief as brief_ui
 from ui import cards as cards_ui
 from ui import charts as charts_ui
+from ui import markets as markets_ui
 from ui import methodology as methodology_ui
 from ui import regime as regime_ui
 
@@ -50,8 +56,7 @@ def _freshness_summary(data: dict) -> tuple[str, str, str]:
             fresh.append(metric.short_name)
 
     n = len(METRICS)
-    label_parts = []
-    label_parts.append(f"{len(fresh)}/{n} live")
+    label_parts = [f"{len(fresh)}/{n} live"]
     if stale:
         label_parts.append(f"{len(stale)} stale")
     if missing:
@@ -72,8 +77,7 @@ def _freshness_summary(data: dict) -> tuple[str, str, str]:
         tooltip_lines.append("Stale: " + "; ".join(stale))
     if missing:
         tooltip_lines.append("Missing: " + ", ".join(missing))
-    tooltip = " | ".join(tooltip_lines)
-    return klass, label, tooltip
+    return klass, label, " | ".join(tooltip_lines)
 
 
 def _header(latest_date, data: dict) -> None:
@@ -101,11 +105,13 @@ def _footer() -> None:
     st.markdown("---")
     st.caption(
         "**Sources** — TTF & EUA: Yahoo Finance / stooq · "
-        "Coal: ICE Newcastle proxy (Yahoo) · "
-        "DE Power: ENTSO-E Transparency Platform · "
+        "Coal: ICE Newcastle proxy (Yahoo, fundamentals input only) · "
+        "DE / GB / FR / NL / BE / IT / ES Power: ENTSO-E Transparency Platform · "
         "EU Storage: GIE AGSI+ · "
-        "Clean spark/dark/switching TTF computed from the primaries (see Methodology). "
-        "Daily granularity, 5-year lookback. "
+        "DE Renewable forecast: ENTSO-E (wind+solar / load) · "
+        "News: IEA, EIA, Bruegel, ENTSO-E, Euractiv RSS · "
+        "Clean spark/dark computed from the primaries (see Methodology). "
+        "Daily granularity, multi-year lookback. "
         "Observations are rule-based and informational, not investment advice."
     )
     st.caption(
@@ -117,8 +123,24 @@ def _footer() -> None:
 @st.cache_data(ttl=3600, show_spinner=False)
 def _ai_narrative(data_signature: str, two_pass: bool):
     from ai.narrative import generate_narrative
+    from ai.news_themes import extract_themes
+    from data import news as news_module
+
     data = data_cache.get_all_with_derived()
-    return generate_narrative(data, two_pass=two_pass)
+    try:
+        headlines = news_module.fetch_headlines()
+        nt = extract_themes(headlines)
+        news_dict = {
+            "geopolitics_summary": nt.geopolitics_summary,
+            "themes": nt.themes,
+            "watchlist": nt.watchlist,
+        } if (nt.themes or nt.geopolitics_summary) else None
+    except Exception:
+        nt = None
+        news_dict = None
+
+    narrative = generate_narrative(data, two_pass=two_pass, news=news_dict)
+    return narrative, nt
 
 
 def _ai_pane(data: dict) -> None:
@@ -132,9 +154,9 @@ def _ai_pane(data: dict) -> None:
         if not generate:
             st.caption(
                 "Click to call Claude (Haiku 4.5) and produce a metrics-grounded "
-                "narrative. Two-pass mode runs an extract step (themes, risk flags, "
-                "top takeaway) then a narrate step using only the extract — reduces "
-                "hallucination. Single-pass is one shot. Each call is logged to "
+                "narrative + structured news themes from public RSS feeds. "
+                "Two-pass mode runs an extract step then a narrate step grounded only "
+                "in the extract — reduces hallucination. Each call is logged to "
                 "`ai/logs/<date>.jsonl`. Requires `ANTHROPIC_API_KEY` in "
                 "`.streamlit/secrets.toml` or environment."
             )
@@ -145,16 +167,14 @@ def _ai_pane(data: dict) -> None:
                 f"{k}:{df.index.max() if df is not None and not df.empty else 'na'}"
                 for k, df in data.items()
             )
-            narrative = _ai_narrative(sig, two_pass)
+            narrative, news_themes = _ai_narrative(sig, two_pass)
 
-        # Hero takeaway
         if narrative.top_takeaway:
             st.markdown(
                 f"<div class='ai-takeaway'>{narrative.top_takeaway}</div>",
                 unsafe_allow_html=True,
             )
 
-        # Themes + risk flags
         if narrative.extract:
             themes = narrative.extract.get("themes", []) or []
             flags = narrative.extract.get("risk_flags", []) or []
@@ -171,10 +191,17 @@ def _ai_pane(data: dict) -> None:
                 st.markdown(f"<div class='ai-chips'>{chips}</div>",
                             unsafe_allow_html=True)
 
-        # Narrative body
         st.write(narrative.text)
 
-        # Audit footer
+        # News themes summary inline
+        if news_themes is not None and news_themes.themes:
+            st.markdown("**Today's themes (geopolitics + policy)**")
+            for t in news_themes.themes[:5]:
+                st.markdown(
+                    f"- **[{t.get('tag','')} · {t.get('commodity','')} · {t.get('polarity','')}]** "
+                    f"{t.get('headline','')} — {t.get('why_it_matters','')}"
+                )
+
         if narrative.source.startswith("claude"):
             mode = "two-pass" if narrative.source == "claude-two-pass" else "single-pass"
             st.caption(
@@ -187,6 +214,42 @@ def _ai_pane(data: dict) -> None:
             st.caption(
                 f":orange[{narrative.error or 'Rule-based fallback. Set ANTHROPIC_API_KEY to enable Claude.'}]"
             )
+
+
+def _fundamentals_strip(data: dict) -> None:
+    """Small horizontal strip showing fundamentals inputs (coal, EUR/USD, etc.)
+    below the primary cards — visible but visually demoted.
+    """
+    if not FUNDAMENTALS_METRICS:
+        return
+    items = []
+    for metric in FUNDAMENTALS_METRICS:
+        df = data.get(metric.key)
+        if df is None or df.empty:
+            items.append(f"<span class='regime-label'>{metric.short_name}</span> "
+                         f"<span class='regime-value muted'>—</span>")
+            continue
+        last = stats.latest(df)
+        stale_flag = " ⚠" if stats.is_stale(df, STALE_AFTER_DAYS) else ""
+        items.append(
+            f"<span class='regime-label'>{metric.short_name}{stale_flag}</span> "
+            f"<span class='regime-value muted'>{last:,.2f} {metric.unit}</span>"
+        )
+    # EUR/USD as another fundamentals input (not a registered Metric)
+    fx = data.get("eurusd")
+    if fx is not None and not fx.empty:
+        items.append(
+            f"<span class='regime-label'>EUR/USD</span> "
+            f"<span class='regime-value muted'>{stats.latest(fx):.4f}</span>"
+        )
+    sep = "<span style='color:#45475a; margin: 0 14px'>·</span>"
+    st.markdown(
+        f"<div style='font-size:0.78rem; padding:8px 0; opacity:0.85;'>"
+        f"<span class='regime-label' style='margin-right:10px'>Fundamentals inputs</span>"
+        + sep.join(items)
+        + "</div>",
+        unsafe_allow_html=True,
+    )
 
 
 def main() -> None:
@@ -203,26 +266,30 @@ def main() -> None:
     # Cross-commodity regime strip — single horizontal cockpit summary.
     regime_ui.render(data)
 
-    # Top row: metric cards (8 metrics fits in 2 rows of 4 nicely on wide layout)
+    # Top row: 8 primary cards (excludes coal — that's a fundamentals input).
     n_per_row = 4
-    for row_start in range(0, len(METRICS), n_per_row):
+    for row_start in range(0, len(TOP_ROW_METRICS), n_per_row):
         cols = st.columns(n_per_row)
-        for col, metric in zip(cols, METRICS[row_start:row_start + n_per_row]):
+        for col, metric in zip(cols, TOP_ROW_METRICS[row_start:row_start + n_per_row]):
             with col:
                 df = data.get(metric.key)
                 sig = signal_for(metric.key, df) if df is not None else None
                 cards_ui.render(metric, df, sig)
+
+    # Fundamentals inputs strip (coal, EUR/USD)
+    _fundamentals_strip(data)
 
     st.markdown("")
 
     # AI desk-note pane.
     _ai_pane(data)
 
-    # Body: one tab per metric + a final Methodology tab.
-    tab_labels = [m.short_name for m in METRICS] + ["Methodology"]
+    # Body: per-metric tabs (excluding fundamentals) + European Markets + Methodology.
+    metric_tabs = [m.short_name for m in TOP_ROW_METRICS]
+    tab_labels = metric_tabs + ["European Markets", "Methodology"]
     tabs = st.tabs(tab_labels)
 
-    for tab, metric in zip(tabs[:-1], METRICS):
+    for tab, metric in zip(tabs[: len(TOP_ROW_METRICS)], TOP_ROW_METRICS):
         with tab:
             df = data.get(metric.key)
             sig = signal_for(metric.key, df) if df is not None else None
@@ -234,9 +301,8 @@ def main() -> None:
             if df is None or df.empty:
                 if metric.derived:
                     st.warning(
-                        "Derived metric — requires DE Power and EUA "
-                        "(plus Coal for clean dark / switching TTF). "
-                        "Check that ENTSO-E and AGSI+ tokens are set."
+                        "Derived metric — requires upstream primaries. "
+                        "Check ENTSO-E + AGSI+ tokens."
                     )
                 else:
                     st.warning(
@@ -268,6 +334,10 @@ def main() -> None:
                     f"{df.index.max():%Y-%m-%d} "
                     f"({stats.days_since_latest(df)} days old)]"
                 )
+
+    # European Markets tab
+    with tabs[-2]:
+        markets_ui.render()
 
     # Methodology tab (last)
     with tabs[-1]:

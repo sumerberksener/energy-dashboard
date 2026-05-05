@@ -1,5 +1,8 @@
-"""Cross-commodity regime strip: 4–5 living KPIs that summarise the regime
+"""Cross-commodity regime strip: 5 living KPIs that summarise the regime
 in one horizontal bar at the top of the dashboard.
+
+Calibrated for Cobblestone's actual book — Power, Gas, Emissions across
+European markets, with explicit GB exposure and short-term focus.
 """
 from __future__ import annotations
 
@@ -23,39 +26,13 @@ def render(data: dict[str, pd.DataFrame]) -> None:
     """Render a horizontal cross-commodity regime strip."""
     cells: list[str] = []
 
-    ttf = data.get("ttf")
-    sw = data.get("switching_ttf")
+    storage = data.get("storage")
     cs = data.get("clean_spark")
     cd = data.get("clean_dark")
-    storage = data.get("storage")
+    de_gb = data.get("de_gb_spread")
+    rs = data.get("renewable_share")
 
-    # 1. Switching TTF
-    sw_last = stats.latest(sw) if sw is not None else None
-    if sw_last is not None:
-        cells.append(_cell("Switching TTF", f"{sw_last:.1f} EUR/MWh"))
-    else:
-        cells.append(_cell("Switching TTF", "—", "muted"))
-
-    # 2. TTF gap vs switching TTF
-    ttf_last = stats.latest(ttf) if ttf is not None else None
-    if ttf_last is not None and sw_last is not None:
-        gap = ttf_last - sw_last
-        klass = "green" if gap < 0 else ("red" if gap > 0 else "")
-        cells.append(_cell("TTF − Switch TTF", f"{gap:+.1f} EUR/MWh", klass))
-    else:
-        cells.append(_cell("TTF − Switch TTF", "—", "muted"))
-
-    # 3. Clean spark vs clean dark differential
-    cs_last = stats.latest(cs) if cs is not None else None
-    cd_last = stats.latest(cd) if cd is not None else None
-    if cs_last is not None and cd_last is not None:
-        diff = cs_last - cd_last
-        klass = "green" if diff > 0 else ("red" if diff < 0 else "")
-        cells.append(_cell("Spark − Dark", f"{diff:+.1f} EUR/MWh", klass))
-    else:
-        cells.append(_cell("Spark − Dark", "—", "muted"))
-
-    # 4. Storage vs seasonal deviation
+    # 1. Storage vs seasonal deviation
     if storage is not None and not storage.empty:
         sd = stats.seasonal_deviation_pp(storage)
         if sd is not None:
@@ -66,10 +43,43 @@ def render(data: dict[str, pd.DataFrame]) -> None:
     else:
         cells.append(_cell("Storage vs seasonal", "—", "muted"))
 
+    # 2. Spark − Dark differential
+    cs_last = stats.latest(cs) if cs is not None else None
+    cd_last = stats.latest(cd) if cd is not None else None
+    if cs_last is not None and cd_last is not None:
+        diff = cs_last - cd_last
+        klass = "green" if diff > 0 else ("red" if diff < 0 else "")
+        cells.append(_cell("Spark − Dark", f"{diff:+.1f} EUR/MWh", klass))
+    else:
+        cells.append(_cell("Spark − Dark", "—", "muted"))
+
+    # 3. DE − GB cross-border spread
+    de_gb_last = stats.latest(de_gb) if de_gb is not None else None
+    if de_gb_last is not None:
+        klass = "red" if de_gb_last > 0 else ("green" if de_gb_last < 0 else "")
+        side = "DE prem" if de_gb_last > 0 else ("GB prem" if de_gb_last < 0 else "parity")
+        cells.append(_cell("DE − GB", f"{de_gb_last:+.1f} EUR/MWh ({side})", klass))
+    else:
+        cells.append(_cell("DE − GB", "—", "muted"))
+
+    # 4. Renewable forecast share
+    rs_last = stats.latest(rs) if rs is not None else None
+    if rs_last is not None:
+        # Higher renewables = more supply = green (bearish power)
+        # vs typical share — use simple thresholds for color
+        if rs_last >= 50:
+            klass = "green"
+        elif rs_last <= 20:
+            klass = "red"
+        else:
+            klass = ""
+        cells.append(_cell("Renewables", f"{rs_last:.0f}% of load", klass))
+    else:
+        cells.append(_cell("Renewables", "—", "muted"))
+
     # 5. Cross-market regime tag
     tag = cross_market_tag(data)
     if tag:
-        # Trim to fit; keep the lead clause
         short = tag.split(":")[0]
         cells.append(_cell("Regime", short))
     else:
