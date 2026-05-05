@@ -8,6 +8,65 @@ Repository: this folder
 
 > An automated cross-commodity monitor that converts public EU gas and carbon fundamentals into a repeatable, AI-narrated daily desk note for European power. Designed to be desk-usable on day one and a foundation the trader can extend.
 
+## Architecture at a glance
+
+```mermaid
+flowchart LR
+    subgraph Sources [Public data sources]
+        Y[Yahoo Finance / stooq]
+        E[ENTSO-E Transparency]
+        A[GIE AGSI+]
+    end
+
+    subgraph DataLayer [data/ — Streamlit-free]
+        F[fetchers.py]
+        C[cache.py + parquet snapshots]
+    end
+
+    subgraph Analysis [analysis/ — pure pandas/numpy]
+        S[stats.py]
+        D[derived.py — clean spark/dark, switching TTF]
+        SG[signals.py — rule-based observations]
+    end
+
+    subgraph AI [ai/ — Anthropic SDK only]
+        EX[Extract pass — strict JSON]
+        N[Narrate pass — prose grounded in JSON]
+        L[ai/logs/&lt;date&gt;.jsonl]
+    end
+
+    subgraph Outputs
+        MD[output/&lt;date&gt;/desk_note_&lt;date&gt;.md]
+        CSV[output/&lt;date&gt;/data/*.csv]
+        PNG[output/&lt;date&gt;/charts/*.png]
+        TH[ai_themes.json + ai_snapshot.json]
+        ST[Streamlit dashboard]
+    end
+
+    Y --> F
+    E --> F
+    A --> F
+    F --> C
+    C --> S
+    C --> D
+    S --> SG
+    D --> SG
+    SG --> EX
+    D --> EX
+    EX --> N
+    EX --> L
+    N --> L
+    N --> MD
+    SG --> MD
+    C --> CSV
+    D --> CSV
+    C --> PNG
+    EX --> TH
+    C --> ST
+    SG --> ST
+    N --> ST
+```
+
 ---
 
 ## How this maps to the brief
@@ -15,13 +74,13 @@ Repository: this folder
 | Brief deliverable | Where it lives in this repo |
 |---|---|
 | **Fundamentals view** — 1–3 page desk note covering gas tightness, carbon signal, and power-curve implications, with numbers + ≥2 charts | `output/<date>/desk_note_<date>.md` (auto-generated). Sample committed in `output/`. |
-| **Monitor metrics** — 5–8 daily metrics tied to gas, carbon, and power-curve risk | `config.py` defines the 7-metric set. Live view: top row of `app.py`. Tabular form: `output/<date>/data/snapshot.csv`. |
+| **Monitor metrics** — 5–8 daily metrics tied to gas, carbon, and power-curve risk | `config.py` defines the 8-metric set. Live view: top row of `app.py`. Tabular form: `output/<date>/data/snapshot.csv`. |
 | **Automation** — runnable Python script that pulls public data, cleans it, generates charts, writes a daily brief | `scripts/generate_brief.py` — single-command CLI (no Streamlit dependency). Cron-scheduled in `.github/workflows/daily.yml`. |
-| **AI/LLM integration** — code-integrated AI workflow with logged prompts and outputs that structures inputs and/or produces a metrics-grounded narrative | `ai/` module: `client.py` wraps Anthropic SDK with append-only JSONL logging; `narrative.py` builds a structured snapshot and asks Claude (Haiku 4.5) to write the executive summary. Prompts versioned in `ai/prompts/`. Logs in `ai/logs/`. |
+| **AI/LLM integration** — code-integrated AI workflow with logged prompts and outputs that structures inputs and/or produces a metrics-grounded narrative | `ai/` module: `client.py` wraps Anthropic SDK with append-only JSONL logging; `narrative.py` runs a **two-pass extract → narrate** workflow against Claude Haiku 4.5 — pass 1 returns strict JSON (themes, risk flags, watchlist, top takeaway), pass 2 writes prose grounded *only* in pass-1 JSON. Versioned prompts in `ai/prompts/`. Round-trip logs in `ai/logs/<date>.jsonl`. Graceful rule-based fallback when no API key. |
 
-## The seven metrics
+## The eight metrics
 
-The set is anchored to the brief's thesis — **four price benchmarks, one fundamental, two derived spreads** that bridge gas + carbon → power.
+The set is anchored to the brief's thesis — **four price benchmarks, one fundamental, three derived metrics** that bridge gas + carbon → power.
 
 | # | Metric | Unit | Source (free) | Why it matters |
 |---|---|---|---|---|
@@ -32,6 +91,7 @@ The set is anchored to the brief's thesis — **four price benchmarks, one funda
 | 5 | **German Day-Ahead Baseload Power** | EUR/MWh | ENTSO-E Transparency Platform | Europe's largest power market — the de-facto continental front-curve benchmark. |
 | 6 | **Clean Spark Spread (CCGT, day-ahead)** | EUR/MWh | _Derived_ | Gas-fired margin: P − G/η_gas − C × EF_gas. The bridge from TTF + EUA to gas-plant economics. |
 | 7 | **Clean Dark Spread (hard coal, day-ahead)** | EUR/MWh | _Derived_ | Coal-fired margin: P − Coal/η_coal − C × EF_coal. The dark/spark differential is the single best fuel-switching indicator. |
+| 8 | **Switching TTF** | EUR/MWh | _Derived_ | The TTF gas price at which a CCGT exactly matches a hard-coal plant in the merit order, given current coal + EUA. The TTF − Switching-TTF gap is a single number every European gas/power desk watches for fuel-switch headroom. |
 
 Plant assumptions (η_gas=0.50, η_coal=0.40, EF_gas=0.184, EF_coal=0.34 t/MWh_th) live in `config.py` and are auditable at a glance.
 
@@ -164,14 +224,25 @@ fetchers + derived ──▶ structured snapshot (JSON) ──▶ Claude (Haiku 
 - **Power curve**: ENTSO-E exposes day-ahead, not Cal+1 forwards. The day-ahead is treated as the front of the curve; Cal+1 implications are inferred qualitatively from the spread regime. A paid EEX feed would unlock proper curve work.
 - **Phase 1 = rule-based + AI narrative.** No forecasting model yet. The architecture is built so v0.2 (next-day directional model on technical features) and v0.3 (RSS news ingestion + sentiment) drop in cleanly without rewrites.
 
-## Roadmap (next two weeks)
+## What I'd do with another week
+
+Honest gap list — visible because hiding them would be worse than the gaps themselves.
+
+- **Paid API2 coal feed.** The Newcastle proxy lags badly (the freshness flag surfaces this); a proper Argus or Refinitiv feed for API2 (Rotterdam) would unlock a clean dark spread and a clean switching-TTF print. Currently the dark spread is indicative not bankable when Newcastle goes stale.
+- **Cal+1 power.** ENTSO-E gives day-ahead. The "Day-Ahead → curve" wording in the brief is currently inferred qualitatively from spread regime; a free EEX scrape (or a paid EEX feed) would let me plot DA−Cal+1 explicitly and quantify the curve shape.
+- **News & policy ingestion.** A small RSS pull from Reuters / Argus / ICIS plus a Claude theme-extraction pass would close the "structure unstructured inputs" half of the AI requirement (the current implementation only does the structured-numbers half). Architectural slot for it already exists in `ai/`.
+- **Directional forecasting.** Phase 1 is descriptive (rule-based + LLM narrative). v0.4 should add a logistic-regression / gradient-boost model on technical features for next-day direction with calibrated confidence — the data layer is already there, only the model/UI integration is missing.
+- **Backtesting harness.** The cross-market regime tag ("tight market" / "well-supplied") fires without historical validation. A `scripts/backtest_regime.py` that replays the tag against next-N-day DE power returns would let me ship signals with measured accuracy rather than asserted intuition.
+- **Renewable-share fundamentals.** ENTSO-E exposes wind+solar generation forecasts. Adding a `renewable_share` row would make "what moved DE power today" quantitative and sharply improve the section-5 narrative.
+
+## Longer-horizon roadmap
 
 | Version | Theme | Ships |
 |---|---|---|
-| v0.2 | News awareness | RSS ingestion (Reuters / Argus / ICIS) + Claude-driven theme extraction; surfaced as "today's headlines" in the brief. |
-| v0.3 | Forecasting | Directional next-day model on technical features (logistic regression baseline → gradient boosting). Calibrated confidence in the brief. |
-| v0.4 | Backtesting | Replay rule-based + ML signals against historical PnL on a simple long/short. Signal quality measured, not asserted. |
-| v0.5 | NLP trade ideas | Fine-tune a small LM on energy news; surface candidate trade ideas with rationale + cited sources. |
+| v0.2 | News awareness | RSS ingestion + Claude theme extraction surfaced as a "today's themes" section. |
+| v0.3 | Forecasting | Directional next-day model on technical features (logistic regression → gradient boosting). |
+| v0.4 | Backtesting | Replay signals against historical PnL on a simple long/short rule. |
+| v0.5 | NLP trade ideas | Fine-tune a small LM on energy news; surface candidate ideas with rationale + cited sources. |
 
 ## License & disclaimer
 

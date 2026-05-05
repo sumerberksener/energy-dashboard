@@ -1,0 +1,38 @@
+{
+  "freshness_caveat": "Coal (as_of 2025-12-26, 130 days old), clean dark (2025-12-31, 125 days old), and switching TTF (2026-01-05, 120 days old) are stale; merit-order and fuel-switch conclusions should be verified against live coal and spread data before desk decisions.",
+  "risk_flags": [
+    "Coal snapshot 130 days old (2025-12-26) \u2014 clean dark and switching TTF equally stale; merit-order conclusions should be treated with caution.",
+    "Storage at 34.07 % (10th-percentile, 12.1 pp below seasonal) with 15.41 % monthly gain \u2014 refill pace will determine H2 balancing risk.",
+    "Clean spark +12.31 EUR/MWh daily and +1.48 sigma extension signal potential profit-taking; DE power +31 % weekly suggests locational tightness."
+  ],
+  "themes": [
+    "Gas-anchored power merit order \u2014 clean spark extended",
+    "Coal structurally cheap but data stale",
+    "Storage 12 pp below seasonal \u2014 refill risk into summer",
+    "Carbon range-bound, gas weekly momentum +5 %"
+  ],
+  "top_drivers": [
+    "Clean spark at 91st-percentile drives gas-anchored, high-spread power regime.",
+    "Storage 12 pp below seasonal baseline compresses H2 margin and sustains long-duration tightness narrative.",
+    "TTF +5 % weekly and gas at 65th-percentile keep marginal generation cost elevated."
+  ],
+  "top_takeaway": "Clean spark at 91st-percentile (35.41 EUR/MWh) dominates merit order; coal at 9th-percentile (96 USD/t) is deeply in-the-money, but coal data is 130 days stale \u2014 gas anchors power via TTF at 65th-percentile.",
+  "watchlist": [
+    {
+      "metric": "Clean Spark",
+      "why": "91st-percentile (35.41 EUR/MWh) with +12.31 EUR/MWh daily move and +1.48 sigma extension \u2014 reversal risk and fuel-switch inflection point."
+    },
+    {
+      "metric": "EU Storage",
+      "why": "34.07 % full, 12.1 pp below seasonal average at 10th-percentile \u2014 spring refill momentum critical for summer adequacy signal."
+    },
+    {
+      "metric": "TTF Gas",
+      "why": "65th-percentile, +5.19 % daily and +4.95 % weekly \u2014 anchoring power curve; watch for break above 50 EUR/MWh."
+    },
+    {
+      "metric": "Coal",
+      "why": "9th-percentile (96 USD/t) but 130 days stale \u2014 update urgently to confirm merit-order positioning versus gas."
+    }
+  ]
+}

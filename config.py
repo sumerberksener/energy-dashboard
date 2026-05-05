@@ -19,6 +19,7 @@ class Metric:
     color: str
     higher_is: str   # "bullish-power" | "bearish-power" | "supply-rich" — directional flag for the cross-commodity narrative
     derived: bool = False
+    delta_unit: str = "pct"   # "pct" (price-like, never crosses 0) or "abs" (spreads — pct meaningless across zero)
 
 
 METRICS: list[Metric] = [
@@ -109,8 +110,9 @@ METRICS: list[Metric] = [
             "European fuel — a regime in which TTF moves transmit directly into the power curve."
         ),
         color="#fab387",
-        higher_is="bullish-power",
+        higher_is="margin-rich",
         derived=True,
+        delta_unit="abs",
     ),
     Metric(
         key="clean_dark",
@@ -125,7 +127,24 @@ METRICS: list[Metric] = [
             "shifting the power-curve sensitivity toward coal+carbon."
         ),
         color="#f38ba8",
-        higher_is="bullish-power",
+        higher_is="margin-rich",
+        derived=True,
+        delta_unit="abs",
+    ),
+    Metric(
+        key="switching_ttf",
+        name="Fuel-Switching TTF",
+        short_name="Switch TTF",
+        unit="EUR/MWh",
+        source="Derived (η_gas · (Coal/η_coal + (EF_coal/η_coal − EF_gas/η_gas)·EUA))",
+        definition=(
+            "The TTF gas price at which a CCGT just matches a hard-coal plant in the "
+            "merit order, given current coal and EUA. If actual TTF prints below the "
+            "switching TTF, gas is in-the-money vs coal; above, coal wins. The "
+            "TTF − Switching-TTF gap is the cleanest single number for fuel-switch headroom."
+        ),
+        color="#fec96f",
+        higher_is="margin-rich",
         derived=True,
     ),
 ]
@@ -156,6 +175,10 @@ ZSCORE_OUTSIZED = 2.0
 
 HISTORY_YEARS = 5
 CACHE_TTL_SECONDS = 60 * 60
+
+# Freshness: a series whose latest row is older than this is flagged STALE in
+# the snapshot, the markdown table, and the JSON sent to the AI.
+STALE_AFTER_DAYS = 5
 
 
 # --- Submission identity ----------------------------------------------------

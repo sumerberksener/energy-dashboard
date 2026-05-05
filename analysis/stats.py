@@ -26,11 +26,81 @@ def daily_change_pct(df: pd.DataFrame) -> float | None:
     return float((s.iloc[-1] / s.iloc[-2] - 1) * 100)
 
 
-def change_over_pct(df: pd.DataFrame, business_days: int) -> float | None:
+def change_over_pct(
+    df: pd.DataFrame,
+    business_days: int,
+    *,
+    smooth_window: int | None = None,
+) -> float | None:
+    """Pct change over `business_days`. With smoothing, compares trailing means.
+
+    Without `smooth_window`, this is point-to-point: latest vs latest−N. That's
+    fragile for series with single-day holiday spikes (e.g. DE Power around
+    public holidays where day-ahead prints can be deeply negative). Pass
+    `smooth_window=N` to compare the N-day trailing mean today vs the N-day
+    trailing mean N business days ago — much more robust.
+    """
     s = _series(df)
     if len(s) <= business_days:
         return None
-    return float((s.iloc[-1] / s.iloc[-1 - business_days] - 1) * 100)
+    if smooth_window is None or smooth_window <= 1:
+        return float((s.iloc[-1] / s.iloc[-1 - business_days] - 1) * 100)
+    if len(s) < business_days + smooth_window:
+        return None
+    recent = s.iloc[-smooth_window:].mean()
+    prior = s.iloc[-business_days - smooth_window:-business_days].mean()
+    if prior == 0 or not pd.notna(prior):
+        return None
+    return float((recent / prior - 1) * 100)
+
+
+def daily_change_abs(df: pd.DataFrame) -> float | None:
+    """Absolute change vs prior row, in the metric's native units.
+
+    Used for spreads (clean spark / clean dark) where pct change across a
+    sign flip or near-zero denominator is mathematically meaningless.
+    """
+    s = _series(df)
+    if len(s) < 2:
+        return None
+    return float(s.iloc[-1] - s.iloc[-2])
+
+
+def change_over_abs(
+    df: pd.DataFrame,
+    business_days: int,
+    *,
+    smooth_window: int | None = None,
+) -> float | None:
+    """Absolute change over `business_days`. With smoothing, compares trailing means."""
+    s = _series(df)
+    if len(s) <= business_days:
+        return None
+    if smooth_window is None or smooth_window <= 1:
+        return float(s.iloc[-1] - s.iloc[-1 - business_days])
+    if len(s) < business_days + smooth_window:
+        return None
+    recent = s.iloc[-smooth_window:].mean()
+    prior = s.iloc[-business_days - smooth_window:-business_days].mean()
+    if not pd.notna(prior):
+        return None
+    return float(recent - prior)
+
+
+def days_since_latest(df: pd.DataFrame, ref: pd.Timestamp | None = None) -> int | None:
+    """Calendar days between `ref` (default today UTC) and the latest data row."""
+    s = _series(df)
+    if not len(s):
+        return None
+    ref = (ref or pd.Timestamp.now(tz="UTC")).tz_localize(None).normalize()
+    last = pd.Timestamp(s.index.max()).normalize()
+    return int((ref - last).days)
+
+
+def is_stale(df: pd.DataFrame, threshold_days: int) -> bool:
+    """True if latest data is older than `threshold_days`."""
+    d = days_since_latest(df)
+    return d is not None and d > threshold_days
 
 
 def percentile_rank(df: pd.DataFrame) -> float | None:

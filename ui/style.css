@@ -1,0 +1,122 @@
+/* Energy Dashboard — light visual polish on top of native Streamlit.
+   Scoped enough to avoid breaking Streamlit internals; subtle enough to
+   read as desk-grade rather than toy.
+*/
+
+/* Body typography */
+html, body, [class*="st-"] {
+  font-family: "Inter", "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, sans-serif !important;
+  font-feature-settings: "tnum" 1;  /* tabular numerals */
+}
+
+/* Bordered containers (cards) — subtle gradient border + hover lift */
+[data-testid="stVerticalBlockBorderWrapper"] > div[data-testid="stVerticalBlock"] {
+  background: linear-gradient(180deg, rgba(49, 50, 68, 0.35) 0%, rgba(30, 30, 46, 0.85) 100%);
+  border-radius: 10px !important;
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out;
+}
+
+[data-testid="stVerticalBlockBorderWrapper"]:hover > div[data-testid="stVerticalBlock"] {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(137, 180, 250, 0.12);
+}
+
+/* Metric value typography */
+[data-testid="stMetricValue"] {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+[data-testid="stMetricLabel"] {
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a6adc8 !important;
+}
+
+/* Tabs — subtler resting state, brighter active */
+[data-testid="stTabs"] button[role="tab"] {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+  color: #89b4fa !important;
+  border-bottom-color: #89b4fa !important;
+}
+
+/* Status pill in the header — defined inline in app.py via st.markdown */
+.status-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.status-pill-green  { background: rgba(166, 227, 161, 0.18); color: #a6e3a1; border: 1px solid rgba(166, 227, 161, 0.4); }
+.status-pill-amber  { background: rgba(250, 179, 135, 0.18); color: #fab387; border: 1px solid rgba(250, 179, 135, 0.4); }
+.status-pill-red    { background: rgba(243, 139, 168, 0.18); color: #f38ba8; border: 1px solid rgba(243, 139, 168, 0.4); }
+
+/* Regime strip */
+.regime-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  background: linear-gradient(135deg, #11111b 0%, #181825 100%);
+  border: 1px solid rgba(137, 180, 250, 0.18);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 8px 0 18px 0;
+}
+.regime-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.regime-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7f849c;
+}
+.regime-value {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #cdd6f4;
+}
+.regime-value.green { color: #a6e3a1; }
+.regime-value.red { color: #f38ba8; }
+.regime-value.muted { color: #a6adc8; }
+
+/* AI desk-note hero takeaway */
+.ai-takeaway {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #cdd6f4;
+  border-left: 3px solid #89b4fa;
+  padding: 8px 14px;
+  margin: 8px 0 12px 0;
+  background: rgba(137, 180, 250, 0.06);
+}
+
+/* AI theme + risk-flag chips */
+.ai-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 10px 0;
+}
+.ai-chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: #313244;
+  color: #cdd6f4;
+}
+.ai-chip.risk { background: rgba(243, 139, 168, 0.18); color: #f38ba8; }
+.ai-chip.theme { background: rgba(137, 180, 250, 0.16); color: #89b4fa; }

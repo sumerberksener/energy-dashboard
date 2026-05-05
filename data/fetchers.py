@@ -69,15 +69,25 @@ def _stooq(symbol: str) -> pd.DataFrame:
     url = f"https://stooq.com/q/d/l/?s={symbol}&i=d"
     r = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
     r.raise_for_status()
-    if "Date" not in r.text.splitlines()[0]:
-        raise RuntimeError(f"stooq returned non-CSV for {symbol}")
-    df = pd.read_csv(io.StringIO(r.text))
+
+    text = r.text or ""
+    lines = text.splitlines()
+    if not lines:
+        raise RuntimeError(f"stooq returned empty body for {symbol}")
+    # Common stooq "no data" responses: a single line with "No data" or just headers
+    if "Date" not in lines[0]:
+        snippet = text[:120].replace("\n", " ")
+        raise RuntimeError(f"stooq returned non-CSV for {symbol}: {snippet!r}")
+
+    df = pd.read_csv(io.StringIO(text))
     if df.empty or "Close" not in df.columns:
-        raise RuntimeError(f"stooq returned empty for {symbol}")
+        raise RuntimeError(f"stooq returned empty CSV for {symbol}")
     df["Date"] = pd.to_datetime(df["Date"])
     s = df.set_index("Date")["Close"]
     start, _ = _date_range()
     s = s[s.index >= start.tz_localize(None)]
+    if s.empty:
+        raise RuntimeError(f"stooq returned no rows in lookback window for {symbol}")
     return _tidy(s)
 
 
@@ -107,19 +117,53 @@ def fetch_eua() -> pd.DataFrame:
 
 
 def fetch_coal() -> pd.DataFrame:
-    """Thermal coal proxy (USD/t). ICE Newcastle via Yahoo `MTF=F`.
+    """Thermal coal proxy (USD/t).
 
-    True API2 (Rotterdam) is not freely available daily; Newcastle is the
-    closest free proxy. ~0.85 correlation with API2 historically.
+    Tries multiple Yahoo Finance tickers for thermal coal futures, in order of
+    preference, then falls back to stooq. Each ticker is checked for both
+    presence AND freshness — Yahoo `MTF=F` (Newcastle) has been observed to
+    return historical-only series with no recent updates, which is worse than
+    a clear failure since downstream analytics silently use stale prices.
+
+    True API2 (Rotterdam) is not freely available daily; the candidates here
+    are Asian-basin proxies historically correlated ~0.85 with API2.
     """
-    for ticker in ("MTF=F", "QM=F"):  # MTF = Newcastle, QM = e-mini crude (sanity reject)
+    candidates = [
+        ("MTF=F", _yahoo, "ICE Newcastle (Yahoo)"),
+        ("LMC.L", _yahoo, "Lloyds coal ETF (Yahoo)"),
+        ("KOL=F", _yahoo, "Coal-vector futures (Yahoo)"),
+        ("coal.f", _stooq, "stooq coal.f"),
+    ]
+    best: pd.DataFrame | None = None
+    best_label: str = ""
+    best_age_days: int = 10**9
+
+    for symbol, fetch_fn, label in candidates:
         try:
-            df = _yahoo(ticker)
-            if not df.empty:
+            df = fetch_fn(symbol)
+            if df is None or df.empty:
+                continue
+            age = int((pd.Timestamp.now().normalize() - df.index.max()).days)
+            if age < best_age_days:
+                best, best_label, best_age_days = df, label, age
+            if age <= 7:  # fresh enough — accept and stop probing
+                log.info("Coal: using %s (%d rows, latest %s)",
+                         label, len(df), df.index.max().date())
+                df.attrs["coal_source"] = label
                 return df
         except Exception as e:
-            log.info("Coal Yahoo %s failed (%s); trying next", ticker, e)
-    return _stooq("coal.f")
+            log.info("Coal %s (%s) failed: %s", symbol, label, e)
+
+    if best is not None:
+        log.warning(
+            "Coal: all sources stale; best is %s with %d-day-old data — "
+            "downstream will flag as STALE", best_label, best_age_days
+        )
+        best.attrs["coal_source"] = best_label
+        best.attrs["is_stale"] = True
+        return best
+
+    raise RuntimeError("Coal: no usable source found across Yahoo + stooq")
 
 
 def fetch_de_power(token: str) -> pd.DataFrame:

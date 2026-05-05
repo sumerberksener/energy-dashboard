@@ -129,7 +129,7 @@ def get_primaries() -> dict[str, pd.DataFrame]:
 
 
 def get_all_with_derived() -> dict[str, pd.DataFrame]:
-    """Fetch all 5 primaries + compute the 2 derived spreads. Returns 7-metric dict."""
+    """Fetch all 5 primaries + compute the 3 derived metrics. Returns 8-metric dict."""
     primaries = get_primaries()
     eurusd = get_eurusd()
 
@@ -139,10 +139,14 @@ def get_all_with_derived() -> dict[str, pd.DataFrame]:
     cd = derived_metrics.clean_dark_spread(
         primaries["de_power"], primaries["coal"], primaries["eua"], eurusd
     )
+    sw = derived_metrics.switching_ttf(
+        primaries["coal"], primaries["eua"], eurusd
+    )
 
     out = dict(primaries)
     out["clean_spark"] = cs
     out["clean_dark"] = cd
+    out["switching_ttf"] = sw
     return out
 
 

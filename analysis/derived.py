@@ -100,3 +100,38 @@ def fuel_switch_indicator(clean_spark: pd.DataFrame, clean_dark: pd.DataFrame) -
     df["value"] = cd["value"] - cs["value"]
     df.index.name = "date"
     return df.dropna()
+
+
+def switching_ttf(
+    coal_usd_t: pd.DataFrame,
+    carbon: pd.DataFrame,
+    eurusd: pd.DataFrame,
+) -> pd.DataFrame:
+    """Switching TTF: the gas price at which a CCGT exactly matches a hard-coal
+    plant in the merit order, given current coal and EUA.
+
+    Setting CSS = CDS and solving for gas price (in EUR/MWh thermal):
+        G* = η_gas · ( Coal_EUR_per_MWh_th / η_coal
+                       + (EF_coal/η_coal − EF_gas/η_gas) · EUA )
+
+    Where Coal_EUR_per_MWh_th = (Coal_USD_per_t / EURUSD) / calorific.
+    Output in EUR/MWh — directly comparable to the actual TTF print.
+    """
+    if any(df is None or df.empty for df in (coal_usd_t, carbon, eurusd)):
+        return pd.DataFrame(columns=["value"])
+
+    coal, c, fx = align_daily([coal_usd_t, carbon, eurusd])
+    coal_eur_per_mwh_th = (coal["value"] / fx["value"]) / COAL_CALORIFIC_MWH_PER_T
+    carbon_intensity_diff = (
+        COAL_EMISSION_FACTOR / COAL_EFFICIENCY
+        - GAS_EMISSION_FACTOR / GAS_EFFICIENCY
+    )
+    gas_thermal = coal_eur_per_mwh_th / COAL_EFFICIENCY + carbon_intensity_diff * c["value"]
+    df = pd.DataFrame(index=coal.index)
+    df["value"] = GAS_EFFICIENCY * gas_thermal
+    df.index.name = "date"
+    df.attrs["formula"] = (
+        f"η_gas·(Coal_EUR/η_coal + (EF_coal/η_coal − EF_gas/η_gas)·EUA)  "
+        f"(η_gas={GAS_EFFICIENCY}, η_coal={COAL_EFFICIENCY})"
+    )
+    return df.dropna()

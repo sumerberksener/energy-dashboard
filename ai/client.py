@@ -4,9 +4,12 @@ Design choices:
 - Each call appends a JSON record to ai/logs/<YYYY-MM-DD>.jsonl. Records
   capture timestamp, model, prompt SHA-256 hashes, full text, usage tokens,
   and latency — auditable across runs without re-querying the API.
-- No prompt caching: Haiku 4.5 requires a 4096-token cacheable prefix; our
-  system prompt sits at ~300 tokens, well below the threshold, so adding
-  cache_control would silently no-op. Documented for future scaling.
+- No prompt caching: Haiku 4.5 requires a 4096-token cacheable prefix; both
+  the extract and narrate system prompts are ~300–500 tokens each, well
+  below the threshold, so adding `cache_control={"type":"ephemeral"}` would
+  pay the cache-write surcharge with zero subsequent reads. If the prompts
+  grow past ~4 K tokens — e.g. if a few-shot block or schema appendix is
+  added — flip it on then. Verified against current SDK docs (2026-04).
 - Adaptive thinking and the effort parameter are skipped: short factual
   narratives don't benefit from extended reasoning, and the cost saving is
   negligible at this volume.
