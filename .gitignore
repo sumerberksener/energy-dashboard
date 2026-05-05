@@ -25,3 +25,6 @@ data/store/*.csv
 # Misc
 .env
 *.log
+
+# Personal pickup notes (not part of the deliverable)
+PICKUP_TOMORROW.md

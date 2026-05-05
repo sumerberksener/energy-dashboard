@@ -139,7 +139,11 @@ def fetch_de_power(token: str) -> pd.DataFrame:
 
 
 def fetch_storage(token: str) -> pd.DataFrame:
-    """EU aggregate gas storage (% full) from GIE AGSI+."""
+    """EU aggregate gas storage (% full) from GIE AGSI+.
+
+    Uses the dedicated `/api/data/eu` endpoint. The older `country=eu` query
+    parameter on `/api` returns no rows under the current API.
+    """
     if not token:
         raise RuntimeError("AGSI+ token missing")
 
@@ -150,14 +154,14 @@ def fetch_storage(token: str) -> pd.DataFrame:
     page = 1
     while True:
         params = {
-            "country": "eu",
             "from": start.isoformat(),
             "to": end.isoformat(),
             "size": 300,
             "page": page,
         }
         r = requests.get(
-            "https://agsi.gie.eu/api", headers=headers, params=params, timeout=30
+            "https://agsi.gie.eu/api/data/eu",
+            headers=headers, params=params, timeout=30,
         )
         r.raise_for_status()
         payload = r.json()
