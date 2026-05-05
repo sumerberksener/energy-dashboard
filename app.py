@@ -25,7 +25,9 @@ from ui import cards as cards_ui
 from ui import charts as charts_ui
 from ui import markets as markets_ui
 from ui import methodology as methodology_ui
+from ui import news_panel as news_panel_ui
 from ui import regime as regime_ui
+from ui import wiki as wiki_ui
 
 
 st.set_page_config(
@@ -252,17 +254,8 @@ def _fundamentals_strip(data: dict) -> None:
     )
 
 
-def main() -> None:
-    _load_css()
-
-    data = data_cache.get_all_with_derived()
-    latest_date = max(
-        (df.index.max() for df in data.values() if df is not None and not df.empty),
-        default=None,
-    )
-
-    _header(latest_date, data)
-
+def _overview_tab(data: dict) -> None:
+    """Landing tab — regime strip, cards, fundamentals, AI desk note."""
     # Cross-commodity regime strip — single horizontal cockpit summary.
     regime_ui.render(data)
 
@@ -281,16 +274,17 @@ def main() -> None:
 
     st.markdown("")
 
-    # AI desk-note pane.
+    # AI desk-note pane (numerical synthesis; news lives in its own tab).
     _ai_pane(data)
 
-    # Body: per-metric tabs (excluding fundamentals) + European Markets + Methodology.
-    metric_tabs = [m.short_name for m in TOP_ROW_METRICS]
-    tab_labels = metric_tabs + ["European Markets", "Methodology"]
-    tabs = st.tabs(tab_labels)
 
-    for tab, metric in zip(tabs[: len(TOP_ROW_METRICS)], TOP_ROW_METRICS):
-        with tab:
+def _metric_detail_tab(data: dict) -> None:
+    """Per-metric drill-down — sub-tabs for TTF, Storage, EUA, etc."""
+    metric_tabs = [m.short_name for m in TOP_ROW_METRICS]
+    sub_tabs = st.tabs(metric_tabs)
+
+    for sub_tab, metric in zip(sub_tabs, TOP_ROW_METRICS):
+        with sub_tab:
             df = data.get(metric.key)
             sig = signal_for(metric.key, df) if df is not None else None
 
@@ -335,15 +329,42 @@ def main() -> None:
                     f"({stats.days_since_latest(df)} days old)]"
                 )
 
-    # European Markets tab
-    with tabs[-2]:
+
+def main() -> None:
+    _load_css()
+
+    data = data_cache.get_all_with_derived()
+    latest_date = max(
+        (df.index.max() for df in data.values() if df is not None and not df.empty),
+        default=None,
+    )
+
+    _header(latest_date, data)
+
+    # Top-level navigation: 6 tabs covering the whole tool surface.
+    tabs = st.tabs([
+        "Overview",
+        "News & Geopolitics",
+        "European Markets",
+        "Per-Metric Detail",
+        "Methodology",
+        "How to use (Wiki)",
+    ])
+
+    with tabs[0]:
+        _overview_tab(data)
+    with tabs[1]:
+        news_panel_ui.render()
+    with tabs[2]:
         markets_ui.render()
-
-    # Methodology tab (last)
-    with tabs[-1]:
+    with tabs[3]:
+        _metric_detail_tab(data)
+    with tabs[4]:
         methodology_ui.render()
+    with tabs[5]:
+        wiki_ui.render()
 
-    # Sidebar.
+    # Sidebar — always visible across all tabs.
     with st.sidebar:
         brief_ui.render(data)
         tag = cross_market_tag(data)
