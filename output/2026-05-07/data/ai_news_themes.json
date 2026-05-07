@@ -1,5 +1,5 @@
 {
-  "geopolitics_summary": "Strait of Hormuz closure since late February pressuring global LNG prices; EU gas imports face elevated risk.",
+  "geopolitics_summary": "Strait of Hormuz closure since late February sustains LNG supply risk; EU gas prices diverging from US as Middle East disruption constrains global LNG.",
   "themes": [
     {
       "headline": "International LNG prices rise amid Strait of Hormuz closure",
@@ -7,17 +7,17 @@
       "tag": "geopolitics",
       "commodity": "gas",
       "polarity": "bullish-power",
-      "why_it_matters": "Hormuz blockade disrupts Middle East LNG exports to EU; TTF spreads vs. Asian LNG widen, tightening EU supply and raising gas cost of power. Direct transmission to DA power prices via fuel-mix switching.",
+      "why_it_matters": "Hormuz closure restricts Middle East LNG exports to Europe; TTF/Asian arb widens, supporting EU gas premiums and marginal power costs in gas-weighted hubs.",
       "horizon": "weeks",
       "link": "https://www.eia.gov/todayinenergy/detail.php?id=67604"
     },
     {
-      "headline": "DOE releases 17.5M barrels from Strategic Petroleum Reserve since March",
+      "headline": "DOE released 17.5 million barrels from SPR since March",
       "source": "EIA Today in Energy",
       "tag": "macro",
       "commodity": "crude",
       "polarity": "bearish-power",
-      "why_it_matters": "SPR releases suppress Brent; lower oil indirectly eases EU gas prices via LNG arbitrage feedback (weaker oil anchor reduces LNG cost to Europe). Modest downward pressure on power via fuel-cost relief.",
+      "why_it_matters": "Large US SPR releases suppress crude prices; lower oil feedstock costs ease global LNG production, increasing supply to Europe and capping TTF upside.",
       "horizon": "weeks",
       "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625"
     },
@@ -27,15 +27,15 @@
       "tag": "supply",
       "commodity": "mixed",
       "polarity": "neutral",
-      "why_it_matters": "US biofuel export surge diverts feedstock from potential EU renewable fuel blending, indirectly pressuring EU decarbonisation cost curves. Limited direct power impact; marginal carbon policy signal.",
+      "why_it_matters": "US biofuel exports reduce crude demand slightly; modest indirect downward pressure on crude prices supports global LNG competitiveness vs. EU renewables switching.",
       "horizon": "months",
       "link": "https://www.eia.gov/todayinenergy/detail.php?id=67665"
     }
   ],
   "watchlist": [
-    "Strait of Hormuz status updates; assess LNG supply route restoration timeline.",
-    "SPR release schedule completion; rebound in Brent could shift LNG arb and TTF.",
-    "EU LNG contract renegotiations and spot import flows; monitor 2W forward curve."
+    "Monitor Strait of Hormuz reopening risk; any resolution would immediately ease LNG supply to EU.",
+    "Track SPR drawdown pace; accelerated releases could further weaken crude/LNG price support.",
+    "Watch US-EU LNG arb spread (TTF vs Henry Hub); widening confirms supply bottleneck."
   ],
   "source": "claude",
   "model": "claude-haiku-4-5",

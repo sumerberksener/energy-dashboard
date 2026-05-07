@@ -93,6 +93,11 @@ def fetch_all() -> dict[str, pd.DataFrame]:
     primaries["clean_dark"] = derived_metrics.clean_dark_spread(
         primaries["de_power"], primaries["coal"], primaries["eua"], eurusd
     )
+    # Section 5's "DA / Cal+1 (model)" line consumes this; without it the
+    # forward-curve indication silently disappears from the desk note.
+    primaries["de_cal1_proj"] = derived_metrics.cal1_seasonality_projection(
+        primaries["de_power"]
+    )
     return primaries
 
 
@@ -148,7 +153,7 @@ def plot_clean_spreads(data: dict[str, pd.DataFrame], charts_dir: Path) -> Path 
     if (cs is None or cs.empty) and (cd is None or cd.empty):
         return None
     cutoff = pd.Timestamp.now().normalize() - pd.DateOffset(years=1)
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(6, 2.8))
     if cs is not None and not cs.empty:
         s = cs[cs.index >= cutoff]
         ax.plot(s.index, s["value"], color="#fab387", label="Clean Spark", linewidth=2)
@@ -171,7 +176,7 @@ def plot_gas_vs_storage(data: dict[str, pd.DataFrame], charts_dir: Path) -> Path
     if (ttf is None or ttf.empty) and (storage is None or storage.empty):
         return None
     cutoff = pd.Timestamp.now().normalize() - pd.DateOffset(years=2)
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(6, 2.8))
     if ttf is not None and not ttf.empty:
         s = ttf[ttf.index >= cutoff]
         ax.plot(s.index, s["value"], color="#f9b500", label="TTF (lhs)", linewidth=2)
@@ -197,7 +202,7 @@ def plot_eua_carbon(data: dict[str, pd.DataFrame], charts_dir: Path) -> Path | N
         return None
     cutoff = pd.Timestamp.now().normalize() - pd.DateOffset(years=2)
     s = eua[eua.index >= cutoff]
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(6, 2.8))
     ax.plot(s.index, s["value"], color="#40a02b", linewidth=2)
     _setup_axes(ax, "EUA December Carbon Futures — 2Y", "EUR/tCO2")
     fig.tight_layout()
@@ -213,7 +218,7 @@ def plot_de_gb_power(data: dict[str, pd.DataFrame], charts_dir: Path) -> Path | 
     if (de is None or de.empty) and (gb is None or gb.empty):
         return None
     cutoff = pd.Timestamp.now().normalize() - pd.DateOffset(years=1)
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(6, 2.8))
     if de is not None and not de.empty:
         s = de[de.index >= cutoff]
         ax.plot(s.index, s["value"], color="#89b4fa", label="DE Power", linewidth=2)
@@ -235,7 +240,7 @@ def plot_renewable_share(data: dict[str, pd.DataFrame], charts_dir: Path) -> Pat
         return None
     cutoff = pd.Timestamp.now().normalize() - pd.DateOffset(years=1)
     s = rs[rs.index >= cutoff]
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(6, 2.8))
     ax.plot(s.index, s["value"], color="#94e2d5", linewidth=2)
     ax.fill_between(s.index, 0, s["value"], color="#94e2d5", alpha=0.15)
     _setup_axes(ax, "DE Wind + Solar Forecast Share of Load — 1Y", "% of load")
@@ -359,10 +364,8 @@ def build_markdown(
         for metric in FUNDAMENTALS_METRICS:
             L(_row(metric, data.get(metric.key)))
         L("")
-    L(f"_Spreads (Clean Spark, Clean Dark) report absolute change in EUR/MWh; "
-      f"pct-change is meaningless across zero. Other metrics report pct change. "
-      f"Weekly Δ uses a 5-day trailing-mean comparison to dampen holiday spikes. "
-      f"Full history per metric in `data/<metric>.csv`._")
+    L(f"_Spreads → abs EUR/MWh deltas; others → pct. Weekly Δ uses 5d trailing means. "
+      f"Full history in `data/<metric>.csv`._")
     L("")
 
     # Section 3 — Gas + LNG arb
@@ -372,68 +375,83 @@ def build_markdown(
     storage = data.get("storage")
     if ttf is not None and not ttf.empty:
         sig = signal_for("ttf", ttf)
-        L(f"**TTF front-month** prints at {stats.latest(ttf):.2f} EUR/MWh — _{sig.headline}_.  ")
-        L(sig.observation)
-        L("")
+        L(f"**TTF front-month** prints at {stats.latest(ttf):.2f} EUR/MWh — _{sig.headline}_.")
     if storage is not None and not storage.empty:
         sig = signal_for("storage", storage)
         sd = stats.seasonal_deviation_pp(storage)
         sd_text = f" ({sd:+.1f} pp vs 5-yr seasonal avg)" if sd is not None else ""
-        L(f"**EU storage** at {stats.latest(storage):.1f}% full{sd_text} — _{sig.headline}_.  ")
-        L(sig.observation)
-        L("")
+        L(f"**EU storage** at {stats.latest(storage):.1f}% full{sd_text} — _{sig.headline}_.")
+    L("")
     chart = next((c for c in charts if c.name.startswith("02_")), None)
     if chart:
         L(f"![Gas vs Storage]({chart.relative_to(today_dir)})")
         L("")
 
-    # Section 4 — Carbon (price + supply/policy signal from news themes)
+    # Section 4 — Carbon (price + supply/policy signal — AI first, fact-pack fallback)
     L("## 4 · Carbon (EU ETS)")
     L("")
     eua = data.get("eua")
     if eua is not None and not eua.empty:
         sig = signal_for("eua", eua)
-        L(f"**EUA December** prints at {stats.latest(eua):.2f} EUR/tCO2 — _{sig.headline}_.  ")
-        L(sig.observation)
-        L("")
-        L("Carbon is the marginal-cost lever for fossil generation: a euro of EUA adds "
-          "~0.37 EUR/MWh to gas-fired and ~0.85 EUR/MWh to coal-fired generation cost. "
-          "Strength compresses the dark spread faster than the spark, accelerating fuel "
-          "switching toward gas.")
+        L(f"**EUA December** prints at {stats.latest(eua):.2f} EUR/tCO2 — _{sig.headline}_. "
+          f"A euro of EUA adds ~0.37 EUR/MWh to gas-fired and ~0.85 EUR/MWh to coal-fired "
+          f"generation cost; strength compresses the dark spread faster than the spark.")
         L("")
 
-    # Supply / policy signal from the extract pass — explicitly addresses the
-    # brief's "carbon supply/policy signal" wording.
+    # Supply / policy signal — prefer AI extract, fall back to hand-maintained fact pack.
+    # Brief's literal wording: "carbon supply/policy signal".
     cps = (narrative.extract or {}).get("carbon_policy_signal") if narrative.extract else None
+    cps_source_kind = None  # "ai-extract" | "fact-pack" | None
     if cps and isinstance(cps, dict) and cps.get("item"):
-        side = cps.get("side", "")
+        cps_source_kind = "ai-extract"
+    else:
+        try:
+            from data import policy_facts
+            fact = policy_facts.select()
+            if fact is not None:
+                cps = {
+                    "item": fact.item,
+                    "side": fact.side,
+                    "polarity": fact.polarity,
+                    "source": fact.source,
+                    "why_it_matters": fact.why_it_matters,
+                }
+                cps_source_kind = "fact-pack"
+        except Exception as e:
+            log.warning("policy_facts fallback unavailable: %s", e)
+
+    if cps and isinstance(cps, dict) and cps.get("item"):
         polarity = cps.get("polarity", "")
-        source = cps.get("source", "")
-        why = cps.get("why_it_matters", "")
         polarity_label = (
             "bullish EUA" if polarity == "bullish-eua"
             else "bearish EUA" if polarity == "bearish-eua"
             else "neutral"
         )
         L(f"**Supply / policy signal** — _{cps['item']}_  ")
-        L(f"  Side: `{side}` · Polarity: `{polarity_label}` · Source: {source}  ")
-        if why:
-            L(f"  {why}")
+        L(f"Side: `{cps.get('side','')}` · Polarity: `{polarity_label}` · Source: {cps.get('source','')}")
+        if cps.get("why_it_matters"):
+            L("")
+            L(cps["why_it_matters"])
         L("")
-        L(f"_Surfaced from today's news flow by the AI extract pass; "
-          f"see `output/<date>/data/ai_themes.json` for the full structured output._")
-        L("")
-    elif narrative.extract is not None:
-        L(f"_No EU ETS supply or policy item surfaced in today's news flow. "
-          f"When present (issuance / MSR adjustments / CBAM / ETS-2 / EU-UK linkage / "
-          f"sectoral allocations), the AI extract pass tags it here with side, polarity, "
-          f"and transmission mechanism._")
+        if cps_source_kind == "ai-extract":
+            L(f"_Surfaced from today's news flow by the AI extract pass "
+              f"(`ai/prompts/extract_v1.md` → `carbon_policy_signal`)._")
+        else:
+            try:
+                from data import policy_facts
+                stale_age = policy_facts.days_since_review()
+                stale_note = (
+                    f" Fact pack last reviewed {policy_facts.LAST_REVIEWED} ({stale_age}d ago)."
+                )
+            except Exception:
+                stale_note = ""
+            L(f"_No ETS-relevant news surfaced today — falling back to "
+              f"`data/policy_facts.py` (hand-maintained structural fact pack).{stale_note}_")
         L("")
 
-    chart = next((c for c in charts if c.name.startswith("03_")), None)
-    if chart:
-        L(f"![EUA Carbon]({chart.relative_to(today_dir)})")
-        L("")
+    # Chart 03 (EUA Carbon) intentionally omitted from the desk note to stay
+    # within the brief's 1–3 page limit; the PNG is still generated and lives
+    # in `charts/` for the dashboard, the website, and any deeper drill-down.
 
     # Section 5 — Power: DA & curve
     L("## 5 · Power — Day-Ahead & curve")
@@ -441,7 +459,8 @@ def build_markdown(
     de = data.get("de_power")
     gb = data.get("gb_power")
     cs = data.get("clean_spark")
-    cd = data.get("clean_dark")
+    coal = data.get("coal")
+    cal1 = data.get("de_cal1_proj")
 
     if de is not None and not de.empty:
         sig = signal_for("de_power", de)
@@ -455,35 +474,45 @@ def build_markdown(
         L(f"**DE − GB spread** at {gap:+.2f} EUR/MWh ({side}) — drives interconnector flow direction.")
     L("")
 
-    have_spreads = (
-        cs is not None and not cs.empty and cd is not None and not cd.empty
-    )
-    if have_spreads:
+    # Anchor on spark spread alone — the Clean Dark / coal-in-the-money assertion
+    # depended on coal data that's currently 130+ days stale. Mention coal only as
+    # a fundamentals input that is not currently usable. (See task #3 in TASKS.md.)
+    if cs is not None and not cs.empty:
         cs_l = stats.latest(cs)
-        cd_l = stats.latest(cd)
-        diff = cd_l - cs_l
-        if diff > 5:
-            switch = "**Coal is firmly in-the-money vs gas** — coal-fired plants set the marginal cost"
-        elif diff > 0:
-            switch = "Coal slightly in-the-money vs gas — fuel switching is borderline"
-        elif diff > -5:
-            switch = "Gas slightly in-the-money vs coal — TTF moves transmit to power"
+        cs_sig = signal_for("clean_spark", cs)
+        L(f"**Clean spark spread** at {cs_l:+.2f} EUR/MWh — _{cs_sig.headline}_. "
+          f"This is the bridge from gas + carbon fundamentals to gas-fired plant economics; "
+          f"sustained positive spark = gas is in-the-money and TTF moves transmit directly "
+          f"into the power curve.")
+        L("")
+        if coal is not None and not coal.empty and stats.is_stale(coal, STALE_AFTER_DAYS):
+            L(f"_The dark spread (and any coal-vs-gas merit-order claim) is suppressed "
+              f"this morning: coal data is {stats.days_since_latest(coal)} days old "
+              f"(last {coal.index.max().date()}), so the merit-order signal is indicative "
+              f"not current. Spark alone carries the regime read above._")
+            L("")
+
+    # Forward curve from cal1_seasonality_projection — the brief's "Day-Ahead to curve"
+    # output. Model-derived (see Methodology), not a market quote.
+    if (de is not None and not de.empty and cal1 is not None and not cal1.empty):
+        de_l = stats.latest(de)
+        cal1_l = stats.latest(cal1)
+        spread = de_l - cal1_l
+        if spread > 1:
+            curve_regime = "**backwardation**"
+        elif spread < -1:
+            curve_regime = "**contango**"
         else:
-            switch = "**Gas is firmly in-the-money vs coal** — TTF is the dominant power-curve driver"
-        L(f"Clean spark **{cs_l:+.2f}** · clean dark **{cd_l:+.2f}** EUR/MWh. {switch}.")
+            curve_regime = "flat"
+        L(f"**DA / Cal+1 (model)** at {de_l:.2f} / {cal1_l:.2f} EUR/MWh; spread "
+          f"{spread:+.2f} EUR/MWh — {curve_regime}. Front absorbs storage and outage shocks; "
+          f"Cal+1 reflects the structural carbon-and-fuel trajectory. Cal+1 here is a "
+          f"backward-looking seasonality projection — see Methodology.")
         L("")
-        L("**Forward curve note**: this brief uses ENTSO-E day-ahead as the front of the "
-          "curve. EEX Cal+1 / Cal+2 settlement indications are listed in the roadmap "
-          "(README → \"What I'd do with another week\") — adding them quantifies "
-          "backwardation/contango directly rather than inferring from spark/dark regime.")
-        L("")
+
     chart = next((c for c in charts if c.name.startswith("01_")), None)
     if chart:
         L(f"![Clean Spreads]({chart.relative_to(today_dir)})")
-        L("")
-    chart = next((c for c in charts if c.name.startswith("04_")), None)
-    if chart:
-        L(f"![DE vs GB Power]({chart.relative_to(today_dir)})")
         L("")
 
     # Section 6 — Short-term drivers
@@ -493,50 +522,38 @@ def build_markdown(
     if rs is not None and not rs.empty:
         sig = signal_for("renewable_share", rs)
         rs_last = stats.latest(rs)
-        L(f"**DE wind + solar forecast** at {rs_last:.1f}% of load — _{sig.headline}_.  ")
-        L(sig.observation)
+        L(f"**DE wind + solar forecast** at {rs_last:.1f}% of load — _{sig.headline}_. "
+          f"Largest day-ahead price driver after gas: high share compresses the residual-load "
+          f"curve and pushes prices down (or negative); low share lifts gas-fired plants into "
+          f"the merit order, making TTF + EUA the binding constraint.")
         L("")
-        L("Renewables are the largest day-ahead price driver after gas: a high share "
-          "compresses the residual-load curve and pushes prices down (or negative); a "
-          "low share lifts gas-fired plants into the merit order, making TTF + EUA the "
-          "binding constraint.")
-        L("")
-    chart = next((c for c in charts if c.name.startswith("05_")), None)
-    if chart:
-        L(f"![Renewable Share]({chart.relative_to(today_dir)})")
-        L("")
+    # Chart 05 (renewable share) intentionally omitted from the desk note for
+    # the page-count fit; PNG remains in `charts/` for the dashboard.
 
-    # Section 7 — Today's themes (news + geopolitics)
-    L("## 7 · Today's themes (news + geopolitics)")
+    # Section 7 — Today's themes (compressed: 1-line backdrop + 2-4 watchlist bullets,
+    # no per-headline table; full structured news in output/<date>/data/ai_news_themes.json).
+    L("## 7 · Today's themes")
     L("")
     if news_themes is not None and (news_themes.geopolitics_summary or news_themes.themes):
         if news_themes.geopolitics_summary:
             L(f"**Backdrop**: {news_themes.geopolitics_summary}")
             L("")
-        if news_themes.themes:
-            L("| # | Headline | Source | Tag | Commodity | Polarity (power) | Why it matters |")
-            L("|---|---|---|---|---|---|---|")
-            for i, t in enumerate(news_themes.themes, 1):
-                L(
-                    f"| {i} | {t.get('headline','—')} | {t.get('source','')} | "
-                    f"{t.get('tag','')} | {t.get('commodity','')} | "
-                    f"{t.get('polarity','')} | {t.get('why_it_matters','')} |"
-                )
-            L("")
         if news_themes.watchlist:
             L("**Watchlist (1–4 weeks)**")
-            for w in news_themes.watchlist:
+            for w in news_themes.watchlist[:4]:
                 L(f"- {w}")
             L("")
+        n_themes = len(news_themes.themes) if news_themes.themes else 0
         if news_themes.source.startswith("claude"):
-            L(f"_News themes generated by **{news_themes.model}** from {news_themes.n_headlines_in} "
-              f"recent headlines across IEA, EIA, Bruegel, ENTSO-E, Euractiv. Log: `{news_themes.log_path}`._")
+            L(f"_{n_themes} structured themes (tag · commodity · polarity · why) "
+              f"in `data/ai_news_themes.json` — generated by **{news_themes.model}** from "
+              f"{news_themes.n_headlines_in} headlines._")
         else:
             L(f"_News themes via rule-based fallback ({news_themes.error or 'no API key'})._")
         L("")
     else:
-        L("> _News theme extraction unavailable — RSS sources returned nothing or the API is offline. "
-          "When live, this section surfaces the day's geopolitics + policy moves with desk-relevant tags._")
+        L("> _News theme extraction unavailable today. Structured output lands in "
+          "`data/ai_news_themes.json` when live._")
         L("")
 
     tag = cross_market_tag(data)
@@ -544,24 +561,12 @@ def build_markdown(
         L(f"> **Cross-market regime tag:** {tag}")
         L("")
 
-    # Section 8 — Methodology & sources
-    L("## 8 · Methodology & sources")
+    # Section 8 — single line; full methodology in README. Saves a page.
+    L("## 8 · Methodology")
     L("")
-    L("- **TTF, EUA**: ICE settlements via Yahoo Finance / stooq")
-    L("- **DE Day-Ahead Power**: ENTSO-E Transparency Platform (DE_LU bidding zone, hourly resampled to daily mean)")
-    L("- **GB Day-Ahead Power**: ENTSO-E (GB bidding zone), GBP→EUR converted via Yahoo `GBPEUR=X`")
-    L("- **EU Gas Storage**: GIE AGSI+ (% full, country = EU aggregate)")
-    L("- **Wind + Solar forecast share**: ENTSO-E `query_wind_and_solar_forecast` ÷ `query_load_forecast` (DE_LU)")
-    L("- **Coal**: ICE Newcastle proxy via Yahoo (fundamentals input only). "
-      "**Known limitation**: Newcastle ticker has gone stale on the free Yahoo feed. "
-      "Resolved by a paid feed (Argus, Refinitiv) for production use.")
-    L("- **Clean spark**: P − G/η_gas − C × EF_gas/η_gas, η_gas = 0.50, EF_gas = 0.184 t/MWh_th")
-    L("- **Clean dark**: P − Coal_EUR/η_coal − C × EF_coal/η_coal, η_coal = 0.40, EF_coal = 0.34 t/MWh_th, "
-      "with API2/Newcastle USD/t converted via EUR/USD and a 6.978 MWh_th/t calorific value")
-    L("- **News + geopolitics**: RSS pull from IEA, EIA, Bruegel, ENTSO-E, Euractiv → Claude theme "
-      "extraction (`ai/prompts/news_themes_v1.md`) → structured output filtered to EU power-curve relevance")
-    L("- **AI narrative**: two-pass extract→narrate. Prompt sources at `ai/prompts/`; full request/response "
-      "logs in `ai/logs/<date>.jsonl`; structured extracts at `data/ai_themes.json` and `data/ai_news_themes.json`")
+    L("See **README §Methodology** in the repo for sources, plant assumptions, formulas, "
+      "signal thresholds, AI workflow, and the policy fact-pack used for Section 4. "
+      "Every number above is auditable via the snapshot JSONs in this directory.")
     L("")
     L("_Observations are rule-based and informational, not investment advice._")
     L("")
@@ -581,8 +586,9 @@ def render_pdf(md_path: Path) -> Path | None:
         "pandoc", str(md_path),
         "-o", str(pdf_path),
         "--pdf-engine=xelatex",
-        "-V", "geometry:margin=1in",
+        "-V", "geometry:margin=0.6in",
         "-V", "mainfont=Helvetica",
+        "-V", "fontsize=10pt",
         f"--resource-path={md_path.parent}",
     ]
     try:

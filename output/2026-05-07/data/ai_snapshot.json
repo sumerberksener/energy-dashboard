@@ -1,5 +1,5 @@
 {
-  "aggregate_brief": "Today's standouts: Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; Clean Spark \u2014 90th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 12.4 pp below the 5-yr seasonal average.",
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 92th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 12.5 pp below the 5-yr seasonal average.",
   "freshness": {
     "any_stale": true,
     "stale_metrics": [
@@ -33,20 +33,20 @@
       "weekly_change_abs": 11.63
     },
     "clean_spark": {
-      "as_of": "2026-05-07",
+      "as_of": "2026-05-08",
       "available": true,
-      "daily_change_abs": 10.18,
-      "days_old": 0,
+      "daily_change_abs": 1.94,
+      "days_old": -1,
       "delta_unit": "EUR/MWh",
-      "extension_50d_sigma": 1.37,
-      "headline": "90th-percentile of 5-yr range \u2014 historically high",
+      "extension_50d_sigma": 1.44,
+      "headline": "92th-percentile of 5-yr range \u2014 historically high",
       "is_stale": false,
-      "latest": 32.99,
-      "monthly_change_abs": 18.55,
+      "latest": 38.42,
+      "monthly_change_abs": 22.88,
       "name": "Clean Spark",
-      "percentile_rank_5y": 90.0,
+      "percentile_rank_5y": 92.0,
       "unit": "EUR/MWh",
-      "weekly_change_abs": 64.51
+      "weekly_change_abs": 78.55
     },
     "coal": {
       "as_of": "2025-12-26",
@@ -65,20 +65,20 @@
       "weekly_change_pct": 0.08
     },
     "de_power": {
-      "as_of": "2026-05-07",
+      "as_of": "2026-05-08",
       "available": true,
-      "daily_change_pct": 8.32,
-      "days_old": 0,
+      "daily_change_pct": 1.42,
+      "days_old": -1,
       "delta_unit": "pct",
-      "extension_50d_sigma": 1.2,
+      "extension_50d_sigma": 1.31,
       "headline": "Within typical range",
       "is_stale": false,
-      "latest": 132.57,
-      "monthly_change_pct": 19.77,
+      "latest": 138.0,
+      "monthly_change_pct": 31.87,
       "name": "DE Power",
-      "percentile_rank_5y": 74.0,
+      "percentile_rank_5y": 76.0,
       "unit": "EUR/MWh",
-      "weekly_change_pct": 122.67
+      "weekly_change_pct": 143.83
     },
     "eua": {
       "as_of": "2026-05-06",
@@ -113,36 +113,36 @@
       "weekly_change_pct": 20.13
     },
     "renewable_share": {
-      "as_of": "2026-05-06",
+      "as_of": "2026-05-07",
       "available": true,
-      "daily_change_pct": 57.32,
-      "days_old": 1,
+      "daily_change_pct": -32.82,
+      "days_old": 0,
       "delta_unit": "pct",
-      "extension_50d_sigma": -0.53,
+      "extension_50d_sigma": -1.18,
       "headline": "Within typical range",
       "is_stale": false,
-      "latest": 40.3,
-      "monthly_change_pct": 39.96,
+      "latest": 27.07,
+      "monthly_change_pct": -15.03,
       "name": "Renewables",
-      "percentile_rank_5y": 48.0,
+      "percentile_rank_5y": 18.0,
       "unit": "% of load",
-      "weekly_change_pct": -20.77
+      "weekly_change_pct": -41.24
     },
     "storage": {
-      "as_of": "2026-05-06",
+      "as_of": "2026-05-07",
       "available": true,
-      "daily_change_pct": 0.03,
-      "days_old": 1,
+      "daily_change_pct": 0.41,
+      "days_old": 0,
       "delta_unit": "pct",
-      "extension_50d_sigma": 2.19,
-      "headline": "12.4 pp below the 5-yr seasonal average",
+      "extension_50d_sigma": 2.11,
+      "headline": "12.5 pp below the 5-yr seasonal average",
       "is_stale": false,
-      "latest": 34.26,
-      "monthly_change_pct": 15.94,
+      "latest": 34.4,
+      "monthly_change_pct": 15.82,
       "name": "EU Storage",
       "percentile_rank_5y": 11.0,
       "unit": "% full",
-      "weekly_change_pct": 4.5
+      "weekly_change_pct": 4.15
     },
     "ttf": {
       "as_of": "2026-05-06",
@@ -162,7 +162,7 @@
     }
   },
   "news": {
-    "geopolitics_summary": "Strait of Hormuz closure since late February pressuring global LNG prices; EU gas imports face elevated risk.",
+    "geopolitics_summary": "Strait of Hormuz closure since late February sustains LNG supply risk; EU gas prices diverging from US as Middle East disruption constrains global LNG.",
     "themes": [
       {
         "commodity": "gas",
@@ -172,17 +172,17 @@
         "polarity": "bullish-power",
         "source": "EIA Today in Energy",
         "tag": "geopolitics",
-        "why_it_matters": "Hormuz blockade disrupts Middle East LNG exports to EU; TTF spreads vs. Asian LNG widen, tightening EU supply and raising gas cost of power. Direct transmission to DA power prices via fuel-mix switching."
+        "why_it_matters": "Hormuz closure restricts Middle East LNG exports to Europe; TTF/Asian arb widens, supporting EU gas premiums and marginal power costs in gas-weighted hubs."
       },
       {
         "commodity": "crude",
-        "headline": "DOE releases 17.5M barrels from Strategic Petroleum Reserve since March",
+        "headline": "DOE released 17.5 million barrels from SPR since March",
         "horizon": "weeks",
         "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625",
         "polarity": "bearish-power",
         "source": "EIA Today in Energy",
         "tag": "macro",
-        "why_it_matters": "SPR releases suppress Brent; lower oil indirectly eases EU gas prices via LNG arbitrage feedback (weaker oil anchor reduces LNG cost to Europe). Modest downward pressure on power via fuel-cost relief."
+        "why_it_matters": "Large US SPR releases suppress crude prices; lower oil feedstock costs ease global LNG production, increasing supply to Europe and capping TTF upside."
       },
       {
         "commodity": "mixed",
@@ -192,13 +192,13 @@
         "polarity": "neutral",
         "source": "EIA Today in Energy",
         "tag": "supply",
-        "why_it_matters": "US biofuel export surge diverts feedstock from potential EU renewable fuel blending, indirectly pressuring EU decarbonisation cost curves. Limited direct power impact; marginal carbon policy signal."
+        "why_it_matters": "US biofuel exports reduce crude demand slightly; modest indirect downward pressure on crude prices supports global LNG competitiveness vs. EU renewables switching."
       }
     ],
     "watchlist": [
-      "Strait of Hormuz status updates; assess LNG supply route restoration timeline.",
-      "SPR release schedule completion; rebound in Brent could shift LNG arb and TTF.",
-      "EU LNG contract renegotiations and spot import flows; monitor 2W forward curve."
+      "Monitor Strait of Hormuz reopening risk; any resolution would immediately ease LNG supply to EU.",
+      "Track SPR drawdown pace; accelerated releases could further weaken crude/LNG price support.",
+      "Watch US-EU LNG arb spread (TTF vs Henry Hub); widening confirms supply bottleneck."
     ]
   }
 }

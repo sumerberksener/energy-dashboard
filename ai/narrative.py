@@ -59,6 +59,10 @@ def _snapshot(
     if news is not None:
         out["news"] = news
     for key, df in data.items():
+        # Skip auxiliary derived series (de_cal1_proj, switching_ttf, de_gb_spread,
+        # eurusd) — they're internal helpers, not registered metrics.
+        if key not in METRICS_BY_KEY:
+            continue
         if df is None or df.empty:
             out["metrics"][key] = {"available": False}
             continue

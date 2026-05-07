@@ -244,6 +244,106 @@ Honest gap list — visible because hiding them would be worse than the gaps the
 | v0.4 | Backtesting | Replay signals against historical PnL on a simple long/short rule. |
 | v0.5 | NLP trade ideas | Fine-tune a small LM on energy news; surface candidate ideas with rationale + cited sources. |
 
+## Methodology
+
+The daily desk note (`output/<date>/desk_note_<date>.md`) is intentionally
+reference-light — it points to this section instead of duplicating sources
+on every issue. Everything below is the auditable backstop for the numbers
+the brief surfaces.
+
+### Sources
+
+| Metric | Source | Cadence | Notes |
+|---|---|---|---|
+| **TTF Front-Month** | ICE settlement via Yahoo Finance (`TTF=F`) → stooq fallback | Daily | European wholesale gas benchmark |
+| **EU Storage** | GIE AGSI+ (`/api/data/eu`) | Daily | EU-aggregate % full |
+| **EUA December** | ICE settlement via stooq (`co2.f`) → KraneShares KRBN ETF proxy fallback | Daily | EU ETS December futures |
+| **DE Day-Ahead** | ENTSO-E Transparency Platform (`DE_LU` zone) | Hourly → daily mean | Continental front-curve benchmark |
+| **GB Day-Ahead** | Elexon BMRS Market Index Data (`APXMIDP`) | Half-hourly → daily mean | UK left ENTSO-E post-Brexit; GBP→EUR via Yahoo `GBPEUR=X` |
+| **Renewable Share** | ENTSO-E `query_wind_and_solar_forecast` ÷ `query_load_forecast` (DE_LU) | Hourly → daily mean | Wind+solar share of forecast load |
+| **Coal** | ICE Newcastle proxy via Yahoo (`MTF=F`) | Daily (often stale) | Fundamentals input only — coal isn't a Cobblestone book |
+| **EUR/USD, GBP/EUR** | Yahoo Finance | Daily | FX helpers for coal and GB power conversions |
+| **News & geopolitics** | RSS from IEA, EIA, Reuters Sustainability, Bruegel, ENTSO-E, Euractiv | Continuous | Filtered to EU power/gas/ETS relevance via Claude |
+
+### Plant assumptions (clean spread / switching TTF formulas)
+
+- **CCGT (gas)**: η = 0.50, EF = 0.184 tCO₂/MWh thermal
+- **Hard coal plant**: η = 0.40, EF = 0.34 tCO₂/MWh thermal
+- **Coal calorific value**: 6.978 MWh/t (NAR 6000)
+
+### Formulas
+
+```text
+Clean Spark    = Power − Gas/η_gas − Carbon × (EF_gas / η_gas)
+Clean Dark     = Power − Coal_EUR/η_coal − Carbon × (EF_coal / η_coal)
+Switching TTF  = η_gas · ( Coal_EUR/η_coal
+                          + (EF_coal/η_coal − EF_gas/η_gas) · EUA )
+
+Coal_EUR per MWh thermal = (Coal_USD/t / EURUSD) / 6.978
+```
+
+### Indicative Cal+1 power (seasonality projection)
+
+Free daily EEX Cal-Year settlement is not accessible without a paid feed
+(Bloomberg, Refinitiv, ICE Endex direct). The brief's Cal+1 line is a
+**model-derived seasonality projection, not a market quote**. Method: for
+each historical date, find the realised DA price exactly 1 year later
+(±3-day window) and report the rolling 30-day mean. The DA − Cal+1 spread
+reads as a front-vs-back regime indicator. Caveats: backward-looking,
+mean-reverting, doesn't price in current expectations of carbon / weather /
+demand. Replace with EEX settlement when a paid feed is available.
+
+### Rule-based signal thresholds
+
+| Signal | Formula | Threshold → label |
+|---|---|---|
+| Percentile rank | Position in 5-yr distribution (0–100) | ≥ 90 → "historically high"; ≤ 10 → "historically low" |
+| Extension from 50d MA | `(current − MA) / σ` | \|σ\| ≥ 2 → "extended above/below trend" |
+| Daily-move z-score | Today's return vs trailing 60d return distribution | \|z\| ≥ 2 → "outsized daily move" |
+| Seasonal deviation (storage) | Current − same-day-of-year historical mean (pp) | Reported directly, e.g. "12 pp below seasonal" |
+| Data freshness | Days since latest row | > 5 → ⚠ STALE |
+
+Threshold values live in `config.py` (`PERCENTILE_HIGH`, `PERCENTILE_LOW`,
+`SIGMA_EXTENDED`, `ZSCORE_OUTSIZED`, `STALE_AFTER_DAYS`) and are auditable
+from a single place.
+
+### AI workflow
+
+Two-pass design, fully logged.
+
+1. **Extract pass** (`ai/prompts/extract_v1.md`) — receives the structured
+   metric snapshot + news themes; returns strict JSON: `{themes, risk_flags,
+   watchlist, top_drivers, top_takeaway, carbon_policy_signal, freshness_caveat}`.
+2. **Narrate pass** (`ai/prompts/narrate_v1.md`) — receives the extract
+   JSON only; produces a 3–5 sentence prose narrative grounded only in
+   that JSON. The prompt explicitly forbids referencing anything not in
+   pass-1 output.
+3. **News theme pass** (`ai/prompts/news_themes_v1.md`) — separate strict-
+   JSON pass over RSS headlines that filters to EU power-curve relevance
+   and tags by `commodity`, `polarity`, `horizon`, and `why_it_matters`.
+
+Every API call routes through `ai/client.py` and is logged to
+`ai/logs/<date>.jsonl` with timestamp, model, prompt SHA-256, full prompt +
+response text, token usage, and latency. Falls back to a deterministic
+rule-based string when `ANTHROPIC_API_KEY` is missing or a call fails.
+
+### Carbon supply / policy fact pack
+
+When the day's news flow doesn't surface an explicit ETS supply or policy
+item, Section 4 of the desk note falls back to `data/policy_facts.py` — a
+hand-maintained list of structural EU ETS facts (CBAM phase-in, ETS-2,
+MSR intake rate, free-allocation phase-out, EU-UK linkage, maritime cap).
+The fact pack carries a `LAST_REVIEWED` date that's surfaced in the brief
+when the fallback path fires. Update at least monthly or whenever the EU
+passes new ETS legislation.
+
+### Disclaimer
+
+Observations are rule-based and informational, **not investment advice**.
+Always do your own analysis.
+
+---
+
 ## License & disclaimer
 
 Code: MIT-style open source.

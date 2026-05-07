@@ -74,6 +74,57 @@ These came out of a brief-vs-deliverable compliance check. Each is a verifiable 
     - The new section 5 says *something* about the curve with a number, not pointing at the roadmap.
     - PDF regenerated and on disk at `output/<today>/desk_note_<today>.pdf`. Page count check from the cut-to-3-pages task above is run on this regenerated PDF, not the May 5 one.
 
+### Critical bugs from 2026-05-07 dashboard QA
+
+These came out of running the live dashboard after the metric-set work landed. Each is a real, screenshot-captured issue. Fix all five before the GitHub push — bug 1 in particular cascades into the "AI couldn't generate the report" failure and almost certainly explains it.
+
+- [ ] **`KeyError: 'switching_ttf'` blowing up the morning brief and (likely) the AI generation path**
+  - Where: `analysis/signals.py::signal_for` line 64 — `metric = METRICS_BY_KEY[metric_key]` raises because `switching_ttf` is in the data dict but has no `Metric` entry.
+  - Why: `data/cache.py::get_all_with_derived` (line 184) adds `out["switching_ttf"] = sw` as an auxiliary derived series. The code-comment at `analysis/signals.py:66` even acknowledges these auxiliaries exist (`switching_ttf`, `de_gb_spread`, `de_cal1_proj`, `eurusd`). But `analysis/signals.py::morning_brief` (line 125) iterates `data.items()` and calls `signal_for(k, df)` for every key — including the auxiliaries — and the lookup fails. The traceback is visible in the Methodology and Per-Metric Detail tabs in the screenshots Sumer sent on 2026-05-07.
+  - Why this matters for AI generation: `morning_brief` is on the path to building the AI snapshot (`ai_snapshot.json` is built from rule-based signals + raw data). When `morning_brief` crashes the snapshot never gets built, the two-pass extract→narrate has nothing to consume, and the dashboard's "Generate desk note" button silently fails or shows the same traceback. Sumer reported "Claude couldn't generate the report" — this is almost certainly the cause, not a separate API issue.
+  - Acceptance:
+    - **Preferred fix**: in `analysis/signals.py::morning_brief` and any other callers, filter the data dict to keys that exist in `METRICS_BY_KEY` before iterating. e.g. `for k, df in data.items() if k in METRICS_BY_KEY`. Auxiliary series like `switching_ttf` are tracked elsewhere (regime strip, methodology) and don't need a Signal.
+    - **Alternative**: make `signal_for` return `None` for unknown keys and have callers skip `None` results.
+    - **Don't fix by registering switching_ttf as a Metric** unless you also add a primary card / tab for it — registration implies surface-level presence, and switching_ttf is currently only used as an auxiliary number on the regime strip.
+    - After the fix: load every tab in the dashboard (Overview, News & Geopolitics, European Markets, Per-Metric Detail, Methodology, How to use). Zero tracebacks visible. Click "Generate desk note" → narrative renders, fresh entry appears in `ai/logs/<today>.jsonl`.
+
+- [ ] **Material icon syntax leaking as literal text on the Methodology tab "Metrics tracked" list**
+  - Where: `ui/methodology.py` (the `st.expander` calls in the Metrics-tracked block, lines ~33–37). Possibly extends to other expanders/headers in the codebase.
+  - Why: Each row visually shows three overlapping strings — an icon-name like `_arrow_right`, the metric key like `TTF_Gas`, and the actual label "TTF Front-Month Natural Gas". The most likely cause is `:material/arrow_right:` (or similar) being passed as `icon=` to `st.expander` while the installed Streamlit version doesn't support that parameter. The icon falls back to literal text, and the rendering machinery then composites the icon-string and the label on top of each other.
+  - Acceptance:
+    - Each row in "Metrics tracked" renders as a clean expander labelled `<short_name> — <name>` (e.g. *"TTF Gas — TTF Front-Month Natural Gas"*). No `_arrow_right`, no `_TTF_Gas` underscore, no overlap.
+    - Either (a) upgrade Streamlit to a version that supports the `icon=":material/...":` syntax (check `requirements.txt` and bump if so), OR (b) drop the `icon=` parameter wherever it's used and replace with a plain emoji prefix or no icon at all.
+    - Take a screenshot of the Methodology tab post-fix and save under `docs/screenshots/methodology_after.png` for the record.
+
+- [ ] **Sidebar shows literal text "ouble_arrow_right" where the collapse icon should be**
+  - Where: `app.py` (likely an `st.set_page_config` or sidebar widget setting), or `.streamlit/config.toml`.
+  - Why: Same root cause as the methodology bug — a Material icon name (probably `keyboard_double_arrow_right`) is being rendered as text. The string "ouble_arrow_right" visible top-left in every screenshot is the truncated tail of that icon name.
+  - Acceptance: Sidebar header shows either a clean chevron/arrow glyph or no icon at all — never the literal Material icon name. Verify on every tab.
+
+- [ ] **European Markets choropleth renders with too-wide projection and a large white panel**
+  - Where: `ui/markets.py`. Note that lines 227–246 already set `scope="europe"`, `projection_type="mercator"`, `lataxis_range=[35, 62]`, `lonaxis_range=[-12, 26]` — so the bounds *are* configured but aren't being respected.
+  - Why: The screenshot shows the map extending south into Africa and east into the Middle East, plus a large white bounding box. Likely culprits:
+    1. The `update_geos` call doesn't reach this particular figure (check whether the call is on the right `fig` object — there are two `update_geos` calls in the file at lines 191 and 227).
+    2. `fitbounds="locations"` is being applied somewhere and overriding `lataxis_range` / `lonaxis_range`.
+    3. The `bgcolor` of the geo subplot isn't set to the dark theme background, leaving Plotly's default white panel visible.
+  - Acceptance:
+    - Map is visually centred and zoomed on Europe (~lat 35–70, lon −15 to 35). The Mediterranean is at the bottom of the view, not the middle.
+    - No white panels. The geo subplot background matches the dashboard's dark theme (`bgcolor` set to the page's secondaryBackgroundColor).
+    - Click-to-drill into a country still works after the fix.
+    - Take a screenshot of the European Markets tab post-fix and save under `docs/screenshots/markets_after.png`.
+
+- [ ] **Verify AI desk-note generation works end-to-end after bug 1 is fixed**
+  - Where: command line + the dashboard.
+  - Why: The user reported "Claude LLM couldn't generate the report when I needed it to." Most likely a downstream effect of bug 1's KeyError. Verify, don't assume.
+  - Acceptance:
+    - With all three tokens set in env (`ENTSOE_TOKEN`, `AGSI_TOKEN`, `ANTHROPIC_API_KEY`), run `streamlit run app.py`, click "Generate desk note" on the Overview tab.
+    - Confirm: a 3–5 sentence narrative renders in the pane (not an error / not "rule-based fallback" silently swallowed).
+    - Confirm: a fresh entry appears in `ai/logs/<today>.jsonl` with `purpose: "extract"` and `purpose: "narrate"` records, both with non-zero `usage.input_tokens` and `usage.output_tokens`.
+    - Also run `python scripts/generate_brief.py` end-to-end and confirm `output/<today>/desk_note_<today>.md` is produced with the AI narrative in the executive summary.
+    - If the AI generation is *still* broken after bug 1 is fixed, dig into the two-pass workflow (`ai/narrative.py`) — most likely a malformed JSON response from the extract pass that the narrate pass can't consume. Add a defensive `json.JSONDecodeError` catch with a one-shot retry.
+
+---
+
 - [ ] **Push to GitHub + set Actions secrets** ← _your action; can't be automated from here_
   - Where: repo root, GitHub web UI.
   - Acceptance: After push: GitHub repo → Settings → Secrets and variables → Actions → add `ENTSOE_TOKEN`, `AGSI_TOKEN`, `ANTHROPIC_API_KEY`. Trigger one `workflow_dispatch` run of `daily.yml` to confirm green. Branch is now **`main`** (renamed from master 2026-05-06). Add the live workflow-run link to the README so the reviewer can see the cron path is real, not theoretical.
