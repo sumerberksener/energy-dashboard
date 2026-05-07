@@ -224,8 +224,12 @@ def _build_choropleth(summary: pd.DataFrame) -> go.Figure:
 
     # Always-visible non-traded countries fade into the background — keep them
     # rendered so the map reads as Europe, not just a few coloured fragments.
+    #
+    # IMPORTANT: dropping `scope="europe"` because Plotly's built-in scope
+    # presets override lataxis_range/lonaxis_range and reintroduce a default
+    # white backdrop outside the scope's bounds. With explicit bounds + bgcolor
+    # the map sits cleanly on the dark theme with no white panels.
     fig.update_geos(
-        scope="europe",
         showcountries=True,
         countrycolor="#313244",
         countrywidth=0.6,
@@ -244,6 +248,8 @@ def _build_choropleth(summary: pd.DataFrame) -> go.Figure:
         center=dict(lat=51, lon=8),
         lataxis_range=[35, 62],
         lonaxis_range=[-12, 26],
+        bgcolor="rgba(0,0,0,0)",  # transparent — let the page background show
+        visible=True,
     )
 
     # 2-letter country labels rendered on the map for instant readability.

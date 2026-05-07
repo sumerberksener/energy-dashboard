@@ -3,11 +3,22 @@
    read as desk-grade rather than toy.
 */
 
-/* Body typography */
-html, body, [class*="st-"] {
+/* Body typography — scoped to text content only, NEVER to Material Icons.
+   The previous version used [class*="st-"] !important which clobbered
+   Streamlit's icon fonts and caused literal "double_arrow_right" / icon-name
+   text to leak onto the sidebar toggle, expander chevrons, and the
+   methodology-tab "Metrics tracked" expanders.
+*/
+html, body {
   font-family: "Inter", "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, sans-serif !important;
-  font-feature-settings: "tnum" 1;  /* tabular numerals */
+               "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Tabular numerals on metric values without touching icon fonts */
+[data-testid="stMetricValue"],
+[data-testid="stMetricDelta"] {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Bordered containers (cards) — subtle gradient border + hover lift */
