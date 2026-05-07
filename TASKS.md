@@ -33,7 +33,7 @@ A living worklist for the Cobblestone case-study repo. Owned by Sumer; edited by
 
 These came out of a brief-vs-deliverable compliance check. Each is a verifiable mismatch between what the Cobblestone brief literally asks for and what `output/2026-05-05/` currently delivers. Do all four before pushing to GitHub. Total time ~2 hours.
 
-- [ ] **Cut desk note to 1–3 pages (currently 7 pages)** ← _critical; direct brief violation_
+- [x] **Cut desk note to 1–3 pages (currently 7 pages)** _(2026-05-07, commit `f38e7ff`)_
   - Where: `scripts/generate_brief.py` (markdown assembly + matplotlib `figsize` for chart pages), `output/<today>/desk_note_<today>.md` after regeneration, the PDF generation step.
   - Why: The brief is unambiguous — *"1–3 page document"*. `pypdf.PdfReader('output/2026-05-05/desk_note_2026-05-05.pdf').pages` returns **7**. A 7-page submission to a 1–3 page brief invites a "did they read the requirements?" reaction from the reviewer regardless of content quality. This is the single highest-priority pre-submission item.
   - Acceptance:
@@ -46,7 +46,7 @@ These came out of a brief-vs-deliverable compliance check. Each is a verifiable 
       5. If still over 3 after the above, drop one chart. The most expendable is `04_de_gb_power.png` since DE-GB spread is already a single line in section 5.
     - Commit message suggestion: `Cut desk note to 1–3 pages (brief compliance)`.
 
-- [ ] **Add carbon supply/policy commentary to section 4** ← _direct brief wording: "carbon supply/policy signal"_
+- [x] **Add carbon supply/policy commentary to section 4** _(2026-05-07, commits `56010bb` + `f38e7ff`)_
   - Where: `scripts/generate_brief.py` (section 4 template), optionally a small versioned `data/policy_facts.py` with hand-maintained ETS supply/policy facts; verify `ai/prompts/extract_v1.md` reliably populates `carbon_policy_signal`.
   - Why: The brief literally asks for *"carbon supply/policy signal."* Section 4 today is one paragraph about EUA as a marginal-cost lever — that's price-impact commentary, not supply/policy. The narrate_v1 prompt already weaves `carbon_policy_signal` into the executive summary (section 1) when present, but section 4 itself is hardcoded boilerplate that doesn't consume the field. The reviewer's eye goes to the section labelled "Carbon"; that section needs to address what the brief asked for.
   - Acceptance:
@@ -55,7 +55,7 @@ These came out of a brief-vs-deliverable compliance check. Each is a verifiable 
     - If the source is the fact-pack, a small `pytest` warning fires if `policy_facts.py` was last touched > 30 days ago. Keeps the fallback honest over time.
     - When done, the desk note's section 4 contains both a price/percentile read (kept) AND a supply/policy paragraph (new). The brief's exact wording is now satisfied by the section that claims to address it.
 
-- [ ] **Fix the stale-coal contradiction in section 5** ← _internal consistency / reviewer credibility_
+- [x] **Fix the stale-coal contradiction in section 5** _(2026-05-07, commit `f38e7ff` — option 2: re-anchored on spark spread)_
   - Where: `scripts/generate_brief.py` (section 5 template).
   - Why: The top-of-document banner correctly flags coal as 130 days stale. Section 5 line 65 then asserts: *"Coal is firmly in-the-money vs gas — coal-fired plants set the marginal cost."* That claim is built on the very data the freshness banner just disclaimed. A careful reviewer will catch the contradiction.
   - Acceptance: Two acceptable fixes — pick one:
@@ -63,7 +63,7 @@ These came out of a brief-vs-deliverable compliance check. Each is a verifiable 
     2. **Re-anchor on spark spread alone (preferred — supports the page-cut effort)** — drop the "Coal is firmly in-the-money" sentence entirely; let the section talk only about spark, DE/GB DA, and the curve regime. Mention coal only as a fundamentals input that is not currently usable.
     - Either way, no current-state assertion in section 5 that depends on stale coal data.
 
-- [ ] **Regenerate today's output and pull Cal+1 into section 5** ← _stale brief content_
+- [x] **Regenerate today's output and pull Cal+1 into section 5** _(2026-05-07, commit `f38e7ff`)_
   - Where: command line first, then `scripts/generate_brief.py` (section 5 template).
   - Why: The latest output dir is `output/2026-05-05/`. Today is 2026-05-07. Cal+1 shipped today (commit `ffc997d`), but section 5 of the May 5 desk note still says verbatim *"EEX Cal+1 / Cal+2 settlement indications are listed in the roadmap"* — admitting in writing that the curve metric is missing, even though it now isn't. Submitting this version means handing the reviewer a brief that disclaims its own most recent feature.
   - Acceptance:
@@ -78,7 +78,7 @@ These came out of a brief-vs-deliverable compliance check. Each is a verifiable 
 
 These came out of running the live dashboard after the metric-set work landed. Each is a real, screenshot-captured issue. Fix all five before the GitHub push — bug 1 in particular cascades into the "AI couldn't generate the report" failure and almost certainly explains it.
 
-- [ ] **`KeyError: 'switching_ttf'` blowing up the morning brief and (likely) the AI generation path**
+- [x] **`KeyError: 'switching_ttf'` blowing up the morning brief and (likely) the AI generation path** _(2026-05-06, commit `c002886`; reinforced 2026-05-07 in `f38e7ff` for `_snapshot`)_
   - Where: `analysis/signals.py::signal_for` line 64 — `metric = METRICS_BY_KEY[metric_key]` raises because `switching_ttf` is in the data dict but has no `Metric` entry.
   - Why: `data/cache.py::get_all_with_derived` (line 184) adds `out["switching_ttf"] = sw` as an auxiliary derived series. The code-comment at `analysis/signals.py:66` even acknowledges these auxiliaries exist (`switching_ttf`, `de_gb_spread`, `de_cal1_proj`, `eurusd`). But `analysis/signals.py::morning_brief` (line 125) iterates `data.items()` and calls `signal_for(k, df)` for every key — including the auxiliaries — and the lookup fails. The traceback is visible in the Methodology and Per-Metric Detail tabs in the screenshots Sumer sent on 2026-05-07.
   - Why this matters for AI generation: `morning_brief` is on the path to building the AI snapshot (`ai_snapshot.json` is built from rule-based signals + raw data). When `morning_brief` crashes the snapshot never gets built, the two-pass extract→narrate has nothing to consume, and the dashboard's "Generate desk note" button silently fails or shows the same traceback. Sumer reported "Claude couldn't generate the report" — this is almost certainly the cause, not a separate API issue.
@@ -88,7 +88,7 @@ These came out of running the live dashboard after the metric-set work landed. E
     - **Don't fix by registering switching_ttf as a Metric** unless you also add a primary card / tab for it — registration implies surface-level presence, and switching_ttf is currently only used as an auxiliary number on the regime strip.
     - After the fix: load every tab in the dashboard (Overview, News & Geopolitics, European Markets, Per-Metric Detail, Methodology, How to use). Zero tracebacks visible. Click "Generate desk note" → narrative renders, fresh entry appears in `ai/logs/<today>.jsonl`.
 
-- [ ] **Material icon syntax leaking as literal text on the Methodology tab "Metrics tracked" list**
+- [x] **Material icon syntax leaking as literal text on the Methodology tab "Metrics tracked" list** _(2026-05-07, commit `830ee87` — root cause: `[class*="st-"] !important` in `ui/style.css` clobbered Material Symbols font; scoped to `html, body` only)_
   - Where: `ui/methodology.py` (the `st.expander` calls in the Metrics-tracked block, lines ~33–37). Possibly extends to other expanders/headers in the codebase.
   - Why: Each row visually shows three overlapping strings — an icon-name like `_arrow_right`, the metric key like `TTF_Gas`, and the actual label "TTF Front-Month Natural Gas". The most likely cause is `:material/arrow_right:` (or similar) being passed as `icon=` to `st.expander` while the installed Streamlit version doesn't support that parameter. The icon falls back to literal text, and the rendering machinery then composites the icon-string and the label on top of each other.
   - Acceptance:
@@ -96,12 +96,12 @@ These came out of running the live dashboard after the metric-set work landed. E
     - Either (a) upgrade Streamlit to a version that supports the `icon=":material/...":` syntax (check `requirements.txt` and bump if so), OR (b) drop the `icon=` parameter wherever it's used and replace with a plain emoji prefix or no icon at all.
     - Take a screenshot of the Methodology tab post-fix and save under `docs/screenshots/methodology_after.png` for the record.
 
-- [ ] **Sidebar shows literal text "ouble_arrow_right" where the collapse icon should be**
+- [x] **Sidebar shows literal text "ouble_arrow_right" where the collapse icon should be** _(2026-05-07, commit `830ee87` — same root cause as the methodology bug, fixed by the same CSS scope change)_
   - Where: `app.py` (likely an `st.set_page_config` or sidebar widget setting), or `.streamlit/config.toml`.
   - Why: Same root cause as the methodology bug — a Material icon name (probably `keyboard_double_arrow_right`) is being rendered as text. The string "ouble_arrow_right" visible top-left in every screenshot is the truncated tail of that icon name.
   - Acceptance: Sidebar header shows either a clean chevron/arrow glyph or no icon at all — never the literal Material icon name. Verify on every tab.
 
-- [ ] **European Markets choropleth renders with too-wide projection and a large white panel**
+- [x] **European Markets choropleth renders with too-wide projection and a large white panel** _(2026-05-07, commits `830ee87` + `3a2f736` — dropped `scope="europe"`, added `bgcolor`, fixed Plotly v5+ `titlefont` ValueError)_
   - Where: `ui/markets.py`. Note that lines 227–246 already set `scope="europe"`, `projection_type="mercator"`, `lataxis_range=[35, 62]`, `lonaxis_range=[-12, 26]` — so the bounds *are* configured but aren't being respected.
   - Why: The screenshot shows the map extending south into Africa and east into the Middle East, plus a large white bounding box. Likely culprits:
     1. The `update_geos` call doesn't reach this particular figure (check whether the call is on the right `fig` object — there are two `update_geos` calls in the file at lines 191 and 227).
@@ -113,7 +113,7 @@ These came out of running the live dashboard after the metric-set work landed. E
     - Click-to-drill into a country still works after the fix.
     - Take a screenshot of the European Markets tab post-fix and save under `docs/screenshots/markets_after.png`.
 
-- [ ] **Verify AI desk-note generation works end-to-end after bug 1 is fixed**
+- [x] **Verify AI desk-note generation works end-to-end after bug 1 is fixed** _(2026-05-07, commit `830ee87` — `ai/logs/2026-05-07.jsonl` shows 25 records: extract 12.2s/4681 tok, narrate 3.0s/1690 tok, news_themes 7.4s/2488 tok all on `claude-haiku-4-5`)_
   - Where: command line + the dashboard.
   - Why: The user reported "Claude LLM couldn't generate the report when I needed it to." Most likely a downstream effect of bug 1's KeyError. Verify, don't assume.
   - Acceptance:
@@ -124,6 +124,65 @@ These came out of running the live dashboard after the metric-set work landed. E
     - If the AI generation is *still* broken after bug 1 is fixed, dig into the two-pass workflow (`ai/narrative.py`) — most likely a malformed JSON response from the extract pass that the narrate pass can't consume. Add a defensive `json.JSONDecodeError` catch with a one-shot retry.
 
 ---
+
+### Overnight pass (added 2026-05-08) — claude-code-only, before Sumer picks up tomorrow
+
+These came out of a final desk-note review on 2026-05-08. Three are real bugs / hygiene; four are quality lifts to the geopolitics + scenarios layer that Sumer flagged. Do them in order. Stop and surface anything ambiguous before silently widening scope.
+
+- [x] **Reconcile TASKS.md ticks against shipped commits** _(2026-05-08)_
+  - Where: this file.
+  - Why: 10 items in P0 still show `[ ]` while commits `c002886` (KeyError fix), `830ee87` (material-icon + map + AI verified), `f38e7ff` (1-3 pages + carbon supply/policy + spark anchor + Cal+1), and `56010bb` (carbon supply/policy from news) ship them. A reviewer browsing the repo and seeing 10 unchecked P0 items while the code shows them complete would read it as either sloppy or unfinished.
+  - Acceptance: Walk through every `[ ]` in P0. For each, check `git log --oneline | grep -i <keyword>` and the actual file state. Tick `[x]` with the date `(2026-05-07)` or `(2026-05-08)` for items genuinely shipped. Leave `[ ]` only for items that are truly outstanding. Add a one-line `Note:` if a task was reframed mid-flight.
+
+- [ ] **Regenerate the brief for today's date**
+  - Where: command line.
+  - Why: Latest output dir is `output/2026-05-07/`. Run today and confirm `output/2026-05-08/` is created with all artefacts. Daily brief should be dated today.
+  - Acceptance: `output/2026-05-08/desk_note_2026-05-08.{md,pdf}` exist; PDF page count ≤ 3 (`pypdf.PdfReader(...).pages`); fresh `ai/logs/2026-05-08.jsonl` entries with both `extract` and `narrate` purposes; charts dir populated.
+
+- [ ] **Fix the DE Power weekly-Δ blowing up across negative-price holidays**
+  - Where: `analysis/stats.py::change_over_pct` (or wherever the snapshot weekly delta is built in `scripts/generate_brief.py`).
+  - Why: Today's snapshot reports `DE Power 1w Δ = +143.83%`. The cause: the comparison day (2026-05-01, Labour Day) printed at **−2.08 EUR/MWh** — a near-zero / negative price. Pct-change against a near-zero denominator explodes. The current "5-day trailing-mean" smoothing doesn't help when one of the days in the window is negative.
+  - Acceptance:
+    - For power day-ahead series specifically, the weekly Δ ignores comparison days where the absolute price is below a sane threshold (e.g. < 5 EUR/MWh) and walks back to the next clean day. Decision recorded in a code comment.
+    - Alternative acceptance: if the "skip-low" approach doesn't fit the existing helper, append the comparison date next to the delta in the metrics table — e.g. `+12.3% (vs Wed Apr 30)` — so the source of any large reading is visible.
+    - After regenerating today's brief, no metric in the snapshot CSV shows |1w Δ| > 50% unless verified to be a real move (cross-check by spot-pulling the underlying CSV).
+    - Add a unit test in `tests/test_stats.py` that pins behaviour on a series containing a near-zero day.
+
+- [ ] **Diversify the news RSS source mix beyond US-EIA**
+  - Where: `data/news.py` (the `feeds` list around line 24).
+  - Why: Today's "Today's themes" surfaced 3 items: 1 Hormuz (relevant), plus 2 US-EIA items (biofuel exports, SPR release) that are low-relevance for a European power desk. The current feed list is heavy on US sources (EIA Today in Energy, EIA Natural Gas Weekly, EIA Petroleum Weekly). Add European-relevant feeds so the theme extractor has more signal to choose from.
+  - Acceptance:
+    - At least 4 new European-focused feeds added (try `https://www.reuters.com/business/energy/feed/`, `https://www.politico.eu/section/energy-uk/feed/`, `https://www.argusmedia.com/en/feed/news` if reachable, `https://www.spglobal.com/commodityinsights/en/rss-feed/electric-power`, Montel if reachable, `https://www.gasworld.com/feed`). For any feed that returns 4xx/5xx, fall back gracefully (the existing pull is best-effort).
+    - Fetch must remain best-effort — no single feed failure should block the desk-note generation.
+    - Run the pipeline once and confirm `output/2026-05-08/data/ai_news_themes.json` contains at least one EU-market-specific theme that didn't come from EIA.
+    - Update the methodology section (in README) to reflect the new feed list.
+
+- [ ] **Add a "Scenarios" block to the desk note that quantifies the geopolitics tail**
+  - Where: `scripts/generate_brief.py` (section 5 or a new section 5b), with the values populated from the AI extract pass.
+  - Why: Today's brief says *"LNG supply disruption could trigger 10–15% spike on geopolitical acceleration"* — a real number, but it's a one-off mention. A reviewer asks "what if?" — a small scenario block makes that explicit and decision-useful.
+  - Acceptance: A short table or 3-line block in the desk note showing **Base / Upside / Downside** scenarios, each with a quantified TTF and DE Power impact. Example shape:
+
+    ```
+    Scenarios (24-72h horizon)
+    ── Base ────  TTF +1-3% on storage refill pace; DE Power tracks
+    ── Upside ──  Hormuz escalation → TTF +10-15%; DE Power +6-9% via fuel passthrough
+    ── Downside ─ Hormuz reopens → TTF -8-12%; DE Power -4-7%; clean spark compresses
+    ```
+
+    Numbers are AI-generated from the extract pass (already produces `risk_flags` with magnitudes); `ai/prompts/extract_v1.md` should request a `scenarios` field if it doesn't already.
+    - Caveat at the bottom: *"Scenarios are illustrative, not forecasts. Sized off historical sensitivity of TTF/DE Power to comparable shocks."*
+
+- [ ] **Add an explicit dated watchlist with data releases**
+  - Where: `scripts/generate_brief.py` (extend section 7 or add a small "This week" block at the end of section 5), `ai/prompts/extract_v1.md` (request a `watchlist_dated` field).
+  - Why: The current section 7 watchlist is generic ("monitor for supply disruption escalation"). A trader's watchlist names *which release on which date* moves the needle. Easy to populate from a small repeating-events fact-pack.
+  - Acceptance: 3–5 dated lines, e.g. *"Tue: AGSI+ daily storage print — first read on injection pace this week. Wed: EEX EUA Dec auction — supply-side signal. Fri: ENTSO-E weekly DA-volume note."* Static for non-AI-driven items (use a small `data/release_calendar.py`); AI-driven items inherit from `risk_flags` with a date attached.
+
+- [ ] **Strengthen narrate_v1 to weave geopolitics into the curve-implication sentence**
+  - Where: `ai/prompts/narrate_v1.md`.
+  - Why: The current narrate prompt already integrates `carbon_policy_signal` into the carbon mention. The same pattern for geopolitics: when `news.geopolitics_summary` or a high-relevance theme is present, the prompt should ask the closing sentence (the curve-implication line) to explicitly state how geopolitics shifts the curve regime, not just the level.
+  - Acceptance: Add one rule to `narrate_v1.md`:
+    *"If the extract includes a non-empty `news.geopolitics_summary`, the closing curve-implication sentence must name the geopolitical driver and tie it to one of {front-curve risk, Cal+1 regime, spark/dark differential}. Don't list multiple geopoltical events — pick the dominant one already named in `top_takeaway`."*
+    After change, run one regeneration and confirm the closing sentence references geopolitics by name (e.g. "Hormuz") tied to a curve segment.
 
 - [ ] **Push to GitHub + set Actions secrets** ← _your action; can't be automated from here_
   - Where: repo root, GitHub web UI.
