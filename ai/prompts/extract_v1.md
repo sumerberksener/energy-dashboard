@@ -16,6 +16,9 @@ Schema (use exactly these field names; emit `null` or empty arrays where the dat
   "watchlist": [
     {"metric": "<short_name or news topic>", "why": "<one-sentence reason it matters this morning, with a number or event date if available>"}
   ],
+  "watchlist_dated": [
+    {"day_label": "Mon | Tue | Wed | Thu | Fri", "name": "≤ 8 words — event/release name", "why": "≤ 18 words — desk-relevant transmission mechanism"}
+  ],
   "top_drivers": [
     "1–3 short bullets identifying what is actually moving the regime today. Example: 'Renewables forecast at 12th-pctile lifts thermal call', 'Geopolitical risk premium reasserts on TTF after pipeline news'."
   ],
@@ -35,6 +38,11 @@ Schema (use exactly these field names; emit `null` or empty arrays where the dat
   "freshness_caveat": "If any input is stale (is_stale=true), state that here in one sentence with the affected metric(s) and the data date. Otherwise empty string."
 }
 ```
+
+**`watchlist_dated` rules**:
+- 0–3 entries. AI-driven only — items inferred from `news.themes` and `news.geopolitics_summary` that have an explicit upcoming date or weekday (e.g. "Fri: OPEC+ ministerial meeting", "Wed: ECB rate decision").
+- If news doesn't surface dated events, return empty array. The desk note layers a static recurring-events list on top from `data/release_calendar.py`, so this field is additive, not the only source.
+- `day_label` uses the 3-letter weekday abbreviation. Don't write "next Friday" — pick the literal weekday.
 
 **`scenarios` rules**:
 - Required field. Always populate Base / Upside / Downside, even on quiet news days.

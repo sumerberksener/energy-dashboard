@@ -515,6 +515,35 @@ def build_markdown(
         L(f"![Clean Spreads]({chart.relative_to(today_dir)})")
         L("")
 
+    # This-week-ahead release calendar — static recurring events from
+    # data/release_calendar.py, plus AI-extracted dated items if any.
+    try:
+        from data import release_calendar
+        upcoming = release_calendar.select_for_week()
+    except Exception as e:
+        log.warning("release_calendar unavailable: %s", e)
+        upcoming = []
+
+    ai_dated = (narrative.extract or {}).get("watchlist_dated") if narrative.extract else None
+    if upcoming or (isinstance(ai_dated, list) and ai_dated):
+        L("**This week ahead**")
+        L("")
+        for ev in upcoming:
+            time_str = f" {ev.time_utc} UTC" if ev.time_utc else ""
+            L(f"- **{release_calendar.label_weekday(ev.weekday)}**{time_str} — "
+              f"{ev.name}: {ev.relevance}")
+        if isinstance(ai_dated, list):
+            for item in ai_dated[:3]:
+                if not isinstance(item, dict):
+                    continue
+                day = item.get("day_label", "—")
+                name = item.get("name", "")
+                why = item.get("why", "")
+                if name or why:
+                    L(f"- **{day}** — {name}{': ' + why if why else ''} "
+                      f"_(news-extracted)_")
+        L("")
+
     # Scenarios block — AI-generated Base / Upside / Downside on the
     # dominant geopolitical risk axis. Quantified TTF + DE Power moves.
     scenarios = (narrative.extract or {}).get("scenarios") if narrative.extract else None
