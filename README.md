@@ -263,7 +263,7 @@ the brief surfaces.
 | **Renewable Share** | ENTSO-E `query_wind_and_solar_forecast` ÷ `query_load_forecast` (DE_LU) | Hourly → daily mean | Wind+solar share of forecast load |
 | **Coal** | ICE Newcastle proxy via Yahoo (`MTF=F`) | Daily (often stale) | Fundamentals input only — coal isn't a Cobblestone book |
 | **EUR/USD, GBP/EUR** | Yahoo Finance | Daily | FX helpers for coal and GB power conversions |
-| **News & geopolitics** | RSS from IEA, EIA, Reuters Sustainability, Bruegel, ENTSO-E, Euractiv | Continuous | Filtered to EU power/gas/ETS relevance via Claude |
+| **News & geopolitics** | RSS from Reuters Energy, Reuters Sustainability, Politico EU Energy, S&P Commodity Insights (Power + Natural Gas), Gasworld, Montel, ENTSO-E, Bruegel (Energy/Blog/All), Euractiv Energy, IEA, EIA Today/NatGas | Continuous | EU-focused mix (16 feeds, prioritised); filtered to EU power/gas/ETS relevance via Claude theme extraction |
 
 ### Plant assumptions (clean spread / switching TTF formulas)
 

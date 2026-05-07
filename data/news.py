@@ -21,15 +21,31 @@ log = logging.getLogger(__name__)
 # Free, public RSS/Atom feeds. Order = priority. Each is best-effort: if a
 # feed is down or blocks the user-agent, the others still produce output.
 DEFAULT_FEEDS: list[tuple[str, str]] = [
-    ("IEA News", "https://www.iea.org/news/feed"),
-    ("EIA Today in Energy", "https://www.eia.gov/rss/todayinenergy.xml"),
+    # --- European-focused (priority for desk relevance) -----------------
+    ("Reuters Energy", "https://www.reuters.com/business/energy/feed/"),
     ("Reuters Sustainability", "https://www.reuters.com/sustainability/feed/"),
+    ("Politico EU Energy", "https://www.politico.eu/section/energy/feed/"),
+    ("S&P Commodity Insights — Electric Power",
+     "https://www.spglobal.com/commodityinsights/en/rss-feed/electric-power"),
+    ("S&P Commodity Insights — Natural Gas",
+     "https://www.spglobal.com/commodityinsights/en/rss-feed/natural-gas"),
+    ("Gasworld", "https://www.gasworld.com/feed"),
+    ("Montel News", "https://www.montelnews.com/news.rss"),
+    ("ENTSO-E News", "https://www.entsoe.eu/news/feed/"),
+    ("Bruegel Energy", "https://www.bruegel.org/topic/energy-climate/feed"),
     ("Bruegel All", "https://www.bruegel.org/all-articles.rss"),
     ("Bruegel Blog", "https://www.bruegel.org/blog-post/feed"),
     ("Euractiv Energy", "https://www.euractiv.com/section/energy-environment/feed/"),
-    ("ENTSO-E News", "https://www.entsoe.eu/news/feed/"),
+    # --- Global-energy (secondary; surfaces only if EU-relevant) --------
+    ("IEA News", "https://www.iea.org/news/feed"),
+    ("EIA Today in Energy", "https://www.eia.gov/rss/todayinenergy.xml"),
     ("EIA Natural Gas Weekly", "https://www.eia.gov/rss/naturalgas.xml"),
-    ("EIA Petroleum Weekly", "https://www.eia.gov/rss/petroleum.xml"),
+    # --- Removed (US-only domestic noise that crowded out EU items) -----
+    # EIA Petroleum Weekly was dropping low-relevance US-domestic items
+    # into the "Today's themes" section. The Claude theme-extraction
+    # prompt filters for EU relevance, but with too many US sources the
+    # 5-theme cap was being eaten by them. Removed; reinstate if a
+    # specific Brent / refined-products thesis ever needs the data.
 ]
 
 # Headlines older than this are filtered out — energy news goes stale fast,
