@@ -86,12 +86,12 @@ def _snapshot(
         }
         if meta.delta_unit == "abs":
             entry["daily_change_abs"] = _round(stats.daily_change_abs(df))
-            entry["weekly_change_abs"] = _round(stats.change_over_abs(df, 5, smooth_window=5))
+            entry["weekly_change_abs"] = _round(stats.change_over_abs(df, 5, smooth_window=5, skip_below_abs=5))
             entry["monthly_change_abs"] = _round(stats.change_over_abs(df, 21))
             entry["delta_unit"] = meta.unit
         else:
             entry["daily_change_pct"] = _round(stats.daily_change_pct(df))
-            entry["weekly_change_pct"] = _round(stats.change_over_pct(df, 5, smooth_window=5))
+            entry["weekly_change_pct"] = _round(stats.change_over_pct(df, 5, smooth_window=5, skip_below_abs=5))
             entry["monthly_change_pct"] = _round(stats.change_over_pct(df, 21))
             entry["delta_unit"] = "pct"
 

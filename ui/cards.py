@@ -70,8 +70,8 @@ def _delta_string(metric: Metric, df: pd.DataFrame, business_days: int) -> str:
             return _fmt_abs(stats.daily_change_abs(df))
         return _fmt_pct(stats.daily_change_pct(df))
     if metric.delta_unit == "abs":
-        return _fmt_abs(stats.change_over_abs(df, business_days, smooth_window=5))
-    return _fmt_pct(stats.change_over_pct(df, business_days, smooth_window=5))
+        return _fmt_abs(stats.change_over_abs(df, business_days, smooth_window=5, skip_below_abs=5))
+    return _fmt_pct(stats.change_over_pct(df, business_days, smooth_window=5, skip_below_abs=5))
 
 
 def _horizon_strip(metric: Metric, df: pd.DataFrame) -> str:

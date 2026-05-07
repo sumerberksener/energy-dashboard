@@ -62,6 +62,44 @@ def test_change_over_abs_smoothed():
     assert smoothed == pytest.approx(-8.0)
 
 
+def test_change_over_pct_skip_below_abs_walks_back():
+    """Power day-ahead can print near zero on holidays. Without skip_below_abs
+    the comparison day denominator can be ~0 and pct change explodes.
+
+    Series: 100s, then a single -2 print (May 1 Labour Day equivalent), then 100s.
+    Standard 5-day point-to-point lands on the -2 day → pct-change ≈ -5100%.
+    With skip_below_abs=5, the algorithm walks back to the previous 100-print.
+    """
+    series = [100.0] * 4 + [-2.0] + [100.0] * 4 + [100.0]  # 10 days
+    df = _frame(series)
+    raw = stats.change_over_pct(df, 5)
+    skipped = stats.change_over_pct(df, 5, skip_below_abs=5)
+    assert raw is not None and abs(raw) > 1000, "raw should be the explosion"
+    assert skipped is not None and abs(skipped) < 1, (
+        f"skip_below_abs should walk back to a clean 100-print and yield ~0%, got {skipped}"
+    )
+
+
+def test_change_over_pct_skip_below_abs_smoothed_filters_window():
+    """When the prior 5-day window contains a near-zero day, smoothing alone
+    drags the mean toward zero. skip_below_abs filters near-zero days out of
+    the prior-window mean.
+
+    Series: prior 5d mean ≈ (100+100+100+100-2)/5 = 79.6 (without filter)
+                          ≈ 100 (with filter dropping the -2)
+    Recent 5d mean = 100. Without filter pct ≈ +25%; with filter pct ≈ 0%.
+    """
+    series = [100.0]*4 + [-2.0] + [100.0]*5 + [100.0]
+    df = _frame(series)
+    raw_smoothed = stats.change_over_pct(df, 5, smooth_window=5)
+    skipped_smoothed = stats.change_over_pct(df, 5, smooth_window=5, skip_below_abs=5)
+    assert raw_smoothed is not None and skipped_smoothed is not None
+    assert abs(skipped_smoothed) < abs(raw_smoothed) - 5, (
+        f"skip_below_abs should pull skewed mean closer to true level. "
+        f"raw={raw_smoothed:.2f}, skipped={skipped_smoothed:.2f}"
+    )
+
+
 def test_is_stale():
     fresh_idx = pd.date_range(end="2026-05-05", periods=3, freq="D")
     fresh = pd.DataFrame({"value": [1.0, 2.0, 3.0]}, index=fresh_idx)

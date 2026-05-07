@@ -31,6 +31,7 @@ def change_over_pct(
     business_days: int,
     *,
     smooth_window: int | None = None,
+    skip_below_abs: float | None = None,
 ) -> float | None:
     """Pct change over `business_days`. With smoothing, compares trailing means.
 
@@ -39,16 +40,49 @@ def change_over_pct(
     public holidays where day-ahead prints can be deeply negative). Pass
     `smooth_window=N` to compare the N-day trailing mean today vs the N-day
     trailing mean N business days ago — much more robust.
+
+    For power day-ahead specifically, even smoothing can blow up if a
+    near-zero / negative print falls inside the prior window: e.g. May 1
+    Labour Day in DE printed at −2.08 EUR/MWh, which dragged the trailing
+    mean toward zero and produced a +143% weekly Δ. Pass `skip_below_abs=N`
+    (in EUR/MWh) to walk back from a low-absolute-price denominator
+    (point-to-point) or to filter low-abs days out of the prior mean
+    (smoothed). Returns the comparison-anchor index in `df.attrs["w1_anchor"]`
+    when set so the caller can show "vs <date>" alongside the delta.
     """
     s = _series(df)
     if len(s) <= business_days:
         return None
+
     if smooth_window is None or smooth_window <= 1:
-        return float((s.iloc[-1] / s.iloc[-1 - business_days] - 1) * 100)
+        idx = -1 - business_days
+        if skip_below_abs is not None:
+            limit = max(business_days * 3, 30)
+            while -idx <= limit and abs(s.iloc[idx]) < skip_below_abs:
+                idx -= 1
+                if -idx > len(s):
+                    return None
+        prior = s.iloc[idx]
+        if prior == 0 or not pd.notna(prior):
+            return None
+        try:
+            df.attrs["w1_anchor_date"] = s.index[idx].strftime("%Y-%m-%d")
+        except Exception:
+            pass
+        return float((s.iloc[-1] / prior - 1) * 100)
+
     if len(s) < business_days + smooth_window:
         return None
     recent = s.iloc[-smooth_window:].mean()
-    prior = s.iloc[-business_days - smooth_window:-business_days].mean()
+    prior_window = s.iloc[-business_days - smooth_window:-business_days]
+    if skip_below_abs is not None:
+        clean = prior_window[prior_window.abs() >= skip_below_abs]
+        # Need at least half the window above threshold to trust the mean;
+        # otherwise the regime is genuinely near-zero and we surface that.
+        prior = (clean.mean() if len(clean) >= max(2, smooth_window // 2)
+                 else prior_window.mean())
+    else:
+        prior = prior_window.mean()
     if prior == 0 or not pd.notna(prior):
         return None
     return float((recent / prior - 1) * 100)
@@ -71,17 +105,37 @@ def change_over_abs(
     business_days: int,
     *,
     smooth_window: int | None = None,
+    skip_below_abs: float | None = None,
 ) -> float | None:
-    """Absolute change over `business_days`. With smoothing, compares trailing means."""
+    """Absolute change over `business_days`. With smoothing, compares trailing means.
+
+    `skip_below_abs` mirrors the pct-change variant — exists for API parity
+    even though absolute deltas don't divide by the comparison value, so the
+    holiday-spike risk is lower. Useful when a caller wants the same
+    "skip negative-price days" semantics across both flavours.
+    """
     s = _series(df)
     if len(s) <= business_days:
         return None
     if smooth_window is None or smooth_window <= 1:
-        return float(s.iloc[-1] - s.iloc[-1 - business_days])
+        idx = -1 - business_days
+        if skip_below_abs is not None:
+            limit = max(business_days * 3, 30)
+            while -idx <= limit and abs(s.iloc[idx]) < skip_below_abs:
+                idx -= 1
+                if -idx > len(s):
+                    return None
+        return float(s.iloc[-1] - s.iloc[idx])
     if len(s) < business_days + smooth_window:
         return None
     recent = s.iloc[-smooth_window:].mean()
-    prior = s.iloc[-business_days - smooth_window:-business_days].mean()
+    prior_window = s.iloc[-business_days - smooth_window:-business_days]
+    if skip_below_abs is not None:
+        clean = prior_window[prior_window.abs() >= skip_below_abs]
+        prior = (clean.mean() if len(clean) >= max(2, smooth_window // 2)
+                 else prior_window.mean())
+    else:
+        prior = prior_window.mean()
     if not pd.notna(prior):
         return None
     return float(recent - prior)

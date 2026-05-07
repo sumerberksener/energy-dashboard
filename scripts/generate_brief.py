@@ -123,11 +123,11 @@ def write_csvs(data: dict[str, pd.DataFrame], data_dir: Path) -> Path:
         }
         if metric.delta_unit == "abs":
             row["daily_change_abs"] = stats.daily_change_abs(df)
-            row["weekly_change_abs"] = stats.change_over_abs(df, 5, smooth_window=5)
+            row["weekly_change_abs"] = stats.change_over_abs(df, 5, smooth_window=5, skip_below_abs=5)
             row["monthly_change_abs"] = stats.change_over_abs(df, 21)
         else:
             row["daily_change_pct"] = stats.daily_change_pct(df)
-            row["weekly_change_pct"] = stats.change_over_pct(df, 5, smooth_window=5)
+            row["weekly_change_pct"] = stats.change_over_pct(df, 5, smooth_window=5, skip_below_abs=5)
             row["monthly_change_pct"] = stats.change_over_pct(df, 21)
         rows.append(row)
     snap = pd.DataFrame(rows)
@@ -267,12 +267,12 @@ def _row(metric, df) -> str:
 
     if metric.delta_unit == "abs":
         d1 = stats.daily_change_abs(df)
-        w1 = stats.change_over_abs(df, 5, smooth_window=5)
+        w1 = stats.change_over_abs(df, 5, smooth_window=5, skip_below_abs=5)
         d1_s = _fmt_abs(d1)
         w1_s = _fmt_abs(w1)
     else:
         d1 = stats.daily_change_pct(df)
-        w1 = stats.change_over_pct(df, 5, smooth_window=5)
+        w1 = stats.change_over_pct(df, 5, smooth_window=5, skip_below_abs=5)
         d1_s = _fmt_pct(d1)
         w1_s = _fmt_pct(w1)
 
