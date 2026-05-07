@@ -60,8 +60,17 @@ def _move_label(z: float | None, change_pct: float | None) -> tuple[str | None, 
 
 
 def signal_for(metric_key: str, df: pd.DataFrame) -> Signal:
-    """Generate a single Signal for one metric."""
-    metric = METRICS_BY_KEY[metric_key]
+    """Generate a single Signal for one metric.
+
+    Defensive against unknown keys: `get_all_with_derived()` returns auxiliary
+    series (e.g. `switching_ttf`, `de_gb_spread`, `de_cal1_proj`, `eurusd`)
+    that aren't registered as primary Metrics. They get a stub Signal so
+    morning_brief and other consumers can iterate the full data dict safely.
+    """
+    metric = METRICS_BY_KEY.get(metric_key)
+    if metric is None:
+        return Signal(metric_key, "(auxiliary series)",
+                      "Derived helper, not a primary metric.", 0.0)
 
     if df is None or df.empty:
         return Signal(metric_key, "No data", "Live data unavailable; please retry.", 0.0)
@@ -122,8 +131,13 @@ def signal_for(metric_key: str, df: pd.DataFrame) -> Signal:
 
 def morning_brief(data: dict[str, pd.DataFrame]) -> str:
     """Build a 3-sentence paragraph from the most-extreme signals across all 5."""
-    signals = [signal_for(k, df) for k, df in data.items()]
-    signals = [s for s in signals if s.headline not in ("No data", "Within typical range")]
+    # Only consider registered primary metrics — auxiliary derived series
+    # (switching_ttf, de_gb_spread, eurusd, etc.) live in `data` for the
+    # regime strip but shouldn't generate stand-alone signals.
+    signals = [signal_for(k, df) for k, df in data.items() if k in METRICS_BY_KEY]
+    signals = [s for s in signals
+               if s.headline not in ("No data", "Within typical range",
+                                     "(auxiliary series)")]
     signals.sort(key=lambda s: s.severity, reverse=True)
     top = signals[:3]
 

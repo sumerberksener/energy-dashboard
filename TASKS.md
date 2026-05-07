@@ -29,9 +29,54 @@ A living worklist for the Cobblestone case-study repo. Owned by Sumer; edited by
 - [x] **Sanity-check the +99% DE Power weekly delta** _(2026-05-05)_
 - [x] **Commit working tree + tidy commit history** _(2026-05-05)_
 
+### Final-pass compliance fixes (added 2026-05-07)
+
+These came out of a brief-vs-deliverable compliance check. Each is a verifiable mismatch between what the Cobblestone brief literally asks for and what `output/2026-05-05/` currently delivers. Do all four before pushing to GitHub. Total time ~2 hours.
+
+- [ ] **Cut desk note to 1–3 pages (currently 7 pages)** ← _critical; direct brief violation_
+  - Where: `scripts/generate_brief.py` (markdown assembly + matplotlib `figsize` for chart pages), `output/<today>/desk_note_<today>.md` after regeneration, the PDF generation step.
+  - Why: The brief is unambiguous — *"1–3 page document"*. `pypdf.PdfReader('output/2026-05-05/desk_note_2026-05-05.pdf').pages` returns **7**. A 7-page submission to a 1–3 page brief invites a "did they read the requirements?" reaction from the reviewer regardless of content quality. This is the single highest-priority pre-submission item.
+  - Acceptance:
+    - After regeneration, `pypdf.PdfReader(...).pages` (or `pdfinfo`) returns ≤ 3.
+    - Cuts to make, in priority order:
+      1. **Move section 8 (Methodology & sources) to the README** entirely. Replace section 8 in the desk note with a one-liner: *"Methodology and source list: see README §Methodology."* Methodology is reference material that doesn't need to ride with every daily brief.
+      2. **Compress section 7 (news + geopolitics)** from a full table to a 1-line geopolitics summary plus a 2–4 bullet `Watchlist`. Drop the per-headline detail rows.
+      3. **Strip duplicated metric lines** in sections 3/4/5/6. Currently every section repeats the metric in two ways back-to-back, e.g. *"TTF front-month prints at 48.14 EUR/MWh — Within typical range. \n TTF Gas prints at 48.14 EUR/MWh (65th-pctile of 5y)."* — same number twice, two lines apart. Keep one. Across four sections this saves ~½ page on its own.
+      4. **Smaller chart sizes** — current PDF chart pages are oversized. Reduce matplotlib `figsize` to ~60% (e.g. `(7, 3.5)` instead of `(11, 6)`) and confirm legibility in the PDF.
+      5. If still over 3 after the above, drop one chart. The most expendable is `04_de_gb_power.png` since DE-GB spread is already a single line in section 5.
+    - Commit message suggestion: `Cut desk note to 1–3 pages (brief compliance)`.
+
+- [ ] **Add carbon supply/policy commentary to section 4** ← _direct brief wording: "carbon supply/policy signal"_
+  - Where: `scripts/generate_brief.py` (section 4 template), optionally a small versioned `data/policy_facts.py` with hand-maintained ETS supply/policy facts; verify `ai/prompts/extract_v1.md` reliably populates `carbon_policy_signal`.
+  - Why: The brief literally asks for *"carbon supply/policy signal."* Section 4 today is one paragraph about EUA as a marginal-cost lever — that's price-impact commentary, not supply/policy. The narrate_v1 prompt already weaves `carbon_policy_signal` into the executive summary (section 1) when present, but section 4 itself is hardcoded boilerplate that doesn't consume the field. The reviewer's eye goes to the section labelled "Carbon"; that section needs to address what the brief asked for.
+  - Acceptance:
+    - Section 4 of the desk note contains, in addition to the existing price/percentile read: one short paragraph (2–3 sentences) on **supply** (EUA issuance volumes, MSR intake/cancellation thresholds, free-allocation phase-out trajectory) and/or **policy** (CBAM phase-in dates, ETS-2 expansion to road/buildings, EU–UK ETS linkage status). Pick whichever is most pressing per day.
+    - Generation logic: prefer `ai_extract.carbon_policy_signal` from the existing two-pass extract (already in the prompt). If that field is null, fall back to a versioned hand-maintained fact-pack at `data/policy_facts.py` that returns the most relevant current ETS development. Hybrid is fine: AI fills if news triggers it, fact-pack provides the default.
+    - If the source is the fact-pack, a small `pytest` warning fires if `policy_facts.py` was last touched > 30 days ago. Keeps the fallback honest over time.
+    - When done, the desk note's section 4 contains both a price/percentile read (kept) AND a supply/policy paragraph (new). The brief's exact wording is now satisfied by the section that claims to address it.
+
+- [ ] **Fix the stale-coal contradiction in section 5** ← _internal consistency / reviewer credibility_
+  - Where: `scripts/generate_brief.py` (section 5 template).
+  - Why: The top-of-document banner correctly flags coal as 130 days stale. Section 5 line 65 then asserts: *"Coal is firmly in-the-money vs gas — coal-fired plants set the marginal cost."* That claim is built on the very data the freshness banner just disclaimed. A careful reviewer will catch the contradiction.
+  - Acceptance: Two acceptable fixes — pick one:
+    1. **Caveat in place** — change the sentence to: *"Based on stale coal data (130 days old), the merit-order signal is indicative not current; the spark spread suggests gas remains competitive."* Explicitly acknowledges the staleness in section 5 itself, not just the banner.
+    2. **Re-anchor on spark spread alone (preferred — supports the page-cut effort)** — drop the "Coal is firmly in-the-money" sentence entirely; let the section talk only about spark, DE/GB DA, and the curve regime. Mention coal only as a fundamentals input that is not currently usable.
+    - Either way, no current-state assertion in section 5 that depends on stale coal data.
+
+- [ ] **Regenerate today's output and pull Cal+1 into section 5** ← _stale brief content_
+  - Where: command line first, then `scripts/generate_brief.py` (section 5 template).
+  - Why: The latest output dir is `output/2026-05-05/`. Today is 2026-05-07. Cal+1 shipped today (commit `ffc997d`), but section 5 of the May 5 desk note still says verbatim *"EEX Cal+1 / Cal+2 settlement indications are listed in the roadmap"* — admitting in writing that the curve metric is missing, even though it now isn't. Submitting this version means handing the reviewer a brief that disclaims its own most recent feature.
+  - Acceptance:
+    - Run `python scripts/generate_brief.py` once with all three tokens set in env. `output/<today>/` is created with markdown + PDF + charts + per-metric CSVs + ai_snapshot.json.
+    - Update section 5's template in `scripts/generate_brief.py`:
+      - **Remove** the "Forward curve note: ... in the roadmap" paragraph.
+      - **Replace with** a real curve regime line, e.g. *"DA / Cal+1 (model) at <DA> / <Cal1> EUR/MWh; spread <Δ> EUR/MWh — <backwardated|contango|flat>. Front absorbs storage/outages; Cal+1 reflects the structural carbon-and-fuel trajectory. Cal+1 is a backward-looking seasonality projection (see methodology)."* — pulled from the new `cal1_seasonality_projection` series.
+    - The new section 5 says *something* about the curve with a number, not pointing at the roadmap.
+    - PDF regenerated and on disk at `output/<today>/desk_note_<today>.pdf`. Page count check from the cut-to-3-pages task above is run on this regenerated PDF, not the May 5 one.
+
 - [ ] **Push to GitHub + set Actions secrets** ← _your action; can't be automated from here_
   - Where: repo root, GitHub web UI.
-  - Acceptance: After push: GitHub repo → Settings → Secrets and variables → Actions → add `ENTSOE_TOKEN`, `AGSI_TOKEN`, `ANTHROPIC_API_KEY`. Trigger one `workflow_dispatch` run of `daily.yml` to confirm green. Branch is now **`main`** (renamed from master 2026-05-06).
+  - Acceptance: After push: GitHub repo → Settings → Secrets and variables → Actions → add `ENTSOE_TOKEN`, `AGSI_TOKEN`, `ANTHROPIC_API_KEY`. Trigger one `workflow_dispatch` run of `daily.yml` to confirm green. Branch is now **`main`** (renamed from master 2026-05-06). Add the live workflow-run link to the README so the reviewer can see the cron path is real, not theoretical.
 
 ---
 

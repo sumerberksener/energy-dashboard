@@ -33,6 +33,13 @@ class CountryView:
     note: str           # 1-2 sentence desk-relevant market characterisation
 
 
+@dataclass(frozen=True)
+class _Centroid:
+    """Approximate (lat, lon) centroid for placing on-map country labels."""
+    lat: float
+    lon: float
+
+
 COUNTRIES: list[CountryView] = [
     CountryView(
         code="DE_LU", iso3="DEU", label="Germany", flag="DE", color="#89b4fa",
@@ -93,9 +100,49 @@ COUNTRIES: list[CountryView] = [
             "a separate signal, not redundant with DE/FR."
         ),
     ),
+    CountryView(
+        code="AT", iso3="AUT", label="Austria", flag="AT", color="#cba6f7",
+        note=(
+            "Central-European hub coupled into the DE+AT+LU bidding zone until 2018; "
+            "now its own zone but still highly imported/exported. Large hydro fleet "
+            "balances the gas-heavy core. Useful tell on continental flow direction."
+        ),
+    ),
+    CountryView(
+        code="CH", iso3="CHE", label="Switzerland", flag="CH", color="#94e2d5",
+        note=(
+            "Hydro-dominant (>55% of generation) with significant pumped storage. "
+            "CH plays a re-export role between FR/DE/IT — its price often signals "
+            "where the continental shortage is sitting that day."
+        ),
+    ),
+    CountryView(
+        code="PL", iso3="POL", label="Poland", flag="PL", color="#f5c2e7",
+        note=(
+            "Coal-heavy fleet (still ~60% in 2026) makes PL the European market most "
+            "sensitive to API2/EUA shocks. ETS-2 and free-allocation phase-out land "
+            "harder here than anywhere else; watch as a leading indicator for the "
+            "carbon-policy transmission into power."
+        ),
+    ),
 ]
 
 ISO3_BY_CODE = {c.iso3: c for c in COUNTRIES}
+
+# Approximate label centroids (lat, lon). Values are rough — they only need
+# to land inside the country polygon for the on-map text.
+LABEL_CENTROIDS: dict[str, _Centroid] = {
+    "DEU": _Centroid(51.0, 10.4),
+    "GBR": _Centroid(54.5, -2.5),
+    "FRA": _Centroid(46.5,  2.2),
+    "NLD": _Centroid(52.3,  5.6),
+    "BEL": _Centroid(50.6,  4.4),
+    "ITA": _Centroid(45.8,  9.5),  # north Italy (IT_NORD zone)
+    "ESP": _Centroid(40.4, -3.7),
+    "AUT": _Centroid(47.5, 14.5),
+    "CHE": _Centroid(46.8,  8.2),
+    "POL": _Centroid(52.0, 19.4),
+}
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
@@ -140,45 +187,90 @@ def _country_da_summary() -> pd.DataFrame:
 def _build_choropleth(summary: pd.DataFrame) -> go.Figure:
     plot_df = summary.dropna(subset=["latest"]).copy()
     if plot_df.empty:
-        # Empty placeholder map
         fig = go.Figure(data=go.Choropleth(locations=[], z=[]))
         fig.update_geos(scope="europe")
         return fig
 
-    fig = px.choropleth(
-        plot_df,
-        locations="iso3",
-        color="latest",
-        hover_name="country",
-        hover_data={"iso3": False, "latest": ":.2f", "percentile": ":.0f"},
-        color_continuous_scale="Plasma",
-        labels={"latest": "DA price (EUR/MWh)", "percentile": "5y pctile"},
-    )
+    # Choropleth fill — Cividis is a perceptually uniform dark-friendly scale.
+    fig = go.Figure(data=go.Choropleth(
+        locations=plot_df["iso3"],
+        z=plot_df["latest"],
+        text=plot_df["country"],
+        customdata=plot_df[["percentile"]].values,
+        colorscale=[
+            [0.00, "#22b07d"],   # green — cheap
+            [0.50, "#f9e2af"],   # amber — middle
+            [1.00, "#f38ba8"],   # red — expensive
+        ],
+        marker=dict(
+            line=dict(color="#cdd6f4", width=1.0),  # bright country borders
+            opacity=0.92,
+        ),
+        colorbar=dict(
+            title=dict(text="EUR/MWh", side="right"),
+            thickness=14,
+            len=0.65,
+            outlinewidth=0,
+            tickfont=dict(color="#cdd6f4", size=11),
+            titlefont=dict(color="#cdd6f4", size=11),
+        ),
+        hovertemplate=(
+            "<b>%{text}</b><br>"
+            "DA price: %{z:.2f} EUR/MWh<br>"
+            "5y percentile: %{customdata[0]:.0f}<br>"
+            "<extra></extra>"
+        ),
+    ))
+
+    # Always-visible non-traded countries fade into the background — keep them
+    # rendered so the map reads as Europe, not just a few coloured fragments.
     fig.update_geos(
         scope="europe",
         showcountries=True,
-        countrycolor="#45475a",
+        countrycolor="#313244",
+        countrywidth=0.6,
         showland=True,
-        landcolor="#181825",
+        landcolor="#1e1e2e",
         showocean=True,
         oceancolor="#11111b",
+        showlakes=True,
+        lakecolor="#11111b",
+        showrivers=False,
         showframe=False,
-        showcoastlines=False,
+        showcoastlines=True,
+        coastlinecolor="#45475a",
+        coastlinewidth=0.4,
         projection_type="mercator",
-        center=dict(lat=50, lon=10),
-        lataxis_range=[35, 65],
-        lonaxis_range=[-12, 30],
+        center=dict(lat=51, lon=8),
+        lataxis_range=[35, 62],
+        lonaxis_range=[-12, 26],
     )
+
+    # 2-letter country labels rendered on the map for instant readability.
+    label_lats, label_lons, label_text = [], [], []
+    for _, row in plot_df.iterrows():
+        c = ISO3_BY_CODE.get(row["iso3"])
+        ctr = LABEL_CENTROIDS.get(row["iso3"])
+        if c is None or ctr is None:
+            continue
+        label_lats.append(ctr.lat)
+        label_lons.append(ctr.lon)
+        label_text.append(c.flag)
+    if label_lats:
+        fig.add_trace(go.Scattergeo(
+            lat=label_lats, lon=label_lons, text=label_text,
+            mode="text",
+            textfont=dict(color="#11111b", size=13, family="Inter, sans-serif"),
+            hoverinfo="skip",
+            showlegend=False,
+        ))
+
     fig.update_layout(
-        height=480,
+        height=620,
         margin=dict(l=0, r=0, t=0, b=0),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        coloraxis_colorbar=dict(
-            title=dict(text="EUR/MWh", side="right"),
-            thickness=12,
-            len=0.7,
-        ),
+        dragmode=False,  # disables click-and-drag pan
     )
     return fig
 
@@ -265,12 +357,20 @@ def render() -> None:
 
     # Streamlit click-event capture. selection_mode="points" returns the
     # ISO3 of the clicked country in event.selection.points[0].location.
+    # Disable wheel zoom + modebar — we only need click to drill in.
     event = st.plotly_chart(
         fig,
         width="stretch",
         on_select="rerun",
         selection_mode="points",
         key="markets_map",
+        config={
+            "displayModeBar": False,
+            "scrollZoom": False,
+            "doubleClick": False,
+            "displaylogo": False,
+            "showTips": False,
+        },
     )
 
     selected_iso: str | None = None
