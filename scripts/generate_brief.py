@@ -515,6 +515,29 @@ def build_markdown(
         L(f"![Clean Spreads]({chart.relative_to(today_dir)})")
         L("")
 
+    # Scenarios block — AI-generated Base / Upside / Downside on the
+    # dominant geopolitical risk axis. Quantified TTF + DE Power moves.
+    scenarios = (narrative.extract or {}).get("scenarios") if narrative.extract else None
+    if isinstance(scenarios, dict) and all(
+        k in scenarios for k in ("base", "upside", "downside")
+    ):
+        horizon = scenarios.get("horizon", "24-72h")
+        L(f"**Scenarios ({horizon} horizon)**")
+        L("")
+        L("| | Summary | TTF | DE Power |")
+        L("|---|---|---:|---:|")
+        for label, key in (("Base", "base"), ("Upside", "upside"), ("Downside", "downside")):
+            sc = scenarios.get(key) or {}
+            L(
+                f"| **{label}** | {sc.get('summary', '—')} "
+                f"| {sc.get('ttf_pct', '—')} | {sc.get('de_power_pct', '—')} |"
+            )
+        L("")
+        L("_Scenarios are illustrative, not forecasts. Magnitudes sized off "
+          "historical sensitivity of TTF / DE Power to comparable shocks; AI-generated "
+          "from the extract pass on today's news flow + metric snapshot._")
+        L("")
+
     # Section 6 — Short-term drivers
     L("## 6 · Short-term drivers")
     L("")
