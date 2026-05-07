@@ -1,0 +1,39 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (132 days old) and Clean Dark as of 2025-12-31 (127 days old); merit-order and thermal dispatch assumptions may not reflect current fuel costs. All other metrics current as of 2026-05-06/07.",
+  "risk_flags": [
+    "Hormuz closure since late February tightening LNG to EU; TTF at 57th percentile but upstream pressure via Asian LNG spreads may not yet be reflected in current snapshot.",
+    "EU storage at 34.26% (11th percentile, 12.4 pp below seasonal) \u2014 injecting season now tight; any supply disruption prolongs deficit into winter.",
+    "Clean Spark at 32.99 EUR/MWh (90th percentile) signals sustained gas-in-the-money regime; coal at 8th percentile (96 USD/t) leaves no coal upside cushion.",
+    "Coal data stale as of 2025-12-26 (132 days old); Clean Dark stale as of 2025-12-31 (127 days old) \u2014 merit-order curves may have shifted."
+  ],
+  "themes": [
+    "Gas tightness via geopolitical LNG disruption",
+    "Thermal merit-order inversion: coal structurally weak, gas-fired spark spreading",
+    "EU storage refill race against seasonal deficit"
+  ],
+  "top_drivers": [
+    "Hormuz LNG blockade lifts gas-to-EU risk premium; Clean Spark at 90th percentile reflects sustained thermal-fuel-switch bias despite modest TTF level (57th percentile).",
+    "Coal structurally crushed (8th percentile); merit-order flattens toward gas, amplifying any LNG supply shock.",
+    "EU storage at 11th percentile, 12.4 pp below seasonal \u2014 refill season is race against clock; geopolitical LNG tightness directly threatens H2 adequacy."
+  ],
+  "top_takeaway": "Clean Spark at 90th percentile amid Hormuz-driven LNG premium; EU storage 12.4 pp below seasonal average sets tight H2 refill risk.",
+  "watchlist": [
+    {
+      "metric": "Hormuz LNG supply route",
+      "why": "Closure since late February is the primary bullish LNG/TTF driver; restoration timeline will set near-term gas risk direction and EU storage refill pace."
+    },
+    {
+      "metric": "SPR release completion",
+      "why": "17.5M barrels released since March suppresses Brent; end of program could rebound oil, tighten LNG arb feedback, and lift EU gas via crude anchor."
+    },
+    {
+      "metric": "EU storage injection rate",
+      "why": "At 34.26% (11th percentile), 12.4 pp below seasonal \u2014 refill pace will define H2 margin; any supply shock halts progress and extends winter risk."
+    },
+    {
+      "metric": "DE Power vs. GB Power spread",
+      "why": "DE at 132.57 EUR/MWh (74th percentile), GB at 111.78 (84th percentile); GB premium narrows (\u22128.29% daily) \u2014 watch for fuel-mix or grid-constraint repricing."
+    }
+  ]
+}

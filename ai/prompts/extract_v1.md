@@ -19,9 +19,21 @@ Schema (use exactly these field names; emit `null` or empty arrays where the dat
   "top_drivers": [
     "1–3 short bullets identifying what is actually moving the regime today. Example: 'Renewables forecast at 12th-pctile lifts thermal call', 'Geopolitical risk premium reasserts on TTF after pipeline news'."
   ],
+  "carbon_policy_signal": {
+    "item": "One concrete EU ETS supply or policy development from news.themes that affects EUA — e.g. 'CBAM phase-in scheduled for January', 'MSR intake rate adjustment under review', 'ETS-2 expansion to road transport and buildings from 2027', 'EU-UK ETS linkage talks resumed', 'Free allocation cuts announced for steel sector'. ≤ 18 words. Concrete, date-bearing where possible.",
+    "side": "supply | policy",
+    "polarity": "bullish-eua | bearish-eua | neutral",
+    "source": "Source name from news.themes (e.g. 'IEA News')",
+    "why_it_matters": "One sentence (≤ 25 words) on the transmission mechanism into power-generation marginal cost — fossil dispatch economics, fuel switch, or curve shape."
+  },
   "freshness_caveat": "If any input is stale (is_stale=true), state that here in one sentence with the affected metric(s) and the data date. Otherwise empty string."
 }
 ```
+
+**`carbon_policy_signal` rules**:
+- Set to `null` ONLY if news.themes contains zero items with a plausible link to EU ETS supply or policy. The brief specifically asks for "carbon supply/policy signal" — when the news flow has anything bearing on issuance, MSR, free allocations, CBAM, ETS-2, sectoral expansions, or EU-UK linkage, surface one item here.
+- Prefer items already tagged `commodity: carbon` in `news.themes`. If none, look for `commodity: power | mixed` items that affect ETS supply (industrial production trends, weather drivers of emissions, sectoral policy votes).
+- Don't invent — if news flow is light on policy, `null` is correct.
 
 Hard rules:
 - Use ONLY numbers, signals, and headlines supplied in the user message JSON. Never invent prices, percentiles, dates, or news.

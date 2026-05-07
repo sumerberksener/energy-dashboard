@@ -1,0 +1,44 @@
+{
+  "geopolitics_summary": "Strait of Hormuz closure since late February pressuring global LNG prices; EU gas imports face elevated risk.",
+  "themes": [
+    {
+      "headline": "International LNG prices rise amid Strait of Hormuz closure",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz blockade disrupts Middle East LNG exports to EU; TTF spreads vs. Asian LNG widen, tightening EU supply and raising gas cost of power. Direct transmission to DA power prices via fuel-mix switching.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67604"
+    },
+    {
+      "headline": "DOE releases 17.5M barrels from Strategic Petroleum Reserve since March",
+      "source": "EIA Today in Energy",
+      "tag": "macro",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "SPR releases suppress Brent; lower oil indirectly eases EU gas prices via LNG arbitrage feedback (weaker oil anchor reduces LNG cost to Europe). Modest downward pressure on power via fuel-cost relief.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625"
+    },
+    {
+      "headline": "US renewable diesel and SAF exports reach 50k b/d in 2H25",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "US biofuel export surge diverts feedstock from potential EU renewable fuel blending, indirectly pressuring EU decarbonisation cost curves. Limited direct power impact; marginal carbon policy signal.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67665"
+    }
+  ],
+  "watchlist": [
+    "Strait of Hormuz status updates; assess LNG supply route restoration timeline.",
+    "SPR release schedule completion; rebound in Brent could shift LNG arb and TTF.",
+    "EU LNG contract renegotiations and spot import flows; monitor 2W forward curve."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 6,
+  "error": null
+}

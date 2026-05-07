@@ -387,7 +387,7 @@ def build_markdown(
         L(f"![Gas vs Storage]({chart.relative_to(today_dir)})")
         L("")
 
-    # Section 4 — Carbon
+    # Section 4 — Carbon (price + supply/policy signal from news themes)
     L("## 4 · Carbon (EU ETS)")
     L("")
     eua = data.get("eua")
@@ -401,6 +401,35 @@ def build_markdown(
           "Strength compresses the dark spread faster than the spark, accelerating fuel "
           "switching toward gas.")
         L("")
+
+    # Supply / policy signal from the extract pass — explicitly addresses the
+    # brief's "carbon supply/policy signal" wording.
+    cps = (narrative.extract or {}).get("carbon_policy_signal") if narrative.extract else None
+    if cps and isinstance(cps, dict) and cps.get("item"):
+        side = cps.get("side", "")
+        polarity = cps.get("polarity", "")
+        source = cps.get("source", "")
+        why = cps.get("why_it_matters", "")
+        polarity_label = (
+            "bullish EUA" if polarity == "bullish-eua"
+            else "bearish EUA" if polarity == "bearish-eua"
+            else "neutral"
+        )
+        L(f"**Supply / policy signal** — _{cps['item']}_  ")
+        L(f"  Side: `{side}` · Polarity: `{polarity_label}` · Source: {source}  ")
+        if why:
+            L(f"  {why}")
+        L("")
+        L(f"_Surfaced from today's news flow by the AI extract pass; "
+          f"see `output/<date>/data/ai_themes.json` for the full structured output._")
+        L("")
+    elif narrative.extract is not None:
+        L(f"_No EU ETS supply or policy item surfaced in today's news flow. "
+          f"When present (issuance / MSR adjustments / CBAM / ETS-2 / EU-UK linkage / "
+          f"sectoral allocations), the AI extract pass tags it here with side, polarity, "
+          f"and transmission mechanism._")
+        L("")
+
     chart = next((c for c in charts if c.name.startswith("03_")), None)
     if chart:
         L(f"![EUA Carbon]({chart.relative_to(today_dir)})")

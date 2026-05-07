@@ -181,6 +181,7 @@ def _ai_pane(data: dict) -> None:
         if narrative.extract:
             themes = narrative.extract.get("themes", []) or []
             flags = narrative.extract.get("risk_flags", []) or []
+            cps = narrative.extract.get("carbon_policy_signal") or None
             if themes:
                 chips = "".join(
                     f"<span class='ai-chip theme'>{t}</span>" for t in themes
@@ -193,6 +194,29 @@ def _ai_pane(data: dict) -> None:
                 )
                 st.markdown(f"<div class='ai-chips'>{chips}</div>",
                             unsafe_allow_html=True)
+            if isinstance(cps, dict) and cps.get("item"):
+                pol = cps.get("polarity", "")
+                pol_label = (
+                    "bullish EUA" if pol == "bullish-eua"
+                    else "bearish EUA" if pol == "bearish-eua"
+                    else "neutral"
+                )
+                st.markdown(
+                    f"<div style='border-left: 3px solid #a6e3a1; "
+                    f"padding: 8px 14px; margin: 8px 0 12px 0; "
+                    f"background: rgba(166, 227, 161, 0.06); border-radius:4px;'>"
+                    f"<div style='font-size:0.7rem; text-transform:uppercase; "
+                    f"letter-spacing:0.06em; color:#a6e3a1; margin-bottom:4px;'>"
+                    f"Carbon supply / policy signal · {cps.get('side','')} · {pol_label}"
+                    f"</div>"
+                    f"<div style='font-size:0.95rem; font-weight:500; color:#cdd6f4;'>"
+                    f"{cps['item']}</div>"
+                    f"<div style='font-size:0.78rem; color:#a6adc8; margin-top:4px;'>"
+                    f"{cps.get('why_it_matters','')} · "
+                    f"<em>source: {cps.get('source','')}</em></div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
 
         st.write(narrative.text)
 
