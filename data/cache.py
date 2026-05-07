@@ -176,12 +176,14 @@ def get_all_with_derived() -> dict[str, pd.DataFrame]:
     de_gb = derived_metrics.power_spread(
         primaries["de_power"], primaries["gb_power"]
     )
+    de_cal1_proj = derived_metrics.cal1_seasonality_projection(primaries["de_power"])
 
     out = dict(primaries)
     out["clean_spark"] = cs
     out["clean_dark"] = cd
     out["switching_ttf"] = sw
     out["de_gb_spread"] = de_gb
+    out["de_cal1_proj"] = de_cal1_proj
     out["eurusd"] = eurusd
     return out
 

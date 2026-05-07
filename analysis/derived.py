@@ -137,3 +137,61 @@ def power_spread(
     df["value"] = da["value"] - db["value"]
     df.index.name = "date"
     return df.dropna()
+
+
+def cal1_seasonality_projection(
+    da_power: pd.DataFrame,
+    *,
+    lookback_years: int = 5,
+    smoothing_window: int = 30,
+) -> pd.DataFrame:
+    """Indicative 1-year-ahead power level from DA seasonality.
+
+    A model-derived **proxy** for a Cal+1 forward price — explicitly NOT a
+    market quote. We don't have free access to EEX Cal-Year settlement;
+    this is the closest honest substitute given only spot data.
+
+    Method: for each historical date, average the price observed exactly N
+    years later (i.e. the "year-ahead realised" outcome), smoothed by a
+    30-day window to dampen single-day spikes. Compare today's DA print to
+    this seasonal-mean projection to read backwardation/contango regime.
+
+    Caveats (documented in the dashboard tooltip too):
+    - Backward-looking: projects via realised seasonality, not market expectations.
+      A real Cal+1 quote prices in current expectations of carbon, gas, weather, demand.
+    - Mean-reversion bias: by averaging, dampens regime shifts that would
+      show up immediately in a real forward.
+    - Useful for:  "is today's DA elevated vs what year-ahead realisation
+      typically looks like for this calendar window?"
+    """
+    if da_power is None or da_power.empty:
+        return pd.DataFrame(columns=["value"])
+    s = da_power["value"].dropna().sort_index()
+    if len(s) < 365:
+        return pd.DataFrame(columns=["value"])
+
+    # For each date, find the price exactly 1 year ahead (with ±3 day window)
+    # and report the smoothed mean of those forward realisations.
+    cutoff_start = s.index.min() + pd.DateOffset(years=1)
+    rows = []
+    for date in s.index:
+        target = date + pd.DateOffset(years=1)
+        # Window of ±3 calendar days around the year-ahead anchor
+        window = s[(s.index >= target - pd.Timedelta(days=3)) &
+                   (s.index <= target + pd.Timedelta(days=3))]
+        if window.empty:
+            continue
+        rows.append({"date": date, "value": float(window.mean())})
+
+    if not rows:
+        return pd.DataFrame(columns=["value"])
+    proj = pd.DataFrame(rows).set_index("date")
+    proj.index.name = "date"
+    proj.index = pd.to_datetime(proj.index)
+    # Smooth to dampen spikes
+    proj["value"] = proj["value"].rolling(smoothing_window, min_periods=1).mean()
+    proj.attrs["model_note"] = (
+        f"Indicative DA-implied year-ahead level via {lookback_years}y seasonality. "
+        f"Not a market quote. Replace with EEX Cal-Year settlement when paid feed available."
+    )
+    return proj.dropna()

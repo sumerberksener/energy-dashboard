@@ -31,6 +31,8 @@ def render(data: dict[str, pd.DataFrame]) -> None:
     cd = data.get("clean_dark")
     de_gb = data.get("de_gb_spread")
     rs = data.get("renewable_share")
+    de = data.get("de_power")
+    cal1 = data.get("de_cal1_proj")
 
     # 1. Storage vs seasonal deviation
     if storage is not None and not storage.empty:
@@ -77,7 +79,22 @@ def render(data: dict[str, pd.DataFrame]) -> None:
     else:
         cells.append(_cell("Renewables", "—", "muted"))
 
-    # 5. Cross-market regime tag
+    # 5. DA vs implied Cal+1 (seasonality projection — NOT a market quote)
+    de_last = stats.latest(de) if de is not None else None
+    cal1_last = stats.latest(cal1) if cal1 is not None else None
+    if de_last is not None and cal1_last is not None:
+        gap = de_last - cal1_last
+        # gap > 0: DA above seasonal year-ahead → backwardation regime (front strong)
+        # gap < 0: DA below seasonal year-ahead → contango regime (back strong)
+        klass = "red" if gap > 0 else ("green" if gap < 0 else "")
+        regime = "backwardation" if gap > 0 else ("contango" if gap < 0 else "flat")
+        cells.append(_cell(
+            "DA − Cal+1 (model)", f"{gap:+.1f} EUR/MWh ({regime})", klass
+        ))
+    else:
+        cells.append(_cell("DA − Cal+1 (model)", "—", "muted"))
+
+    # 6. Cross-market regime tag
     tag = cross_market_tag(data)
     if tag:
         short = tag.split(":")[0]

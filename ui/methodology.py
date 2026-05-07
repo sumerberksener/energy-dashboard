@@ -55,6 +55,20 @@ def render() -> None:
         language="text",
     )
 
+    st.markdown("### Indicative Cal+1 power (seasonality projection)")
+    st.markdown(
+        "Free daily EEX Cal-Year settlement is not accessible without a paid "
+        "feed (Bloomberg, Refinitiv, ICE Endex direct). The dashboard's Cal+1 "
+        "line is **a model-derived seasonality projection, not a market quote**. "
+        "Method: for each historical date, find the realised DA price exactly "
+        "1 year later (with a ±3-day window) and report the rolling 30-day mean "
+        "of those forward realisations. The DA − Cal+1 spread reads as a "
+        "front-vs-back regime indicator (backwardation vs contango). Caveats: "
+        "backward-looking, mean-reverting, doesn't price in current expectations "
+        "of carbon / weather / demand — a real Cal+1 quote does. Replace with "
+        "EEX settlement when a paid feed is available."
+    )
+
     st.markdown("### Rule-based signal thresholds")
     st.markdown(
         f"- **Percentile rank (5y)**: ≥ {PERCENTILE_HIGH} → 'historically high'; "

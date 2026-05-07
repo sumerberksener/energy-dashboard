@@ -46,9 +46,12 @@ Research confirmed Cobblestone Energy trades **European Power, Gas, and Emission
 - [x] **Demote coal from primary tile to fundamentals input** _(2026-05-06)_
   - `Metric.is_fundamentals_input` flag added to `config.py`. Coal moved out of `TOP_ROW_METRICS`. New "Fundamentals inputs" strip in `app.py::_fundamentals_strip` shows coal + EUR/USD with smaller/muted styling. Clean Dark spread continues to compute correctly. Desk note has a separate fundamentals sub-table flagged `(input only)`.
 
-- [ ] **Add a power forward curve indication (DA / Cal+1)**
-  - **Status: still deferred.** Probed Yahoo for `EBASE.F`, `PHEX.F`, `PXE.PR`, `F2BAY.NEX`, `DE_BASE.F` on 2026-05-06 — all empty/delisted. EEX publishes daily Cal-Year settlement on its public market-data page but the URL changes per maturity and requires JS-rendered scraping; not stable enough to ship. Architectural slot prepared (`fetch_de_cal1` would slot into the same pattern; derived module ready). Listed in README → "What I'd do with another week".
-  - Decision-utility test still: ✓ Backwardation vs contango directly changes positioning. When a stable free source exists, this is the highest-priority next addition.
+- [x] **Add a power forward curve indication (DA / Cal+1)** _(2026-05-07 — shipped as seasonality projection, not market quote)_
+  - **What ships**: a model-derived **Cal+1 seasonality projection** in `analysis/derived.py::cal1_seasonality_projection`. For each historical date, finds realised DA exactly 1 year later (±3-day window) and reports the rolling 30-day mean. The DA − Cal+1 spread reads as a backwardation/contango regime signal.
+  - **Surface**: a dedicated **Power curve panel** (`ui/curve.py`) on the Overview tab, expanded by default — KPI box (DA / Cal+1 proj / spread + regime label), regime explanation, 2Y line chart with dashed projection. Plus a "DA − Cal+1 (model)" cell in the regime strip. Plus a Methodology-tab section explaining the model's caveats.
+  - **Honest about what it is**: every surface labels this as "model — not a market quote" and explains the limitation (backward-looking, mean-reverting, doesn't price current expectations). Replace with EEX Cal-Year settlement when paid feed is available.
+  - **Probes**: 2026-05-06 + 2026-05-07. Yahoo (`EBASE.F`, `PHEX.F`, `PXE.PR`, `F2BAY.NEX`, `DE_BASE.F`, `F2BAY26.NEX`, `EBASE26.F`, `EEX.DE`, etc.) — all empty. EEX gvsi webservice — connection refused. Energy-Charts API — spot only, no futures. TradingEconomics — paywalled. Decision: synthetic projection beats no curve indication, with full transparency.
+  - Pinned by `tests/test_derived.py::test_cal1_seasonality_projection_basic` and `test_cal1_seasonality_projection_too_short`.
 
 - [x] **Add a single short-term tightness metric: renewables share of forecast load** _(2026-05-06)_
   - Implemented as `data/fetchers.py::fetch_renewable_share` (ENTSO-E `query_wind_and_solar_forecast` ÷ `query_load_forecast`, daily mean of hourly share). Exposed as the `renewable_share` metric.
@@ -92,8 +95,8 @@ Research confirmed Cobblestone Energy trades **European Power, Gas, and Emission
 - [x] **8th metric: explicit fuel-switching TTF price** _(2026-05-05)_
 - [x] **Two-pass AI workflow: extract → narrate** _(2026-05-05)_
 
-- [ ] **Cal+1 power proxy (true "Day-Ahead → curve")**
-  - Note: still deferred. See P1 metric-alignment section above for the probe results.
+- [x] **Cal+1 power proxy (true "Day-Ahead → curve")** _(2026-05-07)_
+  - Shipped as a seasonality-based projection — see P1 metric-alignment section above for full details and the probe trail of all the free sources that didn't pan out.
 
 - [x] **ENTSO-E renewable-share fundamentals** _(2026-05-06)_
   - Shipped — see P1 metric-alignment task above.

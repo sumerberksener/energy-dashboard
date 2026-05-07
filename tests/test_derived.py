@@ -114,3 +114,21 @@ def test_clean_spark_spread_empty_input():
         pd.DataFrame(columns=["value"]), _frame([1.0], ["2026-05-05"]), _frame([1.0], ["2026-05-05"])
     )
     assert out.empty
+
+
+def test_cal1_seasonality_projection_basic():
+    """For a constant-DA series, the year-ahead projection equals the DA itself."""
+    idx = pd.date_range(end="2026-05-07", periods=800, freq="D", name="date")
+    df = pd.DataFrame({"value": [50.0] * 800}, index=idx)
+    proj = derived.cal1_seasonality_projection(df, smoothing_window=1)
+    assert not proj.empty
+    # Year-ahead realisation of any constant series is the same constant
+    assert proj["value"].iloc[-1] == pytest.approx(50.0)
+
+
+def test_cal1_seasonality_projection_too_short():
+    """Series shorter than 1 year returns empty (can't project ahead)."""
+    idx = pd.date_range(end="2026-05-07", periods=100, freq="D", name="date")
+    df = pd.DataFrame({"value": [50.0] * 100}, index=idx)
+    proj = derived.cal1_seasonality_projection(df)
+    assert proj.empty

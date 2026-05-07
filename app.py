@@ -23,6 +23,7 @@ from data import cache as data_cache
 from ui import brief as brief_ui
 from ui import cards as cards_ui
 from ui import charts as charts_ui
+from ui import curve as curve_ui
 from ui import markets as markets_ui
 from ui import methodology as methodology_ui
 from ui import news_panel as news_panel_ui
@@ -273,6 +274,9 @@ def _overview_tab(data: dict) -> None:
     _fundamentals_strip(data)
 
     st.markdown("")
+
+    # Power curve panel (DA vs indicative Cal+1 seasonality projection).
+    curve_ui.render(data)
 
     # AI desk-note pane (numerical synthesis; news lives in its own tab).
     _ai_pane(data)
