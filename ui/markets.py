@@ -207,12 +207,17 @@ def _build_choropleth(summary: pd.DataFrame) -> go.Figure:
             opacity=0.92,
         ),
         colorbar=dict(
-            title=dict(text="EUR/MWh", side="right"),
+            # Plotly v5+ moved colorbar title font into `title.font`;
+            # the legacy `titlefont` raises ValueError in current versions.
+            title=dict(
+                text="EUR/MWh",
+                side="right",
+                font=dict(color="#cdd6f4", size=11),
+            ),
             thickness=14,
             len=0.65,
             outlinewidth=0,
             tickfont=dict(color="#cdd6f4", size=11),
-            titlefont=dict(color="#cdd6f4", size=11),
         ),
         hovertemplate=(
             "<b>%{text}</b><br>"
