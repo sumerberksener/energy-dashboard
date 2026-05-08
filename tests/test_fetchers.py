@@ -79,6 +79,24 @@ def test_de_power():
 
 
 @needs_net
+@pytest.mark.parametrize("zone", ["HU", "IE_SEM", "SK"])
+def test_cobblestone_zone_dap(zone: str) -> None:
+    """Smoke-check ENTSO-E DA fetch for the Cobblestone-aligned zones added in P1A.
+
+    HU + IE + SK are live-book markets per cobblestoneenergy.com (Power for
+    HU/IE; Gas for SK with power DA shown as a corridor read).
+    """
+    token = os.environ.get("ENTSOE_TOKEN")
+    if not token:
+        pytest.skip("ENTSOE_TOKEN not set in env")
+    df = fetchers.fetch_power_zone(token, zone)
+    # IE_SEM publishes on a SEM-day calendar, so its trailing edge can lag a
+    # day or two vs central-European zones; allow 4d there.
+    max_age = 4 if zone == "IE_SEM" else 14
+    _assert_tidy(df, min_rows=500, max_age_days=max_age)
+
+
+@needs_net
 def test_storage():
     token = os.environ.get("AGSI_TOKEN")
     if not token:

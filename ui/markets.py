@@ -31,6 +31,9 @@ class CountryView:
     flag: str           # short tag (no emoji)
     color: str          # chart line colour
     note: str           # 1-2 sentence desk-relevant market characterisation
+    gas_only: bool = False  # Cobblestone trades the gas book here, not power
+    book_note: str = ""     # Optional override displayed under the heading
+                            # (e.g. "Gas-only book — power DA shown as a corridor read")
 
 
 @dataclass(frozen=True)
@@ -117,12 +120,40 @@ COUNTRIES: list[CountryView] = [
         ),
     ),
     CountryView(
-        code="PL", iso3="POL", label="Poland", flag="PL", color="#f5c2e7",
+        code="HU", iso3="HUN", label="Hungary", flag="HU", color="#f5c2e7",
         note=(
-            "Coal-heavy fleet (still ~60% in 2026) makes PL the European market most "
-            "sensitive to API2/EUA shocks. ETS-2 and free-allocation phase-out land "
-            "harder here than anywhere else; watch as a leading indicator for the "
-            "carbon-policy transmission into power."
+            "Central-European corridor market — HU's DA price is the cleanest single "
+            "tell for AT/SK/RO flow direction, since the HUPX coupling means whichever "
+            "neighbour is short for the day exports its scarcity into HU. Gas-fired "
+            "generation sets the marginal unit most hours; nuclear at Paks supplies "
+            "baseload but not flex. Watch the HU-AT spread on tight days — it inverts "
+            "before continental scarcity shows up in DE."
+        ),
+    ),
+    CountryView(
+        code="IE_SEM", iso3="IRL", label="Ireland (SEM)", flag="IE", color="#a6e3a1",
+        note=(
+            "Single Electricity Market — covers the whole island (RoI + NI) and runs as "
+            "an isolated grid with only the East-West and Moyle interconnectors to GB. "
+            "Wind share regularly exceeds 40% of generation, so DA prints swing harder "
+            "on forecast revisions than anywhere else in the book. The GB-IE spread "
+            "via the interconnectors is the cleanest read on whether Britain is "
+            "exporting cheap wind into the island or pulling expensive gas back out."
+        ),
+    ),
+    CountryView(
+        code="SK", iso3="SVK", label="Slovakia", flag="SK", color="#cba6f7",
+        gas_only=True,
+        book_note=(
+            "Gas-only book for Cobblestone — the power DA panel below is shown as a "
+            "corridor read, not a tradable position. SK gas is the trade."
+        ),
+        note=(
+            "Cobblestone trades the SK gas book, not SK power. The DA chart is a "
+            "useful corridor indicator: SK sits on the CZ-HU power flow and inherits "
+            "the marginal unit from whichever side is short, so the print signals "
+            "central-European tightness before it propagates west. SK gas itself "
+            "(NCG-linked, with Russian-transit overhang) is where the actual exposure sits."
         ),
     ),
 ]
@@ -141,7 +172,9 @@ LABEL_CENTROIDS: dict[str, _Centroid] = {
     "ESP": _Centroid(40.4, -3.7),
     "AUT": _Centroid(47.5, 14.5),
     "CHE": _Centroid(46.8,  8.2),
-    "POL": _Centroid(52.0, 19.4),
+    "HUN": _Centroid(47.2, 19.5),
+    "IRL": _Centroid(53.4, -8.2),
+    "SVK": _Centroid(48.7, 19.7),
 }
 
 
@@ -311,14 +344,25 @@ def _line_chart(df: pd.DataFrame, country: CountryView) -> go.Figure:
 def _country_panel(country: CountryView) -> None:
     df = _get_zone_da(country.code)
 
-    st.markdown(f"### {country.flag} · {country.label}")
+    heading = f"### {country.flag} · {country.label}"
+    if country.gas_only:
+        heading += "  ·  _Gas-only book_"
+    st.markdown(heading)
+    if country.book_note:
+        st.caption(f"**Book:** {country.book_note}")
     st.caption(country.note)
 
     if df is None or df.empty:
-        st.warning(
-            f"Day-ahead data for **{country.code}** is unavailable. "
-            "Confirm `ENTSOE_TOKEN` is set."
-        )
+        if country.gas_only:
+            st.info(
+                f"Day-ahead power data for **{country.code}** is unavailable — "
+                "panel is a gas-only book; no power exposure to surface."
+            )
+        else:
+            st.warning(
+                f"Day-ahead data for **{country.code}** is unavailable. "
+                "Confirm `ENTSOE_TOKEN` is set."
+            )
         return
 
     chart_col, stats_col = st.columns([3, 1])
@@ -351,7 +395,9 @@ def render() -> None:
         "**Click a country on the map** to drill into its day-ahead price chart, "
         "stats, and a desk-relevant market note. Coverage matches Cobblestone's "
         "European book: Germany and GB are also primary cards on the overview "
-        "screen; FR / NL / BE / IT / ES are the next-tier exposures."
+        "screen; FR / NL / BE / IT / ES / AT / CH / HU / IE are the next-tier "
+        "power exposures. SK is shown for the gas book — power DA is a corridor "
+        "read only."
     )
     st.markdown("")
 

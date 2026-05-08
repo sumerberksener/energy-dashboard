@@ -184,6 +184,81 @@ These came out of a final desk-note review on 2026-05-08. Three are real bugs / 
     *"If the extract includes a non-empty `news.geopolitics_summary`, the closing curve-implication sentence must name the geopolitical driver and tie it to one of {front-curve risk, Cal+1 regime, spark/dark differential}. Don't list multiple geopoltical events — pick the dominant one already named in `top_takeaway`."*
     After change, run one regeneration and confirm the closing sentence references geopolitics by name (e.g. "Hormuz") tied to a curve segment.
 
+### Cobblestone-alignment polish (added 2026-05-08, post-overnight pass)
+
+These came out of two more screenshots Sumer captured from cobblestoneenergy.com Trading Markets page on 2026-05-08:
+1. *"Trading further down the power curve, from **week ahead to several years ahead**, across all markets that we enter."*
+2. *"Trading pipeline natural gas **and LNG** across the European markets, and eventually, the Global market."*
+
+The current dashboard meets the brief. These tasks improve *alignment with what Cobblestone's site says they trade*, which raises the "did this candidate read our site?" signal. None are P0 blockers; pick by available time. Order them before submission only if comfortable; otherwise ship as-is and add post-submission.
+
+#### P1A — Country-set alignment (small, defensible, ~30 min)
+
+- [x] **Swap `ui/markets.py::COUNTRIES` to match Cobblestone's actual book** _(2026-05-08)_
+  - Where: `ui/markets.py::COUNTRIES`.
+  - Why: The dashboard listed DE, GB, FR, NL, BE, IT, ES, AT, CH, **PL** — but Cobblestone's site shows **PL as "In Process"** (not live), and lists **HU, IE, SK** as live markets the dashboard was missing.
+  - Verbatim source-of-truth: Power markets BE, FR, DE, GB, **HU, IE**, IT, NL, ES, CH. Gas markets AT, BE, FR, DE, GB, IT, NL, **SK**, ES, CH. PL/DK are "In Process" only.
+  - **Shipped**: PL removed; HU / IE_SEM / SK added with trader-grade `note` paragraphs (HU = central-European corridor / RO+SK+AT flow tell; IE = SEM isolated grid + 40 %+ wind share + GB-IE interconnector spread tell; SK = gas-only book, power DA shown as CZ-HU corridor read). `CountryView` now carries `gas_only` + `book_note` fields; SK panel surfaces "Gas-only book" in the heading and a book-note caption above the standard market note. Live ENTSO-E smoke-test passes for all three zones (HU 1827 rows / 140.16 EUR/MWh; IE_SEM 1815 rows / 172.22 EUR/MWh; SK 1827 rows / 139.78 EUR/MWh). `tests/test_fetchers.py::test_cobblestone_zone_dap` parametrised over the three zones (3 passed in 98 s). Final country set on the European Markets tab: DE, GB, FR, NL, BE, IT(_NORD), ES, AT, CH, **HU, IE, SK** (12 total; SK flagged gas-only).
+
+#### P1B — Multi-tenor curve strip (medium effort, high signal value, ~90 min)
+
+- [ ] **Extend the Cal+1 seasonality projection to a multi-tenor curve strip**
+  - Where: `analysis/derived.py::cal1_seasonality_projection` (rename or generalise), new function in same module, new `ui/curve.py` panel block.
+  - Why: Cobblestone's verbatim language is *"week ahead to several years ahead"*. A single Cal+1 point understates that. A strip with W+1 / M+1 / Q+1 / Cal+1 / Cal+2 reads the *shape* of the curve, not just one level.
+  - Acceptance:
+    - Generalise the existing seasonality method to accept a horizon parameter and return a tidy DataFrame for any future tenor. For each historical date, find the realised DA price at +N business days (W+1 = 5d, M+1 = 21d, Q+1 = 65d, Cal+1 = 252d, Cal+2 = 504d) with a ±3-day window, then 30-day rolling mean.
+    - Add 5 metric series: `de_w1_proj`, `de_m1_proj`, `de_q1_proj`, `de_cal1_proj` (already exists; re-anchor on the generalised function), `de_cal2_proj`.
+    - In `ui/curve.py`, render a small horizontal "Curve strip" of 5 chips (DA, W+1, M+1, Q+1, Cal+1, Cal+2) with the spread-vs-DA on each. Add a regime label ("Backwardated front, contango back" / "Flat" / "Steep contango").
+    - The desk note's section 5 gets ONE extra sentence: *"Curve shape: DA → W+1 → M+1 → Q+1 → Cal+1 → Cal+2 = X / Y / Z / A / B / C — <regime label>."* Don't add a chart; the strip on the dashboard carries the visual.
+    - Methodology section gets a one-line caveat: *"All forward points are seasonality projections, not market quotes. Direction-correct, level-indicative only. Replace with EEX settlements when paid feed available."*
+    - Pin with unit tests in `tests/test_derived.py`.
+
+#### P2 — Explicit LNG signal (longer effort, post-submission acceptable)
+
+- [ ] **Add an LNG-specific signal to track the gas / LNG side of Cobblestone's book**
+  - Where: new fetcher in `data/fetchers.py`, new entry in `config.py::METRICS` or in the fundamentals strip.
+  - Why: Cobblestone explicitly trades pipeline + LNG. The dashboard tracks TTF (pipeline) but has no LNG signal. Today's Hormuz narrative shows LNG matters — but there's no metric to anchor the prose. Adding even one LNG indicator closes the gap.
+  - Acceptance: pick *one* of the two options; don't do both for the submission.
+    - **Option A (preferred — directly Cobblestone-shaped):** TTF–JKM spread (Europe vs Asia LNG arbitrage). JKM is the Asian LNG benchmark. Free-data path: scrape the daily JKM print from `tradingeconomics.com/commodity/lng-japan-korea-marker-platts` or use `investpy`/`yfinance` on a futures proxy. Compute spread in EUR/MWh. Surface as a small chip in the regime strip and one sentence in section 3 of the desk note.
+    - **Option B:** EU LNG terminal send-out rates from GIE ALSI (`https://alsi.gie.eu/api`). Same token style as AGSI+. Tracks how much LNG is being regasified into European pipelines — direct LNG availability indicator.
+    - Either option: register as an auxiliary metric (not a primary tile), document data limitation honestly in methodology.
+    - Honest fallback: if both data sources fail, document the limitation in README "What I'd do with another week" and ship without — better than a fake number.
+
+#### P3 — backlog, don't tonight
+
+- [ ] **Country-detail panes for HU/IE/SK** — once Power coverage extends, write trader-grade `note` paragraphs for each (1-2 sentences, what makes the market distinctive, what to watch).
+- [ ] **Multi-tenor curve chart** in the per-metric tab once the strip is in.
+- [ ] **Global LNG awareness** — Cobblestone says "eventually the Global market"; tracking JKM and HH alongside TTF is the natural extension. Goes beyond the case-study scope.
+
+---
+
+### Verbatim-language alignment (added 2026-05-08, second pass)
+
+After 17 more screenshots from cobblestoneenergy.com (Power Trading, Gas Trading, Emissions Trading desk pages), three concrete additions are worth making — all small, all low-risk, all directly mirroring Cobblestone's own verbatim language. Together ~45 minutes. Nothing experimental.
+
+- [ ] **Acknowledge UK ETS (UKA) alongside EUA in section 4**
+  - Where: `scripts/generate_brief.py` section 4 template, `data/policy_facts.py` (add a UKA/UK ETS fact item to the rotation), `ai/prompts/extract_v1.md` (mention UK ETS as a policy axis).
+  - Why: Cobblestone's Emissions Trading page says verbatim: *"Our Cross-Commodity team trade emissions allowances across **European AND UK markets**."* The current desk note covers EUA only. A reviewer who knows the book will spot the gap. Closing it costs one sentence.
+  - Acceptance: Section 4 includes one sentence on EU–UK ETS dynamics — either a current EUA–UKA spread (if a free UKA price is reachable; ICE's free tier publishes UKA front-Dec daily settlement) or, as a fallback, a one-line policy reference: *"Cobblestone's emissions desk trades both EUA and UKA — UK ETS allowance prices have diverged from EUA by ~£X since post-Brexit auction reforms; CBAM phase-in pulls EU compliance demand toward parity."* The hand-maintained `data/policy_facts.py` carries the structural framing if no live UKA price is available.
+  - Optional stretch: register `uka` as an auxiliary metric and compute EUA–UKA spread as a derived series. Not required for tomorrow.
+
+- [ ] **Add a "Risk framing" line at the foot of the desk note**
+  - Where: `scripts/generate_brief.py` (foot of the markdown, just above the methodology footer line).
+  - Why: Cobblestone's Power and Gas Trading pages both close with a Risk Management section structured as four pillars: *Disciplined Risk Framework · Integrated Controls · Continuous Monitoring · Operational Reliability*. The current desk note has the standard "rule-based / not investment advice" disclaimer but doesn't speak to risk discipline at all. Mirroring their own four-pillar framing in a single line signals you understand how they operate, not just what they trade. Zero-risk addition; one short paragraph or italic line.
+  - Acceptance: A short italic line below the metrics methodology footer, e.g.: *"This brief is built within a discipline of clear limits and continuous monitoring — observations are framed as risk inputs, not directional calls. Positioning decisions remain with the desk."* The phrase "clear limits", "continuous monitoring", and "observations as risk inputs" are recognisable to a Cobblestone reviewer because they're paraphrasing their own framework. Don't quote them verbatim — paraphrase. Page count must remain ≤3.
+
+- [ ] **Mirror Cobblestone's "How We Trade [X]" 3-pillar framing in the README**
+  - Where: `README.md` — add or rework a "How this brief is built" section near the top.
+  - Why: Cobblestone's three desk pages (Power, Gas, Emissions) all use the same 3-pillar structure (e.g. Power = Short-Term + Curve + Transportation). A README section structured the same way ("Short-Term Drivers · Curve Implications · Cross-Commodity Risk") is visible alignment without contortion — the brief itself is already shaped this way; the README just needs to say so.
+  - Acceptance: README has a small "How this brief is built" block (~5 lines + 3 bullet sub-points) explaining: 1. Short-term drivers (gas, storage, renewables, day-ahead) → maps to "day ahead to front month" trading. 2. Curve implications (Cal+1 model, spreads) → maps to forward-curve trading. 3. Cross-commodity risk (spark/dark, regime tag, scenarios) → maps to cross-commodity desk thinking. Use Cobblestone's verbatim phrases ("day ahead to front month", "across multiple maturities", "structural fundamentals") where they fit naturally.
+
+#### P3 (post-submission, don't tonight)
+
+- [ ] **Cross-border power flow data** — Cobblestone's "Power Transportation" business line is real (physical transmission capacity ownership). ENTSO-E publishes free hourly cross-border physical flows. Adding a single chip showing today's net flow at one major interconnector (e.g. DE-FR or GB-FR) would directly mirror this business line. Effort: ~2 hours; not worth tomorrow.
+- [ ] **MSR (Market Stability Reserve) intake date in the policy_facts rotation** — Cobblestone's Emissions page mentions *"allowance supply mechanisms and policy-driven adjustments"*. The MSR is the largest single supply-side EUA mechanism. A `data/policy_facts.py` entry for the next MSR review date adds depth.
+
+---
+
 - [ ] **Push to GitHub + set Actions secrets** ← _your action; can't be automated from here_
   - Where: repo root, GitHub web UI.
   - Acceptance: After push: GitHub repo → Settings → Secrets and variables → Actions → add `ENTSOE_TOKEN`, `AGSI_TOKEN`, `ANTHROPIC_API_KEY`. Trigger one `workflow_dispatch` run of `daily.yml` to confirm green. Branch is now **`main`** (renamed from master 2026-05-06). Add the live workflow-run link to the README so the reviewer can see the cron path is real, not theoretical.
