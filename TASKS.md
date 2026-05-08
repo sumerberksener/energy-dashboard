@@ -341,6 +341,34 @@ Move ticked items here after a session, with the date. Keeps the active sections
 
 ---
 
+## Overnight pass — 2026-05-08 morning report
+
+All 7 tasks complete. One commit per task; brief regenerated end-to-end against today's data, news, and the new prompt rules.
+
+| # | Task | Status | Commit | One-liner |
+|---|------|--------|--------|-----------|
+| 1 | Reconcile TASKS.md ticks against shipped commits | ✅ done | `f530363` | 9 P0 items ticked with the commits that actually shipped them; clarified the spark anchor + carbon supply/policy + sidebar arrow lineage. |
+| 2 | Regenerate today's brief end-to-end | ✅ done | `c1a47ef` | Fresh `output/2026-05-08/` (data + 5 charts + ai_news_themes + ai_themes + md + pdf). PDF = **3 pages** (after layout trim once Scenarios + watchlist landed in §5). Clean two-pass extract+narrate; new `ai/logs/2026-05-08.jsonl` with both purposes recorded. |
+| 3 | Fix DE Power weekly-Δ explosion across negative-price holidays | ✅ done | `e545397` | Added `skip_below_abs=5` to `change_over_pct/abs`; walks back from any comparison day with `|price| < 5 EUR/MWh` to the next clean day (point-to-point) or filters near-zero days from the prior-window mean (smoothed). Two new tests in `tests/test_stats.py`; full 17-test stats suite passes. All 8 weekly-Δ call sites updated. |
+| 4 | Diversify news RSS sources | ✅ done | `cebeffe` | Feed list re-ordered EU-first; added 7 European-focused feeds (Reuters Energy + Sustainability, Politico EU Energy, S&P Commodity Insights × 2, Gasworld, Montel News, ENTSO-E News, Bruegel × 3, Euractiv); dropped EIA Petroleum Weekly (US-domestic noise that was eating the 5-theme cap). |
+| 5 | Add Scenarios block (Base/Upside/Downside, quantified) | ✅ done | `3d209cb` | New `scenarios` field in `extract_v1.md` (horizon + summary + ttf_pct + de_power_pct per leg, anchored on the dominant geopolitical axis from `top_takeaway`). Rendered in §5 of the brief as a 4-column markdown table with illustrative caveat. |
+| 6 | Add dated watchlist (release calendar + AI items) | ✅ done | `4868787` | New `data/release_calendar.py` (6 recurring EU power-curve events, weekday + name + relevance + tier, `select_for_week()` with rollover); new `watchlist_dated` field in `extract_v1.md` for AI-extracted dated items. Both wired into a "This week ahead" mini-block in §5; AI items tagged `_(news-extracted)_`. |
+| 7 | Strengthen `narrate_v1.md` geopolitics close | ✅ done | `f9e000f` | Added one rule: when `news.geopolitics_summary` is non-empty, the closing curve-implication sentence must name the dominant geopolitical driver and tie it to one of {front-curve risk, Cal+1 regime, spark/dark differential}. No other narrative changes. |
+
+### Brief audit (output/2026-05-08/desk_note_2026-05-08.pdf — 3 pages)
+
+- **Closing curve-implication sentence (paste):** _"Hormuz corridor escalation locks thermal tightness and LNG premium into front-curve risk while storage deficit compresses Cal+1 power headroom."_ → names "Hormuz" ✓; ties to **front-curve risk** ✓ (and references Cal+1 power headroom as a secondary segment). The `narrate_v1` rule is honoured: dominant geopolitical driver is named and bound to a curve segment from the allowed set.
+- **DE Power 1w Δ in regenerated snapshot:** **+93.57 %** (138.00 vs ~71.30 EUR/MWh prior-week mean). The `skip_below_abs=5` fix removed the May 1 (Labour Day) −2.08 EUR/MWh comparison day; the remaining ~94 % is a real DA spike driven by 18th-percentile renewables. Pre-fix this print was +143.83 % via the negative comparison day.
+- **One EU-relevant RSS theme example:** _"Belgium nuclear takeover timeline and implications for winter capacity and gas-fired margin calls"_ — surfaced from the new EU-first feed mix (Politico EU Energy / Bruegel cluster), the kind of EU-domestic capacity story the old US-EIA-heavy mix was crowding out.
+- **Two-pass AI status:** Both `extract` and `narrate` purposes recorded in `ai/logs/2026-05-08.jsonl`; source = `claude-two-pass`, model = `claude-haiku-4-5`. (Bumped extract `max_tokens` 1024 → 2048 since the wider extract_v1 schema was clipping mid-string and forcing the rule-based fallback.)
+
+### Decision needed
+
+- [ ] **3-page fit is now structurally tight.** Holding the brief at ≤3 pages required dropping the §3 gas-vs-storage chart from the rendered note, collapsing §6 (Short-term drivers) into the monitor table, folding §8 (Methodology) into a single-line italic footer, and capping the news watchlist at 2 bullets + suppressing the geopolitics "Backdrop" sentence (TL;DR + narrative paragraph already carry it). Charts and full content still ship in `output/<date>/charts/` and `data/ai_news_themes.json`. **If the trader wants any of these back, the next pass should either move to a wider page format (A4 landscape / 2-column) or drop the Scenarios table.** Pinging this for a Sumer call.
+- [ ] **`carbon_policy_signal` source today is `policy_facts.py` fallback** (CBAM phase-in), not the AI extract — the new EU-first feeds didn't surface a fresh ETS-policy item this morning. The hand-maintained pack last reviewed 2026-05-07 (1d ago) covers the gap honestly. No action; flagged so it's visible in the morning audit.
+
+---
+
 ## Open questions for Sumer
 
 (Claude Code: don't answer these on Sumer's behalf — flag them and wait.)
