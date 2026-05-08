@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (133 days old); Clean Dark stale as of 2025-12-31 (128 days old). Merit-order confidence for gas-to-coal fuel switch impaired; dark spread (50th percentile) may understate coal weakness if recent prices have fallen further.",
+  "risk_flags": [
+    "Storage at 34.26% (12.4 pp below 5-yr seasonal average, 11th percentile) \u2014 refill pace critical for Cal+1 power risk and summer gas pricing.",
+    "GB Power at 126.88 EUR/MWh (93rd percentile, +40% month-on-month) \u2014 structural supply tightness or LNG-to-power arbitrage driving outlier; reversals asymmetric if Hormuz reopens.",
+    "Renewables at 27.07% of load (18th percentile, -32.82% daily, -41.24% weekly) \u2014 sharp drop forces thermal baseload reliance; coal supply data stale (133 days old) masks true merit-order position.",
+    "Clean Dark at 50th percentile with coal data 133 days stale \u2014 gas-to-coal switching confidence impaired; if coal has fallen further, dark spread undervalued."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22121\u2013+2%",
+      "summary": "Renewables remain 18th percentile; thermal locked in for dispatch; Hormuz premium persists; storage inches up but stays tight.",
+      "ttf_pct": "\u22122\u2013+1%"
+    },
+    "downside": {
+      "de_power_pct": "\u22126\u2013\u22122%",
+      "summary": "Hormuz reopens or tensions ease; renewable forecast upgrade; storage refill accelerates; LNG arbitrage compresses and coal merit-order relief eases.",
+      "ttf_pct": "\u22128\u2013\u22124%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8\u2013+14%",
+      "summary": "Hormuz corridor escalation deepens; Iran sanctions widen LNG shortage; EU forced to bid harder for spot cargoes; storage refill slows.",
+      "ttf_pct": "+12\u2013+18%"
+    }
+  },
+  "themes": [
+    "Thermal dispatch tightness \u2014 GB and Clean Spark at multi-year highs",
+    "Geopolitical LNG premium via Hormuz closure and Iran sanctions",
+    "Storage deficit pressuring refill trajectory into summer",
+    "Renewable weakness (18th percentile) lifts thermal call"
+  ],
+  "top_drivers": [
+    "Renewables collapse (\u221232.82% daily) forces thermal merit-order reload; GB and Clean Spark extremes reflect tight dispatch margin and LNG premium embedding.",
+    "Hormuz closure (since 28 Feb) sustains geopolitical LNG risk premium; EU-Asia arb pressure keeps spot cargoes diverted, lifting NW Europe DA and TTF security buffer.",
+    "Storage deficit (34.26%, 12.4 pp below seasonal) narrows summer refill headroom; refill pace into June will set Cal+1 power floor and autumn winter curve risk."
+  ],
+  "top_takeaway": "GB Power at 93rd percentile and Clean Spark at 92nd percentile signal tight thermal dispatch; Hormuz closure and Iran sanctions sustain geopolitical LNG premium despite storage 12 pp below seasonal.",
+  "watchlist": [
+    {
+      "metric": "Hormuz Strait corridor status",
+      "why": "Closure since 28 Feb widens EU\u2013Asia LNG arbitrage, lifting TTF security premium; reopening would reset spot LNG economics and compress NW Europe DA spreads."
+    },
+    {
+      "metric": "EU Storage refill rate May\u2013Jun",
+      "why": "At 34.26% (11th percentile), pace of injection vs. seasonal will set Cal+1 power floor and determine if summer tightness persists into autumn."
+    },
+    {
+      "metric": "Belgium nuclear takeover timeline",
+      "why": "State intervention signals aging fleet maintenance burden; reduced capex raises unplanned outage risk and gas-fired back-up demand during summer maintenance window."
+    },
+    {
+      "metric": "EU methane exemption finalisation",
+      "why": "Draft 'energy security' waivers weaken upstream enforcement; if exploited, fugitive emissions rise but supply relief may mildly ease TTF pressure mid-term."
+    },
+    {
+      "metric": "Iran sanctions escalation & SPR drawdown",
+      "why": "Prolonged Iran crude scarcity + large US SPR release (17.5M bbl since March) cap crude rally; reduces LNG-to-crude switching incentive but keeps geopolitical premium embedded in power spreads."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "Hormuz corridor reopening or further escalation",
+      "why": "Geopolitical trigger for \u00b115\u201320% TTF revaluation and LNG curve steepening reset."
+    }
+  ]
+}

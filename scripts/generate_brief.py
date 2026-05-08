@@ -382,10 +382,9 @@ def build_markdown(
         sd_text = f" ({sd:+.1f} pp vs 5-yr seasonal avg)" if sd is not None else ""
         L(f"**EU storage** at {stats.latest(storage):.1f}% full{sd_text} — _{sig.headline}_.")
     L("")
-    chart = next((c for c in charts if c.name.startswith("02_")), None)
-    if chart:
-        L(f"![Gas vs Storage]({chart.relative_to(today_dir)})")
-        L("")
+    # 02_gas_storage chart intentionally omitted from the rendered note to
+    # hold the brief at <=3 pages once Scenarios + This-week-ahead were
+    # added. PNG remains in `charts/` for the dashboard / online deck.
 
     # Section 4 — Carbon (price + supply/policy signal — AI first, fact-pack fallback)
     L("## 4 · Carbon (EU ETS)")
@@ -481,15 +480,12 @@ def build_markdown(
         cs_l = stats.latest(cs)
         cs_sig = signal_for("clean_spark", cs)
         L(f"**Clean spark spread** at {cs_l:+.2f} EUR/MWh — _{cs_sig.headline}_. "
-          f"This is the bridge from gas + carbon fundamentals to gas-fired plant economics; "
-          f"sustained positive spark = gas is in-the-money and TTF moves transmit directly "
-          f"into the power curve.")
+          f"Bridge from gas + carbon fundamentals to gas-fired economics; sustained positive "
+          f"spark = TTF moves transmit directly into the power curve.")
         L("")
         if coal is not None and not coal.empty and stats.is_stale(coal, STALE_AFTER_DAYS):
-            L(f"_The dark spread (and any coal-vs-gas merit-order claim) is suppressed "
-              f"this morning: coal data is {stats.days_since_latest(coal)} days old "
-              f"(last {coal.index.max().date()}), so the merit-order signal is indicative "
-              f"not current. Spark alone carries the regime read above._")
+            L(f"_Dark spread suppressed: coal data {stats.days_since_latest(coal)}d old "
+              f"(last {coal.index.max().date()}); spark alone carries the regime read._")
             L("")
 
     # Forward curve from cal1_seasonality_projection — the brief's "Day-Ahead to curve"
@@ -519,7 +515,7 @@ def build_markdown(
     # data/release_calendar.py, plus AI-extracted dated items if any.
     try:
         from data import release_calendar
-        upcoming = release_calendar.select_for_week()
+        upcoming = release_calendar.select_for_week(max_items=3)
     except Exception as e:
         log.warning("release_calendar unavailable: %s", e)
         upcoming = []
@@ -533,7 +529,7 @@ def build_markdown(
             L(f"- **{release_calendar.label_weekday(ev.weekday)}**{time_str} — "
               f"{ev.name}: {ev.relevance}")
         if isinstance(ai_dated, list):
-            for item in ai_dated[:3]:
+            for item in ai_dated[:2]:
                 if not isinstance(item, dict):
                     continue
                 day = item.get("day_label", "—")
@@ -562,44 +558,34 @@ def build_markdown(
                 f"| {sc.get('ttf_pct', '—')} | {sc.get('de_power_pct', '—')} |"
             )
         L("")
-        L("_Scenarios are illustrative, not forecasts. Magnitudes sized off "
-          "historical sensitivity of TTF / DE Power to comparable shocks; AI-generated "
-          "from the extract pass on today's news flow + metric snapshot._")
+        L("_Illustrative, not forecasts. Magnitudes sized off historical sensitivity; "
+          "AI-generated from today's extract pass._")
         L("")
 
-    # Section 6 — Short-term drivers
-    L("## 6 · Short-term drivers")
-    L("")
-    rs = data.get("renewable_share")
-    if rs is not None and not rs.empty:
-        sig = signal_for("renewable_share", rs)
-        rs_last = stats.latest(rs)
-        L(f"**DE wind + solar forecast** at {rs_last:.1f}% of load — _{sig.headline}_. "
-          f"Largest day-ahead price driver after gas: high share compresses the residual-load "
-          f"curve and pushes prices down (or negative); low share lifts gas-fired plants into "
-          f"the merit order, making TTF + EUA the binding constraint.")
-        L("")
+    # Section 6 — folded into the Monitor table renewables row to keep
+    # the brief at <=3 pages once the Scenarios + This-week-ahead blocks
+    # were added in §5. Section number kept for stable numbering of §7
+    # and §8 in the README; section header omitted from the rendered note.
     # Chart 05 (renewable share) intentionally omitted from the desk note for
     # the page-count fit; PNG remains in `charts/` for the dashboard.
 
     # Section 7 — Today's themes (compressed: 1-line backdrop + 2-4 watchlist bullets,
     # no per-headline table; full structured news in output/<date>/data/ai_news_themes.json).
-    L("## 7 · Today's themes")
+    L("## 6 · Today's themes")
     L("")
     if news_themes is not None and (news_themes.geopolitics_summary or news_themes.themes):
-        if news_themes.geopolitics_summary:
-            L(f"**Backdrop**: {news_themes.geopolitics_summary}")
-            L("")
+        # Backdrop sentence intentionally suppressed in the rendered note —
+        # the TL;DR + narrative paragraph in §1 already carry the geopolitical
+        # picture. Full geopolitics_summary stays in `ai_news_themes.json`.
         if news_themes.watchlist:
             L("**Watchlist (1–4 weeks)**")
-            for w in news_themes.watchlist[:4]:
+            for w in news_themes.watchlist[:2]:
                 L(f"- {w}")
             L("")
         n_themes = len(news_themes.themes) if news_themes.themes else 0
         if news_themes.source.startswith("claude"):
-            L(f"_{n_themes} structured themes (tag · commodity · polarity · why) "
-              f"in `data/ai_news_themes.json` — generated by **{news_themes.model}** from "
-              f"{news_themes.n_headlines_in} headlines._")
+            L(f"_{n_themes} structured themes in `data/ai_news_themes.json` — "
+              f"**{news_themes.model}** from {news_themes.n_headlines_in} headlines._")
         else:
             L(f"_News themes via rule-based fallback ({news_themes.error or 'no API key'})._")
         L("")
@@ -613,15 +599,11 @@ def build_markdown(
         L(f"> **Cross-market regime tag:** {tag}")
         L("")
 
-    # Section 8 — single line; full methodology in README. Saves a page.
-    L("## 8 · Methodology")
-    L("")
-    L("See **README §Methodology** in the repo for sources, plant assumptions, formulas, "
-      "signal thresholds, AI workflow, and the policy fact-pack used for Section 4. "
-      "Every number above is auditable via the snapshot JSONs in this directory.")
-    L("")
-    L("_Observations are rule-based and informational, not investment advice._")
-    L("")
+    # Methodology rolled into a single italic footer line (no horizontal rule,
+    # no preceding blank) so the brief sits within 3 pages once §5 Scenarios +
+    # watchlist blocks are present. Full methodology lives in README §Methodology.
+    L("_Methodology + sources: **README §Methodology**. Numbers auditable via the "
+      "snapshot JSONs. Rule-based / informational — not investment advice._")
 
     md_path = today_dir / f"desk_note_{today_str}.md"
     md_path.write_text("\n".join(lines), encoding="utf-8")
@@ -638,9 +620,9 @@ def render_pdf(md_path: Path) -> Path | None:
         "pandoc", str(md_path),
         "-o", str(pdf_path),
         "--pdf-engine=xelatex",
-        "-V", "geometry:margin=0.6in",
+        "-V", "geometry:margin=0.5in",
         "-V", "mainfont=Helvetica",
-        "-V", "fontsize=10pt",
+        "-V", "fontsize=9pt",
         f"--resource-path={md_path.parent}",
     ]
     try:

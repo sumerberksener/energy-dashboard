@@ -1,43 +1,75 @@
 {
-  "carbon_policy_signal": null,
-  "freshness_caveat": "Coal data is 132 days old (as of 2025-12-26) and Clean Dark is 127 days old (as of 2025-12-31)\u2014both are stale. Current merit-order slope and fuel-switch economics rely on more recent gas and renewable prices; coal valuation should be cross-checked against live thermal indices.",
+  "carbon_policy_signal": {
+    "item": "EU methane rule exemptions for energy security emerging; signals willingness to loosen upstream supply discipline under geopolitical crisis.",
+    "polarity": "neutral",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Supply loosening reduces regulatory carbon floor on gas availability; neutral near-term EUA pressure but structural tightening of commodity basis (gas per tonne CO2) as thermal dispatch extends."
+  },
+  "freshness_caveat": "Coal (132 days stale, as of 2025-12-26) and Clean Dark (127 days stale, as of 2025-12-31) are not actionable; intra-week and daily moves in Clean Spark (+78.55% W/W, 92nd pctile) and Renewables (\u221241.24% W/W, 18th pctile) dominate signal. TTF, EUA, DE Power, GB Power, and Renewables are fresh (<2 days old).",
   "risk_flags": [
-    "EU Storage at 11th percentile (34.4% full) vs. 5-yr seasonal norm\u2014refill pace through summer will determine H2 power risk and gas call intensity.",
-    "Strait of Hormuz closure since late February sustains LNG export bottleneck; any reopening could rapidly deflate TTF premium and thermal margins.",
-    "Clean Spark at 92nd percentile (38.42 EUR/MWh) is historically elevated; coal at 8th percentile (96 USD/t, data 132 days old)\u2014stale coal data masks true merit-order slope.",
-    "Renewable share collapsed 33% d/d to 18th percentile (27% of load); thermal dispatch will spike until wind/solar mean-reverts."
+    "Coal and Clean Dark metrics stale >127 days; intra-week readings (Clean Spark +78.55% W/W, Renewables \u221241.24% W/W) dominate live signal.",
+    "Renewables at 18th percentile (27.07% of load, \u221232.82% daily) with \u221215.03% monthly collapse; thermal baseload callable indefinitely.",
+    "Hormuz blockade ongoing; LNG decouple from TTF into Asia raises EU import cost; no resolution timeline stated\u2014horizon weeks to months.",
+    "Belgian nuclear takeover under review; if executed Cal+1 gas demand structurally lower, but timing uncertain."
   ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22121 to +2%",
+      "summary": "Hormuz blockade persists; renewables stabilize ~25\u201330%; thermal baseload extended; TTF mid-40s EUR/MWh.",
+      "ttf_pct": "\u22122 to +3%"
+    },
+    "downside": {
+      "de_power_pct": "+6 to +12%",
+      "summary": "Hormuz blockade escalates (military action) or widens; renewables extend below 20%; sustained LNG shortage.",
+      "ttf_pct": "+10 to +18%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "\u22125 to \u22128%",
+      "summary": "Hormuz clears (Trump mission success) or Iran deal emerges; LNG supply normalizes; Asian-EU spread collapses.",
+      "ttf_pct": "\u22128 to \u221212%"
+    }
+  },
   "themes": [
-    "Gas tight, storage depleted, LNG supply constrained by Strait closure",
-    "Clean Spark extended, coal weak\u2014thermal generation in-the-money despite carbon at 29th percentile",
-    "Renewables at 18th percentile (27% share) lifting thermal call; GB premium widening on supply/demand tightness"
+    "Geopolitical LNG supply shock via Strait of Hormuz",
+    "Renewables collapse driving thermal dispatch (27% \u2192 18th pctile weekly)",
+    "Clean Spark elevated; Coal at historical lows; fuel-switch regime firm",
+    "Belgian nuclear policy bearish for gas curve; tariff-inflation risk looming"
   ],
   "top_drivers": [
-    "Renewable collapse to 18th percentile (\u221233% d/d) forces thermal to swing dispatch; Clean Spark extended to 92nd percentile on gas-fired marginal cost anchoring.",
-    "EU Storage at 11th percentile (34.4% full, 12.5 pp below seasonal) confirms tight gas regime despite TTF in mid-range (57th percentile); Hormuz closure sustains LNG supply risk premium.",
-    "Coal weak (8th percentile) and stale data; Clean Dark at 50th percentile masks true dark spread\u2014thermal economics rest on gas scarcity and carbon pass-through (EUA 29th pct at 32.01 EUR/t)."
+    "Hormuz closure raises LNG cost to EU; TTF bullish despite \u22126.44% daily (baseline elevated relative to 57th pctile); gas-for-power switching sustains Clean Spark at 92nd pctile.",
+    "Renewables collapse (18th pctile, \u221241.24% weekly) forces thermal dispatch; coal at 8th pctile but stale\u2014live signal is Clean Spark +78.55% W/W margin extension.",
+    "Belgian nuclear policy (months) + methane rule relaxation (weeks) signal EU accepting structural gas/thermal dependence under geopolitical pressure; bearish Cal+1, bullish prompt thermal."
   ],
-  "top_takeaway": "Clean Spark at 92nd percentile signals sustained thermal strength; EU storage 12.5 pp below seasonal average underpins tight gas outlook despite Hormuz-driven LNG risk premium.",
+  "top_takeaway": "Hormuz closure pushes LNG/gas bullish while renewables plunge (18th pctile); Clean Spark at 92nd pctile signals sustained thermal in-the-money\u2014but coal data stale 132 days.",
   "watchlist": [
     {
-      "metric": "Strait of Hormuz reopening / LNG supply normalization",
-      "why": "Any resolution in next 2\u20134 weeks would ease global LNG glut, cap TTF upside, and compress Clean Spark via lower gas marginal cost."
+      "metric": "Hormuz blockade resolution",
+      "why": "Direct transmission to LNG affordability and TTF via arbitrage; EU power dispatch sensitivity \u00b15\u201310% if 4\u20136 week disruption."
     },
     {
-      "metric": "EU Storage refill trajectory (target 85% by Nov)",
-      "why": "Currently 12.5 pp below seasonal average at 34.4%; failure to refill on pace locks in Q3\u2013Q4 power risk premium and keeps thermal fleet anchored to merit order."
+      "metric": "Renewables wind/solar forecast next 48\u201372h",
+      "why": "At 18th pctile; any further decline locks thermal premium; upside reversal critical to Cool Spark disinflation."
     },
     {
-      "metric": "US SPR drawdown pace and crude-LNG arb",
-      "why": "DOE released 17.5 Mbbl since March; accelerated SPR sales could further suppress crude and strengthen global LNG supply to EU, eroding TTF/power support."
+      "metric": "Belgian nuclear state takeover timeline",
+      "why": "Announced months-horizon; structural gas demand reduction if executed; gas curve Cal+1 downside 8\u201312% over 12\u201318m."
     },
     {
-      "metric": "Renewables mean reversion (27% to seasonal norm ~35\u201340%)",
-      "why": "18th percentile renewable share drives sustained thermal call; any wind/solar improvement would flip merit order and compress spark/dark spreads."
+      "metric": "Trump 'Project Freedom' Hormuz mission progress",
+      "why": "Shipping clearance by end-May could ease crude/LNG flow; if achieved, LNG premium collapses, TTF \u22125\u20138%, DE Power \u22123\u20135%."
     },
     {
-      "metric": "GB\u2013DE power spread (GB 111.78 EUR/MWh vs DE 138.0 EUR/MWh)",
-      "why": "GB premium of ~26 EUR/MWh reflects supply tightness and interconnector flow; widening premium signals cross-border constraint or GB-specific generation risk."
+      "metric": "US-EU tariff negotiations (auto 25%+)",
+      "why": "Inflation spillover into energy transition capex; indirect pressure on renewable supply-chain costs; policy uncertainty brake on decarbonization capex."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "Trump Hormuz mission update expected",
+      "why": "Shipping clearance milestone could signal LNG flow restoration; material for TTF/power curve repricing within 48h."
     }
   ]
 }

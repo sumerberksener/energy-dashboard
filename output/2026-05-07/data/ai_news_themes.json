@@ -1,5 +1,5 @@
 {
-  "geopolitics_summary": "Strait of Hormuz closure since late February sustains LNG supply risk; EU gas prices diverging from US as Middle East disruption constrains global LNG.",
+  "geopolitics_summary": "Strait of Hormuz closure elevates crude and LNG supply risk to EU; Iran tensions threaten sustained energy price shocks; US-EU trade tensions loom.",
   "themes": [
     {
       "headline": "International LNG prices rise amid Strait of Hormuz closure",
@@ -7,38 +7,59 @@
       "tag": "geopolitics",
       "commodity": "gas",
       "polarity": "bullish-power",
-      "why_it_matters": "Hormuz closure restricts Middle East LNG exports to Europe; TTF/Asian arb widens, supporting EU gas premiums and marginal power costs in gas-weighted hubs.",
+      "why_it_matters": "Hormuz blockade disrupts LNG supply to Europe; TTF and Asian spot prices decouple, raising European LNG import costs and forcing power-generation fuel switching. Direct impact on gas-fired power margins.",
       "horizon": "weeks",
       "link": "https://www.eia.gov/todayinenergy/detail.php?id=67604"
     },
     {
-      "headline": "DOE released 17.5 million barrels from SPR since March",
-      "source": "EIA Today in Energy",
-      "tag": "macro",
+      "headline": "Trump bets on quick Iran oil crunch; experts see prolonged pain.",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
       "commodity": "crude",
-      "polarity": "bearish-power",
-      "why_it_matters": "Large US SPR releases suppress crude prices; lower oil feedstock costs ease global LNG production, increasing supply to Europe and capping TTF upside.",
-      "horizon": "weeks",
-      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625"
+      "polarity": "bullish-power",
+      "why_it_matters": "Prolonged Iran oil squeeze threatens sustained Brent-WTI premium, raising crude-fired power generation costs across EU. Elevated oil prices support coal-to-gas switching risk; indirect impact on EU power curve and gas demand.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/04/30/trump-bets-on-quick-iran-oil-crunch-experts-see-prolonged-pain-and-rising-costs-00901998"
     },
     {
-      "headline": "US renewable diesel and SAF exports reach 50k b/d in 2H25",
-      "source": "EIA Today in Energy",
-      "tag": "supply",
-      "commodity": "mixed",
-      "polarity": "neutral",
-      "why_it_matters": "US biofuel exports reduce crude demand slightly; modest indirect downward pressure on crude prices supports global LNG competitiveness vs. EU renewables switching.",
+      "headline": "Belgium eyes nuclear takeover to keep reactors running",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Belgian nuclear fleet extension under state ownership reduces gas-for-power demand and thermal fleet utilization; downward pressure on power prices and gas curve (particularly Cal+1). Secular baseload supply addition.",
       "horizon": "months",
-      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67665"
+      "link": "https://www.politico.eu/article/belgium-eyes-nuclear-takeover-to-keep-reactors-running/"
+    },
+    {
+      "headline": "EU floats making it easy for oil companies to break methane rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Energy security exemptions from methane rules could loosen upstream supply discipline; indirect signal that EU willing to ease supply constraints if geopolitical crisis deepens. Reduces regulatory floor on gas availability; neutral near-term but hawkish structural risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Commission blocks EU funding for Huawei solar tech",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Blocking foreign solar tech funding slows EU renewable capacity additions; delays solar penetration and suppresses off-peak power prices. Indirect, but signals renewable infrastructure risk to power curve if supply chain geopolitics tighten.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/commission-blocks-eu-funding-for-huawei-solar-tech/"
     }
   ],
   "watchlist": [
-    "Monitor Strait of Hormuz reopening risk; any resolution would immediately ease LNG supply to EU.",
-    "Track SPR drawdown pace; accelerated releases could further weaken crude/LNG price support.",
-    "Watch US-EU LNG arb spread (TTF vs Henry Hub); widening confirms supply bottleneck."
+    "Hormuz blockade resolution updates — direct LNG and crude supply impact to EU gas prices.",
+    "US-EU tariff negotiations (automobiles 25%+) — inflation risk on EU energy transition costs and capex.",
+    "Belgian nuclear timeline for state takeover — capacity and gas displacement schedule.",
+    "Trump 'Project Freedom' Hormuz mission progress — shipping clearance could ease crude/LNG flow by end-May."
   ],
   "source": "claude",
   "model": "claude-haiku-4-5",
-  "n_headlines_in": 6,
+  "n_headlines_in": 18,
   "error": null
 }

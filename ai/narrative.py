@@ -220,11 +220,15 @@ def _generate_two_pass(
     narrate_system = load_prompt("narrate_v1")
 
     # --- Pass 1: extract ----
+    # Bumped from 1024 -> 2048 after the schema grew (scenarios block,
+    # watchlist_dated block). The earlier limit was clipping responses
+    # mid-string, which surfaced as JSONDecodeError on the first pass and
+    # often forced the rule-based fallback after the retry also clipped.
     extract_result = ai_client.generate(
         system_prompt=extract_system,
         user_message=snapshot_json,
         purpose="extract",
-        max_tokens=1024,
+        max_tokens=2048,
     )
     try:
         extract = _parse_extract_json(extract_result.text)
@@ -237,7 +241,7 @@ def _generate_two_pass(
                 "REMINDER: respond with strict JSON only. First char `{`, last `}`. No markdown."
             ),
             purpose="extract_retry",
-            max_tokens=1024,
+            max_tokens=2048,
         )
         try:
             extract = _parse_extract_json(retry.text)
