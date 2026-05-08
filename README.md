@@ -220,6 +220,8 @@ fetchers + derived ──▶ structured snapshot (JSON) ──▶ Claude (Haiku 
 
 `.github/workflows/daily.yml` runs the script at 07:30 UTC on weekdays via GitHub Actions, then commits the new artifacts back to the repo with `[skip ci]`. Configure repo secrets `ENTSOE_TOKEN`, `AGSI_TOKEN`, `ANTHROPIC_API_KEY` to enable the live run.
 
+**Live workflow run** (proof the cron path is real, not theoretical): [`Daily Desk Brief #25581589389`](https://github.com/sumerberksener/energy-dashboard/actions/runs/25581589389) — manual `workflow_dispatch` trigger on 2026-05-08, completed green with both extract + narrate AI calls, all five charts, and the per-metric CSVs committed back to `output/`.
+
 ## Evaluation crosswalk
 
 | Brief criterion | Evidence in this repo |
