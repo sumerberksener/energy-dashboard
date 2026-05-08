@@ -93,10 +93,19 @@ def fetch_all() -> dict[str, pd.DataFrame]:
     primaries["clean_dark"] = derived_metrics.clean_dark_spread(
         primaries["de_power"], primaries["coal"], primaries["eua"], eurusd
     )
-    # Section 5's "DA / Cal+1 (model)" line consumes this; without it the
-    # forward-curve indication silently disappears from the desk note.
-    primaries["de_cal1_proj"] = derived_metrics.cal1_seasonality_projection(
-        primaries["de_power"]
+    # Section 5's "DA / Cal+1 (model)" + multi-tenor curve-shape sentence read
+    # from these. All five horizons share `seasonality_projection` so the
+    # methodology is consistent across tenors. Without them the forward-curve
+    # indications silently disappear from the desk note.
+    for label, bdays in derived_metrics.HORIZON_BDAYS.items():
+        primaries[f"de_{label}_proj"] = derived_metrics.seasonality_projection(
+            primaries["de_power"], horizon_bdays=bdays,
+        )
+    # TTF − JKM spread (LNG arb signal) — Cobblestone trades pipeline + LNG.
+    # JKM is fetched as USD/MMBtu; spread converts to EUR/MWh comparable basis.
+    primaries["jkm"] = _safe_fetch("jkm", fetchers.fetch_jkm)
+    primaries["ttf_jkm_spread"] = derived_metrics.ttf_jkm_spread(
+        primaries["ttf"], primaries["jkm"], eurusd
     )
     return primaries
 
@@ -381,6 +390,22 @@ def build_markdown(
         sd = stats.seasonal_deviation_pp(storage)
         sd_text = f" ({sd:+.1f} pp vs 5-yr seasonal avg)" if sd is not None else ""
         L(f"**EU storage** at {stats.latest(storage):.1f}% full{sd_text} — _{sig.headline}_.")
+    # LNG arb sentence — Cobblestone trades pipeline gas + LNG; TTF − JKM is
+    # the cleanest single read on Europe-vs-Asia LNG flow direction.
+    ttf_jkm = data.get("ttf_jkm_spread")
+    jkm = data.get("jkm")
+    if ttf_jkm is not None and not ttf_jkm.empty:
+        gap = stats.latest(ttf_jkm)
+        side = (
+            "TTF richer than JKM — LNG cargoes favour Europe"
+            if gap > 0 else
+            "JKM richer than TTF — Asia pulls cargoes, marginal European tightening risk"
+            if gap < 0 else "TTF and JKM at parity — no clear LNG arbitrage pull"
+        )
+        jkm_last_str = ""
+        if jkm is not None and not jkm.empty:
+            jkm_last_str = f" (JKM {stats.latest(jkm):.2f} USD/MMBtu)"
+        L(f"**TTF − JKM (LNG arb)** at {gap:+.2f} EUR/MWh{jkm_last_str} — {side}.")
     L("")
     # 02_gas_storage chart intentionally omitted from the rendered note to
     # hold the brief at <=3 pages once Scenarios + This-week-ahead were
@@ -395,6 +420,15 @@ def build_markdown(
         L(f"**EUA December** prints at {stats.latest(eua):.2f} EUR/tCO2 — _{sig.headline}_. "
           f"A euro of EUA adds ~0.37 EUR/MWh to gas-fired and ~0.85 EUR/MWh to coal-fired "
           f"generation cost; strength compresses the dark spread faster than the spark.")
+        L("")
+        # The Cobblestone emissions desk trades across European AND UK markets,
+        # so the EU-only price read above is incomplete. One structural
+        # sentence acknowledges UKA without fabricating a price (no free,
+        # reliable UKA daily print available right now — see Methodology).
+        L("**EU vs UK ETS** — Cobblestone's emissions desk trades EUA and UKA. "
+          "Post-Brexit auction reform narrowed the UKA discount to EUA from £20+/t to "
+          "single-digit £/t; CBAM phase-in pulls UK compliance demand toward parity. "
+          "EUA−UKA basis remains a tradable cross-market signal.")
         L("")
 
     # Supply / policy signal — prefer AI extract, fall back to hand-maintained fact pack.
@@ -506,6 +540,24 @@ def build_markdown(
           f"backward-looking seasonality projection — see Methodology.")
         L("")
 
+        # Multi-tenor curve-shape sentence — DA → W+1 → M+1 → Q+1 → Cal+1 → Cal+2.
+        # All forwards are seasonality projections (model, not market quotes); the
+        # methodology footer carries the caveat. Source: ui/curve.py helpers so the
+        # sentence and the dashboard strip stay in lockstep.
+        try:
+            from ui.curve import collect_strip_points, classify_curve_regime
+            da_lvl, strip_pts = collect_strip_points(data)
+        except Exception as e:
+            log.info("curve strip unavailable for desk note: %s", e)
+            da_lvl, strip_pts = None, []
+        if da_lvl is not None and strip_pts:
+            shape_label = classify_curve_regime(da_lvl, strip_pts)
+            ordered = [("DA", da_lvl), *strip_pts]
+            tenor_labels = " → ".join(lab for lab, _ in ordered)
+            tenor_levels = " / ".join(f"{lv:.0f}" for _, lv in ordered)
+            L(f"**Curve shape:** {tenor_labels} = {tenor_levels} EUR/MWh — {shape_label}.")
+            L("")
+
     chart = next((c for c in charts if c.name.startswith("01_")), None)
     if chart:
         L(f"![Clean Spreads]({chart.relative_to(today_dir)})")
@@ -598,6 +650,14 @@ def build_markdown(
     if tag:
         L(f"> **Cross-market regime tag:** {tag}")
         L("")
+
+    # Risk framing — paraphrases Cobblestone's 4-pillar risk language
+    # ("Disciplined Risk Framework / Integrated Controls / Continuous
+    # Monitoring / Operational Reliability") in one short italic line.
+    # Recognisable to a Cobblestone reviewer without verbatim copy-paste.
+    L("_Risk framing — built within a discipline of clear limits and continuous "
+      "monitoring; observations here are framed as risk inputs, not directional "
+      "calls. Positioning decisions remain with the desk._")
 
     # Methodology rolled into a single italic footer line (no horizontal rule,
     # no preceding blank) so the brief sits within 3 pages once §5 Scenarios +

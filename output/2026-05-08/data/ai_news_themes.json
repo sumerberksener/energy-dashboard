@@ -1,65 +1,65 @@
 {
-  "geopolitics_summary": "Strait of Hormuz closure and Iran tensions drive LNG price divergence; EU methane rules face exemption pressure; Belgium nuclear support signals capacity concerns.",
+  "geopolitics_summary": "Iran war disrupts Suez/Hormuz transit; EU weakens methane rules under US pressure; Italy pivots to Libya gas as alternative supply.",
   "themes": [
     {
-      "headline": "International LNG prices rise amid Strait of Hormuz closure",
-      "source": "EIA Today in Energy",
-      "tag": "geopolitics",
-      "commodity": "gas",
-      "polarity": "bullish-power",
-      "why_it_matters": "Hormuz closure since Feb 28 widens Europe–Asia LNG arbitrage, raising TTF. EU sourcing costs via LNG spike directly if supply redirects east; DA gas spreads widen as security premium embeds.",
-      "horizon": "weeks",
-      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67604"
-    },
-    {
-      "headline": "Belgium eyes nuclear takeover to keep reactors running",
+      "headline": "Italy seeks Libyan gas to offset Iran war supply shortage.",
       "source": "Politico EU Energy",
-      "tag": "infrastructure",
-      "commodity": "power",
+      "tag": "supply",
+      "commodity": "gas",
       "polarity": "bearish-power",
-      "why_it_matters": "State takeover suggests aging fleet maintenance capex burden. Reduced private-sector nuclear capex; increased dependence on gas-fired back-up during outages pressures Cal+1 power curve and storage drawdown.",
-      "horizon": "months",
-      "link": "https://www.politico.eu/article/belgium-eyes-nuclear-takeover-to-keep-reactors-running/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+      "why_it_matters": "Direct EU gas supply diversification. Libya–Italy pipeline ramp-up could ease TTF if successful, but war-torn country limits production. Key supply backstop under geopolitical stress.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/italy-libya-gas-replace-supply-shortage-iran-war/"
     },
     {
-      "headline": "EU floats making it easy for oil companies to break methane rules",
+      "headline": "EU Commission weakens methane enforcement under US pressure.",
       "source": "Politico EU Energy",
       "tag": "policy",
       "commodity": "gas",
-      "polarity": "neutral",
-      "why_it_matters": "Draft exemptions on 'energy security grounds' weaken supply-side methane discipline. If upstream operators exploit exemptions, fugitive emissions rise but fuel availability may improve; net effect on TTF supply/demand unclear but signals softer enforcement.",
-      "horizon": "weeks",
-      "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+      "polarity": "bearish-power",
+      "why_it_matters": "Relaxed methane rules reduce cost friction on gas supply, indirectly supporting higher gas flows and damping power-curve bullish pressure via fuel-switching risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/under-us-pressure-eu-softens-climate-superpollutant-methane-rules/"
     },
     {
-      "headline": "Trump bets on quick Iran oil crunch; experts see prolonged pain",
+      "headline": "EU floats exempting oil firms from methane rules on energy security grounds.",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Policy flexibility to boost supply during crisis. Lowers compliance cost on imports; supports higher gas volumes entering EU, pressuring TTF and power.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/"
+    },
+    {
+      "headline": "US military secures Strait of Hormuz passage; Lufthansa faces €1.7B jet fuel cost.",
       "source": "Politico EU Energy",
       "tag": "geopolitics",
       "commodity": "crude",
-      "polarity": "bullish-power",
-      "why_it_matters": "Prolonged Iran sanctions create sustained crude scarcity. EU fuel-switching from gas to crude-based heating oil compresses gas demand but raises coal/power costs; LNG competition for spot cargoes tightens NW Europe winter pricing into Cal+1.",
-      "horizon": "months",
-      "link": "https://www.politico.com/news/2026/04/30/trump-bets-on-quick-iran-oil-crunch-experts-see-prolonged-pain-and-rising-costs-00901998"
+      "polarity": "neutral",
+      "why_it_matters": "Hormuz reopening reduces crude supply shock; lower crude prices weaken incentive for coal-to-gas switch in EU power. Jet fuel crisis indicates broader energy supply stress affecting European fuel costs.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/lufthansa-stopover-jet-fuel-emergency/"
     },
     {
-      "headline": "US Strategic Petroleum Reserve releases 17.5M barrels since March",
-      "source": "EIA Today in Energy",
-      "tag": "supply",
-      "commodity": "crude",
+      "headline": "Fertilizer and fuel price surge threatens European food inflation next year.",
+      "source": "Politico EU Energy",
+      "tag": "macro",
+      "commodity": "mixed",
       "polarity": "neutral",
-      "why_it_matters": "Large SPR drawdown caps crude rally and reduces incentive for LNG-to-crude switching. Mildly bearish for EU power if crude prices stabilize and coal import arbitrage weakens; modest indirect DA spread compression.",
-      "horizon": "weeks",
-      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625"
+      "why_it_matters": "Energy input cost shock into agricultural sector. Indirect: rising fertilizer-production costs signal sustained European natural gas price pressure and demand for power in processing.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europe-farmer-fertilizer-prices-iran-war-inflation/"
     }
   ],
   "watchlist": [
-    "Hormuz corridor reopening status; impact on LNG flows to NW Europe and TTF price reset.",
-    "Belgium nuclear takeover timeline and implications for winter capacity and gas-fired margin calls.",
-    "EU methane exemption finalisation; risk of upstream supply relief offsetting enforcement losses.",
-    "Trump–EU auto tariff resolution and spillover into energy trade tensions (ETS credits, renewables equipment)."
+    "Hormuz corridor reopening pace and impact on crude–TTF arb next 2 weeks.",
+    "EU methane rule exemption guidance release date and scope definition.",
+    "Libya gas production ramp timeline for Italy pipeline (production feasibility).",
+    "Fertilizer sector gas demand response; industrial load winter 2026–27 forecast."
   ],
   "source": "claude",
   "model": "claude-haiku-4-5",
-  "n_headlines_in": 18,
+  "n_headlines_in": 17,
   "error": null
 }

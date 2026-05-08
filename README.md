@@ -8,6 +8,16 @@ Repository: this folder
 
 > An automated cross-commodity monitor that converts public EU gas and carbon fundamentals into a repeatable, AI-narrated daily desk note for European power. Designed to be desk-usable on day one and a foundation the trader can extend.
 
+## How this brief is built
+
+Three pillars, mirroring how Cobblestone frames its Power, Gas, and Emissions desks:
+
+1. **Short-Term Drivers** — TTF, EU storage, EUA, day-ahead power (DE + GB), the renewable forecast share of load, and a daily news/geopolitics theme pass. This is the "day ahead to front month" surface — the numbers that move the desk's near-term P&L.
+2. **Curve Implications** — a multi-tenor seasonality strip (W+1 / M+1 / Q+1 / Cal+1 / Cal+2) and the regime classifier on top of it, plus the clean spark spread that bridges gas + carbon into power-curve economics. This is the forward-positioning surface — the same metrics traded "across multiple maturities" on the curve, even though our forward points are model projections rather than market quotes (see Methodology).
+3. **Cross-Commodity Risk** — derived spreads (clean spark, switching TTF, DE−GB, TTF−JKM LNG arb), a six-cell regime strip, and a Base/Upside/Downside scenarios block sized off the dominant geopolitical axis from today's news. This is the cross-desk read — gas + carbon → power, plus the LNG side of the gas book.
+
+Built on **structural fundamentals** rather than discretionary calls; the AI layer extracts and narrates, it doesn't forecast.
+
 ## Architecture at a glance
 
 ```mermaid
@@ -264,6 +274,7 @@ the brief surfaces.
 | **Coal** | ICE Newcastle proxy via Yahoo (`MTF=F`) | Daily (often stale) | Fundamentals input only — coal isn't a Cobblestone book |
 | **EUR/USD, GBP/EUR** | Yahoo Finance | Daily | FX helpers for coal and GB power conversions |
 | **News & geopolitics** | RSS from Reuters Energy, Reuters Sustainability, Politico EU Energy, S&P Commodity Insights (Power + Natural Gas), Gasworld, Montel, ENTSO-E, Bruegel (Energy/Blog/All), Euractiv Energy, IEA, EIA Today/NatGas | Continuous | EU-focused mix (16 feeds, prioritised); filtered to EU power/gas/ETS relevance via Claude theme extraction |
+| **JKM LNG (auxiliary)** | Yahoo Finance (`JKM=F`) | Daily | Asian LNG benchmark; converted to EUR/MWh and subtracted from TTF for the Europe-vs-Asia LNG arb signal. Auxiliary metric — surfaced only as a regime-strip chip and a section-3 sentence, not a primary tile. |
 
 ### Plant assumptions (clean spread / switching TTF formulas)
 
@@ -282,16 +293,24 @@ Switching TTF  = η_gas · ( Coal_EUR/η_coal
 Coal_EUR per MWh thermal = (Coal_USD/t / EURUSD) / 6.978
 ```
 
-### Indicative Cal+1 power (seasonality projection)
+### Indicative forward curve (W+1 / M+1 / Q+1 / Cal+1 / Cal+2 seasonality projections)
 
-Free daily EEX Cal-Year settlement is not accessible without a paid feed
-(Bloomberg, Refinitiv, ICE Endex direct). The brief's Cal+1 line is a
-**model-derived seasonality projection, not a market quote**. Method: for
-each historical date, find the realised DA price exactly 1 year later
-(±3-day window) and report the rolling 30-day mean. The DA − Cal+1 spread
-reads as a front-vs-back regime indicator. Caveats: backward-looking,
-mean-reverting, doesn't price in current expectations of carbon / weather /
-demand. Replace with EEX settlement when a paid feed is available.
+Free daily EEX settlement curves are not accessible without a paid feed
+(Bloomberg, Refinitiv, ICE Endex direct). Every forward point on the
+"Curve shape" line in §5 of the desk note — and the multi-tenor strip on
+the dashboard — is a **model-derived seasonality projection, not a market
+quote**. Method: for each historical date `t` and a horizon of N business
+days (W+1 = 5d, M+1 = 21d, Q+1 = 65d, Cal+1 = 252d, Cal+2 = 504d), find
+the realised DA print at `t + N` (±3-day calendar window) and report the
+rolling 30-day mean. All five horizons share the same `seasonality_projection`
+function so methodology is identical across tenors.
+
+Caveats (same caveat applies at every horizon, but degrades the further
+out you go): backward-looking, mean-reverting, doesn't price current
+expectations of carbon / weather / demand. Useful as a backwardation /
+contango regime tell, **direction-correct and level-indicative only —
+not an executable forward price**. Replace with EEX settlement when a
+paid feed is available.
 
 ### Rule-based signal thresholds
 
@@ -326,6 +345,18 @@ Every API call routes through `ai/client.py` and is logged to
 `ai/logs/<date>.jsonl` with timestamp, model, prompt SHA-256, full prompt +
 response text, token usage, and latency. Falls back to a deterministic
 rule-based string when `ANTHROPIC_API_KEY` is missing or a call fails.
+
+### UK ETS (UKA) coverage
+
+Cobblestone's emissions desk trades both EUA and UKA. Section 4 of the
+desk note carries a structural sentence on the EUA-UKA basis (post-Brexit
+auction reform, CBAM phase-in pulling UK compliance demand toward parity).
+A live UKA front-Dec daily print isn't available through a reliable free
+endpoint at the time of this submission — ICE publishes a delayed UKA
+settlement but without a stable scrapeable URL. Promotion of UKA to a
+priced metric (its own derived series and EUA-UKA basis chart) is on
+the "What I'd do with another week" list and would mirror Cobblestone's
+own framing of the desk as cross-market by default.
 
 ### Carbon supply / policy fact pack
 

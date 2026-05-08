@@ -26,7 +26,7 @@ from typing import Optional
 
 # Bump this whenever you re-curate the FACTS list. The desk-note section 4
 # template surfaces the staleness when the fact pack is the source.
-LAST_REVIEWED = date(2026, 5, 7)
+LAST_REVIEWED = date(2026, 5, 8)
 
 
 @dataclass(frozen=True)
@@ -126,6 +126,25 @@ FACTS: list[PolicyFact] = [
             "imports; current divergence keeps a tradable basis between the two markets."
         ),
         priority=5,
+    ),
+    PolicyFact(
+        # UKA structural — post-Brexit UK ETS auction reform tightened supply
+        # and pushed the UKA back toward EUA from a multi-year discount.
+        # Cobblestone's emissions desk explicitly trades both markets, so
+        # this is on-book signal, not framing colour.
+        item=(
+            "UK ETS auction reform (2024 cap recut + free-allocation taper) "
+            "narrowed the UKA discount to EUA from £20+/t to single-digit £/t"
+        ),
+        side="supply",
+        polarity="neutral",
+        source="UK ETS Authority operating rules",
+        why_it_matters=(
+            "Convergence reduces tradable EUA-UKA basis but anchors UK gas-fired "
+            "merit-order economics to a stiffer carbon cost; CBAM phase-in pulls "
+            "compliance further toward parity. Cobblestone trades the basis on both sides."
+        ),
+        priority=6,
     ),
 ]
 

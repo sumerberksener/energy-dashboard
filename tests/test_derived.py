@@ -132,3 +132,61 @@ def test_cal1_seasonality_projection_too_short():
     df = pd.DataFrame({"value": [50.0] * 100}, index=idx)
     proj = derived.cal1_seasonality_projection(df)
     assert proj.empty
+
+
+@pytest.mark.parametrize("label", list(derived.HORIZON_BDAYS.keys()))
+def test_seasonality_projection_constant_series(label):
+    """Constant series → projection at any horizon equals that constant.
+
+    Pins the multi-tenor curve strip at all five business-day horizons
+    (W+1 / M+1 / Q+1 / Cal+1 / Cal+2). Without this guard a regression in
+    `seasonality_projection` would silently desync the dashboard strip from
+    the desk-note's "Curve shape" sentence.
+    """
+    bdays = derived.HORIZON_BDAYS[label]
+    # Series long enough to cover Cal+2 (504 bd ≈ 730 calendar days). One
+    # length for all parametrised horizons keeps the test cheap.
+    idx = pd.date_range(end="2026-05-07", periods=900, freq="D", name="date")
+    df = pd.DataFrame({"value": [50.0] * 900}, index=idx)
+    proj = derived.seasonality_projection(df, horizon_bdays=bdays, smoothing_window=1)
+    assert not proj.empty, f"{label} ({bdays}bd) returned empty projection"
+    assert proj["value"].iloc[-1] == pytest.approx(50.0)
+    assert proj.attrs.get("horizon_bdays") == bdays
+
+
+def test_seasonality_projection_horizon_ordering_on_trend():
+    """On a monotonic upward trend, longer horizons project a higher level.
+
+    Sanity check: if DA rises over time, the "what was realised at +N"
+    projection grows with N. Any future bug that swapped horizons or used
+    the wrong sign would flip this monotonicity.
+    """
+    idx = pd.date_range(end="2026-05-07", periods=900, freq="D", name="date")
+    # Linear ramp from 10 to 100
+    values = [10.0 + (90.0 / 899.0) * i for i in range(900)]
+    df = pd.DataFrame({"value": values}, index=idx)
+
+    levels = {}
+    for label in ("w1", "m1", "q1", "cal1", "cal2"):
+        proj = derived.seasonality_projection(
+            df, horizon_bdays=derived.HORIZON_BDAYS[label], smoothing_window=1
+        )
+        # Use a date well inside the projectable range so all horizons resolve.
+        anchor = idx[100]
+        levels[label] = float(proj.loc[anchor, "value"])
+
+    # Upward trend ⇒ longer-horizon projection > shorter-horizon projection
+    assert levels["w1"] < levels["m1"] < levels["q1"] < levels["cal1"] < levels["cal2"]
+
+
+def test_seasonality_projection_too_short_for_horizon():
+    """Series too short for the requested horizon returns empty (graceful)."""
+    # ~6 months of daily data — enough for W+1/M+1, not enough for Cal+1/Cal+2.
+    idx = pd.date_range(end="2026-05-07", periods=180, freq="D", name="date")
+    df = pd.DataFrame({"value": [50.0] * 180}, index=idx)
+
+    short_proj = derived.seasonality_projection(df, horizon_bdays=derived.HORIZON_BDAYS["w1"])
+    assert not short_proj.empty
+
+    long_proj = derived.seasonality_projection(df, horizon_bdays=derived.HORIZON_BDAYS["cal1"])
+    assert long_proj.empty

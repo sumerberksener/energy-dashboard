@@ -33,6 +33,7 @@ def render(data: dict[str, pd.DataFrame]) -> None:
     rs = data.get("renewable_share")
     de = data.get("de_power")
     cal1 = data.get("de_cal1_proj")
+    ttf_jkm = data.get("ttf_jkm_spread")
 
     # 1. Storage vs seasonal deviation
     if storage is not None and not storage.empty:
@@ -94,7 +95,21 @@ def render(data: dict[str, pd.DataFrame]) -> None:
     else:
         cells.append(_cell("DA − Cal+1 (model)", "—", "muted"))
 
-    # 6. Cross-market regime tag
+    # 6. TTF − JKM spread — Europe-vs-Asia LNG arbitrage signal.
+    # Auxiliary chip; honest about being LNG-side coverage of the gas book.
+    ttf_jkm_last = stats.latest(ttf_jkm) if ttf_jkm is not None else None
+    if ttf_jkm_last is not None:
+        klass = "green" if ttf_jkm_last > 0 else ("red" if ttf_jkm_last < 0 else "")
+        side = "TTF rich" if ttf_jkm_last > 0 else (
+            "JKM rich" if ttf_jkm_last < 0 else "parity"
+        )
+        cells.append(_cell(
+            "TTF − JKM (LNG)", f"{ttf_jkm_last:+.1f} EUR/MWh ({side})", klass
+        ))
+    else:
+        cells.append(_cell("TTF − JKM (LNG)", "—", "muted"))
+
+    # 7. Cross-market regime tag
     tag = cross_market_tag(data)
     if tag:
         short = tag.split(":")[0]

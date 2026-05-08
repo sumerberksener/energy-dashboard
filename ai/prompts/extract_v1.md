@@ -29,7 +29,7 @@ Schema (use exactly these field names; emit `null` or empty arrays where the dat
     "downside": {"summary": "≤18 words naming the trigger (e.g. Hormuz reopens, mild weather, demand softening)", "ttf_pct": "± a%-b%", "de_power_pct": "± a%-b%"}
   },
   "carbon_policy_signal": {
-    "item": "One concrete EU ETS supply or policy development from news.themes that affects EUA — e.g. 'CBAM phase-in scheduled for January', 'MSR intake rate adjustment under review', 'ETS-2 expansion to road transport and buildings from 2027', 'EU-UK ETS linkage talks resumed', 'Free allocation cuts announced for steel sector'. ≤ 18 words. Concrete, date-bearing where possible.",
+    "item": "One concrete EU OR UK ETS supply or policy development from news.themes that affects EUA or UKA — e.g. 'CBAM phase-in scheduled for January', 'MSR intake rate adjustment under review', 'ETS-2 expansion to road transport and buildings from 2027', 'EU-UK ETS linkage talks resumed', 'UK ETS auction reform widens UKA-EUA spread', 'Free allocation cuts announced for steel sector'. The desk trades emissions across European AND UK markets, so UK ETS items count. ≤ 18 words. Concrete, date-bearing where possible.",
     "side": "supply | policy",
     "polarity": "bullish-eua | bearish-eua | neutral",
     "source": "Source name from news.themes (e.g. 'IEA News')",

@@ -348,6 +348,31 @@ def fetch_renewable_share(token: str) -> pd.DataFrame:
     return _tidy(daily)
 
 
+# --- LNG signal -------------------------------------------------------------
+
+
+# 1 MWh = 3.41214 MMBtu — used to convert JKM (USD/MMBtu) to a TTF-comparable
+# EUR/MWh basis. Standard conversion factor; lives here so any future LNG
+# fetcher uses the same constant.
+MMBTU_PER_MWH = 3.41214
+
+
+def fetch_jkm() -> pd.DataFrame:
+    """JKM (Japan-Korea Marker) LNG futures front-month, in USD/MMBtu.
+
+    Cobblestone explicitly trades pipeline gas + LNG; JKM is the Asian LNG
+    benchmark and the natural counterparty to TTF in the Europe-vs-Asia
+    arbitrage that drives global LNG flows. We surface JKM as USD/MMBtu
+    (the native trading unit) and let the derived `ttf_jkm_spread` convert
+    to EUR/MWh for the TTF comparison.
+
+    Source: Yahoo Finance `JKM=F`. Free, daily, ~2y of history available.
+    Documented as Cobblestone-relevant LNG signal — auxiliary metric only,
+    not a primary tile.
+    """
+    return _yahoo("JKM=F")
+
+
 # --- FX helpers ------------------------------------------------------------
 
 

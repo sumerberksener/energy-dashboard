@@ -135,6 +135,12 @@ def get_eurusd() -> pd.DataFrame:
 
 
 @st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
+def get_jkm() -> pd.DataFrame:
+    """JKM LNG benchmark (USD/MMBtu) — auxiliary; not a registered Metric."""
+    return _safe("jkm", fetchers.fetch_jkm)
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
 def get_gbpeur() -> pd.DataFrame:
     return _safe("gbpeur", fetchers.fetch_gbpeur)
 
@@ -163,6 +169,7 @@ def get_all_with_derived() -> dict[str, pd.DataFrame]:
     """
     primaries = get_primaries()
     eurusd = get_eurusd()
+    jkm = get_jkm()
 
     cs = derived_metrics.clean_spark_spread(
         primaries["de_power"], primaries["ttf"], primaries["eua"]
@@ -176,15 +183,31 @@ def get_all_with_derived() -> dict[str, pd.DataFrame]:
     de_gb = derived_metrics.power_spread(
         primaries["de_power"], primaries["gb_power"]
     )
-    de_cal1_proj = derived_metrics.cal1_seasonality_projection(primaries["de_power"])
+    # TTF − JKM spread (EUR/MWh) — Europe-vs-Asia LNG arbitrage signal.
+    # Auxiliary metric, surfaced as a chip in the regime strip and in
+    # section 3 of the desk note.
+    ttf_jkm = derived_metrics.ttf_jkm_spread(primaries["ttf"], jkm, eurusd)
+    # Multi-tenor seasonality projection — one call per horizon, all sharing
+    # `seasonality_projection` so the methodology is identical across tenors.
+    # Cal+1 is kept under its existing key (`de_cal1_proj`) for backward
+    # compatibility with the brief template and the regime strip.
+    de_curve_projs = {
+        f"de_{label}_proj": derived_metrics.seasonality_projection(
+            primaries["de_power"],
+            horizon_bdays=bdays,
+        )
+        for label, bdays in derived_metrics.HORIZON_BDAYS.items()
+    }
 
     out = dict(primaries)
     out["clean_spark"] = cs
     out["clean_dark"] = cd
     out["switching_ttf"] = sw
     out["de_gb_spread"] = de_gb
-    out["de_cal1_proj"] = de_cal1_proj
+    out.update(de_curve_projs)
     out["eurusd"] = eurusd
+    out["jkm"] = jkm
+    out["ttf_jkm_spread"] = ttf_jkm
     return out
 
 
