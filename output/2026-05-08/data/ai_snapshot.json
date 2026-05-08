@@ -99,18 +99,18 @@
     "gb_power": {
       "as_of": "2026-05-08",
       "available": true,
-      "daily_change_pct": -7.87,
+      "daily_change_pct": -7.99,
       "days_old": 0,
       "delta_unit": "pct",
       "extension_50d_sigma": 0.77,
       "headline": "93th-percentile of 5-yr range \u2014 historically high",
       "is_stale": false,
-      "latest": 126.88,
-      "monthly_change_pct": 40.0,
+      "latest": 126.73,
+      "monthly_change_pct": 39.83,
       "name": "GB Power",
       "percentile_rank_5y": 93.0,
       "unit": "EUR/MWh",
-      "weekly_change_pct": 22.67
+      "weekly_change_pct": 22.64
     },
     "renewable_share": {
       "as_of": "2026-05-07",
@@ -129,20 +129,20 @@
       "weekly_change_pct": -41.24
     },
     "storage": {
-      "as_of": "2026-05-06",
+      "as_of": "2026-05-07",
       "available": true,
-      "daily_change_pct": 0.03,
-      "days_old": 2,
+      "daily_change_pct": 0.73,
+      "days_old": 1,
       "delta_unit": "pct",
-      "extension_50d_sigma": 2.19,
+      "extension_50d_sigma": 2.15,
       "headline": "12.4 pp below the 5-yr seasonal average",
       "is_stale": false,
-      "latest": 34.26,
-      "monthly_change_pct": 15.94,
+      "latest": 34.51,
+      "monthly_change_pct": 16.2,
       "name": "EU Storage",
       "percentile_rank_5y": 11.0,
       "unit": "% full",
-      "weekly_change_pct": 4.5
+      "weekly_change_pct": 4.22
     },
     "ttf": {
       "as_of": "2026-05-07",
@@ -162,64 +162,64 @@
     }
   },
   "news": {
-    "geopolitics_summary": "Iran war disrupts Hormuz; EU softens methane rules under US pressure; Italy pivots to Libya gas; trade tensions rising.",
+    "geopolitics_summary": "Iran war disrupting Hormuz; EU weakening methane rules under US pressure; Libya gas pivotal for Italy supply.",
     "themes": [
       {
         "commodity": "gas",
-        "headline": "Italy seeks Libyan gas to offset Iran war supply shortage",
+        "headline": "Italy seeks Libyan gas to offset Iran war supply shortages",
         "horizon": "weeks",
         "link": "https://www.politico.eu/article/italy-libya-gas-replace-supply-shortage-iran-war/",
         "polarity": "bearish-power",
         "source": "Politico EU Energy",
-        "tag": "geopolitics",
-        "why_it_matters": "Iran war disrupts regional supply. Libya pipeline to Italy is slow to ramp; TTF faces sustained tightness if diversification stalls. Direct exposure to southern European gas curve."
+        "tag": "supply",
+        "why_it_matters": "Direct Italy-Libya pipeline offers alternative to disrupted ME/Iran flows; production ramp-up difficult, limiting TTF support. Key for southern EU supply curve."
       },
       {
         "commodity": "gas",
-        "headline": "EU weakens methane enforcement rules under US pressure",
+        "headline": "EU Commission weakens methane enforcement rules under US pressure",
         "horizon": "months",
         "link": "https://www.politico.eu/article/under-us-pressure-eu-softens-climate-superpollutant-methane-rules/",
         "polarity": "bearish-power",
         "source": "Politico EU Energy",
         "tag": "policy",
-        "why_it_matters": "Looser methane rules may reduce upstream discipline, increasing leakage and upstream opex competition; indirect upward pressure on gas procurement cost and TTF volatility."
+        "why_it_matters": "Relaxed methane rules reduce compliance cost for gas producers; lower incentive to invest in efficiency/flaring reduction. Marginal bear for gas prices but signals EU-US energy policy shift."
       },
       {
-        "commodity": "crude",
-        "headline": "US Strategic Petroleum Reserve releases 17.5M barrels since March",
+        "commodity": "gas",
+        "headline": "EU permits energy-security exemptions for methane rule breaches by oil firms",
         "horizon": "weeks",
-        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625",
+        "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/",
         "polarity": "neutral",
-        "source": "EIA Today in Energy",
-        "tag": "supply",
-        "why_it_matters": "SPR releases weigh on crude; if sustained, lowers Brent and thus LNG spot arbitrage margin to Europe. Monitors TTF-Brent linkage and NW European LNG import incentive."
-      },
-      {
-        "commodity": "crude",
-        "headline": "Trump vows to reopen Strait of Hormuz; France deploys carrier",
-        "horizon": "days",
-        "link": "https://www.politico.com/news/2026/05/03/trump-free-ships-strait-of-hormuz-00904160",
-        "polarity": "neutral",
-        "source": "Politico EU Energy",
-        "tag": "geopolitics",
-        "why_it_matters": "Hormuz reopening reduces oil transport risk premium; lower Brent eases LNG arb into Europe. France's Suez transit signals EU hedge on supply corridor; monitors crude\u2013gas spread and TTF."
-      },
-      {
-        "commodity": "renewables",
-        "headline": "EU blocks Huawei solar funding; Chinese renewable tech scrutiny escalates",
-        "horizon": "months",
-        "link": "https://www.politico.eu/article/commission-blocks-eu-funding-for-huawei-solar-tech/",
-        "polarity": "bullish-power",
         "source": "Politico EU Energy",
         "tag": "policy",
-        "why_it_matters": "Huawei solar ban slows EU capacity build; reduced renewable supply growth props long-term power curve. Delays in utility-scale PV projects sustain baseload thermal exposure and power spreads."
+        "why_it_matters": "Discretionary exemptions on 'security grounds' weaken regulatory certainty; may lower marginal cost of non-compliant gas supply in crisis. Indirect TTF/power support if supply eases."
+      },
+      {
+        "commodity": "crude",
+        "headline": "US strategic petroleum reserve releases 17.5M barrels since late March",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "macro",
+        "why_it_matters": "SPR releases suppress crude; lower oil prices reduce fuel-switching risk (coal-to-gas) in European power plants. Indirect downward pressure on European power curve."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Trump administration mobilizes to reopen Strait of Hormuz for shipping",
+        "horizon": "days",
+        "link": "https://www.politico.com/news/2026/05/03/trump-free-ships-strait-of-hormuz-00904160",
+        "polarity": "bearish-power",
+        "source": "Politico",
+        "tag": "geopolitics",
+        "why_it_matters": "Hormuz reopening would ease crude/LNG flows from Persian Gulf; lower oil and LNG prices reduce EU power generation costs and storage urgency. Supports bear case for power curve."
       }
     ],
     "watchlist": [
-      "Hormuz corridor reopening timeline; daily oil/LNG flow updates (TTF, Brent arb)",
-      "EU methane rule exemption rollout; when countries invoke 'energy security' carve-out",
-      "Libya gas ramp-up milestones; Italian demand signal on southern hub premium",
-      "SPR drawdown pace; crude floor implications for LNG forward curve through Q3"
+      "Hormuz shipping corridor status updates; impact on LNG/crude flows to NW Europe.",
+      "Libya production ramp timeline and Italy pipeline utilization rate.",
+      "EU methane rule exemption guidelines implementation date and scope.",
+      "US-EU trade negotiations (tariff threat) and energy-sector carve-outs."
     ]
   }
 }
