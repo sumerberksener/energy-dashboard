@@ -70,6 +70,64 @@ html, body {
 .status-pill-amber  { background: rgba(250, 179, 135, 0.18); color: #fab387; border: 1px solid rgba(250, 179, 135, 0.4); }
 .status-pill-red    { background: rgba(243, 139, 168, 0.18); color: #f38ba8; border: 1px solid rgba(243, 139, 168, 0.4); }
 
+/* Hover-card on the freshness pill — shows the live/stale/missing breakdown
+   when the user hovers. Pure CSS (no JS), positioned just below the pill. */
+.status-pill-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+.status-pill-wrapper:hover .status-pill-card {
+  display: block;
+}
+.status-pill-card {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 1000;
+  min-width: 280px;
+  max-width: 360px;
+  background: #181825;
+  border: 1px solid rgba(137, 180, 250, 0.32);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.78rem;
+  color: #cdd6f4;
+  white-space: normal;
+}
+.pill-section { margin-bottom: 8px; }
+.pill-section:last-child { margin-bottom: 0; }
+.pill-section-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #a6adc8;
+  margin-bottom: 4px;
+}
+.pill-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+  line-height: 1.35;
+}
+.pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+.pill-dot-live    { background: #a6e3a1; }
+.pill-dot-stale   { background: #fab387; }
+.pill-dot-missing { background: #f38ba8; }
+.pill-row-live    { color: #cdd6f4; }
+.pill-row-stale   { color: #fab387; }
+.pill-row-missing { color: #f38ba8; }
+
 /* Regime strip */
 .regime-strip {
   display: grid;

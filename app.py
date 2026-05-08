@@ -73,14 +73,35 @@ def _freshness_summary(data: dict) -> tuple[str, str, str]:
     else:
         klass = "status-pill-green"
 
-    tooltip_lines = []
+    # Structured tooltip: pre-formatted HTML with one metric per line so the
+    # CSS hover-card renders a readable list rather than a single comma-soup.
+    sections: list[str] = []
     if fresh:
-        tooltip_lines.append("Live: " + ", ".join(fresh))
+        bullets = "".join(f"<div class='pill-row pill-row-live'>"
+                          f"<span class='pill-dot pill-dot-live'></span>"
+                          f"{name}</div>" for name in fresh)
+        sections.append(
+            f"<div class='pill-section'><div class='pill-section-title'>"
+            f"Live ({len(fresh)})</div>{bullets}</div>"
+        )
     if stale:
-        tooltip_lines.append("Stale: " + "; ".join(stale))
+        bullets = "".join(f"<div class='pill-row pill-row-stale'>"
+                          f"<span class='pill-dot pill-dot-stale'></span>"
+                          f"{name}</div>" for name in stale)
+        sections.append(
+            f"<div class='pill-section'><div class='pill-section-title'>"
+            f"Stale ({len(stale)})</div>{bullets}</div>"
+        )
     if missing:
-        tooltip_lines.append("Missing: " + ", ".join(missing))
-    return klass, label, " | ".join(tooltip_lines)
+        bullets = "".join(f"<div class='pill-row pill-row-missing'>"
+                          f"<span class='pill-dot pill-dot-missing'></span>"
+                          f"{name}</div>" for name in missing)
+        sections.append(
+            f"<div class='pill-section'><div class='pill-section-title'>"
+            f"Missing ({len(missing)})</div>{bullets}</div>"
+        )
+    tooltip_html = "".join(sections)
+    return klass, label, tooltip_html
 
 
 def _header(latest_date, data: dict) -> None:
@@ -92,10 +113,18 @@ def _header(latest_date, data: dict) -> None:
             st.caption(f"As of {latest_date:%A, %d %B %Y}")
     with right:
         st.write("")
-        klass, label, tooltip = _freshness_summary(data)
+        klass, label, tooltip_html = _freshness_summary(data)
+        # CSS hover-card: pill + a positioned tooltip-card showing the live /
+        # stale / missing breakdown on hover. The card is anchored to the
+        # pill via .status-pill-wrapper:hover .status-pill-card { display:block; }
+        # in style.css. Native HTML title= would also work but is slow,
+        # unstyled, and doesn't render line breaks.
         st.markdown(
-            f"<div title='{tooltip}' style='text-align:right; margin-top:8px'>"
-            f"<span class='status-pill {klass}'>{label}</span></div>",
+            f"<div style='text-align:right; margin-top:8px'>"
+            f"<span class='status-pill-wrapper'>"
+            f"<span class='status-pill {klass}'>{label}</span>"
+            f"<span class='status-pill-card'>{tooltip_html}</span>"
+            f"</span></div>",
             unsafe_allow_html=True,
         )
         st.write("")
