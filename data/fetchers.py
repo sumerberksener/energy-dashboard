@@ -348,6 +348,207 @@ def fetch_renewable_share(token: str) -> pd.DataFrame:
     return _tidy(daily)
 
 
+# --- Cross-border power flows (Power Transportation pillar) -----------------
+
+
+# Cobblestone names "Power Transportation" as the third pillar of their Power
+# Trading desk: "We invest in the physical transmission capacities that connect
+# the power grids of Europe together. We then move the electricity from one
+# region to another, depending on where it is needed most." These three
+# corridors are the cleanest single tells on continental flow direction:
+#   DE_LU↔FR — fuel-mix imbalance (FR-nuclear vs DE-renewables-and-thermal).
+#   GB↔FR via IFA — UK premium vs continental import.
+#   NL↔DE_LU — LNG-import side: Rotterdam/Gate gasification spilling into DE.
+INTERCONNECTORS: list[tuple[str, str]] = [
+    ("DE_LU", "FR"),
+    ("GB", "FR"),
+    ("NL", "DE_LU"),
+]
+
+
+def fetch_cross_border_flow(token: str, from_zone: str, to_zone: str) -> pd.DataFrame:
+    """Net daily cross-border physical flow between two ENTSO-E zones, in MWh.
+
+    Pulls the bidirectional `query_crossborder_flows` series in MW for both
+    directions and computes net = (from→to) − (to→from), then resamples to
+    daily mean × 24 to express the day's net energy transferred in MWh.
+    Positive ⇒ from-zone is exporting; negative ⇒ from-zone is importing.
+
+    This surfaces what Cobblestone calls "Power Transportation" — the
+    third pillar of their Power desk — as a single signed daily number per
+    corridor. Auxiliary metric: not registered in `config.py::METRICS`.
+    """
+    if not token:
+        raise RuntimeError("ENTSO-E token missing")
+    from entsoe import EntsoePandasClient
+
+    client = EntsoePandasClient(api_key=token)
+    end = pd.Timestamp.now(tz="Europe/Brussels").normalize()
+    # 1y of history is plenty for the regime read; cuts cold-start latency.
+    start = end - pd.DateOffset(years=1)
+
+    fwd = client.query_crossborder_flows(from_zone, to_zone, start=start, end=end)
+    bwd = client.query_crossborder_flows(to_zone, from_zone, start=start, end=end)
+    if fwd is None or len(fwd) == 0:
+        raise RuntimeError(f"ENTSO-E returned empty {from_zone}→{to_zone} flow")
+    if bwd is None or len(bwd) == 0:
+        raise RuntimeError(f"ENTSO-E returned empty {to_zone}→{from_zone} flow")
+
+    # Both series are tz-aware (Europe/Brussels). Align on the same index by
+    # converting to UTC for arithmetic, then resample to daily mean × 24 to
+    # express net daily MWh.
+    net_mw = fwd.tz_convert("UTC").subtract(bwd.tz_convert("UTC"), fill_value=0.0)
+    net_daily = net_mw.resample("D").mean() * 24.0
+    df = _tidy(net_daily)
+    df.attrs["from_zone"] = from_zone
+    df.attrs["to_zone"] = to_zone
+    df.attrs["unit"] = "MWh/day (net)"
+    return df
+
+
+# --- Weather forecasts (Energy Meteorologists alignment) --------------------
+
+
+# Cobblestone names "Energy Meteorologists" as a team function under
+# Analytics. Weather is the dominant short-term driver of EU power and gas
+# (renewables, FR electric heating, IT/ES gas demand). We pull a unified
+# 5-7 day forecast at three regional centroids and compare against a 5-yr
+# seasonal normal computed from the Open-Meteo historical archive — same
+# calendar window from prior years.
+WEATHER_LOCATIONS: dict[str, tuple[float, float]] = {
+    "DE": (52.52, 13.41),  # Berlin
+    "FR": (48.85,  2.35),  # Paris (electric-heating sensitivity)
+    "GB": (51.51, -0.13),  # London
+}
+
+
+def _open_meteo(url: str, params: dict) -> dict:
+    r = requests.get(url, params=params, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+
+def fetch_weather_forecast(latitude: float, longitude: float, label: str) -> pd.DataFrame:
+    """7-day weather forecast + 5-yr seasonal normal at one regional centroid.
+
+    Returns one DataFrame indexed on the next 7 calendar days with columns:
+        - temp_c               daily mean air temperature (°C)
+        - wind_max_ms          daily-max 10m wind speed (m/s)
+        - wind_gust_max_ms     daily-max 10m wind gust (m/s)
+        - cloud_cover_pct      daily mean cloud cover (%)
+        - temp_normal_c        5-yr seasonal normal mean temperature (°C)
+        - temp_anomaly_c       forecast − normal (°C)
+        - wind_normal_max_ms   5-yr seasonal normal daily-max wind speed
+        - wind_normal_gust_ms  5-yr seasonal normal daily-max wind gust
+
+    The "5-yr seasonal normal" is computed from the Open-Meteo historical
+    archive: pull the same calendar window (forecast date ±3 days) across
+    the prior 5 years and take the mean per day-of-year.
+
+    Sources: api.open-meteo.com (forecast) + archive-api.open-meteo.com
+    (historical reanalysis). Both free, no auth.
+    """
+    forecast = _open_meteo(
+        "https://api.open-meteo.com/v1/forecast",
+        {
+            "latitude": latitude, "longitude": longitude,
+            "hourly": "temperature_2m,wind_speed_10m,wind_gusts_10m,cloud_cover",
+            "forecast_days": 7,
+            "timezone": "auto",
+        },
+    )
+    h = forecast.get("hourly") or {}
+    times = h.get("time") or []
+    if not times:
+        raise RuntimeError(f"Open-Meteo forecast empty for {label}")
+    fc = pd.DataFrame({
+        "time": pd.to_datetime(times),
+        "temp": h.get("temperature_2m") or [],
+        "wind_speed": h.get("wind_speed_10m") or [],
+        "wind_gust": h.get("wind_gusts_10m") or [],
+        "cloud": h.get("cloud_cover") or [],
+    }).set_index("time")
+    fc_daily = pd.DataFrame({
+        "temp_c": fc["temp"].resample("D").mean(),
+        "wind_max_ms": fc["wind_speed"].resample("D").max(),
+        "wind_gust_max_ms": fc["wind_gust"].resample("D").max(),
+        "cloud_cover_pct": fc["cloud"].resample("D").mean(),
+    }).dropna(how="all")
+
+    # 5-yr seasonal normal from historical archive — pull a window covering
+    # the next 7 days plus a ±3-day buffer for matching, across each of the
+    # last 5 calendar years.
+    today = pd.Timestamp.now().normalize()
+    horizon_end = today + pd.Timedelta(days=8)
+    archive_segments: list[pd.DataFrame] = []
+    for years_back in range(1, 6):
+        seg_start = (today - pd.DateOffset(years=years_back) - pd.Timedelta(days=3)).date()
+        seg_end = (horizon_end - pd.DateOffset(years=years_back) + pd.Timedelta(days=3)).date()
+        try:
+            arc = _open_meteo(
+                "https://archive-api.open-meteo.com/v1/archive",
+                {
+                    "latitude": latitude, "longitude": longitude,
+                    "start_date": seg_start.isoformat(),
+                    "end_date": seg_end.isoformat(),
+                    "daily": "temperature_2m_mean,wind_speed_10m_max,wind_gusts_10m_max",
+                    "timezone": "auto",
+                },
+            )
+            d = arc.get("daily") or {}
+            if not d.get("time"):
+                continue
+            seg = pd.DataFrame({
+                "time": pd.to_datetime(d["time"]),
+                "temp_c": d.get("temperature_2m_mean") or [],
+                "wind_max_ms": d.get("wind_speed_10m_max") or [],
+                "wind_gust_max_ms": d.get("wind_gusts_10m_max") or [],
+            }).set_index("time")
+            archive_segments.append(seg)
+        except Exception as e:
+            log.info("Open-Meteo archive %dy-back fetch failed for %s: %s",
+                     years_back, label, e)
+
+    normals = pd.DataFrame(
+        index=fc_daily.index,
+        columns=["temp_normal_c", "wind_normal_max_ms", "wind_normal_gust_ms"],
+        dtype=float,
+    )
+    if archive_segments:
+        all_archive = pd.concat(archive_segments).sort_index()
+        # For each forecast date, average historical readings within the same
+        # ±3-day calendar window (across all 5 years).
+        for forecast_date in fc_daily.index:
+            mask = (
+                (all_archive.index.month == forecast_date.month)
+                & (
+                    abs(
+                        all_archive.index.dayofyear
+                        - pd.Timestamp(forecast_date).dayofyear
+                    )
+                    <= 3
+                )
+            )
+            window = all_archive[mask]
+            if window.empty:
+                continue
+            normals.loc[forecast_date, "temp_normal_c"] = float(window["temp_c"].mean())
+            normals.loc[forecast_date, "wind_normal_max_ms"] = float(
+                window["wind_max_ms"].mean()
+            )
+            normals.loc[forecast_date, "wind_normal_gust_ms"] = float(
+                window["wind_gust_max_ms"].mean()
+            )
+
+    out = fc_daily.join(normals)
+    out["temp_anomaly_c"] = out["temp_c"] - out["temp_normal_c"]
+    out.index.name = "date"
+    out.attrs["label"] = label
+    out.attrs["lat"] = latitude
+    out.attrs["lon"] = longitude
+    return out
+
+
 # --- LNG signal -------------------------------------------------------------
 
 

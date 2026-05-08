@@ -145,6 +145,34 @@ def get_gbpeur() -> pd.DataFrame:
     return _safe("gbpeur", fetchers.fetch_gbpeur)
 
 
+# --- Cross-border flows + Weather forecasts (auxiliary signals) -------------
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
+def get_cross_border_flow(from_zone: str, to_zone: str) -> pd.DataFrame:
+    """Net daily power flow (MWh) between two ENTSO-E zones — auxiliary signal."""
+    key = f"flow_{from_zone.lower().replace('_', '')}_{to_zone.lower().replace('_', '')}"
+    return _safe(key, fetchers.fetch_cross_border_flow,
+                 _secret("ENTSOE_TOKEN"), from_zone, to_zone)
+
+
+@st.cache_data(ttl=CACHE_TTL_SECONDS, show_spinner=False)
+def get_weather_forecast(label: str) -> pd.DataFrame:
+    """7-day weather forecast at one regional centroid — auxiliary signal."""
+    coords = fetchers.WEATHER_LOCATIONS.get(label)
+    if coords is None:
+        empty = pd.DataFrame()
+        empty.attrs["is_stale"] = True
+        empty.attrs["source"] = "empty"
+        empty.attrs["error"] = f"unknown location: {label}"
+        return empty
+    return _safe(
+        f"weather_{label.lower()}",
+        fetchers.fetch_weather_forecast,
+        coords[0], coords[1], label,
+    )
+
+
 PRIMARY_GETTERS = {
     "ttf": get_ttf,
     "storage": get_storage,
@@ -199,6 +227,21 @@ def get_all_with_derived() -> dict[str, pd.DataFrame]:
         for label, bdays in derived_metrics.HORIZON_BDAYS.items()
     }
 
+    # Cross-border physical flows — Cobblestone's "Power Transportation"
+    # pillar. Three corridors that read continental flow direction.
+    cross_border_flows = {}
+    for from_zone, to_zone in fetchers.INTERCONNECTORS:
+        key = f"flow_{from_zone.lower().replace('_lu','').replace('_','')}_" \
+              f"{to_zone.lower().replace('_lu','').replace('_','')}"
+        cross_border_flows[key] = get_cross_border_flow(from_zone, to_zone)
+
+    # Weather forecasts at regional centroids — Energy Meteorologists pillar.
+    # 7-day forward + 5-yr seasonal normal at DE / FR / GB.
+    weather_forecasts = {
+        f"weather_{label.lower()}": get_weather_forecast(label)
+        for label in fetchers.WEATHER_LOCATIONS
+    }
+
     out = dict(primaries)
     out["clean_spark"] = cs
     out["clean_dark"] = cd
@@ -208,6 +251,8 @@ def get_all_with_derived() -> dict[str, pd.DataFrame]:
     out["eurusd"] = eurusd
     out["jkm"] = jkm
     out["ttf_jkm_spread"] = ttf_jkm
+    out.update(cross_border_flows)
+    out.update(weather_forecasts)
     return out
 
 

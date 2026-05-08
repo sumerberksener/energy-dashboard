@@ -135,3 +135,74 @@ def test_stooq_handles_no_data_text(monkeypatch):
     monkeypatch.setattr(fetchers.requests, "get", lambda *a, **kw: _StubResp())
     with pytest.raises(RuntimeError, match="stooq"):
         fetchers._stooq("anything")
+
+
+@needs_net
+@pytest.mark.parametrize("from_zone,to_zone", fetchers.INTERCONNECTORS)
+def test_cross_border_flow(from_zone: str, to_zone: str) -> None:
+    """Smoke-check ENTSO-E cross-border flow fetch for the three Cobblestone-
+    relevant interconnector corridors (DE↔FR, GB↔FR, NL↔DE).
+
+    Surfaces the "Power Transportation" pillar of Cobblestone's Power desk.
+    Cross-border flow data publishes hourly with a typical lag of 1-2 days,
+    so we relax the freshness window vs DA prices.
+    """
+    token = os.environ.get("ENTSOE_TOKEN")
+    if not token:
+        pytest.skip("ENTSOE_TOKEN not set in env")
+    df = fetchers.fetch_cross_border_flow(token, from_zone, to_zone)
+    _assert_tidy(df, min_rows=200, max_age_days=4)
+    # Net flow is signed daily MWh; both polarities are valid.
+    assert df.attrs.get("from_zone") == from_zone
+    assert df.attrs.get("to_zone") == to_zone
+
+
+@needs_net
+@pytest.mark.parametrize("region", list(fetchers.WEATHER_LOCATIONS.keys()))
+def test_weather_forecast(region: str) -> None:
+    """Smoke-check Open-Meteo forecast + 5-yr seasonal-normal join.
+
+    No token required (Open-Meteo is fully free). The returned DataFrame
+    should carry the next 7 forecast days plus matched seasonal normals.
+    """
+    lat, lon = fetchers.WEATHER_LOCATIONS[region]
+    df = fetchers.fetch_weather_forecast(lat, lon, region)
+    assert df is not None and not df.empty
+    expected_columns = {
+        "temp_c", "wind_max_ms", "wind_gust_max_ms", "cloud_cover_pct",
+        "temp_normal_c", "temp_anomaly_c",
+    }
+    assert expected_columns.issubset(df.columns), \
+        f"missing columns: {expected_columns - set(df.columns)}"
+    assert 5 <= len(df) <= 8, f"forecast horizon should be ~7 days, got {len(df)}"
+    # Anomaly column should be populated for at least the first 5 days
+    # (later days may lack 5-yr archive matches; that's tolerable).
+    assert df["temp_anomaly_c"].head(5).notna().any(), "no anomaly data computed"
+
+
+def test_detect_weather_events_smoke(monkeypatch):
+    """Detector returns structured events from a synthetic cold-snap forecast.
+
+    Builds a 7-day forecast where DE shows a 4-day cold snap (anomaly = −5°C),
+    and confirms the detector classifies it correctly with the right region,
+    severity, and a non-empty trading implication.
+    """
+    from analysis.weather import detect_weather_events
+
+    idx = pd.date_range(start="2026-05-08", periods=7, freq="D")
+    de = pd.DataFrame({
+        "temp_c": [10.0] * 7,
+        "wind_max_ms": [10.0] * 7,
+        "wind_gust_max_ms": [15.0] * 7,
+        "cloud_cover_pct": [40.0] * 7,
+        "temp_normal_c": [15.0] * 7,
+        "temp_anomaly_c": [-5.0] * 4 + [0.0] * 3,
+        "wind_normal_max_ms": [10.0] * 7,
+        "wind_normal_gust_ms": [15.0] * 7,
+    }, index=idx)
+    events = detect_weather_events({"DE": de})
+    assert any(e.type == "cold_snap" and e.region == "DE" for e in events)
+    cold = next(e for e in events if e.type == "cold_snap")
+    assert cold.severity in {"moderate", "severe"}
+    assert "DE" in cold.trading_implication or "thermal" in cold.trading_implication
+    assert (cold.end_date - cold.start_date).days == 3
