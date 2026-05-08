@@ -90,3 +90,50 @@ def render() -> None:
         "and latency. Falls back to a deterministic rule-based string when the "
         "API key is missing or a call fails — pipeline always emits output."
     )
+
+    st.markdown("### Weather event detection (rule-based, not AI)")
+    st.markdown(
+        "The News tab's **Weather watch** is rule-based pattern recognition on "
+        "Open-Meteo forecast data, compared to a 5-yr seasonal normal computed "
+        "from the historical archive. Four event types fire with explicit "
+        "thresholds:\n\n"
+        "- **Cold snap** — 2+ consecutive days where forecast temperature anomaly "
+        "is below −3 °C vs the 5-yr seasonal normal at any DE/FR/GB centroid. "
+        "Severe if any day < −6 °C.\n"
+        "- **Heat dome** — symmetric, 2+ consecutive days above +3 °C; severe above +6 °C.\n"
+        "- **Wind drought (dunkelflaute)** — 2+ consecutive days where daily-max "
+        "wind speed < 5 m/s **and** mean cloud cover > 60%. Severe if window ≥ 4 days.\n"
+        "- **Storm** — any day with daily-max wind gust ≥ 28 m/s (~100 km/h, "
+        "Beaufort 10+); deduped to one event per region in the 7-day window. "
+        "Severe at ≥ 35 m/s.\n\n"
+        "Each event carries a region-aware `trading_implication` line — what a "
+        "meteorologist would flag for the desk. Mirrors Cobblestone's named "
+        "**Energy Meteorologists** team function. Pure pandas/numpy in "
+        "`analysis/weather.py`; not an AI pass — the AI extract pass can consume "
+        "the events as additional context but doesn't generate them."
+    )
+
+    st.markdown("### Risk management framing (mirrors Cobblestone's 4 pillars)")
+    st.markdown(
+        "Cobblestone's Power and Gas Trading pages both close with a four-pillar "
+        "Risk Management section. Below maps the four pillars onto where the "
+        "dashboard surfaces an analogous control:"
+    )
+    st.markdown(
+        "- **Disciplined Risk Framework** — *clear limits, controls, and governance.* "
+        "Hard-coded percentile / σ / z thresholds in `config.py` "
+        f"(PERCENTILE_HIGH={PERCENTILE_HIGH}, PERCENTILE_LOW={PERCENTILE_LOW}, "
+        f"SIGMA_EXTENDED={SIGMA_EXTENDED}, ZSCORE_OUTSIZED={ZSCORE_OUTSIZED}); "
+        "surfaced in the snapshot table as headlines when a series crosses one.\n"
+        "- **Integrated Controls** — *risk, trading, and operations functions work "
+        "closely together.* The two-pass AI workflow gates the narrate pass on the "
+        "extract JSON — controls and narrative read from the same numbers.\n"
+        "- **Continuous Monitoring** — *positions, exposures, and performance "
+        "monitored in real time, supported by analytics and automated checks.* "
+        "1-hour `@st.cache_data` TTL refreshes; `tests/test_fetchers.py` smoke-tests "
+        "every live source; the regime strip is the always-on monitoring surface.\n"
+        "- **Operational Reliability** — *strong back-office processes and system "
+        "resilience.* Per-fetcher `_safe()` snapshot fallback + `is_stale` flag + "
+        "STALE banner; soft-fail in the cron so one broken source doesn't kill the "
+        "run; append-only JSONL audit log of every AI call."
+    )

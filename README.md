@@ -8,15 +8,18 @@ Repository: this folder
 
 > An automated cross-commodity monitor that converts public EU gas and carbon fundamentals into a repeatable, AI-narrated daily desk note for European power. Designed to be desk-usable on day one and a foundation the trader can extend.
 
+**Coverage** — Power: BE, FR, DE, GB, HU, IE, IT, NL, ES, CH, AT (11 markets) · Gas: AT, BE, FR, DE, GB, IT, NL, SK, ES, CH (10 markets) · Emissions: EU + UK · LNG arb: TTF − JKM auxiliary signal.
+
 ## How this brief is built
 
-Three pillars, mirroring how Cobblestone frames its Power, Gas, and Emissions desks:
+Mirroring how Cobblestone frames its Power, Gas, and Emissions desks — three trading pillars plus the meteorological signal that shapes them:
 
-1. **Short-Term Drivers** — TTF, EU storage, EUA, day-ahead power (DE + GB), the renewable forecast share of load, and a daily news/geopolitics theme pass. This is the "day ahead to front month" surface — the numbers that move the desk's near-term P&L.
+1. **Short-Term Drivers** — TTF, EU storage, EUA, day-ahead power (DE + GB), the renewable forecast share of load, a daily news/geopolitics theme pass, **plus a 5-day temperature anomaly at the DE/FR/GB centroids** with rule-based weather-event detection (cold snaps, heat domes, wind droughts, storms). This is the "day ahead to front month" surface — the numbers that move the desk's near-term P&L. The weather layer mirrors Cobblestone's named **Energy Meteorologists** function.
 2. **Curve Implications** — a multi-tenor seasonality strip (W+1 / M+1 / Q+1 / Cal+1 / Cal+2) and the regime classifier on top of it, plus the clean spark spread that bridges gas + carbon into power-curve economics. This is the forward-positioning surface — the same metrics traded "across multiple maturities" on the curve, even though our forward points are model projections rather than market quotes (see Methodology).
-3. **Cross-Commodity Risk** — derived spreads (clean spark, switching TTF, DE−GB, TTF−JKM LNG arb), a six-cell regime strip, and a Base/Upside/Downside scenarios block sized off the dominant geopolitical axis from today's news. This is the cross-desk read — gas + carbon → power, plus the LNG side of the gas book.
+3. **Cross-Commodity Risk** — derived spreads (clean spark, switching TTF, DE−GB, TTF−JKM LNG arb), an eight-cell regime strip, and a Base/Upside/Downside scenarios block sized off the dominant geopolitical axis from today's news. This is the cross-desk read — gas + carbon → power, plus the LNG side of the gas book.
+4. **Power Transportation** — net cross-border physical flows at three major European interconnectors (DE↔FR, GB↔FR via IFA, NL↔DE) from ENTSO-E. Mirrors the third pillar of Cobblestone's Power Trading desk: *"We invest in the physical transmission capacities that connect the power grids of Europe together. We then move the electricity from one region to another."*
 
-Built on **structural fundamentals** rather than discretionary calls; the AI layer extracts and narrates, it doesn't forecast.
+Built on **structural fundamentals** rather than discretionary calls; the AI layer extracts and narrates, it doesn't forecast. The weather and event-detection layers are rule-based pattern recognition with explicit thresholds — also not forecasts; they surface what a meteorologist would flag for the desk.
 
 ## Architecture at a glance
 
@@ -275,6 +278,8 @@ the brief surfaces.
 | **EUR/USD, GBP/EUR** | Yahoo Finance | Daily | FX helpers for coal and GB power conversions |
 | **News & geopolitics** | RSS from Reuters Energy, Reuters Sustainability, Politico EU Energy, S&P Commodity Insights (Power + Natural Gas), Gasworld, Montel, ENTSO-E, Bruegel (Energy/Blog/All), Euractiv Energy, IEA, EIA Today/NatGas | Continuous | EU-focused mix (16 feeds, prioritised); filtered to EU power/gas/ETS relevance via Claude theme extraction |
 | **JKM LNG (auxiliary)** | Yahoo Finance (`JKM=F`) | Daily | Asian LNG benchmark; converted to EUR/MWh and subtracted from TTF for the Europe-vs-Asia LNG arb signal. Auxiliary metric — surfaced only as a regime-strip chip and a section-3 sentence, not a primary tile. |
+| **Cross-border power flows (auxiliary)** | ENTSO-E `query_crossborder_flows` | Hourly → daily mean × 24 (MWh net) | Three corridors — DE↔FR, GB↔FR, NL↔DE. Net = (A→B) − (B→A); positive ⇒ A exports. Surfaces Cobblestone's "Power Transportation" pillar. |
+| **Weather forecast + 5-yr seasonal normal (auxiliary)** | Open-Meteo Forecast + Archive APIs (free, no auth) | Daily, 7-day forward + 5y archive lookback | Temperature, wind speed, gust, cloud cover at DE/FR/GB centroids. Anomaly = forecast − ±3-day window mean from prior 5 years. Feeds the regime-strip weather chip and the rule-based event detector (cold snap / heat dome / wind drought / storm) on the News tab. |
 
 ### Plant assumptions (clean spread / switching TTF formulas)
 
@@ -357,6 +362,43 @@ settlement but without a stable scrapeable URL. Promotion of UKA to a
 priced metric (its own derived series and EUA-UKA basis chart) is on
 the "What I'd do with another week" list and would mirror Cobblestone's
 own framing of the desk as cross-market by default.
+
+### Weather event detection (rule-based, not AI)
+
+The News tab's "Weather watch" section and the desk note's §6 weather lines
+are produced by `analysis/weather.py::detect_weather_events`. Pure pandas,
+no AI. Four event types with explicit thresholds:
+
+| Event | Detection rule | Severity steps |
+|---|---|---|
+| **Cold snap** | 2+ consecutive days where forecast `temp_anomaly_c` < −3.0 °C vs 5-yr seasonal normal at any DE/FR/GB centroid | severe if any day < −6 °C |
+| **Heat dome** | 2+ consecutive days where `temp_anomaly_c` > +3.0 °C | severe if any day > +6 °C |
+| **Wind drought** | 2+ consecutive days where daily-max wind speed < 5 m/s **and** mean cloud cover > 60% | severe if window ≥ 4 days |
+| **Storm** | Any day with daily-max wind gust ≥ 28 m/s (~100 km/h, Beaufort 10+); deduped to one event per region in the 7-day window | severe if peak gust ≥ 35 m/s |
+
+Each event carries a region-aware `trading_implication` line (e.g. for a DE
+wind drought: *"Dunkelflaute risk — DE is renewables-heaviest, so a still +
+cloudy window forces gas-fired up the merit order. Spark widens hard..."*).
+This is rule-based pattern recognition, not a forecast — the desk decides;
+the dashboard surfaces what a meteorologist would flag.
+
+### Risk management framing (mirrors Cobblestone's 4 pillars)
+
+Cobblestone's Power and Gas Trading pages both close with a four-pillar Risk
+Management section. The dashboard surfaces an analogous view; below maps the
+four pillars onto the relevant repo surface so a reviewer can audit the
+correspondence directly.
+
+| Pillar (Cobblestone) | Where in this dashboard |
+|---|---|
+| **Disciplined Risk Framework** — *"Clear limits, controls, and governance structures guide trading activity..."* | Hard-coded percentile / σ / z thresholds in `config.py` (PERCENTILE_HIGH=90, PERCENTILE_LOW=10, SIGMA_EXTENDED=2, ZSCORE_OUTSIZED=2); surfaced in the snapshot table as headlines when a series crosses a threshold. |
+| **Integrated Controls** — *"Risk, trading, and operations functions work closely together..."* | Two-pass AI workflow (`ai/narrative.py`): the narrate pass cannot reference any number not already in the structured extract — controls and narrative are gated by the same JSON snapshot. |
+| **Continuous Monitoring** — *"Positions, exposures, and performance are monitored in real time, supported by analytics and automated checks."* | `@st.cache_data` 1h TTL refreshes; `tests/test_fetchers.py` smoke-tests every live source; the regime strip is the always-on continuous-monitoring surface. |
+| **Operational Reliability** — *"Strong back-office processes and system resilience ensure accurate settlement, reporting, and regulatory compliance."* | Per-fetcher `_safe()` snapshot fallback + `is_stale` flag + STALE banner in the brief; soft-fail in `.github/workflows/daily.yml` so one broken source doesn't kill the cron; append-only JSONL audit log of every AI call. |
+
+The italic risk-framing line at the foot of every desk note paraphrases all
+four pillars in a single sentence — recognisable to a Cobblestone reviewer
+without verbatim copy-paste.
 
 ### Carbon supply / policy fact pack
 
