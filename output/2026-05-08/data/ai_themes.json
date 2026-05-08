@@ -1,71 +1,68 @@
 {
   "carbon_policy_signal": {
-    "item": "EU Commission weakens methane enforcement rules under US pressure; energy-security exemptions for oil firms breach authorization.",
-    "polarity": "neutral",
+    "item": "EU Commission weakens methane enforcement rules and floats oil-firm exemptions on energy-security grounds; structural signal of climate-rule relaxation under geopolitical pressure.",
+    "polarity": "bearish-eua",
     "side": "policy",
     "source": "Politico EU Energy",
-    "why_it_matters": "Relaxed methane rules reduce compliance cost for gas producers; marginal upside to gas supply economics dampens fuel-switch incentive, indirectly supporting EUA via lower coal displacement."
+    "why_it_matters": "Exemptions reduce operational friction for fossil suppliers, supporting lower marginal gas cost and thermal generation economics; signals broader climate-rule erosion, depressing long-term EUA carry and structural carbon floor."
   },
-  "freshness_caveat": "Coal data stale as of 2025-12-26 (133 days old); Clean Dark stale as of 2025-12-31 (128 days old). GB Power, Clean Spark, DE Power, TTF, EUA, Storage, and Renewables are current as of 2026-05-07/08.",
+  "freshness_caveat": "Coal data stale (133 days old, as of 2025-12-26); clean_dark stale (128 days old, as of 2025-12-31). Coal 8th percentile headline and clean_dark 50th percentile signals unreliable; use only for directional context. All other metrics current as of 2026-05-08 (GB Power, Clean Spark, DE Power, Renewables, Storage, TTF fresh; EUA 1 day old).",
   "risk_flags": [
-    "Storage at 34.5% \u2014 12.4 pp below seasonal \u2014 refill pace critical to summer power curve.",
-    "Renewable share collapsed 32.8% daily to 27%; thermal call extended; watch reversal risk.",
-    "Hormuz reopening by Trump admin would ease LNG/crude inflows to NW Europe \u2014 downside tail for TTF and power.",
-    "Coal data stale (133 days old); Clean Dark stale (128 days); GB/DE/CS prices current as of 2026-05-08."
+    "GB Power 126.73 EUR/MWh (93rd pctile) \u2014 Hormuz closure risk premium; US reassurance on patrol reduces near-term shock but Libya ramp-up remains uncertain.",
+    "Storage 34.51% full, 12.4 pp below seasonal average (11th pctile) \u2014 summer refill pace critical; Iranian disruption tightens LNG sourcing for EU replenishment.",
+    "Renewable share 27.07% (18th pctile, -32.82% daily swing) \u2014 thermal plant call surging; coal data stale (133 days old) but 8th pctile suggests merit-order compression favours gas-to-power.",
+    "EU methane exemptions in play \u2014 structural bear for long-term carbon; eases gas producer constraints and supports lower TTF ceiling."
   ],
   "scenarios": {
     "base": {
-      "de_power_pct": "-2 to +2%",
-      "summary": "Renewables stabilize; GB and Clean Spark drift lower on normalization; TTF flat around 43\u201344 EUR/MWh.",
-      "ttf_pct": "-1 to +1%"
+      "de_power_pct": "-5 to +2%",
+      "summary": "Hormuz patrol reassurance holds; Libya talks ongoing; storage refill gradual; renewables recovering. GB premium moderates to 80th pctile.",
+      "ttf_pct": "-2 to +1%"
     },
     "downside": {
-      "de_power_pct": "-4 to -6%",
-      "summary": "Hormuz reopening progresses; Libya ramp accelerates; Renewable output rebounds; storage refill pace eases pressure.",
-      "ttf_pct": "-5 to -8%"
+      "de_power_pct": "-12 to -8%",
+      "summary": "Iran ceasefire agreed; Libya ramps materially; renewables recovery accelerates; storage refill exceeds seasonal. Geopolitical unwind.",
+      "ttf_pct": "-6 to -3%"
     },
     "horizon": "24-72h",
     "upside": {
-      "de_power_pct": "+6 to +10%",
-      "summary": "Hormuz closure escalation confirmed; Iran supply disruption widens; LNG scarcity premium reasserts on TTF and power.",
-      "ttf_pct": "+8 to +12%"
+      "de_power_pct": "+10 to +18%",
+      "summary": "Hormuz chokepoint worsens or Iran escalates; Libya pipeline delays; LNG cargoes diverted. Geopolitical premium reasserts.",
+      "ttf_pct": "+8 to +15%"
     }
   },
   "themes": [
-    "GB Power extended despite daily weakness; thermal baseload tight",
-    "Clean Spark elevated on low renewables (18th-pctile); coal deeply depressed (8th-pctile)",
-    "Storage 12.4 pp below seasonal; Hormuz geopolitical tail-risk reasserts",
-    "Methane rule relaxation and Libya LNG alternatives weigh on TTF"
+    "Iran Hormuz disruption, Libya gas hedge, Libyan supply ramp uncertainty",
+    "Storage deficit pressuring summer refill, renewables cliff lifting thermal merit order",
+    "EU methane exemptions loosening fossil supply constraints, bearish long-term carbon"
   ],
   "top_drivers": [
-    "Renewables collapsed 41.24% on week; 18th-pctile pushes thermal baseload (Clean Spark 92nd-pctile) and GB power to 93rd-pctile.",
-    "Storage at 11th-pctile (34.5%, 12.4 pp below seasonal) tightens gas-to-power arbitrage; TTF flat but curve flattening risk if refill pace disappoints.",
-    "Geopolitical: Hormuz reopening risk (Trump admin push) + Libya supply ramp weaken TTF bear case; Iran war premium may unwind if corridor restores flows."
+    "Iran Hormuz disruption lifting GB Power to 93rd percentile (126.73 EUR/MWh); US Hormuz patrol reassurance moderates immediate shock but Libya ramp-up remains key uncertainty.",
+    "Renewable collapse to 18th percentile (-32.82% daily) and storage 12.4 pp below seasonal forcing thermal coal/gas merit-order compression; clean spark 92nd pctile reflects gas-to-power premium.",
+    "EU methane exemptions softening fossil producer constraints, structurally bearish EUA (26th pctile) and long-term carbon carry; supports lower TTF ceiling if supply-easing succeeds."
   ],
-  "top_takeaway": "GB Power at 93rd-percentile despite -8% selloff; Clean Spark 92nd-pctile on tight renewable supply; Hormuz reopening risk and Libya gas pivotal for TTF bear case.",
+  "top_takeaway": "GB Power at 93rd percentile on Iran supply disruption; storage 12 pp below seasonal; renewable share collapsed to 18th percentile. Geopolitical premium dominant.",
   "watchlist": [
     {
-      "metric": "Hormuz shipping corridor status",
-      "why": "Trump administration mobilization to reopen Strait; reopening would ease Persian Gulf LNG/crude flows, bearish for European power and TTF."
+      "metric": "Hormuz strait reopening / Iran ceasefire timeline",
+      "why": "Direct transmission to global LNG/crude flows; Iran supply loss underpins GB 93rd-pctile premium and DE Power +31.87% monthly."
     },
     {
-      "metric": "Libya-Italy gas pipeline utilization and production ramp",
-      "why": "Italy seeking alternative to Iran-war-disrupted ME supply; slow ramp-up limits TTF support but signals regional diversification."
+      "metric": "Libya gas field ramp-up and pipeline export rate to Italy",
+      "why": "Marginal LNG source for EU; success reduces geopolitical premium on TTF; failure extends Hormuz-driven supply tightness."
     },
     {
-      "metric": "EU methane rule exemption implementation scope",
-      "why": "Relaxed enforcement under US pressure reduces compliance cost for gas producers; marginal bear for TTF but signals EU-US policy shift."
+      "metric": "EU methane exemption issuance (oil firms, energy security carve-out)",
+      "why": "Signals climate-rule relaxation trajectory; structural bearish for EUA (26th pctile, -1.47% daily); eases fossil marginal cost."
     },
     {
-      "metric": "Renewable share reversal / weather drivers",
-      "why": "27% of load (18th-pctile); 41.24% weekly drop drove Clean Spark to 92nd-pctile; any rebound flattens thermal merit order."
+      "metric": "Storage refill pace through June\u2013July (German, French facilities)",
+      "why": "11th pctile deficit + Iranian LNG shortage forces higher marginal cost curve; summer power risk if refill underperforms seasonal +4pp pace."
+    },
+    {
+      "metric": "US tariff escalation on EU energy sector",
+      "why": "Trump tariff threat noted in watchlist; potential retaliatory impact on LNG import economics, refined product flows, power pricing."
     }
   ],
-  "watchlist_dated": [
-    {
-      "day_label": "Fri",
-      "name": "Hormuz corridor operational status update",
-      "why": "Trump administration actively mobilizing; any confirmed reopening eases LNG/crude flows, bearish power and TTF."
-    }
-  ]
+  "watchlist_dated": []
 }

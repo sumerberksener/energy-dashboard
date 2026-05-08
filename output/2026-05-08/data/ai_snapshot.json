@@ -162,17 +162,17 @@
     }
   },
   "news": {
-    "geopolitics_summary": "Iran war disrupting Hormuz; EU weakening methane rules under US pressure; Libya gas pivotal for Italy supply.",
+    "geopolitics_summary": "Iran war disrupting Hormuz transit; EU weakening methane rules under US pressure; Libya gas explored as Iran-war supply hedge.",
     "themes": [
       {
         "commodity": "gas",
-        "headline": "Italy seeks Libyan gas to offset Iran war supply shortages",
+        "headline": "Italy pursues Libyan gas to offset Iran war supply disruption",
         "horizon": "weeks",
         "link": "https://www.politico.eu/article/italy-libya-gas-replace-supply-shortage-iran-war/",
         "polarity": "bearish-power",
         "source": "Politico EU Energy",
-        "tag": "supply",
-        "why_it_matters": "Direct Italy-Libya pipeline offers alternative to disrupted ME/Iran flows; production ramp-up difficult, limiting TTF support. Key for southern EU supply curve."
+        "tag": "geopolitics",
+        "why_it_matters": "Iran conflict constrains global LNG/pipeline supply; Libya pipeline to Italy offers marginal relief but ramp-up uncertain. TTF upside risk if Libyan production stalls; downside if it succeeds materially."
       },
       {
         "commodity": "gas",
@@ -182,44 +182,44 @@
         "polarity": "bearish-power",
         "source": "Politico EU Energy",
         "tag": "policy",
-        "why_it_matters": "Relaxed methane rules reduce compliance cost for gas producers; lower incentive to invest in efficiency/flaring reduction. Marginal bear for gas prices but signals EU-US energy policy shift."
-      },
-      {
-        "commodity": "gas",
-        "headline": "EU permits energy-security exemptions for methane rule breaches by oil firms",
-        "horizon": "weeks",
-        "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/",
-        "polarity": "neutral",
-        "source": "Politico EU Energy",
-        "tag": "policy",
-        "why_it_matters": "Discretionary exemptions on 'security grounds' weaken regulatory certainty; may lower marginal cost of non-compliant gas supply in crisis. Indirect TTF/power support if supply eases."
+        "why_it_matters": "Relaxed methane regulation reduces operational friction for fossil fuel suppliers, tilting marginal gas sources (including US LNG) more competitive. Long-term structural bearish for carbon price, neutral-to-bullish for gas availability."
       },
       {
         "commodity": "crude",
-        "headline": "US strategic petroleum reserve releases 17.5M barrels since late March",
+        "headline": "US Defense confirms Hormuz strait mission separate from Iran war",
         "horizon": "weeks",
-        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67625",
+        "link": "https://www.politico.com/news/2026/05/05/hegseth-hormuz-iran-oil-blockade-00906313",
         "polarity": "bearish-power",
-        "source": "EIA Today in Energy",
-        "tag": "macro",
-        "why_it_matters": "SPR releases suppress crude; lower oil prices reduce fuel-switching risk (coal-to-gas) in European power plants. Indirect downward pressure on European power curve."
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "US reassurance on Hormuz security reduces immediate crude/LNG supply shock. Lower crude risk \u2192 lower thermal plant marginal cost \u2192 bearish for EU power curve, supportive of gas-to-power switching."
       },
       {
-        "commodity": "mixed",
-        "headline": "Trump administration mobilizes to reopen Strait of Hormuz for shipping",
-        "horizon": "days",
-        "link": "https://www.politico.com/news/2026/05/03/trump-free-ships-strait-of-hormuz-00904160",
+        "commodity": "gas",
+        "headline": "EU considers exempting oil firms from methane rules on energy security grounds",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/",
         "polarity": "bearish-power",
-        "source": "Politico",
-        "tag": "geopolitics",
-        "why_it_matters": "Hormuz reopening would ease crude/LNG flows from Persian Gulf; lower oil and LNG prices reduce EU power generation costs and storage urgency. Supports bear case for power curve."
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Pre-disruption exemptions favour supply-maximization over climate compliance, easing gas producer constraints. Supports lower EU gas price ceiling; long EUA carry risk if this signals broader climate-rule relaxation."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Lufthansa faces \u20ac1.7bn annual cost from jet fuel shortage crisis",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/lufthansa-stopover-jet-fuel-emergency/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Jet fuel scarcity signals refined product market stress tied to Iran disruptions; indirect upward pressure on overall crude/refining costs. Not direct power/gas, but reflects broader European energy-cost shock from geopolitical supply loss."
       }
     ],
     "watchlist": [
-      "Hormuz shipping corridor status updates; impact on LNG/crude flows to NW Europe.",
-      "Libya production ramp timeline and Italy pipeline utilization rate.",
-      "EU methane rule exemption guidelines implementation date and scope.",
-      "US-EU trade negotiations (tariff threat) and energy-sector carve-outs."
+      "Hormuz strait reopening timeline and impact on crude/condensate flows to Europe.",
+      "EU methane rule enforcement guidance and exemption issuance schedule.",
+      "Libya gas field ramp-up rate and pipeline export capacity to Italy.",
+      "Trump tariff threats and EU retaliatory stance (energy sector impact TBD)."
     ]
   }
 }
