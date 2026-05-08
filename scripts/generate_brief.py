@@ -107,6 +107,21 @@ def fetch_all() -> dict[str, pd.DataFrame]:
     primaries["ttf_jkm_spread"] = derived_metrics.ttf_jkm_spread(
         primaries["ttf"], primaries["jkm"], eurusd
     )
+    # Cross-border physical flows — Cobblestone's "Power Transportation"
+    # pillar. Three corridors that read continental flow direction.
+    for from_zone, to_zone in fetchers.INTERCONNECTORS:
+        key = f"flow_{from_zone.lower().replace('_lu','').replace('_','')}_" \
+              f"{to_zone.lower().replace('_lu','').replace('_','')}"
+        primaries[key] = _safe_fetch(
+            key, fetchers.fetch_cross_border_flow,
+            os.environ.get("ENTSOE_TOKEN"), from_zone, to_zone,
+        )
+    # Weather forecasts at regional centroids — Energy Meteorologists pillar.
+    for label, (lat, lon) in fetchers.WEATHER_LOCATIONS.items():
+        primaries[f"weather_{label.lower()}"] = _safe_fetch(
+            f"weather_{label.lower()}", fetchers.fetch_weather_forecast,
+            lat, lon, label,
+        )
     return primaries
 
 
@@ -272,7 +287,7 @@ def _row(metric, df) -> str:
     p = stats.percentile_rank(df)
     as_of = df.index.max().strftime("%Y-%m-%d")
     if stats.is_stale(df, STALE_AFTER_DAYS):
-        as_of = f"{as_of} ⚠ STALE"
+        as_of = f"{as_of} (STALE)"
 
     if metric.delta_unit == "abs":
         d1 = stats.daily_change_abs(df)
@@ -334,7 +349,7 @@ def build_markdown(
                 f"{stats.days_since_latest(df)}d old)"
             )
     if stale:
-        L(f"> ⚠ **Data-freshness caveat**: {'; '.join(stale)}. "
+        L(f"> **Data-freshness caveat:** {'; '.join(stale)}. "
           f"Numbers below should be read with this in mind.")
         L("")
 
@@ -353,6 +368,24 @@ def build_markdown(
     else:
         L(f"_Rule-based fallback ({narrative.error or 'no API key'}). Set "
           f"`ANTHROPIC_API_KEY` to enable Claude-generated narratives._")
+
+    # Temperature-anomaly footer — Cobblestone's "Energy Meteorologists" pillar.
+    # Five-day forward mean anomaly at the DE/FR/GB centroids vs 5-yr seasonal
+    # normal. Single line keeps the page-count tight.
+    try:
+        from analysis.weather import summarise_anomaly
+        anomaly = summarise_anomaly({
+            "DE": data.get("weather_de"),
+            "FR": data.get("weather_fr"),
+            "GB": data.get("weather_gb"),
+        })
+    except Exception as e:
+        log.info("weather anomaly unavailable: %s", e)
+        anomaly = {}
+    if anomaly:
+        triplet = " / ".join(f"{r} {v:+.1f}°C" for r, v in anomaly.items())
+        L(f"_Next-5d temperature anomaly — {triplet} vs 5-yr seasonal normal "
+          f"(Open-Meteo)._")
     L("")
 
     # Section 2 — Monitor metrics table (top row + fundamentals separately)
@@ -505,11 +538,30 @@ def build_markdown(
         gap = stats.latest(de) - stats.latest(gb)
         side = "DE premium" if gap > 0 else "GB premium"
         L(f"**DE − GB spread** at {gap:+.2f} EUR/MWh ({side}) — drives interconnector flow direction.")
+    # Cross-border net flows — surfaces Cobblestone's "Power Transportation"
+    # pillar in a single line. Three corridors, each in GWh/day net.
+    flow_corridors = [
+        ("DE↔FR", data.get("flow_de_fr"), "DE export", "FR export"),
+        ("GB↔FR", data.get("flow_gb_fr"), "GB export", "FR export"),
+        ("NL↔DE", data.get("flow_nl_de"), "NL export", "DE export"),
+    ]
+    flow_parts: list[str] = []
+    for label, df, pos_side, neg_side in flow_corridors:
+        v = stats.latest(df) if df is not None else None
+        if v is None or pd.isna(v):
+            continue
+        gwh = v / 1000.0
+        flow_parts.append(f"{label} {gwh:+.1f} GWh ({pos_side if gwh > 0 else neg_side})")
+    if flow_parts:
+        L(f"**Cross-border net flows (Power Transportation):** "
+          f"{'; '.join(flow_parts)}.")
     L("")
 
     # Anchor on spark spread alone — the Clean Dark / coal-in-the-money assertion
-    # depended on coal data that's currently 130+ days stale. Mention coal only as
-    # a fundamentals input that is not currently usable. (See task #3 in TASKS.md.)
+    # depended on coal data that's currently 130+ days stale. The freshness banner
+    # at the top of the brief already disclaims the coal staleness; not repeating
+    # it here saves a line for the page-count fit. Mention coal only as a
+    # fundamentals input that is not currently usable. (See task #3 in TASKS.md.)
     if cs is not None and not cs.empty:
         cs_l = stats.latest(cs)
         cs_sig = signal_for("clean_spark", cs)
@@ -517,10 +569,6 @@ def build_markdown(
           f"Bridge from gas + carbon fundamentals to gas-fired economics; sustained positive "
           f"spark = TTF moves transmit directly into the power curve.")
         L("")
-        if coal is not None and not coal.empty and stats.is_stale(coal, STALE_AFTER_DAYS):
-            L(f"_Dark spread suppressed: coal data {stats.days_since_latest(coal)}d old "
-              f"(last {coal.index.max().date()}); spark alone carries the regime read._")
-            L("")
 
     # Single curve sentence covering DA + all five forward tenors. Merging
     # the prior "DA / Cal+1 (model)" line and the multi-tenor strip into one
@@ -548,9 +596,25 @@ def build_markdown(
           f"— see Methodology.")
         L("")
 
-    chart = next((c for c in charts if c.name.startswith("01_")), None)
-    if chart:
-        L(f"![Clean Spreads]({chart.relative_to(today_dir)})")
+    # Two charts side-by-side at 49% width each — fits both on one row in
+    # the rendered PDF and satisfies the brief's "supported by numbers AND
+    # at least two generated charts" requirement without breaking the
+    # ≤3-page budget. Picked the two thesis-anchoring charts: clean spreads
+    # (the gas + carbon → power bridge) and gas vs storage (gas tightness).
+    chart_clean = next((c for c in charts if c.name.startswith("01_")), None)
+    chart_gas = next((c for c in charts if c.name.startswith("02_")), None)
+    if chart_clean and chart_gas:
+        L(
+            f"![Clean spreads vs spark/dark]({chart_clean.relative_to(today_dir)})"
+            f"{{width=49%}} "
+            f"![TTF gas vs EU storage]({chart_gas.relative_to(today_dir)})"
+            f"{{width=49%}}"
+        )
+        L("")
+    elif chart_clean or chart_gas:
+        # Fall back gracefully — if one chart is missing, embed the one we have.
+        single = chart_clean or chart_gas
+        L(f"![Chart]({single.relative_to(today_dir)})")
         L("")
 
     # This-week-ahead release calendar — static recurring events from
@@ -615,6 +679,29 @@ def build_markdown(
     # no per-headline table; full structured news in output/<date>/data/ai_news_themes.json).
     L("## 6 · Today's themes")
     L("")
+
+    # Weather watch — surface up to 2 detected events as inline lines.
+    # Mirrors Cobblestone's "Energy Meteorologists" pillar; full event list +
+    # per-region trading implications live on the dashboard's News tab.
+    try:
+        from analysis.weather import detect_weather_events
+        weather_forecasts = {
+            "DE": data.get("weather_de"),
+            "FR": data.get("weather_fr"),
+            "GB": data.get("weather_gb"),
+        }
+        weather_forecasts = {k: v for k, v in weather_forecasts.items()
+                             if v is not None and not v.empty}
+        weather_events = detect_weather_events(weather_forecasts, max_events=2)
+    except Exception as e:
+        log.info("weather event detection unavailable: %s", e)
+        weather_events = []
+    if weather_events:
+        L("**Weather watch (next 7d)**")
+        for ev in weather_events:
+            L(f"- **{ev.headline}** — {ev.magnitude_label}. {ev.trading_implication}")
+        L("")
+
     if news_themes is not None and (news_themes.geopolitics_summary or news_themes.themes):
         # Backdrop sentence intentionally suppressed in the rendered note —
         # the TL;DR + narrative paragraph in §1 already carry the geopolitical
@@ -624,13 +711,12 @@ def build_markdown(
             for w in news_themes.watchlist[:2]:
                 L(f"- {w}")
             L("")
-        n_themes = len(news_themes.themes) if news_themes.themes else 0
-        if news_themes.source.startswith("claude"):
-            L(f"_{n_themes} structured themes in `data/ai_news_themes.json` — "
-              f"**{news_themes.model}** from {news_themes.n_headlines_in} headlines._")
-        else:
+        # AI-extraction audit footer suppressed in the rendered note (the
+        # full structured output lives in `data/ai_news_themes.json`); §1
+        # already discloses the AI model. Saves a line for the page fit.
+        if not news_themes.source.startswith("claude"):
             L(f"_News themes via rule-based fallback ({news_themes.error or 'no API key'})._")
-        L("")
+            L("")
     else:
         L("> _News theme extraction unavailable today. Structured output lands in "
           "`data/ai_news_themes.json` when live._")
@@ -666,12 +752,18 @@ def render_pdf(md_path: Path) -> Path | None:
         log.info("pandoc not on PATH; skipping PDF render. Install via `brew install pandoc`.")
         return None
     pdf_path = md_path.with_suffix(".pdf")
+    # Arial Unicode MS covers every non-ASCII glyph the brief uses (arrows,
+    # Greek delta, plus-minus, proper minus, en/em dash, middle dot, °, §, £).
+    # Helvetica falls back to tofu-boxes on those; STIX Two Text misses arrows.
+    # Arial Unicode MS ships with every macOS install and covers all of them
+    # without requiring an extra LaTeX package.
     cmd = [
         "pandoc", str(md_path),
         "-o", str(pdf_path),
         "--pdf-engine=xelatex",
         "-V", "geometry:margin=0.5in",
-        "-V", "mainfont=Helvetica",
+        "-V", "mainfont=Arial Unicode MS",
+        "-V", "monofont=Menlo",
         "-V", "fontsize=9pt",
         f"--resource-path={md_path.parent}",
     ]
