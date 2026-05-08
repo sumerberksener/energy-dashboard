@@ -522,41 +522,31 @@ def build_markdown(
               f"(last {coal.index.max().date()}); spark alone carries the regime read._")
             L("")
 
-    # Forward curve from cal1_seasonality_projection — the brief's "Day-Ahead to curve"
-    # output. Model-derived (see Methodology), not a market quote.
-    if (de is not None and not de.empty and cal1 is not None and not cal1.empty):
-        de_l = stats.latest(de)
-        cal1_l = stats.latest(cal1)
-        spread = de_l - cal1_l
-        if spread > 1:
-            curve_regime = "**backwardation**"
-        elif spread < -1:
-            curve_regime = "**contango**"
-        else:
-            curve_regime = "flat"
-        L(f"**DA / Cal+1 (model)** at {de_l:.2f} / {cal1_l:.2f} EUR/MWh; spread "
-          f"{spread:+.2f} EUR/MWh — {curve_regime}. Front absorbs storage and outage shocks; "
-          f"Cal+1 reflects the structural carbon-and-fuel trajectory. Cal+1 here is a "
-          f"backward-looking seasonality projection — see Methodology.")
+    # Single curve sentence covering DA + all five forward tenors. Merging
+    # the prior "DA / Cal+1 (model)" line and the multi-tenor strip into one
+    # sentence saves ~3 lines and keeps the brief at <=3 pages once the new
+    # UKA + LNG + risk-framing additions land. Source: ui/curve.py helpers
+    # so the desk note and the dashboard strip stay in lockstep.
+    try:
+        from ui.curve import collect_strip_points, classify_curve_regime
+        da_lvl, strip_pts = collect_strip_points(data)
+    except Exception as e:
+        log.info("curve strip unavailable for desk note: %s", e)
+        da_lvl, strip_pts = None, []
+    if da_lvl is not None and strip_pts:
+        shape_label = classify_curve_regime(da_lvl, strip_pts)
+        ordered = [("DA", da_lvl), *strip_pts]
+        tenor_labels = " → ".join(lab for lab, _ in ordered)
+        tenor_levels = " / ".join(f"{lv:.0f}" for _, lv in ordered)
+        # DA-vs-Cal+1 spread named explicitly so the regime call is auditable.
+        cal1_pt = next((lv for lab, lv in strip_pts if lab == "Cal+1"), None)
+        spread_clause = ""
+        if cal1_pt is not None:
+            spread_clause = f" (DA −Cal+1 spread {da_lvl - cal1_pt:+.0f} EUR/MWh)"
+        L(f"**Curve shape:** {tenor_labels} = {tenor_levels} EUR/MWh — "
+          f"**{shape_label}**{spread_clause}. Forwards are seasonality projections "
+          f"— see Methodology.")
         L("")
-
-        # Multi-tenor curve-shape sentence — DA → W+1 → M+1 → Q+1 → Cal+1 → Cal+2.
-        # All forwards are seasonality projections (model, not market quotes); the
-        # methodology footer carries the caveat. Source: ui/curve.py helpers so the
-        # sentence and the dashboard strip stay in lockstep.
-        try:
-            from ui.curve import collect_strip_points, classify_curve_regime
-            da_lvl, strip_pts = collect_strip_points(data)
-        except Exception as e:
-            log.info("curve strip unavailable for desk note: %s", e)
-            da_lvl, strip_pts = None, []
-        if da_lvl is not None and strip_pts:
-            shape_label = classify_curve_regime(da_lvl, strip_pts)
-            ordered = [("DA", da_lvl), *strip_pts]
-            tenor_labels = " → ".join(lab for lab, _ in ordered)
-            tenor_levels = " / ".join(f"{lv:.0f}" for _, lv in ordered)
-            L(f"**Curve shape:** {tenor_labels} = {tenor_levels} EUR/MWh — {shape_label}.")
-            L("")
 
     chart = next((c for c in charts if c.name.startswith("01_")), None)
     if chart:
