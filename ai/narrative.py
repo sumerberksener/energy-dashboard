@@ -23,7 +23,7 @@ from typing import Any
 import anthropic
 import pandas as pd
 
-from ai.client import AIClient, NoAPIKey, load_prompt
+from ai.client import AIClient, NARRATE_MODEL, NoAPIKey, load_prompt
 from analysis import stats
 from analysis.signals import morning_brief, signal_for
 from config import METRICS_BY_KEY, STALE_AFTER_DAYS
@@ -251,8 +251,18 @@ def _generate_two_pass(
             )
 
     # --- Pass 2: narrate ----
+    # Cost-aware tiering: the narrate pass writes the executive summary the
+    # trader reads first. We use NARRATE_MODEL (default Sonnet) here even
+    # though the extract pass uses the cheaper Haiku — empirically Sonnet
+    # produces measurably better operational call-outs on the same JSON
+    # input (see README §AI workflow). A separate client is instantiated
+    # so the audit log captures the model swap on the narrate record.
     narrate_input = json.dumps(extract, indent=2, sort_keys=True)
-    narrate_result = ai_client.generate(
+    if NARRATE_MODEL != ai_client.model:
+        narrate_client = AIClient(model=NARRATE_MODEL, log_dir=ai_client.log_dir)
+    else:
+        narrate_client = ai_client
+    narrate_result = narrate_client.generate(
         system_prompt=narrate_system,
         user_message=narrate_input,
         purpose="narrate",

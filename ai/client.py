@@ -32,7 +32,17 @@ import anthropic
 log = logging.getLogger(__name__)
 
 
-DEFAULT_MODEL = "claude-haiku-4-5"
+# Cost-aware model tiering — see README §AI workflow for rationale.
+# Haiku is the default for structured-JSON tasks (extract pass, news themes
+# extraction) where reasoning over the schema dominates and prose polish
+# doesn't matter. Sonnet upgrades the *narrate* pass that writes the desk
+# note's executive summary — the first thing a trader reads — where prose
+# quality, sentence variety, and operational call-outs measurably improve
+# over Haiku per side-by-side eval. Costs: Haiku ~$0.003/call, Sonnet
+# ~$0.01/call. Daily-cron impact: a few cents per month.
+# Both overrideable via env vars for one-line rollback / experimentation.
+DEFAULT_MODEL = os.environ.get("CLAUDE_DEFAULT_MODEL", "claude-haiku-4-5")
+NARRATE_MODEL = os.environ.get("CLAUDE_NARRATE_MODEL", "claude-sonnet-4-6")
 DEFAULT_MAX_TOKENS = 1024
 
 

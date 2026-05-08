@@ -202,10 +202,10 @@ fetchers + derived ──▶ structured snapshot (JSON) ──▶ Claude (Haiku 
                                       (auditable input)            (auditable I/O)
 ```
 
-- **Versioned prompt**: `ai/prompts/desk_note_v1.md`. Hard rules: cite only numbers from input, no forecasts, 3–5 sentences ending on power-curve implication.
-- **Logged**: every call appends a record to `ai/logs/<date>.jsonl` with timestamp, model, prompt SHA-256, full prompt + response text, token usage, latency, and any errors. The log is the auditable record of what the AI said and why.
+- **Versioned prompts**: `ai/prompts/extract_v1.md` (strict JSON), `ai/prompts/narrate_v1.md` (prose grounded only in extract JSON), `ai/prompts/news_themes_v1.md` (RSS theme extraction). Hard rules across all three: cite only numbers / news supplied in input, no forecasts, no invented facts.
+- **Cost-aware model tiering**: the *narrate* pass that writes the desk-note executive summary uses **Claude Sonnet 4.6** — empirically (side-by-side eval at submission time) it produces sharper operational call-outs and explicit regime-change triggers vs Haiku on the same JSON input. The *extract* pass and the *news-themes* pass use **Claude Haiku 4.5** — these are structured-JSON tasks where Haiku is fine and cost matters because they're called more often. Cost per daily run: ~$0.01 (one Sonnet narrate call) + ~$0.006 (two Haiku calls) ≈ $0.30/month for the cron. Both models are overrideable via `CLAUDE_NARRATE_MODEL` / `CLAUDE_DEFAULT_MODEL` env vars for one-line rollback.
+- **Logged**: every call appends a record to `ai/logs/<date>.jsonl` with timestamp, model, prompt SHA-256, full prompt + response text, token usage, latency, and any errors. The log is the auditable record of what the AI said and why — and which model produced it.
 - **Graceful fallback**: when `ANTHROPIC_API_KEY` is missing or the API call fails, a deterministic rule-based narrative is emitted from the same snapshot. The pipeline always produces output.
-- **Cost**: with Haiku 4.5 input/output pricing, a daily call is fractions of a cent. Prompt caching is _not_ used because the system prompt sits below Haiku's 4096-token cacheable prefix; documented in `ai/client.py` for future scaling.
 
 ## Automation
 
