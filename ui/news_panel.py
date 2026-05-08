@@ -7,10 +7,19 @@ summary, the watchlist, and a faint footer with the source/model audit.
 Cached at the dashboard layer so navigation between tabs is instant after
 the first fetch. The expensive bit is the Claude theme-extraction call;
 RSS fetching is fast.
+
+Also surfaces a "Weather watch" block at the top — detected weather events
+(cold snaps / heat domes / wind droughts / storms) with trader-facing
+trading implications. Mirrors Cobblestone's named "Energy Meteorologists"
+team function: a meteorologist would surface these to the desk in the
+same shape — type, region, window, severity, transmission mechanism.
 """
 from __future__ import annotations
 
 import streamlit as st
+
+from analysis import weather as weather_analysis
+from data import cache as data_cache
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
@@ -29,6 +38,81 @@ def _load_news():
 
     nt = extract_themes(headlines)
     return nt, headlines.to_dict(orient="records"), None
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def _load_weather_events():
+    """Pull regional forecasts and run rule-based event detection. Cached 1h."""
+    from data import fetchers
+    forecasts: dict = {}
+    for label in fetchers.WEATHER_LOCATIONS:
+        df = data_cache.get_weather_forecast(label)
+        if df is not None and not df.empty:
+            forecasts[label] = df
+    if not forecasts:
+        return [], "No weather forecasts available."
+    events = weather_analysis.detect_weather_events(forecasts, max_events=4)
+    return events, None
+
+
+_SEVERITY_CHIP = {
+    "severe":   ("ai-chip risk", "severe"),
+    "moderate": ("ai-chip theme", "moderate"),
+    "mild":     ("ai-chip", "mild"),
+}
+
+_TYPE_LABEL = {
+    "cold_snap":    "Cold snap",
+    "heat_dome":    "Heat dome",
+    "wind_drought": "Wind drought",
+    "storm":        "Storm",
+}
+
+
+def _render_weather_watch() -> None:
+    """Render the weather-events watch list above the geopolitics block."""
+    events, error = _load_weather_events()
+    st.markdown("#### Weather watch — next 7 days")
+    st.caption(
+        "Rule-based detection from Open-Meteo forecasts at the DE / FR / GB "
+        "centroids, compared to a 5-yr seasonal normal. Events are surfaced "
+        "with trading implications mapped per region; the desk decides — "
+        "this is meteorological pattern recognition, not a recommendation."
+    )
+
+    if error:
+        st.info(error)
+        st.markdown("")
+        return
+
+    if not events:
+        st.success(
+            "No active weather events in the next 7 days — temperatures "
+            "and winds are within seasonal norms across DE / FR / GB."
+        )
+        st.markdown("")
+        return
+
+    for ev in events:
+        chip_class, sev_label = _SEVERITY_CHIP.get(
+            ev.severity, ("ai-chip", ev.severity)
+        )
+        type_label = _TYPE_LABEL.get(ev.type, ev.type)
+        with st.container(border=True):
+            cols = st.columns([3, 1])
+            with cols[0]:
+                st.markdown(
+                    f"**{ev.headline}**  \n"
+                    f"<span class='ai-chip theme'>{type_label}</span> "
+                    f"<span class='ai-chip'>{ev.region}</span> "
+                    f"<span class='{chip_class}'>{sev_label}</span> "
+                    f"<span class='ai-chip'>{ev.magnitude_label}</span>",
+                    unsafe_allow_html=True,
+                )
+                st.write(ev.trading_implication)
+            with cols[1]:
+                st.caption("Source: Open-Meteo + 5y archive")
+    st.markdown("")
 
 
 def _polarity_chip_class(polarity: str) -> str:
@@ -52,6 +136,10 @@ def render() -> None:
         "plausible link to EU power-curve risk."
     )
     st.markdown("")
+
+    # Weather watch first — meteorological events are typically the most
+    # actionable short-term driver and deserve top-of-tab placement.
+    _render_weather_watch()
 
     with st.spinner("Fetching news + extracting themes..."):
         nt, raw_headlines, error = _load_news()

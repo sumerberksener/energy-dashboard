@@ -9,7 +9,7 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from analysis import stats
+from analysis import stats, weather as weather_analysis
 from analysis.signals import cross_market_tag
 
 
@@ -109,7 +109,67 @@ def render(data: dict[str, pd.DataFrame]) -> None:
     else:
         cells.append(_cell("TTF − JKM (LNG)", "—", "muted"))
 
-    # 7. Cross-market regime tag
+    # 7. Cross-border (Power) — Cobblestone's "Power Transportation" pillar.
+    # Pick the largest-magnitude corridor of the three (DE-FR / GB-FR / NL-DE)
+    # and surface its net direction + magnitude. Single chip, full triplet
+    # is a tooltip if the user hovers (Streamlit's basic chip doesn't
+    # support tooltips natively, so we put the triplet in the value text).
+    corridors = [
+        ("DE→FR", data.get("flow_de_fr")),
+        ("GB→FR", data.get("flow_gb_fr")),
+        ("NL→DE", data.get("flow_nl_de")),
+    ]
+    triplet_parts: list[str] = []
+    largest_label, largest_val = None, None
+    for label, df in corridors:
+        v = stats.latest(df) if df is not None else None
+        if v is None or pd.isna(v):
+            continue
+        # Convert MWh/day → GWh for chip readability.
+        gwh = v / 1000.0
+        triplet_parts.append(f"{label} {gwh:+.1f}")
+        if largest_val is None or abs(gwh) > abs(largest_val):
+            largest_label, largest_val = label, gwh
+    if largest_val is not None:
+        # Direction colour: green for DE/NL exporting (continental supply
+        # spilling west/north), red for GB pulling in (UK premium / scarcity).
+        if largest_label == "GB→FR":
+            klass = "red" if largest_val < 0 else ""
+        else:
+            klass = "green" if largest_val > 0 else "red"
+        cells.append(_cell(
+            "Cross-border (Power)",
+            " · ".join(triplet_parts) + " GWh",
+            klass,
+        ))
+    else:
+        cells.append(_cell("Cross-border (Power)", "—", "muted"))
+
+    # 8. Weather (5d anomaly) — Cobblestone's "Energy Meteorologists" function.
+    # Mean 5-day forward temperature anomaly at DE / FR / GB centroids.
+    # Cold anomaly = red (heating-demand bullish for power & gas);
+    # warm anomaly = green (bearish for thermal call); both >|2°C| = active.
+    forecasts = {
+        "DE": data.get("weather_de"),
+        "FR": data.get("weather_fr"),
+        "GB": data.get("weather_gb"),
+    }
+    anomaly = weather_analysis.summarise_anomaly(
+        {k: v for k, v in forecasts.items() if v is not None and not v.empty}
+    )
+    if anomaly:
+        triplet = " / ".join(f"{r} {a:+.1f}" for r, a in anomaly.items())
+        # Pick dominant region by magnitude for the colour cue.
+        dominant_region = max(anomaly, key=lambda r: abs(anomaly[r]))
+        dominant = anomaly[dominant_region]
+        klass = "red" if dominant < -1 else ("green" if dominant > 1 else "")
+        cells.append(_cell(
+            "Weather (5d anom)", f"{triplet} °C", klass
+        ))
+    else:
+        cells.append(_cell("Weather (5d anom)", "—", "muted"))
+
+    # 9. Cross-market regime tag
     tag = cross_market_tag(data)
     if tag:
         short = tag.split(":")[0]
