@@ -1,36 +1,25 @@
 {
-  "aggregate_brief": "Today's standouts: GB Power \u2014 93th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 92th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low.",
+  "aggregate_brief": "Today's standouts: GB Power \u2014 93th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 92th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 12.5 pp below the 5-yr seasonal average.",
   "freshness": {
-    "any_stale": true,
-    "stale_metrics": [
-      {
-        "as_of": "2025-12-26",
-        "days_old": 133,
-        "key": "coal"
-      },
-      {
-        "as_of": "2025-12-31",
-        "days_old": 128,
-        "key": "clean_dark"
-      }
-    ]
+    "any_stale": false,
+    "stale_metrics": []
   },
   "metrics": {
     "clean_dark": {
-      "as_of": "2025-12-31",
+      "as_of": "2026-05-08",
       "available": true,
-      "daily_change_abs": -0.56,
-      "days_old": 128,
+      "daily_change_abs": 1.93,
+      "days_old": 0,
       "delta_unit": "EUR/MWh",
-      "extension_50d_sigma": -0.42,
+      "extension_50d_sigma": 1.28,
       "headline": "Within typical range",
-      "is_stale": true,
-      "latest": 27.95,
-      "monthly_change_abs": 8.67,
+      "is_stale": false,
+      "latest": 107.85,
+      "monthly_change_abs": 33.29,
       "name": "Clean Dark",
-      "percentile_rank_5y": 50.0,
+      "percentile_rank_5y": 78.0,
       "unit": "EUR/MWh",
-      "weekly_change_abs": 11.63
+      "weekly_change_abs": 77.08
     },
     "clean_spark": {
       "as_of": "2026-05-08",
@@ -49,20 +38,20 @@
       "weekly_change_abs": 78.9
     },
     "coal": {
-      "as_of": "2025-12-26",
+      "as_of": "2026-05-07",
       "available": true,
-      "daily_change_pct": -0.57,
-      "days_old": 133,
+      "daily_change_pct": -0.07,
+      "days_old": 1,
       "delta_unit": "pct",
-      "extension_50d_sigma": 0.18,
-      "headline": "8th-percentile of 5-yr range \u2014 historically low",
-      "is_stale": true,
-      "latest": 96.0,
-      "monthly_change_pct": -0.1,
+      "extension_50d_sigma": -1.29,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 10.94,
+      "monthly_change_pct": -2.34,
       "name": "Coal",
-      "percentile_rank_5y": 8.0,
+      "percentile_rank_5y": 36.0,
       "unit": "USD/t",
-      "weekly_change_pct": 0.08
+      "weekly_change_pct": -0.26
     },
     "de_power": {
       "as_of": "2026-05-08",
@@ -113,36 +102,36 @@
       "weekly_change_pct": 22.64
     },
     "renewable_share": {
-      "as_of": "2026-05-07",
+      "as_of": "2026-05-08",
       "available": true,
-      "daily_change_pct": -32.82,
-      "days_old": 1,
+      "daily_change_pct": 37.34,
+      "days_old": 0,
       "delta_unit": "pct",
-      "extension_50d_sigma": -1.18,
+      "extension_50d_sigma": -0.67,
       "headline": "Within typical range",
       "is_stale": false,
-      "latest": 27.07,
-      "monthly_change_pct": -15.03,
+      "latest": 37.18,
+      "monthly_change_pct": 30.67,
       "name": "Renewables",
-      "percentile_rank_5y": 18.0,
+      "percentile_rank_5y": 40.0,
       "unit": "% of load",
-      "weekly_change_pct": -41.24
+      "weekly_change_pct": -44.65
     },
     "storage": {
-      "as_of": "2026-05-07",
+      "as_of": "2026-05-08",
       "available": true,
-      "daily_change_pct": 0.73,
-      "days_old": 1,
+      "daily_change_pct": 0.35,
+      "days_old": 0,
       "delta_unit": "pct",
-      "extension_50d_sigma": 2.15,
-      "headline": "12.4 pp below the 5-yr seasonal average",
+      "extension_50d_sigma": 2.07,
+      "headline": "12.5 pp below the 5-yr seasonal average",
       "is_stale": false,
-      "latest": 34.51,
-      "monthly_change_pct": 16.2,
+      "latest": 34.63,
+      "monthly_change_pct": 15.74,
       "name": "EU Storage",
       "percentile_rank_5y": 11.0,
       "unit": "% full",
-      "weekly_change_pct": 4.22
+      "weekly_change_pct": 3.75
     },
     "ttf": {
       "as_of": "2026-05-07",
@@ -162,64 +151,64 @@
     }
   },
   "news": {
-    "geopolitics_summary": "Iran war disrupting Hormuz transit; EU weakening methane rules under US pressure; Libya gas explored as Iran-war supply hedge.",
+    "geopolitics_summary": "Iran war disrupts Middle East energy; EU weakens methane rules under US pressure; Hormuz strait access contested\u2014upside risk to EU gas and power via LNG/crude.",
     "themes": [
       {
         "commodity": "gas",
-        "headline": "Italy pursues Libyan gas to offset Iran war supply disruption",
+        "headline": "Italy seeks Libyan gas to offset Iran war supply shortages",
         "horizon": "weeks",
         "link": "https://www.politico.eu/article/italy-libya-gas-replace-supply-shortage-iran-war/",
         "polarity": "bearish-power",
         "source": "Politico EU Energy",
         "tag": "geopolitics",
-        "why_it_matters": "Iran conflict constrains global LNG/pipeline supply; Libya pipeline to Italy offers marginal relief but ramp-up uncertain. TTF upside risk if Libyan production stalls; downside if it succeeds materially."
+        "why_it_matters": "Direct pipeline Italy\u2013Libya could ease supply tension, lowering TTF risk. Libya ramp-up difficult; limited near-term relief. Signals EU scramble for non-Russian, non-ME sources."
       },
       {
         "commodity": "gas",
-        "headline": "EU Commission weakens methane enforcement rules under US pressure",
-        "horizon": "months",
+        "headline": "EU weakens methane enforcement rules under US pressure",
+        "horizon": "weeks",
         "link": "https://www.politico.eu/article/under-us-pressure-eu-softens-climate-superpollutant-methane-rules/",
-        "polarity": "bearish-power",
+        "polarity": "neutral",
         "source": "Politico EU Energy",
         "tag": "policy",
-        "why_it_matters": "Relaxed methane regulation reduces operational friction for fossil fuel suppliers, tilting marginal gas sources (including US LNG) more competitive. Long-term structural bearish for carbon price, neutral-to-bullish for gas availability."
+        "why_it_matters": "Loosened methane rules reduce supply-side cost burden on EU importers (esp. LNG); indirect bearish for power via cheaper gas input. Regulatory uncertainty on future carbon/climate stringency."
       },
       {
         "commodity": "crude",
-        "headline": "US Defense confirms Hormuz strait mission separate from Iran war",
-        "horizon": "weeks",
-        "link": "https://www.politico.com/news/2026/05/05/hegseth-hormuz-iran-oil-blockade-00906313",
+        "headline": "Trump mobilises naval force to clear Strait of Hormuz blockade",
+        "horizon": "days",
+        "link": "https://www.politico.com/news/2026/05/03/trump-free-ships-strait-of-hormuz-00904160",
         "polarity": "bearish-power",
-        "source": "Politico EU Energy",
+        "source": "Politico",
         "tag": "geopolitics",
-        "why_it_matters": "US reassurance on Hormuz security reduces immediate crude/LNG supply shock. Lower crude risk \u2192 lower thermal plant marginal cost \u2192 bearish for EU power curve, supportive of gas-to-power switching."
+        "why_it_matters": "US intervention to restore Hormuz transit reduces crude supply shock premium; lower oil prices ease power generation fuel-switch costs. TTF upside risk from oil-to-gas arb compression."
       },
       {
         "commodity": "gas",
-        "headline": "EU considers exempting oil firms from methane rules on energy security grounds",
+        "headline": "EU floats energy-security exemptions from methane compliance rules",
         "horizon": "weeks",
         "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/",
-        "polarity": "bearish-power",
+        "polarity": "neutral",
         "source": "Politico EU Energy",
         "tag": "policy",
-        "why_it_matters": "Pre-disruption exemptions favour supply-maximization over climate compliance, easing gas producer constraints. Supports lower EU gas price ceiling; long EUA carry risk if this signals broader climate-rule relaxation."
+        "why_it_matters": "Pre-emptive energy-security exemptions weaken methane cap enforcement; eases supply costs for gas producers. Indirect bearish on power via cheaper marginal gas; signals regulatory flexibility."
       },
       {
         "commodity": "crude",
-        "headline": "Lufthansa faces \u20ac1.7bn annual cost from jet fuel shortage crisis",
-        "horizon": "months",
+        "headline": "Lufthansa faces \u20ac1.7bn annual jet fuel crisis cost impact",
+        "horizon": "weeks",
         "link": "https://www.politico.eu/article/lufthansa-stopover-jet-fuel-emergency/",
         "polarity": "neutral",
         "source": "Politico EU Energy",
         "tag": "supply",
-        "why_it_matters": "Jet fuel scarcity signals refined product market stress tied to Iran disruptions; indirect upward pressure on overall crude/refining costs. Not direct power/gas, but reflects broader European energy-cost shock from geopolitical supply loss."
+        "why_it_matters": "Signals sustained tight refined-product markets (jet kerosene). Indirect: high refinery margins may drive crude demand, supporting oil prices and fuel-switch risk to gas in power sector."
       }
     ],
     "watchlist": [
-      "Hormuz strait reopening timeline and impact on crude/condensate flows to Europe.",
-      "EU methane rule enforcement guidance and exemption issuance schedule.",
-      "Libya gas field ramp-up rate and pipeline export capacity to Italy.",
-      "Trump tariff threats and EU retaliatory stance (energy sector impact TBD)."
+      "Hormuz naval operation success/failure\u2014confirms or denies crude supply re-opening (days).",
+      "EU methane rules finalization & exemption scope (weeks).",
+      "Libya gas ramp-up timeline vs. near-term demand (weeks\u2013months).",
+      "Iran war escalation\u2014direct pipeline / LNG route risk (ongoing)."
     ]
   }
 }
