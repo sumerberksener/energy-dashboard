@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran war drives EU fossil fuel cost surge; Russia shadow fleet sanctions escalate; Libya gas pivot signals supply chain disruption risk.",
+  "themes": [
+    {
+      "headline": "Italy seeks Libyan gas to offset Iran war supply disruption",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Direct TTF risk. Iran war disrupts traditional supply; Libya ramp-up capacity-constrained. Near-term gas availability tightens, pushing power generation input costs higher and squeezing Cal+1 spreads.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/italy-libya-gas-replace-supply-shortage-iran-war/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU sanctions blitz on Russia shadow fleet, banks, military suppliers",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Tightens Russian energy trade channels; reduces Urals crude and gas export optionality, raising LNG arb premium for NW Europe. Indirect: supports TTF through reduced Russian LNG competition and crude-to-power fuel-switch economics.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-vladimir-putin-shadow-fleet-target-eu-sanctions/?utm_source=RSS_Feed&utm_medium=RSS_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Portugal accelerates fossil fuel phase-out after Iran war cost spike",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "neutral",
+      "why_it_matters": "Policy signal: Iran war cost shock drives renewable acceleration in EU. Supports long-term structural bearish-power (more wind/solar capacity). Near-term: demonstrates political urgency around energy security, could fast-track grid investment and capacity auctions.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/portugal-to-halve-fossil-fuel-use-over-next-10-years-minister-maria-da-graca-carvalho-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU Commission weakens methane enforcement rules under US pressure",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Regulatory relief for oil/gas operators lowers abatement cost. May marginally increase gas supply and reduce TTF. Combined with draft exemptions for 'energy security,' weakens carbon/methane discipline and caps upside on EUA from tightened scope.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/under-us-pressure-eu-softens-climate-superpollutant-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Lufthansa braces for €1.7bn annual jet fuel cost impact",
+      "source": "Politico EU Energy",
+      "tag": "macro",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Indirect: jet fuel crisis (kerosene link to crude/distillate) signals sustained distillate tightness. High transport fuel costs pressurize power-sector fuel procurement and grid operating costs; may shift demand toward lower-cost marginal units.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/lufthansa-stopover-jet-fuel-emergency/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "Libyan gas production ramp timeline and pipeline integrity to Italy—critical for TTF curve May–Jun.",
+    "EU methane rule exemptions finalization (energy security carve-out)—may unlock marginal gas supply.",
+    "France Hormuz security mission scope—potential impact on Middle East oil/LNG export routes.",
+    "Portugal renewables capacity auction schedule—signal of EU-wide fast-track policy."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

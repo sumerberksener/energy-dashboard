@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU Commission weakens methane enforcement rules under US pressure; energy-security exemptions drafted for gas operators.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Regulatory relief lowers operator abatement cost and marginal gas supply cost; reduces TTF floor and caps upside on EUA from tightened scope."
+  },
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (136 days old) and Clean Dark as of 2025-12-31 (131 days old); rankings and trends from these metrics should not be treated as current intraday signals.",
+  "risk_flags": [
+    "Storage at 35% (12.4pp below 5-yr seasonal) with refill pace critical to H2 power curve stability.",
+    "Libya gas ramp capacity-constrained; Iran war creates direct TTF supply gap with weeks-horizon tightness.",
+    "EU methane rule weakening may unlock marginal gas supply but signals policy volatility around energy-security carve-outs.",
+    "Coal at 96 USD/t (8th pctile) structurally uncompetitive vs. renewables (49% of load) and carbon; thermal dispatch compressed."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+1-3%",
+      "summary": "Gas supply tightens on Iran disruption and Libya ramp constraints; storage refill steady; renewables 50% load.",
+      "ttf_pct": "+2-5%"
+    },
+    "downside": {
+      "de_power_pct": "-4-8%",
+      "summary": "Libya gas ramp accelerates; Russia methane exemptions unlock supply; mild weather and high renewables soften demand.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "Libya pipeline outage or Iran Hormuz escalation; storage refill stalls; thermal call extends sharply into summer.",
+      "ttf_pct": "+12-18%"
+    }
+  },
+  "themes": [
+    "Geopolitical gas squeeze: Iran disruption + Libya capacity constraints + Russia sanctions",
+    "Storage deficit driving seasonal refill urgency and thermal call extension",
+    "Coal historically cheap (8th pctile) but structurally sidelined by renewables and policy acceleration"
+  ],
+  "top_drivers": [
+    "Iran war + Libya supply ramp constraints tighten nearterm gas availability; TTF weeks-horizon risk, Cal+1 power squeeze.",
+    "EU storage 12pp below seasonal average (35% full) drives urgency on refill pace; thermal generation call extended into summer.",
+    "Russia shadow-fleet sanctions reduce Urals/LNG export optionality; supports TTF and raises NW Europe LNG arb premium.",
+    "Coal at 8th pctile (96 USD/t) structurally sidelined; renewables at 49% of load and policy acceleration (Portugal phase-out) compress thermal dispatch."
+  ],
+  "top_takeaway": "Iran war tightens gas supply via Libya pivot and shadow-fleet sanctions; EU storage 12pp below seasonal average amplifies near-term Cal+1 power risk.",
+  "watchlist": [
+    {
+      "metric": "Libya gas ramp to Italy",
+      "why": "Supply substitution mechanism for Iran war disruption; pipeline integrity and production ramp timeline drive TTF curve May\u2013Jun."
+    },
+    {
+      "metric": "EU methane exemptions finalization",
+      "why": "Energy-security carve-out may release marginal Russian/non-OPEC gas; regulatory relief lowers abatement cost and TTF floor."
+    },
+    {
+      "metric": "Storage refill pace (35% full, 12pp below seasonal)",
+      "why": "Thermal generation margin and Cal+1 power spread shape; slow refill extends summer demand signal and coal-to-gas arb breakeven."
+    },
+    {
+      "metric": "France Hormuz security mission scope",
+      "why": "Middle East oil/LNG export route security; indirect TTF and Brent-to-power fuel-switch elasticity via LNG arb premium."
+    },
+    {
+      "metric": "Portugal renewables capacity auction schedule",
+      "why": "Signal of EU-wide fast-track renewable acceleration post-Iran shock; bearish long-term power structural and merit-order displacement."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "EU methane rule exemptions finalization",
+      "why": "Energy-security carve-out completion drives gas supply and TTF floor signal"
+    }
+  ]
+}
