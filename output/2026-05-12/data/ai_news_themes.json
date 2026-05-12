@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran war disrupts Middle East energy supplies; EU softens climate rules under US pressure; Russia sanctions escalate.",
+  "themes": [
+    {
+      "headline": "Italy pursues Libyan gas to offset Iran war supply disruptions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Iran war has triggered EU gas cost spikes. Italy ramping Libyan pipeline supply signals scarcity premium persists; direct TTF upside risk if Libya production lags demand.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/italy-libya-gas-replace-supply-shortage-iran-war/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU weakens methane enforcement rules; oil companies gain exemption scope",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Looser methane rules reduce compliance cost for gas producers, potentially supporting supply availability and moderating gas prices; indirect EUA pressure via lower abatement incentives.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-floats-making-it-easy-for-oil-companies-to-break-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Putin's shadow fleet faces fresh EU sanctions; banking and military targets",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Escalated sanctions on Russian oil/gas transport infrastructure risk further curtailment of EU supply flows, supporting TTF and power curve premium via fuel-switch hedging.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-vladimir-putin-shadow-fleet-target-eu-sanctions/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Portugal halves fossil fuel targets over decade post-Iran war cost surge",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Accelerated EU decarbonization policy response to energy price shock; increased renewable deployment reduces long-term fossil fuel baseload, supporting green power and EUA floor pricing.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/portugal-to-halve-fossil-fuel-use-over-next-10-years-minister-maria-da-graca-carvalho-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Wind power faces anti-renewable campaigns mirroring US political pressure in EU",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Political opposition to wind delays deployment and grid integration, reducing renewable baseload; supports fossil-fuel and power-curve upside if renewables capacity growth stalls.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/trump-style-anti-windmill-crusade-surges-in-europe/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU methane enforcement guidelines final implementation date & exemption scope clarification.",
+    "Libya gas production ramp-up timeline vs. Italy import target (supply/demand mismatch risk).",
+    "Further Russia sanctions announcements; shadow fleet/banking channel closures impact LNG & pipeline flows.",
+    "Portuguese fossil fuel phase-out regulatory roadmap; renewable capacity auction schedules 2026–2027."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
