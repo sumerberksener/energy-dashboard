@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran war drives EU energy cost spikes; shadow fleet sanctions tighten. Ukraine conflict spilling into Mediterranean. US pressure on EU methane rules.",
+  "themes": [
+    {
+      "headline": "EU doubles down on carbon tax for international flights",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bullish-power",
+      "why_it_matters": "Expanding EUA-like mechanisms to aviation boosts EU carbon price floor; supports power sector merit-order switching away from coal/gas via indirect carbon cost pass-through.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-doubles-down-on-carbon-tax-on-international-flights/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Putin's shadow fleet faces fresh EU sanctions blitz",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Shadow fleet sanctions restrict Russian oil exports; tightens global supply, raises Brent crude and LNG arb value. Higher energy input costs pressure EU power spreads and gas demand.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-vladimir-putin-shadow-fleet-target-eu-sanctions/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Iran war pushes Portugal to halve fossil fuel use over 10 years",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Iran war triggered oil/gas cost spike; Portugal fast-tracks renewables deployment. Signals EU demand destruction and accelerated fossil fuel phase-out; bearish for power/gas prices via reduced load and coal-to-renewables switching.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/portugal-to-halve-fossil-fuel-use-over-next-10-years-minister-maria-da-graca-carvalho-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Under US pressure, EU softens enforcement of methane regulation",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Weakened methane enforcement allows higher Russian/non-OECD gas leakage; reduces structural cost of competing gas vs. renewables. Negative for EU power margin support from gas rationing risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/under-us-pressure-eu-softens-climate-superpollutant-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "NATO backs renewables as solution to energy security despite US skepticism",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "NATO endorsement of renewables as strategic energy pillar signals EU acceleration of wind/solar capex and grid integration. Structural headwind for thermal power spread margins.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/nato-backs-renewables-solution-energy-security-despite-us-skepticism/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU shadow fleet sanctions implementation timeline and scope expansion.",
+    "Portugal renewables capex announcements; wind/solar auction calendars.",
+    "US–EU methane rule coordination; import tariff escalation risk.",
+    "Iran war oil/gas supply disruption updates; LNG nomination changes."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

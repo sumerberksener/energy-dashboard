@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU doubles down on carbon tax for international flights; expands EUA-like mechanisms to aviation sector.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Aviation carbon tax expansion raises EU carbon cost floor and signals sectoral broadening; indirect boost to power merit-order switching away from coal/gas via embedded carbon cost pass-through."
+  },
+  "freshness_caveat": "",
+  "risk_flags": [
+    "Storage at 35.57% (12th percentile, 12.5pp below seasonal) \u2014 refill pace into summer will set H2 thermal dispatch risk.",
+    "GB Power at 134.29 EUR/MWh (96th percentile) \u2014 tight interconnector capacity and Irish wind volatility driving premium; downside if renewables persist at 90th percentile.",
+    "Iran war and shadow fleet sanctions tighten Brent/LNG arb, but Portugal-style demand destruction and NATO renewables acceleration create offsetting structural headwind.",
+    "US pressure on EU methane enforcement reduces gas scarcity premium; weakens coal-to-gas switching incentive."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-3% to +2%",
+      "summary": "Renewables ease off 90th percentile; storage refill continues gradual pace; GB-DE spread normalizes slightly as interconnector headroom returns.",
+      "ttf_pct": "-1% to +2%"
+    },
+    "downside": {
+      "de_power_pct": "-8% to -15%",
+      "summary": "Renewables sustain 90th percentile; Portugal-style demand destruction accelerates across EU; storage refill accelerates. Thermal margin compresses.",
+      "ttf_pct": "-3% to -7%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+6% to +12%",
+      "summary": "Shadow fleet sanctions broaden or Iran conflict escalates; LNG arb widens, Brent rallies. Storage refill slows; summer thermal call reasserts despite renewables.",
+      "ttf_pct": "+4% to +8%"
+    }
+  },
+  "themes": [
+    "GB power premium and renewables suppression",
+    "Storage deficit and summer thermal upside",
+    "Geopolitical risk (Iran, shadow fleet sanctions) vs. demand destruction (Portugal fossil phase-out)",
+    "Carbon policy expansion (aviation EUA, methane softening)"
+  ],
+  "top_drivers": [
+    "GB Power at 96th percentile driven by tight interconnector capacity and Irish wind tail-risk, offset partly by renewables at 90th percentile suppressing overall DA merit order.",
+    "Storage deficit (12.5pp below seasonal) will determine summer thermal call intensity; currently masked by high renewables but refill pace is the pivot.",
+    "Geopolitical layering (Iran war, shadow fleet sanctions) pushes Brent and LNG arb, but EU demand destruction (Portugal fossil phase-out, NATO renewables push, methane enforcement softening) creates structural headwind to sustained price support."
+  ],
+  "top_takeaway": "GB Power at 96th percentile amid 90th-percentile renewables; storage 12.5pp below seasonal average creates summer thermal call asymmetry despite Iran-war geopolitical risk.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace (weekly)",
+      "why": "Currently 12.5pp below seasonal average \u2014 early summer refill trajectory will signal whether thermal call extends into H2 or renewables persistence caps upside."
+    },
+    {
+      "metric": "GB-DE Power spread (daily)",
+      "why": "GB at 96th percentile vs. DE at 72nd percentile \u2014 interconnector constraint and Irish wind volatility are the delta; watch for mean-reversion if GB renewables spike."
+    },
+    {
+      "metric": "Shadow fleet sanctions scope and timeline (news-driven)",
+      "why": "EU implementation details will determine Brent-to-TTF LNG arb pass-through; Russia crude supply tightness supports energy cost floor but demand destruction offsets."
+    },
+    {
+      "metric": "Portugal renewables capex and auction calendar (announcement-driven)",
+      "why": "Iran-war-triggered fossil phase-out signals EU demand destruction; timing and volume will shape H2 gas/power load destruction narrative."
+    },
+    {
+      "metric": "TTF (front-month daily)",
+      "why": "Currently 62nd percentile (46.68 EUR/MWh), flat monthly \u2014 storage deficit should support summer floor, but methane enforcement softening and demand-side policy underpin ceiling."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "EU methane rule enforcement coordination",
+      "why": "US pressure ongoing; clarification on timeline and tariff escalation risk will reset gas supply scarcity premium."
+    }
+  ]
+}
