@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran war driving EU energy policy acceleration; fresh sanctions on Russian shadow fleet; US-EU trade tensions on climate rules weakening.",
+  "themes": [
+    {
+      "headline": "Portugal fast-tracks fossil fuel halving; Iran war spikes oil/gas costs",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Iran war cost spike triggering front-loaded EU decarbonisation demand. Accelerates gas-to-power switch & renewable build; short-term support for coal & gas spark spreads as policy risk rises on fuel costs.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/portugal-to-halve-fossil-fuel-use-over-next-10-years-minister-maria-da-graca-carvalho-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU doubles down on carbon tax for international flights amid US opposition",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Strengthens EU ETS scarcity narrative & carbon floor; signals EU resolve on climate despite Trump pressure. Minor direct power impact; flags regulatory momentum driving cap tightening.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-doubles-down-on-carbon-tax-on-international-flights/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU softens methane regulation enforcement under US pressure",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Weakens upstream emissions controls; could increase EU gas supply via reduced flaring penalties, easing TTF cost-floor pressure. Signals policy retreat on climate, reducing scarcity premiums on carbon.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/under-us-pressure-eu-softens-climate-superpollutant-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU sanctions blitz targets Putin's shadow fleet and Russia banks",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Restricts Russian oil export capacity; tightens LNG arb window into Europe. Supports crude & Brent; indirect upward pressure on EU generation cost via fuel switching and heating oil prices near heating season.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-vladimir-putin-shadow-fleet-target-eu-sanctions/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "NATO backs renewables for energy security despite US skepticism",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Signals NATO-wide renewable acceleration & decarbonisation mandates. Long-term supply-curve pressure on power; near-term risk of construction delays if anti-wind campaigns gain political traction in EU.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/nato-backs-renewables-solution-energy-security-despite-us-skepticism/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU methane enforcement rollback timeline and scope — desk-relevant for gas supply cost-floor.",
+    "Iran war oil/LNG price persistence — direct TTF arb & power spark spread trigger.",
+    "US-EU trade negotiations on climate rules — signals policy regime shifts affecting EUA floor.",
+    "Anti-wind campaign momentum across EU — construction risk for renewable capacity targets."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

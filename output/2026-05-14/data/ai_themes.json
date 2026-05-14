@@ -1,0 +1,64 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU doubles down on carbon tax for international flights; signals ETS scarcity resolve despite Trump pressure; methane enforcement rollback under US trade pressure weakens upstream emissions controls.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Aviation carbon tax tightens EUA floor; methane rollback eases upstream scarcity signal. Net effect: regulatory momentum mixed; EUA (31.68 EUR/t, 27th-percentile) vulnerable to policy regime shifts."
+  },
+  "freshness_caveat": "Coal data stale 139 days (as of 2025-12-26); clean dark stale 134 days (as of 2025-12-31). All other metrics current as of 2026-05-13/14. Coal and clean dark analysis discounted.",
+  "risk_flags": [
+    "Coal data stale (139 days old, 8th-percentile); clean dark stale (134 days); relying on May 14 clean spark & storage for regime signals.",
+    "Storage at 35.72% (12.7pp below 5-yr seasonal) \u2014 refill pace through summer sets H2 thermal scarcity; Iran war oil premium tightens LNG arb into Europe.",
+    "EU methane enforcement softening under US pressure contradicts carbon-tax tightening; signals policy volatility on emissions floor \u2014 EUA (27th-percentile, 31.68 EUR/t) at risk of further compression if rollback accelerates.",
+    "GB Power spike (+24.49% daily) vs. DE Power (141.19 EUR/MWh, 77th-percentile) \u2014 GB premium widening; watch for wind/constraint contagion into continental pricing."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Storage refill continues; Iran premium holds; methane rollback debate unresolved; clean spark extended.",
+      "ttf_pct": "+2\u20135%"
+    },
+    "downside": {
+      "de_power_pct": "-8\u201314%",
+      "summary": "Iran tensions ease, oil/LNG premia collapse; EU renewable output surges; methane rollback widens gas supply; storage refill accelerates.",
+      "ttf_pct": "-6\u201312%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12\u201318%",
+      "summary": "Iran conflict escalates or shadow-fleet sanctions tighten LNG supply; EU storage refill stalls; clean spark extends 95th-percentile.",
+      "ttf_pct": "+8\u201315%"
+    }
+  },
+  "themes": [
+    "Extreme clean spark with storage deficit",
+    "Geopolitical energy cost spike + policy contradiction",
+    "Carbon resolve vs. methane rollback mixed signal"
+  ],
+  "top_drivers": [
+    "Clean Spark at 91st-percentile (35.69 EUR/MWh) \u2014 gas tight vs. coal (8th-percentile, 96 USD/t stale) \u2014 merit order favours gas despite coal nominally cheapest in 5Y.",
+    "Storage 12.7pp below seasonal (35.72% full) \u2014 H2 refill margin compresses thermal call; Iran war sanctions on shadow fleet reduce LNG supply elasticity.",
+    "Policy contradiction: carbon tax on aviation + EU ETS resolve vs. methane enforcement softening \u2014 signals regime uncertainty; EUA (27th-percentile) vulnerable if rollback deepens."
+  ],
+  "top_takeaway": "Clean Spark at 91st-percentile (35.69 EUR/MWh) + storage 12.7pp below seasonal drives tight thermal regime; Iran war & sanctions accelerate EU decarbonisation demand but policy softening on methane weakens scarcity signals.",
+  "watchlist": [
+    {
+      "metric": "EU methane rule enforcement timeline",
+      "why": "Rollback under US pressure could ease upstream gas cost-floor; desk needs scope + effective date to model TTF supply shock."
+    },
+    {
+      "metric": "Iran war oil/LNG arb window",
+      "why": "Oil sanctions on shadow fleet tighten export capacity; direct transmission to TTF via LNG opportunity cost and generation fuel-switch economics."
+    },
+    {
+      "metric": "EU storage refill velocity",
+      "why": "At 12.7pp seasonal deficit (35.72% full); summer injection rate sets H2 thermal call and Cal+1 power curve shape."
+    },
+    {
+      "metric": "Anti-wind campaign traction in EU",
+      "why": "NATO renewable backing vs. construction-delay risk; affects 2026\u20132027 renewable supply curve and thermal baseload demand."
+    }
+  ],
+  "watchlist_dated": []
+}
