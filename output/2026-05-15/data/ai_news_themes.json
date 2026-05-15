@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran war elevates EU energy security concerns; Trump's unpredictability reshapes transatlantic dynamics; Russia shadow-fleet sanctions and Ukraine conflict persist.",
+  "themes": [
+    {
+      "headline": "Iran war prompts Portugal to halve fossil fuel use in decade",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Policy acceleration toward renewables on Iran war cost shock. Reduces European gas demand, pressuring TTF but strengthening renewable build-out; modestly bearish for gas, bullish for power grid decarbonization.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/portugal-to-halve-fossil-fuel-use-over-next-10-years-minister-maria-da-graca-carvalho-says/"
+    },
+    {
+      "headline": "EU doubles down on carbon tax for international flights",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Signals tightening EU ETS scope and carbon pricing ambition; extends carbon market reach to aviation. Supportive of EUA prices; marginal uplift to power via fuel-switch logic if aviation fuel constraints rise.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-doubles-down-on-carbon-tax-on-international-flights/"
+    },
+    {
+      "headline": "Putin's shadow fleet faces fresh EU sanctions blitz",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Sanctions on Russian oil export infrastructure may tighten crude supply, lifting Brent and reducing LNG arb flows to Europe. Higher fuel oil / gas-substitute demand offsets lower gas volumes; net bearish for power prices via fuel-cost pass-through.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-vladimir-putin-shadow-fleet-target-eu-sanctions/"
+    },
+    {
+      "headline": "Ukraine sea drones disrupt Russian oil exports, Greece protests escalation",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Shadow-fleet targeting tightens Russian crude flow to market. Brent upside risk; alternative fuel substitution (fuel oil, LNG) into EU increases, raising marginal thermal generation costs and power prices.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/ukraine-russia-athens-kyiv-relations-on-ice-after-sea-drone-incident/"
+    },
+    {
+      "headline": "Trump-style anti-windmill campaigns gain traction across Europe",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bullish-power",
+      "why_it_matters": "Political headwinds to EU renewable build-out via social-media disinformation. Slows wind deployment, tightening future clean power supply curve and supporting forward power prices (Cal+1, Cal+2).",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/trump-style-anti-windmill-crusade-surges-in-europe/"
+    }
+  ],
+  "watchlist": [
+    "EU shadow-fleet sanctions enforcement timeline and impact on Russian Urals export volumes.",
+    "Portugal fossil-fuel reduction legislative timetable; renewable auction schedule impact.",
+    "Iran war spillover effects on LNG pricing and North Africa supply route security.",
+    "Trump trade negotiations and EU \"European Preference\" industrial policy responses—subsidy / tariff risk."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

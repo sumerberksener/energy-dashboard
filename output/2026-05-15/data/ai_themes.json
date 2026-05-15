@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU doubles down on carbon tax for international flights; extends ETS scope and signals tightening carbon pricing ambition.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Aviation carbon-tax expansion broadens ETS footprint; signals EU commitment to carbon pricing depth; modest uplift to power via extended fuel-switch logic if aviation fuel constraints ripple into crude-to-power fuel arb."
+  },
+  "freshness_caveat": "Coal data stale (140 days old, as of 2025-12-26) and Clean Dark stale (135 days old, as of 2025-12-31) \u2014 merit-order and fuel-switch transparency degraded; rely on GB Power (93rd-percentile), Clean Spark (92nd-percentile), and storage deficit (13 pp below seasonal) for current regime signal.",
+  "risk_flags": [
+    "Storage at 35.85% (13 pp below seasonal) \u2014 refill pace will set July\u2013September thermal headroom and power curve shape.",
+    "GB Power 93rd-percentile (127.17 EUR/MWh) and Clean Spark 92nd-percentile (39.29 EUR/MWh) suggest supply-constrained or weather-driven tightness; coal data stale (140 days old) \u2014 merit order transparency gap.",
+    "Iran war and shadow-fleet sanctions create Brent upside tail; higher fuel oil / LNG substitution could extend thermal premium into Q3.",
+    "Trump anti-renewables rhetoric and political headwinds in Europe may delay wind build-out, supporting forward (Cal+1, Cal+2) power prices."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11-2%",
+      "summary": "Storage deficit sustains thermal dispatch; renewable policy acceleration gradual; Brent stable near $80\u201382/bbl.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-6-10%",
+      "summary": "Storage refill accelerates; Portugal policy enacted early, renewables oversupply grid; demand destruction offsets geopolitical premium.",
+      "ttf_pct": "-4-6%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "Shadow-fleet sanctions impact Russian Urals flows; Brent spikes to $85+, tightening LNG arb and fuel-oil substitution.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "Extreme GB and German power valuations; thermal in the money",
+    "Storage deficit pressures H2 refill; geopolitical risk premium embedded",
+    "Policy pivot to renewables vs. near-term fuel-switch regime",
+    "Shadow-fleet sanctions tighten Russian crude; Brent upside risk"
+  ],
+  "top_drivers": [
+    "Storage 13 pp below seasonal + Iran war policy pivot to renewables = tight gas regime but forward-looking demand destruction; near-term thermal call sustained by supply gap.",
+    "GB Power 93rd-percentile and Clean Spark 92nd-percentile reflect combined effect of storage deficit, potential weather tightness, and fuel-switch premium on high-carbon dispatch.",
+    "Shadow-fleet sanctions and Ukraine sea-drone escalation elevate Brent risk; higher crude lifts LNG arb and fuel-oil substitution, supporting EU thermal generation costs."
+  ],
+  "top_takeaway": "GB Power at 93rd-percentile and Clean Spark at 92nd-percentile signal fuel-switch regime; storage 13 pp below seasonal average underpins thermal call despite Iran-war policy acceleration toward renewables.",
+  "watchlist": [
+    {
+      "metric": "EU shadow-fleet sanctions enforcement",
+      "why": "Russian Urals export volume cuts lift Brent, triggering fuel-oil and LNG arb into EU; net bullish thermal and power generation cost."
+    },
+    {
+      "metric": "Storage refill pace (May\u2013Sep)",
+      "why": "At 13 pp deficit vs. seasonal norm; slow refill could force sustained gas demand destruction and/or extended thermal dispatch into summer."
+    },
+    {
+      "metric": "Portugal renewable auction schedule & fossil-fuel reduction legislation",
+      "why": "Iran-war policy acceleration; timing and capacity additions will signal Iberian grid decarbonization pace and impact on regional power prices."
+    },
+    {
+      "metric": "Brent / TTF arb and LNG flow reversals",
+      "why": "Shadow-fleet sanctions and Hormuz risk elevate crude; if Brent breaks above $85/bbl, LNG arb narrows and EU gas demand faces downside pressure."
+    },
+    {
+      "metric": "EUA (currently 31.98 EUR/tCO2, 30th-percentile)",
+      "why": "Aviation carbon-tax expansion signals ETS ambition; fuel-switch logic and industrial compliance timing could trigger repricing in H2 2026."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "Iran escalation updates / Hormuz transit risk",
+      "why": "Geopolitical flashpoint; direct LNG route constraint could spike Brent and TTF arb, forcing EU thermal premium higher."
+    }
+  ]
+}

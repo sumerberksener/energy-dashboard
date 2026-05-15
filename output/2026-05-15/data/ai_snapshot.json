@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 93th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 92th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 140,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 135,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 135,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-05-15",
+      "available": true,
+      "daily_change_abs": 52.01,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.42,
+      "headline": "92th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 39.29,
+      "monthly_change_abs": 64.39,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 92.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -0.44
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 140,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-05-15",
+      "available": true,
+      "daily_change_pct": 55.11,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.57,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 146.37,
+      "monthly_change_pct": 92.31,
+      "name": "DE Power",
+      "percentile_rank_5y": 78.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.42
+    },
+    "eua": {
+      "as_of": "2026-05-14",
+      "available": true,
+      "daily_change_pct": 0.95,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.35,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 31.98,
+      "monthly_change_pct": 3.73,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 30.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.28
+    },
+    "gb_power": {
+      "as_of": "2026-05-15",
+      "available": true,
+      "daily_change_pct": 9.41,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.88,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 127.17,
+      "monthly_change_pct": 6.21,
+      "name": "GB Power",
+      "percentile_rank_5y": 93.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 8.08
+    },
+    "renewable_share": {
+      "as_of": "2026-05-14",
+      "available": true,
+      "daily_change_pct": -2.81,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.06,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 49.33,
+      "monthly_change_pct": -23.11,
+      "name": "Renewables",
+      "percentile_rank_5y": 68.0,
+      "unit": "% of load",
+      "weekly_change_pct": 45.22
+    },
+    "storage": {
+      "as_of": "2026-05-13",
+      "available": true,
+      "daily_change_pct": 0.36,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.91,
+      "headline": "12.9 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 35.85,
+      "monthly_change_pct": 16.32,
+      "name": "EU Storage",
+      "percentile_rank_5y": 13.0,
+      "unit": "% full",
+      "weekly_change_pct": 3.24
+    },
+    "ttf": {
+      "as_of": "2026-05-14",
+      "available": true,
+      "daily_change_pct": 1.57,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.15,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 47.65,
+      "monthly_change_pct": 15.11,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 64.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 1.46
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Iran war elevates EU energy security concerns; Trump's unpredictability reshapes transatlantic dynamics; Russia shadow-fleet sanctions and Ukraine conflict persist.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Iran war prompts Portugal to halve fossil fuel use in decade",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/portugal-to-halve-fossil-fuel-use-over-next-10-years-minister-maria-da-graca-carvalho-says/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Policy acceleration toward renewables on Iran war cost shock. Reduces European gas demand, pressuring TTF but strengthening renewable build-out; modestly bearish for gas, bullish for power grid decarbonization."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EU doubles down on carbon tax for international flights",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-doubles-down-on-carbon-tax-on-international-flights/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Signals tightening EU ETS scope and carbon pricing ambition; extends carbon market reach to aviation. Supportive of EUA prices; marginal uplift to power via fuel-switch logic if aviation fuel constraints rise."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Putin's shadow fleet faces fresh EU sanctions blitz",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/russia-vladimir-putin-shadow-fleet-target-eu-sanctions/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Sanctions on Russian oil export infrastructure may tighten crude supply, lifting Brent and reducing LNG arb flows to Europe. Higher fuel oil / gas-substitute demand offsets lower gas volumes; net bearish for power prices via fuel-cost pass-through."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Ukraine sea drones disrupt Russian oil exports, Greece protests escalation",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/ukraine-russia-athens-kyiv-relations-on-ice-after-sea-drone-incident/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Shadow-fleet targeting tightens Russian crude flow to market. Brent upside risk; alternative fuel substitution (fuel oil, LNG) into EU increases, raising marginal thermal generation costs and power prices."
+      },
+      {
+        "commodity": "renewables",
+        "headline": "Trump-style anti-windmill campaigns gain traction across Europe",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/trump-style-anti-windmill-crusade-surges-in-europe/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Political headwinds to EU renewable build-out via social-media disinformation. Slows wind deployment, tightening future clean power supply curve and supporting forward power prices (Cal+1, Cal+2)."
+      }
+    ],
+    "watchlist": [
+      "EU shadow-fleet sanctions enforcement timeline and impact on Russian Urals export volumes.",
+      "Portugal fossil-fuel reduction legislative timetable; renewable auction schedule impact.",
+      "Iran war spillover effects on LNG pricing and North Africa supply route security.",
+      "Trump trade negotiations and EU \"European Preference\" industrial policy responses\u2014subsidy / tariff risk."
+    ]
+  }
+}
