@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US extends Russian oil sanctions waiver amid Strait of Hormuz tensions; EU-US trade negotiations ongoing; energy policy fragmentation risks from far-right opposition to renewables permitting.",
+  "themes": [
+    {
+      "headline": "US extends Russian oil sanctions waiver through June amid Hormuz tensions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Continued waiver suppresses Brent crude; lower crude → lower gas-to-coal switching, reduced TTF support. Strait closure risk keeps oil premium live, affecting LNG netback arbitrage to NW Europe.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/05/18/treasury-extends-russian-oil-sanctions-waiver-for-another-month-00926158?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Italy seeks energy carveout from EU fiscal rules framework",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "If granted, could unlock state support for gas storage, LNG import terminals, or renewable buildout. Fiscal flexibility = higher capex for energy infrastructure, reducing supply-side risk on Cal+1 power.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/giorgia-meloni-presses-ursula-von-der-leyen-for-energy-carveout-in-eu-spending-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Far-right coalition slows EU renewable permitting via environmental opposition",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bullish-power",
+      "why_it_matters": "Political delays to wind/solar buildout tighten European generation capacity, supporting long-term power prices and widening thermal dispatch margins. DA spreads and Cal+1 curves vulnerable if permitting grinds to halt.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europes-far-right-casts-itself-as-nature-defender-in-push-to-slow-down-renewables/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US industrial natural gas demand hits record highs through 2027",
+      "source": "EIA Today in Energy",
+      "tag": "demand",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Rising US industrial gas consumption reduces LNG export availability to Europe; tightens global LNG supply. Higher US demand → lower netbacks to NW Europe, reducing LNG arbitrage incentive; TTF upside capped.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67686"
+    },
+    {
+      "headline": "EU–US trade deal negotiations advance amid auto tariff deadline pressure",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Resolution of auto tariff threat stabilizes macro risk backdrop for European power and gas; reduces currency/trade-war volatility. Indirect: lower macro uncertainty supports demand-sensitive gas bull markets (heating season prep).",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-tiptoes-toward-approving-us-trade-deal/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "US Russian oil sanctions waiver renewal decision (June deadline); Strait of Hormuz escalation risk.",
+    "EU–Italy fiscal rule carveout negotiation outcome; energy capex impact.",
+    "EU renewable permitting reform progress; political delays to wind/solar capacity.",
+    "US LNG export volumes; industrial demand elasticity in H2 2026."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

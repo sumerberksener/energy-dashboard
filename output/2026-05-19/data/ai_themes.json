@@ -1,0 +1,66 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data is 144 days old (as of 26 Dec 2025) and Clean Dark is 139 days old (as of 31 Dec 2025); both snapshots predate the current metrics window and may not reflect current global spot prices. EU Storage, TTF, EUA, and power (DE/GB) are current as of 17\u201319 May 2026.",
+  "risk_flags": [
+    "Coal data is 144 days old (as of 26 Dec 2025); 8th-percentile signal may not reflect current global spot.",
+    "EU storage at 36.56% (13.5 pp below 5-yr seasonal) with only 2 days of data freshness; refill pace into summer will determine H2 power curve steepness.",
+    "US industrial gas demand at record highs through 2027 tightens LNG export pool to Europe; TTF upside capped by lower netback incentive.",
+    "Far-right political opposition to renewable permitting in Europe risks multi-month buildout delays; DA thermal margins could widen further if wind/solar capacity slips."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Gas-to-coal inversion persists; storage deficit sustains elevated thermal merit; LNG arb muted by US demand and sanctions.",
+      "ttf_pct": "+2-5%"
+    },
+    "downside": {
+      "de_power_pct": "-3-6%",
+      "summary": "US sanctions waiver extended and Hormuz tensions ease; crude-gas linkage weakens; EU storage refill accelerates; thermal call retreats.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5-8%",
+      "summary": "Hormuz escalation or Strait closure risk spikes; Brent rallies, lifting TTF netback and gas-to-coal spread wider; storage refill pace disappoints.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Gas-to-coal inversion extreme; thermal merit order compressed",
+    "EU storage deficit and LNG supply risk from US industrial demand",
+    "Renewable permitting delays tighten Cal+1 generation capacity",
+    "Hormuz/sanctions geopolitics cap LNG netback and crude support"
+  ],
+  "top_drivers": [
+    "Clean Spark at 95th percentile reflects extreme gas-to-coal inversion; merit order heavily biased toward thermal dispatch.",
+    "EU storage 13.5 pp below seasonal average with slow refill pace into summer tightens H2 power fundamentals and widens Cal+1 curve.",
+    "US industrial gas demand surge and Russian oil sanctions waiver suppress LNG export availability and crude-gas linkage; TTF upside capped.",
+    "Far-right political opposition to renewable permitting delays EU wind/solar buildout; tightens generation capacity and sustains thermal margins."
+  ],
+  "top_takeaway": "Clean Spark at 95th percentile on gas-to-coal inversion; EU storage 13.5 pp below seasonal average tightens H2 power risk despite stale coal data and geopolitical overhang on LNG.",
+  "watchlist": [
+    {
+      "metric": "US Russian oil sanctions waiver",
+      "why": "June deadline renewal; Strait closure risk affects Brent-to-TTF crude-gas link and LNG netback arbitrage to NW Europe."
+    },
+    {
+      "metric": "EU\u2013Italy fiscal rule carveout",
+      "why": "If granted, unlocks state capex for gas storage and LNG terminals; reduces H2 supply-side risk and supports Cal+1 power curve."
+    },
+    {
+      "metric": "EU renewable permitting pace",
+      "why": "Political delays to wind/solar buildout tighten generation capacity and widen thermal dispatch margins into 2027; DA and curve shape vulnerable."
+    },
+    {
+      "metric": "US LNG export volumes and industrial elasticity",
+      "why": "Record high industrial demand reduces Europe-bound LNG; lower netback support caps TTF rally and shifts global supply competition."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Jun",
+      "name": "US Russian oil sanctions waiver renewal",
+      "why": "Determines Brent-to-TTF crude pass-through and LNG netback arbitrage floor for NW Europe through H2."
+    }
+  ]
+}
