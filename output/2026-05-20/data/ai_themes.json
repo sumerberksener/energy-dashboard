@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU renewable permitting liberalisation stalled by far-right\u2013green coalition; delays extend gas-dependency and lift ETS compliance demand through 2026\u201327.",
+    "polarity": "bullish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Slower renewable build extends thermal generation and gas dispatch; higher gas burn and coal avoidance increase EU power-sector ETS liability, supporting carbon price floor."
+  },
+  "freshness_caveat": "Coal data stale (145 days old, as of 2025-12-26) and clean-dark spread stale (140 days old, as of 2025-12-31). Fuel-switch analysis and coal merit-order signals cannot be verified without current refresh.",
+  "risk_flags": [
+    "EU storage at 36.7% (14th-percentile, 13.7pp below seasonal) \u2014 refill pace into summer will determine autumn/winter margin adequacy; TTF +28.6% monthly already reflects this tension.",
+    "GB power at 122.71 EUR/MWh (90th-percentile) vs DE power at 135.39 EUR/MWh (75th-percentile) \u2014 GB premium signals structural tightness; daily jump of +10.7% yesterday warrants watch for nuclear/wind supply disruption.",
+    "Coal data stale (145 days old at 96 USD/t, 8th-percentile) \u2014 cannot verify whether historical low has held or normalised; clean-dark spread also stale (140 days); fuel-switch signals unreliable until refresh.",
+    "US sanctions waiver extension and record US industrial gas demand into 2026\u201327 reduce NW Europe LNG import arbitrage; TTF +3.12% daily and +9.93% weekly suggest market already pricing in tighter LNG supply."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+1-3%",
+      "summary": "Storage deficit and LNG tightness persist; thermal margin underpins 130\u2013140 EUR/MWh DE power; TTF 50\u201355 EUR/MWh.",
+      "ttf_pct": "+2-5%"
+    },
+    "downside": {
+      "de_power_pct": "-6-10%",
+      "summary": "EU\u2013US trade deal reduces euro and industrial demand; renewables permitting surprise acceleration cuts gas call; mild weather slows storage draw.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "Hormuz escalation or Suez disruption tightens crude and LNG spot pricing; US sanctions waiver expires; record US gas demand accelerates NW Europe LNG squeeze.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Structural storage deficit and tight LNG arb into summer",
+    "GB premium widening as thermal baseload call rises",
+    "Geopolitical crude/supply tightness feeding fuel-switch economics",
+    "Renewable permitting delays extend gas dependency through 2026\u201327"
+  ],
+  "top_drivers": [
+    "EU storage deficit (13.7pp below seasonal, 36.7% full) forcing earlier thermal call and tightening summer refill timeline; TTF +28.6% monthly reflects this.",
+    "GB power premium (90th-percentile, +10.7% daily) signals acute baseload tightness; crude/LNG tightness from US sanctions waiver extension and record US gas demand supports fuel-switch margin.",
+    "Renewable permitting delays (far-right/green bloc coalition slowing EU liberalisation) extend gas-dependency into 2026\u201327 and lift structural TTF floor."
+  ],
+  "top_takeaway": "GB power at 90th-percentile, EU storage 13.7pp below seasonal norm, and crude/LNG tightness from US sanctions extension and record US gas demand support thermal generation; coal historically cheap but stale data limits conviction.",
+  "watchlist": [
+    {
+      "metric": "US Russian oil sanctions policy & Strait of Hormuz status",
+      "why": "Crude supply closure (Hormuz + extended waiver uncertainty) supports oil prices, drives fuel-switching away from gas and supports thermal generation merit in EU power stack."
+    },
+    {
+      "metric": "EU renewable permitting liberalisation (far-right/green bloc slowdown)",
+      "why": "Delays extend structural gas dependency into 2026\u201327; slower capacity build increases baseload reliance and upward pressure on TTF through medium term."
+    },
+    {
+      "metric": "EU\u2013US trade deal finalisation & Trump auto tariff decision",
+      "why": "Euro weakness and industrial growth headwinds from trade friction could suppress Q3\u2013Q4 EU power/gas demand and ease storage refill pressure."
+    },
+    {
+      "metric": "Italy's energy spending carveout outcome in EU fiscal rules",
+      "why": "If approved, Italian energy subsidies could influence regional power/gas pricing and signalling on EU-wide energy cost mitigation."
+    },
+    {
+      "metric": "Coal market refresh (data >140 days old)",
+      "why": "Historical 8th-percentile low at 96 USD/t needs current confirmation; fuel-switch analysis hinges on verifying whether coal margin has shifted or normalised."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "US sanctions policy or Hormuz closure update",
+      "why": "Crude supply signal cascades into LNG arb and EU fuel-switch economics within 24\u201348h."
+    },
+    {
+      "day_label": "TBD",
+      "name": "EU trade deal finalization vote",
+      "why": "EUR weakness / growth signal transmits to industrial demand and power/gas curves across summer."
+    }
+  ]
+}

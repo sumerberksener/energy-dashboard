@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US extends Russian oil sanctions waiver amid Strait of Hormuz closure; EU-US trade tensions persist; Middle East conflict pressures crude/energy supplies.",
+  "themes": [
+    {
+      "headline": "US extends Russian oil sanctions waiver into June amid supply pressure",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Crude supply tension (Hormuz closure, extended waiver) supports oil prices; high crude feeds fuel-switching demand away from gas, supporting EU power. Direct impact on gas-to-power margin and thermal generation merit.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/us-pause-russia-oil-sanctions-june-scott-bessent/"
+    },
+    {
+      "headline": "Meloni seeks energy spending flexibility carveout from EU fiscal rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "If approved, Italy gains fiscal room for energy subsidies/investment, potentially affecting European energy prices and competitive dynamics across power/gas markets. Signals ongoing EU energy cost pressure.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/giorgia-meloni-presses-ursula-von-der-leyen-for-energy-carveout-in-eu-spending-rules/"
+    },
+    {
+      "headline": "Far-right parties align with greens to slow EU renewables permitting liberalization",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delays to renewable build-out increase structural supply-tightness; slower capacity means higher baseload reliance and upward pressure on gas demand and power prices through 2026–27.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europes-far-right-casts-itself-as-nature-defender-in-push-to-slow-down-renewables/"
+    },
+    {
+      "headline": "EU and US near trade deal; auto tariffs threat remains contingent",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Trade uncertainty affects euro, cost of capital, and EU industrial competitiveness; weaker euro/growth headwinds could suppress demand for EU power and gas into summer.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-tiptoes-toward-approving-us-trade-deal/"
+    },
+    {
+      "headline": "US industrial natural gas consumption forecast to hit records in 2026–27",
+      "source": "EIA Today in Energy",
+      "tag": "demand",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Record US gas demand tightens global LNG availability, reducing US export volumes to Europe (NW Europe LNG arb squeeze); supports TTF via reduced supply arbitrage and higher LNG spot pricing.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67686"
+    }
+  ],
+  "watchlist": [
+    "G7 energy ministers' next meeting; further US sanctions policy announcements on Russian oil.",
+    "EU trade deal finalization vote; Trump auto tariff decision deadline.",
+    "Italy's energy spending carveout outcome in EU fiscal rule negotiations.",
+    "EU renewable permitting reform progress; far-right/green coalition impact on timelines."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

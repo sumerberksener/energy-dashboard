@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; GB Power \u2014 90th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 13.7 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 145,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 140,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 140,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-05-20",
+      "available": true,
+      "daily_change_abs": 7.6,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.9,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 20.07,
+      "monthly_change_abs": 59.76,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 79.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -0.5
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 145,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-05-20",
+      "available": true,
+      "daily_change_pct": 5.95,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.23,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 135.39,
+      "monthly_change_pct": 107.15,
+      "name": "DE Power",
+      "percentile_rank_5y": 75.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 6.15
+    },
+    "eua": {
+      "as_of": "2026-05-19",
+      "available": true,
+      "daily_change_pct": -0.62,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.03,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 31.75,
+      "monthly_change_pct": 1.38,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 28.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.44
+    },
+    "gb_power": {
+      "as_of": "2026-05-20",
+      "available": true,
+      "daily_change_pct": 10.71,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.63,
+      "headline": "90th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 122.71,
+      "monthly_change_pct": 26.76,
+      "name": "GB Power",
+      "percentile_rank_5y": 90.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -1.56
+    },
+    "renewable_share": {
+      "as_of": "2026-05-19",
+      "available": true,
+      "daily_change_pct": -1.29,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.94,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 32.57,
+      "monthly_change_pct": -44.1,
+      "name": "Renewables",
+      "percentile_rank_5y": 30.0,
+      "unit": "% of load",
+      "weekly_change_pct": -17.23
+    },
+    "storage": {
+      "as_of": "2026-05-18",
+      "available": true,
+      "daily_change_pct": 0.3,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.72,
+      "headline": "13.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 36.67,
+      "monthly_change_pct": 14.7,
+      "name": "EU Storage",
+      "percentile_rank_5y": 14.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.37
+    },
+    "ttf": {
+      "as_of": "2026-05-19",
+      "available": true,
+      "daily_change_pct": 3.12,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.73,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 51.82,
+      "monthly_change_pct": 28.6,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 69.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 9.93
+    }
+  },
+  "news": {
+    "geopolitics_summary": "US extends Russian oil sanctions waiver amid Strait of Hormuz closure; EU-US trade tensions persist; Middle East conflict pressures crude/energy supplies.",
+    "themes": [
+      {
+        "commodity": "crude",
+        "headline": "US extends Russian oil sanctions waiver into June amid supply pressure",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/us-pause-russia-oil-sanctions-june-scott-bessent/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Crude supply tension (Hormuz closure, extended waiver) supports oil prices; high crude feeds fuel-switching demand away from gas, supporting EU power. Direct impact on gas-to-power margin and thermal generation merit."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Meloni seeks energy spending flexibility carveout from EU fiscal rules",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/giorgia-meloni-presses-ursula-von-der-leyen-for-energy-carveout-in-eu-spending-rules/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "If approved, Italy gains fiscal room for energy subsidies/investment, potentially affecting European energy prices and competitive dynamics across power/gas markets. Signals ongoing EU energy cost pressure."
+      },
+      {
+        "commodity": "renewables",
+        "headline": "Far-right parties align with greens to slow EU renewables permitting liberalization",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/europes-far-right-casts-itself-as-nature-defender-in-push-to-slow-down-renewables/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Delays to renewable build-out increase structural supply-tightness; slower capacity means higher baseload reliance and upward pressure on gas demand and power prices through 2026\u201327."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU and US near trade deal; auto tariffs threat remains contingent",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-tiptoes-toward-approving-us-trade-deal/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Trade uncertainty affects euro, cost of capital, and EU industrial competitiveness; weaker euro/growth headwinds could suppress demand for EU power and gas into summer."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US industrial natural gas consumption forecast to hit records in 2026\u201327",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67686",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "demand",
+        "why_it_matters": "Record US gas demand tightens global LNG availability, reducing US export volumes to Europe (NW Europe LNG arb squeeze); supports TTF via reduced supply arbitrage and higher LNG spot pricing."
+      }
+    ],
+    "watchlist": [
+      "G7 energy ministers' next meeting; further US sanctions policy announcements on Russian oil.",
+      "EU trade deal finalization vote; Trump auto tariff decision deadline.",
+      "Italy's energy spending carveout outcome in EU fiscal rule negotiations.",
+      "EU renewable permitting reform progress; far-right/green coalition impact on timelines."
+    ]
+  }
+}
