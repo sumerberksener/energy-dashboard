@@ -1,0 +1,63 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale (146 days old, as of 2025-12-26; latest 96.0 USD/t at 8th-percentile). Clean Dark stale (141 days old, as of 2025-12-31; latest 27.95 EUR/MWh at 50th-percentile). Merit-order fuel-switch and thermal marginal cost assumptions rely on coal prices that are unverified for past 5+ months \u2014 monitor latest spot benchmarks (ICE ARA, API2) before layering position.",
+  "risk_flags": [
+    "Storage at 36.82% (14th-percentile, 13.8pp below seasonal) \u2014 refill pace into summer critical for H2 power curve; 2pp weekly gain insufficient.",
+    "Clean Spark at 32.78 EUR/MWh (90th-percentile) driven by +64.3% monthly move \u2014 reversal risk if renewables recover or gas softens.",
+    "Hormuz closure + Treasury waiver extension signals sustained geopolitical premium; any Strait reopening could liquidate power/gas forward positions sharply.",
+    "Coal data stale (146 days old, 8th-percentile) \u2014 merit-order dispatch skew unverifiable; fuel-switch assumptions at risk."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+1-3%",
+      "summary": "Clean Spark sustains 85th+ percentile on gas strength and tight storage; TTF holds 65\u201370th percentile; DE Power drifts 75\u201380th-percentile with gas.",
+      "ttf_pct": "+2-5%"
+    },
+    "downside": {
+      "de_power_pct": "\u221212-18%",
+      "summary": "Hormuz reopens or Middle East peace talks ease; Brent falls, LNG arb closes. Parallel: renewable share recovers to 65th+ percentile; Clean Spark unwinds toward 70th-percentile, dragging DE power lower.",
+      "ttf_pct": "\u22128-12%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+15-25%",
+      "summary": "Hormuz escalation or sanctions waiver lapse triggers Brent spike; LNG arb widens, TTF rallies. Alternatively, cold front or storage refill failure locks summer deficit premium into power curve.",
+      "ttf_pct": "+10-18%"
+    }
+  },
+  "themes": [
+    "Gas in-the-money vs. coal; Clean Spark extreme rally",
+    "EU storage deficit pressures summer refill economics",
+    "Hormuz/sanctions risk sustains LNG arb and power forward curve",
+    "US industrial gas demand tightens global LNG availability"
+  ],
+  "top_drivers": [
+    "Clean Spark at 90th-percentile (32.78 EUR/MWh, +64.3% monthly) driven by gas strength (TTF 66th-percentile, +17.87% monthly) and coal weakness (8th-percentile, stale data but directionally confirmed); fuel-switch regime heavily in favor of gas-fired marginal unit.",
+    "Storage deficit (36.82%, 14th-percentile, 13.8pp below seasonal) raises summer adequacy risk; refill pace +2.21% weekly insufficient \u2014 constrains gas supply flexibility and locks in forward-curve premium.",
+    "Geopolitical risk premium: Hormuz closure + Treasury sanctions waiver extension sustains oil/LNG arb; US industrial gas demand hitting record highs (2026\u201327) tightens global seaborne LNG and widens EU-US spread, supporting TTF and power forward curve via LNG competition."
+  ],
+  "top_takeaway": "Clean Spark at 90th-percentile driving 32% DA power rally; storage 13.8pp below seasonal raises refill risk; Hormuz/sanctions backdrop sustains geopolitical risk premium on gas-power curve.",
+  "watchlist": [
+    {
+      "metric": "EU storage refill trajectory",
+      "why": "At 36.82% (14th-percentile), May\u2013September refill pace determines Cal+1 power curve shape and summer adequacy risk."
+    },
+    {
+      "metric": "Hormuz closure / Russian sanctions waivers",
+      "why": "Second waiver extension sustains oil/LNG arb pressure on TTF; any Strait reopening or waiver lapse could trigger 10\u201315% power downside."
+    },
+    {
+      "metric": "US LNG export capacity and contract pricing",
+      "why": "Record US industrial gas demand (2026\u201327 forecast) tightens global seaborne LNG; EU TTF arb sensitivity to US price signals rising."
+    },
+    {
+      "metric": "Clean Spark mean reversion",
+      "why": "At 90th-percentile (+64.3% monthly), any renewable share recovery (now 57th-percentile) or TTF softening (\u22124.61% daily) risks 15\u201320% unwind."
+    },
+    {
+      "metric": "GB-DE power spread",
+      "why": "GB Power at 112.97 EUR/MWh (81st-percentile); DE at 143.41 (77th-percentile). Spread narrows if transmission constraints ease or UK wind improves."
+    }
+  ],
+  "watchlist_dated": []
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Middle East conflict sustains oil price/supply risk; Russia sanctions waivers extended amid Strait closure; EU-US trade deal agreed but geopolitical fragmentation rising.",
+  "themes": [
+    {
+      "headline": "EU growth forecasts cut; Middle East war pushing energy inflation",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "War-driven oil supply disruption and elevated energy costs narrow EU industrial margins, reducing demand elasticity and sustaining forward power/gas curve premiums via recession-inflation stagflation risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-cuts-growth-forecasts-middle-east-war-energy-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Treasury extends Russian oil sanctions waiver; Hormuz closure persists",
+      "source": "Politico",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Second waiver extension signals sustained Strait of Hormuz disruption. Tight global oil markets support crude/gas co-movement; LNG arb pressure on EU TTF via competing demand for seaborne crude premiums.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/05/18/treasury-extends-russian-oil-sanctions-waiver-for-another-month-00926158?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Meloni pushes Italian nuclear revival despite 40-year political taboo",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Italian nuclear development (if credible) would increase EU supply stack long-term, offsetting demand and applying downward pressure on power forward curves, especially Cal+2 and beyond.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/giorgia-meloni-nuclear-power-italy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "U.S. industrial gas consumption forecast to hit record highs 2026–2027",
+      "source": "EIA Today in Energy",
+      "tag": "demand",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Record U.S. industrial gas demand tightens global LNG availability, supporting higher U.S. export prices and widening EU-US LNG spread, pushing TTF and power via fuel-switch economics.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67686"
+    },
+    {
+      "headline": "Europe's jet fuel fears ease; summer supply expected stable despite war",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Reduced jet fuel crisis risk removes near-term crude supply shock fear, lowering tail risk on power/gas curves; however, underlying Hormuz disruption remains, capping downside relief.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-jet-fuel-supply-crisis-iran-war-hormuz-risk-airline-industry/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "Italian nuclear policy developments and legislative timelines post-Meloni announcement.",
+    "Further US Treasury sanctions waivers on Russian oil; Strait of Hormuz shipping updates.",
+    "EU deregulation push outcome—potential fast-track grid interconnect or gas infra permits.",
+    "US LNG export capacity additions and contract pricing vs. EU TTF arb closure."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

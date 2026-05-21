@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; Clean Spark \u2014 90th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 13.8 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 146,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 141,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 141,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-05-21",
+      "available": true,
+      "daily_change_abs": 34.79,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.25,
+      "headline": "90th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 32.78,
+      "monthly_change_abs": 64.3,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 90.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 20.67
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 146,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-05-21",
+      "available": true,
+      "daily_change_pct": 32.03,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.47,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 143.41,
+      "monthly_change_pct": 99.01,
+      "name": "DE Power",
+      "percentile_rank_5y": 77.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 22.92
+    },
+    "eua": {
+      "as_of": "2026-05-20",
+      "available": true,
+      "daily_change_pct": 0.78,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.16,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 32.0,
+      "monthly_change_pct": 3.09,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 30.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.85
+    },
+    "gb_power": {
+      "as_of": "2026-05-21",
+      "available": true,
+      "daily_change_pct": -12.6,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.29,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 112.97,
+      "monthly_change_pct": 76.29,
+      "name": "GB Power",
+      "percentile_rank_5y": 81.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -3.48
+    },
+    "renewable_share": {
+      "as_of": "2026-05-20",
+      "available": true,
+      "daily_change_pct": 36.46,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.25,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 44.45,
+      "monthly_change_pct": -24.12,
+      "name": "Renewables",
+      "percentile_rank_5y": 57.0,
+      "unit": "% of load",
+      "weekly_change_pct": -11.59
+    },
+    "storage": {
+      "as_of": "2026-05-19",
+      "available": true,
+      "daily_change_pct": 0.41,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.69,
+      "headline": "13.8 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 36.82,
+      "monthly_change_pct": 14.24,
+      "name": "EU Storage",
+      "percentile_rank_5y": 14.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.21
+    },
+    "ttf": {
+      "as_of": "2026-05-20",
+      "available": true,
+      "daily_change_pct": -4.61,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.23,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 49.42,
+      "monthly_change_pct": 17.87,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 66.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 9.57
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Middle East conflict sustains oil price/supply risk; Russia sanctions waivers extended amid Strait closure; EU-US trade deal agreed but geopolitical fragmentation rising.",
+    "themes": [
+      {
+        "commodity": "mixed",
+        "headline": "EU growth forecasts cut; Middle East war pushing energy inflation",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-cuts-growth-forecasts-middle-east-war-energy-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "War-driven oil supply disruption and elevated energy costs narrow EU industrial margins, reducing demand elasticity and sustaining forward power/gas curve premiums via recession-inflation stagflation risk."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Treasury extends Russian oil sanctions waiver; Hormuz closure persists",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/05/18/treasury-extends-russian-oil-sanctions-waiver-for-another-month-00926158?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico",
+        "tag": "geopolitics",
+        "why_it_matters": "Second waiver extension signals sustained Strait of Hormuz disruption. Tight global oil markets support crude/gas co-movement; LNG arb pressure on EU TTF via competing demand for seaborne crude premiums."
+      },
+      {
+        "commodity": "power",
+        "headline": "Meloni pushes Italian nuclear revival despite 40-year political taboo",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/giorgia-meloni-nuclear-power-italy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Italian nuclear development (if credible) would increase EU supply stack long-term, offsetting demand and applying downward pressure on power forward curves, especially Cal+2 and beyond."
+      },
+      {
+        "commodity": "gas",
+        "headline": "U.S. industrial gas consumption forecast to hit record highs 2026\u20132027",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67686",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "demand",
+        "why_it_matters": "Record U.S. industrial gas demand tightens global LNG availability, supporting higher U.S. export prices and widening EU-US LNG spread, pushing TTF and power via fuel-switch economics."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Europe's jet fuel fears ease; summer supply expected stable despite war",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-jet-fuel-supply-crisis-iran-war-hormuz-risk-airline-industry/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Reduced jet fuel crisis risk removes near-term crude supply shock fear, lowering tail risk on power/gas curves; however, underlying Hormuz disruption remains, capping downside relief."
+      }
+    ],
+    "watchlist": [
+      "Italian nuclear policy developments and legislative timelines post-Meloni announcement.",
+      "Further US Treasury sanctions waivers on Russian oil; Strait of Hormuz shipping updates.",
+      "EU deregulation push outcome\u2014potential fast-track grid interconnect or gas infra permits.",
+      "US LNG export capacity additions and contract pricing vs. EU TTF arb closure."
+    ]
+  }
+}
