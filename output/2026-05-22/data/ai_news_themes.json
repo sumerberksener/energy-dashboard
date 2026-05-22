@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Strait of Hormuz crisis intensifies NATO discussions; EU growth forecasts cut on Middle East war and energy price inflation; UK eases Russia sanctions amid EU complaint.",
+  "themes": [
+    {
+      "headline": "Strait of Hormuz crisis drives EU energy security concerns amid geopolitical tension",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz disruption risk threatens LNG supply routes to Europe. If passage closes, EU faces forced gas substitution into power and industrial sectors, lifting TTF and power forward curves; direct markup on risk premium.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/sponsored-content/the-looming-crisis-putting-europes-energy-security-at-risk/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU growth forecasts slashed; Middle East war and energy prices lift inflation outlook",
+      "source": "Politico EU Energy",
+      "tag": "macro",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Commission signals sustained elevated energy prices from geopolitical stress. Stagflation scenario strengthens case for higher power and gas baseloads; reduces industrial demand destruction hedge, supporting Cal+1 curve.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-cuts-growth-forecasts-middle-east-war-energy-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "UK rolls back Russia sanctions on jet fuel and diesel; EU protests timing",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "UK sanction relaxation may ease global crude markets, reducing overall energy scarcity premium. Indirect: lower crude supports fuel-switching away from gas into power generation in Europe, bearish TTF and power spreads.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/starmer-criticized-easing-russia-sanctions-uk-labour-leadership/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Italy's Meloni pushes nuclear revival after 40 years of political taboo",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "If Italy successfully deploys nuclear capacity by 2030s, it reduces Southern EU power supply tightness and shifts merit order downward. Long-dated structural bearish for regional power prices; near-term political hurdle.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/giorgia-meloni-nuclear-power-italy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "COP31 consensus: global shift to electrification amid oil and gas supply volatility fears",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "neutral",
+      "why_it_matters": "Policy momentum for electrification increases structural demand for EU power and renewables infrastructure investment. Medium-term support for power curve stability and carbon pricing as coal/gas phase-out accelerates.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/mantra-cop31-electricity-climate/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "NATO Friday meeting on Strait of Hormuz; monitor escalation risk to LNG flow disruption.",
+    "UK sanction exemption scope and duration clarification; potential crude/product market spillover.",
+    "Italian nuclear policy roadmap and parliamentary timetable; long-dated power supply signal.",
+    "EU industrial demand data (May–June) for fuel-switching impact under elevated energy prices."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

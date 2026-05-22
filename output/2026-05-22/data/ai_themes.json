@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "",
+  "risk_flags": [
+    "GB Power at 134.55 EUR/MWh (95th percentile) signals sustained thermal tightness; any nuclear outage or wind collapse extends premium into June.",
+    "EU Storage at 36.99% (14 pp below seasonal) with only 2 days of weak inflow (+0.33% daily) \u2014 refill velocity insufficient for H2 2026 demand/export coverage if Hormuz restricts LNG.",
+    "Hormuz escalation could force 8\u201312 pp LNG flow loss; direct transmission into TTF and power forward curves via scarcity premium.",
+    "UK sanction relaxation on Russian crude may ease global oil, supporting fuel-switch away from gas but paradoxically tightening power if industrial demand recovers faster than renewables offset."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b13-5%",
+      "summary": "Thermal scarcity regime holds; Hormuz volatility contained; storage refill pace stable. Power and Clean Spark remain elevated but stabilize week-on-week.",
+      "ttf_pct": "\u00b12-3%"
+    },
+    "downside": {
+      "de_power_pct": "-6-10%",
+      "summary": "Hormuz de-escalation or ceasefire signal; crude eases on UK sanction relaxation. Fuel-switch away from gas into power. Mild weekend weather softens demand. Storage inflow accelerates.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Hormuz closure or credible NATO escalation Friday; LNG spot cargoes reroute. TTF risk premium spikes; power forward curve extends. Cold-front demand surge.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Thermal scarcity and fuel-switch regime \u2014 GB and DE power historically elevated",
+    "Hormuz disruption tail-risk on LNG supply and EU energy security",
+    "Storage deficit 14 pp below seasonal \u2014 refill pace constrains summer flexibility",
+    "Macro stagflation narrative supports elevated baseload power and gas"
+  ],
+  "top_drivers": [
+    "GB and DE power at multi-year highs (95th and 80th percentiles respectively) on thermal scarcity \u2014 Clean Spark at 93rd percentile confirms gas-to-power dispatch regime in full effect.",
+    "Hormuz geopolitical tail-risk and EU growth forecast cut reinforce stagflation narrative; energy scarcity premium sustained on structural LNG uncertainty.",
+    "EU Storage 14 pp below seasonal average with weak inflow momentum (+0.33% daily) compounds summer flexibility risk if demand recovery outpaces renewable supply."
+  ],
+  "top_takeaway": "GB Power at 95th percentile and Clean Spark at 93rd drive thermal premium; Hormuz crisis geopolitical tail-risk elevates LNG scarcity markup on TTF and forward power curve.",
+  "watchlist": [
+    {
+      "metric": "Hormuz passage / LNG spot cargoes",
+      "why": "NATO Friday meeting signals escalation risk; closure would force 15\u201325% markup on TTF front-month and sustain GB/DE power premium into summer."
+    },
+    {
+      "metric": "EU Storage refill rate (weekly)",
+      "why": "At 36.99% with seasonal lag of 14 pp, weekly inflows must exceed 1.0 pp/week through June or H2 2026 baseload power risk emerges."
+    },
+    {
+      "metric": "DE-GB Power spread",
+      "why": "GB at 95th, DE at 80th percentile; widening spread signals transmission congestion or nuclear outage risk in France; monitor hourly marginal cost."
+    },
+    {
+      "metric": "Renewable share trend",
+      "why": "Fell 24.24% week-on-week to 42.27% (52nd percentile); next wind drought would spike thermal dispatch and extend Clean Spark duration."
+    },
+    {
+      "metric": "UK sanction scope and crude arb",
+      "why": "Relaxation may ease Brent; feedback into fuel-switch economics and EU coal-to-gas margin \u2014 watch coal daily settlement vs TTF spread."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "NATO Hormuz escalation meeting",
+      "why": "Outcome could trigger LNG supply premium shift; monitor for explicit sanctions or corridor closure language."
+    }
+  ]
+}
