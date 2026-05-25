@@ -1,0 +1,201 @@
+{
+  "aggregate_brief": "Markets are quiet this morning \u2014 all tracked metrics sit within typical recent ranges. No standout signals.",
+  "freshness": {
+    "any_stale": false,
+    "stale_metrics": []
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2026-05-25",
+      "available": true,
+      "daily_change_abs": 70.31,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.33,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 105.37,
+      "monthly_change_abs": 4.72,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 77.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -8.21
+    },
+    "clean_spark": {
+      "as_of": "2026-05-25",
+      "available": true,
+      "daily_change_abs": 70.31,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.16,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 26.88,
+      "monthly_change_abs": 3.84,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 86.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -4.2
+    },
+    "coal": {
+      "as_of": "2026-05-22",
+      "available": true,
+      "daily_change_pct": 0.19,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.45,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 10.77,
+      "monthly_change_pct": -1.55,
+      "name": "Coal",
+      "percentile_rank_5y": 34.0,
+      "unit": "USD/t",
+      "weekly_change_pct": -0.26
+    },
+    "de_power": {
+      "as_of": "2026-05-25",
+      "available": true,
+      "daily_change_pct": 106.84,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.35,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 136.13,
+      "monthly_change_pct": 3.87,
+      "name": "DE Power",
+      "percentile_rank_5y": 75.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -7.45
+    },
+    "eua": {
+      "as_of": "2026-05-22",
+      "available": true,
+      "daily_change_pct": 1.3,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.28,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 32.28,
+      "monthly_change_pct": 4.61,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 33.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.16
+    },
+    "gb_power": {
+      "as_of": "2026-05-25",
+      "available": true,
+      "daily_change_pct": 7.19,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.42,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 119.33,
+      "monthly_change_pct": -4.27,
+      "name": "GB Power",
+      "percentile_rank_5y": 87.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -1.25
+    },
+    "renewable_share": {
+      "as_of": "2026-05-24",
+      "available": true,
+      "daily_change_pct": 7.43,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.26,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 52.99,
+      "monthly_change_pct": 3.19,
+      "name": "Renewables",
+      "percentile_rank_5y": 73.0,
+      "unit": "% of load",
+      "weekly_change_pct": 6.63
+    },
+    "storage": {
+      "available": false
+    },
+    "ttf": {
+      "as_of": "2026-05-22",
+      "available": true,
+      "daily_change_pct": -1.47,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.09,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 48.68,
+      "monthly_change_pct": 9.41,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 65.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.02
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Middle East tensions and Strait of Hormuz disruption risk underpin energy security concerns; EU growth forecast cut; Russia sanctions policy in flux.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "Europe faces record May heatwave; climate agency warns intensification trend",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/europe-sweats-as-heat-dome-causes-record-may-temperatures/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Earlier/deeper peak-summer cooling demand stress test. Elevated real-time balancing risk and potential for hydro constraints in Alpine regions if heatwave persists into June. DA spreads and intraday volatility likely higher."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU growth forecasts cut as Middle East war continues; energy prices cited",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-cuts-growth-forecasts-middle-east-war-energy-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "EC explicitly links energy-price inflation to growth slowdown. Sustained Hormuz disruption risk elevates LNG and crude premia, raising EU power curve via gas-to-power switching and industrial fuel mix pressure."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Sweden open to NATO role in Strait of Hormuz security restoration",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/sweden-nato-role-reopening-strait-of-hormuz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Military intervention signal could reduce Hormuz closure risk premium embedded in LNG spot/forward curves and Brent. Lower LNG costs weaken TTF, pressuring EU gas and marginal-gen power spreads."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU ministers debate energy security amid Strait of Hormuz crisis backdrop",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/sponsored-content/the-looming-crisis-putting-europes-energy-security-at-risk/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "High-level EU energy security review signals potential policy tightening (storage mandates, LNG contracts, interconnects). Direct driver of medium-term power curve risk via fuel supply strategies and commodity reserves."
+      },
+      {
+        "commodity": "gas",
+        "headline": "U.S. industrial natural gas consumption forecast to hit record highs 2026\u20132027",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67686",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "demand",
+        "why_it_matters": "Peak US nat-gas industrial demand reduces LNG export availability for NW Europe, tightening global LNG arb and supporting TTF via constrained spot imports during winter ramp."
+      }
+    ],
+    "watchlist": [
+      "Strait of Hormuz disruption escalation or de-escalation; NATO meeting outcomes Friday.",
+      "EU energy policy response announcements from Brussels ministerial debate (weeks).",
+      "Alpine/Central European hydro conditions through June if heatwave persists.",
+      "UK Russia sanctions rollback progress; EU response and sentiment impact on energy diplomacy."
+    ]
+  }
+}

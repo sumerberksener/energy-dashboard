@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "",
+  "risk_flags": [
+    "Strait of Hormuz closure risk premium embedded in forward curves; NATO de-escalation signal could trigger 5\u201310% TTF downside if LNG arb unwinds.",
+    "Alpine hydro vulnerability if May heatwave persists into June; intraday balancing cost and DA spread volatility will spike.",
+    "Clean Spark at 86th pctile (26.88 EUR/MWh) signals gas is deeply in-the-money vs coal; Hormuz escalation would extend spark margin further.",
+    "EU growth forecast cut explicitly pins energy inflation as driver; sustained power curve elevation depends on geopolitical risk premium persisting."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12-3%",
+      "summary": "Quiet fundamentals; Hormuz premium contained; summer heatwave elevates cooling demand but renewables at 73rd pctile provide offset.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-5-8%",
+      "summary": "NATO intervention de-escalates Hormuz closure risk; LNG arb unwinds; heatwave eases by early June.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+6-10%",
+      "summary": "Hormuz escalation deepens; LNG arb tightens; heatwave hydro stress in Alps; EU policy tightening accelerates.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Hormuz disruption risk embedded in LNG-TTF arb; NATO intervention signal offers downside",
+    "Record May heatwave stress-testing Alpine hydro and summer cooling demand",
+    "EU growth cut cites energy inflation; medium-term policy tightening on cards",
+    "US industrial gas demand surge reducing LNG export availability for NW Europe"
+  ],
+  "top_drivers": [
+    "Hormuz disruption risk premium embedded in LNG and TTF; NATO intervention narrative offers 5\u201310% downside relief if de-escalation sentiment firms.",
+    "May heatwave front-loading summer cooling demand and stressing Alpine hydro; intraday balancing and DA-ID spreads to remain elevated through June.",
+    "EU growth cut explicitly links energy inflation to economic slowdown; sustained policy debate signals potential medium-term power curve support via supply tightening."
+  ],
+  "top_takeaway": "Quiet fundamentals mask geopolitical Hormuz tail-risk; May heatwave stress-tests summer demand, but NATO intervention signal could deflate LNG premium.",
+  "watchlist": [
+    {
+      "metric": "Strait of Hormuz disruption risk premium",
+      "why": "NATO intervention narrative could deflate embedded LNG spot/forward premium and weaken TTF by 5\u201310% if closure risk sentiment shifts."
+    },
+    {
+      "metric": "May heatwave persistence into June",
+      "why": "Alpine/Central European hydro depletion and peak-summer cooling demand front-loading will elevate intraday volatility and DA-ID spreads through June."
+    },
+    {
+      "metric": "EU energy security policy announcements",
+      "why": "Storage mandates, LNG contracts, and interconnect investments will reshape fuel-mix economics and medium-term power curve risk allocation."
+    },
+    {
+      "metric": "US industrial nat-gas demand (2026\u20132027 record forecast)",
+      "why": "Peak US industrial consumption shrinks LNG export availability for NW Europe, supporting TTF winter curve via tighter spot import arb."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "NATO security meeting \u2014 Hormuz intervention signal",
+      "why": "Outcome could trigger sharp unwind of LNG closure premium, weakening TTF spot and Cal+1 by 5\u20138%."
+    }
+  ]
+}

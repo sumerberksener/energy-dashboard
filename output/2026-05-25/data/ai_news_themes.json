@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Middle East tensions and Strait of Hormuz disruption risk underpin energy security concerns; EU growth forecast cut; Russia sanctions policy in flux.",
+  "themes": [
+    {
+      "headline": "Europe faces record May heatwave; climate agency warns intensification trend",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Earlier/deeper peak-summer cooling demand stress test. Elevated real-time balancing risk and potential for hydro constraints in Alpine regions if heatwave persists into June. DA spreads and intraday volatility likely higher.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/europe-sweats-as-heat-dome-causes-record-may-temperatures/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU growth forecasts cut as Middle East war continues; energy prices cited",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "EC explicitly links energy-price inflation to growth slowdown. Sustained Hormuz disruption risk elevates LNG and crude premia, raising EU power curve via gas-to-power switching and industrial fuel mix pressure.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-cuts-growth-forecasts-middle-east-war-energy-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Sweden open to NATO role in Strait of Hormuz security restoration",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Military intervention signal could reduce Hormuz closure risk premium embedded in LNG spot/forward curves and Brent. Lower LNG costs weaken TTF, pressuring EU gas and marginal-gen power spreads.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/sweden-nato-role-reopening-strait-of-hormuz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU ministers debate energy security amid Strait of Hormuz crisis backdrop",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "High-level EU energy security review signals potential policy tightening (storage mandates, LNG contracts, interconnects). Direct driver of medium-term power curve risk via fuel supply strategies and commodity reserves.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/sponsored-content/the-looming-crisis-putting-europes-energy-security-at-risk/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "U.S. industrial natural gas consumption forecast to hit record highs 2026–2027",
+      "source": "EIA Today in Energy",
+      "tag": "demand",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Peak US nat-gas industrial demand reduces LNG export availability for NW Europe, tightening global LNG arb and supporting TTF via constrained spot imports during winter ramp.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67686"
+    }
+  ],
+  "watchlist": [
+    "Strait of Hormuz disruption escalation or de-escalation; NATO meeting outcomes Friday.",
+    "EU energy policy response announcements from Brussels ministerial debate (weeks).",
+    "Alpine/Central European hydro conditions through June if heatwave persists.",
+    "UK Russia sanctions rollback progress; EU response and sentiment impact on energy diplomacy."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
