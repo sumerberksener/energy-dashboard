@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "",
+  "risk_flags": [
+    "Storage at 38.5% (15th-percentile, 14 pp below seasonal)\u2014refill pace will anchor H2 generation mix and EUA curve.",
+    "GB Power 131.09 EUR/MWh (94th-percentile) signals transmission constraint or demand spike; monitor GB-DE spread widening.",
+    "Middle East conflict and Hormuz crisis elevate LNG supply risk; TTF repricing window on geopolitical premium still open.",
+    "Record May temperatures boost cooling demand but may impair southern EU hydro; net DA effect asymmetric by basin."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11-3%",
+      "summary": "Geopolitical premium holds; storage refill continues; heat-driven demand offsets mild renewable gains.",
+      "ttf_pct": "\u00b12-4%"
+    },
+    "downside": {
+      "de_power_pct": "-8-14%",
+      "summary": "Hormuz de-escalation or Middle East ceasefire signals; US LNG exports surge; mild weather suppresses cooling demand; storage recovery accelerates.",
+      "ttf_pct": "-6-12%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+6-12%",
+      "summary": "Hormuz escalation or Suez closure disrupts LNG supply; EU growth cuts trigger fiscal stimulus; storage injection pace falls short.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Geopolitical premium reasserts across power curve",
+    "Storage deficit elongates thermal risk into summer",
+    "GB power outlier; Clean Spark at 90th-percentile",
+    "Heat dome pressure on hydro; US LNG capacity upside via TTF arb"
+  ],
+  "top_drivers": [
+    "Middle East conflict and Hormuz supply risk elevate geopolitical premium across EU power and gas; TTF curve repricing window open.",
+    "Storage at 15th-percentile (38.5%, 14 pp below seasonal) locks in H2 thermal call and anchors EUA dispatch margin risk.",
+    "GB Power at 94th-percentile (131.09 EUR/MWh) signals transmission constraint or demand spike; Clean Spark at 90th-percentile confirms gas-to-coal advantage collapse.",
+    "Record May heat boosts near-term cooling demand but risks southern EU hydro output; net DA effect data-dependent by basin."
+  ],
+  "top_takeaway": "GB Power at 94th-percentile amid Middle East geopolitical premium and record May heat; storage 14 pp below seasonal\u2014refill pace critical for H2 thermal call.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace",
+      "why": "At 38.5% and 14 pp below seasonal, summer maintenance and H2 thermal adequacy hinge on June-August injection trajectory."
+    },
+    {
+      "metric": "GB-DE Power spread",
+      "why": "GB at 94th-percentile (131.09 EUR/MWh) vs DE at 76th-percentile (140.12 EUR/MWh)\u2014inverse signal suggests transmission or supply asymmetry; watch daily arbitrage window."
+    },
+    {
+      "metric": "Strait of Hormuz geopolitical risk",
+      "why": "NATO-led security discussions late May 2026 will reset LNG supply premium; watch TTF curve flattening or re-steepening on escalation/de-escalation messaging."
+    },
+    {
+      "metric": "US LNG export growth (Q3\u2013Q4 2026)",
+      "why": "44.9 Bcf/d pipeline capacity additions (70% from Texas) will lift US export optionality and create TTF downside arbitrage if EU storage recovers."
+    },
+    {
+      "metric": "Data center AI demand trajectory",
+      "why": "Structural US power demand growth may crowd out LNG export capacity or raise US gen costs, indirectly supporting TTF and EU power prices via tighter global LNG."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "late May",
+      "name": "NATO Strait of Hormuz security discussion",
+      "why": "Geopolitical risk reset on LNG/crude supply; TTF curve repricing window."
+    },
+    {
+      "day_label": "Q3 2026",
+      "name": "US pipeline capacity commissioning (44.9 Bcf/d)",
+      "why": "LNG export growth may lower TTF arbitrage and reduce EU supply scarcity premium."
+    }
+  ]
+}

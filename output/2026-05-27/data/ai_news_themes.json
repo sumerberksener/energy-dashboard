@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Middle East conflict and Strait of Hormuz crisis elevate EU energy security concerns; UK sanctions rollback signals geopolitical realignment.",
+  "themes": [
+    {
+      "headline": "EU growth forecasts cut as Middle East war pressures energy prices",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Ongoing Middle East conflict directly threatens crude and LNG supply stability; European Commission confirms energy price inflation risk. TTF and EUA curve should reprice upward on persistent geopolitical premium.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-cuts-growth-forecasts-middle-east-war-energy-prices/"
+    },
+    {
+      "headline": "Europe records record May temperatures; heat dome intensifies heatwave risk",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Early, intense heatwaves boost near-term power demand (cooling) but may depress hydroelectric supply in southern EU; net effect depends on reservoir status. Watch DA spreads and intraday peaks; Cal+1 downside if hydro output impaired.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/europe-sweats-as-heat-dome-causes-record-may-temperatures/"
+    },
+    {
+      "headline": "US adds 44.9 Bcf/d pipeline capacity 2026–2027; 70% from Texas",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased US domestic pipeline capacity may boost LNG export optionality, improving NW European supply options and dampening TTF upside. Indirect: lower US gas price → higher US LNG competitiveness → reduced EU LNG spot exposure.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67707"
+    },
+    {
+      "headline": "Data center server energy use projected to rise significantly across US",
+      "source": "EIA Today in Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Structural US power demand growth (AI, data centers) may constrain US LNG exports or raise US generation costs, indirectly supporting TTF and European power prices via tighter global LNG market.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67704"
+    },
+    {
+      "headline": "UK signals rollback of Russia sanctions; EU expresses concern",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "UK sanctions relief could theoretically ease Russian energy re-entry to global markets; however, EU maintains embargo. Risk of fragmented Western sanctions reduces long-term price support for EU energy independence narrative; monitor Russian LNG/pipeline restoration talks.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-surprised-uk-rolback-russia-sanctions/"
+    }
+  ],
+  "watchlist": [
+    "NATO high-level Strait of Hormuz security discussion (late May 2026); assess geopolitical oil/LNG supply risk.",
+    "EU energy competitiveness ministerial debate in Brussels; watch for grid/market design reforms affecting EUA, forward curves.",
+    "US pipeline capacity Q3–Q4 2026 commissioning; monitor LNG export growth and TTF arbitrage windows.",
+    "Data center AI-driven demand trajectory; track EU power demand revisions and renewable adequacy assessments."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
