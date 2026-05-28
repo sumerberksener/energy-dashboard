@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Strait of Hormuz tensions and UK sanctions rollback risk crude/LNG supply disruption; European heatwave elevates summer demand risk.",
+  "themes": [
+    {
+      "headline": "Strait of Hormuz tensions escalate; NATO considers stabilisation role.",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz closure threat reduces Middle East crude/LNG supply to EU, raising TTF via fuel-switching economics and pushing power curve higher if gas supply tightens.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/sweden-nato-role-reopening-strait-of-hormuz/"
+    },
+    {
+      "headline": "Europe records record May heatwave; demand surge signals summer load risk.",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Heat-driven cooling demand boosts day-ahead and Cal+1 power prices; strains hydro reserves if heatwave persists; reduces wind generation in southern Europe.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/europe-sweats-as-heat-dome-causes-record-may-temperatures/"
+    },
+    {
+      "headline": "EU energy security threatened by Hormuz crisis; ministers convene.",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Policy response may trigger LNG procurement acceleration or reserve builds; upward pressure on TTF and power if supply-side hedging accelerates.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/sponsored-content/the-looming-crisis-putting-europes-energy-security-at-risk/"
+    },
+    {
+      "headline": "UK rolls back Russia sanctions; EU objects to timing and scope.",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "UK sanction rollback could ease Russian energy re-entry into UK market; indirect EU TTF effect via LNG arb shifts if UK demand pulls Atlantic cargoes.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-surprised-uk-rolback-russia-sanctions/"
+    },
+    {
+      "headline": "US plans 44.9 Bcf/d new gas pipeline capacity for 2026–2027.",
+      "source": "EIA Today in Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased US export capacity boosts LNG supply to Europe, easing TTF; downward pressure on power if gas becomes cheaper fuel for generation.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67707"
+    }
+  ],
+  "watchlist": [
+    "Strait of Hormuz: NATO meeting outcomes (late May), military escalation risk.",
+    "European heatwave: extend/fade forecast for June; hydro storage impact tracking.",
+    "UK-Russia sanctions: EU counter-measures or trade policy response timing.",
+    "COP31 (Turkey host): climate electrification agenda; possible EU ETS tightening signals."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal and TTF data 1 day old (as of 2026-05-27); storage data 2 days old (as of 2026-05-26). All other metrics current as of 2026-05-28. No material stale metrics.",
+  "risk_flags": [
+    "EU storage at 16th percentile (38.83% full, 14 pp below seasonal) \u2014 refill pace critical if heatwave persists or Hormuz supply disrupted.",
+    "Clean Spark 33.55 EUR/MWh (90th pctile) signals gas in-the-money for power generation; sustained if cooling demand extends into June.",
+    "Renewables at 83rd pctile (59.58% of load) masking thermal call\u2014wind/solar volatility in heat dome could flip merit order rapidly.",
+    "Hormuz NATO stabilization talks (late May) carry tail-risk for Middle East LNG/crude reroute; 2\u20134 week horizon for potential supply shock."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Heatwave sustains Clean Spark premium; storage refill gradual. TTF holds mid-range; DE power tracks 76th pctile.",
+      "ttf_pct": "\u00b11\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "\u22123\u20135%",
+      "summary": "Heatwave fades, cooling demand normalizes; storage refill accelerates. Hormuz tensions de-escalate or resolve diplomatically.",
+      "ttf_pct": "\u22124\u20136%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5\u20137%",
+      "summary": "Hormuz escalation or NATO intervention triggers LNG supply reroute; heatwave persists into June. Storage refill stalls.",
+      "ttf_pct": "+8\u201312%"
+    }
+  },
+  "themes": [
+    "Heatwave-driven power demand vs. constrained storage refill",
+    "Hormuz geopolitical premium risk on LNG/TTF",
+    "Gas fuel-switch mechanics in tight summer regime",
+    "GB premium (88th pctile) relative to DE power curve"
+  ],
+  "top_drivers": [
+    "Record May heatwave lifting DA power demand and extending Clean Spark into 90th percentile; sustained cooling risk into summer.",
+    "EU storage 14 pp below seasonal norm (38.83% full) constraining refill flexibility; any supply shock (Hormuz, weather downside) tightens gas and power margin.",
+    "Hormuz geopolitical tail-risk (NATO talks late May) pricing 2\u20134 week window for potential LNG/crude disruption; upside asymmetry on TTF if escalation confirmed."
+  ],
+  "top_takeaway": "Clean Spark at 90th percentile on heatwave demand surge; EU storage 14 pp below seasonal average constrains summer refill\u2014watch Hormuz escalation for TTF upside.",
+  "watchlist": [
+    {
+      "metric": "Hormuz escalation / NATO intervention",
+      "why": "Potential LNG supply disruption would push TTF +8\u201312% and power +5\u20137%; resolution window weeks to months."
+    },
+    {
+      "metric": "EU heatwave persistence (June forecast)",
+      "why": "Cooling demand extension sustains Clean Spark premium and strains hydro reserves; June precipitation tracking critical for storage refill pace."
+    },
+    {
+      "metric": "EU storage refill trajectory",
+      "why": "At 14 pp seasonal deficit, refill pace must accelerate post-June or H2 power risk re-pricing upward; watch weekly inflow data."
+    },
+    {
+      "metric": "UK sanctions rollback \u2192 LNG arb shifts",
+      "why": "If UK market reopens to Russian energy indirectly, Atlantic LNG arbitrage could ease, moderating TTF downside but signaling geopolitical fragmentation."
+    },
+    {
+      "metric": "US LNG export capacity (2026\u20132027 build)",
+      "why": "44.9 Bcf/d new capacity would increase European supply optionality; longer-dated (6\u201312 month) bearish-power signal if commissioned on schedule."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "NATO Hormuz stabilization meeting outcomes",
+      "why": "Military intervention signals or ceasefire framework would clarify LNG supply risk; escalation escalates TTF premium."
+    }
+  ]
+}
