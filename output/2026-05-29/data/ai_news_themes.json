@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU fossil fuel dependence weaponization risk; Trump Strait of Hormuz threats elevate crude volatility; COP31 Turkey-Cyprus tensions undermine climate agenda.",
+  "themes": [
+    {
+      "headline": "Europe's fossil fuel reliance weaponized in war, EU chiefs warn",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Reinforces EU strategic pivot to renewables & LNG diversification; supports carbon price floor & gas infrastructure investment. Risk premium on TTF via supply security narrative.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europe-fossil-fuel-reliance-could-be-weaponized-war-eu-chief-warns/"
+    },
+    {
+      "headline": "Trump threatens Oman over Strait of Hormuz opening threats",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz disruption risk elevates crude prices; indirect bullish pressure on EU power via fuel-switching if gas becomes relatively cheaper. Affects LNG arb & European demand.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/05/27/trump-oman-hormuz-strait-iran-00938713"
+    },
+    {
+      "headline": "Europe heat dome sets record May temperatures across continent",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record heat drives peak AC demand; increases thermal stress on generation fleet & water cooling constraints. Supports renewable generation. Day-ahead spreads compress; DA margin tightens.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/europe-sweats-as-heat-dome-causes-record-may-temperatures/"
+    },
+    {
+      "headline": "US natural gas for power flat this summer; record 2027 expected",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "US power-gen gas demand stable now; 2027 surge could tighten global LNG supply. Indirect: supports US LNG export pricing floor, narrows EU TTF-Henry Hub spread arb window.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67725"
+    },
+    {
+      "headline": "Data center server electricity demand projected to surge long-term",
+      "source": "EIA Today in Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "EU AI/data-center buildout mirrors US growth trajectory. Incremental power demand supports Cal+1 curve upside. Aligns with EU tech sovereignty & green capex narrative. Long-dated bull.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67704"
+    }
+  ],
+  "watchlist": [
+    "EU tech sovereignty plan disclosure June 3; potential renewable capex stimulus.",
+    "Turkey COP31 host role (Cyprus exclusion risk); climate policy coordination uncertainty.",
+    "Strait of Hormuz geopolitical escalation; crude spike transmission to EU gas/power.",
+    "Data center energy disclosure rules: monitor EU regulatory clarity on power demand forecasts."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 18,
+  "error": null
+}

@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU tech sovereignty plan disclosure (June 3) expected to signal renewable capex acceleration and green industrial policy alignment; potential MSR intake signal via emissions-intensive data-center power demand disclosure rules.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Sustained renewable buildout and data-center power demand clarity reduces long-term structural fuel-switching carbon intensity, pressuring EUA floor if MSR intake accelerates."
+  },
+  "freshness_caveat": "",
+  "risk_flags": [
+    "Storage at 39.1% (16th percentile, 14 pp below seasonal) \u2014 H2 refill pace will define power curve risk and gas-to-coal fuel-switch economics.",
+    "DE Power extended 2.1\u03c3 above 50d trend; daily jump 32.7% suggests tactical extraction risk if heat moderates or renewables surge.",
+    "Hormuz escalation threat elevates crude and tightens LNG arb window, indirectly lifting EU TTF risk premium despite flat near-term seasonal.",
+    "Clean Spark 96th percentile sustainability depends on sustained storage deficit and continued thermal loading \u2014 vulnerable to rain, demand softening, or nuclear return."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b13-5%",
+      "summary": "Record heat sustains AC demand and thermal dispatch; storage deficit maintains power premium and fuel-switch backdrop.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-6-12%",
+      "summary": "Heat moderates mid-week; renewable output surge (wind/solar); storage refill accelerates; Hormuz tensions ease. TTF soft; thermal margin compresses.",
+      "ttf_pct": "-4-8%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+8-15%",
+      "summary": "Hormuz escalation or crude spike; storage refill delays through June; renewables miss on forecast. TTF rises via LNG arb tightening; thermal stays extended.",
+      "ttf_pct": "+6-12%"
+    }
+  },
+  "themes": [
+    "Gas fundamentals tight, storage deficit structural",
+    "Clean Spark in-the-money; thermal dispatch critical",
+    "Geopolitical risk premium via Hormuz and EU weaponization fears",
+    "Record heat boosting AC demand and renewable output tension"
+  ],
+  "top_drivers": [
+    "Clean Spark at 96th percentile driven by storage deficit (39.1%, 14 pp below seasonal) forcing sustained thermal merit-order extension.",
+    "Record May heat dome lifting AC peak demand and thermal fleet stress while exposing water cooling constraints; renewable output volatility increases tail risk to power swings.",
+    "Hormuz geopolitical escalation and EU fossil-fuel weaponization narrative elevating risk premium on TTF and LNG arb; indirect fuel-switch dynamics support thermal margins."
+  ],
+  "top_takeaway": "Clean Spark at 96th percentile, storage 14 pp below seasonal, and record heat driving thermal stress create a tight, bullish power regime; Hormuz escalation and EU strategic pivot reinforce geopolitical risk premium on fossil fuels.",
+  "watchlist": [
+    {
+      "metric": "EU Storage deficit (14 pp below seasonal)",
+      "why": "Refill pace through June-July sets thermal dispatch marginal cost and Cal+1 curve shape; delays risk H2 power floor spike."
+    },
+    {
+      "metric": "Hormuz escalation transmission to LNG arb",
+      "why": "If crude spikes >10%, narrowed TTF-HH spread could flip, reducing EU LNG inflows and tightening gas supply signal in July\u2013Aug wind drought scenarios."
+    },
+    {
+      "metric": "Heat dome duration and renewable forecast revision",
+      "why": "Record May temperatures driving peak AC; if sustained into June and renewables underperform expectations, thermal merit-order extension deepens."
+    },
+    {
+      "metric": "EU data center power demand disclosure (June 3 tech sovereignty plan)",
+      "why": "Potential long-term Cal+1 and Cal+2 demand uplift; clarifies ES capex outlook and grid reinforcement needs affecting forward hedges."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU tech sovereignty plan disclosure",
+      "why": "May signal renewable capex acceleration and data-center power demand growth, supporting Cal+1 bull narrative."
+    },
+    {
+      "day_label": "Fri",
+      "name": "COP31 Turkey host role coordination",
+      "why": "Cyprus exclusion risk threatens climate policy alignment; uncertainty could shift EU carbon policy trajectory and ETS messaging."
+    }
+  ]
+}
