@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU ETS review by Commission scheduled July 2026; Poland signals political resistance to ambition level and exemption scope.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Review outcome signals ambition trajectory; Poland coalition risk suggests widened exemptions or Member State opt-outs, reducing EUA scarcity premium and flattening power generation marginal cost curve."
+  },
+  "freshness_caveat": "",
+  "risk_flags": [
+    "GB Power 125.9 EUR/MWh (91st pctile) on 5.82% daily jump \u2014 unsustainable if renewables or interconnect capacity normalizes.",
+    "EU Storage at 40.09% (17th pctile, 14pp below seasonal) \u2014 refill pace critical; if summer demand surprises upward, H2 gas call extends and EUA margin call tightens.",
+    "EU ETS review July with Poland-led skepticism \u2014 EUA (33.6 EUR/tCO2, +9% MoM) risks 8\u201312% correction if review signals weakened ambition or exemption widening.",
+    "US LNG pipeline capacity +44.9 Bcf/d planned 2026\u201327 \u2014 if ramp completes, TTF arb compression to 2\u20134 EUR/MWh front-end, pressuring power spreads."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "GB power normalizes on renewable recovery; storage refill steady; EUA trades ahead of July review.",
+      "ttf_pct": "\u00b11\u20132%"
+    },
+    "downside": {
+      "de_power_pct": "-10\u201315%",
+      "summary": "Renewables surge; GB interconnect capacity returns; EU storage catches seasonal norm. EUA dips 5\u20137% on Poland coalition weakness.",
+      "ttf_pct": "-2\u20134%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8\u201312%",
+      "summary": "Cold snap or renewable curtailment extends GB spike; storage refill disappoints. EUA rallies 6\u20138% pre-review on supply risk.",
+      "ttf_pct": "+3\u20135%"
+    }
+  },
+  "themes": [
+    "GB power extreme; EU storage structural deficit",
+    "EUA review July amid Polish political headwinds",
+    "US LNG export ramp compresses European arb",
+    "Tech demand mandate backstops long-term power premiums"
+  ],
+  "top_drivers": [
+    "GB Power at 91st-percentile (125.9 EUR/MWh, +5.8% daily) on supply tightness; interconnect or renewable outage absorbed into premium.",
+    "EU Storage 14pp below seasonal (40.09% full) signals structural H2 thermal call and EUA upside into July review.",
+    "US LNG export ramp (44.9 Bcf/d 2026\u201327) threatens TTF arb compression to 2\u20134 EUR/MWh, flattening Cal+1 curve."
+  ],
+  "top_takeaway": "GB Power at 91st-percentile on tight supply; EU storage 14pp below seasonal norm signals H2 thermal call and EUA upside despite July review risk.",
+  "watchlist": [
+    {
+      "metric": "EU ETS Review outcome (July)",
+      "why": "EUA curve volatility trigger; Poland coalition risk signals Member State fragmentation on carbon ambition."
+    },
+    {
+      "metric": "EU Storage refill trajectory (May\u2013Aug)",
+      "why": "14pp seasonal deficit constrains summer inventory buffer; poor refill locks in elevated H2 thermal dispatch and EUA structural premium."
+    },
+    {
+      "metric": "GB Power supply (capacity, interconnect, wind)",
+      "why": "91st-percentile spike unsustainable without demand destruction or renewable curtailment relief; mean-reversion risk 15\u201320%."
+    },
+    {
+      "metric": "US LNG export ramp (2026\u201327 terminal approval + capacity)",
+      "why": "44.9 Bcf/d additions flatten European LNG arb; monitors TTF downside and Cal+1 curve shape flattening."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Jul",
+      "name": "EU ETS Review (Commission)",
+      "why": "EUA front-month and Cal+1 volatility; Poland signals political cap-raising risk."
+    },
+    {
+      "day_label": "Jun",
+      "name": "COP31 (Turkey host)",
+      "why": "Cyprus row may delay carbon policy consensus; signals EUA curve sentiment shift."
+    }
+  ]
+}

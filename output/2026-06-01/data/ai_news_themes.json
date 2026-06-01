@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU ETS review due July; Poland-led climate backlash; energy security dominates Commission agenda amid fossil fuel weaponization warnings.",
+  "themes": [
+    {
+      "headline": "EU ETS review scheduled July; Poland signals political resistance to carbon policy",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "EUA price at risk if review signals weakening ambition or widening exemptions. Poland's vocal criticism signals Member State coalition risk; July review could trigger volatility in EUA curve (front-month and Cal+1).",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/poland-criticizes-insane-eu-climate-policy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Energy Commissioner demands Big Tech data centers transition to carbon-free power",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Regulatory push for carbon-free baseload from hyperscalers drives long-term demand for dispatchable renewables and storage. Signals structural power demand growth; sustains higher DA and Cal+1 spreads via must-run renewable curtailment risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/brussels-to-big-tech-embrace-sustainable-artificial-intelligence-or-go-away/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU chiefs warn fossil fuel reliance poses defense and geopolitical weaponization risk",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Reinvigorates EU strategic autonomy narrative, supporting accelerated renewables and gas infrastructure diversification (LNG, interconnects). Backstops long-term carbon ambition and power-curve risk premia; TTF winter curve may reflect higher investment in alternative baseload.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europe-fossil-fuel-reliance-could-be-weaponized-war-eu-chief-warns/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US natural gas for power flat summer 2026; record highs forecast summer 2027",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Signals sustained US gas burn despite mild summer demand. Indirectly affects European LNG arb: if US gen demand stays high, fewer cargoes available for export, tightening TTF via reduced LNG supply elasticity into winter 2026–27.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67725"
+    },
+    {
+      "headline": "44.9 Bcf/d US natural gas pipeline capacity additions planned 2026–2027, Texas-led",
+      "source": "EIA Today in Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Rising US export infrastructure capacity (Permian takeaway, LNG feed) expands potential global LNG supply. If capacity reaches terminals, increases LNG availability to Europe, pressuring TTF spot and Cal+1 via improved US–NW Europe arbitrage at higher export levels.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67707"
+    }
+  ],
+  "watchlist": [
+    "EU ETS review by Commission, July 2026: EUA curve volatility risk.",
+    "POLITICO Energy and Climate Forum outcomes: energy security and climate policy momentum signals.",
+    "Turkey COP31 hosting June 2026: Cyprus exclusion row; may delay or muddy carbon policy consensus.",
+    "US LNG terminal approvals and export ramp 2026–2027: monitor TTF arb compression."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

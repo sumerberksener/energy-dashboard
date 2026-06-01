@@ -1,0 +1,162 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 91th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 14.0 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": false,
+    "stale_metrics": []
+  },
+  "metrics": {
+    "clean_dark": {
+      "available": false
+    },
+    "clean_spark": {
+      "available": false
+    },
+    "coal": {
+      "as_of": "2026-05-29",
+      "available": true,
+      "daily_change_pct": 0.07,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.11,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 10.8,
+      "monthly_change_pct": -1.12,
+      "name": "Coal",
+      "percentile_rank_5y": 34.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.0
+    },
+    "de_power": {
+      "available": false
+    },
+    "eua": {
+      "as_of": "2026-05-29",
+      "available": true,
+      "daily_change_pct": -0.44,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.92,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.6,
+      "monthly_change_pct": 9.06,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 40.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 3.9
+    },
+    "gb_power": {
+      "as_of": "2026-06-01",
+      "available": true,
+      "daily_change_pct": 5.82,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.66,
+      "headline": "91th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 125.9,
+      "monthly_change_pct": 5.53,
+      "name": "GB Power",
+      "percentile_rank_5y": 91.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -6.86
+    },
+    "renewable_share": {
+      "available": false
+    },
+    "storage": {
+      "as_of": "2026-05-30",
+      "available": true,
+      "daily_change_pct": 0.88,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.83,
+      "headline": "14.0 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 40.09,
+      "monthly_change_pct": 14.41,
+      "name": "EU Storage",
+      "percentile_rank_5y": 17.0,
+      "unit": "% full",
+      "weekly_change_pct": 4.24
+    },
+    "ttf": {
+      "as_of": "2026-05-29",
+      "available": true,
+      "daily_change_pct": -1.96,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.38,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 46.0,
+      "monthly_change_pct": -1.82,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 60.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -6.2
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU ETS review due July; Poland-led climate backlash; energy security dominates Commission agenda amid fossil fuel weaponization warnings.",
+    "themes": [
+      {
+        "commodity": "carbon",
+        "headline": "EU ETS review scheduled July; Poland signals political resistance to carbon policy",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/poland-criticizes-insane-eu-climate-policy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "EUA price at risk if review signals weakening ambition or widening exemptions. Poland's vocal criticism signals Member State coalition risk; July review could trigger volatility in EUA curve (front-month and Cal+1)."
+      },
+      {
+        "commodity": "power",
+        "headline": "Energy Commissioner demands Big Tech data centers transition to carbon-free power",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/brussels-to-big-tech-embrace-sustainable-artificial-intelligence-or-go-away/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "demand",
+        "why_it_matters": "Regulatory push for carbon-free baseload from hyperscalers drives long-term demand for dispatchable renewables and storage. Signals structural power demand growth; sustains higher DA and Cal+1 spreads via must-run renewable curtailment risk."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU chiefs warn fossil fuel reliance poses defense and geopolitical weaponization risk",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/europe-fossil-fuel-reliance-could-be-weaponized-war-eu-chief-warns/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Reinvigorates EU strategic autonomy narrative, supporting accelerated renewables and gas infrastructure diversification (LNG, interconnects). Backstops long-term carbon ambition and power-curve risk premia; TTF winter curve may reflect higher investment in alternative baseload."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US natural gas for power flat summer 2026; record highs forecast summer 2027",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67725",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Signals sustained US gas burn despite mild summer demand. Indirectly affects European LNG arb: if US gen demand stays high, fewer cargoes available for export, tightening TTF via reduced LNG supply elasticity into winter 2026\u201327."
+      },
+      {
+        "commodity": "gas",
+        "headline": "44.9 Bcf/d US natural gas pipeline capacity additions planned 2026\u20132027, Texas-led",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67707",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Rising US export infrastructure capacity (Permian takeaway, LNG feed) expands potential global LNG supply. If capacity reaches terminals, increases LNG availability to Europe, pressuring TTF spot and Cal+1 via improved US\u2013NW Europe arbitrage at higher export levels."
+      }
+    ],
+    "watchlist": [
+      "EU ETS review by Commission, July 2026: EUA curve volatility risk.",
+      "POLITICO Energy and Climate Forum outcomes: energy security and climate policy momentum signals.",
+      "Turkey COP31 hosting June 2026: Cyprus exclusion row; may delay or muddy carbon policy consensus.",
+      "US LNG terminal approvals and export ramp 2026\u20132027: monitor TTF arb compression."
+    ]
+  }
+}
