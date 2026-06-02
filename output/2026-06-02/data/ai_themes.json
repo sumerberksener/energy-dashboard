@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU ETS review launched by Commission in July; Poland vocal opposition signals member-state resistance to carbon price floor or tighter supply cap.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Regulatory uncertainty on MSR, supply cap, or sectoral tightening creates forward EUA curve volatility; carbon at 39th pctile exposed to bullish repricing if floor is tabled."
+  },
+  "freshness_caveat": "",
+  "risk_flags": [
+    "Storage at 40.48% (17th pctile, 13.9pp below seasonal) \u2014 June-July refill pace critical to summer-autumn power stack.",
+    "EU-US trade accord vote June 16 may reprrice LNG tariffs, shifting TTF-HH arb and power-gas fuel-switch economics.",
+    "ETS review flagged July amid Poland pushback \u2014 regulatory uncertainty on carbon floor/cap could trigger EUA volatility.",
+    "GB Power at 124.85 EUR/MWh (90th pctile) with Clean Spark at 41.24 suggests GB-EU interconnect stress or local supply tightness."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Storage deficit sustains thermal premium; Clean Spark holds 90th+ pctile absent renewable rebound or demand softening.",
+      "ttf_pct": "+2-4%"
+    },
+    "downside": {
+      "de_power_pct": "-5-8%",
+      "summary": "Renewable share rebounds sharply (wind/solar forecast >60th pctile); storage injection accelerates above seasonal; trade accord delays or softens tariff terms.",
+      "ttf_pct": "-4-6%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+3-6%",
+      "summary": "EU-US trade accord vote (June 16) narrows LNG tariffs; shadow-fleet sanctions persist, lifting crude-to-power arb; storage refill pace weak \u2014 thermal dispatch stays elevated.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "Thermal merit-order dominance: Clean Spark extended, storage tight",
+    "GB power elevated (90th pctile); EU storage structural deficit risks H2 refill",
+    "Geopolitical: Trade accord, shadow-fleet sanctions, ETS review July",
+    "Renewables suppressed (35th pctile, -16.17% daily) \u2014 thermal call stays elevated"
+  ],
+  "top_drivers": [
+    "Clean Spark at 93rd pctile (41.24 EUR/MWh) driven by storage deficit (13.9pp below seasonal) and low renewables (35th pctile, -16.17% daily) \u2014 sustained thermal call.",
+    "GB Power at 90th pctile (124.85 EUR/MWh) suggests GB-EU interconnect stress or local constraint; DE Power at 80th pctile (151.73 EUR/MWh) tracks continental merit-order pressure.",
+    "Geopolitical tail risks: EU-US trade accord (June 16) repricing LNG tariffs; shadow-fleet sanctions supporting crude, lifting peaking-plant economics; ETS review (July) creating regulatory overhang on carbon."
+  ],
+  "top_takeaway": "Clean Spark at 93rd percentile (41.24 EUR/MWh) amid 13.9pp storage deficit signals sustained thermal-dispatch premium; EU-US trade accord vote June 16 adds LNG cost repricing risk.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill trajectory",
+      "why": "At 13.9pp below seasonal (40.48% full), June-July injection pace will set H2 power risk and gas shoulder-season pricing."
+    },
+    {
+      "metric": "EU-US Trade Accord (June 16 vote)",
+      "why": "Tariff landscape on LNG imports directly affects TTF-HH spread and EU power-gas fuel-switch marginal cost."
+    },
+    {
+      "metric": "EU ETS review (July launch)",
+      "why": "Commission review amid Poland's opposition creates forward-curve uncertainty on carbon price floor or cap tightening; EUA currently 39th pctile."
+    },
+    {
+      "metric": "Renewable share recovery",
+      "why": "At 35th pctile (-16.17% daily drop), any multi-day wind drought extends thermal call; Clean Spark at 93rd pctile sensitive to further renewable weakness."
+    },
+    {
+      "metric": "Shadow-fleet insurance sanctions tightening",
+      "why": "Reduced Russian crude via EU-linked insurers supports Brent; higher crude-to-power arb in peaking generation."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU ETS review (July) signal watch",
+      "why": "Commission regulatory direction on carbon floor/cap tightening affects forward EUA curve and power dispatch incentives."
+    },
+    {
+      "day_label": "Mon",
+      "name": "EU-US trade accord final vote",
+      "why": "June 16 plenary vote on tariff terms reshapes LNG import cost, TTF-HH spread, and power-gas fuel-switch slope."
+    }
+  ]
+}

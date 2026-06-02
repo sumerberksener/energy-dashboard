@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-US trade accord advances to final vote June 16; shadow fleet sanctions tighten; ETS review flagged for July amid member-state pushback.",
+  "themes": [
+    {
+      "headline": "EU ETS under review in July amid Poland's climate policy criticism",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Commission review of Emissions Trading System in July creates regulatory uncertainty for EUA forward curve. Poland's vocal opposition signals member-state resistance to carbon price floors or tighter caps.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/poland-criticizes-insane-eu-climate-policy/"
+    },
+    {
+      "headline": "EU-US transatlantic trade accord advances to final plenary vote June 16",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Ratification of Trump trade deal shapes tariff landscape affecting LNG import economics and energy commodity flows. Final vote June 16 is key trigger for post-accord market repricing.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-trade-lawmakers-back-compromise-on-deal-with-trump/"
+    },
+    {
+      "headline": "EU shadows Russian oil via sanctions on insurers; Brussels targets shadow fleet network",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Tighter sanctions on EU-linked insurers enabling Russian shadow fleet reduce sanctioned crude supply globally, supporting Brent/WTI and crude-to-power fuel-switching economics in EU peaking plants.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-shadow-fleet-oil-sanctions-eu-insurance/"
+    },
+    {
+      "headline": "Brussels mandates sustainable AI: data centers must support carbon-free power shift",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Energy Commissioner Jørgensen signals regulatory push forcing data center demand onto renewables/nuclear, not gas. Structural electricity demand growth + constraint on flexible gas generation = upward power price pressure.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/brussels-to-big-tech-embrace-sustainable-artificial-intelligence-or-go-away/"
+    },
+    {
+      "headline": "US gas for power flat summer 2026; record high forecast for summer 2027",
+      "source": "EIA Today in Energy",
+      "tag": "demand",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "US summer gas demand flat despite 2% electricity growth signals efficiency gains. 2027 record forecast indirectly supports LNG export feasibility to NW Europe; marginal supply cost floors US Henry Hub, affecting TTF arb.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67725"
+    }
+  ],
+  "watchlist": [
+    "EU ETS review launch by Commission, July 2026 — regulatory direction on carbon floor/cap tightening.",
+    "EU-US trade accord final plenary vote, June 16 — tariff/LNG import cost repricing trigger.",
+    "COP31 in Turkey (host announced); climate diplomatic friction over Cyprus exclusion — watch for binding agreements on emissions targets.",
+    "US natural gas pipeline capacity additions (44.9 Bcf/d planned 2026–27) — affects US LNG export growth and TTF-HH spread."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
