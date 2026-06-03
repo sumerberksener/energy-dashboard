@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "ETS review due July; Poland criticizes 'insane' EU climate policy framework; watch for floor/ceiling and scope tweaks affecting EUA trading ranges and power-carbon spark.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "July Commission ETS reset will reshape carbon price signal and power-generation merit order; Polish political pushback signals possible supply-side adjustments affecting EUA volatility and thermal-baseload economics."
+  },
+  "freshness_caveat": "",
+  "risk_flags": [
+    "EU storage at 40.76% (17th percentile, 14pp deficit) with only 4 weeks to peak refill; any demand surge or LNG diversion to US tightens summer margin.",
+    "GB Power at 125.28 EUR/MWh (90th percentile) while DE Power at 119.1 (68th percentile); GB premium signals outage risk or interconnect constraint.",
+    "ETS review due July; Polish political opposition to carbon framework creates downside risk to EUA floor/ceiling and power-carbon spark volatility.",
+    "June 16 EU trade vote on Trump accord could trigger tariff escalation (10% forced-labor levy proposed), disrupting LNG capex and transatlantic energy investment sentiment."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11-3%",
+      "summary": "GB tightness persists; storage deficit slowly tightens through June. TTF and DE Power stable around current levels.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "-5-8%",
+      "summary": "Trade accord vote defers tariff escalation; EU-US tensions ease. El Ni\u00f1o forecasts weaken; cooler weather reduces AC load.",
+      "ttf_pct": "-6-9%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+6-10%",
+      "summary": "El Ni\u00f1o heat intensifies; European hydropower disappoints; US LNG export tightness diverts fewer cargoes. Cooling demand surge.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB supply tightness, storage deficit",
+    "Summer heat and cooling demand upside",
+    "ETS review volatility, tariff escalation risk",
+    "Renewables at seasonal median, insufficient offset"
+  ],
+  "top_drivers": [
+    "GB Power at 90th percentile amid tight summer supply; storage deficit (14pp below seasonal) limits thermal margin headroom.",
+    "El Ni\u00f1o heat warning drives cooling-demand upside and hydropower risk; cascades into gas call and power price support through summer curve.",
+    "ETS review (July) + Polish political opposition + June 16 trade tariff vote create policy and sentiment volatility; no immediate structural repricing yet."
+  ],
+  "top_takeaway": "GB Power at 90th percentile; EU storage 14pp below seasonal norm signals tight thermal dispatch into summer amid El Ni\u00f1o heat risk.",
+  "watchlist": [
+    {
+      "metric": "GB Power premium to DE",
+      "why": "90th percentile vs 68th suggests localized supply tightness or interconnect binding; any UK nuclear/wind outage could spike GB differentially."
+    },
+    {
+      "metric": "EU storage refill pace to Aug",
+      "why": "At 40.76% (17th pctile), summer margin is thin; any sustained LNG diversion to US (record 2027 expected) or geopolitical supply loss extends deficit."
+    },
+    {
+      "metric": "EUA 33.34 EUR/t (39th pctile)",
+      "why": "July ETS review and Polish pushback create bidirectional volatility; watch for floor/ceiling proposals that could reprice power-carbon merit order."
+    },
+    {
+      "metric": "El Ni\u00f1o heat intensity & hydropower forecasts",
+      "why": "UN warning of intensifying heat drives cooling-demand upside and hydropower generation risk; cascades into gas call and power price support."
+    },
+    {
+      "metric": "US LNG export parity to TTF",
+      "why": "US gas demand near highs (EIA); tighter Henry Hub margins reduce cargo diversion probability but increase TTF premium if LNG becomes scarce."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU trade accord final vote (June 16)",
+      "why": "Tariff escalation enactment risk; 10% forced-labor levy could disrupt LNG capex sentiment and Cal+1 curve volatility."
+    },
+    {
+      "day_label": "TBD",
+      "name": "July ETS review publication",
+      "why": "Carbon supply/policy reset; watch for floor/ceiling tweaks affecting EUA pricing and power-carbon spark around merit-order threshold."
+    }
+  ]
+}

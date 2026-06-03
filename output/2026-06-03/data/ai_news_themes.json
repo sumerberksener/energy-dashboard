@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-US trade tensions (Trump tariffs, June 16 vote) threaten transatlantic accord; Middle East conflict drives energy crisis; ETS under July review amid Polish pushback.",
+  "themes": [
+    {
+      "headline": "ETS review due July; Poland criticizes 'insane' EU climate policy framework",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "EUA volatility risk. July Commission review of Emissions Trading System will reshape carbon price signal; Poland's political opposition signals possible floor/ceiling tweaks, affecting EUA trading ranges and power-carbon spark.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/poland-criticizes-insane-eu-climate-policy/"
+    },
+    {
+      "headline": "Commission exempts green investments from EU spending rules amid energy crisis",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bullish-power",
+      "why_it_matters": "Accelerates capex for wind/solar/interconnects. Fiscal flexibility for green builds reduces RES cost of capital, pressuring long-term power prices (Cal+2/+3) and supporting low-carbon baseload relative to gas.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-commission-exempt-green-investments-from-spending-rules/"
+    },
+    {
+      "headline": "EU trade lawmakers back Trump accord; final plenary vote scheduled June 16",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Potential tariff escalation (10% forced-labor levy proposed) could disrupt LNG capex cycles, trade finance, and transatlantic energy investment. Enactment risk on June 16 adds near-term volatility to Cal+1 curve via sentiment.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-trade-lawmakers-back-compromise-on-deal-with-trump/"
+    },
+    {
+      "headline": "El Niño to intensify heat and climate disasters in coming months, UN warns",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Higher ambient temperatures reduce thermal plant efficiency and increase cooling demand; boost AC load in summer curve. Hydropower generation risk if dry conditions persist; TTF upside if gas-to-power switching needed.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/el-nino-heat-disasters-un/"
+    },
+    {
+      "headline": "US natural gas power consumption near highs this summer; record 2027 expected",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Higher US gas demand tightens LNG export margins and supports US export prices (Henry Hub + transport). If US gas tightness rises, LNG cargoes divert from Europe or TTF premiums compress; indirect upside for EU power via gas scarcity.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67725"
+    }
+  ],
+  "watchlist": [
+    "June 16: EU trade accord final plenary vote; assess tariff escalation impact on LNG/green capex.",
+    "July: Commission ETS review publication; watch for floor/ceiling, scope changes (potential EUA spike).",
+    "Monitor Middle East conflict spillovers into oil/LNG supply disruptions and EU fuel-switching behavior.",
+    "Track El Niño intensity; watch European summer hydropower forecasts and cooling-demand forecasts."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
