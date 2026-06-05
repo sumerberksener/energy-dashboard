@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-US trade tensions over forced labor tariffs and China sanctions threaten transatlantic stability; Middle East energy crisis drives green investment exemptions; ETS review looming July.",
+  "themes": [
+    {
+      "headline": "EU households to cut peak demand as industry and AI power soars",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Peak shaving via AI-driven demand-side response reduces residual-load volatility, compressing peak-to-off-peak DA spreads and month-ahead Cal curves. Critical for grid stability as AI data centers strain capacity.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-households-electricity-energy-artificial-intelligence-ai/"
+    },
+    {
+      "headline": "EU ETS review scheduled July amid Poland criticism of carbon policy",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "July Commission review of Emissions Trading System creates near-term regulatory uncertainty on EUA floor prices, free allocation, and carbon leakage rules. High desk relevance for Q3 EUA curve positioning.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/poland-criticizes-insane-eu-climate-policy/"
+    },
+    {
+      "headline": "Commission exempts green energy investments from EU fiscal spending rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Fiscal flexibility accelerates renewable capex deployment and grid upgrades, increasing near-term supply-side capacity. Downward pressure on power prices via faster wind/solar ramp-up, especially weeks-months horizon.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-commission-exempt-green-investments-from-spending-rules/"
+    },
+    {
+      "headline": "Russian shadow fleet relies on EU-linked insurers despite sanctions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Indirect: EU crackdown on shadow-fleet insurance may tighten Russian oil sanctions, reducing crude supply globally. Lower oil inventories and higher Brent can lift EU gas via crude-linked LNG contract indexation, particularly for spot TTF.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-shadow-fleet-oil-sanctions-eu-insurance/"
+    },
+    {
+      "headline": "US natural gas pipeline capacity surges 44.9 Bcf/d in 2026–27, mostly Texas",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Indirect: US Gulf Coast LNG export infrastructure expansion lowers Henry Hub-TTF spread, making US LNG cheaper for NW Europe. Supports summer 2026 storage refill and moderates TTF upside into winter.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67707"
+    }
+  ],
+  "watchlist": [
+    "EU trade deal final plenary vote June 16; monitor tariff outcome risk to transatlantic LNG flows.",
+    "Commission ETS review expected July; watch EUA floor price and free allocation policy changes.",
+    "El Niño heat outlook — hydro risk for Alpine/Scandinavian power generation in H2 2026.",
+    "China-Russia sanctions escalation; indirect energy commodity impact via geopolitical oil/LNG volatility."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

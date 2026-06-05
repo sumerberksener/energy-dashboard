@@ -1,0 +1,77 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU ETS review scheduled July; Commission to revisit EUA floor price, free allocation rules, and carbon-leakage provisions amid Poland criticism.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "July policy review creates near-term regulatory uncertainty on fossil-fuel dispatch marginal cost and EUA curve shape; Q3 roll risk for desk positioning."
+  },
+  "freshness_caveat": "Coal and clean-dark spread are stale (161 and 156 days old respectively); merit-order ranking and dark-spread hedges unreliable pending data refresh.",
+  "risk_flags": [
+    "Storage at 41.25% full, 14.2 pp below 5-yr seasonal \u2014 refill pace critical to H2 power risk and TTF upside.",
+    "Renewables at 80.2% (97th-percentile) are flattening peak spreads; demand-side response further compresses residual-load volatility.",
+    "ETS review scheduled July creates near-term regulatory uncertainty on EUA floor, free allocation, and carbon-leakage rules.",
+    "Coal data stale (161 days old, 7th-percentile); clean-dark spread stale (156 days); merit-order ranking unreliable pending refresh."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Renewables suppress DA spreads; storage refill steady; TTF grinds near 50 EUR/MWh; DE power at median.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Mild weather, strong renewables ramp, and fiscal-driven capex acceleration compress power prices; storage fills ahead of schedule; TTF slides.",
+      "ttf_pct": "-4-6%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+6-10%",
+      "summary": "Geopolitical oil shock (Russian sanctions tightening) lifts Brent; crude-linked LNG contracts push TTF +5\u20138%; storage refill defers into H2.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "Renewable suppression of DA + peak-shaving demand response",
+    "Storage deficit and summer refill race",
+    "EU fiscal acceleration of capex + ETS review policy risk",
+    "Geopolitical oil sanctions and indirect LNG arb"
+  ],
+  "top_drivers": [
+    "Renewables at 97th-percentile (80.2% of load) crush spot merit order; AI-driven demand-side response compresses peak spreads and residual-load volatility.",
+    "EU storage 14.2 pp below seasonal (41.25% full, 17th-percentile) creates summer refill urgency; refill pace will set H2 power and TTF curve shape.",
+    "EU fiscal exemption of green capex accelerates wind/solar deployment and grid upgrades, pushing down power-generation marginal cost over weeks\u2013months horizon.",
+    "ETS review in July introduces regulatory uncertainty on EUA floor and free allocation; indirect drag on fossil-fuel merit order and Q3 curve rolls."
+  ],
+  "top_takeaway": "Renewables at 97th-percentile crush merit order; storage 14 pp below seasonal average sets H2 refill urgency amid demand surge from AI and peak-shaving compression.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace",
+      "why": "41.25% full (17th-percentile) requires accelerated injection to avoid Q4 2026 tightness; TTF and DE power sensitivity to summer weather and LNG feed."
+    },
+    {
+      "metric": "ETS floor price and free allocation policy",
+      "why": "July Commission review will shape EUA curve and industrial-dispatch marginal cost; desk positioning critical for Q3 expiry rolls."
+    },
+    {
+      "metric": "US-EU LNG arb (Henry Hub\u2013TTF spread)",
+      "why": "US Gulf pipeline capacity +44.9 Bcf/d (2026\u201327) may compress Henry Hub\u2013TTF, supporting EU storage refill and moderating TTF upside into winter."
+    },
+    {
+      "metric": "Peak-to-off-peak DA spread compression",
+      "why": "AI demand-side response and household peak-shaving flatten residual load; reduced volatility pressures month-ahead and Cal curves."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Jun",
+      "name": "EU trade deal final vote",
+      "why": "Tariff outcome will signal transatlantic LNG flow risk and crude-linked gas arb sensitivity."
+    },
+    {
+      "day_label": "Jul",
+      "name": "Commission ETS review",
+      "why": "EUA floor, free allocation, and carbon-leakage rules revision; high desk relevance for Q3 curve positioning."
+    }
+  ]
+}
