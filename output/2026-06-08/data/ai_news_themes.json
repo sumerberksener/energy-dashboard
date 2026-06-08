@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU faces structural energy demand surge from AI/industry; China supply competition drives diversification policy; US-EU trade tensions over tariffs risk market fragmentation.",
+  "themes": [
+    {
+      "headline": "EU households to cut peak electricity use as industrial, AI demand surges",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Structural upward pressure on EU power demand from AI datacenters and industry threatens grid capacity. Peak shaving mandates could raise day-ahead intraday volatility and flatten load curves; impacts Cal+1 pricing and reserve margin stress.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-households-electricity-energy-artificial-intelligence-ai/"
+    },
+    {
+      "headline": "EU Commission exempts green capex from fiscal rules amid energy crisis",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "neutral",
+      "why_it_matters": "Accelerates renewable build and grid infrastructure investment. Eases fiscal constraints on member states' decarbonization capex, supporting medium-term power supply diversification away from fossil fuels. Positive for long-dated renewables; neutral near-term pricing impact.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-commission-exempt-green-investments-from-spending-rules/"
+    },
+    {
+      "headline": "Chinese firms aiding Russia face new EU sanctions wave",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Escalates EU-China trade friction; risks retaliation affecting critical energy tech imports (solar, rare-earth magnets, EV batteries). Could constrain renewable capacity additions and indirectly support fossil fuel margins if green transition delays; also threatens LNG logistics via shipping disruption.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/china-russia-firms-that-help-are-next-for-eu-sanctions/"
+    },
+    {
+      "headline": "Global shipping prepares for permanent disruption, executives warn",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Persistent supply-chain fragmentation threatens LNG import reliability and cost. Higher shipping premiums on spot LNG cargoes to NW Europe would elevate TTF via arbitrage; regional LNG tightness could spike power costs in gas-heavy regions.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/global-shipping-industry-prepares-for-permanent-disruption/"
+    },
+    {
+      "headline": "EU trade chief pushes mandatory supply diversification tool for critical sectors",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Targeted at chemicals and semiconductors; indirect power impact via industrial competitiveness and shift in energy-intensive manufacturing footprint. Could reduce EU industrial electricity demand if production migrates offshore, bearish for power; or raise capex for localized green capacity, bullish long-term.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-trade-chief-maros-sefcovic-calls-for-new-tool-to-diversify-sources-of-supply/"
+    }
+  ],
+  "watchlist": [
+    "EU sanctions implementation timeline vs. China retaliation on solar/EV supply chain",
+    "Industrial electricity demand / AI datacenter facility announcements in EU; grid stress testing",
+    "US-EU trade truce durability; tariff escalation risk to green tech imports",
+    "Q3 2026 renewables auction calendar and fiscal rule exemption fund deployment"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

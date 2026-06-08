@@ -1,0 +1,212 @@
+{
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 94th-percentile of 5-yr range \u2014 historically high; Renewables \u2014 93th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 164,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 159,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 159,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-06-08",
+      "available": true,
+      "daily_change_abs": 110.28,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.79,
+      "headline": "94th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 43.16,
+      "monthly_change_abs": 16.47,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 94.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -23.4
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 164,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-06-08",
+      "available": true,
+      "daily_change_pct": 263.53,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.84,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 152.12,
+      "monthly_change_pct": 9.48,
+      "name": "DE Power",
+      "percentile_rank_5y": 80.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -19.59
+    },
+    "eua": {
+      "as_of": "2026-06-05",
+      "available": true,
+      "daily_change_pct": -1.72,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.89,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 32.51,
+      "monthly_change_pct": 1.56,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 34.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.11
+    },
+    "gb_power": {
+      "as_of": "2026-06-08",
+      "available": true,
+      "daily_change_pct": 143.37,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.05,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 114.46,
+      "monthly_change_pct": -15.3,
+      "name": "GB Power",
+      "percentile_rank_5y": 80.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -31.58
+    },
+    "renewable_share": {
+      "as_of": "2026-06-07",
+      "available": true,
+      "daily_change_pct": 74.99,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.72,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 70.34,
+      "monthly_change_pct": 47.41,
+      "name": "Renewables",
+      "percentile_rank_5y": 93.0,
+      "unit": "% of load",
+      "weekly_change_pct": 35.18
+    },
+    "storage": {
+      "available": false
+    },
+    "ttf": {
+      "as_of": "2026-06-05",
+      "available": true,
+      "daily_change_pct": -0.53,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.43,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 48.5,
+      "monthly_change_pct": 10.46,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 64.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.11
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU faces structural energy demand surge from AI/industry; China supply competition drives diversification policy; US-EU trade tensions over tariffs risk market fragmentation.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "EU households to cut peak electricity use as industrial, AI demand surges",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-households-electricity-energy-artificial-intelligence-ai/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "demand",
+        "why_it_matters": "Structural upward pressure on EU power demand from AI datacenters and industry threatens grid capacity. Peak shaving mandates could raise day-ahead intraday volatility and flatten load curves; impacts Cal+1 pricing and reserve margin stress."
+      },
+      {
+        "commodity": "power",
+        "headline": "EU Commission exempts green capex from fiscal rules amid energy crisis",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-commission-exempt-green-investments-from-spending-rules/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Accelerates renewable build and grid infrastructure investment. Eases fiscal constraints on member states' decarbonization capex, supporting medium-term power supply diversification away from fossil fuels. Positive for long-dated renewables; neutral near-term pricing impact."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Chinese firms aiding Russia face new EU sanctions wave",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/china-russia-firms-that-help-are-next-for-eu-sanctions/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Escalates EU-China trade friction; risks retaliation affecting critical energy tech imports (solar, rare-earth magnets, EV batteries). Could constrain renewable capacity additions and indirectly support fossil fuel margins if green transition delays; also threatens LNG logistics via shipping disruption."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Global shipping prepares for permanent disruption, executives warn",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/global-shipping-industry-prepares-for-permanent-disruption/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Persistent supply-chain fragmentation threatens LNG import reliability and cost. Higher shipping premiums on spot LNG cargoes to NW Europe would elevate TTF via arbitrage; regional LNG tightness could spike power costs in gas-heavy regions."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU trade chief pushes mandatory supply diversification tool for critical sectors",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-trade-chief-maros-sefcovic-calls-for-new-tool-to-diversify-sources-of-supply/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Targeted at chemicals and semiconductors; indirect power impact via industrial competitiveness and shift in energy-intensive manufacturing footprint. Could reduce EU industrial electricity demand if production migrates offshore, bearish for power; or raise capex for localized green capacity, bullish long-term."
+      }
+    ],
+    "watchlist": [
+      "EU sanctions implementation timeline vs. China retaliation on solar/EV supply chain",
+      "Industrial electricity demand / AI datacenter facility announcements in EU; grid stress testing",
+      "US-EU trade truce durability; tariff escalation risk to green tech imports",
+      "Q3 2026 renewables auction calendar and fiscal rule exemption fund deployment"
+    ]
+  }
+}

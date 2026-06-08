@@ -1,0 +1,63 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale (164 days old, as of 2025-12-26) and Clean Dark stale (159 days old, as of 2025-12-31). Fuel-switch spread dynamics and thermal merit-order position not current; treat derived spreads with caution until refresh.",
+  "risk_flags": [
+    "Clean Spark 94th percentile (43.16 EUR/MWh) with +110 EUR/MWh daily move suggests volatility spike; grid capacity stress from AI demand surge could widen intraday spreads.",
+    "Renewables at 93rd percentile (70.34% of load) but shipping disruption threatens LNG import cost \u2014 arbitrage pressure on TTF if cargoes face 20-30% premium; regional power spikes possible.",
+    "EU-China sanctions escalation (solar, EV battery, rare-earth imports) risks renewable capacity delays and inadvertent fossil fuel margin support if green transition stutters.",
+    "Coal data stale (164 days old); Clean Dark stale (159 days old) \u2014 spread dynamics opaque; recent DE Power +263% daily move (152.12 EUR/MWh, 80th percentile) not yet reconciled to fundamentals."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+1\u20133%",
+      "summary": "Renewables remain elevated; Clean Spark stays 90th+ percentile. AI demand announcements prop power intraday spreads; LNG spot cargoes trade 10-15% premium on shipping friction.",
+      "ttf_pct": "+2\u20135%"
+    },
+    "downside": {
+      "de_power_pct": "\u22122\u20135%",
+      "summary": "US-EU tariff truce holds; shipping disruption eases via insurance/corridor solutions. Renewables auction fills accelerate; oversupply of wind/solar in grid depresses DA spreads. Coal recovers from multi-year lows.",
+      "ttf_pct": "\u22123\u20136%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+6\u201310%",
+      "summary": "EU-China sanctions escalate; solar/EV battery imports disrupted, renewable capex delayed. LNG cargoes face 25-30% shipping premium; arbitrage drives TTF spike. Peak shaving mandate tightens grid capacity.",
+      "ttf_pct": "+8\u201312%"
+    }
+  },
+  "themes": [
+    "Structural EU power demand surge from AI and industry",
+    "Renewables at historical highs; green capex fiscal exemption accelerates build",
+    "Geopolitical friction (China sanctions, shipping disruption) threatens LNG reliability and cost",
+    "Coal historically depressed (7th percentile); fuel-switch regime persists"
+  ],
+  "top_drivers": [
+    "Renewables at 93rd percentile (70.34% of load) suppressing marginal-cost power pricing; Clean Spark 94th percentile reflects structural AI/industrial demand surge competing for electrons.",
+    "Shipping disruption and LNG import cost inflation via geopolitical friction (China sanctions, supply-chain fragmentation) \u2014 TTF arbitrage upside if cargoes face sustained premium.",
+    "Coal remains depressed (7th percentile, 96 USD/t) but fuel-switch regime stable; fiscal exemption for green capex accelerates renewables build, extending thermal displacement."
+  ],
+  "top_takeaway": "Clean Spark at 94th percentile on structural EU power demand surge from AI/industry; renewables at 93rd percentile offset by shipping-driven LNG risk and China sanctions friction.",
+  "watchlist": [
+    {
+      "metric": "EU AI datacenter announcements & grid stress testing",
+      "why": "Politico reporting structural electricity demand surge from AI; peak-shaving mandates could flatten load curves and raise Cal+1 volatility."
+    },
+    {
+      "metric": "LNG shipping cost indices & spot cargo premiums to NW Europe",
+      "why": "Permanent shipping disruption threatens reliable LNG import; +20-30% shipping premium would elevate TTF via arbitrage and tighten regional power margins."
+    },
+    {
+      "metric": "EU-China sanctions implementation pace & solar/EV supply retaliation",
+      "why": "Renewable capex delays indirectly support fossil fuel economics; also affects long-dated green capacity pricing."
+    },
+    {
+      "metric": "Q3 2026 renewables auction calendar & fiscal rule exemption fund deployment",
+      "why": "Green capex acceleration via fiscal exemption will shape medium-term power supply and Cal+2+ curve structure."
+    },
+    {
+      "metric": "US-EU tariff truce durability",
+      "why": "Trade escalation on green tech imports could delay renewable build and constrain EU industrial competitiveness."
+    }
+  ],
+  "watchlist_dated": []
+}
