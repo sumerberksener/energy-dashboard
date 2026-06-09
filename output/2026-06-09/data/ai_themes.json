@@ -1,0 +1,63 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "",
+  "risk_flags": [
+    "EU storage at 42.48% (18th pctile, 14.3 pp below seasonal) \u2014 refill pace critical; any LNG disruption or warm summer will extend tight gas regime into autumn.",
+    "Strait of Hormuz closure (Feb 28) elevated crude and supports power/gas fuel-switch; shipping fragmentation adds 3\u20135 weeks to LNG delivery timelines, tightening European supply.",
+    "Clean Spark at 89th pctile (31.25 EUR/MWh) \u2014 gas in-the-money vs coal; AI demand-side legislation targets peak shaving but implementation lags weeks; near-term peak volatility remains elevated.",
+    "Chinese sanctions on Russian-linked firms risk delays to renewables components and grid infra; constrains deployment velocity and supports longer-term power curve inflation."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+2-4%",
+      "summary": "Tight storage, firm TTF, power elevated; AI demand-side legislation delays; geopolitics contained.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-10-15%",
+      "summary": "Hormuz de-escalates; LNG flows accelerate; mild weather, renewables surge; demand-side flexibility gains traction.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Hormuz escalation or LNG delivery delays; storage refill disappoints; AI demand peak-shaving stalls.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Tight EU gas via storage deficit; TTF premium into refill season",
+    "Power demand surge (AI, industry) compresses margins; peak-shaving policy nascent",
+    "Geopolitical risk premium: Hormuz closure, shipping fragmentation tightens LNG arb",
+    "Renewables 45th pctile; coal soft; carbon stable but tail-risk to supply-chain sanctions"
+  ],
+  "top_drivers": [
+    "Storage deficit (14.3 pp below seasonal, 18th pctile) locks in tight-gas regime into refill season; TTF +2.7% and 66th pctile reflect LNG supply anxiety.",
+    "Hormuz geopolitical risk and shipping fragmentation tighten LNG arb to Europe; crude elevation supports fuel-switch premium and power margin compression (Clean Spark 89th pctile).",
+    "AI/industrial electricity demand surge collides with nascent peak-shaving policy; DA volatility and thermal call remain extended until AI-driven demand flexibility deployed (weeks+ horizon)."
+  ],
+  "top_takeaway": "Storage 14.3 pp below seasonal; TTF +2.7% and power tracking 77th\u201387th percentile amid demand surge from AI/industry and Hormuz geopolitical risk.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace",
+      "why": "42.48% full (18th pctile, 14.3 pp below seasonal) \u2014 injection slope and LNG flow timing set H2 gas and power risk through autumn."
+    },
+    {
+      "metric": "Strait of Hormuz geopolitical status",
+      "why": "Feb 28 closure triggered crude spike; continued disruption supports TTF via LNG arb tightening and power margin compression; monitor weekly for escalation/resolution."
+    },
+    {
+      "metric": "EU AI demand-side management rollout",
+      "why": "Peak-shaving legislation aims to reduce marginal generation cost and grid strain; timeline slippage prolongs elevated DA/intraday volatility; watch for pilot programme dates."
+    },
+    {
+      "metric": "Chinese-Russian sanctions escalation",
+      "why": "Supply-chain bottlenecks in semiconductors and renewables components delay grid modernisation; structural upside to Cal+1 power curve; monitor EU Commission sanction lists weekly."
+    },
+    {
+      "metric": "US-EU trade truce / Trump tariff threats",
+      "why": "Forced labour tariff negotiation outcome affects EU export costs and industrial electricity demand; tail-risk to power demand forecast and TTF via industrial feedstock demand."
+    }
+  ],
+  "watchlist_dated": []
+}

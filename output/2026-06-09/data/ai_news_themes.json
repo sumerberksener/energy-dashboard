@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-China trade tensions rising amid sanctions on Russian-linked firms; Trump tariff threats strain US-EU trade truce; energy demand surge from industry/AI strains grids.",
+  "themes": [
+    {
+      "headline": "EU legislation targets peak-demand reduction via AI as industrial electricity demand surges",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Demand-side flexibility via AI targets peak shaving; reduces need for expensive marginal generation and grid reinforcement. Direct impact on DA spread and intraday power price volatility. Peak demand management lowers Cal+1 volatility.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-households-electricity-energy-artificial-intelligence-ai/"
+    },
+    {
+      "headline": "Strait of Hormuz closure drives U.S. jet fuel to record high production; crude prices elevated",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Strait closure (Feb 28) triggered crude price spike and supply concerns in Europe/Asia. Higher crude increases marginal fuel-switching cost toward gas in power generation, supporting EU power prices and gas demand. TTF risk via European power margin compression.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id="
+    },
+    {
+      "headline": "EU sanctions Chinese firms aiding Russia, escalating Brussels-Beijing tensions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Sanctions escalation against Chinese-Russian cooperation may constrain critical supply chains (semiconductors, energy infra components). Indirect: lengthens grid modernisation timelines, pressures renewables deployment velocity, raises capex for EU power sector. Months-forward structural risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/china-russia-firms-that-help-are-next-for-eu-sanctions/"
+    },
+    {
+      "headline": "EU trade chief proposes new diversification tool to reduce China supply dependence",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Mandatory supply diversification in critical sectors (including energy equipment, renewables components). Increases procurement friction and costs; delays infrastructure deployment. Indirect upward pressure on power capex, widening generation costs and supporting longer-term power curve.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-trade-chief-maros-sefcovic-calls-for-new-tool-to-diversify-sources-of-supply/"
+    },
+    {
+      "headline": "Global shipping industry adapts to permanent disruption; rising geopolitical fragmentation",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Shipping fragmentation raises LNG logistics costs and delays to Europe. Higher LNG transport cost narrows US-to-EU arb, tightens TTF supply, supports gas and coal-fired power economics. Weeks-to-months horizon for LNG delivery timing risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/global-shipping-industry-prepares-for-permanent-disruption/"
+    }
+  ],
+  "watchlist": [
+    "EU forced labour tariff negotiation outcome with Trump administration; truce fragility.",
+    "Straits geopolitics: continued supply disruption risk and crude/energy price contagion to EU.",
+    "EU AI-driven demand-side management rollout timeline and grid impact studies.",
+    "Chinese sanctions escalation and critical component supply chain bottlenecks for renewables/grid."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
