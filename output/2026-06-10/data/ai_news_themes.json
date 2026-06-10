@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU sanctions Russia's 21st package; frozen oil price cap proposed. Strait of Hormuz closure (Feb 28) triggered jet fuel spike; shipping disruption persistent. China sanctions risk escalates.",
+  "themes": [
+    {
+      "headline": "EU freezes Russian oil price cap to prevent war-funding windfall",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Tighter Russian oil export restrictions reduce global crude supply, pushing Brent higher. Higher crude → higher marginal generation costs → upward pressure on EU power prices and heating demand via fuel-switch exposure.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-proposes-freezing-russian-oil-price-cap-to-prevent-windfall-for-kremlins-war-chest/"
+    },
+    {
+      "headline": "Strait of Hormuz closure triggered jet fuel doubling; U.S. production surging",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz closure (Feb 28) spiked crude/product prices globally, including jet fuel. Elevated crude costs support higher power generation costs in EU; LNG arbitrage tightens as global energy costs spike, constraining EU gas imports.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id="
+    },
+    {
+      "headline": "EU invests €5 billion in North African solar to power Europe",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Large-scale solar import capacity under development reduces EU's reliance on flexible gas generation; long-term structural bearish for power baseload pricing. However, deployment timeline uncertain; near-term impact minimal.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-to-invest-e5-billion-in-renewables-in-north-africa-and-middle-east/"
+    },
+    {
+      "headline": "Global shipping faces permanent disruption; supply-chain fragmentation deepens",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Shipping route fragmentation and higher transit costs increase LNG delivery costs to Europe, supporting TTF via reduced arbitrage. Elevated logistics costs feed into energy input inflation, supporting power and gas forward curves.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/global-shipping-industry-prepares-for-permanent-disruption/"
+    },
+    {
+      "headline": "EU warns Russian economy slowing; sanctions package 21 announced",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Accelerating Russian economic contraction may reduce domestic energy demand and boost LNG export capacity; unclear net effect on EU gas supply. Monitor for LNG re-routing announcements and pipeline flow changes in coming weeks.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-russia-economy-soldiers-sanction-package/"
+    }
+  ],
+  "watchlist": [
+    "Hormuz closure impact on crude/LNG spreads; watch Brent-TTF arb narrowing.",
+    "EU sanctions package 21 implementation: Russian oil export curbs details due.",
+    "North African solar project milestones; grid interconnection timelines to EU.",
+    "Shipping disruption escalation; monitor LNG delivery premium (days-to-destination)."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

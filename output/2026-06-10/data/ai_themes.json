@@ -1,0 +1,74 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (166 days old, as of 2025-12-26) and Clean Dark (161 days old, as of 2025-12-31) are stale; forward-looking scenarios rely on current news flow (Hormuz, sanctions) rather than recent coal/spread mechanics. TTF, DE Power, storage, and renewables current as of 2026-06-09/10.",
+  "risk_flags": [
+    "Storage at 42.8% (19th percentile, 14.3 pp below seasonal) \u2014 refill pace into summer will set H2 power and gas risk if supply tightens further.",
+    "Coal at 96 USD/t (7th percentile) \u2014 thermal dispatch suppressed, but Hormuz closure and sanctions package 21 could elevate crude and marginal generation costs sharply.",
+    "Hormuz closure (Feb 28) spiked jet fuel; persistent shipping disruption raising LNG delivery premiums, tightening EU gas arbitrage and supporting TTF.",
+    "Russian sanctions package 21 freezes oil price cap \u2014 unclear net LNG export boost vs. supply-chain disruption; monitor implementation details."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12\u20134%",
+      "summary": "TTF holds 48\u201350 EUR/MWh; DE Power 125\u2013135 EUR/MWh; coal suppression persists; renewables offset gas call.",
+      "ttf_pct": "\u00b11\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "-8\u201314%",
+      "summary": "Hormuz reopens; shipping normalizes; global LNG supply eases; renewables remain strong; storage refill accelerates; TTF softens.",
+      "ttf_pct": "-6\u201312%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+12\u201318%",
+      "summary": "Hormuz closure persists; sanctions package 21 Russian oil curbs lock in; crude spikes; LNG delivery costs rise; TTF and power rally.",
+      "ttf_pct": "+8\u201315%"
+    }
+  },
+  "themes": [
+    "Storage deficit + coal depression = thermal generation headroom constrained",
+    "Geopolitical crude/LNG tightening via Hormuz and Russian sanctions",
+    "Renewables at 77th-percentile offsetting gas call, but storage lag creates H2 refill risk",
+    "Shipping fragmentation raising LNG delivery costs to EU"
+  ],
+  "top_drivers": [
+    "Storage deficit (42.8%, 14.3 pp below seasonal) + coal suppression (7th percentile) = tight thermal backstop into summer, vulnerable to supply shock.",
+    "Geopolitical crude tightening (Hormuz closure, Russian sanctions package 21) pushes Brent higher and feeds into EU power generation cost curve via fuel-switch and LNG arbitrage mechanics.",
+    "Shipping route fragmentation and elevated LNG delivery premiums narrow EU-Asia arbitrage, supporting TTF and constraining EU import optionality."
+  ],
+  "top_takeaway": "EU storage 14 pp below seasonal; coal at 7th-percentile; Hormuz closure and Russian sanctions tighten crude-to-power cost chain via LNG arbitrage and fuel-switch exposure.",
+  "watchlist": [
+    {
+      "metric": "Hormuz strait reopening / closure persistence",
+      "why": "Closure spiked crude and jet fuel; persistent disruption raises global LNG delivery costs and supports TTF via arbitrage tightening."
+    },
+    {
+      "metric": "EU sanctions package 21 implementation (Russian oil export curbs)",
+      "why": "Tighter Russian crude export restrictions reduce global supply, pushing Brent higher and elevating EU power generation costs via fuel-switch exposure."
+    },
+    {
+      "metric": "EU storage refill pace (seasonal +14.3 pp deficit)",
+      "why": "Slow intra-year refill (currently +16.5% m/m but from low base) \u2014 if supply tightens or weather turns hot, H2 storage stress and power curve inversion risk."
+    },
+    {
+      "metric": "LNG delivery premium (shipping disruption index)",
+      "why": "Fragmented routes and higher transit costs narrow EU-Asia LNG arbitrage, support TTF and reduce European import competitiveness vs. Atlantic basin."
+    },
+    {
+      "metric": "North African solar project deployment milestones",
+      "why": "Long-term structural bearish for EU power baseload; \u20ac5B investment under way but timeline uncertain \u2014 monitor grid interconnection announcements for 2027+ impact."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "EU sanctions package 21 implementation details (Russian oil export curbs)",
+      "why": "Clarify export volume curbs and timeline; direct input to crude-to-power cost pass-through and LNG re-routing risk."
+    },
+    {
+      "day_label": "TBD",
+      "name": "Hormuz strait reopening or escalation update",
+      "why": "Current closure (Feb 28) is live; any reopening or further closure spreads directly into LNG delivery costs and EU gas arbitrage."
+    }
+  ]
+}
