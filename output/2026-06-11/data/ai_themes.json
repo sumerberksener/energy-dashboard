@@ -1,0 +1,58 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "",
+  "risk_flags": [
+    "Storage at 43.1% (19th percentile 5-yr) \u2014 14.3 pp seasonal deficit raises H2 generation call if refill stalls.",
+    "Hormuz closure and Iran nuclear talks collapse risk elevate crude/diesel costs, pushing thermal marginal cost higher and reinforcing Clean Spark premium.",
+    "EU 21st sanctions package freezes Russian oil price cap; tightens alternative crude sourcing and may widen LNG arb into summer.",
+    "Jet fuel crisis easing via workarounds reduces near-term refinery pressure; risk to downside if operational fixes accelerate."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+2-5%",
+      "summary": "Clean Spark and GB Power remain elevated; TTF stable mid-60s percentile; storage refill steady. Thermal in-the-money persists.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-5-8%",
+      "summary": "Jet fuel crisis fully resolves; refinery margins normalize; crude retreats; storage injection accelerates on mild weather and demand softening.",
+      "ttf_pct": "-3-5%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "Iran nuclear collapse or Hormuz closure deepens; crude spikes; refined product scarcity tightens thermal marginal cost; storage injection slows.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "Thermal generation in-the-money; high Clean Spark and GB premium",
+    "EU storage deficit and refill pace under scrutiny",
+    "Crude and refined product supply risk from Hormuz closure and Iran escalation"
+  ],
+  "top_drivers": [
+    "Clean Spark at 91st-percentile (35.2 EUR/MWh) reflects tight thermal merit order and elevated gas relative to coal; storage deficit below seasonal boosts summer generation premium.",
+    "GB Power at 90th-percentile (125.69 EUR/MWh) signals UK import scarcity and wind/renewable weakness (41.7% share down 24.8% YoY); cross-channel arbitrage under pressure.",
+    "Hormuz closure and Iran escalation risk create structural bullish bias for crude and refined products, lifting thermal generation marginal cost and reinforcing power premium into summer."
+  ],
+  "top_takeaway": "Clean Spark at 91st-percentile (35.2 EUR/MWh) and GB Power at 90th-percentile (125.69 EUR/MWh) signal tight thermal merit order; Storage 14.3 pp below seasonal pushes H2 refill urgency amid Hormuz geopolitical risk.",
+  "watchlist": [
+    {
+      "metric": "Hormuz closure duration",
+      "why": "Extended strait closure compounds EU crude scarcity and thermal generation marginal cost; directly bullish for power and Clean Spark."
+    },
+    {
+      "metric": "EU Storage refill pace (H2 2026)",
+      "why": "At 14.3 pp seasonal deficit, injection speed will set power baseload availability and DA volatility; storage < 40% into July signals tight winter build assumption."
+    },
+    {
+      "metric": "Iran nuclear deal negotiations",
+      "why": "Collapse or escalation triggers further crude supply disruption and refined product scarcity; tail-risk to power baseload via diesel cost."
+    },
+    {
+      "metric": "EU Sanctions Package 21 implementation",
+      "why": "Russian oil price cap freeze reshapes crude flows and LNG arbitrage; may widen Brent-TTF or tighten EU import costs into summer."
+    }
+  ],
+  "watchlist_dated": []
+}
