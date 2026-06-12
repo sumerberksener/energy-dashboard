@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Hormuz closure and Iran–Trump tensions driving crude/oil product rallies; EU 21st sanctions package on Russia; structural supply disruption in shipping and energy trade flows.",
+  "themes": [
+    {
+      "headline": "Hormuz closure sparks global energy repositioning; projects delayed.",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sustained Hormuz closure restricts 20%+ global crude exports; raises oil prices and redirects LNG/crude supply chains. Higher crude → higher gas burn-through and TTF upside via fuel-switching into European power.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/06/10/hormuz-closure-global-energy-00957746?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Trump threatens Iran over failed negotiations; escalation risk.",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Further Iran–US confrontation could tighten crude supply, sustain high Brent prices, and reinforce oil-to-gas switching in European power plants. Direct upside to power spreads via marginal fuel cost.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/06/10/trump-iran-war-negotiations-00955937?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Europe fends off jet fuel crisis via workarounds; supply fragile.",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Jet fuel spot tightness and temporary mitigation strategies highlight refinery utilization strain. Sustained product shortages can redirect crude away from power-station gasoil burn or compress margins; signals structural energy supply stress.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/europe-jet-fuel-crisis-energy-markets-war-iran/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU proposes freezing Russian oil price cap; 21st sanctions package.",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Frozen price cap on Russian crude could lower global oil supply available to Europe, forcing spot purchases at higher market rates or redirecting LNG cargoes. Net effect ambiguous; downward pressure on EU power if crude costs rise and cap-compliant flows shrink.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-proposes-freezing-russian-oil-price-cap-to-prevent-windfall-for-kremlins-war-chest/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU invests €5bn in North Africa solar to power European grid.",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Long-term African solar imports compete with European power generation on DA/Cal+1 curves. Multi-year ramp eases summer peak pricing and storage release pressure; bearish for power volatility once transmission corridors operational.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-to-invest-e5-billion-in-renewables-in-north-africa-and-middle-east/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "Hormuz closure duration and impact on crude/LNG supply routing to Europe.",
+    "Iran–Trump escalation; risk of further US sanctions or military action.",
+    "EU jet fuel/distillate supply normalization timeline; refinery utilization trends.",
+    "EU 21st sanctions implementation; impact on Russian crude flows and price cap."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

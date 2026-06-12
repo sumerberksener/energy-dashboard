@@ -1,0 +1,58 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Storage data 2 days old (as_of 2026-06-10); TTF and EUA 1 day old (as_of 2026-06-11). DE Power, GB Power, Clean Spark, Clean Dark current (as_of 2026-06-12).",
+  "risk_flags": [
+    "EU storage at 43.36% (19th pctile, 14.3 pp below 5-yr seasonal) \u2014 summer refill pace critical if Hormuz closure sustains.",
+    "Clean Spark at 16.77 EUR/MWh (74th pctile) after 15.2\u03c3 move \u2014 suggests rapid merit-order rotation into gas-fired generation on oil-product signals.",
+    "Hormuz closure restricts 20%+ global crude exports; sustained disruption forces LNG redirect and raises European gas burn-through risk.",
+    "Trump-Iran escalation could tighten crude further, reinforcing fuel-switch economics favoring thermal over storage discharge."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Hormuz closure persists; storage refill steady; DE power tracks current thermal premium.",
+      "ttf_pct": "+2-4%"
+    },
+    "downside": {
+      "de_power_pct": "-10-15%",
+      "summary": "Hormuz reopens; crude rally reverses; storage refill accelerates; fuel-switch margin compresses.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Hormuz remains blocked; Trump-Iran escalation tightens crude; LNG redirects to Asia; European thermal dispatch extends.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Hormuz closure + Iran escalation lifting crude/power spreads",
+    "Storage deficit pressures summer margin; fuel-switching upside to thermal",
+    "Clean Spark outsized volatility signals merit-order instability"
+  ],
+  "top_drivers": [
+    "Hormuz closure (20%+ crude exports disrupted) + Iran-Trump escalation driving Brent rally and oil-to-gas switching in European power merit order.",
+    "Storage deficit (43.36%, 14.3 pp below seasonal) compressing summer margin and raising thermal dispatch value through H2.",
+    "Clean Spark 15.2\u03c3 spike reflects rapid repricing of coal-to-gas substitution under geopolitical crude premium."
+  ],
+  "top_takeaway": "Clean Spark explodes 15.2\u03c3 on Hormuz-driven oil rally; EU storage 14.3 pp below seasonal raises H2 refill urgency amid geopolitical supply risk.",
+  "watchlist": [
+    {
+      "metric": "Hormuz Strait closure duration",
+      "why": "Sustained disruption redirects LNG supply chains and raises global oil prices; direct transmission into European gas burn-through and TTF via fuel-switching."
+    },
+    {
+      "metric": "EU storage refill trajectory",
+      "why": "At 43.36% (14.3 pp below seasonal), refill pace through summer will determine H2 power curve shape and thermal dispatch risk."
+    },
+    {
+      "metric": "Crude/product spreads vs. TTF arb",
+      "why": "High Brent on Hormuz closure incentivizes gas-to-oil switching in power generation; widening spreads extend thermal call into Q3."
+    },
+    {
+      "metric": "Trump-Iran negotiation status",
+      "why": "Further escalation could tighten crude supply, sustain elevated Brent, and reinforce power spread upside."
+    }
+  ],
+  "watchlist_dated": []
+}
