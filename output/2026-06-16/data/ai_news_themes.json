@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran-US deal reopens Hormuz strait; EU-US trade accord clears Parliament. ETS faces industry pressure; fuel prices elevated.",
+  "themes": [
+    {
+      "headline": "Iran-US agreement reopens Strait of Hormuz; reduces oil supply disruption risk",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Hormuz closure had spiked crude and LNG arbitrage into Europe. Reopening reduces emergency LNG diversion and cools crude cost base—eases fuel-switching economics for power plants. TTF correlation to Brent tightens.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/06/14/trump-iran-agreement-hormuz-00961833"
+    },
+    {
+      "headline": "Steel and chemicals demand freeze to EU Emissions Trading System policy",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "ETS is cornerstone of EU power market risk. Industry pressure to freeze carbon pricing could reshape 2026+ baseline assumptions; signals weakening political support for carbon cost pass-through. EUA volatility risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/steel-and-chemicals-giants-demand-freeze-to-eus-flagship-climate-policy/"
+    },
+    {
+      "headline": "EU Parliament passes transatlantic trade deal after months of delay",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Trade accord clarity reduces geopolitical tail risk on US LNG, coal, and power imports to EU. Removes uncertainty premium from forward curve; eases macro backdrop for power valuations in 2026–27.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-parliament-passes-transatlantic-trade-deal/"
+    },
+    {
+      "headline": "US jet fuel production surges to record highs post-Hormuz closure",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Elevated crude prices and US refinery utilization feed back into global crude cost and European power plant fuel mix economics. Reflects tight upstream supply; supports longer-term thermal dispatch expectations if crude stays elevated.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67764"
+    },
+    {
+      "headline": "Largest US wind farm (3,650 MW) begins commercial operations in June",
+      "source": "EIA Today in Energy",
+      "tag": "infrastructure",
+      "commodity": "renewables",
+      "polarity": "neutral",
+      "why_it_matters": "US supply growth shifts global LNG export economics and LNG arbitrage into Europe. Marginal impact on EU power, but signals tightening of US gas for export; indirect TTF support via LNG scarcity premium.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67766"
+    }
+  ],
+  "watchlist": [
+    "G7 summit (Evian) outcomes on energy/critical minerals policy & Iran escalation risk",
+    "ETS carbon price reaction to industry freeze demand; political momentum test",
+    "Hormuz strait stability post-deal; LNG charter rates and arb spreads (TTF vs. JKM)",
+    "US transatlantic trade deal implementation detail on LNG, coal tariffs (1–4 weeks)"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

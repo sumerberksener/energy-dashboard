@@ -1,0 +1,74 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU ETS industry pressure to freeze carbon pricing; political momentum for weakening cost pass-through rules and free-allocation guardrails under review.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Weakening political support for carbon cost pass-through lowers thermal generation marginal cost and cools merit-order incentive for coal-exit; may suppress EUA carry and flatten 2026+ power curve."
+  },
+  "freshness_caveat": "",
+  "risk_flags": [
+    "EU storage at 44.7% (20th pctile, 14.3 pp below seasonal)\u2014refill velocity into summer will set H2 thermal call and winter margin adequacy.",
+    "Clean Spark at 91st percentile (34.54 EUR/MWh) despite TTF at median (42.51 EUR/MWh); implies gas-coal merit-order shift or carbon-driven premium\u2014EUA at 40th pctile (33.4 EUR/tCO2) does not explain spark strength alone.",
+    "Iran-US Hormuz deal removes oil supply disruption risk (bearish crude/LNG arb into EU); TTF gains 2.4% weekly cushion but upside capped if arb unwinds.",
+    "ETS industry freeze demand signals weakening carbon cost pass-through political support; EUA outsized 2.77% daily move (2.1\u03c3) flags volatility risk into policy clarity window."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22128 to \u22124%",
+      "summary": "Renewables moderate to 60\u201365th percentile; storage refill steady; clean spark normalizes to 50th pctile as thermal call flattens.",
+      "ttf_pct": "\u22123 to +2%"
+    },
+    "downside": {
+      "de_power_pct": "\u221218 to \u221210%",
+      "summary": "Renewables sustained >85th pctile; mild weather extends; LNG arb weakens post-Hormuz as Brent softens; thermal margin squeezes further.",
+      "ttf_pct": "\u221210 to \u22125%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12 to +20%",
+      "summary": "Cold front or renewable forecast miss; storage refill lags seasonal by >20 pp; TTF strength and thermal dispatch surge ahead of H2.",
+      "ttf_pct": "+8 to +15%"
+    }
+  },
+  "themes": [
+    "Renewables suppressing dispatch; thermal spreads paradoxically elevated",
+    "Storage deficit risks H2 refill pace and winter margin",
+    "Hormuz reopening eases crude-LNG arb but ETS industry pressure clouds carbon outlook"
+  ],
+  "top_drivers": [
+    "Renewables at 93rd percentile (70.98% of load) compressing thermal dispatch window and merit order; clean spark remains elevated despite gas at median, signaling coal-to-gas fuel switch is in-the-money.",
+    "EU storage 14.3 pp below seasonal (44.7%, 20th pctile) tightens H2 refill expectation; summer injection pace will set winter margin risk and H2 power curve steepness.",
+    "Iran-US Hormuz deal removes crude supply disruption tail; unwinds LNG arb premium into EU, easing TTF-Brent correlation and power fuel-switch economics in base case."
+  ],
+  "top_takeaway": "Renewables at 93rd percentile suppress thermal; clean spark near 11-year highs despite gas at 52nd percentile\u2014storage 14 pp below seasonal signals tight H2 refill risk.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace (44.7%, 20th pctile)",
+      "why": "14.3 pp below seasonal average; summer injection rate will set H2 power risk and winter margin. Monitor weekly storage reports through August."
+    },
+    {
+      "metric": "Clean Spark (91st percentile, 34.54 EUR/MWh)",
+      "why": "Paradoxically elevated vs. TTF median; coal-to-gas spread (clean dark at 75th pctile) or carbon pass-through driving signal. Watch if renewables drop or storage pressures merit order."
+    },
+    {
+      "metric": "EUA volatility (2.77% daily move, 2.1\u03c3; 40th pctile level)",
+      "why": "Industry pressure to freeze ETS pricing and pending EU policy clarity create tail risk. Carbon curve steepness and free-allocation signals matter for 2026+ thermal dispatch economics."
+    },
+    {
+      "metric": "Hormuz strait & LNG arb (TTF vs. JKM)",
+      "why": "Iran-US deal removes closure risk premium; watch charter rates and arb spreads for crude-driven upside/downside transmission into EU gas cost base over next 2\u20134 weeks."
+    },
+    {
+      "metric": "GB Power premium (118.19 EUR/MWh, 83rd pctile) vs. DE (131.85 EUR/MWh, 74th pctile)",
+      "why": "GB-DE spread has room; interconnector flows and storage imbalance between regions may affect spread carry and renewable dispatch sequencing."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "G7 Evian summit (energy/Iran outcomes)",
+      "why": "Hormuz and energy sanctions clarity feeds into crude cost and LNG arb stability; feeds TTF curve expectation for H2 supply."
+    }
+  ]
+}
