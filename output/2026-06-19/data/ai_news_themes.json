@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-China trade tensions escalating; G7 reaffirms Russia sanctions; US-Iran oil deal uncertain; geopolitical risk premium supports crude and gas.",
+  "themes": [
+    {
+      "headline": "EU greenhouse gas emissions rose in 2025, stagnating climate progress",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "Rising EU emissions signal weaker carbon abatement trajectory, pressuring EUA prices downward and reducing carbon floor under power costs; impacts Cal+1 forward valuations.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-greenhouse-emissions-rose-2025-data-shows/"
+    },
+    {
+      "headline": "Data center lobby warns EU must choose between AI and climate goals",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Push for gas-fired peaker capacity to support AI load growth directly increases gas demand and power prices; tension between climate policy and grid reliability supports thermal generation investment.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europe-choose-ai-climate-goals-data-center-chief-warns/"
+    },
+    {
+      "headline": "G7 reaffirms Ukraine support and Russian sanctions; Trump hints oil sanctions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Potential resumed US oil sanctions on Russia tightens crude and LNG global supply, raising EU gas LNG arb spreads and TTF price floor; indirect support for power via fuel-switching economics.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/g7-pressure-russia-ukraine-war-oil-sanctions-donald-trump/"
+    },
+    {
+      "headline": "Permian natural gas production rose 60% from 2021 to 2025; rising LNG export capacity",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Surge in US LNG supply (27.6 Bcf/d) increases availability for EU arbitrage; higher LNG inflows to Northwest Europe weaken TTF curve and reduce power-gas spread, pressuring EU power prices.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67785"
+    },
+    {
+      "headline": "US-Iran oil deal uncertain to ease Europe's energy security pressures",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "If deal fails, loss of Iranian barrels sustains crude risk premium and narrows LNG-to-EU arb, keeping gas import costs elevated; if succeeds, marginal pressure on TTF via reduced crude-oil scarcity.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/all-the-ways-the-us-iran-deal-wont-fix-europes-energy-problems/"
+    }
+  ],
+  "watchlist": [
+    "European Council summit Thu 19 Jun: watch trade/China and sanctions policy statements for crude-gas arb impact.",
+    "G7 oil sanctions on Russia: monitor Trump administration follow-through; direct TTF tail-risk if implemented.",
+    "EU emissions data trend: track Q3 2026 EUA auction clearing prices and forward curve steepening.",
+    "Permian LNG export ramp: watch for capacity announcements and US Gulf ship-loading delays affecting NW Europe arbitrage."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

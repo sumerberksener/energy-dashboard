@@ -1,0 +1,71 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU greenhouse gas emissions rose in 2025, stagnating climate progress and weakening carbon abatement trajectory.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Rising emissions signal weaker ETS compliance and lower implicit carbon floor; pressures EUA downward (now 39th-percentile) and reduces carbon component of power marginal cost."
+  },
+  "freshness_caveat": "Coal data 175d stale (as of 2025-12-26); Clean Dark data 170d stale (as of 2025-12-31). Do not rely on coal-dark spread or historical comparisons on thermal merit order. Current clean spark and DE power signals are fresh.",
+  "risk_flags": [
+    "Clean Spark 97th-percentile (60.96 EUR/MWh) \u2014 data 175d old on coal comps, but recent clean spark fresh; thermal regime extended.",
+    "EU Storage at 45.56% (21st-percentile), 14.3pp below seasonal \u2014 refill pace through summer critical to H2 power pricing.",
+    "TTF -21.79% monthly (40.52 EUR/MWh, 48th-percentile) \u2014 Permian LNG surge (27.6 Bcf/d) and rising US export capacity continue to weigh; watch arb closure if geopolitical risk reprices.",
+    "G7 Russia oil sanctions signal and potential Trump escalation could flip crude-LNG arb and TTF floor \u2014 tail-risk upside to gas if implemented."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+2% to -3%",
+      "summary": "Gas softness persists on Permian LNG ramp; storage refill steady; thermal margins stable.",
+      "ttf_pct": "-2% to +1%"
+    },
+    "downside": {
+      "de_power_pct": "-8% to -12%",
+      "summary": "Permian LNG export ramp accelerates; US Gulf loading smooth; arb closure deepens; TTF declines on supply flood.",
+      "ttf_pct": "-5% to -10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+10% to +18%",
+      "summary": "Trump escalates Russia oil sanctions; crude-LNG arb narrows; TTF reprices higher; storage lag compounds refill anxiety.",
+      "ttf_pct": "+8% to +15%"
+    }
+  },
+  "themes": [
+    "Gas weakness, thermal in-the-money",
+    "Storage deficit driving refill urgency",
+    "Geopolitical risk premium on crude and LNG",
+    "EU emissions stagnation pressuring carbon"
+  ],
+  "top_drivers": [
+    "Clean Spark at 97th-percentile (60.96 EUR/MWh) \u2014 gas weakness and high thermal spreads lift power; storage deficit compounds H2 refill urgency.",
+    "Permian LNG surge (27.6 Bcf/d) and rising US export capacity weaken TTF (-21.79% monthly) and compress power-gas spread; bearish near-term power via arb.",
+    "Geopolitical risk premium on crude (G7 Russia sanctions, Trump oil hints) supports LNG arb floor and creates tail-risk upside to gas if sanctions tightened; indirect power support."
+  ],
+  "top_takeaway": "Clean Spark at 97th-percentile with gas weakness; storage 14.3pp below seasonal drives H2 thermal upside; geopolitical risk premium on oil supports LNG arb floor.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace",
+      "why": "At 21st-percentile and 14.3pp below seasonal; summer injection speed determines H2 thermal call intensity and power curve steepness."
+    },
+    {
+      "metric": "Permian LNG export capacity and US Gulf loading",
+      "why": "27.6 Bcf/d production surge pressuring TTF downside; any supply disruption (weather, maintenance) would narrow NW Europe arb and support gas."
+    },
+    {
+      "metric": "Trump oil sanctions on Russia follow-through",
+      "why": "G7 reaffirmation plus Trump hints create tail-risk to crude-LNG arb and TTF price floor; direct 5\u201315% upside to gas if implemented this quarter."
+    },
+    {
+      "metric": "EU emissions trend and EUA auction clearing",
+      "why": "Rising EU emissions in 2025 signal weaker carbon abatement; bearish for EUA (39th-percentile, -0.86% today) and carbon floor under power merit order."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "European Council summit \u2014 trade, China, sanctions",
+      "why": "Watch for Russia oil sanctions escalation signal and crude-LNG arb impact on TTF floor."
+    }
+  ]
+}
