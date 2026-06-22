@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU faces rising LNG competition from Asia; internal pressure on methane rules; AI demand threatens climate targets amid energy security concerns.",
+  "themes": [
+    {
+      "headline": "Europe warned of rising LNG bidding war competition with China",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Direct TTF risk. Asia outbidding EU for LNG cargoes tightens European supply; forces higher spot/forward curve and winter storage fill risk if competition intensifies.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/every-man-for-himself-europe-warned-of-rising-competition-for-energy-from-asia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU greenhouse gas emissions rose in 2025; decarbonisation stalling",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "EUA pressure if emissions drift above linear reduction trajectory. May trigger carbon border adjustment or backstop measures; near-term EUA volatility as policy response debated.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-greenhouse-emissions-rose-2025-data-shows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Data center lobby claims gas plants needed to support EU AI expansion",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Rising baseload demand narrative. If AI load growth materialises, supports power & gas curve through 2027–28; challenges green-only transition, reducing downside risk to DA spreads.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europe-choose-ai-climate-goals-data-center-chief-warns/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Fossil fuel firms lobby to weaken EU methane emissions rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Regulatory uncertainty. Methane rules affect upstream capex & supply cost; weakening would ease production, but political outcome still unclear—monitor Commission stance for mid/downstream gas price implications.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/sponsored-content/big-gas-is-trying-to-cash-in-on-europes-fossil-fuel-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Permian natural gas production surged 60% from 2021 to 2025",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "US LNG export capacity increasing. Higher Permian output supports transatlantic arbitrage and winter LNG availability to EU; downside risk to TTF on ample global supply narrative.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67785"
+    }
+  ],
+  "watchlist": [
+    "European Council summit (Thu 19 June) — trade/energy policy direction; watch for China, LNG, deregulation signals.",
+    "EU methane rule renegotiation outcome — Q3 2026 Commission decision; upstream cost/supply pass-through risk.",
+    "Q3 2026 EUA auction calendar and emissions data; linear reduction trajectory tracking.",
+    "AI data center load forecast updates and grid impact assessments; baseline demand assumptions for winter 2026–27."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 94th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 14.5 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 178,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 173,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 173,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-06-22",
+      "available": true,
+      "daily_change_abs": 55.84,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.76,
+      "headline": "94th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 44.83,
+      "monthly_change_abs": 3.45,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 94.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 46.56
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 178,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-06-22",
+      "available": true,
+      "daily_change_pct": 67.84,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.38,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 138.16,
+      "monthly_change_pct": -9.02,
+      "name": "DE Power",
+      "percentile_rank_5y": 76.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 55.79
+    },
+    "eua": {
+      "as_of": "2026-06-18",
+      "available": true,
+      "daily_change_pct": 0.27,
+      "days_old": 4,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.4,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.38,
+      "monthly_change_pct": 5.12,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 40.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 2.1
+    },
+    "gb_power": {
+      "as_of": "2026-06-22",
+      "available": true,
+      "daily_change_pct": 2.1,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.45,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 124.72,
+      "monthly_change_pct": -0.34,
+      "name": "GB Power",
+      "percentile_rank_5y": 89.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 30.41
+    },
+    "renewable_share": {
+      "as_of": "2026-06-21",
+      "available": true,
+      "daily_change_pct": -6.84,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.03,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 48.63,
+      "monthly_change_pct": 17.72,
+      "name": "Renewables",
+      "percentile_rank_5y": 64.0,
+      "unit": "% of load",
+      "weekly_change_pct": -32.99
+    },
+    "storage": {
+      "as_of": "2026-06-20",
+      "available": true,
+      "daily_change_pct": 0.67,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.79,
+      "headline": "14.5 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 46.4,
+      "monthly_change_pct": 15.74,
+      "name": "EU Storage",
+      "percentile_rank_5y": 21.0,
+      "unit": "% full",
+      "weekly_change_pct": 3.42
+    },
+    "ttf": {
+      "as_of": "2026-06-18",
+      "available": true,
+      "daily_change_pct": -3.32,
+      "days_old": 4,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.79,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 40.52,
+      "monthly_change_pct": -21.79,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -13.48
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU faces rising LNG competition from Asia; internal pressure on methane rules; AI demand threatens climate targets amid energy security concerns.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Europe warned of rising LNG bidding war competition with China",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/every-man-for-himself-europe-warned-of-rising-competition-for-energy-from-asia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Direct TTF risk. Asia outbidding EU for LNG cargoes tightens European supply; forces higher spot/forward curve and winter storage fill risk if competition intensifies."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EU greenhouse gas emissions rose in 2025; decarbonisation stalling",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-greenhouse-emissions-rose-2025-data-shows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "EUA pressure if emissions drift above linear reduction trajectory. May trigger carbon border adjustment or backstop measures; near-term EUA volatility as policy response debated."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Data center lobby claims gas plants needed to support EU AI expansion",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/europe-choose-ai-climate-goals-data-center-chief-warns/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "demand",
+        "why_it_matters": "Rising baseload demand narrative. If AI load growth materialises, supports power & gas curve through 2027\u201328; challenges green-only transition, reducing downside risk to DA spreads."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Fossil fuel firms lobby to weaken EU methane emissions rules",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/sponsored-content/big-gas-is-trying-to-cash-in-on-europes-fossil-fuel-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Regulatory uncertainty. Methane rules affect upstream capex & supply cost; weakening would ease production, but political outcome still unclear\u2014monitor Commission stance for mid/downstream gas price implications."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Permian natural gas production surged 60% from 2021 to 2025",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67785",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "US LNG export capacity increasing. Higher Permian output supports transatlantic arbitrage and winter LNG availability to EU; downside risk to TTF on ample global supply narrative."
+      }
+    ],
+    "watchlist": [
+      "European Council summit (Thu 19 June) \u2014 trade/energy policy direction; watch for China, LNG, deregulation signals.",
+      "EU methane rule renegotiation outcome \u2014 Q3 2026 Commission decision; upstream cost/supply pass-through risk.",
+      "Q3 2026 EUA auction calendar and emissions data; linear reduction trajectory tracking.",
+      "AI data center load forecast updates and grid impact assessments; baseline demand assumptions for winter 2026\u201327."
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU emissions rose 2025; linear reduction trajectory at risk; Commission reviewing carbon backstop measures and MSR intake triggers for Q3 2026.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "EUA near-term volatility as policy response debated; potential MSR intake acceleration or backstop carbon price floor would shift fossil dispatch economics and power marginal cost."
+  },
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (178 days old); Clean Dark stale as of 2025-12-31 (173 days old). Current Clean Spark and TTF/Power/Storage data current (0\u20134 days old as of 2026-06-22).",
+  "risk_flags": [
+    "EU storage at 46.4% full, 14.5 pp below 5-yr seasonal \u2014 refill pace into autumn will determine winter pricing regime.",
+    "Asia outbidding EU for LNG cargoes (Politico); direct TTF upside if competition intensifies and winter storage fill fails.",
+    "EU emissions rose 2025 vs 2024; EUA policy response under review \u2014 near-term volatility as Commission debates carbon backstop measures.",
+    "Clean Spark data stale (as of 2025-12-31, 173 days old); latest snapshot (2026-06-22) shows 44.83 EUR/MWh at 94th-percentile, but underlying gas/power legs require current verification."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22125% to +5%",
+      "summary": "TTF steady around 40 EUR/MWh; Clean Spark elevated on thermal merit; storage refill gradual.",
+      "ttf_pct": "\u22122% to +3%"
+    },
+    "downside": {
+      "de_power_pct": "\u22128% to \u221214%",
+      "summary": "Permian surge and US LNG export ramp deliver ample global supply; renewables forecast improves on mild weather.",
+      "ttf_pct": "\u22126% to \u221212%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12% to +18%",
+      "summary": "Asia LNG bidding war intensifies; winter 2026\u201327 storage fill risk forces TTF and power curve higher.",
+      "ttf_pct": "+8% to +15%"
+    }
+  },
+  "themes": [
+    "Gas supply tightening via Asia LNG competition",
+    "Clean Spark elevated, coal historically suppressed",
+    "Storage deficit threatens H2 refill trajectory",
+    "AI baseload demand narrative supports power curve"
+  ],
+  "top_drivers": [
+    "Clean Spark at 94th-percentile (44.83 EUR/MWh) \u2014 gas in-the-money vs coal (7th-percentile, 96 USD/t), supporting thermal dispatch.",
+    "EU storage 14.5 pp below seasonal average at 46.4% full \u2014 refill pace into autumn will anchor H2 price regime; LNG bidding war with Asia adds winter risk.",
+    "AI baseload demand narrative (data center lobby) supports power curve 2027\u201328; offsets some downside from renewables recovery (48.6% of load, 64th-percentile)."
+  ],
+  "top_takeaway": "Clean Spark at 94th-percentile (44.83 EUR/MWh) amid tight EU storage (14.5 pp below seasonal); LNG bidding war with Asia threatens winter fill and TTF upside.",
+  "watchlist": [
+    {
+      "metric": "EU LNG import bidding vs Asia",
+      "why": "Direct TTF driver; Asia outbid narrative tightens European supply and raises winter storage fill risk."
+    },
+    {
+      "metric": "EU methane rule renegotiation",
+      "why": "Q3 2026 Commission decision; weakening rules ease upstream capex/supply cost, with mid-stream gas pass-through uncertainty."
+    },
+    {
+      "metric": "EUA emissions trajectory tracking",
+      "why": "2025 emissions rose; linear reduction target at risk \u2014 backstop policy and MSR triggers may create near-term EUA volatility."
+    },
+    {
+      "metric": "AI data center load forecasts",
+      "why": "Baseload demand growth supports power/gas curve 2027\u201328; reduces downside risk if materialises, challenges green-only transition narrative."
+    },
+    {
+      "metric": "Permian gas production and US LNG export capacity",
+      "why": "Surge to 60% above 2021 (2025); supports transatlantic arb and winter availability, creating structural downside risk to TTF on ample global supply."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "European Council summit (19 June)",
+      "why": "Trade/energy policy direction; watch for China, LNG, deregulation signals impacting gas/power outlook."
+    }
+  ]
+}
