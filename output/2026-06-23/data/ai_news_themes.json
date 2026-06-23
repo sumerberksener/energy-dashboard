@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-UK emissions trading deal postponed; Asia-Europe LNG competition intensifying; EU GHG emissions rose 2025.",
+  "themes": [
+    {
+      "headline": "EU-UK emissions trading agreement talks delayed by UK political crisis",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "ETS linkage with UK market affects EU carbon price formation and arbitrage opportunity windows. Postponement reduces near-term regulatory clarity on cross-border trading mechanics; watch for rescheduled summit date.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-uk-summit-postponed-as-keir-starmer-resigns/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Europe faces rising LNG bidding competition from China, Asia markets",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Increased Asian LNG demand narrows European supply access and raises TTF spot/forward prices. Direct transmission to EU power via fuel-switching economics and winter gas adequacy risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/every-man-for-himself-europe-warned-of-rising-competition-for-energy-from-asia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU greenhouse gas emissions increased in 2025, carbon credit supply pressured",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bullish-power",
+      "why_it_matters": "Rising emissions imply higher cap-and-trade demand; potential upward pressure on EUA futures. Stalled decarbonisation may trigger stricter Phase 4 auction schedules or MSR drawdowns, tightening carbon cost assumptions in power generation dispatch.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-greenhouse-emissions-rose-2025-data-shows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Data center operators lobby for gas-fired baseload to meet EU AI demand",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sector argues renewable grids insufficient for AI load growth; signals structural demand for gas peaking/baseload capacity. Upward pressure on gas-fired plant utilisation and natural gas short-curve forwards (Cal+1, Q+1).",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europe-choose-ai-climate-goals-data-center-chief-warns/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Fossil fuel industry pushes back on EU methane emissions reduction rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Methane regulation affects upstream supply costs and LNG import economics. Potential lobby success could defer compliance capex, easing near-term gas production but clouding longer-term supply-cost pass-through to TTF.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/sponsored-content/big-gas-is-trying-to-cash-in-on-europes-fossil-fuel-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "European Council trade/energy agenda closure (mid-late June 2026).",
+    "EU-UK summit rescheduling for emissions trading linkage finalisation.",
+    "Q3 2026 EU ETS auction calendar and MSR weekly submission trends.",
+    "LNG import nominations vs. Asian demand signals (July onwards)."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 14,
+  "error": null
+}

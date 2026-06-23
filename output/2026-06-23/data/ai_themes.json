@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU-UK emissions trading agreement talks delayed by UK political crisis; rescheduling date unknown. EU emissions rose 2025, stalling decarbonisation; stricter Phase 4 auction schedules or MSR drawdowns likely.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Stalled decarbonisation forces tighter EU cap mechanics; MSR drawdowns and auction compression will support EUA futures. Linkage delay widens UKA-EUA arb window and defers regulatory certainty on cross-border trading, affecting power generation carbon-cost assumptions."
+  },
+  "freshness_caveat": "Coal (179 days old, as of 2025-12-26) and Clean Dark (174 days old, as of 2025-12-31) are stale; Clean Spark and DE Power current as of 2026-06-23. Coal and Clean Dark percentile ranks not used in forward-looking analysis; emphasis placed on Clean Spark, DE Power, TTF, Storage, and Renewables (all current or \u22642 days old).",
+  "risk_flags": [
+    "Storage at 46.7% (22nd-pctile, 14.4 pp below seasonal); summer injection pace will dictate H1 2027 winter headroom and forward curve shape.",
+    "Clean Spark 57.89 EUR/MWh (96th-pctile) \u2014 highest coal (7th-pctile, 96 USD/t) in 5 years suggests structural gas-in-the-money regime persists; coal plant mothballing risk.",
+    "Asian LNG demand rising; Europe faces bidding competition on spot/forward arbitrage; TTF premium to LNG import parity vulnerable to 5\u201310% upside if Asian bids harden.",
+    "EU-UK ETS linkage talks postponed; regulatory clarity gap widens UKA-EUA arbitrage window; rescheduling date unknown \u2014 watch for European Council agenda closure end June."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12-4%",
+      "summary": "Storage refill steady; TTF holds 40\u201345 range; Clean Spark remains 50\u201360 EUR/MWh; gas-in-money regime persists.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "-5-8%",
+      "summary": "Warm summer, EU demand softens; Asian LNG bids ease; storage injection accelerates; TTF front normalises to 35\u201340 range.",
+      "ttf_pct": "-3-6%"
+    },
+    "horizon": "1m",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "Asian LNG bids surge; European spot tightens; cold front or data-centre demand surprise; storage refill lags seasonal norm.",
+      "ttf_pct": "+5-10%"
+    }
+  },
+  "themes": [
+    "Fuel-switch regime firmly in-the-money; gas-fired generation economically dominant",
+    "EU storage deficit extending into summer; refill pace critical for H2 adequacy",
+    "Asia-Europe LNG arbitrage widening; TTF upside risk on supply competition",
+    "Rising emissions + stalled decarbonisation; carbon policy drift amid EU-UK ETS linkage delay"
+  ],
+  "top_drivers": [
+    "Clean Spark at 96th-pctile and coal at 7th-pctile: gas-in-the-money fuel-switch regime is structural, not cyclical; coal plant retirement accelerating.",
+    "Storage 14.4 pp below seasonal at 46.7%; summer injection pace is the tightest H2 adequacy lever \u2014 any weather/demand shock compounds winter risk premium.",
+    "Asia-Europe LNG bidding competition intensifying; European TTF premium to LNG import parity under compression; upside to 5\u201310% if Asian bids or winter demand surprises."
+  ],
+  "top_takeaway": "Clean Spark at 96th-percentile amid storage 14.4 pp below seasonal; Asian LNG competition tightens European gas supply while emissions rise, signalling structural gas demand headwinds.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace (June\u2013August 2026)",
+      "why": "At 22nd-pctile and 14.4 pp below seasonal, injection trajectory will dictate winter 2026\u201327 adequacy and forward curve risk premium through Q4 2026."
+    },
+    {
+      "metric": "TTF vs. LNG import parity spread",
+      "why": "Asian demand competition narrowing European access; any Asian bidding surge or European demand shock (data centres, AI baseload lobbying) will widen TTF premium and trigger fuel-switch acceleration."
+    },
+    {
+      "metric": "EU-UK ETS linkage summit date & agenda",
+      "why": "Postponement removes near-term regulatory clarity; rescheduling signals will reshape UKA-EUA arb window and cross-border trading mechanics; material for June/July curve positioning."
+    },
+    {
+      "metric": "Q3 2026 EU ETS auction calendar & MSR intake",
+      "why": "Rising 2025 emissions + stalled decarbonisation may trigger stricter Phase 4 auction schedules or MSR drawdowns; upward EUA bias if cap tightens ahead of summer demand."
+    },
+    {
+      "metric": "Data centre baseload demand signals (July onwards)",
+      "why": "EU AI sector lobbying for gas-fired capacity; structural uplift to Cal+1 / Q+1 gas forwards if regulation permits or if renewable grids seen as insufficient."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "European Council energy/trade agenda closure",
+      "why": "May rescheduled EU-UK ETS linkage summit date; confirms regulatory clarity timeline for carbon arbitrage and cross-border trading mechanics."
+    }
+  ]
+}
