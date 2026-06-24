@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU greenhouse gas emissions rose in 2025; stagnant decarbonization progress triggers tighter phase-III/IV ETS caps and accelerated coal phase-out pressure.",
+    "polarity": "bullish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Missed targets will force regulator to tighten EUA issuance in future phases and/or accelerate coal retirement, supporting thermal generation margins and raising EUA floor despite current neutral percentile (39th)."
+  },
+  "freshness_caveat": "Coal data stale (180 days old, as-of 2025-12-26) and Clean Dark stale (175 days old, as-of 2025-12-31) \u2014 cannot assess current merit-order fuel-switch or curve steepness; rely on live TTF (51st pctile), DE Power (89th pctile), GB Power (99th pctile), and Clean Spark (99th pctile) as proxy.",
+  "risk_flags": [
+    "Storage at 46.97% full, 14.5 pp below seasonal norm (data: 2026-06-22) \u2014 refill pace critical for H2 stability; heat stress may delay summer destocking.",
+    "Clean Spark surged +39.39 EUR/MWh daily (+125.59 monthly); extended 3.5\u03c3 above 50d trend \u2014 tail-risk if cooling-water constraints bite or generation outages spike.",
+    "Coal data stale (180 days old, as-of 2025-12-26); cannot assess current merit-order rank \u2014 rely on TTF (51st percentile, neutral) and DE Power (89th percentile) as live proxy.",
+    "EU emissions rose in 2025 per news \u2014 may trigger tighter ETS caps by phase IV, supporting EUA floor; current EUA (39th percentile, 33.29 EUR/tCO2) underprices policy tail."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+5-8%",
+      "summary": "Heat stress sustains peak demand through week; storage steady-state; TTF neutral; Clean Spark elevated but stable.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Heat wave abates or demand softens; LNG cargoes divert to EU; storage injection accelerates; mechanical relief from coal/gas.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Cooling-water constraints trigger nuclear/hydro outages; LNG Asia bidding tightens cargoes further; storage refill slows.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Extreme heat driving peak power demand and intraday margin compression",
+    "Storage deficit (22nd percentile) constraining gas flexibility; LNG competition rising",
+    "Coal at 7th-percentile (stale data, 180 days old) \u2014 fuel-switch regime tilted to gas/renewables",
+    "GB Power at 99th-percentile (162.81 EUR/MWh) \u2014 island premium widening on tight supply"
+  ],
+  "top_drivers": [
+    "Extreme heat wave across Europe (intraday horizon) \u2014 peak cooling load surge compressing DA margins and lifting real-time premiums; Clean Spark at 99th-pctile already pricing near-capacity stress.",
+    "Storage deficit (46.97%, 14.5 pp below seasonal) \u2014 limits gas swing capacity; combined with rising LNG competition tightening global import windows, TTF upside tail-risk if summer demand surprises or geopolitical shocks cut flows.",
+    "GB Power at 99th-percentile (162.81 EUR/MWh) \u2014 island supply/demand imbalance, interconnector constraints, and UK political uncertainty post-Starmer widening GB-DE premium; impacts EU wholesale price floor via arbitrage."
+  ],
+  "top_takeaway": "Clean Spark at 99th-percentile (118.24 EUR/MWh) amid extreme heat and low storage (47% full, 14.5 pp below seasonal); gas weakly bid despite LNG competition tightening.",
+  "watchlist": [
+    {
+      "metric": "European heat wave through end-June",
+      "why": "Peak cooling demand shock raises real-time and DA power spreads; hydro/nuclear outage risk if water temps exceed cooling thresholds; Clean Spark (99th pctile) vulnerable to supply disruptions."
+    },
+    {
+      "metric": "EU methane rule negotiation outcome",
+      "why": "Weakened standards extend gas competitiveness vs. coal/renewables, keeping power generation margins compressed and EUA-gas arb tight; horizon months, but market pricing in regulatory relief already."
+    },
+    {
+      "metric": "LNG competition (Asia bidding up global cargoes)",
+      "why": "Tightens global liquefaction capacity; direct upward pressure on TTF via LNG arb (currently flat at 51st percentile); reduced NW Europe volumes feed through to power fuel costs and Clean Spark upside."
+    },
+    {
+      "metric": "EU-UK summit rescheduled (post-Starmer resignation)",
+      "why": "ETS linkage and emissions-trading deal timing now uncertain; impacts UKA-EUA spread and bilateral carbon-credit flows; UK political instability adds tail-risk to EU energy regulatory alignment."
+    },
+    {
+      "metric": "Storage refill pace (June data: 46.97%, 2-day-old snapshot)",
+      "why": "At 22nd percentile; summer injections lagging seasonal; tight margins for H2 winter reserve build if demand persists or geopolitical supply shocks emerge."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "European Council: China trade agenda",
+      "why": "Energy-tech supply-chain outcome may constrain renewables rollout; indirect upside to power prices if decarbonization delays."
+    }
+  ]
+}

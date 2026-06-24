@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Europe facing acute heat stress this week; UK-EU summit postponed amid UK political instability; EU-China trade tensions escalating.",
+  "themes": [
+    {
+      "headline": "Europe experiencing extreme heat; infrastructure and political attention strained",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Peak demand shock from extreme temperatures raises real-time power prices and margin compression on day-ahead market. Cooling load surge directly bullish for intraday/day-ahead spreads; hydro/nuclear generation risk if cooling-water temps rise.",
+      "horizon": "intraday",
+      "link": "https://www.politico.eu/article/3-reasons-why-europe-cant-stop-sweating-this-week/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Gas industry lobbying to weaken EU methane rules amid fossil-fuel crisis",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Weakened EU methane rules could extend gas supply-curve competitiveness vs. coal and renewables, keeping gas-fired generation margin compressed. Regulatory outcome affects long-term fuel-mix and carbon arbitrage (EUA-gas spread).",
+      "horizon": "months",
+      "link": "https://www.politico.eu/sponsored-content/big-gas-is-trying-to-cash-in-on-europes-fossil-fuel-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Europe warned of rising LNG competition from Asia; China outbidding EU",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Increased Asian demand for LNG tightens global liquefaction capacity; direct upward pressure on TTF via LNG arb and reduced NW Europe import volumes. Higher import costs feed through to power generation fuel costs.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/every-man-for-himself-europe-warned-of-rising-competition-for-energy-from-asia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU greenhouse gas emissions rose in 2025; stagnant decarbonization progress",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Rising EU emissions signal missed decarbonization targets, likely triggering tighter phase-III/IV EU ETS caps and higher EUA prices to compensate. Also increases political pressure for accelerated coal phase-out, supporting power-market margins.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-greenhouse-emissions-rose-2025-data-shows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "UAE exits OPEC+, reducing group crude and production capacity share",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Indirect: OPEC+ fragmentation may raise Brent volatility, affecting global oil-to-gas switching demand and LNG economics. Elevated crude volatility can amplify fuel-switching pressure on EU power markets if TTF-Brent arb widens.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804"
+    }
+  ],
+  "watchlist": [
+    "EU-UK summit rescheduled after Starmer resignation—emissions trading deal timing now uncertain.",
+    "European Council agenda includes China trade competition; outcome may affect EU energy-tech supply chains.",
+    "Continued European heat wave through end of June—monitor demand, hydro/nuclear outage risk daily.",
+    "EU methane rule negotiation status—outcome affects long-term gas competitiveness vs. renewables."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

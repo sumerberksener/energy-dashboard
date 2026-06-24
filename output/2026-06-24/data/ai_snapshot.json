@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 99th-percentile of 5-yr range \u2014 historically high; GB Power \u2014 99th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 180,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 175,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 175,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-06-24",
+      "available": true,
+      "daily_change_abs": 39.39,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 3.5,
+      "headline": "99th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 118.24,
+      "monthly_change_abs": 125.59,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 99.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 26.32
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 180,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-06-24",
+      "available": true,
+      "daily_change_pct": 22.49,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 3.42,
+      "headline": "extended 3.4\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 214.52,
+      "monthly_change_pct": 109.01,
+      "name": "DE Power",
+      "percentile_rank_5y": 89.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 23.71
+    },
+    "eua": {
+      "as_of": "2026-06-23",
+      "available": true,
+      "daily_change_pct": -1.71,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.2,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.29,
+      "monthly_change_pct": 4.46,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 39.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 2.33
+    },
+    "gb_power": {
+      "as_of": "2026-06-24",
+      "available": true,
+      "daily_change_pct": -19.69,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.69,
+      "headline": "99th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 162.81,
+      "monthly_change_pct": 44.62,
+      "name": "GB Power",
+      "percentile_rank_5y": 99.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 23.7
+    },
+    "renewable_share": {
+      "as_of": "2026-06-23",
+      "available": true,
+      "daily_change_pct": -14.86,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.83,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 36.89,
+      "monthly_change_pct": -12.16,
+      "name": "Renewables",
+      "percentile_rank_5y": 38.0,
+      "unit": "% of load",
+      "weekly_change_pct": -16.25
+    },
+    "storage": {
+      "as_of": "2026-06-22",
+      "available": true,
+      "daily_change_pct": 0.54,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.76,
+      "headline": "14.5 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 46.97,
+      "monthly_change_pct": 15.24,
+      "name": "EU Storage",
+      "percentile_rank_5y": 22.0,
+      "unit": "% full",
+      "weekly_change_pct": 3.14
+    },
+    "ttf": {
+      "as_of": "2026-06-23",
+      "available": true,
+      "daily_change_pct": 0.3,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.23,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 42.01,
+      "monthly_change_pct": -14.97,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 51.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -12.45
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Europe facing acute heat stress this week; UK-EU summit postponed amid UK political instability; EU-China trade tensions escalating.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "Europe experiencing extreme heat; infrastructure and political attention strained",
+        "horizon": "intraday",
+        "link": "https://www.politico.eu/article/3-reasons-why-europe-cant-stop-sweating-this-week/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Peak demand shock from extreme temperatures raises real-time power prices and margin compression on day-ahead market. Cooling load surge directly bullish for intraday/day-ahead spreads; hydro/nuclear generation risk if cooling-water temps rise."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Gas industry lobbying to weaken EU methane rules amid fossil-fuel crisis",
+        "horizon": "months",
+        "link": "https://www.politico.eu/sponsored-content/big-gas-is-trying-to-cash-in-on-europes-fossil-fuel-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Weakened EU methane rules could extend gas supply-curve competitiveness vs. coal and renewables, keeping gas-fired generation margin compressed. Regulatory outcome affects long-term fuel-mix and carbon arbitrage (EUA-gas spread)."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Europe warned of rising LNG competition from Asia; China outbidding EU",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/every-man-for-himself-europe-warned-of-rising-competition-for-energy-from-asia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Increased Asian demand for LNG tightens global liquefaction capacity; direct upward pressure on TTF via LNG arb and reduced NW Europe import volumes. Higher import costs feed through to power generation fuel costs."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EU greenhouse gas emissions rose in 2025; stagnant decarbonization progress",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-greenhouse-emissions-rose-2025-data-shows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Rising EU emissions signal missed decarbonization targets, likely triggering tighter phase-III/IV EU ETS caps and higher EUA prices to compensate. Also increases political pressure for accelerated coal phase-out, supporting power-market margins."
+      },
+      {
+        "commodity": "crude",
+        "headline": "UAE exits OPEC+, reducing group crude and production capacity share",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Indirect: OPEC+ fragmentation may raise Brent volatility, affecting global oil-to-gas switching demand and LNG economics. Elevated crude volatility can amplify fuel-switching pressure on EU power markets if TTF-Brent arb widens."
+      }
+    ],
+    "watchlist": [
+      "EU-UK summit rescheduled after Starmer resignation\u2014emissions trading deal timing now uncertain.",
+      "European Council agenda includes China trade competition; outcome may affect EU energy-tech supply chains.",
+      "Continued European heat wave through end of June\u2014monitor demand, hydro/nuclear outage risk daily.",
+      "EU methane rule negotiation status\u2014outcome affects long-term gas competitiveness vs. renewables."
+    ]
+  }
+}
