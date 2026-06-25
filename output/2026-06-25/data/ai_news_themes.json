@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Macron-Meloni rapprochement may ease EU policy coordination; UK ETS linkage talks postponed amid Starmer resignation; China energy competition intensifying.",
+  "themes": [
+    {
+      "headline": "Europe faces intense LNG bidding competition from China and Asia",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Direct TTF risk. If Asian buyers outbid EU on spot LNG cargoes, European winter fill shrinks, pushing forward curve higher. Structural margin compression for gas-fired generation.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/every-man-for-himself-europe-warned-of-rising-competition-for-energy-from-asia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU-UK ETS linkage deal postponed following Keir Starmer resignation",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Delay to EUA-GBP spread arbitrage clarity. Postponement of July 22 summit defers emissions trading mechanics between blocs; uncertainty weighs on EUA valuation and cross-border hedging.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-uk-summit-postponed-as-keir-starmer-resigns/?utm_source=RSS_Feed&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Fossil fuel lobby targets EU methane reduction rules amid energy crisis",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Policy risk to future gas supply cost. If methane rules weaken, upstream capex efficiency may degrade, tightening near-term EU gas import terms. Indirect TTF upside if regulatory relief stalls.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/sponsored-content/big-gas-is-trying-to-cash-in-on-europes-fossil-fuel-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Europe faces extreme heat stress amid heatwave and infrastructure limits",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Immediate demand surge and hydro constraint risk. High temps boost AC load; simultaneous cooling-water scarcity for thermal plants reduces capacity utilization. DA spreads and Cal+1 power curve shift higher intraday.",
+      "horizon": "intraday",
+      "link": "https://www.politico.eu/article/3-reasons-why-europe-cant-stop-sweating-this-week/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "UAE exit from OPEC+ reduces cartel crude production and leverage",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Indirect. Smaller OPEC+ cohesion weakens crude price floor, reducing oil-to-gas switching incentives in EU. Long-term Brent softness may lower fuel-oil gen economics, sustaining gas burn.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804"
+    }
+  ],
+  "watchlist": [
+    "EU-UK ETS linkage summit rescheduled (new date TBD post-Starmer transition).",
+    "Methane rule lobbying intensity — watch for Commission softening June–July.",
+    "LNG import auction results and Asian buyer participation — TTF arb signal.",
+    "European heatwave impact on hydro inflows and thermal plant derate; monitor water temps."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

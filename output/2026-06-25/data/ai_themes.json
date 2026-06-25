@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU-UK ETS linkage deal postponed following Keir Starmer resignation; July 22 summit reschedule date TBD.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Delay defers UKA-EUA spread arbitrage clarity and cross-border hedging mechanics; valuation uncertainty on both blocs persists until summit rescheduled."
+  },
+  "freshness_caveat": "Coal data as of 2025-12-26 (181 days old) and Clean Dark as of 2025-12-31 (176 days old) are stale; current analysis relies on fresh DE Power, GB Power, TTF, storage, and EUA (all \u22641 day). Coal percentile and Clean Dark spreads are outdated and should not inform intraday trading.",
+  "risk_flags": [
+    "Storage at 47.2% (22nd percentile, 14.5 pp below seasonal)\u2014refill pace critical to H2 power curve and winter gas security.",
+    "Asian LNG bidding outcompeting EU importers; structural margin compression for gas-fired DA dispatch if winter fill undershoots.",
+    "Heatwave reducing hydro inflows and thermal plant availability simultaneously; DA power volatility elevated through week.",
+    "EU-UK ETS linkage postponed\u2014timing of UKA-EUA spread normalization and cross-border hedging now uncertain; policy risk on methane rules persists."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-5 to +8%",
+      "summary": "Heatwave persists, hydro/thermal constrained, Clean Spark elevated, storage build slow, gas soft on weak demand.",
+      "ttf_pct": "-2 to +3%"
+    },
+    "downside": {
+      "de_power_pct": "-12 to -18%",
+      "summary": "Heat breaks mid-week, hydro inflows recover, thermal units return online, DA supply pressure eases, gas seasonal softness dominates.",
+      "ttf_pct": "-8 to -12%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+15 to +25%",
+      "summary": "Heatwave extends, cooling-water scarcity worsens thermal derate, hydro collapse, Asian LNG bids spike\u2014gas and power front-month rally.",
+      "ttf_pct": "+8 to +15%"
+    }
+  },
+  "themes": [
+    "Extreme thermal dispatch economics\u2014Clean Spark 106 EUR/MWh",
+    "EU gas tightness from Asian LNG competition and below-seasonal storage",
+    "Heatwave-driven hydro constraint and cooling-water scarcity",
+    "ETS linkage postponement defers cross-bloc arbitrage clarity"
+  ],
+  "top_drivers": [
+    "Extreme heat driving 226% monthly surge in DE Power (200.1 EUR/MWh, 87th percentile) and simultaneous hydro-thermal derate.",
+    "Clean Spark at 106 EUR/MWh (99th percentile, +154 EUR/MWh monthly) signals gas-to-coal switching collapsed; coal at 7th percentile underscores thermal scarcity.",
+    "Storage 14.5 pp below seasonal, Asian LNG bidding competition, and geopolitical uncertainty\u2014structural gas tightness for H2 refill."
+  ],
+  "top_takeaway": "Clean Spark at 99th-percentile amid extreme heat, storage 14.5 pp below seasonal, and Asian LNG competition threaten winter refill\u2014gas structural tightness dominates.",
+  "watchlist": [
+    {
+      "metric": "EU storage refill pace vs. seasonal baseline",
+      "why": "Storage 14.5 pp below normal; Asian LNG competition may further constrain July\u2013August build, extending Cal+1 and Cal+2 gas premium."
+    },
+    {
+      "metric": "Heatwave hydro derate and thermal cooling-water constraints",
+      "why": "High temps boost AC load and reduce hydro generation; simultaneous thermal unit derate from cooling-water scarcity drives immediate DA power volatility and upside tail risk."
+    },
+    {
+      "metric": "LNG auction results and Asian buyer participation",
+      "why": "Direct TTF arbitrage signal; if EU loses cargoes to China, spot gas tightness accelerates, reinforcing Clean Spark premium and forward curve strength."
+    },
+    {
+      "metric": "EU-UK ETS linkage summit reschedule date",
+      "why": "Postponement from July 22 defers UKA-EUA spread mechanics clarity; cross-border hedging and sectoral profitability outlook remain suspended."
+    },
+    {
+      "metric": "Methane reduction rule Commission softening signal",
+      "why": "Upstream capex efficiency and future EU gas import terms at stake; regulatory relief or stall will influence medium-term TTF risk premium."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "Heatwave hydro impact (intraday)",
+      "why": "High temps reduce water availability for thermal cooling and hydro generation; DA power spreads widen, Cal+1 rally risk."
+    }
+  ]
+}
