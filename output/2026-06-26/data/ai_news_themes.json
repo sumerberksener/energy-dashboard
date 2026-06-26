@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Record European heat wave amid methane regulation delays; Strait of Hormuz shipping tensions; EU–UK ETS deal negotiations delayed.",
+  "themes": [
+    {
+      "headline": "EU methane restrictions delayed; half of member states now supportive of postponement",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delayed methane caps weaken supply-side cost floor for EU gas; lower expected compliance costs reduce upward pressure on wholesale gas and power switching economics. TTF curve relevance.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/big-oils-campaign-stop-eu-methane-restrictions-working/"
+    },
+    {
+      "headline": "Record European heat wave drives peak electricity demand and cooling load stress",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sustained extreme heat increases air-conditioning demand, strains thermal generation via cooling water scarcity (esp. France nuclear), lifts day-ahead and intraday power spreads. DA–ID volatility spike.",
+      "horizon": "intraday",
+      "link": "https://www.politico.eu/article/3-reasons-why-europe-cant-stop-sweating-this-week/"
+    },
+    {
+      "headline": "Strait of Hormuz ship attack halts evacuation; Iran enforces new shipping corridor rules",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Shipping disruption in Hormuz raises crude price risk and LNG optionality; higher Brent/WTI widens crude-to-gas switching margin, indirectly supporting power-to-gas arbitrage and gas demand.",
+      "horizon": "days",
+      "link": "https://www.politico.com/news/2026/06/25/hormuz-evacuation-paused-ship-attack-00976734"
+    },
+    {
+      "headline": "EU–UK ETS linking negotiations postponed following UK political transition",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Delay in EU–UK emissions trading agreement extends uncertainty over bilateral carbon market linkage; affects EUA arbitrage to ICE and UK ETS allowance pricing; horizon months-long.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-uk-summit-postponed-as-keir-starmer-resigns/"
+    },
+    {
+      "headline": "UAE exit from OPEC+ reduces cartel crude production and spare capacity",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Smaller OPEC+ effective spare capacity may support higher Brent; elevated crude prices increase competing LNG demand from Asia, tightening northwest European LNG supply and gas curves.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804"
+    }
+  ],
+  "watchlist": [
+    "EU–UK ETS summit rescheduling (emissions deal timeline uncertain; watch for new date announcement)",
+    "French nuclear output monitoring (heat-driven cooling constraints; nuclear hedges CA+1 power curve)",
+    "Hormuz shipping developments (geopolitical escalation watch; crude/LNG flow risks)",
+    "OPEC+ production signals (spare capacity tightening; Brent support implies LNG arb tightness)"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU\u2013UK ETS linking negotiations postponed following UK political transition; bilateral agreement timeline extended into H2 2026 or beyond.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Delayed linkage prolongs UKA-EUA arbitrage uncertainty and free-allocation hedging horizon; extends bilateral carbon-curve shape asymmetry, affecting power-generation marginal cost hedging for multi-year contracts."
+  },
+  "freshness_caveat": "Coal data stale (182 days, 2025-12-26) and clean-dark stale (177 days, 2025-12-31); fuel-switch and dark-spread economics rely on outdated coal benchmarks. TTF, DE Power, GB Power, EUA, Renewables, Storage current as of 2026-06-25 to 2026-06-26.",
+  "risk_flags": [
+    "Clean Spark 96th percentile (59.64 EUR/MWh) signals unsustainable thermal margin; nuclear cooling risk in France extends horizon beyond intraday heat spikes.",
+    "Storage at 47.43% (14.6 pp below seasonal) with only 2.4% filled on 2-day basis; H2 refill pace will determine Q3\u2013Q4 thermal call.",
+    "Hormuz shipping disruption and UAE OPEC+ exit tighten LNG spare capacity; crude-to-gas arb may support higher TTF floor despite weak gas demand.",
+    "Coal data stale (182 days old, 7th percentile) and clean-dark stale (177 days); fuel-switch economics unclear without current coal prices."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22123 to +7%",
+      "summary": "Heat wave sustains peak demand; storage refill slow; Hormuz tensions contained; TTF drifts \u00b13%, DE power \u00b15%.",
+      "ttf_pct": "\u22122 to +1%"
+    },
+    "downside": {
+      "de_power_pct": "\u22128 to \u221214%",
+      "summary": "European demand softens mid-week; cooling load subsides; Hormuz corridor reopens; methane cap deferral dampens supply-side cost. Storage inflow accelerates.",
+      "ttf_pct": "\u22125 to \u221212%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+12 to +18%",
+      "summary": "Hormuz escalation halts LNG shipments or forces reroute; crude spikes; arb-driven gas demand offsets methane-delay weakness. Heat extends into July.",
+      "ttf_pct": "+8 to +15%"
+    }
+  },
+  "themes": [
+    "Extreme heat driving thermal scarcity and cooling constraints",
+    "Geopolitical crude/LNG upside offsetting weak gas fundamentals",
+    "Storage deficit extending power-to-gas switching pressure",
+    "EU\u2013UK carbon linkage delay prolongs ETS arbitrage uncertainty"
+  ],
+  "top_drivers": [
+    "Record European heat wave driving cooling demand, nuclear water-constraint risk, and intraday power volatility; Clean Spark at 96th percentile reflects unsustainable thermal scarcity.",
+    "EU storage deficit (14.6 pp below seasonal, 22nd percentile) locks in structural H2 thermal call; refill pace in Jun\u2013Jul will set Q3\u2013Q4 gas-to-power switching regime.",
+    "Hormuz shipping tensions + UAE OPEC+ exit tighten LNG spare capacity and support crude/Brent; higher crude-to-gas arb indirectly floors TTF despite weak gas demand.",
+    "Methane cap delay and EU\u2013UK ETS linkage postponement extend regulatory uncertainty; lower compliance-cost expectations weaken TTF supply-side floor but keep policy tail-risk alive."
+  ],
+  "top_takeaway": "Clean Spark at 96th percentile amid record heat and Hormuz tensions; storage 14.6 pp below seasonal lows creates sustained thermal scarcity into H2.",
+  "watchlist": [
+    {
+      "metric": "EU\u2013UK ETS linkage talks",
+      "why": "Postponed negotiations delay bilateral carbon market integration; extends UKA-EUA arbitrage and free-allocation hedging uncertainty for next 3\u20136 months."
+    },
+    {
+      "metric": "French nuclear output + cooling water",
+      "why": "Record heat and cooling constraints may force unplanned outages or derate; each GW offline lifts CA+1 power premium by ~5\u20138 EUR/MWh."
+    },
+    {
+      "metric": "Hormuz shipping corridor enforcement",
+      "why": "Escalation risk could disrupt LNG flows to northwest Europe; higher Brent (crude-to-gas arb) indirectly supports power-to-gas switching on margin compression."
+    },
+    {
+      "metric": "EU methane cap implementation timeline",
+      "why": "Delayed restrictions weaken supply-side cost floor; lower expected compliance costs reduce upward pressure on TTF curve but extend regulatory uncertainty into H2 2026."
+    },
+    {
+      "metric": "Storage refill pace (June\u2013Aug)",
+      "why": "At 22nd percentile; if summer demand remains elevated or inflow slows, H2 structural gas tightness will force higher power dispatch on thermal and carbon cost."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "EU\u2013UK ETS summit rescheduled (date TBD)",
+      "why": "New date announcement will clarify bilateral carbon linkage timeline and UKA arbitrage hedging window."
+    }
+  ]
+}

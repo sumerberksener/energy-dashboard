@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 96th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 14.6 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 182,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 177,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 177,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-06-26",
+      "available": true,
+      "daily_change_abs": 19.92,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.74,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 59.64,
+      "monthly_change_abs": 68.23,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 50.56
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 182,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-06-26",
+      "available": true,
+      "daily_change_pct": 15.0,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.51,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 152.76,
+      "monthly_change_pct": 52.21,
+      "name": "DE Power",
+      "percentile_rank_5y": 80.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 47.79
+    },
+    "eua": {
+      "as_of": "2026-06-25",
+      "available": true,
+      "daily_change_pct": -0.09,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.29,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.46,
+      "monthly_change_pct": 1.42,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 41.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.3
+    },
+    "gb_power": {
+      "as_of": "2026-06-26",
+      "available": true,
+      "daily_change_pct": -7.14,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.09,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 113.13,
+      "monthly_change_pct": -0.79,
+      "name": "GB Power",
+      "percentile_rank_5y": 76.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 17.76
+    },
+    "renewable_share": {
+      "as_of": "2026-06-25",
+      "available": true,
+      "daily_change_pct": 14.98,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.38,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 43.47,
+      "monthly_change_pct": -45.79,
+      "name": "Renewables",
+      "percentile_rank_5y": 54.0,
+      "unit": "% of load",
+      "weekly_change_pct": 0.77
+    },
+    "storage": {
+      "as_of": "2026-06-24",
+      "available": true,
+      "daily_change_pct": 0.49,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.72,
+      "headline": "14.6 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 47.43,
+      "monthly_change_pct": 14.98,
+      "name": "EU Storage",
+      "percentile_rank_5y": 22.0,
+      "unit": "% full",
+      "weekly_change_pct": 3.04
+    },
+    "ttf": {
+      "as_of": "2026-06-25",
+      "available": true,
+      "daily_change_pct": -1.15,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.61,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 40.4,
+      "monthly_change_pct": -14.89,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -7.61
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Record European heat wave amid methane regulation delays; Strait of Hormuz shipping tensions; EU\u2013UK ETS deal negotiations delayed.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "EU methane restrictions delayed; half of member states now supportive of postponement",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/big-oils-campaign-stop-eu-methane-restrictions-working/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Delayed methane caps weaken supply-side cost floor for EU gas; lower expected compliance costs reduce upward pressure on wholesale gas and power switching economics. TTF curve relevance."
+      },
+      {
+        "commodity": "power",
+        "headline": "Record European heat wave drives peak electricity demand and cooling load stress",
+        "horizon": "intraday",
+        "link": "https://www.politico.eu/article/3-reasons-why-europe-cant-stop-sweating-this-week/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Sustained extreme heat increases air-conditioning demand, strains thermal generation via cooling water scarcity (esp. France nuclear), lifts day-ahead and intraday power spreads. DA\u2013ID volatility spike."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Strait of Hormuz ship attack halts evacuation; Iran enforces new shipping corridor rules",
+        "horizon": "days",
+        "link": "https://www.politico.com/news/2026/06/25/hormuz-evacuation-paused-ship-attack-00976734",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Shipping disruption in Hormuz raises crude price risk and LNG optionality; higher Brent/WTI widens crude-to-gas switching margin, indirectly supporting power-to-gas arbitrage and gas demand."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EU\u2013UK ETS linking negotiations postponed following UK political transition",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-uk-summit-postponed-as-keir-starmer-resigns/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Delay in EU\u2013UK emissions trading agreement extends uncertainty over bilateral carbon market linkage; affects EUA arbitrage to ICE and UK ETS allowance pricing; horizon months-long."
+      },
+      {
+        "commodity": "crude",
+        "headline": "UAE exit from OPEC+ reduces cartel crude production and spare capacity",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Smaller OPEC+ effective spare capacity may support higher Brent; elevated crude prices increase competing LNG demand from Asia, tightening northwest European LNG supply and gas curves."
+      }
+    ],
+    "watchlist": [
+      "EU\u2013UK ETS summit rescheduling (emissions deal timeline uncertain; watch for new date announcement)",
+      "French nuclear output monitoring (heat-driven cooling constraints; nuclear hedges CA+1 power curve)",
+      "Hormuz shipping developments (geopolitical escalation watch; crude/LNG flow risks)",
+      "OPEC+ production signals (spare capacity tightening; Brent support implies LNG arb tightness)"
+    ]
+  }
+}
