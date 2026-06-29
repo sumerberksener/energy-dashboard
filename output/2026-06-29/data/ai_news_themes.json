@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU ETS reform deadlocked ahead of Ireland presidency; methane rule delays advancing; Strait of Hormuz tensions threaten crude/LNG routes.",
+  "themes": [
+    {
+      "headline": "Ireland mediates divided EU on ETS reform and decarbonization targets",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "EUA price and industrial fuel-switching depend on ETS ambition. Half of EU wants rules gutted; outcome shapes 2027–2030 carbon cost and power profitability. Direct EUA volatility driver.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/ireland-prepares-eu-presidency-play-dealmaker-climate-change-fight-of-the-year/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany and ~13 EU states push to delay landmark methane emissions rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Methane rule delay reduces compliance cost for EU gas producers and importers, lowering floor on TTF; also signals softer climate posture, reducing long-term decarbonization pressure on power. TTF downside risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-joins-push-to-delay-eu-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Record heat wave across France, 1,000+ heat-attributable deaths, hospitals stressed",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Extreme cooling demand spikes French power load and stresses transmission. Nuclear units at risk of thermal constraints (cooling water limits). Short-term intraday and day-ahead DA spreads vulnerable; potential for supply rationing.",
+      "horizon": "intraday",
+      "link": "https://www.politico.eu/article/about-1000-deaths-in-france-attributable-to-heatwave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ship attack in Strait of Hormuz; Iran enforces alternative tanker corridors",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz tension raises crude and Brent volatility, pressuring diesel cost and European refining margins. Higher fuel costs feed into power generation via fuel-switching (gas-to-oil arbitrage) and industrial energy budgets. Indirect TTF upside.",
+      "horizon": "days",
+      "link": "https://www.politico.com/news/2026/06/25/hormuz-evacuation-paused-ship-attack-00976734?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "UAE exit from OPEC+ reduces cartel's crude production share and market control",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Reduced OPEC+ cohesion typically weakens crude prices and Brent floor, easing upstream cost pressures. Lower oil → lower diesel, reduces fuel-switching attractiveness into gas-fired power. Indirect downward pressure on power via fuel arb.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804"
+    }
+  ],
+  "watchlist": [
+    "Ireland EU presidency ETS reform vote & country alignment clarity (weeks).",
+    "Methane rule formal delay motion & vote date (weeks).",
+    "French nuclear unit outages / thermal constraint alerts (ongoing, intraday).",
+    "Strait of Hormuz tanker transit & insurance premium moves (days)."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

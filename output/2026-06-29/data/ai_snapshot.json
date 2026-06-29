@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; Clean Spark \u2014 92th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 14.6 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 185,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 180,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 180,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-06-29",
+      "available": true,
+      "daily_change_abs": 48.38,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.14,
+      "headline": "92th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 39.01,
+      "monthly_change_abs": 26.38,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 92.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -17.39
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 185,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-06-29",
+      "available": true,
+      "daily_change_pct": 57.34,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.9,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 132.75,
+      "monthly_change_pct": 6.84,
+      "name": "DE Power",
+      "percentile_rank_5y": 74.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -13.6
+    },
+    "eua": {
+      "as_of": "2026-06-26",
+      "available": true,
+      "daily_change_pct": -1.14,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.85,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.08,
+      "monthly_change_pct": -0.42,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 37.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.63
+    },
+    "gb_power": {
+      "as_of": "2026-06-29",
+      "available": true,
+      "daily_change_pct": 65.7,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.24,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 121.81,
+      "monthly_change_pct": -1.37,
+      "name": "GB Power",
+      "percentile_rank_5y": 84.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -25.23
+    },
+    "renewable_share": {
+      "as_of": "2026-06-28",
+      "available": true,
+      "daily_change_pct": 2.27,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.38,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 54.18,
+      "monthly_change_pct": -22.98,
+      "name": "Renewables",
+      "percentile_rank_5y": 75.0,
+      "unit": "% of load",
+      "weekly_change_pct": 5.13
+    },
+    "storage": {
+      "as_of": "2026-06-27",
+      "available": true,
+      "daily_change_pct": 0.69,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.7,
+      "headline": "14.6 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 48.29,
+      "monthly_change_pct": 14.62,
+      "name": "EU Storage",
+      "percentile_rank_5y": 23.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.83
+    },
+    "ttf": {
+      "as_of": "2026-06-26",
+      "available": true,
+      "daily_change_pct": 0.93,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.49,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 40.78,
+      "monthly_change_pct": -12.13,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -3.52
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU ETS reform deadlocked ahead of Ireland presidency; methane rule delays advancing; Strait of Hormuz tensions threaten crude/LNG routes.",
+    "themes": [
+      {
+        "commodity": "carbon",
+        "headline": "Ireland mediates divided EU on ETS reform and decarbonization targets",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/ireland-prepares-eu-presidency-play-dealmaker-climate-change-fight-of-the-year/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "EUA price and industrial fuel-switching depend on ETS ambition. Half of EU wants rules gutted; outcome shapes 2027\u20132030 carbon cost and power profitability. Direct EUA volatility driver."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Germany and ~13 EU states push to delay landmark methane emissions rules",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/germany-joins-push-to-delay-eu-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Methane rule delay reduces compliance cost for EU gas producers and importers, lowering floor on TTF; also signals softer climate posture, reducing long-term decarbonization pressure on power. TTF downside risk."
+      },
+      {
+        "commodity": "power",
+        "headline": "Record heat wave across France, 1,000+ heat-attributable deaths, hospitals stressed",
+        "horizon": "intraday",
+        "link": "https://www.politico.eu/article/about-1000-deaths-in-france-attributable-to-heatwave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Extreme cooling demand spikes French power load and stresses transmission. Nuclear units at risk of thermal constraints (cooling water limits). Short-term intraday and day-ahead DA spreads vulnerable; potential for supply rationing."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Ship attack in Strait of Hormuz; Iran enforces alternative tanker corridors",
+        "horizon": "days",
+        "link": "https://www.politico.com/news/2026/06/25/hormuz-evacuation-paused-ship-attack-00976734?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Hormuz tension raises crude and Brent volatility, pressuring diesel cost and European refining margins. Higher fuel costs feed into power generation via fuel-switching (gas-to-oil arbitrage) and industrial energy budgets. Indirect TTF upside."
+      },
+      {
+        "commodity": "crude",
+        "headline": "UAE exit from OPEC+ reduces cartel's crude production share and market control",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Reduced OPEC+ cohesion typically weakens crude prices and Brent floor, easing upstream cost pressures. Lower oil \u2192 lower diesel, reduces fuel-switching attractiveness into gas-fired power. Indirect downward pressure on power via fuel arb."
+      }
+    ],
+    "watchlist": [
+      "Ireland EU presidency ETS reform vote & country alignment clarity (weeks).",
+      "Methane rule formal delay motion & vote date (weeks).",
+      "French nuclear unit outages / thermal constraint alerts (ongoing, intraday).",
+      "Strait of Hormuz tanker transit & insurance premium moves (days)."
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "carbon_policy_signal": {
+    "item": "Ireland mediates divided EU on ETS reform and decarbonization targets \u2014 outcome (weeks) shapes 2027\u20132030 carbon cost floor and industrial fuel-switch incentives.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "ETS ambition directly resets EUA price and power-generation marginal cost; split between reform advocates and gutting camps creates volatility risk for 2027 curve."
+  },
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (185 days old); Clean Dark stale as of 2025-12-31 (180 days old). 92nd-percentile Clean Spark and storage deficit signals are current (0\u20132 days old). Coal and Clean Dark historical positionality may not reflect live market regime.",
+  "risk_flags": [
+    "Storage at 48.29% (23rd-percentile, 14.6 pp below seasonal) \u2014 summer refill pace critical for winter tightness signal.",
+    "Clean Spark 92nd-percentile with 48.38 EUR/MWh daily move suggests intraday volatility; French grid stress from heat-wave cooling demand.",
+    "Hormuz ship attack and Iran corridor enforcement threaten LNG route security \u2014 oil-to-gas spread upside if tanker delays widen.",
+    "ETS reform deadlocked across EU; outcome (weeks horizon) will reset carbon cost embedded in power marginal dispatch and industrial fuel-switch math."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "France heatwave-driven cooling demand sustains tight DA spreads; gas stable within seasonal range. Storage refill pace steady.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-4-6%",
+      "summary": "France heatwave breaks mid-week; cooling demand normalizes. Methane rule delay confirmed, industrial gas-demand repricing lower.",
+      "ttf_pct": "-3-5%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "Hormuz shipping delays accelerate; LNG spot tightens, TTF arb widens. French nuclear units hit cooling limits, power DA spikes.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "Gas-to-power fuel switch compressed; Clean Spark extended",
+    "EU storage deficit pressures refill narrative into H2",
+    "France heatwave lifts thermal load; nuclear cooling risk",
+    "Hormuz escalation tail-risk on LNG-TTF arbitrage"
+  ],
+  "top_drivers": [
+    "Record French heatwave and cooling demand spike power load; nuclear thermal constraints reduce availability and lift DA prices intraday.",
+    "Clean Spark at 92nd-percentile reflects coal weakness (7th-percentile, coal=96 USD/t) and gas-to-power arbitrage compression; storage deficit sustains merit-order tension.",
+    "Hormuz escalation raises LNG supply-route risk and oil-indexed fuel costs; indirect TTF upside via fuel-switching and refining-margin pressure."
+  ],
+  "top_takeaway": "Clean Spark at 92nd-percentile (39.01 EUR/MWh) amid French heat-driven power spike; storage 14.6 pp below seasonal; geopolitical tail-risk on Hormuz threatens LNG arb.",
+  "watchlist": [
+    {
+      "metric": "France nuclear & cooling constraints",
+      "why": "Record heatwave and 1,000+ heat deaths stress cooling-water supply; thermal-limit outages spike DA power and reserve margins intraday."
+    },
+    {
+      "metric": "EU Storage refill trajectory",
+      "why": "At 48.29% (23rd-percentile) and 14.6 pp below seasonal, summer injection rate will dictate winter gas tightness and 2027 Cal pricing."
+    },
+    {
+      "metric": "Hormuz transit insurance & LNG spot spreads",
+      "why": "Ship attack and Iran enforcement raise maritime risk premium; delays feed directly into TTF-Asian LNG arb and EU supply cost floor."
+    },
+    {
+      "metric": "Ireland ETS reform mediation outcome",
+      "why": "Deadlocked EU split on climate rules; resolution (weeks) resets EUA floor and industrial power-generation fuel-switching incentives 2027\u20132030."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "ongoing",
+      "name": "French heatwave nuclear constraints",
+      "why": "Cooling-water limits trigger daily outage alerts; intraday DA spreads and frequency response cost at risk."
+    }
+  ]
+}
