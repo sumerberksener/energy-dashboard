@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "Ireland leads EU ETS reform negotiations H2 2026; outcome determines scheme tightness (free allocation cuts, MSR intake) and EUA floor/ceiling price support.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Reform outcome directly sets EUA cost pass-through into power merit order and thermal generation competitiveness; weakening bearish-power, tightening bullish-power via carbon cost uplift."
+  },
+  "freshness_caveat": "Coal data 186 days stale (as of 2025-12-26); Clean Dark 181 days stale (as of 2025-12-31). Coal refresh critical to validate thermal stack positioning \u2014 current 7th-pctile may be outdated.",
+  "risk_flags": [
+    "Clean Spark at 94th-pctile (43.04 EUR/MWh) signals extreme gas-to-power conversion premium; coal at 7th-pctile (96 USD/t, 186 days stale) \u2014 if coal data refreshes higher, thermal stack weakens.",
+    "GB Power at 92nd-pctile (128.38 EUR/MWh, +13.58% month); renewables at 28th-pctile (32.44% of load, -40% daily) \u2014 scarcity of wind/solar driving thermal dispatch.",
+    "Iran blocking Hormuz security mission elevates LNG shipping risk; TTF at 52nd-pctile (42.56 EUR/MWh) leaves limited room for upside shock absorption.",
+    "Ireland-led EU ETS reform outcome (weeks horizon) directly sets EUA floor/ceiling; bearish outcome could weaken carbon price support for thermal generation merit order."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11-3%",
+      "summary": "Renewable supply stays tight; thermal remains extended; Hormuz status quo. Power stable at elevated levels.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-12-18%",
+      "summary": "Renewable wind/solar forecast improves; heat wave breaks; Hormuz tensions ease. Thermal premium compresses sharply.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+15-20%",
+      "summary": "Iran escalates Hormuz blockade or maritime incident; LNG shipping cost spikes; TTF supply tightens. Heat-wave persistence. Power spiking.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Thermal generation dominance \u2014 Clean Spark extended",
+    "GB-DE power premium elevated amid heat stress",
+    "Geopolitical LNG supply tail-risk via Hormuz",
+    "EU ETS reform negotiations \u2014 carbon scheme durability at stake"
+  ],
+  "top_drivers": [
+    "Renewables at 28th-pctile (-40% daily) \u2014 scarcity of wind/solar pushes thermal merit-order hierarchy; gas and coal both in-the-money despite coal at record lows.",
+    "GB Power at 92nd-pctile and Clean Spark at 94th-pctile \u2014 UK-DE supply tension, heat-wave peak load, and low renewable availability locking in thermal generation premium.",
+    "Hormuz geopolitical tail-risk elevates LNG supply insurance and shipping costs; Iran blocking maritime security mission constrains Middle East flow into EU and supports power/gas scarcity premium."
+  ],
+  "top_takeaway": "Clean Spark at 94th-pctile; GB Power at 92nd-pctile; thermal generation massively in-the-money. Hormuz tension and heat-wave load surge underpin power rally.",
+  "watchlist": [
+    {
+      "metric": "Clean Spark ratio",
+      "why": "At 94th-pctile; coal data is 186 days stale \u2014 refresh will re-anchor thermal stack valuation and Cal+1 curve."
+    },
+    {
+      "metric": "Renewables forecast",
+      "why": "Down 40% daily to 28th-pctile; further weakness prolongs thermal-in-the-money regime and extends GB power premium."
+    },
+    {
+      "metric": "Hormuz corridor LNG flows & insurance costs",
+      "why": "Iran rejects maritime security plan; escalation would spike shipping costs and compress LNG arbitrage into EU, supporting TTF/power indirectly."
+    },
+    {
+      "metric": "France nuclear output during heat wave",
+      "why": "Record heat driving 1,000 deaths and cooling-water stress; outage risk bullish for intraday DA power and EUA thermal dispatch."
+    },
+    {
+      "metric": "EU ETS reform vote outcome",
+      "why": "Ireland presidency H2 2026 \u2014 weakening scheme bearish-EUA and power merit order; tightening bullish-EUA and coal/gas cost pass-through."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "France heat-wave peak load \u2014 DA auction",
+      "why": "Extreme cooling demand bullish intraday power and EUA thermal dispatch uplift."
+    }
+  ]
+}

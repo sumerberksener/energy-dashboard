@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran blocks Strait of Hormuz security mission; EU-China trade tensions persist; Ireland chairs critical EU ETS reform negotiations.",
+  "themes": [
+    {
+      "headline": "Ireland leads EU ETS reform amid pressure to weaken or protect scheme",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "EU ETS reform outcome directly sets EUA floor/ceiling and industrial competitiveness. Weakening scheme bearish-carbon; tightening bullish-carbon. Shapes EU power merit order via carbon cost pass-through into DA/Cal+1 spreads.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/ireland-prepares-eu-presidency-play-dealmaker-climate-change-fight-of-the-year/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany joins push to delay EU methane emissions rules implementation",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delay of methane rules reduces regulatory pressure on EU gas supply cost and upstream capex disincentives. Bearish for carbon and gas price floors; supportive of gas-fired power relative to renewables in merit order.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-joins-push-to-delay-eu-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Iran rejects Macron's Strait of Hormuz maritime security mission plan",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Continued Hormuz tension elevates LNG shipping risk and insurance costs from Middle East to EU. Supports Brent/crude and indirect TTF via LNG arb compression. Bullish for EU power if gas supply tightens and coal/renewables displace gas.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/iran-rejects-emmanuel-macrons-plan-clear-strait-hormuz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Record heat wave across France drives 1,000 deaths and load pressure",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Extreme heat boosts AC demand and cooling load across France/EU intraday. Peak demand surge bullish for DA power prices and EUA via thermal dispatch; may also constrain nuclear output if cooling-water temperatures near limits.",
+      "horizon": "intraday",
+      "link": "https://www.politico.eu/article/about-1000-deaths-in-france-attributable-to-heatwave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "UAE withdrawal from OPEC+ reduces cartel crude production share and leverage",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "OPEC+ fragmentation and weaker output coordination reduce Brent support; lower crude prices indirectly ease global energy cost inflation, reducing LNG and TTF scarcity premium. Bearish for power if gas arb improves.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804"
+    }
+  ],
+  "watchlist": [
+    "EU ETS reform vote/decision (Ireland presidency H2 2026) — cardinal for EUA floor and power merit order.",
+    "Germany methane rules delay formal EU vote or withdrawal — monitors regulatory unwind risk on gas supply costs.",
+    "Strait of Hormuz security escalation or maritime incident — LNG shipping cost and availability shock.",
+    "France nuclear cooling-water stress during sustained heat — constrains supply, bullish peak power prices."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
