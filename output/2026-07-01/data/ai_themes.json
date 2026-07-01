@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "Ireland tackles EU ETS reform amid competing country demands; outcome on cap stringency and compliance cost over summer 2026.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "EUA trajectory depends on whether member states weaken or defend the cap. Outcome flags fossil-generation marginal cost, industrial fuel-switch economics, and power-curve shape into 2027."
+  },
+  "freshness_caveat": "Coal data stale (187 days old, as of 2025-12-26); Clean Dark stale (182 days old, as of 2025-12-31). Fuel-switch regime and dark-spread risk unconfirmed; rely on current Clean Spark (93rd-pctile) and GB/DE Power spreads for regime assessment.",
+  "risk_flags": [
+    "Storage 14.7pp below 5-yr seasonal average; refill pace Q3\u2013Q4 will set H2 power curve risk.",
+    "GB Power at 137.29 EUR/MWh (95th-pctile) vs renewables at 30.2% of load (24th-pctile); thermal call extended into summer.",
+    "Iran rejects Hormuz security plan; escalation could raise LNG shipping costs and push TTF supply-risk premium into Q3.",
+    "Coal data stale (187 days old, 7th-pctile at 96 USD/t); Clean Dark stale (182 days old, 49th-pctile at 27.95 EUR/MWh); fuel-switch regime unconfirmed."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12\u20134%",
+      "summary": "Renewables recover modestly; storage injection continues at seasonal pace; GB power moderates into 80\u201390th-pctile range.",
+      "ttf_pct": "\u00b11\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "\u22128\u201312%",
+      "summary": "French heat wave subsides, renewables recover, GB surplus rebuilds; storage injection accelerates; thermal call unwinds.",
+      "ttf_pct": "\u22125\u20138%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5\u20138%",
+      "summary": "Hormuz escalation or LNG shipping disruption; Iran tensions spike shipping costs, TTF supply-risk premium reasserts sharply.",
+      "ttf_pct": "+8\u201312%"
+    }
+  },
+  "themes": [
+    "GB power spike, renewable drought, storage deficit",
+    "Geopolitical tension on Hormuz, Russian fuel supply disruption",
+    "ETS reform negotiations under Irish presidency",
+    "French heat wave, grid strain, industrial policy uncertainty"
+  ],
+  "top_drivers": [
+    "GB Power spike (95th-pctile) driven by renewable collapse (24th-pctile) and storage deficit (14.7pp below seasonal); thermal call extended into summer.",
+    "Geopolitical tail risk: Iran rejects Hormuz security plan, Ukrainian drone strikes degrade Russian fuel production; both raise LNG shipping uncertainty and gas supply-risk premium.",
+    "ETS reform under Irish presidency creates medium-term carbon policy uncertainty; competing member demands on cap stringency."
+  ],
+  "top_takeaway": "GB Power at 95th-percentile amid tight renewables (24th-pctile) and storage 14.7pp below seasonal; geopolitical friction (Iran rejects Hormuz plan, Ukraine strikes Russian refineries) adds tail risk to LNG/gas curve.",
+  "watchlist": [
+    {
+      "metric": "GB Power premium vs. DE",
+      "why": "GB at 95th-pctile (137.29 EUR/MWh) while DE at 76th-pctile (140.28 EUR/MWh); supply/interconnector asymmetry may widen or compress on renewable recovery."
+    },
+    {
+      "metric": "EU Storage trajectory",
+      "why": "48.86% full, 14.7pp below seasonal; injection pace over July\u2013August determines H2 gas/power curve floor and forced-thermal exposure."
+    },
+    {
+      "metric": "Hormuz tensions, LNG shipping",
+      "why": "Iran rejection of security plan raises geopolitical friction; monitor shipping delays, route-cost spikes, and TTF supply-risk premium (currently 54th-pctile at 43.44 EUR/MWh)."
+    },
+    {
+      "metric": "French government stability post-heat wave",
+      "why": "No-confidence vote risk; potential for nuclear outages or demand-side policy; upward pressure on French DA/Cal+1 spreads vs. system."
+    },
+    {
+      "metric": "Irish presidency ETS reform outcome",
+      "why": "Competing member-state demands on cap stringency; outcome over summer 2026 sets EUA price ceiling (currently 33.16 EUR/tCO2, 38th-pctile, flat YTD)."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "Irish EU presidency ETS negotiations begin",
+      "why": "Sets tone for H2 2026 carbon policy; outcome flags whether EUA stringency increases or weakens."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Irish EU presidency begins amid French political uncertainty; Iran rejects Strait of Hormuz security plan; ETS reform pivotal for EU industrial competitiveness.",
+  "themes": [
+    {
+      "headline": "Ireland tackles EU ETS reform amid competing country demands",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "EUA price trajectory depends on ETS reform outcome. Some states want to weaken the system; others defend it. Irish presidency outcome over coming months will set EU carbon compliance costs and cap-and-trade stringency.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/ireland-prepares-eu-presidency-play-dealmaker-climate-change-fight-of-the-year/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France heat wave (∼1,000 deaths) pressures industrial policy and demand",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Record heat drives peak power demand; strains grid and hospitals. French government faces no-confidence vote, creating policy uncertainty. Potential nuclear outages or demand-side measures; upward pressure on DA/Cal+1 French power spreads.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/about-1000-deaths-in-france-attributable-to-heatwave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russian refinery strikes force Putin to import gasoline; fuel reserves depleted",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Ukrainian drone attacks on Russian fuel production reduce Russian export capacity and reserves. Lower Russian crude and fuel exports to global market can ease crude/product prices; indirect downward pressure on gas economics via lower oil-linked contract indexing.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Iran rejects France-UK Strait of Hormuz security mission plan",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Rejection signals friction on global oil/LNG transit security. If Strait tensions escalate, LNG shipping delays and route costs rise, pushing TTF up via supply-risk premium. Indirect but material for EU gas curve.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/iran-rejects-emmanuel-macrons-plan-clear-strait-hormuz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "UAE exit from OPEC+ shifts crude production share and geopolitical balance",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "OPEC+ cohesion loss; crude supply dynamics may shift. Lower crude/oil prices weaken oil-linked gas contract economics in contracts tied to Brent. Indirect downward pressure on European gas forward curve.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804"
+    }
+  ],
+  "watchlist": [
+    "Irish presidency ETS reform negotiations (summer 2026); outcome flags EUA cap/price.",
+    "French government stability and nuclear/demand policy post-heat wave (days).",
+    "Ukraine-Russia fuel supply flows and sanctions impact on global oil arb.",
+    "Strait of Hormuz tensions; monitor LNG shipping cost and route disruption risk."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

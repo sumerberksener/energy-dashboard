@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 95th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 93th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 187,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 182,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 182,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-06-30",
+      "available": true,
+      "daily_change_abs": -1.78,
+      "days_old": 1,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.17,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 41.18,
+      "monthly_change_abs": 53.72,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 93.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -25.57
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 187,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-06-29",
+      "available": true,
+      "daily_change_pct": 65.02,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.12,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 140.28,
+      "monthly_change_pct": 12.9,
+      "name": "DE Power",
+      "percentile_rank_5y": 76.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -12.39
+    },
+    "eua": {
+      "as_of": "2026-06-30",
+      "available": true,
+      "daily_change_pct": 0.15,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.87,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.16,
+      "monthly_change_pct": -1.31,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 38.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.66
+    },
+    "gb_power": {
+      "as_of": "2026-07-01",
+      "available": true,
+      "daily_change_pct": 7.8,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.78,
+      "headline": "95th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 137.29,
+      "monthly_change_pct": 9.64,
+      "name": "GB Power",
+      "percentile_rank_5y": 95.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -21.65
+    },
+    "renewable_share": {
+      "as_of": "2026-06-30",
+      "available": true,
+      "daily_change_pct": -6.91,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.41,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 30.2,
+      "monthly_change_pct": -45.54,
+      "name": "Renewables",
+      "percentile_rank_5y": 24.0,
+      "unit": "% of load",
+      "weekly_change_pct": 4.45
+    },
+    "storage": {
+      "as_of": "2026-06-29",
+      "available": true,
+      "daily_change_pct": 0.49,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.68,
+      "headline": "14.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 48.86,
+      "monthly_change_pct": 14.19,
+      "name": "EU Storage",
+      "percentile_rank_5y": 23.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.86
+    },
+    "ttf": {
+      "as_of": "2026-06-30",
+      "available": true,
+      "daily_change_pct": 2.07,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.74,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 43.44,
+      "monthly_change_pct": -5.56,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 54.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -0.02
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Irish EU presidency begins amid French political uncertainty; Iran rejects Strait of Hormuz security plan; ETS reform pivotal for EU industrial competitiveness.",
+    "themes": [
+      {
+        "commodity": "carbon",
+        "headline": "Ireland tackles EU ETS reform amid competing country demands",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/ireland-prepares-eu-presidency-play-dealmaker-climate-change-fight-of-the-year/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "EUA price trajectory depends on ETS reform outcome. Some states want to weaken the system; others defend it. Irish presidency outcome over coming months will set EU carbon compliance costs and cap-and-trade stringency."
+      },
+      {
+        "commodity": "power",
+        "headline": "France heat wave (\u223c1,000 deaths) pressures industrial policy and demand",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/about-1000-deaths-in-france-attributable-to-heatwave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Record heat drives peak power demand; strains grid and hospitals. French government faces no-confidence vote, creating policy uncertainty. Potential nuclear outages or demand-side measures; upward pressure on DA/Cal+1 French power spreads."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Russian refinery strikes force Putin to import gasoline; fuel reserves depleted",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Ukrainian drone attacks on Russian fuel production reduce Russian export capacity and reserves. Lower Russian crude and fuel exports to global market can ease crude/product prices; indirect downward pressure on gas economics via lower oil-linked contract indexing."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Iran rejects France-UK Strait of Hormuz security mission plan",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/iran-rejects-emmanuel-macrons-plan-clear-strait-hormuz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Rejection signals friction on global oil/LNG transit security. If Strait tensions escalate, LNG shipping delays and route costs rise, pushing TTF up via supply-risk premium. Indirect but material for EU gas curve."
+      },
+      {
+        "commodity": "crude",
+        "headline": "UAE exit from OPEC+ shifts crude production share and geopolitical balance",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67804",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "OPEC+ cohesion loss; crude supply dynamics may shift. Lower crude/oil prices weaken oil-linked gas contract economics in contracts tied to Brent. Indirect downward pressure on European gas forward curve."
+      }
+    ],
+    "watchlist": [
+      "Irish presidency ETS reform negotiations (summer 2026); outcome flags EUA cap/price.",
+      "French government stability and nuclear/demand policy post-heat wave (days).",
+      "Ukraine-Russia fuel supply flows and sanctions impact on global oil arb.",
+      "Strait of Hormuz tensions; monitor LNG shipping cost and route disruption risk."
+    ]
+  }
+}
