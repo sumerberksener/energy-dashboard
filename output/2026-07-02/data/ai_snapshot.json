@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 98th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 14.7 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 188,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 183,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 183,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-07-02",
+      "available": true,
+      "daily_change_abs": 26.32,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.8,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 68.88,
+      "monthly_change_abs": 68.18,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -18.61
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 188,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-07-02",
+      "available": true,
+      "daily_change_pct": 18.77,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.84,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 166.6,
+      "monthly_change_pct": 71.97,
+      "name": "DE Power",
+      "percentile_rank_5y": 83.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -13.4
+    },
+    "eua": {
+      "as_of": "2026-07-01",
+      "available": true,
+      "daily_change_pct": -0.33,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.71,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.05,
+      "monthly_change_pct": -1.17,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 37.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.87
+    },
+    "gb_power": {
+      "as_of": "2026-07-02",
+      "available": true,
+      "daily_change_pct": -43.37,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.56,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 70.92,
+      "monthly_change_pct": -45.62,
+      "name": "GB Power",
+      "percentile_rank_5y": 17.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -24.45
+    },
+    "renewable_share": {
+      "as_of": "2026-07-01",
+      "available": true,
+      "daily_change_pct": -4.32,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.45,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 28.89,
+      "monthly_change_pct": -30.71,
+      "name": "Renewables",
+      "percentile_rank_5y": 21.0,
+      "unit": "% of load",
+      "weekly_change_pct": -5.92
+    },
+    "storage": {
+      "as_of": "2026-06-30",
+      "available": true,
+      "daily_change_pct": 0.47,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.66,
+      "headline": "14.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 49.1,
+      "monthly_change_pct": 13.95,
+      "name": "EU Storage",
+      "percentile_rank_5y": 23.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.9
+    },
+    "ttf": {
+      "as_of": "2026-07-01",
+      "available": true,
+      "daily_change_pct": -1.53,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.99,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 42.78,
+      "monthly_change_pct": -12.86,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 52.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 1.33
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Ukraine-Russia escalation (Nord Stream sabotage indictment, Russian fuel crisis) and Iran Strait tensions cloud EU gas security; Ireland EU presidency opens policy window amid French political uncertainty.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Germany indicts Ukrainian over Nord Stream sabotage, alleges state backing",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/germany-charges-ukrainian-suspect-nord-stream-sabotage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Nord Stream sabotage indictment reignites geopolitical risk around EU-Russia gas relations and pipeline security. Escalates Ukraine-Russia narrative; constrains any future Russian gas export scenarios into EU via pipeline infrastructure."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Ukrainian attacks force Russia to import gasoline, deplete reserves",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Russian fuel production crisis via drone strikes weakens Putin's export capacity and financial resources for energy markets. Tightens global crude/fuel supply; indirect upward pressure on EU power via fuel-switching economics and LNG scarcity if Russia loses export market share."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Iran rejects Macron's maritime mission to secure Strait of Hormuz",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/iran-rejects-emmanuel-macrons-plan-clear-strait-hormuz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Strait of Hormuz transit risk directly affects global crude and LNG flows; disruption raises EU LNG arb risk and TTF-Henry Hub spreads. Constrains LNG availability to Europe, tightens gas supply and power dispatch margins."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Ireland EU presidency opens six-month policy window amid French political gridlock",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/irish-presidency-thomas-byrne-eu-window-of-opportunity-can-ireland-deliver/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Ireland's Council presidency (H2 2026) before French election may accelerate EU climate/energy regulation (ETS, carbon border rules, green investment). Timing risk: policy decisions could shift power/gas market structure; monitor for accelerated industrial carbon price pass-through or subsidy changes."
+      },
+      {
+        "commodity": "power",
+        "headline": "Brussels allows green mobility spending waiver post-Iran outbreak of war",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/brussels-waives-electric-vehicle-subsidies-from-eu-spending-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "EU fiscal flexibility for EV/renewable infrastructure (EVs, trains, e-bikes) increases demand for grid electricity and reduces transport fuel demand. Shifts demand curve; lowers power spot/forward premia on electrification delta, especially in peak/Cal+1 spreads."
+      }
+    ],
+    "watchlist": [
+      "Ireland EU presidency agenda announcements (climate/energy regulation, ETS design, carbon border rules).",
+      "Iran Strait of Hormuz naval escalation; impact on LNG routing and TTF-HH spreads.",
+      "Russian fuel production recovery or further drone strike impacts on crude export capacity.",
+      "French government confidence vote outcome; effect on EU policy momentum H2 2026."
+    ]
+  }
+}

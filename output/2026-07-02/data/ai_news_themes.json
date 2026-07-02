@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Ukraine-Russia escalation (Nord Stream sabotage indictment, Russian fuel crisis) and Iran Strait tensions cloud EU gas security; Ireland EU presidency opens policy window amid French political uncertainty.",
+  "themes": [
+    {
+      "headline": "Germany indicts Ukrainian over Nord Stream sabotage, alleges state backing",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Nord Stream sabotage indictment reignites geopolitical risk around EU-Russia gas relations and pipeline security. Escalates Ukraine-Russia narrative; constrains any future Russian gas export scenarios into EU via pipeline infrastructure.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/germany-charges-ukrainian-suspect-nord-stream-sabotage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ukrainian attacks force Russia to import gasoline, deplete reserves",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Russian fuel production crisis via drone strikes weakens Putin's export capacity and financial resources for energy markets. Tightens global crude/fuel supply; indirect upward pressure on EU power via fuel-switching economics and LNG scarcity if Russia loses export market share.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Iran rejects Macron's maritime mission to secure Strait of Hormuz",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Strait of Hormuz transit risk directly affects global crude and LNG flows; disruption raises EU LNG arb risk and TTF-Henry Hub spreads. Constrains LNG availability to Europe, tightens gas supply and power dispatch margins.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/iran-rejects-emmanuel-macrons-plan-clear-strait-hormuz/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ireland EU presidency opens six-month policy window amid French political gridlock",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Ireland's Council presidency (H2 2026) before French election may accelerate EU climate/energy regulation (ETS, carbon border rules, green investment). Timing risk: policy decisions could shift power/gas market structure; monitor for accelerated industrial carbon price pass-through or subsidy changes.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/irish-presidency-thomas-byrne-eu-window-of-opportunity-can-ireland-deliver/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Brussels allows green mobility spending waiver post-Iran outbreak of war",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "EU fiscal flexibility for EV/renewable infrastructure (EVs, trains, e-bikes) increases demand for grid electricity and reduces transport fuel demand. Shifts demand curve; lowers power spot/forward premia on electrification delta, especially in peak/Cal+1 spreads.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/brussels-waives-electric-vehicle-subsidies-from-eu-spending-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "Ireland EU presidency agenda announcements (climate/energy regulation, ETS design, carbon border rules).",
+    "Iran Strait of Hormuz naval escalation; impact on LNG routing and TTF-HH spreads.",
+    "Russian fuel production recovery or further drone strike impacts on crude export capacity.",
+    "French government confidence vote outcome; effect on EU policy momentum H2 2026."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

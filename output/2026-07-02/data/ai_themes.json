@@ -1,0 +1,71 @@
+{
+  "carbon_policy_signal": {
+    "item": "Ireland EU presidency opens six-month policy window for ETS design, carbon border rules (CBAM), and green spending acceleration before French election; risk of expedited industrial carbon pass-through and subsidy shifts H2 2026.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Accelerated ETS or CBAM phase-in could front-load industrial carbon costs into H2 2026 power pricing, raising merit-order thresholds for coal and gas dispatch and reshaping Cal+1 spreads."
+  },
+  "freshness_caveat": "Coal data stale (as of 2025-12-26, 188 days old) \u2014 7th percentile ranking and USD 96/t price lack recent intraday signal. Clean Dark stale (2025-12-31, 183 days old); monthly +8.67 EUR/MWh cannot be trusted intraday. All other metrics current as of 2026-07-01 or 2026-07-02.",
+  "risk_flags": [
+    "Storage 14.7 pp below seasonal at 49.1% full; refill pace into autumn will set Q4 power risk and gas volatility ceiling.",
+    "Clean Spark 98th percentile (68.88 EUR/MWh) vs Coal 7th percentile (96 USD/t, 188d stale); coal data age limits confidence but spread signals sustained thermal premium.",
+    "Hormuz rejection by Iran and Nord Stream indictment both escalate geopolitical premium on LNG flows; disruption would push TTF +10-15% and DE Power +8-12% within weeks.",
+    "Renewables at 21st percentile (28.89% of load, down 30.71% monthly); weak wind/solar forecast extends thermal call through summer peak."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-5 to +8%",
+      "summary": "Renewables stay weak; storage refill steady; geopolitical premium persists but no acute disruption. TTF anchors 40\u201344 EUR/MWh; DE Power 150\u2013170 EUR/MWh.",
+      "ttf_pct": "-2 to +3%"
+    },
+    "downside": {
+      "de_power_pct": "-10 to -15%",
+      "summary": "Renewables rebound (high wind/solar forecast); storage refill accelerates; geopolitical tensions pause. Thermal call eases; TTF and power spot recede.",
+      "ttf_pct": "-8 to -12%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8 to +12%",
+      "summary": "Hormuz escalation or Iranian naval incident disrupts LNG flows; TTF premium widens. Coupled with weak renewables and refill lag, thermal push extends.",
+      "ttf_pct": "+10 to +15%"
+    }
+  },
+  "themes": [
+    "Gas/power fuel-switch extended; thermal dispatch firmly in-the-money",
+    "Geopolitical tail-risk: Hormuz escalation, Nord Stream indictment, Russian fuel crisis",
+    "Storage deficit and renewable weakness sustain dispatch tension into autumn",
+    "EU policy window under Ireland presidency; climate/ETS acceleration risk"
+  ],
+  "top_drivers": [
+    "Clean Spark at 98th percentile driven by low renewables (21st pctile) and tight storage (49.1%, 14.7 pp below seasonal); thermal call persists.",
+    "Geopolitical escalation (Hormuz rejection, Nord Stream indictment, Russian fuel crisis) raises LNG disruption risk and EU energy security premium into H2.",
+    "German DE Power at 83rd percentile (166.6 EUR/MWh, +18.77% day) reflects intraday coal/gas mix and intra-week renewable volatility; GB Power at 17th pctile (70.92, -43.37% day) signals UK/EU spread divergence."
+  ],
+  "top_takeaway": "Clean Spark at 98th percentile (68.88 EUR/MWh) amid low renewables (21st pctile) and tight storage (14.7 pp below seasonal); geopolitical risks to LNG/crude via Hormuz and Russia fuel crisis cloud H2 outlook.",
+  "watchlist": [
+    {
+      "metric": "Hormuz transit risk / LNG routing",
+      "why": "Iran rejection of Macron's maritime mission raises disruption probability; constrains EU LNG arb and TTF-HH spreads; watch for naval incident or shipping insurance spikes."
+    },
+    {
+      "metric": "Russian fuel production (drone strikes impact)",
+      "why": "Ukrainian attacks forcing Russia to import gasoline; loss of export capacity tightens global crude, raises EU fuel-switching pressure and LNG scarcity risk into H2."
+    },
+    {
+      "metric": "EU Storage refill trajectory",
+      "why": "At 49.1% full, 14.7 pp below seasonal; August-September refill pace will determine Q4 gas volatility and power baseload costs; target 85%+ by October to avoid winter premium."
+    },
+    {
+      "metric": "Ireland EU presidency policy agenda",
+      "why": "H2 2026 window before French election may accelerate ETS design, carbon border rules, green spending; timing risk for industrial carbon pass-through and power market structure shifts."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU Storage weekly update",
+      "why": "Track refill momentum; 14.7 pp deficit vs seasonal will drive TTF curve shape and autumn power forward risk."
+    }
+  ]
+}
