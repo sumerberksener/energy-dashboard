@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 14.9 pp below the 5-yr seasonal average; Renewables \u2014 outsized daily move (+120.44%, 4.1\u03c3).",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 189,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 184,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 184,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-07-03",
+      "available": true,
+      "daily_change_abs": 22.68,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.16,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -5.22,
+      "monthly_change_abs": 2.82,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 45.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -19.79
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 189,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-07-03",
+      "available": true,
+      "daily_change_pct": 31.36,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.24,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 95.01,
+      "monthly_change_pct": -22.45,
+      "name": "DE Power",
+      "percentile_rank_5y": 46.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -36.55
+    },
+    "eua": {
+      "as_of": "2026-07-02",
+      "available": true,
+      "daily_change_pct": 0.33,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.8,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.16,
+      "monthly_change_pct": -0.54,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 38.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -1.15
+    },
+    "gb_power": {
+      "as_of": "2026-07-03",
+      "available": true,
+      "daily_change_pct": 135.87,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.42,
+      "headline": "outsized daily move (+135.87%, 3.2\u03c3)",
+      "is_stale": false,
+      "latest": 126.09,
+      "monthly_change_pct": 37.79,
+      "name": "GB Power",
+      "percentile_rank_5y": 89.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -0.53
+    },
+    "renewable_share": {
+      "as_of": "2026-07-02",
+      "available": true,
+      "daily_change_pct": 120.44,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.15,
+      "headline": "outsized daily move (+120.44%, 4.1\u03c3)",
+      "is_stale": false,
+      "latest": 63.69,
+      "monthly_change_pct": 67.09,
+      "name": "Renewables",
+      "percentile_rank_5y": 88.0,
+      "unit": "% of load",
+      "weekly_change_pct": -5.18
+    },
+    "storage": {
+      "as_of": "2026-07-01",
+      "available": true,
+      "daily_change_pct": 0.31,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.62,
+      "headline": "14.9 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 49.22,
+      "monthly_change_pct": 13.51,
+      "name": "EU Storage",
+      "percentile_rank_5y": 23.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.87
+    },
+    "ttf": {
+      "as_of": "2026-07-02",
+      "available": true,
+      "daily_change_pct": 2.89,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.61,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 44.01,
+      "monthly_change_pct": -7.55,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 55.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.83
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU faces acute Russian LNG sanctions risk, Ukrainian-sabotage allegations roil Nord Stream politics, heat waves stress demand/generation; Irish presidency opens narrow policy window.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "EU shipyard services Putin's LNG fleet before looming sanctions bite",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-shipyard-races-to-service-russia-vladimir-putin-lng-fleet-before-sanctions-bite/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Russian LNG supply durability directly affects European LNG import costs and TTF arb. Sanctions enforceability and timing drive medium-term gas supply risk premium; maintenance windows compress LNG disruption probability."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Germany indicts Ukrainian over Nord Stream sabotage, alleges Kyiv-backed plot",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/germany-charges-ukrainian-suspect-nord-stream-sabotage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Indictment escalates political tension over Nord Stream destruction; may harden EU-Ukraine relations and complicate sanctions coordination. Indirect: judicial findings could shift diplomatic narrative on Russian gas leverage and EU energy security framing."
+      },
+      {
+        "commodity": "power",
+        "headline": "Heat waves strike Belgium and France; governments face scrutiny and votes",
+        "horizon": "intraday",
+        "link": "https://www.politico.eu/article/belgian-government-under-fire-after-heatwave-claims-1200-lives/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Extreme heat drives peak demand (AC load) and reduces thermal/nuclear generation (cooling constraints). Political fallout may accelerate grid resilience and renewable investment mandates; immediate intraday DA spreads widen."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Russia forced to import gasoline; Ukrainian strikes destroy refinery capacity",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Russian fuel production collapse signals sustained export supply disruptions. Indirect: tighter global crude markets support Brent, raising heating oil / bunker fuel costs and increasing EU power-fuel switching cost; lower Russian LNG capex and operational spending."
+      },
+      {
+        "commodity": "power",
+        "headline": "Brussels permits green mobility spending bypass; war in Iran cited as trigger",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/brussels-waives-electric-vehicle-subsidies-from-eu-spending-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Fiscal easing on e-mobility and renewables deployment accelerates decarbonisation, increasing power supply elasticity and structural headwind to baseload prices. Medium-term bearish curve impact via renewable capacity ramp and coal displacement."
+      }
+    ],
+    "watchlist": [
+      "EU LNG sanctions implementation timeline and enforcement scope \u2014 direct TTF risk.",
+      "Ireland presidency energy/climate agenda prioritisation \u2014 may unlock grid reform or carbon pricing votes.",
+      "French no-confidence vote outcome; heat wave liability affects nuclear maintenance/investment confidence.",
+      "NATO pipeline cost-share resolution \u2014 affects upstream gas corridor viability and EU import diversification."
+    ]
+  }
+}

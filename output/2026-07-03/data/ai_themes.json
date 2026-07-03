@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "Brussels permits green mobility and renewable spending bypass of fiscal rules; war in Iran cited; accelerates decarbonisation capex and EV subsidy deployment.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Fiscal easing on renewables and e-mobility deployment increases power supply elasticity and structural displacement of coal/gas; medium-term EUA marginal cost floor lowers via capacity ramp and sectoral coal exit acceleration."
+  },
+  "freshness_caveat": "Coal data stale since 2025-12-26 (189 days old); clean_dark stale since 2025-12-31 (184 days old). Fuel-switch analysis relies on clean_spark (current) and renewable percentile (current); merit-order narrative incomplete without live coal prices.",
+  "risk_flags": [
+    "Storage at 49.2% (23rd pctile, 14.9 pp below seasonal) \u2014 refill pace into autumn will dictate H2 power risk and TTF floor.",
+    "GB Power +135.87% (+3.2\u03c3) to 126.09 EUR/MWh; DE Power +31.36% (+0.5\u03c3) to 95.01 \u2014 extreme intraday volatility signals thin liquidity or structural supply shock.",
+    "Renewables at 88th pctile (63.7%) \u2014 merit-order collapse ongoing; coal at 7th pctile (96 USD/t, stale Dec-26) \u2014 fuel switch broken; watch clean spark at \u22125.22 EUR/MWh (gas out-of-the-money).",
+    "Russian LNG sanctions timeline undefined; EU shipyard servicing Putin fleet until enforceability announced \u2014 medium-term TTF risk premium (weeks horizon) until enforcement clarity."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u221215-25% (reversion from +31% spike toward 46th pctile baseline)",
+      "summary": "Renewables retreat from 88th pctile, thermal call normalises; storage refill steadies; no sanctions shock announced.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "\u221220-30%",
+      "summary": "Renewables sustain 85+ pctile; heat wave moderates, nuclear restarts; sanctions delayed; storage refill accelerates into Aug.",
+      "ttf_pct": "\u22125-8%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+18-25%",
+      "summary": "EU announces Russian LNG sanctions enforcement (weeks timeline); storage inflow slows; TTF backwardation steepens, power demand shock on political/supply uncertainty.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Renewables-driven DA collapse and thermal margin squeeze",
+    "EU storage deficit with geopolitical LNG supply tail risk",
+    "Heat waves stress French nuclear and Belgian generation",
+    "Russian LNG sanctions enforceability and timing uncertainty"
+  ],
+  "top_drivers": [
+    "Renewables surge to 88th pctile (63.7% of load, +120% daily 4.1\u03c3 move) collapses merit order; clean spark deeply negative (\u22125.22 EUR/MWh) \u2014 gas out-of-the-money, thermal call extinguished.",
+    "EU storage 14.9 pp below seasonal (49.2%, 23rd pctile) + undefined Russian LNG sanctions timeline (weeks horizon) = compounding H2 risk and TTF backwardation tail.",
+    "Heat waves in Belgium/France stress nuclear and thermal capacity; political fallout accelerates renewable mandates, structurally bearish power curve but intraday DA spreads spike."
+  ],
+  "top_takeaway": "Renewables surge to 88th percentile (63.7% penetration, +120% daily move) suppresses DA power; storage deficit 14.9 pp below seasonal average amplifies H2 tail risk amid Russian LNG sanctions escalation.",
+  "watchlist": [
+    {
+      "metric": "EU storage refill pace (daily inflow tracking)",
+      "why": "At 49.2% with 14.9 pp seasonal deficit, trajectory into Aug\u2013Sep critical for winter baseload pricing and TTF backwardation risk."
+    },
+    {
+      "metric": "Russian LNG sanctions implementation and enforcement scope",
+      "why": "Direct TTF arb and LNG import cost driver; EU shipyard servicing window closes when sanctions bite \u2014 weeks-horizon supply tail risk."
+    },
+    {
+      "metric": "French nuclear availability post-heatwave",
+      "why": "Cooling constraints + political pressure on grid resilience; maintenance schedules affect central European power deficit and EUA marginal cost."
+    },
+    {
+      "metric": "GB\u2013DE power spread (currently 31.08 EUR/MWh implied premium)",
+      "why": "Extreme intraday moves (+135.87% GB, +31.36% DE) suggest structural imbalance; GB premium may signal UK-EU interconnector stress or renewable forecast divergence."
+    },
+    {
+      "metric": "Coal stale since Dec-26; clean_dark stale since Dec-31",
+      "why": "No live coal or clean-dark spreads; merit-order signals rely on clean_spark (\u22125.22, 45th pctile) and renewable percentile \u2014 gas is out, but historical proxy broken."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "Irish presidency energy agenda launch",
+      "why": "May unlock grid resilience, ETS-2 sectoral vote, or carbon pricing reform \u2014 affects power curve shape and policy risk premium."
+    }
+  ]
+}

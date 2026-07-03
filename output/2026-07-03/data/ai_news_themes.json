@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU faces acute Russian LNG sanctions risk, Ukrainian-sabotage allegations roil Nord Stream politics, heat waves stress demand/generation; Irish presidency opens narrow policy window.",
+  "themes": [
+    {
+      "headline": "EU shipyard services Putin's LNG fleet before looming sanctions bite",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Russian LNG supply durability directly affects European LNG import costs and TTF arb. Sanctions enforceability and timing drive medium-term gas supply risk premium; maintenance windows compress LNG disruption probability.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-shipyard-races-to-service-russia-vladimir-putin-lng-fleet-before-sanctions-bite/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany indicts Ukrainian over Nord Stream sabotage, alleges Kyiv-backed plot",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Indictment escalates political tension over Nord Stream destruction; may harden EU-Ukraine relations and complicate sanctions coordination. Indirect: judicial findings could shift diplomatic narrative on Russian gas leverage and EU energy security framing.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-charges-ukrainian-suspect-nord-stream-sabotage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Heat waves strike Belgium and France; governments face scrutiny and votes",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Extreme heat drives peak demand (AC load) and reduces thermal/nuclear generation (cooling constraints). Political fallout may accelerate grid resilience and renewable investment mandates; immediate intraday DA spreads widen.",
+      "horizon": "intraday",
+      "link": "https://www.politico.eu/article/belgian-government-under-fire-after-heatwave-claims-1200-lives/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia forced to import gasoline; Ukrainian strikes destroy refinery capacity",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Russian fuel production collapse signals sustained export supply disruptions. Indirect: tighter global crude markets support Brent, raising heating oil / bunker fuel costs and increasing EU power-fuel switching cost; lower Russian LNG capex and operational spending.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Brussels permits green mobility spending bypass; war in Iran cited as trigger",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Fiscal easing on e-mobility and renewables deployment accelerates decarbonisation, increasing power supply elasticity and structural headwind to baseload prices. Medium-term bearish curve impact via renewable capacity ramp and coal displacement.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/brussels-waives-electric-vehicle-subsidies-from-eu-spending-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU LNG sanctions implementation timeline and enforcement scope — direct TTF risk.",
+    "Ireland presidency energy/climate agenda prioritisation — may unlock grid reform or carbon pricing votes.",
+    "French no-confidence vote outcome; heat wave liability affects nuclear maintenance/investment confidence.",
+    "NATO pipeline cost-share resolution — affects upstream gas corridor viability and EU import diversification."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
