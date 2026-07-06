@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Heat waves stress EU power demand; Russia fuel crisis and sanctions pressure on LNG fleet; Nord Stream sabotage allegations complicate geopolitical backdrop.",
+  "themes": [
+    {
+      "headline": "EU shipyard services Putin's LNG fleet ahead of incoming sanctions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Russian LNG sanctions enforcement could tighten global LNG supply, raising TTF and reducing EU gas affordability. If Russian vessels operational post-sanction, supply pressure eases, depressing power via lower gas costs.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-shipyard-races-to-service-russia-vladimir-putin-lng-fleet-before-sanctions-bite/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Belgian heat wave kills 1,200; emergency response failures scrutinised",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Heat-driven mortality and system failures signal sustained cooling demand shock. Elevated peak load and reserve margin stress raise day-ahead power spreads and reserve scarcity premia across NW Europe.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/belgian-government-under-fire-after-heatwave-claims-1200-lives/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France government faces no-confidence vote over record heat wave",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "French political instability during heat crisis may delay nuclear maintenance deferrals or grid coordination decisions, exacerbating supply tightness. High peak loads + reduced availability = upward pressure on French power and EU interconnect spreads.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/french-government-vote-of-no-confidence-heat-wave/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ukraine attacks degrade Russia fuel production; Putin forced to import gasoline",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Russian fuel crisis indirectly affects EU via LNG: if Russia diverts crude to domestic fuel rather than LNG feedstock, global LNG availability tightens, raising TTF and indirect power-via-gas linkage. Monitors sanction enforcement credibility.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-import-gasoline-ukraine-strikes-fuel-shortage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ireland EU presidency begins amid political window before French election stall",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Irish presidency timing (before French election) may accelerate EU energy policy decisions (RED IV, grid codes, carbon market measures). Compressed timeline could force quick CAP, auctions, or EUA reform votes affecting power-curve expectations.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/ireland-eu-presidency-policy-agenda-trade-defense-health-climate-tech-cyber-enlargement-migration/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "French no-confidence vote outcome and impact on nuclear/grid coordination.",
+    "EU LNG sanctions implementation and Russian vessel servicing deadline.",
+    "Ireland presidency legislative agenda: energy/carbon market decisions (weeks 1–4).",
+    "Belgian / French heat wave persistence; cooling demand and reserve margin strain."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

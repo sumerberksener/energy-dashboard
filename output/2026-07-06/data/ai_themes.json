@@ -1,0 +1,74 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale 192 days (as of 2025-12-26); Clean Dark stale 187 days (as of 2025-12-31). All other metrics current as of 2026-07-02 to 2026-07-06. Coal 7th-pctile and Clean Dark 48th-pctile figures should not drive trading decisions pending refresh.",
+  "risk_flags": [
+    "Clean Spark 49.32 EUR/MWh (+95th-pctile, +87.55 EUR/MWh daily) signals extreme gas-to-power economics; coal depressed to 7th-pctile (96 USD/t, stale 192d). Fuel-switch regime firmly in force.",
+    "Storage at 50.03% (24th-pctile, 15pp below seasonal). Refill pace will set H2 power cost and TTF floor.",
+    "Russian LNG sanctions deadline imminent; if enforcement tightens, global LNG supply shock could lift TTF +10-20% and ripple into power. If Russian vessels remain operational, supply relief depresses power.",
+    "French political instability during peak heat-wave period may delay nuclear maintenance deferrals or grid coordination, exacerbating reserve margin stress and DA spread widening."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Renewables-driven thermal suppression persists; heat-wave demand lifts DA; storage refill steady.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "-10-15%",
+      "summary": "Heat wave moderates; renewables output remains high; Russian LNG sanctions waived or delayed.",
+      "ttf_pct": "-5-10%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+15-25%",
+      "summary": "French nuclear outage or grid coordination failure under heat stress; LNG sanctions enforced tightly.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Renewables suppressing thermal dispatch, Clean Spark at 95th-percentile",
+    "Heat-wave demand shock across Belgium and France",
+    "Russian LNG sanctions and fuel crisis geopolitical tail-risk",
+    "EU storage 15pp below seasonal \u2014 refill pace critical for H2"
+  ],
+  "top_drivers": [
+    "Renewables at 95th-percentile (74.41% of load) depressing thermal merit order; Clean Spark at 49.32 EUR/MWh signals gas economics remain extended but thermal dispatch suppressed.",
+    "Heat-wave demand shock across Belgium, France driving peak-load stress and reserve-margin strain; political instability risks nuclear maintenance deferral and grid coordination delays.",
+    "Russian LNG sanctions and fuel-production crisis creating tail-risk to global LNG supply; if enforcement sticks, TTF upside; if Russian vessels remain operational, supply relief."
+  ],
+  "top_takeaway": "Renewables at 95th-percentile suppress thermal merit order; heat wave lifts cooling demand; Russian LNG sanctions create tail-risk to gas supply.",
+  "watchlist": [
+    {
+      "metric": "Renewable share (% of load)",
+      "why": "At 74.41% (95th-pctile), historically high wind+solar output. Depresses thermal dispatch and may extend merit-order suppression into August if weather holds."
+    },
+    {
+      "metric": "EU Storage refill trajectory",
+      "why": "At 50.03%, 15pp below seasonal. H2 summer refill pace will determine autumn/winter power curve shape and TTF floor; watch weekly injection rates."
+    },
+    {
+      "metric": "Russian LNG sanctions enforcement",
+      "why": "EU shipyard servicing Putin's fleet before deadline (weeks horizon). Outcome determines global LNG supply tightness and TTF risk premium over next 1\u20133 months."
+    },
+    {
+      "metric": "French heat-wave impact on nuclear availability",
+      "why": "Political instability during peak cooling demand. If nuclear maintenance is deferred or grid coordination delayed, NW Europe reserve margins tighten and DA spreads widen."
+    },
+    {
+      "metric": "DE Power / GB Power spread",
+      "why": "DE Power +141.22% daily (149.55 EUR/MWh, 79th-pctile); GB Power -1.59% (110.45 EUR/MWh, 71st-pctile). Spread widening; monitor interconnect flow assumptions under heat stress."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "French no-confidence vote (heat-wave crisis)",
+      "why": "Political outcome affects nuclear maintenance deferral and grid coordination under peak cooling demand. Upside risk to DA power spreads."
+    },
+    {
+      "day_label": "TBD",
+      "name": "EU LNG sanctions deadline (Russian vessel servicing)",
+      "why": "Shipyard services curtailment would tighten global LNG, lift TTF, and cascade into EU power via fuel cost. Enforcement credibility test."
+    }
+  ]
+}
