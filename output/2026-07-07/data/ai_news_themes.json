@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Ukraine escalates strikes on Russian energy infrastructure; EU sanctions on Russian LNG imminent; heat waves intensify climate policy focus across Europe.",
+  "themes": [
+    {
+      "headline": "EU shipyard services Russian LNG fleet ahead of incoming sanctions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Accelerated servicing extends Russian LNG supply capacity despite sanctions, keeping global LNG supply elevated and TTF arbitrage weak. Delays to sanctions implementation extend Russian revenue flows.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-shipyard-races-to-service-russia-vladimir-putin-lng-fleet-before-sanctions-bite/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ukrainian drones strike Omsk refinery; Russia faces acute fuel crisis",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Russian refinery damage reduces domestic fuel production, forcing imports. Indirectly supports crude prices and fuel-to-gas switching pressure; minimal direct EU power impact but geopolitical risk premium on oil affects energy basket hedging.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russian-largest-oil-refinery-first-time-hit-by-ukraine-drones/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Belgian and French heat waves claim lives; government accountability scrutiny increases",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Extreme heat drives demand spikes (AC load, industrial cooling) and strains thermal/nuclear plant cooling-water availability. Political pressure may accelerate climate/energy transition spending. Summer 2026 demand risk on DA/Cal+1 spreads.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/belgian-government-under-fire-after-heatwave-claims-1200-lives/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany indicts Ukrainian over Nord Stream sabotage; alleges Kyiv-backed operation",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Political/legal escalation reopens pipeline questions but Nord Stream remains destroyed. Reinforces EU gas isolation from Russian supplies; supports LNG demand narrative and TTF price floor. Minimal immediate transmission but signals hardening geopolitical stance.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-charges-ukrainian-suspect-nord-stream-sabotage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ireland assumes EU presidency amid French election; energy/climate agenda fluid",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Six-month Irish presidency may slow EU ETS policy decisions and renewable subsidies if decision-making stalls pre-French election. Watch for delays on capacity market rules, CBAM implementation, or grid upgrade funding affecting 2027 auction calendars.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/irish-presidency-thomas-byrne-eu-window-of-opportunity-can-ireland-deliver/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU sanctions on Russian LNG fleet implementation date and scope — impact on global LNG supply and TTF.",
+    "French and Belgian heat-wave recovery/demand normalisation — summer load forecasts for DA/Cal+1.",
+    "Irish presidency energy/climate agenda — watch for ETS auction schedule, capacity market, grid investment timelines.",
+    "Ukraine-Russia energy war escalation — refinery/pipeline attacks could trigger energy supply volatility spikes."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 14,
+  "error": null
+}

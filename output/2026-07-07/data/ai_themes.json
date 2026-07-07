@@ -1,0 +1,59 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (193 days old); Clean Dark stale as of 2025-12-31 (188 days old). Derived thermal merit-order signals use stale coal pricing \u2014 current dispatch economics may differ. Gas, power, storage, and renewables current as of 2026-07-05 to 2026-07-07.",
+  "risk_flags": [
+    "EU storage at 50.4% vs 5-yr seasonal norm 65.4% \u2014 refill pace into Q4 will set winter tail risk; 24th percentile rank signals below-trend inventory.",
+    "Renewable share 60.8% (84th pctile) \u2014 high intermittency risk on grid stability; next windfall drop could spike DA prices sharply.",
+    "Belgian/French heat waves intensify summer load forecast; cooling-water constraints on thermal/nuclear capacity may tighten power curve.",
+    "Russian LNG sanctions delayed \u2014 extended servicing of Novatek fleet extends global LNG supply, capping TTF arbitrage window vs Asian LNG."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b15-8%",
+      "summary": "Steady storage deficit; renewables volatility; TTF tracks seasonal demand; power DA 70\u2013130 EUR/MWh range.",
+      "ttf_pct": "\u00b12-3%"
+    },
+    "downside": {
+      "de_power_pct": "-8-15%",
+      "summary": "Renewable surge + mild weekend; demand softens; fuel-switch margin tightens coal out of merit; storage refill pace quickens.",
+      "ttf_pct": "-3-7%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+15-25%",
+      "summary": "Heat-wave demand spike + cooling-water constraint on thermal; renewable windfall drop forces higher-cost coal/gas dispatch.",
+      "ttf_pct": "+5-10%"
+    }
+  },
+  "themes": [
+    "Storage deficit headroom constraint",
+    "Summer heat-driven demand and cooling-water risk",
+    "Russian LNG sanctions delay tilts LNG arb",
+    "Coal structurally weak; thermal dispatch compressed"
+  ],
+  "top_drivers": [
+    "Storage deficit (50.4% vs 65.4% seasonal) signals constrained refill pace \u2014 winter tail-risk premium will rebuild as H2 unfolds.",
+    "Heat-wave demand spikes + cooling-water risk on thermal/nuclear plant availability tightens summer power merit order; DA volatility expected.",
+    "Russian LNG sanctions delay extends fleet uptime; global LNG supply stays elevated, capping TTF-Asian LNG arb and keeping arbitrage flows weak."
+  ],
+  "top_takeaway": "EU storage 15 pp below seasonal; heat waves drive summer power demand spikes; Russian LNG sanctions delayed, keeping TTF weak.",
+  "watchlist": [
+    {
+      "metric": "EU LNG sanctions implementation scope & date",
+      "why": "Delays extend Russian fleet serviceability; TTF arbitrage and import flow elasticity hinges on sanctions timing and breadth."
+    },
+    {
+      "metric": "French/Belgian summer demand recovery track",
+      "why": "Heat-wave demand spikes and cooling-water constraints on nuclear/thermal will shape DA and Cal+1 power curve through August."
+    },
+    {
+      "metric": "Irish EU presidency energy agenda",
+      "why": "May slow ETS auction schedule, CBAM, capacity market reforms \u2014 watch for 2027 auctions and grid funding pipeline delays."
+    },
+    {
+      "metric": "Ukraine refinery/pipeline escalation cadence",
+      "why": "Omsk strike signals sustained drone campaign; further refinery damage could spike crude, pressuring fuel-to-gas switching calculus."
+    }
+  ],
+  "watchlist_dated": []
+}
