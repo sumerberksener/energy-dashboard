@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (194 days stale as of 2025-12-26) and Clean Dark (189 days stale as of 2025-12-31) \u2014 current fuel-switch and dark-spread dynamics cannot be confirmed. Renewable, storage, TTF, and power data current as of 2026-07-07/08.",
+  "risk_flags": [
+    "Renewables at 97th percentile (83.52% of load) \u2014 thermal margin compressed; any wind cliff triggers sharp merit-order reset.",
+    "Storage 15pp below 5-yr seasonal average at 50.63% full \u2014 summer refill pace critical; shortfall extends into autumn risk window.",
+    "Iran sanctions and Omsk refinery strikes tighten crude; crude-TTF coupling pushes thermal generation marginal cost higher, supporting power forward curve.",
+    "Coal data stale as of 2025-12-26 (194 days old); Clean Dark stale as of 2025-12-31 (189 days old) \u2014 cannot confirm current fuel-switch dynamics."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b13-5%",
+      "summary": "Renewables remain elevated (80%+ of load); modest thermal margin; TTF tracks storage refill pace; power stable.",
+      "ttf_pct": "\u00b12-3%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Renewables sustain 90%+; storage refill accelerates; EU LNG sanctions eased; TTF arb relief lowers gas; thermal margin extends.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Wind cliff (renewables drop to 40th percentile); thermal dispatch surges; crude tightness via Iran sanctions amplifies fuel-switch premium.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Renewables suppressing thermal dispatch",
+    "Geopolitical crude tightness (Iran sanctions, Russian refinery strikes)",
+    "Storage deficit creating summer refill pressure",
+    "Fuel-switch regime via crude-TTF coupling"
+  ],
+  "top_drivers": [
+    "Renewables at 97th percentile (83.52% of load) collapse thermal call and flatten power merit order; any wind reversal triggers sharp upside.",
+    "Iran sanctions + Omsk refinery strike tighten crude; crude-TTF fuel-switch arbitrage lifts gas and thermal generation cost.",
+    "Storage 15pp below seasonal average at 50.63% full; summer refill pace constrains autumn heating buffer and extends summer power curve support."
+  ],
+  "top_takeaway": "Renewables at 97th percentile suppress thermal merit order; storage 15pp below seasonal average; Iran sanctions and Russian refinery strikes tighten crude, underpinning thermal generation cost via fuel-switch arbitrage.",
+  "watchlist": [
+    {
+      "metric": "Renewables wind cliff",
+      "why": "At 97th percentile; any drop >20pp in daily renewable share resets thermal dispatch and power curve sharply."
+    },
+    {
+      "metric": "TTF-crude coupling (fuel-switch arbitrage)",
+      "why": "Iran sanctions + Russian refinery damage tighten crude; elevated Brent props TTF and thermal generation cost; watch spread."
+    },
+    {
+      "metric": "EU storage refill trajectory",
+      "why": "Deficit of 15pp vs seasonal average; summer injection pace determines autumn heating season supply buffer and autumn power curve shape."
+    },
+    {
+      "metric": "Russian LNG sanctions enforcement",
+      "why": "EU shipyard servicing deadline imminent; closure curtails Gazprom LNG maintenance and may ease global LNG supply, lowering TTF via arbitrage relief."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "EU sanctions on Russian LNG shipyard servicing",
+      "why": "Imminent enforcement date; maintenance halt curtails Gazprom LNG availability and affects TTF arb dynamics."
+    }
+  ]
+}

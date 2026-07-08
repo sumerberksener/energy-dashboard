@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran sanctions reimposed; Russia refinery strikes intensify; EU-Russia energy ties under pressure amid Ukraine conflict.",
+  "themes": [
+    {
+      "headline": "Trump administration reimposes sanctions on Iranian oil sales",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Reduced Iran supply tightens global crude; higher Brent props up European gas switching (fuel-switching arbitrage via crude-TTF linkage). Higher crude → higher thermal power generation costs.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/07/trump-reimposes-sanctions-iran-oil-sanctions-00989081?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ukrainian drones strike Russia's largest oil refinery near Omsk",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Damage to Russian refining capacity reduces fuel supply flexibility and may force Russian crude onto export market. Tightens European fuel supply and elevates thermal generation costs via crude-TTF coupling.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russian-largest-oil-refinery-first-time-hit-by-ukraine-drones/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU shipyard races to service Russia's LNG fleet before sanctions",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Imminent EU sanctions on Russian LNG maintenance could curtail Gazprom LNG availability to global markets. Lower non-EU LNG supply may ease marginal cost for NW Europe LNG arb and lower TTF; bullish-gas (bearish-power).",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-shipyard-races-to-service-russia-vladimir-putin-lng-fleet-before-sanctions-bite/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Belgium heat wave kills 1,200; emergency infrastructure under scrutiny",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Extreme heat drives peak demand for cooling; cooling load on European grid spikes. Higher peak demand increases day-ahead power spreads and forward curve risk, especially for summer Cal+1 contracts.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/belgian-government-under-fire-after-heatwave-claims-1200-lives/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "U.S. refining capacity decreased 1% in 2025 versus 2024",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Slower US refining capacity growth may tighten global refined products and limit US export supply. Indirect: props Brent and crude-TTF spread; affects EU thermal generation cost, but magnitude and timing unclear.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67807"
+    }
+  ],
+  "watchlist": [
+    "EU sanctions implementation on Russian LNG servicing—watch for enforcement date and shipyard closure.",
+    "UK–EU agricultural and trade deal negotiations under new UK PM—monitor any energy trade impacts.",
+    "Ireland EU presidency policy agenda (July–December 2026)—track climate and energy regulatory priorities.",
+    "Further Ukrainian strikes on Russian refining or export infrastructure—monitor Brent volatility transmission."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 14,
+  "error": null
+}
