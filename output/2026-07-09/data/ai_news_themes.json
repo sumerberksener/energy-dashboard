@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Russia refinery strikes halt diesel exports; Iran sanctions reimposed; Middle East conflict escalates—tight crude/fuel supply backdrop pressures EU gas via LNG displacement.",
+  "themes": [
+    {
+      "headline": "Russia halts diesel exports after Ukraine refinery strikes",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Loss of Russian diesel export capacity tightens global refined product markets; EU refineries must source crude elsewhere, raising margins and competing for LNG-alternative gas cargoes. Indirect TTF/power support via fuel-switching headroom.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-halts-diesel-exports-after-ukrainian-refinery-strikes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Trump administration reimposes sanctions on Iran oil sales",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Removes ~1M b/d Iranian crude from market; supports Brent, reduces global LNG switching incentive, keeping TTF elevated relative to Asian hubs. Indirect upside for EU power via dampened gas arbitrage.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/07/trump-reimposes-sanctions-iran-oil-sanctions-00989081?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Middle East conflict escalates; IMF warns of economic spillover",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Renewed Hormuz disruption risk elevates crude risk premium; tightens LNG market and supports TTF via competing feedstock demand. Indirect inflation driver for power via input costs and macro demand destruction.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/middle-east-conflict-world-economy-international-monetary-fund-iran/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU shipyard services Russia LNG fleet before sanctions take effect",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Maintains Russian LNG export capacity post-sanctions, prolonging supply of spot LNG to compete with EU demand. Direct bearish TTF pressure if additional sanctions delayed or Russian cargoes continue flowing.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-shipyard-races-to-service-russia-vladimir-putin-lng-fleet-before-sanctions-bite/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Italy pushes to weaken EU green rules in €2 trillion budget framework",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Weakened EU climate/environmental criteria reduce clean-energy investment incentives and extend lifetime of fossil-fuel infrastructure. Neutral near-term; downside EUA and upside for coal/gas if enforcement diluted.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/italy-push-weaken-green-rules-eu-budget/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU sanctions on Russian LNG fleet servicing—implementation date and scope (direct TTF impact).",
+    "NATO fuel pipeline upgrade cost agreement—could unlock alternative to Russian/spot gas (months out).",
+    "German Nord Stream sabotage trial developments—geopolitical signal on EU-Ukraine relations and gas policy.",
+    "Iran crude re-entry timeline and US sanction enforcement—watch for Strait of Hormuz insurance premiums."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
