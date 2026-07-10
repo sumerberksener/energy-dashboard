@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran sanctions reimposed; Russia refinery strikes; EU green rules under pressure from Italy and US lobbying.",
+  "themes": [
+    {
+      "headline": "Trump reimposes sanctions on Iranian oil sales",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Tightens global crude, supporting Brent and reducing LNG feedstock availability. Higher energy costs boost EU power via fuel-switch to gas; TTF may rise if MENA LNG supply diverted to premium markets.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/07/trump-reimposes-sanctions-iran-oil-sanctions-00989081?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia halts diesel exports after Ukrainian refinery strikes",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Refinery capacity loss constrains Russian refined product exports; potential spillover to EU via crude-for-product swaps and tighter global supply. Indirect pressure on EU generation fuel economics.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-halts-diesel-exports-after-ukrainian-refinery-strikes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Italy leads push to weaken EU green rules in €2 trillion budget",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Weakening green criteria risks delaying renewable deployment and carbon reduction targets. Slower decarbonization trajectory extends thermal baseload demand; lower EUA floor support. Policy uncertainty affects Cal+1 carbon forwards.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/italy-push-weaken-green-rules-eu-budget/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU shipyard services Putin's LNG fleet ahead of sanctions",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Maintaining Russian LNG fleet operability sustains Nord Stream LNG supply to Asia and indirectly supports global LNG spot prices. Lower LNG costs reduce EU gas-to-power switching incentive; TTF downside risk via arbitrage relief.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-shipyard-races-to-service-russia-vladimir-putin-lng-fleet-before-sanctions-bite/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US oil executives lobby Trump to attack Europe's climate rules",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "US political pressure on EU ETS and climate rules risks dilution or delay; lower carbon credibility weakens EUA floor. Transatlantic regulatory friction may stall CBAM enforcement, reducing EU carbon leverage and power cost support.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/07/07/oil-executives-trump-europe-climate-00987782?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU green rules decision next week (Sweden/Italy standoff); monitor EUA and renewable subsidy signals.",
+    "Iran sanctions impact on global crude and LNG arbitrage into NW Europe TTF.",
+    "Russian refinery strike damage assessment; diesel export resumption timeline.",
+    "NATO pipeline cost resolution; potential EU fuel transport constraint implications."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

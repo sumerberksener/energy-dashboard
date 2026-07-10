@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "Italy leads push to weaken EU green rules in \u20ac2 trillion budget; US oil lobbying for climate-rule dilution and CBAM enforcement delay.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Weakening decarbonization targets and CBAM enforcement delay remove carbon floor; slower renewable capex extends thermal baseload demand but reduces long-term carbon scarcity value. EUA downside risk into Cal+1 and beyond."
+  },
+  "freshness_caveat": "Coal data stale (196 days old, as of 2025-12-26); Clean Dark stale (191 days old, as of 2025-12-31). Coal 7th-pctile and Clean Dark 48th-pctile readings may not reflect current spreads. All forward-looking signals rely on fresh GB Power, DE Power, TTF, Storage, Renewables, EUA (all \u22642 days old).",
+  "risk_flags": [
+    "Storage at 51.1% (15pp below 5-yr seasonal) with refill pace slowing into Aug\u2014H2 power curve at risk if summer demand extends or winter fill disappoints.",
+    "Iran sanctions reimposed and Italy leading EU green-rules weakening\u2014TTF upside via LNG scarcity but EUA downside via decarbonization stall; conflicting signals for thermal dispatch.",
+    "Clean Spark 55.3 EUR/MWh (96th-pctile) vs Clean Dark at 48th-pctile\u2014gas clearly dominating coal; coal at 7th-pctile (96 USD/t) may not support dispatch reversion even if power peaks.",
+    "Renewables at 46.5% of load (60th-pctile) after -32.5% daily drop\u2014weak wind/solar forecast means higher thermal baseload requirement; GB premium widening reflects import scarcity."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22125 to +5%",
+      "summary": "Storage refill neutral; renewables recover to 50\u201355% of load; geopolitical priced in; GB power settles 80\u201390 EUR/MWh, DE 150\u2013160.",
+      "ttf_pct": "+1\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "\u22128\u201312%",
+      "summary": "EU green-rules strengthened; renewables surge (wind recovery to 70%+ of load); storage refill accelerates; Russia LNG fleet repairs ease global LNG spot. TTF \u22125\u20137%, GB \u221210\u201315%, DE \u22128\u201312%.",
+      "ttf_pct": "\u22125\u20137%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+10\u201315%",
+      "summary": "Iran sanctions tighten MENA LNG supply; EU green-rules weakening stalls renewable capex; storage refill misses 1\u20132pp; cold snap drives Aug demand. TTF +8\u201312%, GB +15\u201320%, DE +10\u201315%.",
+      "ttf_pct": "+8\u201312%"
+    }
+  },
+  "themes": [
+    "Extreme GB/DE power; coal structurally sidelined",
+    "Storage deficit constrains H2 refill; gas-to-power switching priced in",
+    "Geopolitical tail-risk: Iran sanctions, green-rules rollback, Russian refinery outages",
+    "EUA flat despite policy headwinds; carbon floor under pressure"
+  ],
+  "top_drivers": [
+    "Storage deficit (51.1%, -15pp seasonal) forcing higher thermal reliance into H2; refill pace and winter adequacy now front-of-mind for Cal+1 curve.",
+    "GB power at 97th-pctile amid weak renewables (-32.5% daily) and import scarcity; interconnector bottleneck and Irish wind forecast critical.",
+    "Geopolitical regime shift: Iran sanctions re-impose LNG scarcity and Brent upside, supporting gas-to-power switching; Italy/EU green-rules rollback dilutes carbon floor and EUA downside risk.",
+    "Clean Spark 96th-pctile, Clean Dark 48th-pctile\u2014gas structurally in-the-money; coal sidelined at 7th-pctile, no dispatch recovery even on price."
+  ],
+  "top_takeaway": "GB Power at 97th-percentile; Clean Spark 96th-pctile; storage 15pp below seasonal average; Iran sanctions and green-rule rollback risk tighten thermal merit order amid weak renewables backdrop.",
+  "watchlist": [
+    {
+      "metric": "Storage refill pace vs H2 demand",
+      "why": "51.1% full, 15pp below seasonal; delayed refill into Aug-Sep will set winter adequacy and Cal+1 power premium."
+    },
+    {
+      "metric": "Iran sanctions LNG arbitrage",
+      "why": "Tightens Brent and global LNG spot; watch MENA cargoes for NW Europe TTF vs Asia premium; TTF upside if MENA supply redirected."
+    },
+    {
+      "metric": "EU green-rules negotiation outcome",
+      "why": "Italy/Sweden standoff on carbon targets; weakening risks EUA downside via slower decarbonization and stalled CBAM enforcement."
+    },
+    {
+      "metric": "Russian refinery strike damage timeline",
+      "why": "Diesel export halt constrains global supply; spillover to EU crude-for-product swaps and indirect power fuel economics."
+    },
+    {
+      "metric": "GB power premium vs DE",
+      "why": "GB at 141.96 EUR/MWh (97th-pctile) vs DE at 167.73 (83rd-pctile, up 35% day-on-day)\u2014interconnector flows and import scarcity are critical; watch for flash price events."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "EU green-rules decision (Sweden standoff)",
+      "why": "Italy-led push to weaken decarbonization targets; outcome sets EUA floor and renewable capex trajectory for H2."
+    }
+  ]
+}
