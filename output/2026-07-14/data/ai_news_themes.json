@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Russia sanctions deadline Wednesday; Iran oil reimposed; Middle East conflict risk; France nuclear constraints from heat; Ukraine pressuring Russia pre-winter.",
+  "themes": [
+    {
+      "headline": "EU sanctions package deadline Wednesday; oil price cap at risk",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Oil price cap failure lifts Urals crude, raising EU gas demand via fuel-switch economics and Russian export revenue. TTF tension if Kremlin redirects supply eastward.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/russia-sanctions-package-wednesday-deadline/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France nuclear reactors shut by extreme heat amid rising electricity demand",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Nuclear outages reduce baseload, forcing peak-load gas dispatch. DA spreads widen; summer Cal+1 gas tightens. Heat-driven AC demand pushes power prices sharply higher.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Trump reimpose Iran oil sanctions; Strait of Hormuz 20% toll proposed",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Iran sanctions + Hormuz disruption risk curtails global LNG supply. Higher LNG prices reduce arbitrage to Europe, lifting TTF. Middle East conflict escalates supply-route premium.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/07/trump-reimposes-sanctions-iran-oil-sanctions-00989081?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia halts diesel exports; Ukraine strikes refinery capacity",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Refinery curtailment reduces Russian crude processing. If Russia imports fuel to cover domestic shortfall, export volumes drop—affects Urals flows, indirectly constrains EU diesel and naphtha feedstock.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-halts-diesel-exports-after-ukrainian-refinery-strikes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Italy, Sweden contest EU green rules weakening in €2 trillion budget",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Weakening green criteria could slow renewable investment, reducing renewables supply and raising EUA scarcity premium. Policy uncertainty depresses near-term EUA liquidity; awaiting resolution.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/italy-push-weaken-green-rules-eu-budget/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU sanctions package locked by Wednesday; oil price cap enforcement signal.",
+    "France nuclear availability update as heat wave persists; contingency demand on gas.",
+    "Iran oil reimposition enforcement; LNG arbitrage compression risk to TTF.",
+    "Ukraine winter leverage campaign; Russian fuel infrastructure damage trajectory."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 14,
+  "error": null
+}
