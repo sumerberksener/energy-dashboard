@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran–US conflict escalates; Strait of Hormuz supply risk elevated. Russia fuel export cuts post-Ukraine strikes. EU green policy under political pressure ahead of votes.",
+  "themes": [
+    {
+      "headline": "Iran–US war, Strait of Hormuz control unresolved, no swift end",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz blockade or disruption cuts Middle East LNG & oil exports to NW Europe. Tightens global LNG arb, pushes TTF higher via reduced supply and higher Brent. Direct EU gas price transmission.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/14/iran-war-strait-hormuz-00997750?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France nuclear shut-downs amid extreme heat surge demand-side tension",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Heat-driven nuclear availability loss in France (EU's largest baseload) forces substitute gas/coal generation. Tightens DA spreads, lifts power prices. Cooling water scarcity is recurring summer risk for Central Europe.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/?utm_media=RSS_Feed&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia halts diesel exports after Ukraine refinery strikes",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "coal",
+      "polarity": "neutral",
+      "why_it_matters": "Russian fuel export halt signals energy infrastructure vulnerability. Indirect EU power impact via fuel input costs and potential coal-to-gas switching if diesel supply tightens. Monitor for spillover into power generation fuel sourcing.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-halts-diesel-exports-after-ukrainian-refinery-strikes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Global LNG trade volumes hit record 56.3 Bcf/d in 2025",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Expanding global LNG supply (US capacity growth) increases optionality for EU LNG buyers. Supports TTF floor via incremental arbitrage volumes. Offsets some Strait of Hormuz risk. Positive for medium-term gas availability.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id="
+    },
+    {
+      "headline": "EU sanctions package on Russia oil price cap hits Wednesday deadline",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Sanctions/price cap outcomes drive Brent floor and EU refined product (gasoil) input costs. Indirectly affects power plant fuel switching economics and heating demand outlook. Policy uncertainty creates near-term volatility.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/russia-sanctions-package-wednesday-deadline/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU green rules vote (Sweden, Italy positions clashing); outcome affects EUA carbon-intensive power incentives.",
+    "Strait of Hormuz military/diplomatic escalation; monitor LNG shipping delays and premium risk.",
+    "France nuclear plant restart schedule as cooling conditions improve; baseload supply signal for DA power curve.",
+    "Russia sanctions package finalisation by July 16; oil price cap changes ripple into EU fuel cost inflation."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

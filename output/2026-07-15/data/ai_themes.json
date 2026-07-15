@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data 201 days old (as of 2025-12-26); Clean Dark 196 days old (as of 2025-12-31). Coal percentile and price levels cannot be relied upon for intraday trading. All other metrics current as of 2026-07-14\u201315.",
+  "risk_flags": [
+    "Hormuz blockade or disruption could cut Middle East LNG exports to Europe, pushing TTF +5\u201310% and power +8\u201315% within weeks.",
+    "France nuclear shut-downs amid extreme heat; cooling water scarcity is recurring summer risk for Central Europe baseload.",
+    "Storage at 52.52% (26th-percentile 5y, 15.3 pp below seasonal): refill pace in Aug\u2013Sep will set H2 power tail risk.",
+    "Clean Spark 39.97 EUR/MWh (92nd-percentile) vs. Coal 96.0 USD/t (7th-percentile): fuel-switch regime heavily favours gas; coal fundamentals weak but data stale (201 days)."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12\u20134%",
+      "summary": "France nuclear staggered restart, Hormuz tensions contained diplomatically; TTF steady, power follows thermal merit order.",
+      "ttf_pct": "\u00b11\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "\u22126\u201310%",
+      "summary": "Diplomatic de-escalation at Hormuz; France nuclear restarts faster; mild weather reduces cooling demand and power burn.",
+      "ttf_pct": "\u22124\u20137%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8\u201315%",
+      "summary": "Strait of Hormuz blockade or military escalation cuts LNG exports; France nuclear recovery delayed by cooling constraints.",
+      "ttf_pct": "+5\u201310%"
+    }
+  },
+  "themes": [
+    "Geopolitical LNG-supply risk via Strait of Hormuz escalation",
+    "France nuclear unavailability in summer heat stress",
+    "GB\u2013DE power spread widening; thermal merit-order tightness",
+    "EU storage 15.3 pp below seasonal; refill pace critical for H2"
+  ],
+  "top_drivers": [
+    "France summer nuclear outages (heat-driven cooling-water scarcity) force substitute gas/coal generation, tightening DA spreads and supporting GB/DE power 95th\u201381st percentiles.",
+    "Hormuz geopolitical escalation (Iran\u2013US conflict unresolved) raises LNG supply risk, supporting TTF 70th-percentile (52.96 EUR/MWh) and power premiums within weeks.",
+    "EU storage 15.3 pp below seasonal (52.52% full, 26th-percentile 5y) signals refill-pace risk into Aug\u2013Sep; constrains H2 power curve floor."
+  ],
+  "top_takeaway": "GB Power at 95th-percentile amid France nuclear outages and Hormuz geopolitical risk; Clean Spark 92nd-percentile signals thermal dispatch premium despite coal historically weak.",
+  "watchlist": [
+    {
+      "metric": "Strait of Hormuz military/diplomatic escalation",
+      "why": "LNG shipping delays and supply disruption could tighten global arb, pushing TTF +5\u201310% and power +8\u201315% within weeks."
+    },
+    {
+      "metric": "France nuclear plant restart schedule",
+      "why": "Cooling-water constraints during heat surge reduce baseload; substitute gas/coal generation tightens DA spreads and lifts power curve."
+    },
+    {
+      "metric": "EU storage refill trajectory (52.52%, 15.3 pp below seasonal)",
+      "why": "Aug\u2013Sep injection pace will telegraph H2 power risk; below-seasonal fill signals potential winter tightness and curve inversion."
+    },
+    {
+      "metric": "EU sanctions package finalisation on Russian oil",
+      "why": "Price-cap outcomes (deadline Wed 16 Jul) drive Brent floor and refined-product input costs, affecting fuel-switch economics and power margins."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "EU Russia oil sanctions package finalisation",
+      "why": "Price-cap outcomes ripple into Brent floor, gasoil input costs, and power plant fuel-switching economics."
+    },
+    {
+      "day_label": "Thu",
+      "name": "EU green rules vote (Sweden, Italy positions)",
+      "why": "Outcome affects EUA carbon-intensive power incentives and merit-order dispatch signals; may shift DA thermal premium."
+    }
+  ]
+}
