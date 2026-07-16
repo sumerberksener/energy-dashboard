@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (202 days stale, as of 2025-12-26) and Clean Dark (197 days stale, as of 2025-12-31) metrics outdated; fuel-switch merit-order assumption and coal-to-gas spread widening may not reflect current front pricing. Merit-order narrative relies on fresh Clean Spark (95th-percentile) and DE Power (84th-percentile) data (as of 2026-07-16).",
+  "risk_flags": [
+    "GB Power 97th-percentile (142.45 EUR/MWh) with French nuclear shut by heat \u2014 further outages or prolonged recovery could extend premium 5\u201310pp.",
+    "EU storage 52.77% full, 15 pp below seasonal \u2014 refill pace through Aug-Sep will set H2 thermal call and winter curve shape.",
+    "TTF extended 2.2\u03c3 above 50d trend at 54.35 EUR/MWh; Strait of Hormuz unresolved and Russia diesel export halt tighten LNG arb and import scarcity.",
+    "Coal data stale (202 days old); Clean Dark stale (197 days old) \u2014 merit-order assumption on fuel switch may not reflect current front pricing."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Heat-strained French nuclear persists; TTF holds extended 2.2\u03c3; GB premium stable at 95th-percentile; storage refill modest.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "\u22123-5%",
+      "summary": "France restores 2\u20133 GW nuclear by end-week; Hormuz stabilizes; record US LNG eases arb; renewable share rebounds; thermal call softens.",
+      "ttf_pct": "\u22124-6%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+5-8%",
+      "summary": "France reactor restart delayed; Hormuz escalates further; EU sanctions vote triggers Brent spike >5 USD/bbl; fuel switch to gas accelerates.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Nuclear scarcity and heat-driven outages tighten GB-EU power spreads",
+    "Geopolitical risk on crude, LNG, and diesel supply lifts thermal fuel switching",
+    "Storage deficit and TTF extension widen call on gas-dependent generation",
+    "Coal historically cheap but out of merit; fossil dispatch regime inverted"
+  ],
+  "top_drivers": [
+    "French nuclear heat-shutdown supply loss (GW-scale outage) forces gas/power displacement and widens GB-DE spread to 97th-percentile.",
+    "Strait of Hormuz disruption and Russia diesel export collapse tighten global LNG and refined-product arb; TTF extends 2.2\u03c3 above trend on scarcity premium.",
+    "EU storage 15 pp below seasonal and renewable share -15% w/w amplifies thermal baseload call; Clean Spark 95th-percentile reflects sustained coal-to-gas merit-order flip.",
+    "Oil price cap sanctions delay (vote end-July) creates Brent upside tail; crude +5\u20138 USD/bbl scenario would cement fuel-switch advantage to gas generation."
+  ],
+  "top_takeaway": "GB Power at 97th-percentile amid French nuclear outages and Hormuz disruption; Clean Spark 95th-percentile signals extended thermal dispatch; storage 15 pp below seasonal risks H2 refill.",
+  "watchlist": [
+    {
+      "metric": "France nuclear capacity restoration",
+      "why": "Heat-driven shutdowns directly drive GB-DE power premium; each week of outage tightens generation supply 2\u20133 GW and sustains 5\u201315 EUR/MWh power uplift."
+    },
+    {
+      "metric": "EU-Russia oil sanctions vote",
+      "why": "End-July ratchet delay risks Brent spike; crude +5\u20138 USD/bbl feeds fuel-switching margin and TTF arb tightness via refined-product scarcity."
+    },
+    {
+      "metric": "Strait of Hormuz escalation status",
+      "why": "Ongoing disruption constrains global LNG supply; resolution or further closure will move Brent \u00b15\u201310 USD/bbl and EU LNG premiums \u00b12\u20134 EUR/MWh."
+    },
+    {
+      "metric": "Russia diesel export halt impact on industrial demand",
+      "why": "Refined-product scarcity can drive industrial fuel switching to gas; temporary lift to clean-dark spread and TTF gas-on-coal edge."
+    },
+    {
+      "metric": "Renewable share collapse (\u221214.97% w/w)",
+      "why": "Drop from 44% to near seasonal lows increases thermal call; if wind and solar remain suppressed, thermal merit-order tightening persists into Aug."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "EU Russia oil sanctions vote deadline (late July)",
+      "why": "Price cap ratchet delay decision; Brent volatility flows to fuel-switch economics and TTF risk premium."
+    }
+  ]
+}

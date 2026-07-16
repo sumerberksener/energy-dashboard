@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-Russia oil sanctions negotiations stalled; Iran-US conflict disrupts Strait of Hormuz; France's nuclear capacity strained by extreme heat.",
+  "themes": [
+    {
+      "headline": "EU stalls Russia oil price cap sanctions; reconvenes next week",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Delay in price cap ratchet risks crude spike, raising fuel-switching pressure into gas and power. TTF arb sensitive to Brent/WTI spreads and sanctioned crude availability.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-russia-oil-price-cap-sanctions-delayed/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France nuclear reactors shut by extreme heat amid rising demand",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Heat-driven nuclear outages directly tighten French generation; forces substitution into gas and coal. Narrows continental supply and pushes DA/Cal spreads wider.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Strait of Hormuz conflict unresolved; Trump fee plan revoked then backtracked",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Ongoing Strait disruptions constrain global crude and LNG. Higher Brent and reduced LNG arbitrage to Europe raise fuel costs and gas import scarcity premium via TTF.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/14/iran-war-strait-hormuz-00997750?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia halts diesel exports after Ukraine refinery strikes",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Russian diesel export collapse tightens global refined product; forces more gas substitution in industrial power generation. Fuels switching margin favors gas temporarily.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/russia-halts-diesel-exports-after-ukrainian-refinery-strikes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Global LNG trade hit record 56.3 Bcf/d in 2025; US capacity drives growth",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US LNG exports improve European supply elasticity and reduce LNG spot premiums, easing TTF cost basis. Structural oversupply pressure on winter curve.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67864"
+    }
+  ],
+  "watchlist": [
+    "EU Russia sanctions vote deadline end-July; oil price cap ratchet risk.",
+    "France nuclear reactor restart timeline; heat wave persistence in southern Europe.",
+    "Strait of Hormuz escalation; LNG shipping route disruption and Brent volatility.",
+    "Ukraine strikes on Russian fuel infrastructure impact on winter gas flows to Europe."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

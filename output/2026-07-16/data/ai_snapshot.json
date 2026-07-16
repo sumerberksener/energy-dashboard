@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 97th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 95th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 202,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 197,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 197,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-07-16",
+      "available": true,
+      "daily_change_abs": 37.39,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.28,
+      "headline": "95th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 52.46,
+      "monthly_change_abs": 12.04,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 95.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 15.24
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 202,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-07-16",
+      "available": true,
+      "daily_change_pct": 27.45,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.77,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 173.58,
+      "monthly_change_pct": 29.98,
+      "name": "DE Power",
+      "percentile_rank_5y": 84.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 22.13
+    },
+    "eua": {
+      "as_of": "2026-07-15",
+      "available": true,
+      "daily_change_pct": -0.33,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.21,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.73,
+      "monthly_change_pct": 3.78,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 44.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.4
+    },
+    "gb_power": {
+      "as_of": "2026-07-16",
+      "available": true,
+      "daily_change_pct": 1.48,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.95,
+      "headline": "97th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 142.45,
+      "monthly_change_pct": 17.39,
+      "name": "GB Power",
+      "percentile_rank_5y": 97.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -6.33
+    },
+    "renewable_share": {
+      "as_of": "2026-07-15",
+      "available": true,
+      "daily_change_pct": -11.26,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.54,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 44.01,
+      "monthly_change_pct": 16.41,
+      "name": "Renewables",
+      "percentile_rank_5y": 54.0,
+      "unit": "% of load",
+      "weekly_change_pct": -14.97
+    },
+    "storage": {
+      "as_of": "2026-07-14",
+      "available": true,
+      "daily_change_pct": 0.4,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.62,
+      "headline": "15.3 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 52.77,
+      "monthly_change_pct": 11.71,
+      "name": "EU Storage",
+      "percentile_rank_5y": 26.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.59
+    },
+    "ttf": {
+      "as_of": "2026-07-15",
+      "available": true,
+      "daily_change_pct": 2.63,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.2,
+      "headline": "extended 2.2\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 54.35,
+      "monthly_change_pct": 16.21,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 71.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 13.61
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU-Russia oil sanctions negotiations stalled; Iran-US conflict disrupts Strait of Hormuz; France's nuclear capacity strained by extreme heat.",
+    "themes": [
+      {
+        "commodity": "crude",
+        "headline": "EU stalls Russia oil price cap sanctions; reconvenes next week",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/eu-russia-oil-price-cap-sanctions-delayed/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Delay in price cap ratchet risks crude spike, raising fuel-switching pressure into gas and power. TTF arb sensitive to Brent/WTI spreads and sanctioned crude availability."
+      },
+      {
+        "commodity": "power",
+        "headline": "France nuclear reactors shut by extreme heat amid rising demand",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Heat-driven nuclear outages directly tighten French generation; forces substitution into gas and coal. Narrows continental supply and pushes DA/Cal spreads wider."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Strait of Hormuz conflict unresolved; Trump fee plan revoked then backtracked",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/07/14/iran-war-strait-hormuz-00997750?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Ongoing Strait disruptions constrain global crude and LNG. Higher Brent and reduced LNG arbitrage to Europe raise fuel costs and gas import scarcity premium via TTF."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Russia halts diesel exports after Ukraine refinery strikes",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/russia-halts-diesel-exports-after-ukrainian-refinery-strikes/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Russian diesel export collapse tightens global refined product; forces more gas substitution in industrial power generation. Fuels switching margin favors gas temporarily."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Global LNG trade hit record 56.3 Bcf/d in 2025; US capacity drives growth",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67864",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Record US LNG exports improve European supply elasticity and reduce LNG spot premiums, easing TTF cost basis. Structural oversupply pressure on winter curve."
+      }
+    ],
+    "watchlist": [
+      "EU Russia sanctions vote deadline end-July; oil price cap ratchet risk.",
+      "France nuclear reactor restart timeline; heat wave persistence in southern Europe.",
+      "Strait of Hormuz escalation; LNG shipping route disruption and Brent volatility.",
+      "Ukraine strikes on Russian fuel infrastructure impact on winter gas flows to Europe."
+    ]
+  }
+}
