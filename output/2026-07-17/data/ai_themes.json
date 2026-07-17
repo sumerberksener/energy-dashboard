@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU Commission to weaken carbon market, allowing industry more emissions; ETS reform vote stalled\u2014carbon floor under review.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Weakened carbon discipline (EUA down 2.05% to 37th percentile) reduces fuel-switch incentive from gas to coal, flattening power-generation margins and subduing thermal dispatch merit order into autumn."
+  },
+  "freshness_caveat": "Coal data 203 days stale (as of 2025-12-26); Clean Dark 198 days stale (as of 2025-12-31). Current snapshot uses live TTF, GB Power, DE Power, renewables, storage, EUA, and Clean Spark (as of 2026-07-16\u201317). Coal percentile rank and daily moves not reliable for intraday trading; use spot forwarding for fuel-switch model calibration.",
+  "risk_flags": [
+    "Storage at 53% (26th percentile, 15.3 pp below seasonal); refill rate will set autumn power risk if summer demand stays elevated.",
+    "EUA at 33.04 EUR/t (37th percentile) after -2.05% move; EU Commission weakening carbon market removes fuel-switch incentive, pressuring coal dispatch and power margins.",
+    "France nuclear offline mid-summer compresses baseload supply; return date unknown\u2014GB-DE spread vulnerable if outage extends into August.",
+    "Russia oil sanctions deadline end-July at risk; price cap collapse could spike Brent, tightening LNG export economics and lifting TTF via arb."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "French nuclear remains offline; TTF consolidates 2.2\u03c3 above trend; storage refill steady. Power holds 84th percentile.",
+      "ttf_pct": "\u00b11\u20132%"
+    },
+    "downside": {
+      "de_power_pct": "-6\u201310%",
+      "summary": "France nuclear restarts mid-week; EU storage refill accelerates on mild weather; Russia sanctions agreement caps Brent. TTF -4\u20136%; DE power -6\u201310%.",
+      "ttf_pct": "-4\u20136%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8\u201312%",
+      "summary": "France nuclear offline extends into late July + Russia sanctions collapse; Brent spikes 8\u201312 USD/bbl, tightening LNG arb. TTF +5\u20138%; DE power +8\u201312%.",
+      "ttf_pct": "+5\u20138%"
+    }
+  },
+  "themes": [
+    "French nuclear shutdown driving GB-DE premium, summer peaking risk",
+    "TTF extended 2.2\u03c3 above trend; storage 15.3 pp below seasonal\u2014refill pace critical",
+    "EUA weakness (-2.05%, 2.0\u03c3) from EU carbon market reform stall\u2014fuel-switch disincentive",
+    "Geopolitical crude premium (Hormuz, Russia sanctions) underpinning LNG arb, indirect TTF floor"
+  ],
+  "top_drivers": [
+    "French nuclear shutdown mid-summer (weather-driven) compressing baseload; GB at 99th percentile as import demand surges.",
+    "EU carbon market reform stalling\u2014EUA down 2.05% (2.0\u03c3); weakened incentive for coal displacement, flattening power-margin arbitrage.",
+    "TTF extended 2.2\u03c3 above trend amid storage 15.3 pp below seasonal; refill pace and geopolitical crude premium (Hormuz, Russia sanctions) set summer-into-autumn gas marginal cost.",
+    "Clean Spark at 95th percentile despite coal weakness (7th percentile)\u2014merit-order compression driven by renewable shortfall (renewables -15.29% daily, 38th percentile) and thermal call."
+  ],
+  "top_takeaway": "GB Power at 99th percentile amid French nuclear offline and tight storage; Clean Spark 95th percentile; coal at 7th\u2014fuel switch intact but carbon-policy weakness pressures margins.",
+  "watchlist": [
+    {
+      "metric": "EU ETS reform vote outcome",
+      "why": "Carbon floor and free allocation changes determine fuel-switch economics and coal merit-order positioning this winter."
+    },
+    {
+      "metric": "France nuclear return date",
+      "why": "Each week offline adds ~1\u20132 GW import demand; DA power spread widens if heat persists into late July."
+    },
+    {
+      "metric": "Russia oil sanctions final deadline (end-July)",
+      "why": "Price cap agreement or failure directly moves Brent; LNG arb sensitivity to crude means 5\u201310 USD/bbl swing flows 2\u20133 EUR/MWh into TTF."
+    },
+    {
+      "metric": "EU storage refill pace (weekly)",
+      "why": "53% fill (15.3 pp below seasonal) with TTF extended 2.2\u03c3 high\u2014slow refill locks summer-elevated pricing into autumn marginal cost."
+    },
+    {
+      "metric": "Strait of Hormuz escalation/de-escalation",
+      "why": "Persistent disruptions maintain crude risk premium, anchoring LNG export value and constraining European import opportunity cost via arbitrage."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "Russia oil sanctions deadline (end-July negotiation window)",
+      "why": "Failure to cap or extend agreement could spike Brent 5\u201310 USD/bbl, tightening LNG economics and lifting TTF arb floor."
+    }
+  ]
+}

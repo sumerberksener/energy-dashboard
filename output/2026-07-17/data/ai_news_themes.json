@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU carbon market reform stalled; Russia oil sanctions deadline missed; Iran-Hormuz conflict raises crude volatility; France nuclear threatened by heat.",
+  "themes": [
+    {
+      "headline": "EU Commission to weaken carbon market, allowing industry more emissions",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "EUA price weakness ripples through power merit order. Lower carbon cost reduces fuel-switching incentive from gas to coal, pressuring power margins and TTF arb.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-climate-change-fight-carbon-market-emissions-trading-system/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France nuclear forced offline by extreme heat, compressing supply",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Nuclear shutdown reduces French baseload capacity mid-summer. Drives imports from Germany/Benelux; increases DA power prices and gas demand for peaking. Direct Day-Ahead spread impact.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU-Russia oil sanctions deal collapses; price cap deadline end-July at risk",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Failure to agree sanctions cap could allow Russian crude prices to spike, raising global crude cost. Higher oil feeds LNG economics via Brent-linked cargoes; indirectly tightens TTF via LNG arb pressure.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-russia-oil-price-cap-sanctions-delayed/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Middle East Strait of Hormuz disruptions persist; crude volatility elevated Q2",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Continued Strait chokepoint tension sustains crude volatility and risk premium. Higher oil underpins LNG export economics; tightens global LNG-to-TTF arb, lifting European gas import cost.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67865"
+    },
+    {
+      "headline": "Global LNG trade hit record 56.3 Bcf/d in 2025; US exports driving growth",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Record US LNG capacity expansion increases supply optionality to Europe. If Middle East disruptions persist, EU may capture more US cargoes; competitive TTF pricing relief vs. geopolitical risk upside.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67864"
+    }
+  ],
+  "watchlist": [
+    "EU ETS reform vote (Parliament/Council); outcome determines carbon floor and fuel-switch incentive.",
+    "Russia oil sanctions final deadline end-July; price cap agreement or cap ratchet up.",
+    "France nuclear return date as heat wave subsides; supply restoration risk to Day-Ahead spread.",
+    "Iran-Hormuz military escalation or de-escalation; crude price trajectory into August heating."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
