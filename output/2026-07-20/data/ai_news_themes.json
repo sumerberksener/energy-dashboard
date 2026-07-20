@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran-US conflict disrupts Strait of Hormuz; EU loosens ETS rules amid electrification push; Russia sanctions talks stall.",
+  "themes": [
+    {
+      "headline": "EU loosens carbon market rules, extends industry pollution allowances to 2040s",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "Lower EUA scarcity risk; weakens fuel-switch incentive from coal to gas. Reduces embedded carbon cost for power generators, pressuring forward spreads and Cal+1 power prices.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-loosens-carbon-market-rules-to-allow-industry-to-pollute-for-longer/"
+    },
+    {
+      "headline": "EU aims to double electricity use by 2040, no binding ETS target",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Long-term demand signal supports power curve and renewable investment thesis. Non-binding ETS target reduces near-term carbon cost support; mixed signal for near-month power.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-sets-46-electrification-target-in-push-to-slash-fossil-fuel-dependence/"
+    },
+    {
+      "headline": "Strait of Hormuz disruptions continue; two-thirds normal traffic flows",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Persistent Middle East supply risk keeps Brent elevated, raising power-plant fuel costs. Oil-to-gas switching incentive supports TTF arb margins and near-term power spreads vs. coal.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/19/chris-wright-strait-hormuz-iran-01004359"
+    },
+    {
+      "headline": "EU fails to reach Russia oil price-cap deal; reconvenes next week",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Unresolved sanctions framework adds Brent volatility; if cap rises end-July, crude rallies, boosting power-plant OCGT incentive. Indirect TTF support if crude spike forces fuel-switching.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-russia-oil-price-cap-sanctions-delayed/"
+    },
+    {
+      "headline": "Global LNG trade volumes hit record 56.3 Bcf/d in 2025; US capacity expansion",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher LNG supply dampens TTF via improved global arbitrage. Reduces European gas scarcity premium; lowers gas-fired generation cost and power prices, pressuring Cal+1 spreads.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67864"
+    }
+  ],
+  "watchlist": [
+    "EU Parliament, member-state feedback on ETS loosening; negotiate final rule by end-Q3",
+    "Russia sanctions reconvene next week (late July); oil price-cap ratchet decision",
+    "Iran-US Strait of Hormuz de-escalation watch; Trump Hormuz fee policy clarity",
+    "Q3 EU power auctions; monitor electrification target impact on 2027–2028 capacity"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

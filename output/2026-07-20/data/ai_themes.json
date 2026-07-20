@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU extends free pollution allowances for industry to 2040s amid electrification push; ETS scarcity relief.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Extended free allocation reduces carbon cost embedded in power generators' merit-order calculation; dampens fuel-switch incentive and compresses Cal+1 power spreads 2\u20134% over months."
+  },
+  "freshness_caveat": "Coal data stale (206 days, as of 2025-12-26) and Clean Dark stale (201 days, as of 2025-12-31) \u2014 thermal merit-order moves post-year-end unmeasured; impact immaterial to intraday but limits seasonal fuel-switch granularity.",
+  "risk_flags": [
+    "Coal data stale (206 days old, 2025-12-26); Clean Dark stale (201 days, 2025-12-31) \u2014 thermal merit-order moves unmeasured post-year-end.",
+    "Storage 15.5 pp below seasonal norm at 53.67% \u2014 refill pace this summer will set H2 gas risk and power/coal switching regime.",
+    "Strait of Hormuz two-thirds capacity; Brent elevation supports OCGT call and TTF arb, but EU oil-cap sanctions unresolved (next week negotiation) \u2014 binary Brent move risk \u00b15\u20138%.",
+    "ETS rule-loosening extends industry free allowances to 2040s \u2014 embedded carbon cost falls, dampening fuel-switch urgency and pressuring Cal+1 power 2\u20133% lower over weeks."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11\u20132%",
+      "summary": "GB power remains elevated on Hormuz risk and renewables dip; ETS loosening gradual bearish drift.",
+      "ttf_pct": "+2\u20134%"
+    },
+    "downside": {
+      "de_power_pct": "\u22128\u201312%",
+      "summary": "Hormuz traffic normalizes; ETS loosening accelerates; record LNG supply arbs to TTF; demand softens.",
+      "ttf_pct": "\u22126\u201310%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+10\u201315%",
+      "summary": "Hormuz escalation forces OCGT dispatch surge; EU oil price-cap talks collapse, Brent +7\u201310%.",
+      "ttf_pct": "+8\u201312%"
+    }
+  },
+  "themes": [
+    "Geopolitical oil premium lifts power fuel costs",
+    "ETS loosening weakens carbon scarcity; bearish curve",
+    "Renewables at 92nd-percentile compress DA; storage 15.5 pp below seasonal",
+    "GB-DE spread sustained on island isolation and demand"
+  ],
+  "top_drivers": [
+    "Hormuz supply curtailment (two-thirds capacity) keeps Brent elevated and OCGT profitable; TTF arb margin sustained.",
+    "Renewables at 92nd-percentile (68.66% of load) compress DA power; GB isolation (98th-percentile) reflects island wind outages and demand inelasticity.",
+    "ETS loosening (extended free allowances to 2040s) removes carbon scarcity signal; Cal+1 power spreads under structural downward pressure despite thermal strength.",
+    "Storage 15.5 pp below seasonal (53.67% full) will constrain summer refill; H2 gas risk front-loaded if no Hormuz de-escalation or demand softening."
+  ],
+  "top_takeaway": "GB Power at 98th-percentile on Hormuz supply risk and renewables pullback; Clean Spark at 93rd-percentile signals sustained thermal tension despite loose ETS policy.",
+  "watchlist": [
+    {
+      "metric": "Strait of Hormuz traffic normalization",
+      "why": "Two-thirds flow rate; any escalation reopens 5\u201310% Brent upside; OCGT and TTF arb transmission direct."
+    },
+    {
+      "metric": "EU Russia oil price-cap negotiation (next week)",
+      "why": "If cap rises, Brent +5\u20138%; power-plant fuel cost spikes. If stalls, volatility persists and TTF upside risk stretches."
+    },
+    {
+      "metric": "ETS rule finalization (end-Q3 target)",
+      "why": "Free allocation extension to 2040s reduces carbon cost embedded in power merit order; Cal+1 spreads compress 2\u20134% on lower fossil dispatch incentive."
+    },
+    {
+      "metric": "EU storage refill pace (July\u2013Aug)",
+      "why": "At 53.67% and 15.5 pp below seasonal; slow refill = tight H2 gas regime, reversing LNG dampening and supporting TTF upside Oct-onwards."
+    },
+    {
+      "metric": "Global LNG supply (record 56.3 Bcf/d in 2025)",
+      "why": "US capacity expansion + arbitrage relief dampen TTF; bearish power curve unless Hormuz escalates or European demand surges on electrification."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "end-Jul",
+      "name": "EU Russia oil price-cap ratchet decision",
+      "why": "Outcome determines Brent floor and OCGT call magnitude; 5\u20138% upside or +risk asymmetry."
+    }
+  ]
+}

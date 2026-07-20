@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 98th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; Clean Spark \u2014 93th-percentile of 5-yr range \u2014 historically high.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 206,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 201,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 201,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-07-20",
+      "available": true,
+      "daily_change_abs": 97.16,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.96,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 40.34,
+      "monthly_change_abs": -2.62,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 93.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 5.27
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 206,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-07-20",
+      "available": true,
+      "daily_change_pct": 138.46,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.54,
+      "headline": "outsized daily move (+138.46%, 2.8\u03c3)",
+      "is_stale": false,
+      "latest": 167.33,
+      "monthly_change_pct": 19.29,
+      "name": "DE Power",
+      "percentile_rank_5y": 83.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 12.95
+    },
+    "eua": {
+      "as_of": "2026-07-17",
+      "available": true,
+      "daily_change_pct": 0.33,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.37,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.15,
+      "monthly_change_pct": -1.28,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 38.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.08
+    },
+    "gb_power": {
+      "as_of": "2026-07-20",
+      "available": true,
+      "daily_change_pct": 59.79,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.98,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 145.33,
+      "monthly_change_pct": 13.07,
+      "name": "GB Power",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.8
+    },
+    "renewable_share": {
+      "as_of": "2026-07-19",
+      "available": true,
+      "daily_change_pct": -0.75,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.01,
+      "headline": "92th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 68.66,
+      "monthly_change_pct": 26.73,
+      "name": "Renewables",
+      "percentile_rank_5y": 92.0,
+      "unit": "% of load",
+      "weekly_change_pct": -0.35
+    },
+    "storage": {
+      "as_of": "2026-07-18",
+      "available": true,
+      "daily_change_pct": 0.56,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.61,
+      "headline": "15.5 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 53.67,
+      "monthly_change_pct": 11.0,
+      "name": "EU Storage",
+      "percentile_rank_5y": 27.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.43
+    },
+    "ttf": {
+      "as_of": "2026-07-17",
+      "available": true,
+      "daily_change_pct": 4.76,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.62,
+      "headline": "extended 2.6\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 57.4,
+      "monthly_change_pct": 37.41,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 72.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 13.54
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Iran-US conflict disrupts Strait of Hormuz; EU loosens ETS rules amid electrification push; Russia sanctions talks stall.",
+    "themes": [
+      {
+        "commodity": "carbon",
+        "headline": "EU loosens carbon market rules, extends industry pollution allowances to 2040s",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-loosens-carbon-market-rules-to-allow-industry-to-pollute-for-longer/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Lower EUA scarcity risk; weakens fuel-switch incentive from coal to gas. Reduces embedded carbon cost for power generators, pressuring forward spreads and Cal+1 power prices."
+      },
+      {
+        "commodity": "power",
+        "headline": "EU aims to double electricity use by 2040, no binding ETS target",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-sets-46-electrification-target-in-push-to-slash-fossil-fuel-dependence/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Long-term demand signal supports power curve and renewable investment thesis. Non-binding ETS target reduces near-term carbon cost support; mixed signal for near-month power."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Strait of Hormuz disruptions continue; two-thirds normal traffic flows",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/07/19/chris-wright-strait-hormuz-iran-01004359",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Persistent Middle East supply risk keeps Brent elevated, raising power-plant fuel costs. Oil-to-gas switching incentive supports TTF arb margins and near-term power spreads vs. coal."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU fails to reach Russia oil price-cap deal; reconvenes next week",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-russia-oil-price-cap-sanctions-delayed/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Unresolved sanctions framework adds Brent volatility; if cap rises end-July, crude rallies, boosting power-plant OCGT incentive. Indirect TTF support if crude spike forces fuel-switching."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Global LNG trade volumes hit record 56.3 Bcf/d in 2025; US capacity expansion",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67864",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Higher LNG supply dampens TTF via improved global arbitrage. Reduces European gas scarcity premium; lowers gas-fired generation cost and power prices, pressuring Cal+1 spreads."
+      }
+    ],
+    "watchlist": [
+      "EU Parliament, member-state feedback on ETS loosening; negotiate final rule by end-Q3",
+      "Russia sanctions reconvene next week (late July); oil price-cap ratchet decision",
+      "Iran-US Strait of Hormuz de-escalation watch; Trump Hormuz fee policy clarity",
+      "Q3 EU power auctions; monitor electrification target impact on 2027\u20132028 capacity"
+    ]
+  }
+}
