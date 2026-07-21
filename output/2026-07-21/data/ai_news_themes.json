@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU carbon market reform debate intensifies; Iran-Hormuz tensions sustain crude volatility; Russia sanctions stalled on price-cap disagreement.",
+  "themes": [
+    {
+      "headline": "EU loosens ETS rules, allowing industry to pollute into 2040s",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "Looser EUA scarcity regime reduces carbon compliance costs for power generators and industrial fuel-switchers, pressuring EUA forward curve and power spreads via lower abatement incentive.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-loosens-carbon-market-rules-to-allow-industry-to-pollute-for-longer/"
+    },
+    {
+      "headline": "EU Commission proposes methane rules; oil/gas warn of supply shock",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "If enforced, methane rules could reduce Russian/non-EU gas supply into Europe or raise LNG import costs; TTF upside risk if compliance capex is passed through or exports curtailed.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-bets-fossil-fuel-lobby-is-crying-wolf-over-supply-shock-warnings/"
+    },
+    {
+      "headline": "EU sanctions talks on Russian crude price cap stall; resumed next week",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Delayed price-cap agreement raises tail risk of sudden ratchet-up in Urals crude cost; affects EU power generation fuel mix via HFO/gasoil burn margin and indirect gas substitution pressure.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-russia-oil-price-cap-sanctions-delayed/"
+    },
+    {
+      "headline": "Iran-Hormuz tensions persist; two-thirds normal tanker traffic flows",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Continued Middle East disruption sustains elevated crude prices and geopolitical risk premium; tightens oil-gas arb, favoring gas-to-power switching and TTF upside bias.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/14/iran-war-strait-hormuz-00997750"
+    },
+    {
+      "headline": "Global LNG trade hit record 56.3 Bcf/d in 2025 on US capacity expansion",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Rising US LNG supply boosts European import optionality and raises spot LNG-TTF convergence risk, putting downward pressure on North-West European gas prices and coal-to-gas switching margins.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67864"
+    }
+  ],
+  "watchlist": [
+    "EU ETS / carbon market reform trilogue: Parliament vs. Council negotiations on stringency and phase-out timeline.",
+    "Russia crude price cap decision (end July): outcome will signal sanctions escalation or de-escalation trajectory.",
+    "Iran-Hormuz conflict: monitor for blockade escalation or diplomatic breakthrough affecting Brent-WTI and HFO burn.",
+    "UK-EU energy reset post-reshuffle: track new minister's approach to electricity interconnections and NI protocol trade."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

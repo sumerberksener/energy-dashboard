@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU loosens ETS rules, allowing industry longer free allocation through 2040s; trilogue negotiations on stringency ongoing.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Reduced EUA scarcity via extended free allocation lowers fossil-power generation's carbon compliance cost, depressing merit-order abatement incentive and coal-to-gas switching margin."
+  },
+  "freshness_caveat": "Coal (207 days old, as of 2025-12-26) and Clean Dark (202 days old, as of 2025-12-31) are stale; fuel-mix merit-order claims lack current coal/gas parity. Use cautiously in spread analysis.",
+  "risk_flags": [
+    "GB Power 160.85 EUR/MWh (99th pctile) \u2014 13.86% daily move suggests capacity/import shock; watch GB interconnector and renewable forecast.",
+    "EU Storage 15.5 pp below seasonal at 54% full (28th pctile) \u2014 refill pace into Aug\u2013Sep will set H2 power baseload risk; TTF upside if demand shocks north.",
+    "Coal stale (207 days old, 7th pctile at 96 USD/t) \u2014 merit order now gas-centric; coal price reset needed for fuel-mix credibility.",
+    "Iran-Hormuz tail risk and EU sanctions delay on Russian crude cap (decision end July) could trigger crude spike \u2192 HFO burn \u2192 indirect TTF substitution pressure."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "GB supply tightens, TTF holds premium on storage deficit; EUA drifts lower on reform oversupply signal.",
+      "ttf_pct": "+2\u20134%"
+    },
+    "downside": {
+      "de_power_pct": "\u20133\u20136%",
+      "summary": "US LNG supply surge + cooler forecast weakens demand; EU storage refill accelerates. TTF \u20135\u20138%, DE Power \u20133\u20136%.",
+      "ttf_pct": "\u20135\u20138%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+5\u20138%",
+      "summary": "Iran-Hormuz escalation or EU sanctions ratchet tightens crude; HFO burn lifts gas arb; GB capacity shock deepens. TTF +8\u201312%, DE Power +5\u20138%.",
+      "ttf_pct": "+8\u201312%"
+    }
+  },
+  "themes": [
+    "GB power spike vs coal collapse \u2014 fuel-switch regime inverted",
+    "TTF extended above trend; storage deficit and geopolitical risk sustaining premium",
+    "EU carbon reform loosens scarcity, bearish power spreads",
+    "US LNG record exports pressure spot-forward convergence"
+  ],
+  "top_drivers": [
+    "GB Power spike to 99th pctile (160.85 EUR/MWh, +13.86% daily) \u2014 capacity tightness, renewable dip, or import constraint dominating spreads.",
+    "TTF extended +2.7\u03c3 above 50d trend (58.74 EUR/MWh, +40.15% monthly) \u2014 Iran-Hormuz geopolitical premium and EU storage deficit (15.5 pp below seasonal) sustaining gas upside bias.",
+    "EU carbon reform loosens ETS scarcity through 2040s \u2014 bearish power spreads via lower abatement cost; coal-to-gas switch incentive collapsing.",
+    "US LNG record export surge (56.3 Bcf/d in 2025) \u2014 raises spot LNG optionality for Europe, convergence risk to TTF front-month, bearish pressure if supply glut."
+  ],
+  "top_takeaway": "GB Power at 99th percentile amid tight EU storage (15.5 pp below seasonal); TTF extended +2.7\u03c3 on Iran-Hormuz premium, EU carbon reform bearish, US LNG supply upside risk.",
+  "watchlist": [
+    {
+      "metric": "GB Power interconnector / renewable shortfall",
+      "why": "GB at 99th pctile with 13.86% daily spike suggests supply tightness or import constraint; monitor wind forecast and cross-channel flows."
+    },
+    {
+      "metric": "EU Storage refill trajectory (Jul\u2013Aug)",
+      "why": "Currently 15.5 pp below seasonal; pace of withdrawal or injection will signal H2 demand-supply tightness and TTF curve shape through winter."
+    },
+    {
+      "metric": "EU sanctions decision on Russian crude price cap",
+      "why": "Delayed until end July; outcome signals escalation or de-escalation and affects HFO/gasoil burn margin and indirect gas substitution pressure."
+    },
+    {
+      "metric": "US LNG export growth and spot-forward LNG-TTF arb",
+      "why": "Record 56.3 Bcf/d in 2025 raises European import optionality; LNG-TTF convergence risk pressures front-month TTF and extends downside bias if US supply surge."
+    },
+    {
+      "metric": "EUA forward curve post-reform",
+      "why": "EU loosens ETS rules for longer free allocation through 2040s; bearish scarcity narrative reduces abatement incentive and pressures power spreads via lower carbon cost."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Jul",
+      "name": "EU Russia crude price-cap decision",
+      "why": "Sanctions outcome signals escalation trajectory; affects Brent, HFO burn, and indirect TTF substitution pressure."
+    }
+  ]
+}
