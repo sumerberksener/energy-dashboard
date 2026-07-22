@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU Commission extends industry free pollution allowances to 2040s; loosens carbon market scarcity narrative and fuel-switch incentives.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Weaker EUA scarcity reduces gas-vs-coal merit-order spread; compressed clean-dark margin lowers power-plant fuel-switch call on thermal dispatch."
+  },
+  "freshness_caveat": "Coal data stale (208 days old, as of 2025-12-26); Clean Dark stale (203 days old, as of 2025-12-31). Current coal price (96 USD/t, 7th-percentile) and clean-dark spread (27.95 EUR/MWh, 48th-percentile) used for trend, but intraday moves unreliable. TTF, GB Power, DE Power, EUA, renewables, and storage current as of 2026-07-21/22.",
+  "risk_flags": [
+    "Storage at 54.2% (28th-percentile, \u221215.5pp vs 5-yr seasonal) \u2014 refill pace critical for H2 power and gas curve shape through October.",
+    "GB power at 149.93 EUR/MWh (99th-percentile) \u2014 premium may reflect Irish wind forecast or interconnector constraint; watch for mean reversion if renewables recover.",
+    "TTF at 59.66 (73rd-percentile, +2.6\u03c3 above 50d trend) \u2014 Hormuz risk priced in; LNG supply growth (56.3 Bcf/d record) and weakening EU carbon narrative create downside tail to Cal+1.",
+    "EU carbon loosening extends free allocations to 2040s \u2014 fuel-switch margin compressed; coal (96 USD/t, 7th-percentile) signals weak merit-order call despite gas premium."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Hormuz premium persists; storage refill steady; EU carbon policy drift. TTF holds 58\u201361 range; DE power 150\u2013160.",
+      "ttf_pct": "+2\u20134%"
+    },
+    "downside": {
+      "de_power_pct": "\u221210\u201315%",
+      "summary": "Hormuz de-escalation, Middle East tension eases; record LNG supply quenches arb; EU carbon loosening cements bearish fuel-switch.",
+      "ttf_pct": "\u22128\u201312%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+15\u201320%",
+      "summary": "Hormuz escalation or Strait closing signal; LNG arb widens; storage refill stalls. TTF spike on supply scarcity.",
+      "ttf_pct": "+12\u201318%"
+    }
+  },
+  "themes": [
+    "Geopolitical gas premium (Hormuz, Iran risk) offsetting record LNG supply",
+    "GB power spike vs EU storage 15.5pp-below-seasonal tightens winter demand",
+    "EU carbon policy loosening weakens fuel-switch incentives; coal collapsing (7th-percentile)",
+    "Clean spark elevated (84th-percentile); clean dark stable (48th-percentile)"
+  ],
+  "top_drivers": [
+    "Hormuz geopolitical premium locked into TTF (+2.6\u03c3 above 50d trend); Asian LNG demand and risk-off posture sustain bid.",
+    "EU storage deficit (\u221215.5pp below seasonal) tightens Cal+1 and winter curve; refill pace will determine Sept\u2013Oct power premium.",
+    "EU carbon loosening (2040s allowance extension) weakens fuel-switch narrative; coal at 7th-percentile signals compressed dark-spread merit order despite gas premium.",
+    "Record global LNG (56.3 Bcf/d) and US capacity ramp offer downside tail to TTF if Hormuz risk re-prices lower or winter demand softens."
+  ],
+  "top_takeaway": "GB power at 99th-percentile amid Hormuz premium and storage deficit; TTF extended 2.6\u03c3 on geopolitical tail-risk, but EU carbon loosening and record LNG supply offer downside anchor.",
+  "watchlist": [
+    {
+      "metric": "Strait of Hormuz traffic vs baseline",
+      "why": "Disruption would lift TTF +8\u201315% and tighten Q3\u2013Q4 LNG arb; currently priced at risk-premium but not crisis-level."
+    },
+    {
+      "metric": "EU carbon Parliament/member-state vote on 2040s allowance extension",
+      "why": "Bearish-EUA outcome likely; weakens fuel-switch thesis and cuts power-dispatch upside from clean spark (currently 84th-percentile)."
+    },
+    {
+      "metric": "EU storage refill pace and seasonal catch-up",
+      "why": "At 54.2% (\u221215.5pp), shortfall of ~5\u20137 TWh vs norm; slow refill locks in elevated Cal+1 and winter premium through September."
+    },
+    {
+      "metric": "NATO fuel pipeline (Turkey compromise deadline)",
+      "why": "September deadline adds Q4 geopolitical drag; failure extends infrastructure uncertainty into heating season."
+    },
+    {
+      "metric": "EU methane enforcement timeline and supplier response",
+      "why": "If compliance forces exits, TTF supply shock; low probability but high impact to Cal+1 and 2027 forwards."
+    },
+    {
+      "metric": "US LNG export growth tracking record 56.3 Bcf/d",
+      "why": "Sustained growth dampens LNG-to-TTF arb; bearish for winter Cal+1 if Asian demand softens or supply outpaces demand."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Sep",
+      "name": "NATO fuel pipeline Turkey compromise deadline",
+      "why": "Infrastructure delay extends geopolitical uncertainty into Q4 heating-season gas demand curve."
+    }
+  ]
+}
