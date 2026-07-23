@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 98th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 15.6 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 209,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 204,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 204,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-07-23",
+      "available": true,
+      "daily_change_abs": 53.55,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.42,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 15.38,
+      "monthly_change_abs": 42.3,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 73.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -30.56
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 209,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-07-23",
+      "available": true,
+      "daily_change_pct": 53.64,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.25,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 153.4,
+      "monthly_change_pct": 109.25,
+      "name": "DE Power",
+      "percentile_rank_5y": 80.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -16.01
+    },
+    "eua": {
+      "as_of": "2026-07-22",
+      "available": true,
+      "daily_change_pct": 3.23,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.87,
+      "headline": "extended 2.9\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 35.18,
+      "monthly_change_pct": 3.87,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.14
+    },
+    "gb_power": {
+      "as_of": "2026-07-23",
+      "available": true,
+      "daily_change_pct": -8.95,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.97,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 148.54,
+      "monthly_change_pct": 177.85,
+      "name": "GB Power",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 1.41
+    },
+    "renewable_share": {
+      "as_of": "2026-07-22",
+      "available": true,
+      "daily_change_pct": 29.81,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.66,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 64.09,
+      "monthly_change_pct": 121.81,
+      "name": "Renewables",
+      "percentile_rank_5y": 87.0,
+      "unit": "% of load",
+      "weekly_change_pct": 44.9
+    },
+    "storage": {
+      "as_of": "2026-07-21",
+      "available": true,
+      "daily_change_pct": 0.28,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.6,
+      "headline": "15.6 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 54.38,
+      "monthly_change_pct": 10.71,
+      "name": "EU Storage",
+      "percentile_rank_5y": 28.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.24
+    },
+    "ttf": {
+      "as_of": "2026-07-22",
+      "available": true,
+      "daily_change_pct": 4.82,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.9,
+      "headline": "extended 2.9\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 62.54,
+      "monthly_change_pct": 49.3,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 73.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 13.9
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU Russia sanctions package clinched after Greek concession on gas transit; Middle East escalation raises LNG volatility; geopolitical premium to persist.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Greek concession unlocks EU Russia sanctions, freezes crude price cap",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-countries-clinch-deal-russia-sanctions/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Resolution of EU sanctions deadlock removes policy uncertainty. Gas transit dispute resolution may affect Russian supply routing to EU; crude price cap freeze limits downside pressure on oil-indexed LNG arb into TTF."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Natural gas prices surge as Middle East violence escalates, Hormuz risk",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/natural-gas-prices-surge-as-violence-in-middle-east-flares-again/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Strait of Hormuz disruption risk directly pressures LNG supply to Europe. Traders pricing in permanent instability premium; Asian demand competition tightens global LNG spot, raising TTF forwards via arb channel."
+      },
+      {
+        "commodity": "gas",
+        "headline": "EU methane rules test fossil fuel supply warnings; Commission skeptical",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-bets-fossil-fuel-lobby-is-crying-wolf-over-supply-shock-warnings/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Methane regulations may reduce non-EU gas imports or force exporters to exit EU market. Desk exposure via supply elasticity: if regulation tightens, spot gas tightens and power-gas spread widens; if bluff called, oversupply risk."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "NATO seals \u20ac27B multi-decade military fuel pipeline network overhaul",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/nato-allies-agree-on-e27-billion-revamp-of-military-fuel-network/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "NATO fuel infrastructure modernization reduces European civilian fuel-military competition risk. Long-term capex commitment signals NATO energy security priority; minor upside to refined products and diesel supply stability."
+      },
+      {
+        "commodity": "power",
+        "headline": "Moscow-linked nuclear project in northwest Germany approved after safety review",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/moscow-linked-nuclear-project-in-northwest-germany-to-get-green-light/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "New nuclear capacity in Germany increases non-fossil baseload, reducing day-ahead power spreads and evening out German power curve volatility. Downward pressure on average German DA and Cal+1 forward power prices."
+      }
+    ],
+    "watchlist": [
+      "Middle East Strait of Hormuz disruption escalation; monitor Trump/Iran military actions for LNG supply shocks.",
+      "EU methane regulation implementation timeline and exporter push-back; supply contraction risk to TTF.",
+      "German nuclear project timeline; capacity online date and ramp schedule impact on DA curve.",
+      "Russia sanctions enforcement and gas transit routing changes; indirect impact on European supply diversity."
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "German nuclear project approved post-safety review; new baseload capacity online timeline TBD \u2014 increases non-fossil generation, pressuring German day-ahead and Cal+1 power prices.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "New nuclear baseload reduces fossil dispatch need; merit-order effect displaces gas and coal units, lowering German marginal generation cost and power-linked EUA demand via lower carbon-intensive generation share."
+  },
+  "freshness_caveat": "Coal price data 209 days old (as of 2025-12-26) and clean_dark spread 204 days old (as of 2025-12-31); fuel-switch regime may be masked. Verify with live ICE coal and spreads before trading fuel-switch positions.",
+  "risk_flags": [
+    "GB Power 98th-percentile (148.54 EUR/MWh) \u2014 historical extremity signals supply-side stress or demand surge; watch for interconnector congestion.",
+    "TTF 2.9\u03c3 extended above 50d trend at 62.54 EUR/MWh; Hormuz disruption risk pricing in permanent premium; Asian LNG competition tightens spot.",
+    "EU Storage 54.38% full, 15.6pp below 5-yr seasonal \u2014 refill pace into H2 will govern Q4 power tail risk; insufficient buffer may force demand destruction or LNG spot bids.",
+    "Coal at 7th-percentile (96 USD/t, data 209 days old) \u2014 stale; clean_dark spread neutral but fuel-switch regime may be masked by outdated coal price; verify with latest ICE data."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Geopolitical premium persists; storage refill gradual; GB Power elevated but within historical band.",
+      "ttf_pct": "+0-3%"
+    },
+    "downside": {
+      "de_power_pct": "-3-8%",
+      "summary": "Hormuz reopens or geopolitical tension de-escalates; EU methane regulation bluff called; oversupply relief and storage build accelerates.",
+      "ttf_pct": "-5-10%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+5-12%",
+      "summary": "Hormuz closure or major LNG tanker damage; Middle East escalation spreads; Asian LNG spot surges, tightening EU arb.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Hormuz escalation and geopolitical premium on LNG flows",
+    "EU sanctions finalized; gas transit routing uncertainty persists",
+    "GB Power exceptionally tight; German nuclear approval bearish for DA spreads",
+    "Storage deficit 15.6pp below seasonal; refill pace critical for H2"
+  ],
+  "top_drivers": [
+    "Hormuz escalation and geopolitical LNG premium: TTF 2.9\u03c3 extended, traders pricing permanent instability into forwards via Asian competition and arb channel.",
+    "GB Power at 98th-percentile (148.54 EUR/MWh): supply-side stress or demand surge signalling; interconnector congestion or renewable shortfall risk.",
+    "Storage deficit persistent: EU 54.38% full, 15.6pp below seasonal; refill pace into H2 will govern Q4 power tail risk and demand destruction."
+  ],
+  "top_takeaway": "GB Power at 98th-percentile amid Hormuz escalation and EU sanctions finalized; TTF 2.9\u03c3 extended on geopolitical premium; storage 15.6pp below seasonal raises H2 tightness.",
+  "watchlist": [
+    {
+      "metric": "Hormuz Strait disruption risk",
+      "why": "Direct LNG supply shock to Europe; traders pricing permanent instability premium into TTF forwards via Asian demand competition and arb channel."
+    },
+    {
+      "metric": "EU methane regulations implementation",
+      "why": "May reduce non-EU gas imports or force exporter exits; upside to TTF if supply tightens; downside if regulation bluff called and oversupply emerges."
+    },
+    {
+      "metric": "German nuclear capacity online date",
+      "why": "New baseload capacity increases non-fossil generation, pressuring DE Power DA and Cal+1 forwards; timeline and ramp schedule drive curve shape."
+    },
+    {
+      "metric": "Russia sanctions enforcement and gas transit routing",
+      "why": "Greek concession unlocks sanctions package but gas transit dispute resolution remains fluid; indirect pressure on European supply diversity and TTF arb math."
+    },
+    {
+      "metric": "EU Storage refill pace into H2",
+      "why": "54.38% full, 15.6pp below seasonal average; insufficient refill rate will amplify Q4 power tail risk and demand destruction risk."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "Hormuz escalation or Trump/Iran military action",
+      "why": "LNG supply shock; direct upside to TTF and power spreads; watch for shipping insecurity premium."
+    }
+  ]
+}

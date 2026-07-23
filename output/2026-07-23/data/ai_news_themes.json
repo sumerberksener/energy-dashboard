@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU Russia sanctions package clinched after Greek concession on gas transit; Middle East escalation raises LNG volatility; geopolitical premium to persist.",
+  "themes": [
+    {
+      "headline": "Greek concession unlocks EU Russia sanctions, freezes crude price cap",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Resolution of EU sanctions deadlock removes policy uncertainty. Gas transit dispute resolution may affect Russian supply routing to EU; crude price cap freeze limits downside pressure on oil-indexed LNG arb into TTF.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-countries-clinch-deal-russia-sanctions/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Natural gas prices surge as Middle East violence escalates, Hormuz risk",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Strait of Hormuz disruption risk directly pressures LNG supply to Europe. Traders pricing in permanent instability premium; Asian demand competition tightens global LNG spot, raising TTF forwards via arb channel.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/natural-gas-prices-surge-as-violence-in-middle-east-flares-again/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU methane rules test fossil fuel supply warnings; Commission skeptical",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Methane regulations may reduce non-EU gas imports or force exporters to exit EU market. Desk exposure via supply elasticity: if regulation tightens, spot gas tightens and power-gas spread widens; if bluff called, oversupply risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-bets-fossil-fuel-lobby-is-crying-wolf-over-supply-shock-warnings/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "NATO seals €27B multi-decade military fuel pipeline network overhaul",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "NATO fuel infrastructure modernization reduces European civilian fuel-military competition risk. Long-term capex commitment signals NATO energy security priority; minor upside to refined products and diesel supply stability.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/nato-allies-agree-on-e27-billion-revamp-of-military-fuel-network/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Moscow-linked nuclear project in northwest Germany approved after safety review",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "New nuclear capacity in Germany increases non-fossil baseload, reducing day-ahead power spreads and evening out German power curve volatility. Downward pressure on average German DA and Cal+1 forward power prices.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/moscow-linked-nuclear-project-in-northwest-germany-to-get-green-light/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "Middle East Strait of Hormuz disruption escalation; monitor Trump/Iran military actions for LNG supply shocks.",
+    "EU methane regulation implementation timeline and exporter push-back; supply contraction risk to TTF.",
+    "German nuclear project timeline; capacity online date and ramp schedule impact on DA curve.",
+    "Russia sanctions enforcement and gas transit routing changes; indirect impact on European supply diversity."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
