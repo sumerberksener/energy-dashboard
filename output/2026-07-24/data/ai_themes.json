@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "German nuclear capacity addition (Moscow-linked northwest project) regulatory approval eases power demand; reduces marginal gas-dispatch generation and DA spread pressure.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Lower gas-marginal generation dispatch reduces thermal emissions and EUA demand; DA curve shape flattens, diminishing fuel-switch economics and EUA floor support from power upside."
+  },
+  "freshness_caveat": "Coal (210d stale, as of 2025-12-26) and clean dark (205d stale, as of 2025-12-31) data are outdated. Current directional bias (coal 7th pctile) may not reflect recent moves; use for context only. TTF, GB Power, DE Power, storage, renewable share, and EUA current as of 2026-07-24 / 2026-07-23 (0\u20131 days old).",
+  "risk_flags": [
+    "GB power at 98th pctile (155 EUR/MWh, +5.8% daily) signals acute supply-demand imbalance; winter peak risk asymmetric to upside.",
+    "EU storage 15.7pp below seasonal (54.6% full, 28th pctile) \u2014 refill pace under stress if TTF elevated and LNG diverted by Hormuz premium.",
+    "Coal at 7th pctile (96 USD/t, 210 days stale); clean dark spread 48th pctile. Gas-to-coal margin supports sustained generation, but refill pressure offsets.",
+    "Hormuz escalation + Middle East violence pricing into LNG spot; EU sanctions resolution may unlock Russian flows to third countries, shifting global LNG arb and TTF flow dynamics."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12-4%",
+      "summary": "GB supply tensions persist; TTF holds elevated on storage deficit and LNG arb. DA soft from renewables; Q4 power tracks storage refill pace.",
+      "ttf_pct": "\u00b13-5%"
+    },
+    "downside": {
+      "de_power_pct": "-5-8%",
+      "summary": "Middle East de-escalates; EU sanctions clear Russian supply channels; LNG arb reverses. GB wind normalizes; renewable share falls; demand softens; storage refill eases.",
+      "ttf_pct": "-7-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+6-10%",
+      "summary": "Hormuz escalates or Strait transits disrupted. Asian LNG spot surges; EU refill costs spike; storage premium reasserts. GB wind output falters.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB power extreme tightness vs. EU gas+storage deficit",
+    "Geopolitical LNG supply risk (Hormuz, sanctions clarity)",
+    "Storage refill dynamics under high power+gas demand",
+    "Coal historically depressed (7th pctile); gas in-the-money vs. thermal"
+  ],
+  "top_drivers": [
+    "GB power structural tightness (98th pctile, 155 EUR/MWh) on island supply constraints vs. continent; renewable share volatile week-on-week (+28.6%), indicating weather sensitivity.",
+    "Geopolitical LNG premium from Middle East Hormuz risk and EU sanctions clarity; TTF at 73rd pctile (61.9 EUR/MWh) trading extended 2.5\u03c3 above 50d trend\u2014arbitrage window supports inflows, but storage 15.7pp below seasonal limits upside if demand remains elevated.",
+    "Coal at 7th pctile historically cheap (96 USD/t, stale 210d); clean spark at 89th pctile (31.85 EUR/MWh) confirms gas firmly in-the-money for marginal generation\u2014supports TTF bid and limits coal dispatch upside."
+  ],
+  "top_takeaway": "GB power at 98th percentile (155 EUR/MWh) on tight supply; storage 16pp below seasonal; Hormuz risk and EU sanctions clarity lift TTF\u2014watch refill pace and LNG arbitrage.",
+  "watchlist": [
+    {
+      "metric": "GB-DE power spread",
+      "why": "GB at 98th pctile vs. DE at 83rd; structural island tightness (wind, interconnect, thermal) vs. continental solar+nuclear buffer. 155 EUR/MWh unsustainable if demand softens or interconnect maintenance ends."
+    },
+    {
+      "metric": "TTF arbitrage inflows (LNG)",
+      "why": "Hormuz instability raising Asian spot premiums; EU storage 15.7pp below seasonal means high-cost infill critical. TTF at 73rd pctile (61.9 EUR/MWh, +14.6% weekly); arbitrage window open if Asia LNG spikes further."
+    },
+    {
+      "metric": "EU storage refill trajectory",
+      "why": "28th pctile fill rate (54.6%) at critical juncture. High power+gas prices depress demand; EU sanctions deal may stabilize Russian supply expectations, lowering refill urgency premium."
+    },
+    {
+      "metric": "EUA carbon (-2.87%, 2.5\u03c3 daily move)",
+      "why": "Outlier daily selloff at 34.17 EUR/tCO2 (47th pctile). German nuclear approval bearish-power may be weighing; monitor if DB spreads widen further, lowering marginal-cost dispatch and EUA floor."
+    },
+    {
+      "metric": "Renewable share (62.31%, 85th pctile, +28.6% weekly)",
+      "why": "High wind+solar is suppressing DA pricing in EU; yet GB remains tight, indicating regional decoupling. If renewable forecast swings negative (low wind week ahead), GB premium could spike; DA-QH spread widens."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "EU sanctions implementation timeline",
+      "why": "Politico report\u2014Greek concession clinches deal. Timetable for Russian gas reroute logistics and third-country flow diversion will reset LNG arb expectations and TTF medium-term curve shape."
+    }
+  ]
+}
