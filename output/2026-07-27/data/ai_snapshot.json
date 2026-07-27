@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 15.9 pp below the 5-yr seasonal average; TTF Gas \u2014 extended 2.6\u03c3 above the 50d trend.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 213,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 208,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 208,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-07-27",
+      "available": true,
+      "daily_change_abs": -5.29,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -1.33,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -55.46,
+      "monthly_change_abs": -53.58,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 14.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 0.37
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 213,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-07-27",
+      "available": true,
+      "daily_change_pct": -5.91,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.65,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 84.26,
+      "monthly_change_pct": -14.74,
+      "name": "DE Power",
+      "percentile_rank_5y": 33.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 9.18
+    },
+    "eua": {
+      "as_of": "2026-07-23",
+      "available": true,
+      "daily_change_pct": -2.87,
+      "days_old": 4,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.44,
+      "headline": "outsized daily move (-2.87%, 2.5\u03c3)",
+      "is_stale": false,
+      "latest": 34.17,
+      "monthly_change_pct": 2.64,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.93
+    },
+    "gb_power": {
+      "as_of": "2026-07-27",
+      "available": true,
+      "daily_change_pct": 31.63,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.62,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 98.97,
+      "monthly_change_pct": 20.82,
+      "name": "GB Power",
+      "percentile_rank_5y": 53.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -20.25
+    },
+    "renewable_share": {
+      "as_of": "2026-07-26",
+      "available": true,
+      "daily_change_pct": 1.16,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.2,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 56.5,
+      "monthly_change_pct": -24.07,
+      "name": "Renewables",
+      "percentile_rank_5y": 78.0,
+      "unit": "% of load",
+      "weekly_change_pct": -1.02
+    },
+    "storage": {
+      "as_of": "2026-07-25",
+      "available": true,
+      "daily_change_pct": 0.51,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.61,
+      "headline": "15.9 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 55.35,
+      "monthly_change_pct": 10.46,
+      "name": "EU Storage",
+      "percentile_rank_5y": 29.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.13
+    },
+    "ttf": {
+      "as_of": "2026-07-24",
+      "available": true,
+      "daily_change_pct": 2.71,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.58,
+      "headline": "extended 2.6\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 63.58,
+      "monthly_change_pct": 55.53,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 73.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 13.17
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Middle East tensions escalating; EU Russia sanctions framework agreed after Greece concession on gas; Iran conflict threatens Strait of Hormuz LNG flows.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "EU clinches Russia sanctions deal after Greek gas concession",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-countries-clinch-deal-russia-sanctions/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Resolves sanctions stalemate and freezes crude price cap for 12 months. Clarifies EU policy on Russian gas transit; reduces immediate sanctions uncertainty risk to TTF and EU power via gas cost channel."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Natural gas prices surge amid Middle East violence and Strait instability",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/natural-gas-prices-surge-as-violence-in-middle-east-flares-again/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Traders pricing structural Hormuz risk into LNG; direct TTF upside if Asian demand holds and supply disruption persists. EU LNG competition intensifies, raising marginal gas cost and power generation costs."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Mexico's second LNG terminal ships first cargo; adds 0.4 Bcf/d supply",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67884",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "New LNG capacity eases global supply; reduces marginal LNG costs available to NW Europe, weakening TTF bid. Indirect downside to EU power via lower gas-weighted marginal generation cost."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Trump threatens Iran infrastructure strikes; escalates Strait of Hormuz risk",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/07/22/trump-iran-war-infrastructure-strikes-01007558",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Increases probability of Hormuz transit disruption, tightening global LNG supply. EU dependent on spot LNG for marginal gas; escalation raises TTF volatility and peak power risk."
+      },
+      {
+        "commodity": "power",
+        "headline": "Spain's massive forest fires displace 100,000; emergency response strained",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/massive-forest-fires-political-tensions-spain/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Severe weather event; potential near-term demand spike from emergency services and AC load, offset by possible grid disruptions. Spanish DA spreads and Iberian power curve to monitor; minor direct impact vs. macro themes."
+      }
+    ],
+    "watchlist": [
+      "EU Russia sanctions implementation timeline and any further gas transit clarifications.",
+      "Iran\u2013US escalation in Strait of Hormuz; monitor for LNG voyage delays, spot LNG premiums.",
+      "Mexico Energia Costa Azul Phase 2 development; track capacity ramp and NW Europe delivery schedules.",
+      "Spain wildfire recovery impact on nuclear/thermal plant availability and summer load dynamics."
+    ]
+  }
+}

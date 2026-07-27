@@ -1,0 +1,74 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data 213 days stale (as of 2025-12-26); clean dark 208 days stale (as of 2025-12-31)\u2014current thermal merit-order economics unclear. All other metrics current or 0\u20134 days old.",
+  "risk_flags": [
+    "Storage at 55.35% (29th percentile, 15.9pp below seasonal)\u2014refill pace critical; any summer demand spike compounds H2 supply risk.",
+    "Hormuz disruption probability priced into LNG; if escalation materializes, TTF could spike \u00b115-20% and extend storage deficit burden.",
+    "Coal data stale (213 days old, 7th percentile); clean dark spread (27.95 EUR/MWh, 48th pctile) masks true thermal economics under current gas cost.",
+    "GB power +31.6% daily (likely constraint or outage event); widening GB-DE spread if gas-driven TTF strength persists."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "TTF holds 60\u201366 EUR/MWh amid balanced Hormuz risk premium and storage refill momentum; DE power tracks gas-weighted 82\u201388 EUR/MWh.",
+      "ttf_pct": "+2\u20135%"
+    },
+    "downside": {
+      "de_power_pct": "\u22126\u201310%",
+      "summary": "Iran-US tensions de-escalate or Strait access confirmed safe; Mexico LNG ramp accelerates; storage refill exceeds seasonal pace.",
+      "ttf_pct": "\u22128\u201312%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8\u201312%",
+      "summary": "Hormuz closure or major LNG voyage disruption confirmed; TTF spikes on supply shock; storage deficit narrative intensifies.",
+      "ttf_pct": "+12\u201318%"
+    }
+  },
+  "themes": [
+    "Geopolitical LNG supply risk (Hormuz, Iran-US escalation)",
+    "EU storage deficit vs. seasonal norm",
+    "TTF structural strength offsetting Mexico new capacity",
+    "GB power spike (31.6% daily gain) vs. continent weakness"
+  ],
+  "top_drivers": [
+    "Hormuz geopolitical premium: TTF 73rd percentile (63.58 EUR/MWh) anchored by Iran-US escalation risk and LNG supply tightness.",
+    "Storage deficit: EU at 55.35% full, 15.9pp below seasonal; storage injection pace will gate H2 demand upside and set thermal backup risk.",
+    "Mexico new supply (0.4 Bcf/d) partially offsets geopolitical premium but lagged delivery timeline limits immediate relief."
+  ],
+  "top_takeaway": "TTF extended 2.6\u03c3 above 50d trend amid Hormuz escalation fears; EU storage 15.9pp below seasonal average supports gas rally despite Mexico LNG supply relief.",
+  "watchlist": [
+    {
+      "metric": "Hormuz transit risk / Iran-US escalation",
+      "why": "Trump infrastructure strike threats are live; any confirmed closure or LNG voyage delay would lift TTF \u00b110-15% and tighten EU gas scarcity narrative."
+    },
+    {
+      "metric": "EU storage refill pace (daily cadence)",
+      "why": "At 15.9pp seasonal deficit; summer cooling demand could stall injection\u2014every 1pp shortfall extends H2 risk premium by ~1-2 EUR/MWh."
+    },
+    {
+      "metric": "Mexico Energia Costa Azul Phase 2 ramp (0.4 Bcf/d new)",
+      "why": "Structural bearish for TTF but lagged 2-3 months from first cargo; watch delivery calendar to European terminals for spot LNG price relief timing."
+    },
+    {
+      "metric": "GB-DE power spread (GB 98.97 EUR/MWh vs. DE 84.26)",
+      "why": "GB spike (+31.6% daily) suggests supply event; if GB-driven, spread widens; if continent-wide gas cost, DE power follows and spread normalizes."
+    },
+    {
+      "metric": "Spain wildfire recovery & thermal/nuclear availability",
+      "why": "Iberian generation mix exposure; localized impact but monitor for any spillover to DA pricing or emergency demand from emergency response."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "ongoing",
+      "name": "EU Russia sanctions implementation",
+      "why": "Crude cap frozen 12mo; gas transit policy clarity reduces near-term policy shock risk but geopolitical tail remains."
+    },
+    {
+      "day_label": "ongoing",
+      "name": "Strait of Hormuz LNG voyage tracking",
+      "why": "Real-time escalation monitor; any confirmed delay lifts global LNG premium and EU marginal cost immediately."
+    }
+  ]
+}

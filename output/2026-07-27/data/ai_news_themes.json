@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Middle East tensions escalating; EU Russia sanctions framework agreed after Greece concession on gas; Iran conflict threatens Strait of Hormuz LNG flows.",
+  "themes": [
+    {
+      "headline": "EU clinches Russia sanctions deal after Greek gas concession",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Resolves sanctions stalemate and freezes crude price cap for 12 months. Clarifies EU policy on Russian gas transit; reduces immediate sanctions uncertainty risk to TTF and EU power via gas cost channel.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-countries-clinch-deal-russia-sanctions/"
+    },
+    {
+      "headline": "Natural gas prices surge amid Middle East violence and Strait instability",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Traders pricing structural Hormuz risk into LNG; direct TTF upside if Asian demand holds and supply disruption persists. EU LNG competition intensifies, raising marginal gas cost and power generation costs.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/natural-gas-prices-surge-as-violence-in-middle-east-flares-again/"
+    },
+    {
+      "headline": "Mexico's second LNG terminal ships first cargo; adds 0.4 Bcf/d supply",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "New LNG capacity eases global supply; reduces marginal LNG costs available to NW Europe, weakening TTF bid. Indirect downside to EU power via lower gas-weighted marginal generation cost.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67884"
+    },
+    {
+      "headline": "Trump threatens Iran infrastructure strikes; escalates Strait of Hormuz risk",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Increases probability of Hormuz transit disruption, tightening global LNG supply. EU dependent on spot LNG for marginal gas; escalation raises TTF volatility and peak power risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/22/trump-iran-war-infrastructure-strikes-01007558"
+    },
+    {
+      "headline": "Spain's massive forest fires displace 100,000; emergency response strained",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "neutral",
+      "why_it_matters": "Severe weather event; potential near-term demand spike from emergency services and AC load, offset by possible grid disruptions. Spanish DA spreads and Iberian power curve to monitor; minor direct impact vs. macro themes.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/massive-forest-fires-political-tensions-spain/"
+    }
+  ],
+  "watchlist": [
+    "EU Russia sanctions implementation timeline and any further gas transit clarifications.",
+    "Iran–US escalation in Strait of Hormuz; monitor for LNG voyage delays, spot LNG premiums.",
+    "Mexico Energia Costa Azul Phase 2 development; track capacity ramp and NW Europe delivery schedules.",
+    "Spain wildfire recovery impact on nuclear/thermal plant availability and summer load dynamics."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
