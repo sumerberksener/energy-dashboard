@@ -1,0 +1,66 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (216 days old, as of 2025-12-26) and Clean Dark (211 days old, as of 2025-12-31) are stale; fuel-switch merit-order and coal-gas arb visibility impaired. TTF, GB Power, DE Power, EUA, storage, renewable share current as of 2026-07-29 to 2026-07-30.",
+  "risk_flags": [
+    "GB Power at 96th pctile (+12.19% weekly) signals tight GB-DE spread; monitor demand/wind forecasts for flash-premium reversal.",
+    "EU Storage at 56.15% (31st pctile, 16 pp below seasonal) \u2014 refill pace critical for H2 power curve; storage stress could sustain TTF +40% monthly move.",
+    "Spain wildfire (100k+ displaced) threatens Iberian thermal and hydro assets; grid stability risk and emergency demand could spike DA spreads this week.",
+    "Coal data stale (216 days old, 7th pctile at 96 USD/t) \u2014 merit-order fuel-switch regime opaque; clean-dark also stale (211 days) limits coal-gas arb visibility."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "GB Power remains elevated on storage stress; TTF stable near 60.42 EUR/MWh with sanctions risk priced; Spanish heatwave contained.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-2-4%",
+      "summary": "EU Russia sanctions implementation timeline slips; NATO fuel infrastructure funding reallocated; Mexico LNG ramp accelerates, TTF arb widens.",
+      "ttf_pct": "-4-7%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+5-8%",
+      "summary": "Spain wildfire spreads to Iberian thermal assets or transmission; emergency demand spike and generation loss support GB-DE power rally.",
+      "ttf_pct": "+3-5%"
+    }
+  },
+  "themes": [
+    "GB Power extended; storage deficit structural",
+    "TTF rally on sanctions clarity; LNG arb improving",
+    "Spain wildfire risk to Iberian thermal/transmission",
+    "Mexico LNG supply easing global LNG-to-power arb"
+  ],
+  "top_drivers": [
+    "GB Power at 96th percentile: tight GB generation margin (renewable share 48.87%, storage stress) offsetting 4.32% daily decline.",
+    "TTF +4.65% on EU-Russia sanctions resolution and Greek shipping concession; NATO \u20ac27B fuel infrastructure deal supporting geopolitical stability and reducing sanctions-tail premium.",
+    "Mexico LNG second terminal online (0.4 Bcf/d); global LNG oversupply risk moderating EU import arb, supporting lower TTF by weeks ahead.",
+    "EU Storage 16 pp below seasonal (56.15% full): refill pace will anchor H2 power curve; deficit structural unless gas inflows accelerate."
+  ],
+  "top_takeaway": "GB Power at 96th percentile (143.47 EUR/MWh) dominates; EU storage 16 pp below seasonal average; TTF +4.65% on sanctions resolution and NATO infrastructure deal supporting geopolitical stability.",
+  "watchlist": [
+    {
+      "metric": "EU Russia sanctions implementation & LNG shipping exemption scope",
+      "why": "Greek concession unlocks \u20ac27B NATO fuel infrastructure deal; shipping carve-out scope directly affects TTF hedging horizon and sanctions-risk premium on Russian flows."
+    },
+    {
+      "metric": "Spanish wildfire impact on Iberian thermal/hydro generation & grid stability",
+      "why": "100k+ displaced, firefighting gaps reported; thermal asset or transmission line outage could spike DA/Cal+1 spreads and trigger emergency demand surge this week."
+    },
+    {
+      "metric": "Mexico Energia Costa Azul LNG ramp (0.4 Bcf/d first cargo shipped)",
+      "why": "Second Mexican LNG export facility online; monitor weekly cargo schedule and US LNG price drift to signal TTF arb compression and global LNG oversupply risk."
+    },
+    {
+      "metric": "GB Power premium persistence (143.47 EUR/MWh, 96th pctile)",
+      "why": "Weekly -12.19% pullback but still historically elevated; renewable share at 48.87% is mid-range; watch wind/solar forecasts and interconnect capacity for further repricing."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "Spain wildfire impact assessment",
+      "why": "Grid stability and thermal/hydro asset damage risk; demand surge from emergency response could support power spreads."
+    }
+  ]
+}

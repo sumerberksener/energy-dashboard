@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 96th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.0 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 216,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 211,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 211,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-07-30",
+      "available": true,
+      "daily_change_abs": 35.78,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.78,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 29.01,
+      "monthly_change_abs": 17.23,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 87.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 8.56
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 216,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-07-30",
+      "available": true,
+      "daily_change_pct": 28.31,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.46,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 162.16,
+      "monthly_change_pct": 30.55,
+      "name": "DE Power",
+      "percentile_rank_5y": 82.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.6
+    },
+    "eua": {
+      "as_of": "2026-07-29",
+      "available": true,
+      "daily_change_pct": -0.12,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.3,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.44,
+      "monthly_change_pct": 1.0,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 41.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.57
+    },
+    "gb_power": {
+      "as_of": "2026-07-30",
+      "available": true,
+      "daily_change_pct": -4.32,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.75,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 143.47,
+      "monthly_change_pct": 2.64,
+      "name": "GB Power",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -12.19
+    },
+    "renewable_share": {
+      "as_of": "2026-07-29",
+      "available": true,
+      "daily_change_pct": -2.55,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.31,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 48.87,
+      "monthly_change_pct": -29.04,
+      "name": "Renewables",
+      "percentile_rank_5y": 63.0,
+      "unit": "% of load",
+      "weekly_change_pct": 0.32
+    },
+    "storage": {
+      "as_of": "2026-07-28",
+      "available": true,
+      "daily_change_pct": 0.36,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.63,
+      "headline": "16.0 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 56.15,
+      "monthly_change_pct": 10.25,
+      "name": "EU Storage",
+      "percentile_rank_5y": 31.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.26
+    },
+    "ttf": {
+      "as_of": "2026-07-29",
+      "available": true,
+      "daily_change_pct": 4.65,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.78,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 60.42,
+      "monthly_change_pct": 41.95,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 72.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 2.99
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU Russia sanctions package clinched after Greek concession on gas shipping; NATO fuel network overhaul agreed. Strait of Hormuz patrol push meets allied resistance.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Greek gas concession unlocks EU's Russia sanctions package deal",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-countries-clinch-deal-russia-sanctions/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Resolution of shipping Russian gas dispute and 12-month freeze on crude price cap directly affects TTF hedging, sanctions risk premium, and LNG import arbitrage for EU buyers."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "NATO seals \u20ac27B overhaul of Cold War-era fuel network across 32 members",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/nato-allies-agree-on-e27-billion-revamp-of-military-fuel-network/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Multi-decade military fuel infrastructure upgrade affects geopolitical stability and potential energy supply chain resilience; indirect power-grid security implications for NATO allies."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Energia Costa Azul Mexico LNG terminal ships first cargo, adds 0.4 Bcf/d capacity",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67884",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Mexico's second LNG export facility increases global LNG supply, moderating US LNG export prices and improving European LNG import arb economics, supporting lower TTF."
+      },
+      {
+        "commodity": "power",
+        "headline": "Spain wildfires displace 100k+, expose firefighting gaps amid political tensions",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/massive-forest-fires-political-tensions-spain/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Large-scale fires risk Iberian thermal/hydro asset damage, transmission line outages, and grid stability. Demand surge from emergency response and heatwave could support DA/Cal+1 spreads."
+      },
+      {
+        "commodity": "power",
+        "headline": "Trump bans foreign-made robots, power inverters citing Chinese espionage, blackout risks",
+        "horizon": "months",
+        "link": "https://www.politico.com/news/2026/07/28/trump-administration-bans-foreign-made-robots-and-power-gear-amid-fears-of-chinese-influence-01013995",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "US protectionist measures on power gear may disrupt global supply chains for inverters and grid equipment; indirect risk to EU renewable interconnect timelines and infrastructure costs."
+      }
+    ],
+    "watchlist": [
+      "EU Russia sanctions package implementation and LNG shipping exemption scope details.",
+      "Spanish wildfire impact assessment on thermal generation and grid stability this week.",
+      "Mexico LNG ramp-up schedule; monitor weekly cargo export data for TTF arb signals.",
+      "NATO fuel infrastructure rollout timeline; assess strategic reserve implications for EU."
+    ]
+  }
+}
