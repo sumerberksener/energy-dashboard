@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data 217 days old (as of 2025-12-26) and Clean Dark 212 days old (as of 2025-12-31)\u2014both stale; do not rely on coal spread or clean-dark leverage for intraday tactical decisions. TTF, GB Power, DE Power, Clean Spark, renewables, storage, and EUA current as of 2026-07-30 to 2026-07-31.",
+  "risk_flags": [
+    "GB Power 97th-percentile (146.72 EUR/MWh) vs DE 84th-percentile (177.28 EUR/MWh)\u2014GB premium reflects island isolation and wildfire grid stress.",
+    "Storage 16.1 pp below 5-yr seasonal (56.39% full)\u2014refill pace through autumn will govern H2 thermal call and winter curve steepness.",
+    "Spain/France wildfire cascading blackout risk could spike DA spreads 5\u201315% intraday if transmission or generation assets fail.",
+    "Mexico Energia Costa Azul Phase 1 (0.4 Bcf/d) shifts marginal LNG away from NW Europe; TTF winter-curve upside capped despite Hormuz tail risk."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22125% to +3%",
+      "summary": "Wildfire damage contained; GB power normalizes within week; TTF stable on LNG arb balance.",
+      "ttf_pct": "\u22122% to +1%"
+    },
+    "downside": {
+      "de_power_pct": "\u22128% to \u221215%",
+      "summary": "Wildfires contained; Mexico LNG ramp accelerates; Hormuz tensions ease; mild weather forecasts; storage refill disappoints.",
+      "ttf_pct": "\u22125% to \u221212%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+12% to +20%",
+      "summary": "Cascading wildfire blackouts in Spain/France; transmission losses force load shedding; Strait escalation spikes crude and LNG scarcity.",
+      "ttf_pct": "+8% to +15%"
+    }
+  },
+  "themes": [
+    "Wildfire infrastructure damage tightens near-term power balances",
+    "Thermal merit order inverted\u2014coal cheap but spark spread elevated",
+    "Russian sanctions price cap freeze reduces winter LNG arb pressure",
+    "Mexico LNG ramp-up caps TTF upside on Atlantic arbitrage"
+  ],
+  "top_drivers": [
+    "Spanish/French wildfire cascading power outage risk elevates GB premium to 97th-percentile and tightens near-term thermal merit order.",
+    "Coal at 7-percentile lows + storage 16 pp below seasonal norm despite Clean Spark at 95th-percentile\u2014merit order compressed, spark spread inverted on tail-risk premium.",
+    "Russia sanctions price-cap freeze + Mexico LNG Phase 1 supply increase reduces winter TTF upside; geopolitical Hormuz risk partially offset by North American arb flows."
+  ],
+  "top_takeaway": "GB Power at 97th-percentile amid Spanish wildfire grid-damage risk; Clean Spark at 95th-percentile signals tight thermal merit order despite coal at 7th-percentile lows and storage 16 pp below seasonal.",
+  "watchlist": [
+    {
+      "metric": "Spain wildfire grid damage",
+      "why": "Power infrastructure and hydro/wind asset losses could force sustained outages; DA spreads + GB premium vulnerable next 72 hours."
+    },
+    {
+      "metric": "Mexico LNG arbitrage flows",
+      "why": "Energia Costa Azul Phase 1 ramp increases Atlantic LNG supply; TTF winter upside capped unless geopolitical shock diverts cargoes."
+    },
+    {
+      "metric": "Strait of Hormuz escalation",
+      "why": "Unresolved UK/France patrol hesitancy raises crude disruption tail risk; higher Brent could restore fuel-switch margin for gas-fired thermal."
+    },
+    {
+      "metric": "EU storage refill pace",
+      "why": "At 56.39% (31st-percentile), below-seasonal fill through Q3 will drive winter curve repricing; tightness supports calendar spread upside."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "Spain wildfire containment update",
+      "why": "Grid asset damage assessments drive intraday DA volatility and GB power premium duration."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU sanctions on Russian energy tightened (price cap frozen); Strait of Hormuz security tensions rising; Spanish/French wildfires amplify climate/insurance cost risks.",
+  "themes": [
+    {
+      "headline": "Greek concession unlocks EU Russia sanctions; price cap frozen 12 months",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Price cap freeze on Russian crude weakens LNG arbitrage pressure into EU; resolves shipping dispute on Russian gas to third countries—reduces supply-shock risk to TTF winter curve.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-countries-clinch-deal-russia-sanctions/"
+    },
+    {
+      "headline": "Spanish wildfires 20× more likely due to climate change; 100k+ displaced",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Massive fires in Spain/France risk damage to power infrastructure, hydro/wind assets, and grid stability. Cascading blackout risk + forced outages tighten near-term power balances; DA spreads vulnerable.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/climate-change-spain-france-fire-likely/"
+    },
+    {
+      "headline": "Mexico's Energia Costa Azul LNG terminal ships first Phase 1 cargo",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "New 0.4 Bcf/d LNG supply into Atlantic basin increases arbitrage pressure on EU TTF; marginal LNG cargoes diverted to US/Mexico rather than NW Europe caps upside risk on winter curve.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67884"
+    },
+    {
+      "headline": "Trump bans foreign-made robots, power inverters; cites Chinese influence risk",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "US supply-chain restrictions on power inverters/grid gear may disrupt European grid modernization, renewables curtailment control, and carbon market credibility if grid resilience worsens. Indirect EUA pressure.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/07/28/trump-administration-bans-foreign-made-robots-and-power-gear-amid-fears-of-chinese-influence-01013995"
+    },
+    {
+      "headline": "Trump urges UK/France lead Strait of Hormuz patrol; allies hesitant",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Strait tensions unresolved; potential for oil supply disruption increases implied LNG scarcity risk. Higher crude → fuel-switching fuel cost advantage erodes, supporting power prices via gas-power substitution.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/07/28/iran-us-strait-ofhormuz-allies-patrol-01013659"
+    }
+  ],
+  "watchlist": [
+    "Spain wildfire containment & power asset damage assessments (next 3–5 days).",
+    "EU LNG arbitrage flows; Mexico Energia Costa Azul ramp-up impact on TTF (weeks).",
+    "Strait of Hormuz escalation; crude price/LNG arb risk (ongoing).",
+    "France presidential election & energy policy shifts; ministry stability (Q4 2026–2027)."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
