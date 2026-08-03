@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.3 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 220,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 215,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 215,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-03",
+      "available": true,
+      "daily_change_abs": 41.74,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.42,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 15.76,
+      "monthly_change_abs": 11.57,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 73.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 31.33
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 220,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-03",
+      "available": true,
+      "daily_change_pct": 39.91,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.02,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 146.32,
+      "monthly_change_pct": 22.85,
+      "name": "DE Power",
+      "percentile_rank_5y": 78.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 27.59
+    },
+    "eua": {
+      "as_of": "2026-07-31",
+      "available": true,
+      "daily_change_pct": 0.24,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.73,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.75,
+      "monthly_change_pct": 2.12,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 45.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -2.04
+    },
+    "gb_power": {
+      "as_of": "2026-08-03",
+      "available": true,
+      "daily_change_pct": -12.33,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.32,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 134.06,
+      "monthly_change_pct": 4.67,
+      "name": "GB Power",
+      "percentile_rank_5y": 90.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 29.12
+    },
+    "renewable_share": {
+      "as_of": "2026-08-02",
+      "available": true,
+      "daily_change_pct": 19.11,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.09,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 51.62,
+      "monthly_change_pct": -19.22,
+      "name": "Renewables",
+      "percentile_rank_5y": 69.0,
+      "unit": "% of load",
+      "weekly_change_pct": -16.56
+    },
+    "storage": {
+      "as_of": "2026-08-01",
+      "available": true,
+      "daily_change_pct": 0.4,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.64,
+      "headline": "16.3 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 57.11,
+      "monthly_change_pct": 9.97,
+      "name": "EU Storage",
+      "percentile_rank_5y": 32.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.23
+    },
+    "ttf": {
+      "as_of": "2026-07-31",
+      "available": true,
+      "daily_change_pct": 1.53,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.45,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 59.07,
+      "monthly_change_pct": 38.08,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 72.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -4.16
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Hungary nuclear outage amid Danube drought; escalating EU summer wildfire risk; Strait of Hormuz tensions persist but lack allied coalition support.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "Hungary loses 40% power supply as drought shuts Paks nuclear plant",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Paks outage removes ~1.9 GW baseload from Central Europe, forcing Hungary to import power and tighten regional margins. Direct upward pressure on DA/intraday spreads and Central EU hub pricing (HUPX, PXE)."
+      },
+      {
+        "commodity": "power",
+        "headline": "Spanish and French wildfires disrupt generation and transmission infrastructure",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/massive-forest-fires-political-tensions-spain/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Wildfires threaten thermal and hydro generation, constrain transmission corridors, and elevate forced outage risk across Iberia. Drought also pressures hydro margins. Bullish for SW EU power and TTF spreads."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Danube drought persists; cascading risk to nuclear and river transport capacity",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Low water levels threaten Paks and other central/eastern EU nuclear plants' cooling capacity, and impair coal/fuel delivery by barge. Reduces generation flexibility, tightens reserve margins, supports power and fuel switching to gas."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Strait of Hormuz tensions persist; US seeks coalition but allies hesitate",
+        "horizon": "months",
+        "link": "https://www.politico.com/news/2026/07/28/iran-us-strait-ofhormuz-allies-patrol-01013659?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Unresolved Strait security risk sustains crude price premium and indirectly affects EU LNG arb economics. Lower allied commitment reduces short-term intervention credibility, but flows remain disrupted. Monitor for impact on Med/NW LNG diversion."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Mexico's second LNG terminal (Energia Costa Azul) ships first cargo",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67884",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "New 0.4 Bcf/d LNG export capacity increases North American supply elasticity, softening US Henry Hub and reducing arbitrage incentive to divert US cargoes to Europe. Indirect downward pressure on TTF via lower LNG premiums."
+      }
+    ],
+    "watchlist": [
+      "Danube water levels and Paks cooling capacity updates; scope of Hungarian demand-side response.",
+      "Spain/France wildfire perimeter; thermal plant outages and transmission line status.",
+      "Strait of Hormuz escalation; any hardening of naval patrols or renewed shipping disruptions.",
+      "Mexico LNG ramp-up schedule; US Gulf Coast export margins and reloading patterns to NW Europe."
+    ]
+  }
+}

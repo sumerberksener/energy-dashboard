@@ -1,0 +1,68 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data (96 USD/t) is 220 days stale (as of 2025-12-26); Clean Dark (27.95 EUR/MWh) is 215 days stale (as of 2025-12-31). Current analysis uses fresh power, gas, storage, and renewable data (as of 2026-08-01 to 2026-08-03) but coal-based merit order shifts should be treated with caution.",
+  "risk_flags": [
+    "Paks 1.9 GW baseload loss forces Hungarian imports; HUPX/PXE spreads at risk of sharp widening.",
+    "EU storage at 57.1% (32nd pctile, 16.3 pp below seasonal) limits flexibility for summer heat or supply shocks.",
+    "Spain/France wildfire threat to Iberian thermal and hydro generation; transmission corridor risk high.",
+    "DE Power at 78th pctile (146.32 EUR/MWh) and GB Power at 90th pctile (134.06 EUR/MWh) indicate tightness; coal at 7th pctile (96 USD/t) may not support further thermal dispatch."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b13-5% (tracks elevated thermal merit order)",
+      "summary": "Paks offline, storage deficit managed; power remains elevated (DE 140\u2013150, GB 130\u2013140); TTF steady 58\u201361 EUR/MWh on seasonal gas draw.",
+      "ttf_pct": "\u00b12-4%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12% (thermal dispatch eases, storage stabilizes)",
+      "summary": "Paks returns within days; cooler weather reduces AC demand; Mexico LNG ramp accelerates, softening US arb; Hormuz de-escalates.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18% (fuel switch, Central EU import demand)",
+      "summary": "Danube drought spreads to Kozloduy (Bulgaria) or further east EU nuclear; wildfire expansion into French hydro; Hormuz escalation spike crude premium.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Central EU nuclear outage and drought cascades",
+    "Storage deficit tightens gas curve",
+    "Iberian wildfire risk to thermal and hydro",
+    "Hormuz premium persists, LNG arb softens"
+  ],
+  "top_drivers": [
+    "Paks nuclear offline (~1.9 GW) forces Central EU thermal dispatch and import competition, tightening regional and German power spreads.",
+    "EU storage 16.3 pp below seasonal (57.1% full) constrains summer flexibility; any demand or supply shock will test gas balancing and TTF forward curve.",
+    "Spain/France wildfire threat erodes Iberian thermal and hydro; drought-driven cascade across Danube basin pressures multi-hub generation margins.",
+    "Mexico LNG ramp-up (0.4 Bcf/d) reduces US-EU arbitrage incentive; Hormuz tension sustains crude premium but lacks coalition support for escalation."
+  ],
+  "top_takeaway": "Hungary's Paks nuclear plant offline amid Danube drought; EU storage 16.3 pp below seasonal drives gas and power upside in Central/SW Europe.",
+  "watchlist": [
+    {
+      "metric": "Paks outage duration and Hungarian demand response",
+      "why": "1.9 GW baseload loss drives Central EU hub premiums and may spillover to Germany via corridor flows."
+    },
+    {
+      "metric": "Danube water levels and nuclear cooling thresholds",
+      "why": "Further drought risk widens outage cascade across central/eastern EU; pressures gas balancing."
+    },
+    {
+      "metric": "Spain/France wildfire perimeter and thermal outages",
+      "why": "Each MW of Iberian generation loss tightens SW EU power and lifts TTF spreads; hydro margin erosion bullish for gas."
+    },
+    {
+      "metric": "EU storage refill pace (currently +0.4% daily)",
+      "why": "At 57.1%, seasonal deficit limits headroom; any demand spike or supply loss (Hormuz, LNG diversion) will test storage draw risk."
+    },
+    {
+      "metric": "Mexico LNG (Energia Costa Azul) export ramp-up",
+      "why": "0.4 Bcf/d new capacity softens US Henry Hub arb, reduces EU LNG imports, marginal bearish for TTF Q3\u2013Q4."
+    },
+    {
+      "metric": "Strait of Hormuz escalation and allied coalition",
+      "why": "Weak coalition backing elevates duration of Strait premium; impacts crude-to-LNG arb and Med/NW diversion flows."
+    }
+  ],
+  "watchlist_dated": []
+}

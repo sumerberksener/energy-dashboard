@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Hungary nuclear outage amid Danube drought; escalating EU summer wildfire risk; Strait of Hormuz tensions persist but lack allied coalition support.",
+  "themes": [
+    {
+      "headline": "Hungary loses 40% power supply as drought shuts Paks nuclear plant",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Paks outage removes ~1.9 GW baseload from Central Europe, forcing Hungary to import power and tighten regional margins. Direct upward pressure on DA/intraday spreads and Central EU hub pricing (HUPX, PXE).",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Spanish and French wildfires disrupt generation and transmission infrastructure",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Wildfires threaten thermal and hydro generation, constrain transmission corridors, and elevate forced outage risk across Iberia. Drought also pressures hydro margins. Bullish for SW EU power and TTF spreads.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/massive-forest-fires-political-tensions-spain/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Danube drought persists; cascading risk to nuclear and river transport capacity",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Low water levels threaten Paks and other central/eastern EU nuclear plants' cooling capacity, and impair coal/fuel delivery by barge. Reduces generation flexibility, tightens reserve margins, supports power and fuel switching to gas.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Strait of Hormuz tensions persist; US seeks coalition but allies hesitate",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Unresolved Strait security risk sustains crude price premium and indirectly affects EU LNG arb economics. Lower allied commitment reduces short-term intervention credibility, but flows remain disrupted. Monitor for impact on Med/NW LNG diversion.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/07/28/iran-us-strait-ofhormuz-allies-patrol-01013659?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Mexico's second LNG terminal (Energia Costa Azul) ships first cargo",
+      "source": "EIA Today in Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "New 0.4 Bcf/d LNG export capacity increases North American supply elasticity, softening US Henry Hub and reducing arbitrage incentive to divert US cargoes to Europe. Indirect downward pressure on TTF via lower LNG premiums.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67884"
+    }
+  ],
+  "watchlist": [
+    "Danube water levels and Paks cooling capacity updates; scope of Hungarian demand-side response.",
+    "Spain/France wildfire perimeter; thermal plant outages and transmission line status.",
+    "Strait of Hormuz escalation; any hardening of naval patrols or renewed shipping disruptions.",
+    "Mexico LNG ramp-up schedule; US Gulf Coast export margins and reloading patterns to NW Europe."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
