@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (7th-percentile, 96 USD/t) and Clean Dark (47th-percentile, 27.95 EUR/MWh) are stale as of 2025-12-26 and 2025-12-31 respectively (218\u2013223 days old); fuel-switch regime assessment relies on current Clean Spark (96th-percentile, 0 days old) and TTF (1 day old, \u20136.29% daily). Avoid tactical coal hedges pending price update.",
+  "risk_flags": [
+    "Hungary loses 2 GW nuclear baseload immediately; Danube drought threatens further EU hydro/nuclear capacity through autumn.",
+    "EU storage at 57.87% (33rd percentile), 16.5pp below seasonal \u2014 refill pace into Sept\u2013Oct will set winter tightness and Dec contract risk.",
+    "TTF outsized daily move (-6.29%, 2.0\u03c3) and +12.51% monthly rise signal geopolitical premium embedded; Ukraine infrastructure war could reignite LNG/gas risk.",
+    "Clean Spark at 96th-percentile (54.51 EUR/MWh) reflects coal at 7th-percentile (96 USD/t) \u2014 fuel-switch regime fully priced; any softening in gas demand risks sharp reversal."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+2 to +5%",
+      "summary": "Hungary offline absorbed; fuel-switch sustains Clean Spark ~50\u201355 EUR/MWh; storage refill steady at +2\u20133% weekly.",
+      "ttf_pct": "\u20132 to +3%"
+    },
+    "downside": {
+      "de_power_pct": "\u20138 to \u201314%",
+      "summary": "Danube water-level recovers; Ukraine winter campaign pauses; Italian renewables curtail forward demand expectations; refill accelerates 3\u20134% weekly.",
+      "ttf_pct": "\u20136 to \u201312%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+10 to +18%",
+      "summary": "Danube drought deepens; further EU nuclear/hydro offline; Ukraine LNG attack escalates; storage refill stalls below 2% weekly.",
+      "ttf_pct": "+8 to +15%"
+    }
+  },
+  "themes": [
+    "Gas-to-power fuel switch via nuclear outage and drought",
+    "Storage deficit pressures autumn refill economics",
+    "Geopolitical tail-risk: Ukraine energy war, Danube cooling constraints",
+    "Renewables acceleration in Southern Europe (Italy capex) dampens long-dated curve"
+  ],
+  "top_drivers": [
+    "Hungary nuclear offline (2 GW) forces immediate Central European fuel-switch to gas; Combined with Danube drought, removes hydro flexibility \u2014 drives Clean Spark to 96th-percentile.",
+    "EU storage 16.5pp below seasonal at 57.87% fill \u2014 refill pace into autumn constrains H2 inventory recovery; supports front-month TTF risk and calendar backwardation.",
+    "Geopolitical escalation: Ukraine energy war (refinery/LNG hits) and Danube constraints embed tail-risk premium in TTF (+12.51% month YTD); any de-escalation signals sharp reversal."
+  ],
+  "top_takeaway": "Clean Spark at 96th-percentile (54.51 EUR/MWh) dominates; Hungary nuclear offline forces fuel-switch; storage 16.5pp below seasonal risks H2 refill.",
+  "watchlist": [
+    {
+      "metric": "Danube water level & nuclear cooling headroom",
+      "why": "Hungary offline removes 2 GW baseload; further EU hydro/nuclear shutdowns probable by Sept\u2013Oct if drought persists."
+    },
+    {
+      "metric": "EU gas storage refill rate (weekly)",
+      "why": "At 33rd percentile, 16.5pp below seasonal; every 1\u20132pp slowdown in refill extends winter risk window and supports TTF front-month."
+    },
+    {
+      "metric": "Ukraine winter energy attack cadence",
+      "why": "Escalating refinery/LNG infrastructure damage tightens global LNG supply; transmits to TTF via sanctions premium and Europe's LNG arbitrage floor."
+    },
+    {
+      "metric": "Italian green auction calendar & capex tranches",
+      "why": "Large renewable build signals 2027\u20132028 Cal+1/Cal+2 downside; accelerates merit-order flattening and coal/gas displacement pricing."
+    },
+    {
+      "metric": "Brent crude trend & Trump rhetoric",
+      "why": "Weakening US oil-price messaging could unlock Brent upside; raises LNG export netback and TTF arb attractiveness over next 2\u20134 weeks."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "Danube drought update, EU energy alerts",
+      "why": "Intra-week water-level data informs nuclear restart risk and Iberian hydro carry-forward; sets tactical DA/intraday hedge sizing."
+    }
+  ]
+}

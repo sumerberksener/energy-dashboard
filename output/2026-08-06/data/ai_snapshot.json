@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 96th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.5 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 223,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 218,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 218,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-06",
+      "available": true,
+      "daily_change_abs": 61.86,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.42,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 54.51,
+      "monthly_change_abs": 16.38,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 13.15
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 223,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-06",
+      "available": true,
+      "daily_change_pct": 56.25,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.71,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 171.83,
+      "monthly_change_pct": 7.49,
+      "name": "DE Power",
+      "percentile_rank_5y": 83.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.02
+    },
+    "eua": {
+      "as_of": "2026-08-05",
+      "available": true,
+      "daily_change_pct": 0.3,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.11,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.99,
+      "monthly_change_pct": 1.07,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.14
+    },
+    "gb_power": {
+      "as_of": "2026-08-06",
+      "available": true,
+      "daily_change_pct": 32.91,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.24,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 132.07,
+      "monthly_change_pct": -11.89,
+      "name": "GB Power",
+      "percentile_rank_5y": 88.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -4.85
+    },
+    "renewable_share": {
+      "as_of": "2026-08-05",
+      "available": true,
+      "daily_change_pct": 12.74,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.31,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 56.45,
+      "monthly_change_pct": 28.26,
+      "name": "Renewables",
+      "percentile_rank_5y": 77.0,
+      "unit": "% of load",
+      "weekly_change_pct": 0.47
+    },
+    "storage": {
+      "as_of": "2026-08-04",
+      "available": true,
+      "daily_change_pct": 0.31,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.64,
+      "headline": "16.5 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 57.87,
+      "monthly_change_pct": 9.6,
+      "name": "EU Storage",
+      "percentile_rank_5y": 33.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.2
+    },
+    "ttf": {
+      "as_of": "2026-08-05",
+      "available": true,
+      "daily_change_pct": -6.29,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.37,
+      "headline": "outsized daily move (-6.29%, 2.0\u03c3)",
+      "is_stale": false,
+      "latest": 52.4,
+      "monthly_change_pct": 12.51,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 68.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -6.23
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Hungary nuclear shutdown amid drought; Ukraine winter energy attacks risk; Trump oil price rhetoric fading; EU green spending commitments.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "Hungary loses 40% power supply as Paks nuclear shuts due to drought",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Danube cooling water shortage removes 2 GW dispatchable baseload from Central Europe; forces fuel-switch to gas and higher-cost imports. Direct upward pressure on DA/Cal+1 prices and Day-Ahead volatility across CEE-Germany."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Ukraine prepares for winter energy attacks, destroying Russian refineries mid-war",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/ukraine-energy-denys-shmyhal-winter-war/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Escalating energy infrastructure war threatens European LNG supply chains and gas hub flows. Russian refinery capacity loss could tighten crude-to-fuel conversion, affecting LNG spot prices and TTF risk premium via sanctions/supply-chain uncertainty."
+      },
+      {
+        "commodity": "renewables",
+        "headline": "Italy pledges billions in green energy investment under relaxed EU fiscal rules",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/italy-spend-energy-defense-finance-minister-giancarlo-giorgetti/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Large capacity injection signals accelerated renewable build; downward pressure on marginal pricing and merit-order effect in Southern Europe. Relevant for 2027\u20132028 Cal+1/Cal+2 curve and carbon spreads via reduced coal/gas need."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Trump's oil price talk losing clout as Republicans head toward midterms",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/08/03/trump-gas-oil-prices-iran-01022998",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "macro",
+        "why_it_matters": "Weakening US executive messaging on crude could permit Brent upside; indirectly raises LNG arbitrage to Europe and TTF floor. Secondary but material for 2\u20134 week LNG shipping economics and US Gulf LNG export pricing."
+      },
+      {
+        "commodity": "power",
+        "headline": "Spanish/French wildfires 20x more likely due to climate; Europe faces insurance crisis",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/climate-change-spain-france-fire-likely/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Recurrent drought/heat risk impairs Iberian hydro availability and Danube nuclear cooling; repeated fire damage to transmission/distribution. Increases load volatility, reduces reliable capacity, and pushes DA/intraday spreads higher; EUA carbon floor may tighten as fuel-switching forces coal/gas."
+      }
+    ],
+    "watchlist": [
+      "Danube water-level outlook; risk of further EU nuclear/hydro shutdowns in Sept\u2013Oct.",
+      "Ukraine winter campaign timeline; LNG arbitrage & TTF risk premia.",
+      "Italian green capex auction calendar and transmission investment announcements.",
+      "Brent/WTI crude trend if Trump rhetoric continues to weaken; US LNG export pricing."
+    ]
+  }
+}

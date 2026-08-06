@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Hungary nuclear shutdown amid drought; Ukraine winter energy attacks risk; Trump oil price rhetoric fading; EU green spending commitments.",
+  "themes": [
+    {
+      "headline": "Hungary loses 40% power supply as Paks nuclear shuts due to drought",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Danube cooling water shortage removes 2 GW dispatchable baseload from Central Europe; forces fuel-switch to gas and higher-cost imports. Direct upward pressure on DA/Cal+1 prices and Day-Ahead volatility across CEE-Germany.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/"
+    },
+    {
+      "headline": "Ukraine prepares for winter energy attacks, destroying Russian refineries mid-war",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Escalating energy infrastructure war threatens European LNG supply chains and gas hub flows. Russian refinery capacity loss could tighten crude-to-fuel conversion, affecting LNG spot prices and TTF risk premium via sanctions/supply-chain uncertainty.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/ukraine-energy-denys-shmyhal-winter-war/"
+    },
+    {
+      "headline": "Italy pledges billions in green energy investment under relaxed EU fiscal rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Large capacity injection signals accelerated renewable build; downward pressure on marginal pricing and merit-order effect in Southern Europe. Relevant for 2027–2028 Cal+1/Cal+2 curve and carbon spreads via reduced coal/gas need.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/italy-spend-energy-defense-finance-minister-giancarlo-giorgetti/"
+    },
+    {
+      "headline": "Trump's oil price talk losing clout as Republicans head toward midterms",
+      "source": "Politico EU Energy",
+      "tag": "macro",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Weakening US executive messaging on crude could permit Brent upside; indirectly raises LNG arbitrage to Europe and TTF floor. Secondary but material for 2–4 week LNG shipping economics and US Gulf LNG export pricing.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/03/trump-gas-oil-prices-iran-01022998"
+    },
+    {
+      "headline": "Spanish/French wildfires 20x more likely due to climate; Europe faces insurance crisis",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Recurrent drought/heat risk impairs Iberian hydro availability and Danube nuclear cooling; repeated fire damage to transmission/distribution. Increases load volatility, reduces reliable capacity, and pushes DA/intraday spreads higher; EUA carbon floor may tighten as fuel-switching forces coal/gas.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/climate-change-spain-france-fire-likely/"
+    }
+  ],
+  "watchlist": [
+    "Danube water-level outlook; risk of further EU nuclear/hydro shutdowns in Sept–Oct.",
+    "Ukraine winter campaign timeline; LNG arbitrage & TTF risk premia.",
+    "Italian green capex auction calendar and transmission investment announcements.",
+    "Brent/WTI crude trend if Trump rhetoric continues to weaken; US LNG export pricing."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
