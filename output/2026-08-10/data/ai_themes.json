@@ -1,0 +1,64 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (7th-percentile, 96 USD/t) as of 2025-12-26 \u2014 227 days stale; Clean Dark (27.95 EUR/MWh) as of 2025-12-31 \u2014 222 days stale. Merit-order and fuel-switch signals unreliable until refresh.",
+  "risk_flags": [
+    "EU storage at 58.84% (34th pctile, 16.7 pp below seasonal) \u2014 refill pace through September will set H2 gas-to-power switching risk.",
+    "Hungary Paks outage removes ~2 GW; drought-driven, horizon weeks \u2014 CEE power spreads widening until restart timeline clarifies.",
+    "US Senate Russia sanctions bill passed; House vote in September \u2014 LNG license escalation could tighten TTF by +5-8% if flows restricted.",
+    "Hormuz reopening (Iran-Oman deal) lowers crude premium; bearish power via fuel-switch economics relief \u2014 partially offsets geopolitical upside."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+3-8%",
+      "summary": "Paks restart delayed; storage refill steady; Hormuz reopening gradually eases crude premium.",
+      "ttf_pct": "+2-5%"
+    },
+    "downside": {
+      "de_power_pct": "-6-12%",
+      "summary": "Paks restarts within 2-3 weeks; Hormuz deal accelerates crude relief; storage refill exceeds seasonal pace.",
+      "ttf_pct": "-4-7%"
+    },
+    "horizon": "1w | 1m",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "US House passes broad Russia sanctions; LNG license restrictions tighten supply. Paks remains offline through September.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Tight EU storage, low coal prices, nuclear outage in CEE",
+    "Geopolitical risk premium\u2014sanctions escalation vs. Hormuz de-escalation",
+    "Regional power scarcity (Hungary) vs. commodity-driven cost relief"
+  ],
+  "top_drivers": [
+    "Hungary Paks drought outage (2 GW) supports CEE power; refill timing and Danube water levels key to near-term spread direction.",
+    "EU storage 16.7 pp below seasonal trend; September injection pace determines winter gas scarcity premium and TTF forward curve.",
+    "Geopolitical bifurcation: US sanctions escalation (bullish gas/power) vs. Hormuz reopening (bearish via lower crude, fuel-switch relief)."
+  ],
+  "top_takeaway": "Storage 16.7 pp below seasonal; coal at 7th-percentile; Hungary Paks offline removes 2 GW from CEE grid\u2014bullish power regime faces downside from Hormuz reopening and US sanctions legislative uncertainty.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill (Germany + NW Europe)",
+      "why": "16.7 pp deficit vs. 5-yr seasonal average; September injection pace determines winter gas availability and TTF curve shape."
+    },
+    {
+      "metric": "Hungary Paks nuclear restart",
+      "why": "Drought-driven 2 GW outage currently lifting CEE power; restart timeline critical to regional DA and Cal+1 spreads."
+    },
+    {
+      "metric": "US House Russia sanctions vote",
+      "why": "Escalation risk to LNG export licenses; could restrict Russian LNG flows and lift TTF by +5-8% if passed with broad scope."
+    },
+    {
+      "metric": "Coal (227 days stale)",
+      "why": "Last quote 96 USD/t at 7th-percentile; stale data limits dispatch merit-order confidence\u2014await fresh print for fuel-switch signal."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Sep",
+      "name": "US House Russia sanctions vote",
+      "why": "LNG license restrictions could tighten global gas supply and raise TTF calendar spreads."
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.7 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 227,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 222,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 222,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-10",
+      "available": true,
+      "daily_change_abs": 60.28,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.87,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 30.33,
+      "monthly_change_abs": 57.25,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 88.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -5.81
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 227,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-10",
+      "available": true,
+      "daily_change_pct": 64.25,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.22,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 154.12,
+      "monthly_change_pct": 49.39,
+      "name": "DE Power",
+      "percentile_rank_5y": 80.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -7.33
+    },
+    "eua": {
+      "as_of": "2026-08-07",
+      "available": true,
+      "daily_change_pct": 1.23,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.96,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.52,
+      "monthly_change_pct": 3.88,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.24
+    },
+    "gb_power": {
+      "as_of": "2026-08-10",
+      "available": true,
+      "daily_change_pct": 18.5,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.12,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 128.7,
+      "monthly_change_pct": -8.93,
+      "name": "GB Power",
+      "percentile_rank_5y": 86.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -11.4
+    },
+    "renewable_share": {
+      "as_of": "2026-08-09",
+      "available": true,
+      "daily_change_pct": 19.38,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.56,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 60.58,
+      "monthly_change_pct": -11.76,
+      "name": "Renewables",
+      "percentile_rank_5y": 82.0,
+      "unit": "% of load",
+      "weekly_change_pct": 16.45
+    },
+    "storage": {
+      "as_of": "2026-08-08",
+      "available": true,
+      "daily_change_pct": 0.43,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.65,
+      "headline": "16.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 58.84,
+      "monthly_change_pct": 9.51,
+      "name": "EU Storage",
+      "percentile_rank_5y": 34.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.06
+    },
+    "ttf": {
+      "as_of": "2026-08-07",
+      "available": true,
+      "daily_change_pct": -0.4,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.78,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 55.54,
+      "monthly_change_pct": 10.86,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 70.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -5.63
+    }
+  },
+  "news": {
+    "geopolitics_summary": "US-Russia sanctions bill and Ukraine winter energy attacks risk; Hungary nuclear outage amid drought; Hormuz shipping route uncertainty pressures crude supply into EU.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Germany gas reserves low, risks winter shortages and higher EU prices",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/germany-gas-reserve-low-europe-winter-energy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Low German storage ahead of winter directly lifts TTF forward curve. Undersupply forces fuel-switching to power; higher gas marginal cost pushes EU day-ahead power spreads wider."
+      },
+      {
+        "commodity": "power",
+        "headline": "Hungary loses 40% power generation as Paks nuclear shut by drought",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Paks shutdown removes ~2 GW from Central EU grid; drought-driven outage lifts regional power prices and increases import demand from neighbors, supporting DA and Cal+1 spreads across CEE."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Ukraine prepares for winter energy attacks on infrastructure, target refineries",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/ukraine-energy-denys-shmyhal-winter-war/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Ukrainian attacks on Russian refinery capacity constrain crude supply; winter energy attacks threaten regional power/gas transit. Risk premium embeds into European calendar spreads and winter contract volatility."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US Senate passes Russia sanctions bill; House battle looms in September",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/08/07/senate-passes-russia-sanctions-bill-01029073?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Escalating US Russia sanctions could restrict LNG export licenses and Russian LNG flows; tightens global LNG balance and raises TTF via reduced supply and costlier US-to-EU arbitrage."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Iran-Oman finalize Strait of Hormuz shipping deal as geopolitical tension eases",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/strait-of-hormuz-deal-oman-final-stage-iran/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Hormuz reopening reduces crude supply risk premium; lower oil prices ease fuel-switch economics and reduce European power generation costs via lower fuel oil and gasoil marginal rates."
+      }
+    ],
+    "watchlist": [
+      "US House vote on Russia sanctions bill (September) \u2013 LNG license impact",
+      "Hungary Paks restart timeline \u2013 tracks drought recovery and regional supply",
+      "Winter 2026\u201327 gas storage fill rate in Germany and Northwest Europe through September",
+      "France 2027 blackout drill protocols \u2013 regulatory changes to market design or reserve rules"
+    ]
+  }
+}

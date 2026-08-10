@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US-Russia sanctions bill and Ukraine winter energy attacks risk; Hungary nuclear outage amid drought; Hormuz shipping route uncertainty pressures crude supply into EU.",
+  "themes": [
+    {
+      "headline": "Germany gas reserves low, risks winter shortages and higher EU prices",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Low German storage ahead of winter directly lifts TTF forward curve. Undersupply forces fuel-switching to power; higher gas marginal cost pushes EU day-ahead power spreads wider.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/germany-gas-reserve-low-europe-winter-energy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Hungary loses 40% power generation as Paks nuclear shut by drought",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Paks shutdown removes ~2 GW from Central EU grid; drought-driven outage lifts regional power prices and increases import demand from neighbors, supporting DA and Cal+1 spreads across CEE.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/hungary-shuts-down-paks-nuclear-plant-danube-drought-intensifies-energy-crisis/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ukraine prepares for winter energy attacks on infrastructure, target refineries",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Ukrainian attacks on Russian refinery capacity constrain crude supply; winter energy attacks threaten regional power/gas transit. Risk premium embeds into European calendar spreads and winter contract volatility.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/ukraine-energy-denys-shmyhal-winter-war/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US Senate passes Russia sanctions bill; House battle looms in September",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Escalating US Russia sanctions could restrict LNG export licenses and Russian LNG flows; tightens global LNG balance and raises TTF via reduced supply and costlier US-to-EU arbitrage.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/07/senate-passes-russia-sanctions-bill-01029073?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Iran-Oman finalize Strait of Hormuz shipping deal as geopolitical tension eases",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Hormuz reopening reduces crude supply risk premium; lower oil prices ease fuel-switch economics and reduce European power generation costs via lower fuel oil and gasoil marginal rates.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/strait-of-hormuz-deal-oman-final-stage-iran/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "US House vote on Russia sanctions bill (September) – LNG license impact",
+    "Hungary Paks restart timeline – tracks drought recovery and regional supply",
+    "Winter 2026–27 gas storage fill rate in Germany and Northwest Europe through September",
+    "France 2027 blackout drill protocols – regulatory changes to market design or reserve rules"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
