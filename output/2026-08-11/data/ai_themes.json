@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (7th pctile, 96 USD/t) is 228 days stale (as of 2025-12-26); clean_dark spread (47th pctile, 27.95 EUR/MWh) is 223 days stale (as of 2025-12-31). Merit-order assumptions anchored on stale coal data; use with caution in thermal dispatch scenarios.",
+  "risk_flags": [
+    "EU storage at 59.12% (35th pctile, 16.8pp below seasonal); refill pace critical to winter adequacy and Cal+1 curve shape.",
+    "GB Power at 99th-percentile (162.46 EUR/MWh) despite -0.31% monthly change suggests structural GB-EU divergence; grid or fuel mix shock could extend premium further.",
+    "TTF +9.46% daily move (2.6\u03c3) on sanctions bill advance; House vote in September is binary tail risk for LNG export restrictions and EU arbitrage closure.",
+    "Renewable share at 74th pctile (54.62%) but down 9.85% daily; low wind/solar forecast could accelerate coal-gas merit order shift, but coal data is 228 days stale (7th pctile at 96 USD/t)."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11\u20133%",
+      "summary": "Storage refill continues; demand softness caps rally. TTF stable around 58\u201362 EUR/MWh. GB premium persists but stabilizes.",
+      "ttf_pct": "\u00b12\u20134%"
+    },
+    "downside": {
+      "de_power_pct": "-8\u201312%",
+      "summary": "Winter demand destruction accelerates on recession fears; industrial load sheds (France DSM); storage fills faster than feared. TTF retreats; power follows.",
+      "ttf_pct": "-6\u201312%"
+    },
+    "horizon": "1w | 1m",
+    "upside": {
+      "de_power_pct": "+5\u201310%",
+      "summary": "US House sanctions vote in September tightens LNG exports; Russian refinery losses spike EU spot LNG cost; TTF front spikes, Cal+1 reprices higher.",
+      "ttf_pct": "+8\u201315%"
+    }
+  },
+  "themes": [
+    "Extreme GB power premium vs. EU; supply-demand imbalance",
+    "EU winter gas reserve deficit; TTF in-the-money to Cal+1",
+    "Demand destruction (heat-driven contraction) vs. geopolitical tail risk",
+    "Ukraine energy infrastructure & sanctions bill advance pressuring LNG arbitrage"
+  ],
+  "top_drivers": [
+    "GB Power at 99th-percentile (162.46 EUR/MWh) \u2014 structural GB-EU divergence amid storage deficit and grid/fuel mix stress.",
+    "TTF +9.46% daily spike on US Senate Russia sanctions bill advance \u2014 tail risk to LNG supply and EU arbitrage closure in September.",
+    "EU storage 16.8pp below seasonal (59.12%, 35th pctile) \u2014 winter adequacy and Cal+1 curve pricing hinge on H2 refill pace.",
+    "Demand destruction (heat, industrial contraction in France/Netherlands) offsetting supply tightness \u2014 pressures forward curve (Cal+1+) despite geopolitical upside risk."
+  ],
+  "top_takeaway": "GB Power at 99th-percentile (162.46 EUR/MWh) amid low EU storage (-16.8pp seasonal) and TTF +9.46% daily spike; demand destruction offsets supply tightness, but winter reserve risk and sanctions escalation create tail upside.",
+  "watchlist": [
+    {
+      "metric": "EU Storage Fill Rate (Weekly)",
+      "why": "Currently 16.8pp below seasonal; October target for winter adequacy is the primary medium-term price signal."
+    },
+    {
+      "metric": "US House Russia Sanctions Vote (September)",
+      "why": "Binary tail event; tighter sanctions risk LNG export disruption, raising TTF arbitrage and global LNG spot cost by 5\u201315%."
+    },
+    {
+      "metric": "GB-DE Power Spread",
+      "why": "GB at 99th-percentile vs. DE at 78th; structural divergence suggests grid constraint or fuel mix shock; watch for cross-border flow congestion."
+    },
+    {
+      "metric": "France Winter DSM / Load-Shedding Policy",
+      "why": "2027 blackout drill in motion; signals state preparedness for demand-side emergency, which would depress Cal+1 power if invoked."
+    },
+    {
+      "metric": "Ukraine LNG Spot Imports & Refinery Losses",
+      "why": "Winter energy attacks on Ukrainian grid could force EU spot LNG imports; indirect TTF volatility driver if domestic production cut off."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Sep",
+      "name": "US House Russia Sanctions Bill Vote",
+      "why": "Outcome determines LNG export risk; tighter sanctions could raise TTF +5\u201310% via arbitrage shock."
+    }
+  ]
+}

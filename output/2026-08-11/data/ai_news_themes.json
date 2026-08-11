@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Europe faces extreme heat eroding growth and straining winter gas reserves; US Russia sanctions bill advances; Ukraine energy infrastructure under sustained attack.",
+  "themes": [
+    {
+      "headline": "Germany's gas reserves at risk; Europe faces winter shortage threat",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Low EU gas storage ahead of winter directly pressures TTF forward curve and winter Cal+1 spreads. Supply tightness increases fuel-switching risk into power, supporting baseload prices.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/germany-gas-reserve-low-europe-winter-energy/"
+    },
+    {
+      "headline": "Europe's scorching summer erases growth; demand destruction signaled",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Economic contraction in France and Netherlands suppresses industrial power demand (aluminium, chemicals). Reduces forward curve support, especially Cal+1 and beyond. Demand destruction offsets any supply concerns.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/europes-scorching-summer-could-erase-blocs-2026-growth/"
+    },
+    {
+      "headline": "US Senate passes Russia sanctions bill; House review looms September",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Tighter Russia sanctions risk further LNG supply disruptions and higher global LNG prices, raising European TTF via arbitrage. Indirect but material pressure on gas-fired power merit order.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/07/senate-passes-russia-sanctions-bill-01029073"
+    },
+    {
+      "headline": "Greece's aging grid blamed for catastrophic wildfire risk escalation",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Grid failures during wildfires threaten thermal/renewable capacity outages in SE Europe. Could disrupt SEE exports; reduces interconnector reliability, tightening regional balancing. Raises spot risk and ancillary demand.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/greece-electricity-grid-blame-wildfire/"
+    },
+    {
+      "headline": "Ukraine targets Russian refineries; winter energy attacks expected",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Russian refinery losses reduce EU crude-to-fuel supply indirectly; potential winter energy attacks on Ukraine infrastructure could spike LNG spot imports to EU if Ukrainian gas cut off, driving TTF volatility.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/ukraine-energy-denys-shmyhal-winter-war/"
+    }
+  ],
+  "watchlist": [
+    "EU gas storage fill rates (weekly); target vs. Oct target for winter adequacy.",
+    "France 2027 blackout drill logistics; signals state emergency preparedness & potential DSM/load-shedding policy.",
+    "US House vote on Russia sanctions bill (September); outcome affects LNG export risk & TTF arbitrage.",
+    "Hormuz reopening negotiations finalization; crude & condensate flow implications for global LNG cost."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
