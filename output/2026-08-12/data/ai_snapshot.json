@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 98th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.8 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 229,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 224,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 224,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-12",
+      "available": true,
+      "daily_change_abs": 53.12,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.08,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.04,
+      "monthly_change_abs": 70.62,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 90.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -9.5
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 229,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-12",
+      "available": true,
+      "daily_change_pct": 48.29,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.59,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 163.11,
+      "monthly_change_pct": 62.4,
+      "name": "DE Power",
+      "percentile_rank_5y": 82.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -4.17
+    },
+    "eua": {
+      "as_of": "2026-08-11",
+      "available": true,
+      "daily_change_pct": 0.12,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.36,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.25,
+      "monthly_change_pct": 1.87,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.58
+    },
+    "gb_power": {
+      "as_of": "2026-08-12",
+      "available": true,
+      "daily_change_pct": -1.39,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.07,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 153.81,
+      "monthly_change_pct": -5.88,
+      "name": "GB Power",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 1.09
+    },
+    "renewable_share": {
+      "as_of": "2026-08-11",
+      "available": true,
+      "daily_change_pct": 7.79,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.39,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 58.87,
+      "monthly_change_pct": 19.24,
+      "name": "Renewables",
+      "percentile_rank_5y": 80.0,
+      "unit": "% of load",
+      "weekly_change_pct": -2.83
+    },
+    "storage": {
+      "as_of": "2026-08-10",
+      "available": true,
+      "daily_change_pct": 0.47,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.67,
+      "headline": "16.8 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 59.4,
+      "monthly_change_pct": 9.53,
+      "name": "EU Storage",
+      "percentile_rank_5y": 36.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.08
+    },
+    "ttf": {
+      "as_of": "2026-08-11",
+      "available": true,
+      "daily_change_pct": -3.39,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.14,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 58.74,
+      "monthly_change_pct": 14.55,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 72.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -2.7
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU faces summer heat-driven nuclear/grid stress, winter gas storage risk, and potential US Russia sanctions escalation affecting LNG costs.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "German gas reserves face winter shortage risk; EU storage fill urgency critical",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/germany-gas-reserve-low-europe-winter-energy/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Low EU gas storage heading into winter raises forward curve risk (Cal+1, Cal+2). TTF upside if reserve targets missed; power exposure via gas-to-power switching. Direct desk relevance."
+      },
+      {
+        "commodity": "power",
+        "headline": "French nuclear plant jellyfish invasion; recurring summer cooling-water disruption pattern",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/swarming-jellyfish-overrun-french-nuclear-plant-on-same-date-two-years-in-a-row/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Structural summer nuclear outage risk in France (EU's largest nuclear exporter). Reduces baseload supply; forces expensive gas-fired generation and power price spikes during peak demand. DA/week-ahead power curve bullish."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US Senate passes Russia sanctions bill; House vote pending September, LNG cost implications",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/08/07/senate-passes-russia-sanctions-bill-01029073?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Further Russia sanctions risk tightening global LNG supply to EU. Higher LNG import costs flow directly to TTF arb, lifting European gas and power curves (Cal+1 onwards). Monitor House vote in September."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Europe's summer heat erases growth; demand destruction in Netherlands, France contraction risk",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/europes-scorching-summer-could-erase-blocs-2026-growth/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "macro",
+        "why_it_matters": "Economic contraction cuts industrial power/gas demand. Structural downside to Cal+1 curves; offset partially by lower storage fills and nuclear outages. Net macro pressure is bearish power near-term."
+      },
+      {
+        "commodity": "renewables",
+        "headline": "Italy increases green energy and defense spending after EU fiscal rule relaxation",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/italy-spend-energy-defense-finance-minister-giancarlo-giorgetti/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Higher EU renewable capex supply growth structural headwind to power prices. Indirect but meaningful for medium-term (Cal+2 onwards) pricing; adds to supply-side capacity."
+      }
+    ],
+    "watchlist": [
+      "House vote on Russia sanctions bill (September 2026) \u2014 escalates LNG cost risk to EU.",
+      "EU gas storage fill rates through August\u2013September \u2014 winter adequacy critical for TTF curve.",
+      "French nuclear unit restart timelines post-jellyfish incidents \u2014 baseload supply recovery tracking.",
+      "Italy green energy capex deployment milestones \u2014 medium-term renewable generation ramp tracking."
+    ]
+  }
+}

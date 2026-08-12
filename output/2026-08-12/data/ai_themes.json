@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (7th-percentile, 96 USD/t) and Clean Dark (27.95 EUR/MWh, 47th-percentile) both stale: coal data as of 2025-12-26 (229 days old), clean_dark as of 2025-12-31 (224 days old). Fuel-switch and merit-order conclusions drawn from stale coal pricing; current gas-to-coal arb mechanics may have shifted materially.",
+  "risk_flags": [
+    "GB Power at 153.81 EUR/MWh (98th-percentile) \u2014 structural summer cooling constraints in France reduce EU baseload and force expensive gas-to-power switching.",
+    "EU storage at 59.4% full, 16.8 pp below seasonal \u2014 winter fill trajectory critical; missed targets trigger Cal+1/Cal+2 TTF upside.",
+    "US Senate Russia sanctions bill pending House vote September 2026 \u2014 further LNG supply tightening to EU could add 5\u201310% to TTF via arb cost.",
+    "Coal at 7th-percentile (96 USD/t, data 229 days stale) \u2014 fuel-switch regime heavily favoring gas; clean dark spread at 47th-percentile masks structural merit-order distortion."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "GB power remains extended; French nuclear outages manageable via gas dispatch; storage fill steady; sanctions risk priced gradually.",
+      "ttf_pct": "\u00b11\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "\u221212\u201318%",
+      "summary": "Summer demand destruction deepens; renewables ramp higher; French nuclear restarts; storage refill pace accelerates; macro recession fears weigh.",
+      "ttf_pct": "\u22126\u201310%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8\u201315%",
+      "summary": "US House passes Russia sanctions; LNG tightens; French nuclear unit fails restart; storage fill misses target trajectory into September.",
+      "ttf_pct": "+5\u201312%"
+    }
+  },
+  "themes": [
+    "GB power extended; French baseload nuclear disruption",
+    "EU gas storage deficit; winter adequacy at risk",
+    "US sanctions tail-risk on LNG arb and TTF",
+    "Summer demand destruction offsetting supply tightness"
+  ],
+  "top_drivers": [
+    "French nuclear cooling-water disruption (structural summer pattern) forces baseload reduction and power spike \u2014 GB at 98th-percentile reflects EU-wide dispatch strain.",
+    "EU storage 16.8 pp below seasonal average heading into autumn refill season \u2014 winter adequacy now a live risk, supports forward curve bullish bias through Cal+1.",
+    "US Russia sanctions escalation (House vote September) threatens LNG supply tightness and TTF arb cost; geopolitical tail-risk on gas curves.",
+    "Summer demand destruction (macro headwind: Netherlands growth erase, France contraction risk) partially offsets supply-side stress, creating intra-curve spread tension."
+  ],
+  "top_takeaway": "GB Power at 98th-percentile amid French nuclear cooling stress; EU storage 16.8 pp below seasonal drives winter gas risk; US Russia sanctions escalation looms September.",
+  "watchlist": [
+    {
+      "metric": "EU gas storage fill (Aug\u2013Sep 2026)",
+      "why": "Winter adequacy floor: miss 85% target by September = 8\u201315% TTF upside on supply/demand imbalance through Q4."
+    },
+    {
+      "metric": "French nuclear unit restart (post-jellyfish cooling outage)",
+      "why": "Each week of baseload loss = ~3\u20135% power curve bullish; structural summer pattern repeats annually \u2014 design constraint, not transitory."
+    },
+    {
+      "metric": "US House Russia sanctions vote (September 2026)",
+      "why": "Passage = LNG supply tightening, TTF +4\u20138%; import-cost floor rises via arb, lifts DE Power merit-order marginal unit economics."
+    },
+    {
+      "metric": "DE Power (163.11 EUR/MWh, 82nd-percentile) vs. renewable share (58.87%, 80th-percentile)",
+      "why": "High renewables + nuclear outage + low storage = extreme dispatch volatility; margin compression on baseload scarcity offsets renewable downside."
+    },
+    {
+      "metric": "Italy green capex deployment (medium-term)",
+      "why": "Higher EU renewable build structural headwind to Cal+2+ power; desk needs to monitor supply-side inflation trajectory through 2027."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Sep",
+      "name": "US House Russia sanctions vote",
+      "why": "LNG cost escalation transmission to TTF arb and EU power curves; timing unclear but month flagged in news."
+    }
+  ]
+}

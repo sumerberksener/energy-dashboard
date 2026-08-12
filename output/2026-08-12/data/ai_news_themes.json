@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU faces summer heat-driven nuclear/grid stress, winter gas storage risk, and potential US Russia sanctions escalation affecting LNG costs.",
+  "themes": [
+    {
+      "headline": "German gas reserves face winter shortage risk; EU storage fill urgency critical",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Low EU gas storage heading into winter raises forward curve risk (Cal+1, Cal+2). TTF upside if reserve targets missed; power exposure via gas-to-power switching. Direct desk relevance.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-gas-reserve-low-europe-winter-energy/"
+    },
+    {
+      "headline": "French nuclear plant jellyfish invasion; recurring summer cooling-water disruption pattern",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Structural summer nuclear outage risk in France (EU's largest nuclear exporter). Reduces baseload supply; forces expensive gas-fired generation and power price spikes during peak demand. DA/week-ahead power curve bullish.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/swarming-jellyfish-overrun-french-nuclear-plant-on-same-date-two-years-in-a-row/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US Senate passes Russia sanctions bill; House vote pending September, LNG cost implications",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Further Russia sanctions risk tightening global LNG supply to EU. Higher LNG import costs flow directly to TTF arb, lifting European gas and power curves (Cal+1 onwards). Monitor House vote in September.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/07/senate-passes-russia-sanctions-bill-01029073?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Europe's summer heat erases growth; demand destruction in Netherlands, France contraction risk",
+      "source": "Politico EU Energy",
+      "tag": "macro",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Economic contraction cuts industrial power/gas demand. Structural downside to Cal+1 curves; offset partially by lower storage fills and nuclear outages. Net macro pressure is bearish power near-term.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europes-scorching-summer-could-erase-blocs-2026-growth/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Italy increases green energy and defense spending after EU fiscal rule relaxation",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher EU renewable capex supply growth structural headwind to power prices. Indirect but meaningful for medium-term (Cal+2 onwards) pricing; adds to supply-side capacity.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/italy-spend-energy-defense-finance-minister-giancarlo-giorgetti/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "House vote on Russia sanctions bill (September 2026) — escalates LNG cost risk to EU.",
+    "EU gas storage fill rates through August–September — winter adequacy critical for TTF curve.",
+    "French nuclear unit restart timelines post-jellyfish incidents — baseload supply recovery tracking.",
+    "Italy green energy capex deployment milestones — medium-term renewable generation ramp tracking."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
