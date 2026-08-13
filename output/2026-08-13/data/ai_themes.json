@@ -1,0 +1,59 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal stale since 26-Dec (230 days old, 7th-percentile rank); clean dark stale since 31-Dec (225 days old). Merit order thermal dispatch visibility impaired \u2014 do not rely on these signals for current marginal-cost positioning.",
+  "risk_flags": [
+    "EU storage at 59.3% (35th-percentile), 17.2 pp below seasonal \u2014 August\u2013September refill pace critical to winter curve slope.",
+    "GB Power 141.1 EUR/MWh (93rd-percentile) signals structural constraint; French nuclear jellyfish outages recurring, forcing gas displacement.",
+    "Coal stale since 26-Dec; clean dark stale since 31-Dec \u2014 merit order visibility degraded for thermal dispatch marginal cost.",
+    "Renewables down 21.4% daily to 46.3% of load; thermal call elevated despite weak macro (economic contraction in France, Netherlands)."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Storage refill flat; French nuclear offline; GB premium holds; US LNG softens TTF curve.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Cool snap, French units resume, macro demand softens further, US LNG arbitrage floods market.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Heat wave persists, French reactors extend outage, storage fill misses targets; winter panic.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "French nuclear outages + EU storage 17pp below seasonal",
+    "GB power premium vs. continent sustained",
+    "US LNG supply surge bearish TTF forwards",
+    "Summer demand destruction vs. AC cooling trade-off"
+  ],
+  "top_drivers": [
+    "French nuclear summer constraint (recurring jellyfish outages) forcing gas-to-power switching; GB Power 93rd-percentile reflects structural Island supply tightness.",
+    "EU storage 17pp below seasonal average amid summer heat; winter refill adequacy now the dominant TTF curve-shape driver \u2014 Cal+1 premium at risk if August fill disappoints.",
+    "US LNG production at record 122.5 Bcf/d reduces European import arb benefit; bearish TTF forwards but bullish for winter price moderation if supply materializes."
+  ],
+  "top_takeaway": "GB Power at 93rd-percentile amid French nuclear constraints and low EU storage; TTF strength (+3.89% daily) reflects winter adequacy risk offsetting US LNG supply growth.",
+  "watchlist": [
+    {
+      "metric": "EU gas storage fill August\u2013September",
+      "why": "Winter adequacy hinge; if fill <2pp/week, Cal+1 TTF premium widens 5\u201310%; current 59.3% requires +20pp by Nov-Dec."
+    },
+    {
+      "metric": "French nuclear unit outages (jellyfish invasions)",
+      "why": "Recurring summer pattern displaces ~1\u20132 GW baseload to gas; sustained GB-DE spread widener and TTF switching-margin bullish."
+    },
+    {
+      "metric": "US LNG production 122.5 Bcf/d impact on Atlantic arb",
+      "why": "Record US supply softens European LNG import economics; bearish TTF if arbitrage narrowing reduces winter hedging demand."
+    },
+    {
+      "metric": "EU macro contraction (France, Netherlands growth stall)",
+      "why": "Industrial/commercial demand erosion headwind to Cal+1 power; AC cooling load may partially offset."
+    }
+  ],
+  "watchlist_dated": []
+}

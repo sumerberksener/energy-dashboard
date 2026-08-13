@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Europe faces record summer heat crushing growth; gas storage risks winter supply; US LNG production at record highs easing global LNG arb.",
+  "themes": [
+    {
+      "headline": "Germany's gas reserves critically low ahead of winter heating season",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Low EU storage heading into winter forces higher winter curve pricing (Cal+1, Cal+2) and increases LNG import demand. TTF forward volatility risk if storage fill fails August–September.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-gas-reserve-low-europe-winter-energy/"
+    },
+    {
+      "headline": "French nuclear production hit by recurring jellyfish invasions, summer constraint continues",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Repeated summer outages at French reactors reduce baseload supply, forcing gas-fired displacement. Recurring pattern suggests sustained summer supply gap pushing day-ahead spreads and gas-to-power switching margins wider.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/swarming-jellyfish-overrun-french-nuclear-plant-on-same-date-two-years-in-a-row/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Record US natural gas production 122.5 Bcf/d in 2026 boosts LNG export capacity",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher US LNG supply increases global LNG flows available for European arbitrage, weakening TTF via lower LNG import economics. Reduces winter premium in EU gas curve if supply reaches Atlantic.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67944"
+    },
+    {
+      "headline": "Europe's scorching summer erodes economic output, dampening power demand growth",
+      "source": "Politico EU Energy",
+      "tag": "macro",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Contraction in France, stalled Dutch growth reduces industrial and commercial demand, weakening Cal+1 forward power prices. Offset partially by AC cooling load, but net macro drag on peak power.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/europes-scorching-summer-could-erase-blocs-2026-growth/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Italy commits billions to green and defence spending under relaxed EU fiscal rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "neutral",
+      "why_it_matters": "Southern EU capex boost on renewables and grids may accelerate capacity additions, medium-term supply-side relief. Fiscal loosening could also stoke inflation and cost pressures on near-term power contracts.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/italy-spend-energy-defense-finance-minister-giancarlo-giorgetti/"
+    }
+  ],
+  "watchlist": [
+    "EU gas storage fill rate through August–September; winter storage adequacy announcement expected.",
+    "French nuclear units resumption timelines post-summer; coolant availability constraints.",
+    "US Senate–House reconciliation on Russia sanctions bill; potential indirect LNG / energy trade impacts.",
+    "France 2027 blackout drill outcome; regulatory changes to power-grid resilience or emergency dispatch protocols."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
