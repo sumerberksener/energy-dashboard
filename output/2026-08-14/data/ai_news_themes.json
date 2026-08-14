@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU faces acute summer energy crunch from extreme heat, nuclear/hydro outages, and low gas reserves ahead of winter.",
+  "themes": [
+    {
+      "headline": "Romania nuclear reactor shutdown due to record-low Danube water levels",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Loss of baseload generation during peak-demand summer heat. Danube cooling constraint signals extended nuclear derate risk into autumn; drives marginal fuel switching to gas. Immediate DA/intraday price pressure in SE Europe.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/romania-cernavoda-nuclear-reactor-shut-down-danube-drought/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany's low gas reserves risk winter shortages and higher consumer costs",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Direct TTF driver. Delayed summer injection into storage amid high demand threatens Q4/Q1 gas adequacy. Forces storage arbitrage tightening and LNG demand competition; elevates Cal+1 gas curve and power dark-spread risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/germany-gas-reserve-low-europe-winter-energy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "French nuclear plant disrupted by jellyfish; record reactor outages this summer",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Recurring climate-driven constraint on French nuclear baseload. Reinforces structural hydro/nuclear deficit into autumn. Tightens French/German power curve; elevates need for gas-fired backup and cross-border imports, pressuring TTF-to-power spread.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/swarming-jellyfish-overrun-french-nuclear-plant-on-same-date-two-years-in-a-row/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US natural gas production forecast to hit 122.5 Bcf/d, a new record in 2026",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Elevated US natgas supply eases global LNG availability for Atlantic arbitrage. Lower US Henry Hub floors TTF-to-LNG arb, reducing LNG inbound volumes to NW Europe and weakening Q4 gas curve—bearish for EU power forwards via lower fuel-stack switching costs.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67944"
+    },
+    {
+      "headline": "US Senate passes Russia sanctions bill; House vote in September remains uncertain",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Potential escalation of Russia/US sanctions landscape. If enacted, could reinforce LNG supply tightness (less US exports to allies) or amplify indirect sanctions risk on Russian LNG exports—indirect TTF/EUA volatility transmission via geopolitical premium and supply reallocation.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/07/senate-passes-russia-sanctions-bill-01029073?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "France 2027 blackout drill schedule and implications for winter capacity signaling.",
+    "Danube water levels and French nuclear cooling constraint updates through autumn.",
+    "EU gas storage injection pace—critical weekly data for TTF Cal+1 repricing.",
+    "US House vote on Russia sanctions (September) for LNG/geopolitical risk reassessment."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

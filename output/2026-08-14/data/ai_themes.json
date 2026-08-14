@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data 231 days stale (as_of 2025-12-26); Clean Dark 226 days stale (as_of 2025-12-31). Both metrics unavailable for current regime assessment. Clean Spark, GB/DE Power, TTF, storage, EUA, renewables current as_of 2026-08-13/14.",
+  "risk_flags": [
+    "GB Power 167.49 EUR/MWh (99th pctile) \u2014 unsustainably high; margin compression if renewable/import relief materializes.",
+    "EU storage 59.92% (16.9pp below seasonal) \u2014 refill pace will determine TTF Cal+1 and winter power curve steepness.",
+    "Romania nuclear + French jellyfish disruptions signal climate-driven baseload losses extending into autumn; Danube cooling constraint persistent.",
+    "US Senate Russia sanctions bill passed; House vote in September could reshape LNG supply and geopolitical premium on TTF."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+3-5%",
+      "summary": "Tight power grid sustained by nuclear/hydro outages; storage injection accelerates slightly; gas remains supported by low reserves.",
+      "ttf_pct": "+2-4%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Heat breaks; wind/rain improve renewables; nuclear units return online; LNG inflows accelerate; storage refill catches seasonal track.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Danube water crises worsens; French nuclear derate extends into autumn; heatwave persists; storage refill lags seasonal norms.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Nuclear/hydro supply crisis driving summer power spike",
+    "Low gas reserves and delayed injection threaten Q4/Q1 adequacy",
+    "Clean Spark at 90th percentile \u2014 coal structurally weak",
+    "Geopolitical sanctions tail-risk on LNG inbound flows"
+  ],
+  "top_drivers": [
+    "French nuclear + Romanian hydro supply losses during peak summer heat driving GB/DE power to 83rd\u201399th percentiles; clean spark at 90th.",
+    "EU gas storage 16.9pp below seasonal; delayed injection amid high demand forces Cal+1 curve steeper and elevates winter-adequacy tail-risk premium on TTF.",
+    "US natgas at record supply (122.5 Bcf/d) eases global LNG arb floor, reducing EU inbound volumes and weakening fuel-switch mechanics for power forwards."
+  ],
+  "top_takeaway": "GB Power at 99th percentile amid nuclear/hydro outages and extreme heat; storage 17pp below seasonal elevates winter gas-to-power spread risk.",
+  "watchlist": [
+    {
+      "metric": "EU storage injection pace",
+      "why": "Weekly data critical for TTF Cal+1 repricing; currently 16.9pp below seasonal average threatens winter adequacy and forces gas-to-power upside."
+    },
+    {
+      "metric": "Danube water levels & French nuclear cooling",
+      "why": "Recurring climate constraint on French/SE European baseload; signals extended derate risk into autumn, driving cross-border import demand and TTF volatility."
+    },
+    {
+      "metric": "GB Power technical resistance",
+      "why": "At 99th percentile (167.49 EUR/MWh); sharp pullback risk if renewables forecast improves or imports ease; monitor daily oscillations."
+    },
+    {
+      "metric": "US LNG Henry Hub arb",
+      "why": "US natgas at record 122.5 Bcf/d forecast eases global LNG availability; lower arb floor weakens EU inbound volumes and Cal+1 gas curve."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Sep",
+      "name": "US House Russia sanctions vote",
+      "why": "Could tighten LNG supply landscape or amplify geopolitical premium on TTF; transmission via supply reallocation and risk repricing."
+    }
+  ]
+}
