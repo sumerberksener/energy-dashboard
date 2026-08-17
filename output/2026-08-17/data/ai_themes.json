@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data 234 days stale (26 Dec 2025); Clean Dark 229 days stale (31 Dec 2025). Thermal dispatch assumptions for autumn may not reflect current market regime. Use latest daily/weekly power moves (DE +49% daily, GB +11.42% daily as of 17 Aug 2026) to override stale coal basis.",
+  "risk_flags": [
+    "Storage 17 pp below seasonal (60.78% full, 38th pctile)\u2014refill headroom compressed into autumn demand ramp; nuclear outages extend summer thermal call.",
+    "DE Power +2.94\u03c3 above 50d trend (\u20ac205/MWh, +49% daily); Clean Spark +2.53\u03c3\u2014saturation risk if nuclear restarts or renewables recover from 53rd pctile.",
+    "GB-DE spread at extremes (GB +11.42% daily to 100th pctile vs. DE at 88th)\u2014interconnector congestion or import premium reversals could unwind sharply.",
+    "Coal data 234 days stale (26 Dec 2025); Clean Dark 229 days stale (31 Dec 2025)\u2014forward dispatch assumptions for autumn thermal may not reflect current market structure."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-5-10%",
+      "summary": "Nuclear outages persist; storage drawdown moderate; TTF holds 70\u201375 EUR/MWh band; power cooling from highs but remains 50\u201370th pctile.",
+      "ttf_pct": "+0-3%"
+    },
+    "downside": {
+      "de_power_pct": "-12-20%",
+      "summary": "Renewable forecast swing +20 pctile; Danube stabilizes; France/Hungary nuclear restart timelines accelerate. Merit-order reversal pressures power Cal+1.",
+      "ttf_pct": "-3-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8-15%",
+      "summary": "Danube levels fall further; Paks shutdown confirmed; Cernavoda offline extends. Gas call rises; TTF breaches 70 EUR/MWh mid-range.",
+      "ttf_pct": "+5-12%"
+    }
+  },
+  "themes": [
+    "Nuclear outages cascade: France (jellyfish), Romania (Cernavoda), Hungary (Paks) via Danube record lows",
+    "Extreme fuel-switch economics: Clean Spark 98th pctile (\u20ac69.51/MWh), Coal 7th pctile (96 USD/t)",
+    "GB isolated peak: 100th pctile (\u20ac191.53/MWh) signals regional supply/import bottleneck",
+    "US sanctions tail-risk on LNG flows; record US gas production underpins supply cushion"
+  ],
+  "top_drivers": [
+    "Nuclear supply crisis (Danube drought, jellyfish outages, cooling constraints) forces baseload replacement into peak summer demand; merit-order exhaustion lifts power to all-time highs.",
+    "Extreme fuel-switch premium: Coal 7th pctile + EUA 49th pctile (\u20ac34.35/t, neutral) + Gas 73rd pctile (\u20ac61.42/MWh) = Clean Spark 98th pctile\u2014structural, not noise.",
+    "GB isolated peak (100th pctile, \u20ac191.53/MWh) signals interconnector bottleneck or domestic supply tightness; continental power high but GB premium suggests regional localization.",
+    "US record gas output (122.5 Bcf/d) and Senate sanctions bill (House vote Sep) bracket LNG upside/downside for TTF; geopolitical resolution expected to drive 1-3% settlement moves."
+  ],
+  "top_takeaway": "GB Power at all-time highs (100th pctile); EU nuclear curtailed by heat/drought; Coal at 7th pctile creates extreme fuel-switch premium\u2014structural supply crisis, not transient.",
+  "watchlist": [
+    {
+      "metric": "Danube water levels & thermal plant cooling",
+      "why": "Record lows threaten Paks, Cernavoda, and Central European thermal fleets; weekly updates critical to nuclear availability and regional fuel-switch transmission into TTF."
+    },
+    {
+      "metric": "US Senate Russia sanctions bill \u2192 House vote (September)",
+      "why": "Outcome determines LNG export constraints; EU gas costs via TTF arb sensitive to supply rerouting or freezes within weeks of vote passage."
+    },
+    {
+      "metric": "French nuclear outage schedule (Tricastin jellyfish repeat; other units)",
+      "why": "Recurring climate-driven shutdowns in summer peak; each incident extends baseload deficit and props DA power/Cal+1 premium into autumn."
+    },
+    {
+      "metric": "GB-DE power spread (currently at extremes)",
+      "why": "Interconnector flows, grid constraints, or Irish/Dutch import relief could reverse GB premium; asymmetric reversion risk in 24-72h window."
+    },
+    {
+      "metric": "Renewable share recovery from 44.54% (53rd pctile)",
+      "why": "Currently -17.67% daily; if forecast swings to 65+ pctile (typical late-Aug wind ramp), merit-order suppression and Clean Spark compression could be sharp."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Sep",
+      "name": "US House vote: Russia sanctions bill",
+      "why": "Determines LNG export restrictions; EU TTF arb and gas cost transmission into power settles within week."
+    }
+  ]
+}

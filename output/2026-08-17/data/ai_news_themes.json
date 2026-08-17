@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU nuclear output curtailed by extreme heat and low water levels; US Russia sanctions bill passed Senate; geopolitical risk to EU power generation supply.",
+  "themes": [
+    {
+      "headline": "Romania nuclear reactor shutdown; Danube record lows deepen energy crunch",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Cernavoda reactor offline reduces EU baseload capacity during summer peak demand. Low Danube levels constrain thermal cooling across Central/Eastern Europe; upward pressure on DA spreads and Cal+1 power curves.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/romania-cernavoda-nuclear-reactor-shut-down-danube-drought/"
+    },
+    {
+      "headline": "Hungary uses sunken barges to maintain Danube level; nuclear output threatened",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Paks nuclear facility at risk from record low Danube flows; emergency mitigation measures signal acute supply constraint. Drives marginal fuel-switching to gas in CEE, tightens regional power balances and TTF-implied arbitrage.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/hungary-barge-danube-river-nuclear-power-plant-paks/"
+    },
+    {
+      "headline": "French jellyfish invasion halts nuclear plant for second consecutive year",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Recurring climate-driven outage at French nuclear reactor reduces FR baseload in summer peak. Compounds existing nuclear unavailability; forces higher import demand and upward pressure on French DA and Cal+1 power prices.",
+      "horizon": "intraday",
+      "link": "https://www.politico.eu/article/swarming-jellyfish-overrun-french-nuclear-plant-on-same-date-two-years-in-a-row/"
+    },
+    {
+      "headline": "US Senate passes Russia sanctions bill; House vote pending in September",
+      "source": "Politico",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Further Russia sanctions could constrain LNG availability or reroute supply flows, affecting EU gas import costs via TTF arb to global LNG. Outcome in House vote will determine transmission mechanism and timing of potential market impact.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/07/senate-passes-russia-sanctions-bill-01029073"
+    },
+    {
+      "headline": "US natural gas production forecast to hit record 122.5 Bcf/d in 2026",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US gas production supports elevated LNG export capacity. Increases global supply available for EU arbitrage into TTF; downward pressure on European gas prices if export terminals are unconstrained; indirect bearish effect on power via gas fuel-switching margin.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67944"
+    }
+  ],
+  "watchlist": [
+    "Danube water levels and thermal plant cooling constraints; monitor HU/RO nuclear availability weekly.",
+    "House vote on Russia sanctions bill (September); outcome determines LNG export/sanctions risk to EU TTF.",
+    "French nuclear reactor maintenance and climate-driven outage schedule through Q3 2026.",
+    "Regional wildfires and grid infrastructure damage in Greece/France affecting generation and demand forecasts."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
