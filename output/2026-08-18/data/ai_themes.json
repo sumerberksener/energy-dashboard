@@ -1,0 +1,74 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (235 days old); clean dark stale as of 2025-12-31 (230 days old). Power, gas, renewables, and EUA current as of 2026-08-18 or 2026-08-17. Do not rely on coal or clean dark for intra-day trading decisions.",
+  "risk_flags": [
+    "Renewables at 18th-percentile (-2.0\u03c3 below 50d trend); thermal dispatch locked in through peak.",
+    "GB Power 97th-percentile (157.85 EUR/MWh) signals island supply stress; Clean Spark 95th-percentile (51.78 EUR/MWh) reflects gas-in-merit regime.",
+    "Romania, Hungary, France nuclear deratings reduce EU baseload by 3+ GW; coal data stale (235 days old, 7th-percentile at 96 USD/t); clean dark 47th-percentile suggests modest arbitrage headroom.",
+    "Danube drought threatens sustained thermal outages through autumn; Rosatom sanctions risk delays Paks-II 2.4 GW commissioning, extending reliance on gas."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+5-8%",
+      "summary": "Danube stabilizes, nuclear outages persist through August\u2013September; gas in-the-money, thermal dispatch sustained.",
+      "ttf_pct": "+2-4%"
+    },
+    "downside": {
+      "de_power_pct": "-12-18%",
+      "summary": "Renewables recover to 50th-percentile; Danube levels improve; nuclear plants online. Thermal call collapses, Clean Spark mean-reverts.",
+      "ttf_pct": "-5-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+15-25%",
+      "summary": "Danube drought worsens; Romania/Hungary thermal offline extended into October; French jellyfishes recur. Gas-fired backup surge.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Nuclear supply collapse drives thermal marginal cost",
+    "GB Power premium reflects island-specific supply tightness",
+    "Renewables at 18th-percentile lifts thermal call",
+    "US LNG record production underpins TTF supply elasticity"
+  ],
+  "top_drivers": [
+    "EU summer nuclear crisis (Romania offline, France derating, Hungary stressed) removes ~3\u20134 GW baseload; forces gas-fired thermal onto merit order. Direct bid for TTF and power DA spreads.",
+    "Renewables at 18th-percentile (-2.0\u03c3) sustains high thermal call; any recovery would flip Clean Spark and GB Power mean-reversion risk.",
+    "US LNG record 122.5 Bcf/d (2026) fully deployed; supply elasticity stabilizes TTF despite EU supply tightness, capping near-term gas rally."
+  ],
+  "top_takeaway": "EU summer nuclear crisis (Romania, France, Hungary offline) forces gas-fired backup online; GB Power at 97th-percentile, Clean Spark 95th; US LNG record production caps TTF upside.",
+  "watchlist": [
+    {
+      "metric": "Romania Cernavod\u0103 reactor restart",
+      "why": "Loss of 700 MW thermal generation tightens Q4 EU merit order; cooling-water recovery timeline critical to gas call."
+    },
+    {
+      "metric": "France nuclear return-to-service schedule",
+      "why": "Jellyfish & cooling stress pattern signals repeated summer outages; baseload loss sustains high peak-power demand and gas dispatch."
+    },
+    {
+      "metric": "Hungary Danube level & Paks mitigation",
+      "why": "Emergency barge-raising indicates extreme margin; thermal stress + sanctions-delayed Paks-II leaves EU gas-dependent through 2027\u201330."
+    },
+    {
+      "metric": "US LNG export utilization & TTF arb",
+      "why": "Record 122.5 Bcf/d production (2026 forecast) fully deployed; supply elasticity caps TTF rally despite EU summer crisis."
+    },
+    {
+      "metric": "Renewables recovery (wind/solar)",
+      "why": "At 18th-percentile (-37.9% daily drop); rebound would immediately release thermal marginal cost and derate Clean Spark."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "Romania nuclear restart decision",
+      "why": "Cooling-water recovery timeline will signal thermal supply relief or sustained high-merit gas call."
+    },
+    {
+      "day_label": "TBD",
+      "name": "France reactor return schedule update",
+      "why": "Jellyfish/cooling pattern indicates weekly risk; timing affects Q4 power curve baseload assumptions."
+    }
+  ]
+}

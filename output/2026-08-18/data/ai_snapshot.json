@@ -1,0 +1,212 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 97th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 95th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 235,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 230,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 230,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-18",
+      "available": true,
+      "daily_change_abs": 11.5,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 2.02,
+      "headline": "95th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 51.78,
+      "monthly_change_abs": 62.75,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 95.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 29.73
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 235,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-18",
+      "available": true,
+      "daily_change_pct": 6.52,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.36,
+      "headline": "extended 2.4\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 187.93,
+      "monthly_change_pct": 60.87,
+      "name": "DE Power",
+      "percentile_rank_5y": 86.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 25.42
+    },
+    "eua": {
+      "as_of": "2026-08-14",
+      "available": true,
+      "daily_change_pct": -0.03,
+      "days_old": 4,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.42,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.35,
+      "monthly_change_pct": 1.84,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.26
+    },
+    "gb_power": {
+      "as_of": "2026-08-18",
+      "available": true,
+      "daily_change_pct": -17.09,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.9,
+      "headline": "97th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 157.85,
+      "monthly_change_pct": 32.15,
+      "name": "GB Power",
+      "percentile_rank_5y": 97.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 16.27
+    },
+    "renewable_share": {
+      "as_of": "2026-08-17",
+      "available": true,
+      "daily_change_pct": -37.92,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -2.03,
+      "headline": "extended 2.0\u03c3 below the 50d trend",
+      "is_stale": false,
+      "latest": 27.65,
+      "monthly_change_pct": -61.67,
+      "name": "Renewables",
+      "percentile_rank_5y": 18.0,
+      "unit": "% of load",
+      "weekly_change_pct": -12.16
+    },
+    "storage": {
+      "available": false
+    },
+    "ttf": {
+      "as_of": "2026-08-17",
+      "available": true,
+      "daily_change_pct": 0.54,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.33,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 61.76,
+      "monthly_change_pct": 7.6,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 73.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 8.17
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU summer heatwave triggers nuclear outages & Danube drought; Rosatom safety row risks Hungary Paks-II; US gas record supports LNG export capacity.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "Romania shuts nuclear reactor as Danube hits record lows",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/romania-cernavoda-nuclear-reactor-shut-down-danube-drought/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Loss of thermal generation (nuclear + coal cooling-water constrained) tightens EU generation mix; forces gas-fired backup online. Directly pressures DAM spreads and Q4 power curves via reduced supply."
+      },
+      {
+        "commodity": "power",
+        "headline": "Hungary uses sunken barges to raise Danube for nuclear plant operation",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/hungary-barge-danube-river-nuclear-power-plant-paks/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Paks nuclear under thermal stress; emergency mitigation indicates extreme margin pressure. Widespread EU summer nuclear derating (France jellyfish, cooling-water) reduces baseload; sustained upward pressure on peak power and gas demand."
+      },
+      {
+        "commodity": "power",
+        "headline": "Swarming jellyfish overrun French nuclear plant same date two years running",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/swarming-jellyfish-overrun-french-nuclear-plant-on-same-date-two-years-in-a-row/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Pattern-risk for French nuclear availability (record outages this summer). Loss of large baseload blocks pushes EU to higher-cost thermal (coal, gas). Direct impact on DA/ID power prices and gas stack competition through Q4."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US natural gas production forecast to hit record 122.5 Bcf/d in 2026",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67944",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "US LNG export capacity fully utilized; record production supports LNG flows to EU/NW Europe. Increases supply elasticity on TTF; may cap near-term gas rally despite summer EU nuclear stress. Medium-term TTF weakness risk."
+      },
+      {
+        "commodity": "power",
+        "headline": "Rosatom safety violations alleged; EU sanctions pressure over Hungary Paks-II link",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/rosatom-hungary-nuclear-energy-egypt-russia-el-dabaa-paks-ii-russia-safety-standards-violations/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Sanctions on Rosatom could delay/halt Hungary Paks-II nuclear project, removing 2.4 GW baseload. Increases reliance on gas for EU power balance through 2030s. Political risk to long-dated power & gas curves."
+      }
+    ],
+    "watchlist": [
+      "Danube water levels & thermal plant reopening timeline (Romania, Hungary, France).",
+      "French nuclear reactor return-to-service schedule (cooling outages, jellyfish-risk dates).",
+      "Rosatom sanctions decision / timeline; impact on Paks-II commissioning.",
+      "EU demand destruction impact on Q4 power forwards (industrial heat stress economic downturn)."
+    ]
+  }
+}
