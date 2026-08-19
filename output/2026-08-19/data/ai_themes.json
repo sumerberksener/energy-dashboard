@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale: as of 2025-12-26 (236 days old); Clean Dark stale: as of 2025-12-31 (231 days old). Power, storage, gas, and EUA indices current through 2026-08-18 to 2026-08-19. Do not rely on coal or Clean Dark spreads for intraday trading decisions.",
+  "risk_flags": [
+    "Storage at 61.37% \u2014 17.1 pp below 5-yr seasonal \u2014 refill pace through September will set Q4 power and gas risk.",
+    "GB Power at 99th-percentile (189.66 EUR/MWh), +5.61% daily; Danube cooling constraints on Paks II may support premium into autumn.",
+    "Clean Spark at 95th-percentile (52.09 EUR/MWh) on tight thermal dispatch; renewables at 28th-percentile (33.1% share) prolongs coal-avoidance.",
+    "Coal data stale (236 days old, as of 2025-12-26, 96 USD/t); Clean Dark stale (231 days old as of 2025-12-31); power indices current through 2026-08-19."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Tight thermal dispatch, sub-seasonal storage; GB Power holds premium, DA power near 190 EUR/MWh.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "\u22125-12%",
+      "summary": "Temperature normalisation, hydro inflows recover, storage build accelerates, nuclear capacity restored.",
+      "ttf_pct": "\u22123-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8-15%",
+      "summary": "Next heat wave deepens nuclear cooling crisis; Danube falls further or France/Germany outages spike.",
+      "ttf_pct": "+5-12%"
+    }
+  },
+  "themes": [
+    "Marine heat waves suppress nuclear and hydro; fuel-switch regime tightens",
+    "GB power premium extends; storage deficit persists into autumn",
+    "US LNG surge and Iran sanctions risk shift TTF arbs over months",
+    "Rosatom safety scrutiny clouds EU nuclear expansion timeline"
+  ],
+  "top_drivers": [
+    "Marine heat waves across Europe reduce nuclear and hydro cooling capacity; fuel-switching to gas/coal lifts DA and Cal+1 power spreads and pressures EUA via higher thermal dispatch carbon.",
+    "Storage 17.1 pp below 5-yr seasonal average; refill pace through Q3 will determine Q4 heating-season carry cost and power premium extension.",
+    "US LNG production surge (122.5 Bcf/d projected 2026) widens Henry Hub\u2013TTF discount, weakening European gas and power via cheaper fuel-switching arbs."
+  ],
+  "top_takeaway": "GB Power at 99th-percentile amid marine heat-wave nuclear constraints; storage 17pp below seasonal average tightens H2 refill risk.",
+  "watchlist": [
+    {
+      "metric": "Danube water levels and Paks II nuclear output",
+      "why": "Heat-driven low water reduces Hungarian baseload; directly pressures Central EU power spreads and forces upward fuel-switching into gas."
+    },
+    {
+      "metric": "EU nuclear cooling constraints (France, Germany, Spain)",
+      "why": "Marine heat waves threaten continent-wide thermal dispatch; next heat spike will compress available capacity and widen spot-to-forward spreads."
+    },
+    {
+      "metric": "Storage refill trajectory (EU 61.37%, \u221217.1 pp below seasonal)",
+      "why": "Sub-seasonal build through August-September sets Q4 carry cost and heating-season supply cushion; underfill will extend power premium through winter."
+    },
+    {
+      "metric": "US LNG export calendar and Henry Hub\u2013TTF arb",
+      "why": "EIA projects record 122.5 Bcf/d US natgas in 2026; higher LNG supply over months will widen TTF discount vs. Henry Hub, pressing EU power via gas fuel-switch."
+    },
+    {
+      "metric": "EU sanctions decision on Rosatom (Paks II permit risk)",
+      "why": "Ukraine seeks sanctions on Russian nuclear firm; permit delays or supply-chain disruption to Hungary plant would defer EU baseload capacity and extend power-cost regime."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "N/A",
+      "name": "Danube water-level and Paks II output monitoring (weekly)",
+      "why": "Ongoing marine heat-wave constraint on nuclear cooling; no fixed event date, but real-time tracking critical for power dispatch updates."
+    }
+  ]
+}
