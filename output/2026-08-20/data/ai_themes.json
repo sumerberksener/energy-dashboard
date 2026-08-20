@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "French nuclear capex constraints amid budget crunch risk defer Paks II timeline and European baseload capacity; potential EU sanctions on Rosatom fuel supply threatens long-term nuclear strategy and forces coal/gas substitution, raising EUA demand.",
+    "polarity": "bullish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Delayed or sanctioned nuclear capacity forces thermal (coal/gas) dispatch into H2, raising EUA intensity per MWh; mandatory fuel-switching offsets LNG oversupply with higher-carbon generation economics."
+  },
+  "freshness_caveat": "Coal data stale as of 26-Dec (237 days old) \u2014 latest 96 USD/t and 7th-pctile rank unreliable for current merit-order positioning; Clean Dark stale as of 31-Dec (232 days old) \u2014 gas-coal spread at 27.95 EUR/MWh (47th-pctile) should not drive dispatch signals. GB Power, DE Power, Clean Spark, TTF, EUA, Storage, Renewables all current (0\u20132 days old) and actionable.",
+  "risk_flags": [
+    "GB Power at 164.95 EUR/MWh (98th-pctile) sustained despite heat-wave volatility \u2014 supply-side fragility (grid stress, outages) likely driving premium over continental spreads.",
+    "Clean Spark 45.52 EUR/MWh (94th-pctile) persists; coal at 7th-pctile (96 USD/t, stale as of 26-Dec) signals sustained gas-in-the-money dispatch despite US record 122.5 Bcf/d production forecast.",
+    "EU Storage at 61.61% (17.1 pp below seasonal) \u2014 refill momentum only +0.39% daily; winter filling risk if geopolitical disruption hits LNG supply or demand destruction slows.",
+    "French nuclear capex crunch (Politico) may defer maintenance, risking forced outages autumn/winter; EUA could spike if coal substitution accelerates during shortage windows."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b13-5%",
+      "summary": "Heat wave persists; GB/DE power volatility tight around 98th/86th-pctile; TTF stable mid-60s EUR/MWh.",
+      "ttf_pct": "\u00b12-3%"
+    },
+    "downside": {
+      "de_power_pct": "-10-15%",
+      "summary": "Heat wave breaks early; US LNG export bottleneck relief shipped Q4; arbitrage normalizes; storage refill accelerates; winter risk discount compresses.",
+      "ttf_pct": "-6-9%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "EU sanctions on Rosatom accelerate; Paks II delayed; French nuclear outage unplanned; coal forced baseload; EUA re-rates higher.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "Extreme heat-driven power demand vs. record US LNG supply glut",
+    "French nuclear budget constraints threaten EU baseload and EUA upside",
+    "Storage 17 pp below seasonal norm \u2014 refill pace sets H2 risk",
+    "Rosatom sanctions tail-risk on Paks II and EU fuel-switch economics"
+  ],
+  "top_drivers": [
+    "Heat-wave driven cooling demand (Europe 98th-pctile GB Power, +11.61% daily in DE) overrides US LNG record-supply bearishness; thermal merit order remains steep.",
+    "French nuclear budget crunch (Politico) raises H2 forced-outage risk; coal and gas dispatch extension supports EUA upside if sanctions or deferral materializes.",
+    "Storage 17.1 pp below seasonal normal (61.61% full) \u2014 refill pace critical; geopolitical shock (Rosatom sanctions, Iranian LNG) could trigger winter scarcity premium."
+  ],
+  "top_takeaway": "GB Power at 98th-percentile amid European heat wave; Clean Spark at 94th-percentile despite record US LNG supply bearishness \u2014 thermal dispatch tightness trumps gas glut.",
+  "watchlist": [
+    {
+      "metric": "GB Power premium (vs. DE)",
+      "why": "At 98th-pctile; transmission constraints or Irish/UK renewable shortfalls could widen GB-DE spread further into Sep if heat wave persists."
+    },
+    {
+      "metric": "US LNG export utilization",
+      "why": "Record 122.5 Bcf/d forecast clashes with historical bottlenecks; any capacity relief will depress TTF further and extend bearish arbitrage window into autumn."
+    },
+    {
+      "metric": "French nuclear outage schedule + budget vote",
+      "why": "Politico: budget crunch delays capex; if maintenance deferred, unplanned outages in autumn force gas/coal marginal and lift EUA demand 5\u201310%."
+    },
+    {
+      "metric": "Rosatom sanctions and Paks II timeline",
+      "why": "Politico: safety allegations threaten 500+ MW Hungarian baseload; EU sanctions on Russian fuel could force demand destruction or coal-pivot, impacting EUA curve shape."
+    },
+    {
+      "metric": "EU wildfire season (Aug\u2013Sep peak)",
+      "why": "Marine heat waves (Politico) amplify transmission outages and hydro volatility; peak-hour power demand spikes but ramp constraints tighten, lifting power volatility premium."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "n/a",
+      "name": "French budget vote / nuclear maintenance announcements",
+      "why": "No explicit date in news; watch Aug\u2013Sep for capex and outage calendar; material for autumn power and EUA curve."
+    },
+    {
+      "day_label": "n/a",
+      "name": "EU sanctions decision on Rosatom and Paks II",
+      "why": "No firm date supplied; material for H2 baseload strategy and fuel-switch economics; monitor weekly for policy statements."
+    }
+  ]
+}

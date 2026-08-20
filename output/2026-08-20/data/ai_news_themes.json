@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "European heat waves and wildfire risk mounting; US gas production at record levels; Iran sanctions uncertainty; Rosatom safety concerns threaten EU nuclear strategy.",
+  "themes": [
+    {
+      "headline": "US natural gas production forecast to hit record 122.5 Bcf/d in 2026",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US LNG export capacity will increase arbitrage pressure on TTF and front-month gas prices. Lower US production costs (Permian super-laterals noted separately) reinforce competitive LNG flows to NW Europe, capping winter Cal+1 and storage filling costs.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67944"
+    },
+    {
+      "headline": "France faces budget crunch amid historic heat wave impacts",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Budget constraints may delay French nuclear maintenance and renewable capex. Reduced capex headroom pressures French supply-side capacity, risking higher DA power spreads and EUA upside if coal/gas substitution occurs during outages.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/france-climate-change-problem-budget/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Marine heat waves and ocean warming driving extreme European weather patterns",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Ocean warming amplifies summer cooling demand and wildfire risk, raising peak-hour power demand and constraining hydro/wind ramps. Persistent heat also depresses thermal efficiency. Net upside to summer Cal+1 and Q3 power curves; EUA bullish if coal-backing rises.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/climate-change-is-cooking-europes-oceans-world-weather-attribution-mediterranean-sea/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Rosatom safety violations alleged; concerns raised on Hungary Paks II project",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "If Paks II (500+ MW) faces sanctions or regulatory delay, Hungary's baseload capacity tightens. EU would rely more on gas/coal for backup, raising power prices and EUA demand; sanctions risk on Russian nuclear fuel also threatens long-term EU supply strategy.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/rosatom-hungary-nuclear-energy-egypt-russia-el-dabaa-paks-ii-russia-safety-standards-violations/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Permian operators boost output via longer horizontal wells (15,000+ ft super-laterals)",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Marginal cost reduction in US gas production supports elevated LNG exports. Lower breakeven encourages more arbitrage-driven LNG cargoes to Europe, keeping TTF depressed relative to seasonal norms and weakening summer power spreads.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67984"
+    }
+  ],
+  "watchlist": [
+    "French budget vote / nuclear maintenance schedule announcements — capacity risk over autumn/winter.",
+    "EU sanctions decision on Rosatom and Paks II timeline — impacts Hungarian baseload and EU ETS substitution demand.",
+    "European wildfire season peak (Aug–Sep) — transmission outages and hydro availability volatility.",
+    "US LNG export-capacity bottleneck relief or further delays — direct TTF arbitrage driver."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

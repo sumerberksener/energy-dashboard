@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 98th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 94th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 237,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 232,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 232,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-20",
+      "available": true,
+      "daily_change_abs": 19.25,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 2.2,
+      "headline": "94th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 45.52,
+      "monthly_change_abs": 52.95,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 94.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 34.94
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 237,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-20",
+      "available": true,
+      "daily_change_pct": 11.61,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.33,
+      "headline": "extended 2.3\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 185.0,
+      "monthly_change_pct": 52.48,
+      "name": "DE Power",
+      "percentile_rank_5y": 86.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 26.39
+    },
+    "eua": {
+      "as_of": "2026-08-19",
+      "available": true,
+      "daily_change_pct": 0.76,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.61,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.56,
+      "monthly_change_pct": 0.91,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.58
+    },
+    "gb_power": {
+      "as_of": "2026-08-20",
+      "available": true,
+      "daily_change_pct": -10.7,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.0,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 164.95,
+      "monthly_change_pct": 7.55,
+      "name": "GB Power",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 10.35
+    },
+    "renewable_share": {
+      "as_of": "2026-08-19",
+      "available": true,
+      "daily_change_pct": 47.07,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.46,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 48.68,
+      "monthly_change_pct": -0.38,
+      "name": "Renewables",
+      "percentile_rank_5y": 61.0,
+      "unit": "% of load",
+      "weekly_change_pct": -23.4
+    },
+    "storage": {
+      "as_of": "2026-08-18",
+      "available": true,
+      "daily_change_pct": 0.39,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.72,
+      "headline": "17.1 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 61.61,
+      "monthly_change_pct": 9.72,
+      "name": "EU Storage",
+      "percentile_rank_5y": 39.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.4
+    },
+    "ttf": {
+      "as_of": "2026-08-19",
+      "available": true,
+      "daily_change_pct": -0.42,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.41,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 63.38,
+      "monthly_change_pct": 6.23,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 73.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 6.42
+    }
+  },
+  "news": {
+    "geopolitics_summary": "European heat waves and wildfire risk mounting; US gas production at record levels; Iran sanctions uncertainty; Rosatom safety concerns threaten EU nuclear strategy.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "US natural gas production forecast to hit record 122.5 Bcf/d in 2026",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67944",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Record US LNG export capacity will increase arbitrage pressure on TTF and front-month gas prices. Lower US production costs (Permian super-laterals noted separately) reinforce competitive LNG flows to NW Europe, capping winter Cal+1 and storage filling costs."
+      },
+      {
+        "commodity": "power",
+        "headline": "France faces budget crunch amid historic heat wave impacts",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/france-climate-change-problem-budget/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Budget constraints may delay French nuclear maintenance and renewable capex. Reduced capex headroom pressures French supply-side capacity, risking higher DA power spreads and EUA upside if coal/gas substitution occurs during outages."
+      },
+      {
+        "commodity": "power",
+        "headline": "Marine heat waves and ocean warming driving extreme European weather patterns",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/climate-change-is-cooking-europes-oceans-world-weather-attribution-mediterranean-sea/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Ocean warming amplifies summer cooling demand and wildfire risk, raising peak-hour power demand and constraining hydro/wind ramps. Persistent heat also depresses thermal efficiency. Net upside to summer Cal+1 and Q3 power curves; EUA bullish if coal-backing rises."
+      },
+      {
+        "commodity": "power",
+        "headline": "Rosatom safety violations alleged; concerns raised on Hungary Paks II project",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/rosatom-hungary-nuclear-energy-egypt-russia-el-dabaa-paks-ii-russia-safety-standards-violations/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "If Paks II (500+ MW) faces sanctions or regulatory delay, Hungary's baseload capacity tightens. EU would rely more on gas/coal for backup, raising power prices and EUA demand; sanctions risk on Russian nuclear fuel also threatens long-term EU supply strategy."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Permian operators boost output via longer horizontal wells (15,000+ ft super-laterals)",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67984",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Marginal cost reduction in US gas production supports elevated LNG exports. Lower breakeven encourages more arbitrage-driven LNG cargoes to Europe, keeping TTF depressed relative to seasonal norms and weakening summer power spreads."
+      }
+    ],
+    "watchlist": [
+      "French budget vote / nuclear maintenance schedule announcements \u2014 capacity risk over autumn/winter.",
+      "EU sanctions decision on Rosatom and Paks II timeline \u2014 impacts Hungarian baseload and EU ETS substitution demand.",
+      "European wildfire season peak (Aug\u2013Sep) \u2014 transmission outages and hydro availability volatility.",
+      "US LNG export-capacity bottleneck relief or further delays \u2014 direct TTF arbitrage driver."
+    ]
+  }
+}
