@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Russian hybrid threats to Romanian offshore gas; Trump tariff pause; Iran sanctions escalation; geopolitical risk to EU gas supply and LNG arb mechanics.",
+  "themes": [
+    {
+      "headline": "Romanian offshore gas platform targeted by drone; Moscow blamed by EU",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Direct threat to Black Sea gas production (Romania key EU supplier). Escalation risk could disrupt physical gas flows or elevate storage build urgency; TTF risk via supply shock.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/romania-jet-blasts-drone-near-offshore-gas-production-platform/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US natural gas production forecast to hit record 122.5 Bcf/d in 2026",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US gas output increases LNG export capacity. Higher US LNG supply into global market strengthens TTF arb mechanics (lower European LNG import prices), pressuring power via merit order displacement.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67944"
+    },
+    {
+      "headline": "Trump escalates Iran sanctions; threatens economic strangulation",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Tighter Iran sanctions reduce oil supply, raising crude prices. Higher crude inflation pressures European coal/gas switching economics and fuel input costs for power generation.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/18/there-no-breaking-point-problem-with-trumps-plan-teconomically-strangle-iran-01040781?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Marine heat waves intensifying across Europe; climate drivers of extreme weather",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Persistent ocean warming elevates cooling demand and wildfire risk, increasing thermal plant outages (availability impact). Direct demand shock and supply constraint on DA/intraday power curves.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/climate-change-is-cooking-europes-oceans-world-weather-attribution-mediterranean-sea/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Longer Permian wells boost US oil and gas output; super-lateral drilling expansion",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Enhanced Permian production (gas and oil) reinforces US LNG export growth. Indirect: sustained low US gas costs support higher LNG volumes to Europe, pressuring TTF via global LNG arb.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67984"
+    }
+  ],
+  "watchlist": [
+    "Romanian offshore gas platform security escalation; physical disruption risk.",
+    "US LNG export scheduling/capacity utilization updates; global TTF arb pressure.",
+    "Iran sanctions enforcement timelines; crude price trajectory and coal/gas switching.",
+    "European marine heat wave / wildfire impacts on thermal generation; outage notices."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

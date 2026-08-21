@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (238 days old, as of 2025-12-26) and Clean Dark (233 days old, as of 2025-12-31) are stale \u2014 merit-order margin precision cannot be assessed today; all power and gas metrics current as of 2026-08-20/21.",
+  "risk_flags": [
+    "Storage at 61.82% (17 pp below 5-yr average) \u2014 refill pace critical for H2 margin; Romanian drone attack adds supply-shock tail risk to physical flows.",
+    "Coal data stale (238 days old); clean dark stale (233 days old) \u2014 cannot assess merit-order shift precision today.",
+    "GB Power at 157.14 EUR/MWh (96th-pctile) and DE Power at 183.05 EUR/MWh (85th-pctile, +2.2\u03c3) \u2014 both extended; renewable share dropped 25.96% weekly (58th-pctile) \u2014 thermal call structural.",
+    "Trump Iran sanctions escalation and Romania offshore gas platform drone attack create dual geopolitical premium on power via supply scarcity and crude cost inflation."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22122-3%",
+      "summary": "Renewables recovery and storage drift higher stabilize GB/DE; TTF holds 64\u201367 EUR/MWh amid balanced supply/arb tension.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "\u22125-8%",
+      "summary": "US LNG capacity surge accelerates into Europe; renewables recover to 55%+ of load; storage seasonal momentum resumes; TTF arb widens.",
+      "ttf_pct": "\u22123-6%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8-12%",
+      "summary": "Romania offshore platform sustains drone attack or is shuttered; EU storage build urgency escalates; TTF rallies on supply shock.",
+      "ttf_pct": "+5-10%"
+    }
+  },
+  "themes": [
+    "GB power premium and clean spark extremely high",
+    "EU storage structural deficit amplifies geopolitical risk",
+    "US LNG supply surge pressures TTF via global arb",
+    "Marine heat waves threaten thermal availability"
+  ],
+  "top_drivers": [
+    "GB Power (96th-pctile, 157.14 EUR/MWh) and Clean Spark (92nd-pctile, 39.74 EUR/MWh) both at extremes \u2014 driven by tight renewables (46.77%, down 26% weekly) and structural storage deficit (17 pp below seasonal).",
+    "Romania offshore gas platform drone attack (Moscow blamed) creates supply-shock tail risk and reinforces storage build urgency over 4-6 week horizon; TTF supported above 65 EUR/MWh.",
+    "Trump Iran sanctions escalation + US LNG boom (122.5 Bcf/d forecast, Permian super-laterals) create offsetting pressures: crude inflation + coal/gas switching cost vs. global LNG supply glut pressuring TTF arb."
+  ],
+  "top_takeaway": "GB Power at 96th-percentile drives Clean Spark to 92nd; storage 17 pp below seasonal underpins thermal call amid Romania gas security escalation.",
+  "watchlist": [
+    {
+      "metric": "Romanian offshore gas platform security / Black Sea disruption",
+      "why": "Direct EU supply threat; escalation could trigger TTF +5-10% shock and lock-in storage build urgency over next 4-6 weeks."
+    },
+    {
+      "metric": "US LNG export capacity and scheduling (EIA forecasts 122.5 Bcf/d 2026)",
+      "why": "Higher US gas output and Permian super-lateral drilling reinforce global LNG supply glut; sustained TTF arb pressure downside (\u22123-5% case) offset by geopolitical premium."
+    },
+    {
+      "metric": "Iran sanctions enforcement pace and crude price trajectory",
+      "why": "Tighter sanctions reduce oil supply; crude inflation raises coal/gas switching marginal cost \u2014 direct impact on merit-order economics and power generation fuel mix."
+    },
+    {
+      "metric": "European marine heat wave / thermal plant outage notices",
+      "why": "Cooling demand spike + wildfire-driven forced outages compress available thermal capacity; intraday/DA power volatility and upside tail risk to both DA and GB curves."
+    },
+    {
+      "metric": "TTF daily momentum (up 3.02% YoY, 73rd-pctile)",
+      "why": "Within typical range but supported by storage deficit and geopolitical premium; watch for break below 62 EUR/MWh (arb-driven downside) or above 70 (supply shock upside)."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "Romania offshore gas escalation update",
+      "why": "Geopolitical event timeline unclear; monitor EU/NATO response and any physical disruption notices from platform operators."
+    }
+  ]
+}
