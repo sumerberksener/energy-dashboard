@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; GB Power \u2014 92th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 17.2 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 242,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 237,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 237,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-25",
+      "available": true,
+      "daily_change_abs": 12.86,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.63,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 6.41,
+      "monthly_change_abs": -19.07,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 60.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -45.75
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 242,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-25",
+      "available": true,
+      "daily_change_pct": 9.0,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.33,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 155.82,
+      "monthly_change_pct": 4.03,
+      "name": "DE Power",
+      "percentile_rank_5y": 80.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -17.35
+    },
+    "eua": {
+      "as_of": "2026-08-24",
+      "available": true,
+      "daily_change_pct": 0.35,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.73,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.71,
+      "monthly_change_pct": 2.39,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.8
+    },
+    "gb_power": {
+      "as_of": "2026-08-25",
+      "available": true,
+      "daily_change_pct": -10.95,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.13,
+      "headline": "92th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 142.67,
+      "monthly_change_pct": 1.84,
+      "name": "GB Power",
+      "percentile_rank_5y": 92.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -22.4
+    },
+    "renewable_share": {
+      "as_of": "2026-08-24",
+      "available": true,
+      "daily_change_pct": -41.33,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.89,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 43.06,
+      "monthly_change_pct": -28.88,
+      "name": "Renewables",
+      "percentile_rank_5y": 49.0,
+      "unit": "% of load",
+      "weekly_change_pct": 25.78
+    },
+    "storage": {
+      "as_of": "2026-08-23",
+      "available": true,
+      "daily_change_pct": 0.56,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.74,
+      "headline": "17.2 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 62.99,
+      "monthly_change_pct": 9.72,
+      "name": "EU Storage",
+      "percentile_rank_5y": 42.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.12
+    },
+    "ttf": {
+      "as_of": "2026-08-24",
+      "available": true,
+      "daily_change_pct": 3.73,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.76,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 68.32,
+      "monthly_change_pct": 7.46,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 74.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 7.64
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Escalating US Iran sanctions and hybrid threats to Romanian offshore gas infrastructure; European heatwaves and Danube drought threaten hydropower and cooling.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Romanian offshore gas platform targeted by drone; Moscow blamed",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/romania-jet-blasts-drone-near-offshore-gas-production-platform/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Direct threat to Romania's offshore gas production (Black Sea platform). Hybrid warfare risk could disrupt EU gas supply; pressure on TTF via reduced intra-EU gas availability and forced reliance on LNG."
+      },
+      {
+        "commodity": "coal",
+        "headline": "Danube drying up; EU lacks contingency plan for inland water transport",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/the-danube-is-drying-up-europe-still-has-no-plan/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Low Danube water levels restrict barge transport of coal to thermal plants; forces fuel switching to gas and costlier alternatives. Risks regional power tightness, especially Central Europe."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Trump administration tightens Iran economic sanctions; production and export risk",
+        "horizon": "months",
+        "link": "https://www.politico.com/news/2026/08/18/there-no-breaking-point-problem-with-trumps-plan-teconomically-strangle-iran-01040781",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Stricter Iran sanctions could suppress global crude supply, supporting Brent. Higher oil prices feed into EU gas LNG arbs (crude-linked LNG from Atlantic cheaper); potential TTF uplift if OPEC+ cuts offset demand destruction."
+      },
+      {
+        "commodity": "power",
+        "headline": "European heatwaves and wildfires; EU calls for climate-resilience capex spending",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/eu-climate-adaptation-spending-wopke-hoekstra-wildfires-heat-waves/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Sustained heat reduces hydro output and cooling capacity for thermal/nuclear plants. Forces peaking plant dispatch; tightens DA/ID markets. Wildfires risk transmission line damage and supply disruptions across Southern/Central Europe."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Permian super-lateral wells boost US shale crude and gas output",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=67984",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Higher US shale production increases LNG export capacity; expands supply to Europe. Lower LNG prices weaken TTF, eroding gas-fired power margins and power prices in EU baseload."
+      }
+    ],
+    "watchlist": [
+      "Romanian offshore platform security status and production continuity updates",
+      "Danube water-level recovery forecasts; coal barge transport reopening timeline",
+      "Iranian crude export flows under new sanctions; OPEC+ meeting response",
+      "European heatwave/drought relief timeline; hydropower reservoir refill outlook"
+    ]
+  }
+}

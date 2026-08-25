@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (242 days old); Clean Dark stale as of 2025-12-31 (237 days old). Coal headline (7th-percentile) and Clean Dark spread (EUR 27.95/MWh, 47th-pctile) may not reflect current intra-day fuel-switch dynamics driven by Danube drought and heatwave.",
+  "risk_flags": [
+    "EU storage at 63% full, 17.2pp below 5-yr seasonal mean \u2014 refill pace through autumn critical for winter adequacy and H2 2027 power costs.",
+    "GB power at 142.67 EUR/MWh (92nd-pctile) while DE power at 155.82 EUR/MWh (80th-pctile) \u2014 GB premium reflects isolation and intra-day constraint; vulnerable to renewable swings (daily change -41.33% on renewables).",
+    "Romanian Black Sea platform drone strike signals hybrid-warfare escalation on EU gas; knock-on TTF uplift if production disrupted; no quantified outage timeline yet.",
+    "Danube water crisis forces inland coal transport via costlier rail/truck; coal at 96 USD/t (7th-pctile, data stale Dec 26) masks regional supply tightness and hidden thermal cost inflation."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-3% to +2%",
+      "summary": "Storage recovery modest; heatwave persists; Romanian platform stabilizes; US LNG growth dampens TTF baseline.",
+      "ttf_pct": "-2% to +3%"
+    },
+    "downside": {
+      "de_power_pct": "-8% to -5%",
+      "summary": "Romanian platform damage minimal; Danube recovers; US shale LNG accelerates; heatwave breaks and rainfall returns; storage refill pace accelerates.",
+      "ttf_pct": "-6% to -12%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5% to +12%",
+      "summary": "Romanian offshore production outage confirmed; Danube barge transport halts; OPEC+ announces surprise supply cuts; heatwave extends.",
+      "ttf_pct": "+8% to +15%"
+    }
+  },
+  "themes": [
+    "GB power spike amid tight EU storage and heating demand",
+    "Geopolitical supply threats: Romanian offshore gas, Iran sanctions",
+    "Danube drought forces coal-to-gas fuel switch; heatwave strains hydro",
+    "US shale LNG expansion bearish baseline; TTF at 74th-pctile on weather/sanctions upside"
+  ],
+  "top_drivers": [
+    "GB power at 92nd-pctile and DE power at 80th-pctile driven by tight EU storage (63% vs 80% seasonal norm), heatwave-constrained hydro, and Danube drought forcing coal-to-gas fuel switch.",
+    "Geopolitical supply risks: Romanian Black Sea platform drone strike and escalating Iran sanctions create upside tail on TTF via direct gas disruption and crude-LNG arb feedback.",
+    "US Permian shale LNG ramp and weak renewable share (43%, down 41.33% daily) provide baseline downside offset; coal at 7th-pctile reflects transportation and merit-order erosion from cheap gas displacement."
+  ],
+  "top_takeaway": "GB Power at 92nd-percentile amid EU storage 17pp below seasonal; Romanian drone threat and Danube drought create gas/coal supply risks offsetting bearish US shale LNG expansion.",
+  "watchlist": [
+    {
+      "metric": "Romanian offshore gas platform status",
+      "why": "Direct EU supply threat; drone attack signals hybrid warfare risk; production restart timeline and damage assessment will drive TTF risk premium and intra-EU flow allocation."
+    },
+    {
+      "metric": "Danube water levels and coal barge logistics",
+      "why": "Low-water transport restrictions force fuel-switch to gas and pricier alternatives; Central European power margin compression; recovery timeline critical for Q4 thermal dispatch economics."
+    },
+    {
+      "metric": "Iran sanctions regime and OPEC+ response",
+      "why": "Tighter Iran sanctions could support Brent, feeding crude-linked LNG arbs and potentially TTF uplift; OPEC+ meeting response (supply cuts vs. demand destruction) determines net oil-to-gas transmission."
+    },
+    {
+      "metric": "European heatwave/drought relief and hydro recovery",
+      "why": "Sustained heat reduces hydro output and thermal cooling capacity; peaking plant dispatch tightens DA/ID spreads; wildfires risk transmission outages; relief timeline shapes power curve shape and regional scarcity rent."
+    },
+    {
+      "metric": "US Permian shale production and LNG export ramp",
+      "why": "Higher US LNG supply capacity increases Atlantic arbitrage pressure on TTF; bearish baseline for EU gas and gas-fired power margins; export volumes and vessel availability lag supply growth, creating near-term upside volatility."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Fri",
+      "name": "OPEC+ ministerial meeting (assumed imminence)",
+      "why": "Iran sanctions and crude supply dynamics will shape OPEC+ cut response; outcome feeds LNG arb and TTF risk premium for weeks ahead."
+    }
+  ]
+}

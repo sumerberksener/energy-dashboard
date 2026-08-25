@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Escalating US Iran sanctions and hybrid threats to Romanian offshore gas infrastructure; European heatwaves and Danube drought threaten hydropower and cooling.",
+  "themes": [
+    {
+      "headline": "Romanian offshore gas platform targeted by drone; Moscow blamed",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Direct threat to Romania's offshore gas production (Black Sea platform). Hybrid warfare risk could disrupt EU gas supply; pressure on TTF via reduced intra-EU gas availability and forced reliance on LNG.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/romania-jet-blasts-drone-near-offshore-gas-production-platform/"
+    },
+    {
+      "headline": "Danube drying up; EU lacks contingency plan for inland water transport",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "coal",
+      "polarity": "bullish-power",
+      "why_it_matters": "Low Danube water levels restrict barge transport of coal to thermal plants; forces fuel switching to gas and costlier alternatives. Risks regional power tightness, especially Central Europe.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/the-danube-is-drying-up-europe-still-has-no-plan/"
+    },
+    {
+      "headline": "Trump administration tightens Iran economic sanctions; production and export risk",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Stricter Iran sanctions could suppress global crude supply, supporting Brent. Higher oil prices feed into EU gas LNG arbs (crude-linked LNG from Atlantic cheaper); potential TTF uplift if OPEC+ cuts offset demand destruction.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/08/18/there-no-breaking-point-problem-with-trumps-plan-teconomically-strangle-iran-01040781"
+    },
+    {
+      "headline": "European heatwaves and wildfires; EU calls for climate-resilience capex spending",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sustained heat reduces hydro output and cooling capacity for thermal/nuclear plants. Forces peaking plant dispatch; tightens DA/ID markets. Wildfires risk transmission line damage and supply disruptions across Southern/Central Europe.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-climate-adaptation-spending-wopke-hoekstra-wildfires-heat-waves/"
+    },
+    {
+      "headline": "Permian super-lateral wells boost US shale crude and gas output",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher US shale production increases LNG export capacity; expands supply to Europe. Lower LNG prices weaken TTF, eroding gas-fired power margins and power prices in EU baseload.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=67984"
+    }
+  ],
+  "watchlist": [
+    "Romanian offshore platform security status and production continuity updates",
+    "Danube water-level recovery forecasts; coal barge transport reopening timeline",
+    "Iranian crude export flows under new sanctions; OPEC+ meeting response",
+    "European heatwave/drought relief timeline; hydropower reservoir refill outlook"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
