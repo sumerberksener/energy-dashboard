@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 98th-percentile of 5-yr range \u2014 historically high; Renewables \u2014 95th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 245,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 240,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 240,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-08-28",
+      "available": true,
+      "daily_change_abs": 15.78,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.06,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -7.85,
+      "monthly_change_abs": -6.13,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 42.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 6.02
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 245,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-08-28",
+      "available": true,
+      "daily_change_pct": 12.6,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.72,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 141.01,
+      "monthly_change_pct": 15.51,
+      "name": "DE Power",
+      "percentile_rank_5y": 76.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.01
+    },
+    "eua": {
+      "as_of": "2026-08-27",
+      "available": true,
+      "daily_change_pct": -0.29,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.01,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.42,
+      "monthly_change_pct": 2.93,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.7
+    },
+    "gb_power": {
+      "as_of": "2026-08-28",
+      "available": true,
+      "daily_change_pct": -11.71,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.93,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 168.03,
+      "monthly_change_pct": 31.71,
+      "name": "GB Power",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 13.29
+    },
+    "renewable_share": {
+      "as_of": "2026-08-27",
+      "available": true,
+      "daily_change_pct": 31.95,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.16,
+      "headline": "95th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 76.0,
+      "monthly_change_pct": 19.47,
+      "name": "Renewables",
+      "percentile_rank_5y": 95.0,
+      "unit": "% of load",
+      "weekly_change_pct": 35.03
+    },
+    "storage": {
+      "as_of": "2026-08-27",
+      "available": true,
+      "daily_change_pct": 0.42,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.74,
+      "headline": "17.2 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 64.08,
+      "monthly_change_pct": 9.91,
+      "name": "EU Storage",
+      "percentile_rank_5y": 44.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.35
+    },
+    "ttf": {
+      "as_of": "2026-08-27",
+      "available": true,
+      "daily_change_pct": 3.76,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.54,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 68.1,
+      "monthly_change_pct": 12.7,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 74.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 6.02
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU climate policy intensifies amid summer extremes; Norway pushes Arctic drilling; Iran sanctions tighten; Romania reports hybrid warfare at gas platform.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Romanian offshore gas platform targeted by drone; Moscow blamed hybrid warfare",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/romania-jet-blasts-drone-near-offshore-gas-production-platform/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Direct threat to Black Sea gas production (Romania key supplier). Platform disruption cuts gas flow into EU, tightens supply, raises TTF and power margins via fuel scarcity."
+      },
+      {
+        "commodity": "power",
+        "headline": "Danube drought escalates; EU lacks contingency for river-dependent hydropower, cooling",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/the-danube-is-drying-up-europe-still-has-no-plan/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Danube drying constrains nuclear plant cooling and hydroelectric output across Central/Eastern Europe. Reduces power supply elasticity; forces fuel switching to gas or coal, lifting Cal+1 and power spreads."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "France budget crunch from heat wave; rethinking climate and energy investment plans",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/france-climate-change-problem-budget/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "France fiscal constraints may slow nuclear reinvestment or renewable buildout. Weaker capex in EU's largest baseload producer could ease longer-term power supply but near-term policy uncertainty risks subsidy delays."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Bessent announces fresh sanctions on Iran; war enters sixth month",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/08/24/bessent-iran-economy-01047365",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Tighter Iran sanctions reduce LNG supply from non-OPEC peers; redirects global LNG flows. Indirect TTF pressure via reduced spot LNG availability to Europe, especially if US LNG exports rise into gap."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Libya ramps fossil fuel output to fill energy void left by Hormuz instability",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/libya-wants-to-fill-the-european-energy-void-left-by-hormuz-says-oil-minister/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Increased Libyan crude exports ease global oil supply; lower Brent pressure reduces fuel-oil power generation cost in Europe. Marginal bearish-power effect via lower generation spreads, but political instability creates execution risk."
+      }
+    ],
+    "watchlist": [
+      "Von der Leyen State of the Union speech \u2014 climate & AI focus; watch for EU ETS, carbon tariff signaling.",
+      "Industrial Accelerator Act finalization \u2014 France\u2013Germany divergence on clean industry subsidy & carbon rules.",
+      "Norway Arctic drilling approval \u2014 EU energy security vs. climate tensions; LNG/gas policy implications.",
+      "Danube water levels & nuclear/hydro output forecasts \u2014 risk trigger for Central European power tightness."
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal and Clean Dark data stale (240\u2013245 days old; as-of 2025-12-26 and 2025-12-31). Coal at 7th-percentile and Clean Dark at 27.95 EUR/MWh not current; do not trade off these prices. All other metrics current as of 2026-08-27 to 2026-08-28.",
+  "risk_flags": [
+    "Romanian offshore platform under hybrid-warfare attack; sustained disruption cuts 5\u20138% of EU gas inflow and forces TTF higher into refill season.",
+    "Danube drought escalates: nuclear cooling constraints (France, Germany, Romania) + hydropower shortfall (Central Europe) reduce non-gas supply by ~3\u20135 GW equivalent, forcing coal or TTF burn.",
+    "Storage 17 pp below seasonal norm; refill pace from September onward will determine Q4 power volatility and fuel-switch window width.",
+    "GB Power 98th-percentile (168 EUR/MWh) on 13.3% weekly surge suggests transmission stress or interconnector outage; elevated tail-risk into autumn."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12\u20134%",
+      "summary": "Renewables sustain 70%+ penetration; storage drifts toward seasonal norm; no new supply disruption.",
+      "ttf_pct": "\u00b11\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "\u22126\u201312%",
+      "summary": "Romanian platform operational restored; Danube levels stabilize; renewables extend into 80%+; storage injection accelerates.",
+      "ttf_pct": "\u22124\u20138%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8\u201315%",
+      "summary": "Romanian platform offline sustained 1\u20132 weeks; Danube nuclear derating announced; TTF fuel-switch premium reasserts.",
+      "ttf_pct": "+7\u201312%"
+    }
+  },
+  "themes": [
+    "Renewables at 95th-percentile suppress marginal cost; thermal call inverted",
+    "Geopolitical supply risk: Black Sea gas disruption + Danube drought tightens Cal+1",
+    "GB power premium (168 EUR/MWh) signals isolation and nuclear/hydro stress",
+    "Storage deficit (64% vs seasonal 81%) limits flexibility into autumn"
+  ],
+  "top_drivers": [
+    "Renewables at 95th-percentile (76% load share) suppress marginal cost today; but storage deficit + Danube drought reduce non-gas supply elasticity into Q4.",
+    "Geopolitical supply risk cluster: Black Sea gas sabotage + Iran sanctions tighten LNG arb; TTF upside into autumn refill.",
+    "GB Power 98th-percentile (168 EUR/MWh) signals thermal stress and interconnector constraint; premium widens if Danube cooling cuts France/Germany supply."
+  ],
+  "top_takeaway": "GB Power at 98th-percentile amid 76% renewable penetration masks Danube drought and Romanian gas-platform sabotage risk; storage 17 pp below seasonal average sets H2 fuel-switch trigger.",
+  "watchlist": [
+    {
+      "metric": "Romanian Black Sea platform operational status",
+      "why": "Direct gas-flow loss into EU; 1\u20132% TTF upside per week of production disruption."
+    },
+    {
+      "metric": "Danube water levels and nuclear plant derating forecasts",
+      "why": "Cooling constraints reduce non-gas baseload by 2\u20134 GW; forces fuel switching, tightens thermal margins into Q4."
+    },
+    {
+      "metric": "GB interconnector availability and French nuclear outage calendar",
+      "why": "GB Power premium (98th-percentile) reflects supply tightness; any mainland supply loss widens GB-DE spread further."
+    },
+    {
+      "metric": "EU gas storage refill pace (daily injections)",
+      "why": "At 64% full vs. 81% seasonal, slow refill (< 2% weekly) prolongs fuel-switch window and extends TTF upside into autumn."
+    },
+    {
+      "metric": "Iran sanctions enforcement and US LNG export response",
+      "why": "Tighter Iran LNG cuts competition for European spot LNG; US export surge into EU would ease TTF but signals geopolitical premium embedded."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "Von der Leyen State of the Union speech",
+      "why": "Carbon tariff (CBAM) signaling and ETS supply messaging could shift EUA outlook and thermal dispatch incentives."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU climate policy intensifies amid summer extremes; Norway pushes Arctic drilling; Iran sanctions tighten; Romania reports hybrid warfare at gas platform.",
+  "themes": [
+    {
+      "headline": "Romanian offshore gas platform targeted by drone; Moscow blamed hybrid warfare",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Direct threat to Black Sea gas production (Romania key supplier). Platform disruption cuts gas flow into EU, tightens supply, raises TTF and power margins via fuel scarcity.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/romania-jet-blasts-drone-near-offshore-gas-production-platform/"
+    },
+    {
+      "headline": "Danube drought escalates; EU lacks contingency for river-dependent hydropower, cooling",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Danube drying constrains nuclear plant cooling and hydroelectric output across Central/Eastern Europe. Reduces power supply elasticity; forces fuel switching to gas or coal, lifting Cal+1 and power spreads.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/the-danube-is-drying-up-europe-still-has-no-plan/"
+    },
+    {
+      "headline": "France budget crunch from heat wave; rethinking climate and energy investment plans",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "France fiscal constraints may slow nuclear reinvestment or renewable buildout. Weaker capex in EU's largest baseload producer could ease longer-term power supply but near-term policy uncertainty risks subsidy delays.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/france-climate-change-problem-budget/"
+    },
+    {
+      "headline": "Bessent announces fresh sanctions on Iran; war enters sixth month",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Tighter Iran sanctions reduce LNG supply from non-OPEC peers; redirects global LNG flows. Indirect TTF pressure via reduced spot LNG availability to Europe, especially if US LNG exports rise into gap.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/24/bessent-iran-economy-01047365"
+    },
+    {
+      "headline": "Libya ramps fossil fuel output to fill energy void left by Hormuz instability",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Increased Libyan crude exports ease global oil supply; lower Brent pressure reduces fuel-oil power generation cost in Europe. Marginal bearish-power effect via lower generation spreads, but political instability creates execution risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/libya-wants-to-fill-the-european-energy-void-left-by-hormuz-says-oil-minister/"
+    }
+  ],
+  "watchlist": [
+    "Von der Leyen State of the Union speech — climate & AI focus; watch for EU ETS, carbon tariff signaling.",
+    "Industrial Accelerator Act finalization — France–Germany divergence on clean industry subsidy & carbon rules.",
+    "Norway Arctic drilling approval — EU energy security vs. climate tensions; LNG/gas policy implications.",
+    "Danube water levels & nuclear/hydro output forecasts — risk trigger for Central European power tightness."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
