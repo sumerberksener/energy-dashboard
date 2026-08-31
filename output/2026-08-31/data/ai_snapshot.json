@@ -1,0 +1,168 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 96th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 17.0 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 248,
+        "key": "coal"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "available": false
+    },
+    "clean_spark": {
+      "available": false
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 248,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "available": false
+    },
+    "eua": {
+      "as_of": "2026-08-28",
+      "available": true,
+      "daily_change_pct": 1.16,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.66,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.82,
+      "monthly_change_pct": 3.42,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 51.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.7
+    },
+    "gb_power": {
+      "as_of": "2026-08-31",
+      "available": true,
+      "daily_change_pct": -11.03,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.69,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 163.54,
+      "monthly_change_pct": 17.61,
+      "name": "GB Power",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 16.97
+    },
+    "renewable_share": {
+      "available": false
+    },
+    "storage": {
+      "as_of": "2026-08-29",
+      "available": true,
+      "daily_change_pct": 0.56,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.76,
+      "headline": "17.0 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 64.73,
+      "monthly_change_pct": 10.05,
+      "name": "EU Storage",
+      "percentile_rank_5y": 45.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.32
+    },
+    "ttf": {
+      "as_of": "2026-08-28",
+      "available": true,
+      "daily_change_pct": -1.64,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.36,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 66.98,
+      "monthly_change_pct": 15.12,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 74.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 4.9
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Von der Leyen Commission pivoting toward climate/AI/industrial policy; Norway escalates Arctic drilling push; US tightens Iran sanctions amid regional instability.",
+    "themes": [
+      {
+        "commodity": "carbon",
+        "headline": "EU Industrial Accelerator Act: France-Germany split on clean manufacturing",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/europes-debate-over-how-to-boost-clean-manufacturing-is-about-to-heat-up/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Framework dispute over carbon regulation and industrial subsidies directly affects EUA demand signals, power-intensive production costs, and competitiveness of EU power-to-X / decarbonization capex."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Norway escalates Arctic oil and gas drilling push against EU climate moralizing",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/norway-eu-arctic-oil-gas-drilling-energy-security/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Norwegian supply expansion threatens EU gas scarcity premium; increased Arctic volumes could cap TTF winter prices and reduce incentive for LNG imports and power-to-gas conversion."
+      },
+      {
+        "commodity": "crude",
+        "headline": "US tightens Iran sanctions; Trump administration escalates economic pressure campaign",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/08/24/bessent-iran-economy-01047365",
+        "polarity": "bullish-power",
+        "source": "Politico",
+        "tag": "geopolitics",
+        "why_it_matters": "Intensified Iran sanctions risk crude supply shocks; indirect EU exposure via LNG arbitrage (tighter global oil market compresses LNG-to-EU economics, supporting TTF via lower displacement)."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Dangote refinery boosts Nigeria petroleum product exports sevenfold since 2023",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68004",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Increased African refined product supply eases global oil tightness, moderating crude and refined fuel costs; lower heating oil / diesel prices reduce EU power plant fuel-switch incentives."
+      },
+      {
+        "commodity": "power",
+        "headline": "EU climate chief warns of mounting disaster costs from summer heat, drought, wildfires",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-climate-adaptation-spending-wopke-hoekstra-wildfires-heat-waves/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Repeat weather extremes (droughts, heatwaves, fires) underscore hydro scarcity and cooling demand risk; signals toward massive climate-adaptation spend that may compete with grid resilience / storage capex."
+      }
+    ],
+    "watchlist": [
+      "Von der Leyen State of the Union speech (climate & AI pillars) \u2014 watch for decarbonization spending targets, power-to-X roadmap updates.",
+      "EU Industrial Accelerator Act negotiation outcome (France-Germany carbon regulation friction) \u2014 may reshape EUA floor / cap-and-trade design.",
+      "Iranian sanctions escalation timeline \u2014 monitor for crude supply shocks and LNG arbitrage repricing.",
+      "Norwegian Arctic drilling permits & timeline \u2014 assess impact on European gas contract curves (winter 26\u201327 premiums)."
+    ]
+  }
+}

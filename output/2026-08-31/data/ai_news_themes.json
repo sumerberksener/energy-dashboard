@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Von der Leyen Commission pivoting toward climate/AI/industrial policy; Norway escalates Arctic drilling push; US tightens Iran sanctions amid regional instability.",
+  "themes": [
+    {
+      "headline": "EU Industrial Accelerator Act: France-Germany split on clean manufacturing",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Framework dispute over carbon regulation and industrial subsidies directly affects EUA demand signals, power-intensive production costs, and competitiveness of EU power-to-X / decarbonization capex.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/europes-debate-over-how-to-boost-clean-manufacturing-is-about-to-heat-up/"
+    },
+    {
+      "headline": "Norway escalates Arctic oil and gas drilling push against EU climate moralizing",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Norwegian supply expansion threatens EU gas scarcity premium; increased Arctic volumes could cap TTF winter prices and reduce incentive for LNG imports and power-to-gas conversion.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/norway-eu-arctic-oil-gas-drilling-energy-security/"
+    },
+    {
+      "headline": "US tightens Iran sanctions; Trump administration escalates economic pressure campaign",
+      "source": "Politico",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Intensified Iran sanctions risk crude supply shocks; indirect EU exposure via LNG arbitrage (tighter global oil market compresses LNG-to-EU economics, supporting TTF via lower displacement).",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/24/bessent-iran-economy-01047365"
+    },
+    {
+      "headline": "Dangote refinery boosts Nigeria petroleum product exports sevenfold since 2023",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased African refined product supply eases global oil tightness, moderating crude and refined fuel costs; lower heating oil / diesel prices reduce EU power plant fuel-switch incentives.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68004"
+    },
+    {
+      "headline": "EU climate chief warns of mounting disaster costs from summer heat, drought, wildfires",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "neutral",
+      "why_it_matters": "Repeat weather extremes (droughts, heatwaves, fires) underscore hydro scarcity and cooling demand risk; signals toward massive climate-adaptation spend that may compete with grid resilience / storage capex.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-climate-adaptation-spending-wopke-hoekstra-wildfires-heat-waves/"
+    }
+  ],
+  "watchlist": [
+    "Von der Leyen State of the Union speech (climate & AI pillars) — watch for decarbonization spending targets, power-to-X roadmap updates.",
+    "EU Industrial Accelerator Act negotiation outcome (France-Germany carbon regulation friction) — may reshape EUA floor / cap-and-trade design.",
+    "Iranian sanctions escalation timeline — monitor for crude supply shocks and LNG arbitrage repricing.",
+    "Norwegian Arctic drilling permits & timeline — assess impact on European gas contract curves (winter 26–27 premiums)."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 11,
+  "error": null
+}

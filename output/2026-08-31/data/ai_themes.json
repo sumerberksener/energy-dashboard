@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU Industrial Accelerator Act: France-Germany split on clean manufacturing carbon regulation and industrial subsidy design.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Framework dispute over EUA floor/cap, free allocations, and decarbonization capex incentives directly affects power-to-X and industrial fuel-switch economics; outcome shapes 2027+ EUA demand curve."
+  },
+  "freshness_caveat": "Coal data is 248 days stale (as of 2025-12-26); merit-order displacement vs gas cannot be confirmed with current data. All other metrics current or near-current (0\u20133 days old).",
+  "risk_flags": [
+    "Coal data 248 days old (as of 2025-12-26); cannot confirm current merit-order displacement vs gas.",
+    "GB Power at 163.54 EUR/MWh (96th-pctile) but down 11.03% intraday \u2014 reversal risk if demand softens or renewables improve.",
+    "EU Storage 17pp below 5-yr seasonal suggests tight H4 refill window; winter 26\u201327 premium at risk if LNG flows disrupted by Iran sanctions.",
+    "Norway Arctic drilling expansion threatens European gas scarcity premium; volumes could cap TTF winter curve."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "unavailable",
+      "summary": "GB remains elevated but stabilizes; TTF firm on storage deficit; Iran sanctions priced in gradually.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "unavailable",
+      "summary": "Iran sanctions relaxed or Russian LNG reroute; Norwegian supply materializes; Dangote product glut; demand softens.",
+      "ttf_pct": "\u22126-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "unavailable",
+      "summary": "Iran crude supply disruption escalates; LNG flows tighten; GB supply shock (outage or cold front); storage refill stalls.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB Power extreme tightness vs continental softness",
+    "Storage deficit extending into winter refill season",
+    "Geopolitical premium on crude/LNG offset by African refined supply",
+    "EU industrial-policy carbon-regulation uncertainty"
+  ],
+  "top_drivers": [
+    "GB Power extreme (96th-pctile) driven by insular supply/demand imbalance or transmission bottleneck; intraday reversal (\u221211.03%) signals volatility.",
+    "Storage deficit (17pp below seasonal) and TTF firm (74th-pctile, +15.12% monthly) set up tight winter refill scenario; LNG import dependency exposed to Iran sanctions risk.",
+    "Geopolitical premium (Iran sanctions, Norway Arctic drilling) partially offset by Dangote refinery supply easing global crude, reducing EU power fuel-switch incentives."
+  ],
+  "top_takeaway": "GB Power at 96th-percentile; EU storage 17pp below seasonal; TTF firm but coal data stale. Geopolitical tail-risks (Iran sanctions, Norway Arctic) offset by Dangote refinery supply easing.",
+  "watchlist": [
+    {
+      "metric": "GB-DE Power Spread",
+      "why": "GB at 96th-pctile vs unavailable DE data; widening suggests insular supply tightness or transmission constraint."
+    },
+    {
+      "metric": "Iran Sanctions Escalation",
+      "why": "Trump administration tightens sanctions; crude supply shock would compress LNG-to-EU arb, support TTF via lower displacement risk."
+    },
+    {
+      "metric": "Norwegian Arctic Drilling Permits",
+      "why": "Supply expansion timeline critical for winter 26\u201327 gas curve pricing; months-ahead horizon but sets strategic scarcity narrative."
+    },
+    {
+      "metric": "EU Storage Refill Pace",
+      "why": "Currently 64.73% (17pp below seasonal); H4 injection rate will determine winter 26\u201327 front-month volatility and LNG nomination strategy."
+    },
+    {
+      "metric": "Dangote Refinery African Exports",
+      "why": "Sevenfold product export increase since 2023 eases global oil tightness; bearish power via reduced fuel-switch incentive."
+    }
+  ],
+  "watchlist_dated": []
+}
