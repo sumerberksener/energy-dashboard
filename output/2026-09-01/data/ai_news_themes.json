@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US-Iran escalation and Hormuz tensions threaten crude/LNG supply routes; EU diplomacy stalled. Libya ramping production to fill void.",
+  "themes": [
+    {
+      "headline": "US-Iran military strikes escalate; Hormuz shipping corridor threatened",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Strait of Hormuz disruption risk raises crude prices, pressuring EU power fuel-switch economics and heating cost pass-through into 2026-27 power forwards.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/08/31/donald-trump-iran-strikes-01057142"
+    },
+    {
+      "headline": "Libya targets European energy void from Hormuz geopolitical premium",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased Libyan crude flows to EU displace priced-in risk premium, lowering marginal fuel cost for EU power generation; offsets some Hormuz upside risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/libya-wants-to-fill-the-european-energy-void-left-by-hormuz-says-oil-minister/"
+    },
+    {
+      "headline": "Norway pushes EU for Arctic oil/gas drilling amid declining output",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Norwegian gas supply critical for winter 2026-27 EU baseload. Arctic expansion signals intent to maintain export volumes; reduces LNG import dependency and TTF price risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/norway-eu-arctic-oil-gas-drilling-energy-security/"
+    },
+    {
+      "headline": "Data center demand expansion in EU drives incremental power load debate",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Growing data-center load (Google Austria case) structurally raises EU peak demand; supports forward curve and reduces need for demand destruction via high prices.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/power-hungry-data-centers-are-expanding-in-europe-so-is-the-resistance/"
+    },
+    {
+      "headline": "France-Germany Industrial Accelerator Act dispute over carbon rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Regulatory clarity on ETS/carbon cost allocation to heavy industry affects EU ETS forward pricing and power-to-hydrogen arbitrage incentives; policy outcome TBD.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/europes-debate-over-how-to-boost-clean-manufacturing-is-about-to-heat-up/"
+    }
+  ],
+  "watchlist": [
+    "Hormuz shipping incident or Strait closure; immediate crude/power spike risk.",
+    "EU Commission von der Leyen State of Union speech (climate/energy priorities); policy signalling on ETS, decarbonization pace.",
+    "Libya crude export ramping timeline and EU import share data.",
+    "Norway Arctic drilling permit decision and first-gas timelines."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

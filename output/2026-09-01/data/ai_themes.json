@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "France-Germany Industrial Accelerator Act disputes carbon cost allocation to heavy industry; ETS regulatory clarity TBD, affecting hydrogen arbitrage incentives.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Outcome determines whether carbon cost pass-through to power or hydrogen shifts marginal dispatch incentives; ETS forward pricing and decarbonization investment pace hinge on ruling."
+  },
+  "freshness_caveat": "Coal metric stale as of 26 Dec 2025 (249 days old); current fuel-switch economics and merit-order dispatch unconfirmed. GB Power, TTF, EUA, and Storage all current (0\u20132 days old).",
+  "risk_flags": [
+    "Strait of Hormuz disruption would spike crude >USD 100/bbl, lifting EU power marginal fuel cost 5\u20138 EUR/MWh and forcing coal back into merit order.",
+    "EU storage at 65.1% full, 16.8 pp below seasonal \u2014 winter 2026-27 refill pace will set H2 power curve; any LNG supply shock now cascades.",
+    "GB power at 165.91 EUR/MWh (97th pctile) vs EU power unavailable \u2014 GB-DE spread widening historically; supply-side constraint or demand divergence warrants investigation.",
+    "Coal data stale since 26 Dec 2025 (249 days old); current dispatch economics unconfirmed \u2014 cannot assess fuel-switch regime with confidence."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "unavailable",
+      "summary": "Hormuz risk priced into TTF; Libya ramp offsets. Storage refill gradual; GB premium persists.",
+      "ttf_pct": "+1\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "-3\u20135%",
+      "summary": "Hormuz tensions ease; Libya ramp accelerates. EU power supply slack emerges; storage refill normalizes.",
+      "ttf_pct": "-4\u20136%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+5\u20138%",
+      "summary": "Hormuz shipping incident or Strait closure; crude spikes. EU thermal dispatch forced; Libya ramp insufficient offset.",
+      "ttf_pct": "+8\u201312%"
+    }
+  },
+  "themes": [
+    "Hormuz escalation premium pressuring thermal dispatch",
+    "GB power regime shift \u2014 extended strength vs EU",
+    "Storage deficit ahead of winter \u2014 refill pace critical",
+    "Libyan crude ramping offsets geopolitical upside",
+    "Data-center load growth structurally supporting power forwards"
+  ],
+  "top_drivers": [
+    "Hormuz geopolitical escalation raising crude and thermal fuel cost; TTF +4.2% on tail risk; Libya ramping provides mechanical offset.",
+    "GB power at 97th percentile (165.91 EUR/MWh) signals acute GB supply-side or demand regime shift vs EU; storage deficit (16.8 pp below seasonal) tightening winter forwards.",
+    "Data-center structural demand growth in EU (Google Austria, others) supporting power curve and reducing downside risk from demand destruction."
+  ],
+  "top_takeaway": "GB power at 97th percentile, TTF +4.2% on Hormuz geopolitics, EU storage 16.8 pp below seasonal \u2014 thermal premium is entrenched; Libya offset provides upside relief.",
+  "watchlist": [
+    {
+      "metric": "Hormuz Strait closure or shipping incident",
+      "why": "Immediate crude spike triggers EU thermal dispatch upside; TTF already pricing 4\u20136% risk premium on geopolitical tail."
+    },
+    {
+      "metric": "EU storage refill pace \u2014 Sep\u2013Oct 2026",
+      "why": "At 16.8 pp below seasonal, any LNG supply disruption or demand overshoot will force winter 2026-27 power curve higher; backstop for Cal+1 supports."
+    },
+    {
+      "metric": "Libya crude export ramp to EU \u2014 volume & timing",
+      "why": "Offsetting mechanism for Hormuz premium; rising Libyan barrels lower marginal fuel cost and ease power upside relief, reducing geopolitical tail risk."
+    },
+    {
+      "metric": "Norway Arctic drilling permit and FID timeline",
+      "why": "Gas supply continuity into 2027 reduces EU LNG import dependency; permit approval signals TTF downside structural relief vs spot scarcity pricing."
+    },
+    {
+      "metric": "EU data-center load expansion \u2014 Google Austria capex/location decisions",
+      "why": "Structural demand growth into 2027 supports forward power curve; reduces deflationary pressure from demand destruction, raising peak-hour marginal value."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "EU Commission von der Leyen State of Union speech",
+      "why": "Climate and energy priorities signalling; ETS policy direction affects carbon-to-power transmission and 2027 power forwards."
+    }
+  ]
+}
