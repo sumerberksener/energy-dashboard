@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (250 days old); 7th-percentile signal cannot be relied upon for current merit-order dispatch analysis. All other metrics current (\u22642 days).",
+  "risk_flags": [
+    "Coal data 250 days stale (as of 2025-12-26); 7th percentile signal unreliable for today's merit-order dispatch.",
+    "GB Power +36.6% daily move to 100th percentile suggests forced nuclear or transmission constraint; watch for unwinding volatility.",
+    "EU storage 65.39% full, 16.7 pp below seasonal: refill pace critical to Cal+1 gas floor; Hormuz supply loss could breach winter adequacy.",
+    "TTF +3.45% daily on geopolitical premium; US LNG +23% H1 supply growth creates asymmetric downside if Hormuz tensions ease."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "TTF holds 70\u201375 EUR/MWh on Hormuz premium and storage fill; GB Power moderates to 120\u2013150 EUR/MWh if nuclear capacity normalizes.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-5-10%",
+      "summary": "Libya crude production ramps and fills European crude gap; Hormuz tensions ease diplomatically. US LNG supply floods market; TTF weakens to 60\u201365 EUR/MWh.",
+      "ttf_pct": "-8-12%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+8-15%",
+      "summary": "Hormuz strait closure or major LNG force majeure announced; EU nuclear further derated by heat. TTF bulls +12\u201318%, GB Power extends 150\u2013200 EUR/MWh.",
+      "ttf_pct": "+12-18%"
+    }
+  },
+  "themes": [
+    "GB power extremes and EU nuclear supply risk",
+    "Hormuz escalation vs. US LNG headwinds",
+    "Storage 16.7 pp below seasonal; winter fill acceleration underway",
+    "Data center demand structural bid for power and carbon"
+  ],
+  "top_drivers": [
+    "GB Power 100th percentile (193.84 EUR/MWh) reflects EU nuclear constrained by heat-driven cooling limits and Hormuz geopolitical supply risk premium.",
+    "TTF 75th percentile (72.22 EUR/MWh) +3.45% daily gains on Hormuz escalation offsetting US LNG +23% H1 supply growth; storage refill urgency rising.",
+    "EU Storage 16.7 pp below seasonal norm (65.39% full) locks in winter fill urgency; Hormuz disruption would threaten adequacy, supporting TTF floor and Cal+1 gas premium."
+  ],
+  "top_takeaway": "GB Power at 100th percentile (193.84 EUR/MWh) amid EU nuclear constraints and Hormuz escalation; TTF 75th percentile (72.22 EUR/MWh) supported by geopolitical premium despite US LNG growth.",
+  "watchlist": [
+    {
+      "metric": "Hormuz chokepoint escalation",
+      "why": "Direct Strait closure risk would constrain global LNG to EU and lift TTF 8\u201315%; track weekly for force majeure announcements."
+    },
+    {
+      "metric": "US LNG nameplate capacity Q3\u2013Q4 2026",
+      "why": "Additional Bcf/d online would compress TTF backwardation and cap winter storage refill premium; monitor for commissioning delays."
+    },
+    {
+      "metric": "EU nuclear outage calendar (summer heat-driven derates)",
+      "why": "Forced or derated capacity feeds power DA spikes; watch France/Germany/Belgium for thermal plant cycling and GB import dependencies."
+    },
+    {
+      "metric": "EU data center permitting (Austria, Netherlands)",
+      "why": "Regulatory clarity on local power supply commitments unlocks structural demand bid for DA power and carbon curve lift."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "von der Leyen State of the Union",
+      "why": "Likely climate/AI investment signals; may drive carbon and power demand rhetoric expectations into curve."
+    }
+  ]
+}

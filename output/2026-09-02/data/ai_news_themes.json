@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US-Iran escalation and Hormuz diplomacy collapse heighten crude/LNG supply risk; EU nuclear constrained by climate; US LNG export growth may moderate TTF upside.",
+  "themes": [
+    {
+      "headline": "US-Iran military escalation; Trump promises further strikes on Iran",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz closure risk directly constrains global LNG supply to EU. Higher crude/oil prices reduce power generation fuel-switching benefit; tightens gas arb to LNG, supporting TTF floor.",
+      "horizon": "days",
+      "link": "https://www.politico.com/news/2026/08/31/donald-trump-iran-strikes-01057142?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Europe nuclear capacity threatened by rising temperatures and cooling constraints",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Nuclear outages (forced or derated) during summer heat reduce baseload supply; pushes power prices up and gas into power-gen. Direct DA spread and seasonal Cal+1 risk on Nordic/CEE.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/climate-change-threatens-europe-nuclear-renaissance/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US LNG exports rose 23% H1 2026 to 17.4 Bcf/d; higher capacity utilization",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher US LNG supply increases arbitrage flows to NW Europe, pressures TTF downside and reduces near-term gas-to-power premium. Cal+1 / winter storage fill accelerated.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id="
+    },
+    {
+      "headline": "Power-hungry EU data centers expanding; local opposition and zoning delays grow",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Persistent structural demand growth in power (AI/cloud) supports bull case for power and carbon. Delays or denials increase grid stress risk; upside DA spreads, especially CEE/AT.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/power-hungry-data-centers-are-expanding-in-europe-so-is-the-resistance/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Libya targets European energy void amid Hormuz risk and rising production",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "If Libya stabilizes crude/condensate export, reduces Hormuz single-point-of-failure premium and LNG supply urgency. Lower crude prices, weaker fuel-switch appeal, bearish near-curve power.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/libya-wants-to-fill-the-european-energy-void-left-by-hormuz-says-oil-minister/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "von der Leyen State of the Union speech — likely to signal climate/AI investment urgency; watch for power demand/carbon price rhetoric.",
+    "Hormuz chokepoint escalation trajectory — track strait closures, sanctions scope, LNG force majeure announcements (weekly).",
+    "US LNG nameplate additions Q3–Q4 2026 — additional Bcf/d online; monitor for TTF backwardation compression.",
+    "EU data center permitting decisions (Austria, Netherlands) — regulatory clarity on power supply commitments may unlock demand acceleration."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
