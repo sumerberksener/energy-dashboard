@@ -1,0 +1,199 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 96th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 93th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 251,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 246,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 246,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-09-03",
+      "available": true,
+      "daily_change_abs": 37.76,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 1.92,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 41.04,
+      "monthly_change_abs": 27.42,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 93.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 8.5
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 251,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-09-03",
+      "available": true,
+      "daily_change_pct": 23.1,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.63,
+      "headline": "extended 2.6\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 201.22,
+      "monthly_change_pct": 36.82,
+      "name": "DE Power",
+      "percentile_rank_5y": 88.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 6.99
+    },
+    "eua": {
+      "as_of": "2026-09-02",
+      "available": true,
+      "daily_change_pct": 1.01,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.94,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 35.09,
+      "monthly_change_pct": 4.25,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 52.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.06
+    },
+    "gb_power": {
+      "as_of": "2026-09-03",
+      "available": true,
+      "daily_change_pct": -15.81,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.62,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 163.66,
+      "monthly_change_pct": -1.9,
+      "name": "GB Power",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 1.24
+    },
+    "renewable_share": {
+      "available": false
+    },
+    "storage": {
+      "available": false
+    },
+    "ttf": {
+      "as_of": "2026-09-02",
+      "available": true,
+      "daily_change_pct": 1.96,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.89,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 73.63,
+      "monthly_change_pct": 31.68,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 75.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.74
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Iran\u2013US escalation risks Hormuz transit; EU nuclear output threatened by climate stress; data-center demand surge pressures power grids.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "Europe's nuclear fleet threatened by rising temperatures and cooling water scarcity",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/climate-change-threatens-europe-nuclear-renaissance/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Nuclear outages due to thermal stress reduce baseload supply, tightening EU power curve. High-temperature summers already force reactor shutdowns; accelerates need for fossil/renewables substitution. Direct Cal+1 upside risk."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US LNG exports surge 23% in H1 2026 to 17.4 Bcf/d capacity growth",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Higher US LNG output increases NW Europe LNG arb supply, exerting downward pressure on TTF via substitution. Larger global LNG volume eases EU gas tightness, supports power-curve weakness via lower gas-to-power."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "US\u2013Iran military escalation risks Strait of Hormuz oil and LNG transit",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/eu-kaja-kallas-says-hormuz-diplomacy-has-produced-no-results/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Hormuz closure scenario would disrupt ~20% of seaborne oil and LNG flows. EU LNG supply shock \u2192 TTF spike \u2192 power curve bullish. Risk premium already building; further strikes increase tail-risk premium on front-month contracts."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU green-transition chief explores oil tax, joint debt to fund climate resilience",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-green-chief-floats-oil-tax-joint-debt-or-bigger-budget-to-climate-proof-europe/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Potential new EU carbon/energy tax mechanisms could raise operating costs for coal/gas generators and increase power-curve volatility via regulatory capex burden. Signals climate-driven policy intensification; monitor EUA structural bid upside."
+      },
+      {
+        "commodity": "power",
+        "headline": "Power-hungry data centers expanding across Europe, sparking environmental resistance",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/power-hungry-data-centers-are-expanding-in-europe-so-is-the-resistance/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "demand",
+        "why_it_matters": "Explosive AI/data-center load growth (especially Google EU capex) adds structural baseload demand to regional grids. Exacerbates summer cooling constraints on nuclear; increases peak-hour power demand and DA spread volatility. Multi-year bullish power curve dynamic."
+      }
+    ],
+    "watchlist": [
+      "Von der Leyen State of the Union speech \u2014 climate/AI/green capex agenda may signal new carbon-pricing or emissions-abatement rules.",
+      "EU industrial policy / Industrial Accelerator Act votes \u2014 could reshape grid infrastructure spend and renewables/nuclear procurement timelines.",
+      "Hormuz tensions escalation watch \u2014 track US\u2013Iran military activity daily for LNG flow disruption risk and TTF premium.",
+      "EU budget negotiation outcome \u2014 Costa's call for new taxes may influence green capex financing, EUA scarcity expectations."
+    ]
+  }
+}

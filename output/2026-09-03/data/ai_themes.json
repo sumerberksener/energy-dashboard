@@ -1,0 +1,71 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU green-transition chief proposes new oil tax and joint debt mechanism for climate resilience funding; signals regulatory capex intensification.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "New carbon/energy tax mechanisms raise fossil-generator operating costs and increase regulatory capex burden, structurally supporting EUA bid and raising marginal generation cost."
+  },
+  "freshness_caveat": "Coal data is 251 days stale (as of 2025-12-26); clean dark is 246 days stale (as of 2025-12-31). Fuel-switch economics and clean-dark spread trend may not reflect current regime. Rely on TTF, GB/DE power, and clean spark (fresh) for position signals.",
+  "risk_flags": [
+    "GB Power at 96th-percentile (163.66 EUR/MWh) with 23.1% daily jump; nuclear outage risk from rising water-scarcity temperatures could extend premium into Cal+1.",
+    "Hormuz closure scenario would disrupt ~20% of seaborne LNG flows; TTF already at 75th-percentile (73.63 EUR/MWh) \u2014 tail-risk premium building on military escalation.",
+    "Coal at 7th-percentile (96.0 USD/t, 251 days stale) and clean dark at 47th (27.95 EUR/MWh, 246 days stale); fuel-switch dynamics obscured by data lag.",
+    "US LNG capacity surge to 17.4 Bcf/d offsets Hormuz premium via NW Europe arb, creating bidirectional gas/power volatility."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12-3%",
+      "summary": "GB power holds premium on nuclear climate stress; TTF stable as US LNG arb pressures offset Hormuz tail-risk.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-6-10%",
+      "summary": "Hormuz diplomatic resolution; US LNG export ramp sustains NW Europe arb supply; mild weather reduces nuclear cooling stress.",
+      "ttf_pct": "-8-12%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+15-22%",
+      "summary": "Hormuz military escalation triggers LNG supply shock; EU nuclear outage cluster reduces baseload; data-center demand spikes.",
+      "ttf_pct": "+12-18%"
+    }
+  },
+  "themes": [
+    "Nuclear thermal stress and data-center load pressure EU baseload",
+    "Hormuz geopolitical tail-risk vs. US LNG supply glut",
+    "GB power premium persisting despite coal floor at 7th-percentile",
+    "Policy intensification signals on carbon tax and green capex"
+  ],
+  "top_drivers": [
+    "GB Power at 96th-percentile driven by nuclear thermal-stress outages and data-center baseload surge colliding with summer cooling constraints.",
+    "Hormuz escalation tail-risk premia on TTF front (75th-pctile) offset by US LNG export glut (17.4 Bcf/d); bidirectional volatility in NW Europe gas/power.",
+    "Clean Spark at 93rd-percentile (41.04 EUR/MWh) reflects coal floor (7th-pctile, 96.0 USD/t) and gas premium (75th-pctile TTF) in fuel-switch regime; data lag on coal (251 days old) obscures trend confirmation."
+  ],
+  "top_takeaway": "GB Power at 96th-percentile amid nuclear climate stress and data-center demand surge; Hormuz escalation threatens LNG supply and TTF, offsetting US LNG export growth.",
+  "watchlist": [
+    {
+      "metric": "Hormuz military escalation",
+      "why": "US\u2013Iran strikes could trigger LNG flow disruption and 20%+ TTF spike; risk premium already embedded in current 75th-pctile level."
+    },
+    {
+      "metric": "EU nuclear thermal stress (summer 2026\u201327)",
+      "why": "Rising water-scarcity outages reduce baseload, extending GB/DE power premiums; multi-year structural demand from data centers amplifies tightness."
+    },
+    {
+      "metric": "US LNG export ramp (17.4 Bcf/d H1 2026)",
+      "why": "23% surge eases NW Europe LNG arb; downward TTF pressure via substitution effect, but Hormuz risk creates price-floor asymmetry."
+    },
+    {
+      "metric": "Von der Leyen SOTEU speech & EU budget carbon-tax proposal",
+      "why": "New green capex financing and carbon-pricing mechanisms could restructure power/gas curve expectations; signals EUA structural bid into 2027."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "Von der Leyen State of the Union address",
+      "why": "Climate/AI/green-capex agenda may announce carbon-tax or emissions abatement rules affecting EUA floor and power-curve structural dynamics."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Iran–US escalation risks Hormuz transit; EU nuclear output threatened by climate stress; data-center demand surge pressures power grids.",
+  "themes": [
+    {
+      "headline": "Europe's nuclear fleet threatened by rising temperatures and cooling water scarcity",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Nuclear outages due to thermal stress reduce baseload supply, tightening EU power curve. High-temperature summers already force reactor shutdowns; accelerates need for fossil/renewables substitution. Direct Cal+1 upside risk.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/climate-change-threatens-europe-nuclear-renaissance/"
+    },
+    {
+      "headline": "US LNG exports surge 23% in H1 2026 to 17.4 Bcf/d capacity growth",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher US LNG output increases NW Europe LNG arb supply, exerting downward pressure on TTF via substitution. Larger global LNG volume eases EU gas tightness, supports power-curve weakness via lower gas-to-power.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id="
+    },
+    {
+      "headline": "US–Iran military escalation risks Strait of Hormuz oil and LNG transit",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Hormuz closure scenario would disrupt ~20% of seaborne oil and LNG flows. EU LNG supply shock → TTF spike → power curve bullish. Risk premium already building; further strikes increase tail-risk premium on front-month contracts.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-kaja-kallas-says-hormuz-diplomacy-has-produced-no-results/"
+    },
+    {
+      "headline": "EU green-transition chief explores oil tax, joint debt to fund climate resilience",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Potential new EU carbon/energy tax mechanisms could raise operating costs for coal/gas generators and increase power-curve volatility via regulatory capex burden. Signals climate-driven policy intensification; monitor EUA structural bid upside.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-green-chief-floats-oil-tax-joint-debt-or-bigger-budget-to-climate-proof-europe/"
+    },
+    {
+      "headline": "Power-hungry data centers expanding across Europe, sparking environmental resistance",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Explosive AI/data-center load growth (especially Google EU capex) adds structural baseload demand to regional grids. Exacerbates summer cooling constraints on nuclear; increases peak-hour power demand and DA spread volatility. Multi-year bullish power curve dynamic.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/power-hungry-data-centers-are-expanding-in-europe-so-is-the-resistance/"
+    }
+  ],
+  "watchlist": [
+    "Von der Leyen State of the Union speech — climate/AI/green capex agenda may signal new carbon-pricing or emissions-abatement rules.",
+    "EU industrial policy / Industrial Accelerator Act votes — could reshape grid infrastructure spend and renewables/nuclear procurement timelines.",
+    "Hormuz tensions escalation watch — track US–Iran military activity daily for LNG flow disruption risk and TTF premium.",
+    "EU budget negotiation outcome — Costa's call for new taxes may influence green capex financing, EUA scarcity expectations."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
