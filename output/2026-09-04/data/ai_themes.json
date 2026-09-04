@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU Parliament pushes tighter fossil fuel exclusions under SFDR (Sustainable Finance Directive); stricter capital restrictions on gas/coal plants raise cost of thermal generation.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Higher cost-of-capital for fossil fuel generation reduces supply willingness and lifts power prices and EUA demand as coal/gas plants retire or defer capex; structural carbon-bullish over months horizon."
+  },
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (252 days old); Clean Dark and Clean Spark dated to year-end 2025 (247 days). Current thermal merit order and fuel-switch valuation cannot be reliably assessed without fresh derived spreads and coal pricing from September 2026.",
+  "risk_flags": [
+    "Coal data is 252 days stale (as of 2025-12-26); daily headline may not reflect September 2026 supply fundamentals.",
+    "Clean Dark and Clean Spark both dated to year-end 2025; cannot reliably assess current thermal merit order without fresh derived spreads.",
+    "Slovakia sanctions holdout (news from Politico) could trigger rapid TTF re-rating upward if EU embargo weakens; no dated vote in brief.",
+    "Nuclear thermal stress (rising ambient temps) structural risk; competing with data-center demand surge for EU generation headroom."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "GB premium persists on local supply tightness; storage deficit supports TTF; coal stays undervalued pending fresh data.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "+8-15%",
+      "summary": "EU sanctions hardened; summer heatwave stress on nuclear cooling reduces baseload capacity; data-center demand accelerates; GB premium widens continent-wide.",
+      "ttf_pct": "+5-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "-6-10%",
+      "summary": "Slovakia sanctions vote blocks EU embargo renewal; Russian gas re-enters EU market, flooding TTF and suppressing power prices sharply.",
+      "ttf_pct": "-8-12%"
+    }
+  },
+  "themes": [
+    "GB Power extreme tightness vs EU storage deficit",
+    "Sanctions erosion risk on Russian gas flows",
+    "Nuclear capacity threatened by thermal stress; data-center demand offsetting",
+    "Coal deeply undervalued; fuel-switch margin widening"
+  ],
+  "top_drivers": [
+    "GB Power at 98th percentile (177.71 EUR/MWh, +26.46% daily) driving GB-DE spread premium and thermal support.",
+    "EU storage deficit of 16.7 pp below seasonal (65.85% full) underpins winter supply risk and Cal+1 gas/power curve support.",
+    "Slovakia sanctions holdout on EU Russia embargo creates tail risk of cheap Russian gas inflow, weighing on TTF upside but creating asymmetry.",
+    "Nuclear cooling constraints from rising temperatures (climate stress) threaten baseload supply and force reliance on peaking thermal; structural bullish for power."
+  ],
+  "top_takeaway": "GB Power at 98th percentile, EU storage 16.7 pp deficit, and Slovakia sanctions threat combine to support thermal; coal's 7th-percentile valuation signals fuel-switch headroom despite stale data.",
+  "watchlist": [
+    {
+      "metric": "Slovakia sanctions vote outcome",
+      "why": "EU Russia energy embargo erosion would unleash TTF upside and suppress power prices; currently unpriced tail risk."
+    },
+    {
+      "metric": "EU storage refill pace vs. seasonal deficit",
+      "why": "At 65.85% and 16.7 pp below seasonal, shortfall will constrain winter gas availability and support Cal+1 curve; watch withdrawal profile."
+    },
+    {
+      "metric": "GB Power 98th percentile sustained or mean-revert",
+      "why": "At 177.71 EUR/MWh, GB is severely extended; supply shock or demand softening could re-rate sharply; transmission risk into continent."
+    },
+    {
+      "metric": "SFDR fossil fuel exclusions finalization",
+      "why": "Tighter capital restrictions on gas/coal plants will raise generation cost-of-capital and structurally support power/EUA; months horizon but directional."
+    },
+    {
+      "metric": "US LNG +23% YoY (17.4 Bcf/d) arbitrage window to EU",
+      "why": "Higher volumes could compress TTF via improved LNG arb; currently supporting bearish-power narrative if cost-of-delivery to Europe tightens."
+    }
+  ],
+  "watchlist_dated": []
+}

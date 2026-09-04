@@ -1,0 +1,212 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 98th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.7 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 252,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 247,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 247,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-09-04",
+      "available": true,
+      "daily_change_abs": 14.73,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.21,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -8.77,
+      "monthly_change_abs": -13.61,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 41.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 19.76
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 252,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-09-04",
+      "available": true,
+      "daily_change_pct": 11.08,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.92,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 147.64,
+      "monthly_change_pct": 5.21,
+      "name": "DE Power",
+      "percentile_rank_5y": 78.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 19.7
+    },
+    "eua": {
+      "as_of": "2026-09-03",
+      "available": true,
+      "daily_change_pct": -0.99,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.24,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.74,
+      "monthly_change_pct": 2.22,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 51.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.52
+    },
+    "gb_power": {
+      "as_of": "2026-09-04",
+      "available": true,
+      "daily_change_pct": 26.46,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.11,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 177.71,
+      "monthly_change_pct": 9.68,
+      "name": "GB Power",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -5.26
+    },
+    "renewable_share": {
+      "available": false
+    },
+    "storage": {
+      "as_of": "2026-09-02",
+      "available": true,
+      "daily_change_pct": 0.32,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.74,
+      "headline": "16.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 65.85,
+      "monthly_change_pct": 9.93,
+      "name": "EU Storage",
+      "percentile_rank_5y": 47.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.39
+    },
+    "ttf": {
+      "as_of": "2026-09-03",
+      "available": true,
+      "daily_change_pct": -2.48,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.63,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 71.81,
+      "monthly_change_pct": 37.03,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 75.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.97
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Slovakia blocks EU Russia sanctions lock-in; US-Iran tensions escalate; EU debates fossil fuel finance exclusions amid budget pressures.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Slovakia rejects EU plan to lock Russia sanctions for 12 months",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/slovakia-rejects-eu-plan-lock-in-russia-sanctions-12-months/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Slovakia holdout on sanctions renewal raises risk of EU energy embargo weakening or Russian gas flows resuming. Direct TTF upside if sanctions erode; downward power price pressure if cheap Russian gas re-enters."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EU Parliament wants tighter fossil fuel exclusions under sustainable finance rules",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/document-eu-parliament-wants-tighter-fossil-fuel-exclusions-under-sustainable-finance-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Stricter fossil fuel exclusions in SFDR will raise cost of capital for gas/coal generation, suppressing supply and lifting power prices and EUA demand. Parliament vs. member states disagreement may delay implementation but signals carbon-unfavorable policy direction."
+      },
+      {
+        "commodity": "power",
+        "headline": "Climate change threatens Europe's nuclear renaissance; rising temperatures stress fleet",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/climate-change-threatens-europe-nuclear-renaissance/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Higher river/ambient temperatures reduce nuclear cooling capacity and output, tightening EU power supply. Direct DA/Cal+1 spread risk; forces reliance on gas/coal peaking capacity. Structural supply risk in low-water summers."
+      },
+      {
+        "commodity": "power",
+        "headline": "Power-hungry data centers expanding in Europe amid local resistance",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/power-hungry-data-centers-are-expanding-in-europe-so-is-the-resistance/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "demand",
+        "why_it_matters": "Large-scale data center deployments increase baseline power demand structurally; Google expansion in Austria signals strong continental demand growth. Upside to Cal+1 and multi-year power curve; potential stress on regional transmission."
+      },
+      {
+        "commodity": "gas",
+        "headline": "U.S. LNG exports rose 23% in first half 2026; higher capacity driving volumes",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68064",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Increased US LNG supply (17.4 Bcf/d, +23% YoY) strengthens global LNG market and lowers arbitrage spreads to Europe. Potential downward pressure on TTF via improved LNG arb window; reduces EU gas price support and softens power curve."
+      }
+    ],
+    "watchlist": [
+      "EU budget negotiation timeline and potential new fossil fuel / carbon taxes (Costa, Ribera proposals)",
+      "Slovakia sanctions vote outcome and any EU Russia energy embargo modifications",
+      "SFDR / fossil fuel exclusion rules finalization and capital cost impacts on EU thermal generation",
+      "Iran-US escalation trajectory; any Strait of Hormuz risk or crude/LNG supply disruption"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Slovakia blocks EU Russia sanctions lock-in; US-Iran tensions escalate; EU debates fossil fuel finance exclusions amid budget pressures.",
+  "themes": [
+    {
+      "headline": "Slovakia rejects EU plan to lock Russia sanctions for 12 months",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Slovakia holdout on sanctions renewal raises risk of EU energy embargo weakening or Russian gas flows resuming. Direct TTF upside if sanctions erode; downward power price pressure if cheap Russian gas re-enters.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/slovakia-rejects-eu-plan-lock-in-russia-sanctions-12-months/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU Parliament wants tighter fossil fuel exclusions under sustainable finance rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bullish-power",
+      "why_it_matters": "Stricter fossil fuel exclusions in SFDR will raise cost of capital for gas/coal generation, suppressing supply and lifting power prices and EUA demand. Parliament vs. member states disagreement may delay implementation but signals carbon-unfavorable policy direction.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/document-eu-parliament-wants-tighter-fossil-fuel-exclusions-under-sustainable-finance-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Climate change threatens Europe's nuclear renaissance; rising temperatures stress fleet",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Higher river/ambient temperatures reduce nuclear cooling capacity and output, tightening EU power supply. Direct DA/Cal+1 spread risk; forces reliance on gas/coal peaking capacity. Structural supply risk in low-water summers.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/climate-change-threatens-europe-nuclear-renaissance/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Power-hungry data centers expanding in Europe amid local resistance",
+      "source": "Politico EU Energy",
+      "tag": "demand",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Large-scale data center deployments increase baseline power demand structurally; Google expansion in Austria signals strong continental demand growth. Upside to Cal+1 and multi-year power curve; potential stress on regional transmission.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/power-hungry-data-centers-are-expanding-in-europe-so-is-the-resistance/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "U.S. LNG exports rose 23% in first half 2026; higher capacity driving volumes",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased US LNG supply (17.4 Bcf/d, +23% YoY) strengthens global LNG market and lowers arbitrage spreads to Europe. Potential downward pressure on TTF via improved LNG arb window; reduces EU gas price support and softens power curve.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68064"
+    }
+  ],
+  "watchlist": [
+    "EU budget negotiation timeline and potential new fossil fuel / carbon taxes (Costa, Ribera proposals)",
+    "Slovakia sanctions vote outcome and any EU Russia energy embargo modifications",
+    "SFDR / fossil fuel exclusion rules finalization and capital cost impacts on EU thermal generation",
+    "Iran-US escalation trajectory; any Strait of Hormuz risk or crude/LNG supply disruption"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
