@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU budget negotiations underway; Slovakia blocks Russia sanctions extension; Norway gas expansion eyed for energy security amid Trump concerns.",
+  "themes": [
+    {
+      "headline": "Norway ramps gas production to hedge European energy security risks",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased Norwegian supply reduces EU gas scarcity premium and LNG import dependency. Lower TTF prices reduce marginal fuel-switching pressure on power dispatch; bearish for power forwards.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/the-norwegian-gas-plant-that-could-safeguard-europe-from-trump/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Slovakia blocks EU proposal to lock Russia sanctions for twelve months",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Sanction uncertainty prolongs risk of EU gas supply disruption from Russia. Unresolved extension weakens negotiating position on energy flows; prolongs TTF volatility and power curve upside risk if flows remain threatened.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/slovakia-rejects-eu-plan-lock-in-russia-sanctions-12-months/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ireland signals EU carbon border tax agreement amid broader levy disputes",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Carbon border adjustment mechanism (CBAM) revenue confirmed in EU budget negotiations. Clarifies future EUA exemption scope and fund allocation; affects long-term EU ETS price support and carbon offset dynamics.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/ireland-eu-tax-agreement-carbon-imports-electronic-waste/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "U.S. LNG exports rose 23% in first half of 2026 versus prior year",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher US LNG supply increases arbitrage availability to NW Europe, reducing TTF premiums and gas scarcity rents. Lower marginal gas costs compress power spreads; bearish for European power forwards if LNG volumes persist.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68064"
+    },
+    {
+      "headline": "Russia's Rosatom signals further delays to Hungary's Paks II nuclear project",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Continued Paks II delays reduce Hungarian baseload capacity in EU market. Supply-side tightness supports Central European power curves and marginal fuel switching; bullish for regional Cal+1 and Cal+2 power spreads.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/russias-rosatom-expects-more-delays-to-hungary-nuclear-plant-paks-ii-document-shows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU member state formal vote on Russia sanctions extension timeline (Slovakia blocking progress).",
+    "Norwegian continental shelf gas project final investment decision and ramp schedule.",
+    "EU budget deal closure and CBAM revenue earmarking (affects long-term EUA price floor).",
+    "Paks II commissioning delays; Hungarian capacity gap implications for Central Europe power Q1 2027."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

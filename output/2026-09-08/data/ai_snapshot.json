@@ -1,0 +1,168 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 94th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.4 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 256,
+        "key": "coal"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "available": false
+    },
+    "clean_spark": {
+      "available": false
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 256,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "available": false
+    },
+    "eua": {
+      "as_of": "2026-09-04",
+      "available": true,
+      "daily_change_pct": 0.39,
+      "days_old": 4,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.4,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.88,
+      "monthly_change_pct": 2.29,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 51.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.42
+    },
+    "gb_power": {
+      "as_of": "2026-09-08",
+      "available": true,
+      "daily_change_pct": -1.26,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.46,
+      "headline": "94th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 158.8,
+      "monthly_change_pct": -11.78,
+      "name": "GB Power",
+      "percentile_rank_5y": 94.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -28.09
+    },
+    "renewable_share": {
+      "available": false
+    },
+    "storage": {
+      "as_of": "2026-09-06",
+      "available": true,
+      "daily_change_pct": 0.47,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.72,
+      "headline": "16.4 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 66.9,
+      "monthly_change_pct": 9.44,
+      "name": "EU Storage",
+      "percentile_rank_5y": 49.0,
+      "unit": "% full",
+      "weekly_change_pct": 2.0
+    },
+    "ttf": {
+      "as_of": "2026-09-04",
+      "available": true,
+      "daily_change_pct": 0.2,
+      "days_old": 4,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.6,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 71.95,
+      "monthly_change_pct": 29.02,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 75.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 7.1
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU budget negotiations underway; Slovakia blocks Russia sanctions extension; Norway gas expansion eyed for energy security amid Trump concerns.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Norway ramps gas production to hedge European energy security risks",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/the-norwegian-gas-plant-that-could-safeguard-europe-from-trump/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Increased Norwegian supply reduces EU gas scarcity premium and LNG import dependency. Lower TTF prices reduce marginal fuel-switching pressure on power dispatch; bearish for power forwards."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Slovakia blocks EU proposal to lock Russia sanctions for twelve months",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/slovakia-rejects-eu-plan-lock-in-russia-sanctions-12-months/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Sanction uncertainty prolongs risk of EU gas supply disruption from Russia. Unresolved extension weakens negotiating position on energy flows; prolongs TTF volatility and power curve upside risk if flows remain threatened."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "Ireland signals EU carbon border tax agreement amid broader levy disputes",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/ireland-eu-tax-agreement-carbon-imports-electronic-waste/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Carbon border adjustment mechanism (CBAM) revenue confirmed in EU budget negotiations. Clarifies future EUA exemption scope and fund allocation; affects long-term EU ETS price support and carbon offset dynamics."
+      },
+      {
+        "commodity": "gas",
+        "headline": "U.S. LNG exports rose 23% in first half of 2026 versus prior year",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68064",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Higher US LNG supply increases arbitrage availability to NW Europe, reducing TTF premiums and gas scarcity rents. Lower marginal gas costs compress power spreads; bearish for European power forwards if LNG volumes persist."
+      },
+      {
+        "commodity": "power",
+        "headline": "Russia's Rosatom signals further delays to Hungary's Paks II nuclear project",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/russias-rosatom-expects-more-delays-to-hungary-nuclear-plant-paks-ii-document-shows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Continued Paks II delays reduce Hungarian baseload capacity in EU market. Supply-side tightness supports Central European power curves and marginal fuel switching; bullish for regional Cal+1 and Cal+2 power spreads."
+      }
+    ],
+    "watchlist": [
+      "EU member state formal vote on Russia sanctions extension timeline (Slovakia blocking progress).",
+      "Norwegian continental shelf gas project final investment decision and ramp schedule.",
+      "EU budget deal closure and CBAM revenue earmarking (affects long-term EUA price floor).",
+      "Paks II commissioning delays; Hungarian capacity gap implications for Central Europe power Q1 2027."
+    ]
+  }
+}

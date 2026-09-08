@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU carbon border adjustment mechanism (CBAM) revenue confirmed in budget negotiations; exemption scope and long-term EUA offset funding clarified.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "CBAM revenue clarity supports EUA price floor by reducing free-allocation erosion risk; shapes power sector decarbonization capex path and fossil fuel switching incentives."
+  },
+  "freshness_caveat": "Coal data stale (256 days old, as of 2025-12-26); 7th-percentile headline unreliable for merit-order thermal dispatch assessment. TTF, GB Power, Storage, EUA all current (\u22644 days).",
+  "risk_flags": [
+    "GB Power 158.8 EUR/MWh (94th-pctile) and EU Storage 16.4pp below seasonal \u2014 refill pace through Q4 will determine winter power curve shape.",
+    "Slovakia blocks Russia sanctions 12-month lock-in \u2014 unresolved extension prolongs TTF volatility and upside risk if EU supply flows remain threatened.",
+    "US LNG exports +23% YoY and Norway ramp both bearish-power via TTF compression; monitor arbitrage window closure if US-EU spreads tighten further.",
+    "Coal data stale (256 days old, 2025-12-26) \u2014 7th-percentile headline unreliable; cannot use for thermal merit-order assessment."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Storage refill through Q4 gradual; Norway/US LNG supply moderates TTF scarcity premium; GB power normalizes toward 60th-pctile.",
+      "ttf_pct": "\u22125 to \u22128%"
+    },
+    "downside": {
+      "de_power_pct": "\u22126 to \u221210%",
+      "summary": "Norway ramp accelerates; US LNG arbitrage widens; mild Q4 weather; storage fills ahead of seasonal; Russia sanctions extended and supply normalizes.",
+      "ttf_pct": "\u221210 to \u221214%"
+    },
+    "horizon": "1m",
+    "upside": {
+      "de_power_pct": "+12 to +18%",
+      "summary": "EU sanctions negotiation fails; Russia gas flows threatened or cut; storage refill stalls; Norway ramp delayed. TTF repricing on supply shock; GB/DE power rallies on thermal backup.",
+      "ttf_pct": "+15 to +22%"
+    }
+  },
+  "themes": [
+    "GB power extreme \u2014 storage deficit and supply tightness",
+    "Norway gas ramp and US LNG surge compress TTF premium",
+    "Russia sanctions uncertainty sustains geopolitical volatility",
+    "Paks II delays support Central Europe baseload scarcity"
+  ],
+  "top_drivers": [
+    "GB Power 94th-percentile (158.8 EUR/MWh) anchored to EU Storage 16.4pp seasonal deficit \u2014 winter refill risk dominates term curve.",
+    "Norway gas ramp + US LNG +23% YoY both structurally bearish TTF and power spreads; arbitrage window closure critical watchpoint.",
+    "Slovakia sanctions block prolongs Russia supply uncertainty; TTF upside tail-risk if EU negotiating power erodes further."
+  ],
+  "top_takeaway": "GB Power at 94th-percentile amid storage 16pp below seasonal; Norway gas ramp and US LNG +23% YoY bearish power; Slovakia sanctions block prolongs Russia supply tail-risk.",
+  "watchlist": [
+    {
+      "metric": "Slovakia Russia sanctions vote",
+      "why": "Formal EU member decision on 12-month sanctions extension could unlock supply clarity or trigger TTF repricing if blocked."
+    },
+    {
+      "metric": "Norwegian shelf FID and ramp timeline",
+      "why": "Confirms European hedging posture on energy security; flows will directly suppress TTF front and Cal+1, cascading into power dispatch economics."
+    },
+    {
+      "metric": "EU budget deal + CBAM revenue",
+      "why": "Clarifies long-term EUA exemption scope and carbon offset funding; affects EUA floor support and power sector decarbonization capex path."
+    },
+    {
+      "metric": "Paks II commissioning delay updates",
+      "why": "Hungary baseload gap implies sustained Central Europe power premium; supports regional Cal+1/Cal+2 fuel-switch economics through 2027."
+    }
+  ],
+  "watchlist_dated": []
+}
