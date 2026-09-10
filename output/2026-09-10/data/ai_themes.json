@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "Ireland backs EU carbon-border-adjustment mechanism (CBAM) and e-waste levy; signals cost floor for non-compliant imports.",
+    "polarity": "bullish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "CBAM cost floor supports EUA baseline and power-generation competitiveness vs. extra-EU; accelerates fuel-switch economics and carbon-intensive plant retirement, raising merit-order carbon shadow cost."
+  },
+  "freshness_caveat": "Coal (258 days stale as of 2025-12-26) and clean_dark (253 days stale as of 2025-12-31) not current; derived spreads rely on TTF, DE Power, GB Power real-time data. Avoid trade decisions on coal-gas ratio or dark spread; use thermal fuel-switch signals from power levels instead.",
+  "risk_flags": [
+    "GB Power 99th percentile (189.35 EUR/MWh) and DE Power 84th percentile (172.77 EUR/MWh) with coal at 7th percentile \u2014 fuel-switch regime at extremes; mean reversion risk if renewables hold or storage refill accelerates.",
+    "Renewables at +753% daily (25.0\u03c3) \u2014 extreme outlier; revert risk and grid stability concerns may support thermal call if wind/solar drops.",
+    "Storage 16.3 pp below seasonal average (67.33%) \u2014 refill pace critical for Q4 heating season; any supply disruption (Iran tanker losses, LNG export delays) could trigger rapid re-tightening.",
+    "US LNG capacity +23% H1 2026 (17.4 Bcf/d) vs. Iranian tanker strikes \u2014 competing TTF signals; arbitrage inflow to EU may cap front-month but geopolitical premium could spike on tail risk.",
+    "Coal data stale (258 days old as of 2025-12-26); clean_dark stale (253 days old as of 2025-12-31) \u2014 derived spreads not current; rely on TTF, DE Power, GB Power for live signal."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks (\u00b11-2%)",
+      "summary": "GB/DE power elevated on storage deficit and geopolitical crude premium; renewables volatility contained.",
+      "ttf_pct": "+2-4%"
+    },
+    "downside": {
+      "de_power_pct": "-3-5%",
+      "summary": "Trump announces Iran deal imminent; geopolitical premium unwinds. US LNG supply eases TTF.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+5-8%",
+      "summary": "US-Iran escalation broadens to Hormuz chokepoint; Iranian oil/LNG facilities hit; crude spikes.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB premium and thermal compression \u2014 coal at 7th percentile",
+    "Renewable volatility suppressing DA but storage 16pp below seasonal",
+    "US-Iran escalation vs. US LNG surge: crude supply risk vs. gas arbitrage relief",
+    "Carbon policy advancing (CBAM, Ireland tax agreement) supporting EUA floor"
+  ],
+  "top_drivers": [
+    "Renewable surge (+753%, 25\u03c3) collapsing DA prices but GB/DE thermal still elevated on storage deficit 16pp below seasonal and Iranian tanker strike geopolitical premium on crude/LNG arbitrage.",
+    "US LNG capacity +23% H1 2026 (17.4 Bcf/d) competing with Iran supply disruption; TTF +2.3\u03c3 and +30% monthly reflects geopolitical risk premium offsetting supply relief.",
+    "Coal at 7th percentile (96 USD/t, stale data) while GB Power 99th percentile (189.35 EUR/MWh) \u2014 extreme fuel-switch compression; coal out-of-the-money and thermal unit economics stressed on carbon and low commodity cost."
+  ],
+  "top_takeaway": "GB Power at 99th percentile (189.35 EUR/MWh) amid renewable spike (+753%, 25\u03c3); TTF +2.3\u03c3 and +30% monthly on geopolitical crude risk offsetting US LNG supply surge.",
+  "watchlist": [
+    {
+      "metric": "GB Power premium to DE (189.35 vs 172.77 EUR/MWh)",
+      "why": "16.6 EUR/MWh gap at 99th percentile; reflects GB supply tightness and isolation. Monitor BSP/interconnector flows; gap could compress if LNG arbitrage strengthens or renewables sustain."
+    },
+    {
+      "metric": "Renewables sustainability (55.49%, +753% daily)",
+      "why": "Extreme statistical outlier (25.0\u03c3); if wind/solar reverses sharply, thermal dispatch call rises and power curve reprices upward. Track DAM clearing prices and reserve adequacy alerts."
+    },
+    {
+      "metric": "TTF vs. Brent arbitrage (TTF +30% monthly; crude supply risk)",
+      "why": "US-Iran tanker strikes tightening crude; competing LNG supply easing from US capacity. Brent floor and LNG charter costs will determine EU import cost. Watch daily LNG arrival schedules."
+    },
+    {
+      "metric": "EU Storage refill pace (67.33%, 16.3 pp below seasonal)",
+      "why": "Injection pace must accelerate H2 to avoid Q4 heating crunch. Any supply interruption (sanctions, outages, geopolitical escalation) risks rapid tightening and power curve repricing."
+    },
+    {
+      "metric": "EUA / Clean Dark spread (EUA 34.99 EUR/tCO2, clean_dark 27.95 EUR/MWh, stale)",
+      "why": "Carbon at 52nd percentile (median) but clean_dark data 253 days old. Ireland CBAM agreement signals EUA floor support; monitor power-carbon curve as industrial output trends emerge."
+    },
+    {
+      "metric": "US midterm elections (November 2026) Iran resolution",
+      "why": "Trump signals post-election Iran deal; geopolitical premium on crude/TTF could unwind rapidly if resolution announced. Impacts both LNG export policy and crude supply expectations."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Nov",
+      "name": "US midterm elections; Trump Iran resolution signals",
+      "why": "Crude/LNG export policy clarity could lower geopolitical premium on TTF; reduces short-dated power rally."
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 99th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; Renewables \u2014 outsized daily move (+753.13%, 25.0\u03c3).",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 258,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 253,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 253,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-09-10",
+      "available": true,
+      "daily_change_abs": 29.69,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.59,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 1.4,
+      "monthly_change_abs": -3.51,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 53.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 35.67
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 258,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-09-10",
+      "available": true,
+      "daily_change_pct": 20.75,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.65,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 172.77,
+      "monthly_change_pct": 16.56,
+      "name": "DE Power",
+      "percentile_rank_5y": 84.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 26.84
+    },
+    "eua": {
+      "as_of": "2026-09-09",
+      "available": true,
+      "daily_change_pct": 0.2,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.47,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.99,
+      "monthly_change_pct": 2.28,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 52.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.76
+    },
+    "gb_power": {
+      "as_of": "2026-09-10",
+      "available": true,
+      "daily_change_pct": 2.18,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.39,
+      "headline": "99th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 189.35,
+      "monthly_change_pct": 11.21,
+      "name": "GB Power",
+      "percentile_rank_5y": 99.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 25.86
+    },
+    "renewable_share": {
+      "as_of": "2026-09-09",
+      "available": true,
+      "daily_change_pct": 753.13,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.01,
+      "headline": "outsized daily move (+753.13%, 25.0\u03c3)",
+      "is_stale": false,
+      "latest": 55.49,
+      "monthly_change_pct": 13.98,
+      "name": "Renewables",
+      "percentile_rank_5y": 74.0,
+      "unit": "% of load",
+      "weekly_change_pct": -15.28
+    },
+    "storage": {
+      "as_of": "2026-09-08",
+      "available": true,
+      "daily_change_pct": 0.31,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.68,
+      "headline": "16.3 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 67.33,
+      "monthly_change_pct": 9.3,
+      "name": "EU Storage",
+      "percentile_rank_5y": 50.0,
+      "unit": "% full",
+      "weekly_change_pct": 1.91
+    },
+    "ttf": {
+      "as_of": "2026-09-09",
+      "available": true,
+      "daily_change_pct": 4.49,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.26,
+      "headline": "extended 2.3\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 79.25,
+      "monthly_change_pct": 30.34,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 77.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 8.68
+    }
+  },
+  "news": {
+    "geopolitics_summary": "US-Iran military escalation and midterm politics risk crude/oil supply disruption; EU seeking strategic autonomy in procurement and clean energy.",
+    "themes": [
+      {
+        "commodity": "crude",
+        "headline": "US military destroys Iranian oil tankers; Trump signals post-midterm Iran resolution",
+        "horizon": "weeks",
+        "link": "https://www.politico.com/news/2026/09/08/centcom-says-it-destroyed-5-iranian-oil-tankers-in-new-round-of-strikes-01068355",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Direct crude supply risk. Iranian tanker losses tighten global crude, raising oil prices and fuel-switching incentives for EU power generation (coal/gas), supporting power and heating margins."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US LNG exports rose 23% H1 2026 on new capacity additions",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68064",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Increased US LNG supply (17.4 Bcf/d) reduces global LNG scarcity, improving arbitrage terms into Europe. Lower TTF via LNG competition suppresses EU gas and power prices; weakens fuel-switch premium."
+      },
+      {
+        "commodity": "power",
+        "headline": "EU data centers should build own clean energy to avoid power bill spikes",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-big-tech-data-center-clean-power-supply-teresa-ribera/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Ribera's push for corporates to self-supply reduces EU baseload demand on grid. Lower peak demand eases DA spreads and power curve; CPV/wind contracts may cannibalize merchant prices."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "August hottest month on record; EU blames fossil fuel burning",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/august-declared-the-hottest-month-ever-recorded/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Sustained heat drives cooling demand and hydro pressure. Elevated temps fuel climate-policy urgency, supporting carbon price and renewable investment momentum; near-term power demand tail risk."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "Ireland backs EU carbon-border-tax and e-waste levy; corporate/tobacco taxes blocked",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/ireland-eu-tax-agreement-carbon-imports-electronic-waste/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Carbon border adjustment advancing signals cost floor for imports; supports EUA floor and EU power competitiveness vs. non-compliant regions. Delayed broader fiscal union reduces EU industrial capex support."
+      }
+    ],
+    "watchlist": [
+      "EU budget revenue negotiation (Costa tour Berlin, Warsaw, Madrid) \u2014 fiscal clarity affects industrial power demand.",
+      "US midterm elections (November) \u2014 Trump Iran resolution risk; impacts crude/LNG export policy.",
+      "ERCOT peak load sustainability \u2014 US heat-driven demand may bid up global LNG prices, tightening EU gas margins.",
+      "Data-center power PPA negotiation timeline \u2014 corporate self-supply decisions shape EU grid demand profile."
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US-Iran military escalation and midterm politics risk crude/oil supply disruption; EU seeking strategic autonomy in procurement and clean energy.",
+  "themes": [
+    {
+      "headline": "US military destroys Iranian oil tankers; Trump signals post-midterm Iran resolution",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Direct crude supply risk. Iranian tanker losses tighten global crude, raising oil prices and fuel-switching incentives for EU power generation (coal/gas), supporting power and heating margins.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/09/08/centcom-says-it-destroyed-5-iranian-oil-tankers-in-new-round-of-strikes-01068355"
+    },
+    {
+      "headline": "US LNG exports rose 23% H1 2026 on new capacity additions",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased US LNG supply (17.4 Bcf/d) reduces global LNG scarcity, improving arbitrage terms into Europe. Lower TTF via LNG competition suppresses EU gas and power prices; weakens fuel-switch premium.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68064"
+    },
+    {
+      "headline": "EU data centers should build own clean energy to avoid power bill spikes",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Ribera's push for corporates to self-supply reduces EU baseload demand on grid. Lower peak demand eases DA spreads and power curve; CPV/wind contracts may cannibalize merchant prices.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-big-tech-data-center-clean-power-supply-teresa-ribera/"
+    },
+    {
+      "headline": "August hottest month on record; EU blames fossil fuel burning",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sustained heat drives cooling demand and hydro pressure. Elevated temps fuel climate-policy urgency, supporting carbon price and renewable investment momentum; near-term power demand tail risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/august-declared-the-hottest-month-ever-recorded/"
+    },
+    {
+      "headline": "Ireland backs EU carbon-border-tax and e-waste levy; corporate/tobacco taxes blocked",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bullish-power",
+      "why_it_matters": "Carbon border adjustment advancing signals cost floor for imports; supports EUA floor and EU power competitiveness vs. non-compliant regions. Delayed broader fiscal union reduces EU industrial capex support.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/ireland-eu-tax-agreement-carbon-imports-electronic-waste/"
+    }
+  ],
+  "watchlist": [
+    "EU budget revenue negotiation (Costa tour Berlin, Warsaw, Madrid) — fiscal clarity affects industrial power demand.",
+    "US midterm elections (November) — Trump Iran resolution risk; impacts crude/LNG export policy.",
+    "ERCOT peak load sustainability — US heat-driven demand may bid up global LNG prices, tightening EU gas margins.",
+    "Data-center power PPA negotiation timeline — corporate self-supply decisions shape EU grid demand profile."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
