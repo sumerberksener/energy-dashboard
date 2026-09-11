@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (as of 2025-12-26, 259 days old) and Clean Dark spread (as of 2025-12-31, 254 days old) are stale; merit-order and fuel-switch regime assumptions may have shifted. TTF, GB Power, renewables, storage, and EUA current as of 2026-09-10/11.",
+  "risk_flags": [
+    "GB Power 96th-percentile (167 EUR/MWh) with renewable share collapsed 25% weekly; demand-response or interconnect congestion risk if cold front materializes.",
+    "TTF 78th-percentile (82.05 EUR/MWh), extended 2.4\u03c3 on Iran tanker strikes; Brent crude supply risk could amplify LNG competition if de-escalation stalls.",
+    "EU Storage 16.2pp below seasonal at 67.6% full; refill pace through Q4 critical for H2 power stack \u2014 any demand surge or supply shock exposes thermal marginal cost.",
+    "Coal data stale (259 days old) at 96 USD/t, 7th-percentile; clean_dark spread (27.95 EUR/MWh) also stale (254 days); merit order lock-in assumptions may have shifted."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+2-5%",
+      "summary": "Storage deficit and renewable weakness sustain thermal dispatch pressure; TTF holds extended above trend; GB premium reflects supply tightness.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Trump de-escalation confirmed; Iran tensions unwind; crude softens; US LNG flows suppress TTF arbitrage; renewable recovery begins; storage inject accelerates.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+10-18%",
+      "summary": "Iran escalation escalates (Hormuz disruption); crude/Brent spike 8\u201312%; LNG arbitrage tightens; TTF rallies on supply fear and fuel-switch incentive.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "GB supply squeeze and extreme power pricing",
+    "TTF extended on Iran supply risk; LNG arbitrage tightening",
+    "Storage deficit pressure on H2 thermal dispatch",
+    "Renewable collapse (41% share, \u221225% weekly) lifting thermal call"
+  ],
+  "top_drivers": [
+    "GB Power at 96th-percentile (167 EUR/MWh) driven by renewable collapse (\u221225% weekly to 41% share) and storage deficit (16pp below seasonal); supply squeeze lifting thermal marginal cost.",
+    "TTF extended 2.4\u03c3 on geopolitical risk premium (Iran tanker strikes, Hormuz escalation threat); Brent crude supply risk amplifies LNG arbitrage and tightens European gas ceiling.",
+    "Coal at 7th-percentile (96 USD/t) and clean_dark in mid-range (27.95 EUR/MWh) lock in coal-to-gas fuel-switch economics; any Brent spike deepens gas premium and power inflation."
+  ],
+  "top_takeaway": "GB Power at 96th-percentile (167 EUR/MWh) and storage 16pp below seasonal amid renewable collapse (\u221225% weekly); TTF extended 2.4\u03c3 on geopolitical risk; coal at 7th-percentile supports fuel-switch regime.",
+  "watchlist": [
+    {
+      "metric": "GB Power supply/demand balance",
+      "why": "At 96th-percentile (167 EUR/MWh) with renewables at 43rd-percentile; any wind curtailment or demand spike threatens outage risk and locks in premium for weeks."
+    },
+    {
+      "metric": "Iran geopolitical escalation (Hormuz, tanker strikes)",
+      "why": "US military strikes on Iranian tankers active; Trump de-escalation signal post-midterms creates binary upside/downside on crude (Brent) and LNG arbitrage into TTF."
+    },
+    {
+      "metric": "US LNG export volumes (23% H1 rise)",
+      "why": "Elevated US capacity flows compete directly with TTF; arbitrage dynamics will anchor European gas ceiling and suppress fuel-switch incentive if US supply sustains."
+    },
+    {
+      "metric": "EU storage refill pace (Q4 injection target)",
+      "why": "At 67.6% full, 16pp below seasonal; if injection slows or demand shock hits, thermal dispatch costs spike and power-to-gas margins compress into year-end."
+    },
+    {
+      "metric": "EUA (35.01 EUR/tCO2, 52nd-percentile)",
+      "why": "Neutral regime (within range) but exposed to fuel-switch regime shift; Iran escalation \u2192 higher Brent \u2192 coal-to-gas switch \u2192 EUA upside via emissions intensity."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Nov",
+      "name": "US midterm elections; Trump de-escalation signal",
+      "why": "Iran tensions could unwind post-election; crude/LNG volatility could compress; monitor for policy shift on US LNG export licensing."
+    }
+  ]
+}

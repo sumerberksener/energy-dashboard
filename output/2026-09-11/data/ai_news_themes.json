@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US-Iran tensions escalating with military strikes on tankers; Trump signals potential de-escalation post-midterms. Crude supply risk elevated; indirect TTF exposure via LNG arbitrage.",
+  "themes": [
+    {
+      "headline": "US military destroys Iranian oil tankers; escalation threatens crude supply",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Disruption to Iranian crude exports tightens global oil markets; elevated Brent supports fuel-switch economics (coal-to-gas), raising marginal power costs and EUA via CCS incentives over weeks-months.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/09/08/centcom-says-it-destroyed-5-iranian-oil-tankers-in-new-round-of-strikes-01068355?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US LNG exports rise 23% in H1 2026; elevated capacity supports volumes",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher US LNG supply improves US-Europe arbitrage dynamics; increases TTF-competing volumes, capping European gas prices and reducing thermal-gen fuel costs over months horizon.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68064"
+    },
+    {
+      "headline": "EU data centers mandated to build own clean power; AI demand competition cited",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "neutral",
+      "why_it_matters": "Ribiera's proposal signals structural shift in power demand allocation; PPAs for renewable capacity reduce grid supply available to marginal thermal gen, potentially lifting DA/Cal+1 spreads if backstop capacity reductions bind.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-big-tech-data-center-clean-power-supply-teresa-ribiera/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Record global temperatures in August; fossil fuel burn flagged by EU observer",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sustained heat supports elevated AC load; precedent for persistent regional demand swings. Near-term (days-weeks) pressure on DA pricing; longer-term EUA upside via emissions intensity narrative.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/august-declared-the-hottest-month-ever-recorded/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US crude production on track for 2026 record; 13.8M b/d forecast",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US crude supply softens global Brent; weakens fuel-switch incentive for European thermal generators, exerting downward pressure on marginal power prices and EUA (lower carbon intensity dispatch).",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68125"
+    }
+  ],
+  "watchlist": [
+    "State of the Union speech (von der Leyen): green/industrial policy signals; ETS, renewable targets, tech levy language.",
+    "EU procurement rulebook finalization (€600B lever): impact on wind/solar capex competition, renewable capacity timeline.",
+    "US midterm elections (November 2026): Trump de-escalation stance on Iran could reduce crude volatility; monitor for policy shifts on LNG export licensing.",
+    "EU budget/tax negotiations (Costa tour, France €60B proposal): potential carbon border tax, sectoral levies affecting power market cost structure."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
