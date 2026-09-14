@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale (262 days old as of 2025-12-26); Clean Dark stale (257 days old as of 2025-12-31) \u2014 derived spread (Clean Dark) reliability compromised for near-term marginal-cost narratives. TTF, DE Power, GB Power, EUA, renewables, storage current as of 2026-09-11 to 2026-09-14.",
+  "risk_flags": [
+    "GB Power 99th-pctile (193.49 EUR/MWh) \u2014 supply cushion nearly exhausted; Monday sanctions vote could widen GB-DE spread if EU gas supply disrupted.",
+    "EU storage 16.3 pp below seasonal \u2014 refill pace will determine winter adequacy; sanctions relief could ease inflows, tightening storage margins into Q4.",
+    "Coal data stale (262 days old); Clean Dark stale (257 days old) \u2014 derived spread reliability compromised for marginal-cost narratives.",
+    "Renewables at 38th-pctile (38.92% of load) \u2014 down 46.98% YTD; thermal dispatch remains critical; tariff-driven capex delay extends fossil reliance."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "EU sanctions rollover approved Monday; Russian gas supply remains curtailed; GB thermal dispatch sustained; TTF stable \u00b12-3%, DE Power tracks.",
+      "ttf_pct": "\u00b12-3%"
+    },
+    "downside": {
+      "de_power_pct": "+12-18%",
+      "summary": "EU sanctions escalated; Red Sea/Houthi chokepoint persists; LNG diversion to Asia; TTF premium widens; GB supply tightens, power spike.",
+      "ttf_pct": "+8-12%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "-8-12%",
+      "summary": "EU sanctions relief approved; Russian LNG/pipeline supply re-engagement; TTF arb softens; GB imports increase, power compression.",
+      "ttf_pct": "-10-15%"
+    }
+  },
+  "themes": [
+    "GB supply crisis \u2014 historically tight power",
+    "Clean spark elevated \u2014 gas-to-power spreads extended",
+    "EU sanctions rollover Monday \u2014 geopolitical binary",
+    "Red Sea / Houthi escalation \u2014 LNG chokepoint risk"
+  ],
+  "top_drivers": [
+    "GB Power at 99th-pctile (193.49 EUR/MWh) \u2014 UK supply tightness absolute; DE Power at 89th-pctile (218.18 EUR/MWh) up 58% day-on-day \u2014 thermal dispatch regime locked in.",
+    "Clean Spark at 94th-pctile (46.38 EUR/MWh) \u2014 gas-to-power margin historically wide; coal at 7th-pctile (96 USD/t) confirms gas in-the-money across merit order.",
+    "EU Russia sanctions rollover Monday \u2014 binary geopolitical shock; relief scenario compresses TTF 10-15%, escalation drives premium +5-10%; storage 16.3 pp below seasonal accentuates winter refill exposure."
+  ],
+  "top_takeaway": "GB Power at 99th-percentile, Clean Spark at 94th-pctile signal acute UK supply tightness; EU Russia sanctions rollover Monday deadline poses geopolitical TTF/EUA shock risk.",
+  "watchlist": [
+    {
+      "metric": "EU Russia sanctions rollover",
+      "why": "Monday intraday vote on energy sector sanctions; sanctions relief could trigger TTF compression (-10-15%), upside to LNG arb; escalation risks premium (+5-10%)."
+    },
+    {
+      "metric": "GB Power supply adequacy",
+      "why": "At 99th-pctile; any unplanned outage (refinery, interconnector, nuclear) pushes DA power into spike territory; interconnector flows from EU critical."
+    },
+    {
+      "metric": "Red Sea / Houthi escalation",
+      "why": "Simultaneous Red Sea & Hormuz disruption narrows LNG routing optionality; spot LNG cargoes to EU face higher rerouting risk; TTF supply elasticity compressed."
+    },
+    {
+      "metric": "Italy nuclear Senate vote",
+      "why": "Confirmatory signal on EU baseload pivot; post-2035 irrelevant but reinforces structural gas displacement \u2014 bullish near-curve (lost winter displacement), bearish long-dated power."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU Russia sanctions rollover vote",
+      "why": "16 Sept \u2014 energy sector sanctions expiry; binary outcome on gas/oil re-engagement risk; TTF/EUA volatility trigger intraday."
+    },
+    {
+      "day_label": "Thu",
+      "name": "Italy Senate nuclear bill final vote",
+      "why": "This week \u2014 confirms EU baseload strategy shift; signals long-dated structural bearish power but near-term gas displacement upside."
+    }
+  ]
+}
