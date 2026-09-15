@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (263 days old, as of 2025-12-26) and Clean Dark (258 days old, as of 2025-12-31) are stale and not actionable for intraday trading. Current analysis relies on fresh signals from TTF, DE Power, GB Power, renewables, and storage (0\u20132 days old as of 2026-09-13 to 2026-09-15).",
+  "risk_flags": [
+    "Renewables at 12th-pctile (23.94% of load, -44.56% weekly) forces thermal merit-order extension; GB at 99th-pctile signals insular scarcity premium.",
+    "EU storage 16.2 pp below seasonal average (68.26% full) narrows H2 gas flexibility; TTF at 78th-pctile (82.57 EUR/MWh, +2.3\u03c3) vulnerable to sanctions-rollover binary next week.",
+    "Red Sea Houthi chokepoint elevates LNG spot LNG freight; higher crude (fuel oil parity tightens), pushing EU thermal marginal cost higher.",
+    "US coal supply surge via EPA deregulation creates downside pressure on EU import coal cost; fuel-switch economics may deteriorate if coal falls below current 7th-pctile (96 USD/t)."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+2-4%",
+      "summary": "Thermal call persists; GB premium holds near 99th-pctile; TTF consolidates 2.3\u03c3 above trend pending sanctions outcome.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-10-16%",
+      "summary": "EU Russia sanctions rollover weakened or reversed; Trump\u2013Zelenskyy ceasefire holds; Ukrainian gas transit resumes. TTF retreats; thermal margin compresses.",
+      "ttf_pct": "-6-12%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "EU Russia sanctions hardened; Red Sea LNG diversion accelerates; renewables fall further. TTF and GB Power spike; clean spark widens.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "Thermal scarcity\u2014low renewables, tight storage 16pp below seasonal",
+    "Geopolitical premium: Red Sea LNG disruption, EU sanctions rollover risk",
+    "US thermal coal oversupply pressure via EPA deregulation",
+    "GB-DE power spread widening on insular supply tightness"
+  ],
+  "top_drivers": [
+    "Renewables collapse (12th-pctile, -44.56% weekly) forcing thermal merit-order extension; GB at 99th-percentile (204.9 EUR/MWh) reflects insular supply scarcity.",
+    "Red Sea geopolitical premium: Houthi LNG/crude disruption elevates fuel oil parity, pushing EU thermal marginal cost and power prices higher.",
+    "TTF extended 2.3\u03c3 above trend (82.57 EUR/MWh, +2.3\u03c3) on storage deficit (16.2 pp below seasonal) and sanctions rollover binary next week."
+  ],
+  "top_takeaway": "GB Power at 99th-percentile (204.9 EUR/MWh) amid collapsed renewables (12th-pctile); TTF extended 2.3\u03c3 above trend; Red Sea geopolitical premium now embedded.",
+  "watchlist": [
+    {
+      "metric": "EU Russia sanctions rollover deadline",
+      "why": "One-week extension signals fracture in consensus; outcome determines scarcity vs. oversupply narrative for TTF volatility Sept 21\u201322."
+    },
+    {
+      "metric": "Red Sea LNG diversion & freight escalation",
+      "why": "Ongoing Houthi attacks drive higher spot LNG costs; Asian arb widens, pulling TTF higher via supply scarcity signal."
+    },
+    {
+      "metric": "Renewables forecast next 5 days",
+      "why": "Currently 12th-pctile; any further decline extends thermal call and tightens GB-DE spread further; upside mean-reversion would unwind 99th-pctile GB premium."
+    },
+    {
+      "metric": "Trump\u2013Zelenskyy ceasefire implementation",
+      "why": "If Ukraine energy strikes halt, gas transit resumed; oversupply scenario weakens TTF upside. Zelenskyy's skepticism signals high execution risk; contradictory strike reports trigger volatility."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "EU Russia sanctions rollover decision",
+      "why": "Deadline mid-week; outcome binary for TTF scarcity premium. Watch for hardline vs. dovish member-state statements."
+    },
+    {
+      "day_label": "Thu",
+      "name": "Von der Leyen State of Union speech",
+      "why": "Any energy/climate policy guidance or EU-UK trade signal may affect ETS supply narrative and LNG capex signals."
+    }
+  ]
+}

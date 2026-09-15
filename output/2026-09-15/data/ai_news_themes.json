@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Houthi control of Red Sea chokepoint risks LNG/crude disruption; EU sanctions on Russia face rollover delays; Ukraine energy infrastructure remains at risk.",
+  "themes": [
+    {
+      "headline": "Houthis tighten Red Sea chokepoint grip; oil prices rising",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Red Sea transit risk elevates crude costs; higher fuel oil input increases marginal gen cost, supporting EU power spreads. TTF arb to LNG via crude parity also tightens.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/un-security-council-meeting-houthis-red-sea-chokepoint/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Trump administration scraps EPA climate curbs for US power generation",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "coal",
+      "polarity": "bearish-power",
+      "why_it_matters": "Removes US coal-fired gen dispatch constraints, increasing US coal supply pressure. Lower US thermal coal prices reduce EU import cost, depressing EU power margins via fuel-switching risk.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/09/14/epa-power-plant-climate-rules-01069146?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU fails Russia sanctions rollover; deadline extended one week",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Delay signals potential fractures in energy sanctions consensus. If rollover weakens, Russian gas flow risk to EU diminishes (oversupply scenario); if hardened, scarcity risk returns. TTF volatility likely near deadline.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/eu-fails-to-agree-russia-sanctions-rollover-with-one-day-to-spare/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Trump says Ukraine, Russia agreed to halt energy infrastructure strikes",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "If ceasefire holds, Ukrainian gas transit resumed and energy shortage eases, reducing scarcity premium in TTF/power. Zelenskyy's skepticism signals material execution risk; monitor for contradictory strike reports.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/donald-trump-ukraine-russia-strikes-energy-volodymyr-zelenskyy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US crude oil production on track for 2026 record at 13.8 million b/d",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US oil output depresses global crude prices; lower fuel oil cost reduces EU thermal gen marginal cost, pressuring power prices and EUA via lower switching incentive.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68125"
+    }
+  ],
+  "watchlist": [
+    "EU Russia sanctions deadline (extended ~1 week); watch for final rollover outcome.",
+    "Red Sea shipping incidents; monitor LNG diversion routes and TTF-Asian LNG arb.",
+    "Von der Leyen State of the Union speech; any energy/climate policy guidance.",
+    "US–EU trade & Canada ratification momentum; indirect upstream LNG capex signal."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 14,
+  "error": null
+}
