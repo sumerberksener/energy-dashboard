@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EPA scraps US power-plant climate rules, weakening global decarbonization narrative; EU policy response and MSR intake review expected by month-end.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "US climate rollback reduces scarcity premium on global emissions allowances; EU may reassess MSR intake and free-allocation strategy, creating downside pressure on EUA supply expectations and price floor."
+  },
+  "freshness_caveat": "Coal (26 Dec, 264 days stale) and Clean Dark (31 Dec, 259 days stale) \u2014 thermal merit-order signals unreliable; TTF, EUA, GB/DE power, storage, renewables current as of 15\u201316 Sept.",
+  "risk_flags": [
+    "Coal data stale (26 Dec, 264 days old); clean_dark stale (31 Dec, 259 days old) \u2014 thermal merit-order signals unreliable.",
+    "Storage 16.1pp below 5-yr seasonal at 68.49% full; daily builds slowing (0.28% MTD) \u2014 refill pace critical for Oct\u2013Mar thermal risk.",
+    "EUA \u22123.23% on EPA rollback; scarcity narrative deflates if global decarbonization slows \u2014 watch for further policy contagion.",
+    "Houthi Red Sea seizure raises LNG shipping 2\u20134 weeks; Corpus Christi Stage 3 ramp offsets \u2014 net TTF pressure unclear without flow data."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "TTF holds 77\u201380 EUR/MWh on Corpus Christi ramp offsetting Houthi delays; EUA stabilizes on policy reassessment.",
+      "ttf_pct": "\u22122 to +3%"
+    },
+    "downside": {
+      "de_power_pct": "\u22123 to \u22125%",
+      "summary": "Corpus Christi Stage 3 ramps faster; LNG arb to Europe widens; Red Sea corridor clears or rerouting becomes routine.",
+      "ttf_pct": "\u22125 to \u22128%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5 to +8%",
+      "summary": "Houthi Red Sea escalation diverts LNG fleets; shipping delays extend 3\u20134 weeks; Corpus Christi ramp slips.",
+      "ttf_pct": "+8 to +15%"
+    }
+  },
+  "themes": [
+    "Geopolitical LNG supply tightness vs. Corpus Christi ramp",
+    "Coal historically compressed; thermal dispatch risk on storage deficit",
+    "EUA policy shock: US climate reversal weakens scarcity narrative",
+    "GB power crash (-15.4% daily) vs. elevated DE (85th pctile, +28.5% MTD)"
+  ],
+  "top_drivers": [
+    "Houthi Red Sea control threatens LNG transit timing to NW Europe; geopolitical risk premium on TTF unless Corpus Christi Stage 3 ramp compensates.",
+    "EPA scraps US power-plant climate curbs (14 Sept); weakens global decarbonization momentum and deflates EUA scarcity narrative (\u22123.2\u03c3 sell-off).",
+    "Coal at 7th-percentile and storage 16pp below seasonal drive extended thermal call for winter; refill pace through Oct is key risk lever."
+  ],
+  "top_takeaway": "Coal at 7th-percentile amid Houthi Red Sea threat tightens LNG/TTF; EUA crashes 3.2\u03c3 on EPA climate rollback; storage 16pp below seasonal keeps winter thermal call extended.",
+  "watchlist": [
+    {
+      "metric": "Houthi Red Sea LNG disruption",
+      "why": "Shipping delays and rerouting costs push Europe to compete harder for Atlantic supply; TTF upside unless Corpus Christi ramp absorbs outflow."
+    },
+    {
+      "metric": "Corpus Christi Stage 3 utilization",
+      "why": "7th US LNG train online; early cargoes over next 4 weeks set the marginal cost floor for Atlantic LNG and EU gas spreads."
+    },
+    {
+      "metric": "EU storage refill pace",
+      "why": "16pp seasonal deficit and slowing daily builds (0.28% MTD) tighten winter thermal call; Oct\u2013Nov weather and Russian flows will set H2 power merit order."
+    },
+    {
+      "metric": "EUA policy contagion",
+      "why": "US EPA climate scrub aired 14 Sept; watch for EU/UK policy response and MSR intake adjustments by month-end."
+    },
+    {
+      "metric": "GB\u2013DE power spread",
+      "why": "GB crashed \u221215.4% today (89th pctile) vs. DE +1.16% (85th pctile); wind/hydro intraday strength in GB may be temporary."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Tue",
+      "name": "Von der Leyen State of the Union climate detail",
+      "why": "Expected Sept 16; energy investment pledges and carbon policy stance will reset EUA scarcity expectations post-EPA shock."
+    }
+  ]
+}

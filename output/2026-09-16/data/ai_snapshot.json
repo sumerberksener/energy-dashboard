@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 16.1 pp below the 5-yr seasonal average; EUA Carbon \u2014 outsized daily move (-3.23%, 3.2\u03c3).",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 264,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 259,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 259,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-09-16",
+      "available": true,
+      "daily_change_abs": 2.09,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.61,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 9.07,
+      "monthly_change_abs": 13.72,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 63.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 36.94
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 264,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-09-16",
+      "available": true,
+      "daily_change_pct": 1.16,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.33,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 181.74,
+      "monthly_change_pct": 28.5,
+      "name": "DE Power",
+      "percentile_rank_5y": 85.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 27.67
+    },
+    "eua": {
+      "as_of": "2026-09-15",
+      "available": true,
+      "daily_change_pct": -3.23,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.21,
+      "headline": "outsized daily move (-3.23%, 3.2\u03c3)",
+      "is_stale": false,
+      "latest": 34.1,
+      "monthly_change_pct": -0.73,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.2
+    },
+    "gb_power": {
+      "as_of": "2026-09-16",
+      "available": true,
+      "daily_change_pct": -15.44,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.17,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 147.44,
+      "monthly_change_pct": -14.43,
+      "name": "GB Power",
+      "percentile_rank_5y": 89.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 0.02
+    },
+    "renewable_share": {
+      "as_of": "2026-09-15",
+      "available": true,
+      "daily_change_pct": 72.12,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.85,
+      "headline": "outsized daily move (+72.12%, 2.5\u03c3)",
+      "is_stale": false,
+      "latest": 41.2,
+      "monthly_change_pct": -27.09,
+      "name": "Renewables",
+      "percentile_rank_5y": 43.0,
+      "unit": "% of load",
+      "weekly_change_pct": -32.79
+    },
+    "storage": {
+      "as_of": "2026-09-14",
+      "available": true,
+      "daily_change_pct": 0.28,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.59,
+      "headline": "16.1 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 68.49,
+      "monthly_change_pct": 8.23,
+      "name": "EU Storage",
+      "percentile_rank_5y": 51.0,
+      "unit": "% full",
+      "weekly_change_pct": 1.42
+    },
+    "ttf": {
+      "as_of": "2026-09-15",
+      "available": true,
+      "daily_change_pct": -3.04,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.92,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 80.06,
+      "monthly_change_pct": 30.34,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 77.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 10.39
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Houthis tighten Red Sea chokepoint control; US EPA scraps power-plant climate rules; EU emphasizes strategic independence amid trade tensions.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Houthis seize Red Sea islands, threaten global oil & LNG transit",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/un-security-council-meeting-houthis-red-sea-chokepoint/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Red Sea disruption raises LNG shipping costs and delays to NW Europe; tightens global LNG supply, pushes TTF upward via scarcity premium and forces EU to compete harder for alternative Atlantic supply."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Corpus Christi LNG Stage 3 completed; US now second-largest exporter",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68144",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Additional US LNG export capacity (7th train online) increases Atlantic supply competing with EU sourcing; soft TTF via lower marginal cost of US LNG reaching Europe; reduces geopolitical scarcity premium on European gas."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EPA scraps US power-plant climate curbs; weakens global decarbonization momentum",
+        "horizon": "months",
+        "link": "https://www.politico.com/news/2026/09/14/epa-power-plant-climate-rules-01069146?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "US climate policy reversal may slow global emissions reductions, indirectly lowering EUA price via reduced scarcity narrative and potential oversupply of allowances if EU counterparties assume weaker global carbon regime."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Von der Leyen emphasizes EU independence; China trade deficit at tipping point",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-china-trade-deficit-has-hit-tipping-point-warns-von-der-leyen/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "EU rebalancing trade policy may increase green-tech tariffs on Chinese renewables & battery components, raising capex costs for EU power-sector decarbonization and indirectly supporting higher carbon prices if transition investment stalls."
+      },
+      {
+        "commodity": "crude",
+        "headline": "US crude oil production hits record 13.8 Mb/d in 2026; maintains global supply glut",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68125",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "High US crude output dampens oil price; lowers energy-sector investment returns and reduces fuel-switching incentive from coal/gas to oil for power generation in Europe; soft indirect pressure on gas demand and power spreads."
+      }
+    ],
+    "watchlist": [
+      "Von der Leyen State of the Union policy announcements on climate/energy investment (16 Sept expected detail).",
+      "Red Sea Bab el-Mandeb shipping corridor \u2014 monitor Houthi escalation and LNG diversion costs weekly.",
+      "Corpus Christi Stage 3 ramp-up: track first cargoes and utilisation rates; TTF arb impact over 4 weeks.",
+      "EU\u2013China trade negotiation timeline; green-tech tariff decisions by Oct\u2013Nov; carbon/renewables capex implications."
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Houthis tighten Red Sea chokepoint control; US EPA scraps power-plant climate rules; EU emphasizes strategic independence amid trade tensions.",
+  "themes": [
+    {
+      "headline": "Houthis seize Red Sea islands, threaten global oil & LNG transit",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Red Sea disruption raises LNG shipping costs and delays to NW Europe; tightens global LNG supply, pushes TTF upward via scarcity premium and forces EU to compete harder for alternative Atlantic supply.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/un-security-council-meeting-houthis-red-sea-chokepoint/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Corpus Christi LNG Stage 3 completed; US now second-largest exporter",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Additional US LNG export capacity (7th train online) increases Atlantic supply competing with EU sourcing; soft TTF via lower marginal cost of US LNG reaching Europe; reduces geopolitical scarcity premium on European gas.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68144"
+    },
+    {
+      "headline": "EPA scraps US power-plant climate curbs; weakens global decarbonization momentum",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "US climate policy reversal may slow global emissions reductions, indirectly lowering EUA price via reduced scarcity narrative and potential oversupply of allowances if EU counterparties assume weaker global carbon regime.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/09/14/epa-power-plant-climate-rules-01069146?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Von der Leyen emphasizes EU independence; China trade deficit at tipping point",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "EU rebalancing trade policy may increase green-tech tariffs on Chinese renewables & battery components, raising capex costs for EU power-sector decarbonization and indirectly supporting higher carbon prices if transition investment stalls.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-china-trade-deficit-has-hit-tipping-point-warns-von-der-leyen/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US crude oil production hits record 13.8 Mb/d in 2026; maintains global supply glut",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "High US crude output dampens oil price; lowers energy-sector investment returns and reduces fuel-switching incentive from coal/gas to oil for power generation in Europe; soft indirect pressure on gas demand and power spreads.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68125"
+    }
+  ],
+  "watchlist": [
+    "Von der Leyen State of the Union policy announcements on climate/energy investment (16 Sept expected detail).",
+    "Red Sea Bab el-Mandeb shipping corridor — monitor Houthi escalation and LNG diversion costs weekly.",
+    "Corpus Christi Stage 3 ramp-up: track first cargoes and utilisation rates; TTF arb impact over 4 weeks.",
+    "EU–China trade negotiation timeline; green-tech tariff decisions by Oct–Nov; carbon/renewables capex implications."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
