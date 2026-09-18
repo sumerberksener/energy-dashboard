@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal metric stale by 266 days (as_of 2025-12-26); 7th-percentile headline unreliable for intraday dispatch or merit-order decisions. TTF, EUA, GB Power current (\u22641 day old).",
+  "risk_flags": [
+    "Coal metric stale (266 days old, 2025-12-26); 7th-percentile headline unreliable for today's dispatch decisions.",
+    "TTF +20% monthly on sanctions risk; if US House bill implementation delayed or softened, rapid retracement toward 60th percentile likely.",
+    "GB power +22% daily on thin data (1 day old); could signal UK wind outage, nuclear downtime, or interconnector constraint \u2014 need granular GB supply status.",
+    "US LNG Stage 3 completion adds 1.5\u20132 Bcf/d; TTF arb compression risk if US export pace accelerates faster than seasonal demand."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "unavailable; GB tracks upside if supply stress persists",
+      "summary": "TTF holds 75\u201378 EUR/MWh on sanctions rhetoric; GB supply normalizes; coal remains historically suppressed.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "unavailable",
+      "summary": "US sanctions bill delayed/weakened; Corpus Christi cargoes ramp; EU-US arb collapses; demand softens into autumn.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "unavailable",
+      "summary": "US sanctions enforcement accelerates or Russia retaliates with supply cuts; Hormuz escalation triggers oil/LNG shock.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Geopolitical premium on TTF via Russia sanctions escalation",
+    "US LNG export surge (Corpus Christi Stage 3) pressures EU arb",
+    "GB power decoupling from continental: supply-side UK shock",
+    "Coal historical lows constrain thermal merit order, but data stale"
+  ],
+  "top_drivers": [
+    "US House Russia sanctions bill passage escalates geopolitical premium on TTF; supports floor but vulnerable to dilution if enforcement softens.",
+    "Corpus Christi LNG Stage 3 completion and ramp inject 1.5\u20132 Bcf/d US capacity, compressing EU-US arb and pressuring TTF downside once cargoes flow.",
+    "GB power +22% daily spike signals acute UK supply constraint (wind/nuclear outage likely); GB-DE spread widening may attract cross-border flows or prompt UK DSO intervention."
+  ],
+  "top_takeaway": "TTF at 76th percentile (+20% YTD) supported by US sanctions risk; coal at 7th percentile (stale, 266d); GB power spike (+22% daily) signals UK supply tightness unrelated to continental grid.",
+  "watchlist": [
+    {
+      "metric": "US Russia sanctions bill implementation",
+      "why": "Determines magnitude and timeline of Russian pipeline/LNG flow restrictions to EU; TTF floor support or reversal hinges on enforcement pace (weeks horizon)."
+    },
+    {
+      "metric": "Corpus Christi LNG Stage 3 ramp",
+      "why": "First commercial cargoes and sustained export volume will compress EU-US LNG arb; watch for TTF downward pressure once flows normalize (months horizon)."
+    },
+    {
+      "metric": "GB power supply granularity",
+      "why": "21.76% single-day move on 87th-percentile headline requires decomposition: wind, nuclear, interconnector status critical for GB-DE spread direction."
+    },
+    {
+      "metric": "EU-China trade remedies (tariffs on solar/wind)",
+      "why": "If implemented, raises renewable capex costs and delays transition capex; indirect upward pressure on long-term EUA valuation and thermal floor (weeks\u2013months horizon)."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Oct",
+      "name": "Von der Leyen climate/energy proposals",
+      "why": "Regulatory action expected; may include MSR intake adjustments, ETS-2 expansion scope, or sectoral allocation cuts affecting EUA supply."
+    }
+  ]
+}
