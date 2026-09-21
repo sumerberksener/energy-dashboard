@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Middle East conflict and Russian sanctions bill pressure EU energy; Macron convenes emergency G7 on energy prices and hybrid threats.",
+  "themes": [
+    {
+      "headline": "Macron calls emergency G7 meeting on energy price spike, Russian hybrid attacks",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "Signals sustained geopolitical premium on EU power and gas; Russian hybrid attacks on infrastructure risk supply disruptions and upside on DA power spreads and TTF winter curve.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/emmanuel-macron-to-call-emergency-g7-meeting-as-energy-prices-spike-and-russian-hybrid-attacks-mount/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany cuts fuel tax as Middle East conflicts drive prices higher",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Middle East conflict threatens crude and refined product supply; fuel tax cut signals government acknowledgment of price shock. Crude volatility feeds into power margins via fuel-switching economics and thermal generation costs.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-fuel-tax-middle-east-war-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US House passes Russia sanctions bill, increasing leverage on Moscow",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "New US Russia sanctions risk further restriction on Russian energy exports; indirectly tightens LNG market and supports TTF via reduced competition for EU LNG demand, upside bias on winter gas prices.",
+      "horizon": "months",
+      "link": "https://www.politico.com/news/2026/09/16/house-russia-sanctions-bill-trump-01081210?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Corpus Christi LNG Stage 3 now operational, second-largest US facility",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Completion of seventh LNG train increases US export capacity; higher global LNG supply may ease TTF tensions and reduce winter gas curve risk if flows reach NW Europe; downside bias on Cal+1 and Cal+2 gas.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68144"
+    },
+    {
+      "headline": "EU to ban metal scrap exports to India and Egypt on environmental grounds",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Trade restrictions on scrap may reduce overseas demand for EU industrial output and lower EU industrial power demand; indirect marginal pressure on power prices via reduced industrial load, minor bearish signal.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-to-ban-metal-scrap-exports-to-india-egypt-on-environmental-grounds/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "G7 emergency energy meeting outcome and any coordinated supply/demand policy response",
+    "US Russia sanctions bill signed; watch for secondary sanctions targeting energy trade",
+    "Corpus Christi LNG Stage 3 ramp-up timeline and first cargoes to Europe; monitor LNG bid-ask spreads",
+    "Middle East conflict escalation; oil supply disruption risk and Brent-TTF arb widening"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 14,
+  "error": null
+}

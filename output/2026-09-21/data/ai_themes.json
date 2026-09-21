@@ -1,0 +1,74 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (269 days old); Clean Dark stale as of 2025-12-31 (264 days old). Core DA metrics (TTF, DE Power, GB Power, Renewables, Storage, EUA, Clean Spark) current as of 2026-09-21 or within 3 days. Avoid trading thermal spreads on stale coal price; rely on current Clean Spark (\u2212121.05 EUR/MWh, 4th-percentile) for merit-order signal.",
+  "risk_flags": [
+    "Clean Spark at \u2212121.05 EUR/MWh (4th-percentile) signals coal and gas dispatch fully suppressed; thermal capacity offline risk if renewables fade.",
+    "Storage at 69.62% full, 15.8 pp below seasonal average \u2014 refill rate must accelerate to de-risk winter; any LNG supply shock or cold snap amplifies upside on TTF Cal+1.",
+    "Macron emergency G7 on energy prices + Russian hybrid attacks signal sustained geopolitical premium; US Russia sanctions bill (horizon: months) tightens LNG supply outlook despite Corpus Christi Stage 3 ramp.",
+    "GB Power at 171.24 EUR/MWh (96th-percentile) vs DE 50.68 EUR/MWh (9th-percentile) \u2014 120 EUR/MWh spread driven by renewables geography and undersupply in Britain; GB interconnector congestion risk."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11\u20133%",
+      "summary": "Renewables remain elevated (90%+ of load); thermal suppressed; geopolitical premium on TTF sustained; storage refill pace slow.",
+      "ttf_pct": "+2\u20134%"
+    },
+    "downside": {
+      "de_power_pct": "\u221220\u201330%",
+      "summary": "Renewables persist above 95th-percentile; Corpus Christi cargoes reach NW Europe; geopolitical premium unwinds on no major escalation.",
+      "ttf_pct": "\u22125\u20138%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+25\u201340%",
+      "summary": "Wind/solar fade sharply (below 80th-percentile); thermal generation recalled; Russian sanctions bill signed; Cold snap risks storage refill.",
+      "ttf_pct": "+8\u201315%"
+    }
+  },
+  "themes": [
+    "Renewables suppressing thermal merit order; Clean Spark at 4th-percentile",
+    "Geopolitical premium on EU gas and power; Russian sanctions and Middle East conflict",
+    "GB Power at 96th-percentile; DE-GB spread widening on supply asymmetry",
+    "Storage 15.8 pp below seasonal; winter refill pace critical to H2 risk"
+  ],
+  "top_drivers": [
+    "Renewables at 98th-percentile (93.28% of load) \u2014 Clean Spark at \u2212121.05 EUR/MWh signals coal fully out of merit; any wind fade triggers sharp thermal call.",
+    "Geopolitical premium on gas and power \u2014 Macron emergency G7, Russian sanctions bill, Middle East conflict \u2014 offsets supply gains from Corpus Christi Stage 3; TTF at 77th-percentile reflects upside bias on winter curve.",
+    "GB-DE power spread at 120 EUR/MWh (96th-percentile GB vs 9th-percentile DE) \u2014 renewables generation geography and undersupply in Britain drive extreme arbitrage; interconnector congestion risk."
+  ],
+  "top_takeaway": "Renewables at 98th-percentile crush German power to 9th-percentile (50.68 EUR/MWh); geopolitical premium on TTF offsets supply gains from Corpus Christi LNG Stage 3.",
+  "watchlist": [
+    {
+      "metric": "Renewables fade catalyst",
+      "why": "At 98th-percentile (93.28% of load), any wind/solar decline rapidly re-ignites thermal call and Clean Spark upside; monitor 10-day wind forecast."
+    },
+    {
+      "metric": "TTF winter curve risk premium",
+      "why": "Sanctions pressure on Russian gas + storage 15.8 pp below seasonal = structural upside bias on Cal+1 and Cal+2 despite Corpus Christi ramp; watch LNG arrival rates into NW Europe."
+    },
+    {
+      "metric": "GB-DE power spread (120 EUR/MWh)",
+      "why": "Extreme and widening; interconnector flows and GB generation mix (renewables underperformance vs continent) will set day-ahead arbitrage and capacity constraint risk."
+    },
+    {
+      "metric": "US Russia sanctions bill signed date",
+      "why": "Secondary sanctions on Russian energy trade could restrict LNG competition for EU demand and steepen TTF winter curve; monitor timeline and scope."
+    },
+    {
+      "metric": "Corpus Christi LNG Stage 3 first cargoes to Europe",
+      "why": "Bearish signal for Cal+1 and Cal+2 if cargoes arrive and flow to NW Europe; could offset geopolitical premium if sanctioned Russian supply does not return."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "G7 emergency energy meeting outcome",
+      "why": "Coordination on energy supply/demand policy or price interventions could reshape DA power and gas curve expectations and geopolitical premium."
+    },
+    {
+      "day_label": "TBD",
+      "name": "US Russia sanctions bill signed",
+      "why": "Secondary sanctions on Russian energy exports would tighten LNG supply for EU and sustain TTF winter curve premium; timeline critical for Cal+1 risk."
+    }
+  ]
+}
