@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Middle East war, Ukraine conflict, and US-China tensions rattling energy markets; EU seeking price relief via subsidy and regulatory easing.",
+  "themes": [
+    {
+      "headline": "Macron seeks EU climate/energy rule relaxation amid soaring fuel prices",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delay of methane-reporting law reduces compliance costs for oil/gas producers, lowering upstream hedging pressure; loosened climate rules could defer green capex and extend fossil baseload runtime, weakening power curve.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/macron-asks-von-der-leyen-to-ease-fuel-rules-to-tame-rising-prices/"
+    },
+    {
+      "headline": "France extends fuel subsidies to shield consumers from energy price spikes",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Consumer price caps dampen demand signals; reduces wholesale power price floor support. Fiscal relief signals political appetite for price intervention across EU, weighing on spot and forward power valuations.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/france-extend-fuel-subsidies-consumers-energy-prices/"
+    },
+    {
+      "headline": "Germany cuts fuel tax as Middle East war sends crude and product prices soaring",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Fuel-tax cut reduces input cost floor for transport and industry; lower diesel/heating oil prices suppress power-to-gas switching incentive, pressuring spark spreads. Signals EU-wide fiscal relief appetite.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-fuel-tax-middle-east-war-prices/"
+    },
+    {
+      "headline": "Macron pushes energy truce between Ukraine and Russia at UN talks",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Ceasefire talks could normalize Russian gas flows to EU, easing winter supply risk and TTF forward curve. Currently speculative, but any credible negotiation reduces geopolitical premium in gas and power contracts.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/emmanuel-macron-pushes-for-energy-truce-between-ukraine-and-russia/"
+    },
+    {
+      "headline": "Corpus Christi LNG Stage 3 fully operational; US capacity now second-largest globally",
+      "source": "EIA Today in Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Expanded US LNG export capacity increases competition for EU gas imports; higher supply elasticity suppresses TTF seasonality risk and Cal+1 volatility. Direct NW Europe LNG arb pass-through within 4–8 weeks.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68144"
+    }
+  ],
+  "watchlist": [
+    "Macron–Von der Leyen meetings on methane rule suspension timeline (days–weeks).",
+    "EU windfall tax proposal on oil firms; German finance minister advocacy (weeks).",
+    "Ukraine–Russia ceasefire negotiations impact on energy infrastructure (ongoing; major swing risk).",
+    "Corpus Christi LNG Stage 3 ramp-up trajectory and US–EU LNG nomination data (weeks–months)."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

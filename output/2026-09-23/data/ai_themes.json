@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "Macron seeks EU climate/energy rule relaxation; methane-reporting law suspension under discussion to ease upstream compliance costs.",
+    "polarity": "bearish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Delayed methane-reporting deadlines reduce compliance capex for oil/gas producers, lowering hedging pressure on power; looser climate enforcement extends fossil baseload runtime, suppressing power curve and EUA dispatch economics."
+  },
+  "freshness_caveat": "Coal data stale (271 days old, as of 26-Dec-2025); clean-dark spread stale (266 days, as of 31-Dec-2025). Merit-order assumptions and fuel-switch economics may not reflect current hard-coal and fuel-oil prices. TTF, DE Power, GB Power, EUA, storage, and renewables current as of 22\u201323-Sep-2026.",
+  "risk_flags": [
+    "Renewables at 22nd percentile (30.28% of load) after -60.64% daily move; thermal call extended into autumn.",
+    "Storage 15.6 pp below seasonal average at 70.14% full; refill pace through Oct-Nov will set Q4 power and gas curve shape.",
+    "Macron energy-truce talks could normalize Russian gas flows, collapsing geopolitical TTF premium if credible; currently speculative but tail risk to forwards.",
+    "Coal data stale (271 days old as of 26-Dec-2025); clean-dark spread stale (266 days); merit-order assumptions may not reflect current fuel costs."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-5% to -8% (tracks renewable rebound and cooler demand unwinding)",
+      "summary": "Renewable recovery in next 2\u20133 days eases thermal dispatch; GB power retreats toward 85\u201390th percentile; TTF stable near 73.34 EUR/MWh.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Macron-led ceasefire talks yield credible Ukraine-Russia energy normalization; Russian gas supply expectations rise; geopolitical premium collapses.",
+      "ttf_pct": "-10-15%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Renewable collapse persists or deepens; cold front sweeps NW Europe; thermal baseload extended into Oct; storage refill slows.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB power spike, renewable collapse, and thermal dispatch premium",
+    "EU fiscal intervention dampening power price floors",
+    "Geopolitical risk premium normalizing on Ukraine-Russia truce speculation",
+    "US LNG expansion competing for EU winter gas demand"
+  ],
+  "top_drivers": [
+    "Renewables collapse (30.28%, 22nd percentile, -60.64% daily move) driving GB Power spike to 96th percentile and extended thermal dispatch premium.",
+    "EU fiscal relief (fuel subsidies, tax cuts, climate rule relaxation) dampening power price floors and suppressing spark-spread support.",
+    "Geopolitical tail risk: Macron's Ukraine-Russia energy-truce negotiation could normalize Russian gas flows, collapsing TTF geopolitical premium if credible\u2014currently speculative but material for Cal+1 forwards."
+  ],
+  "top_takeaway": "GB Power at 96th percentile amid renewable collapse; storage 15.6 pp below seasonal; geopolitical ceasefire talks risk premium normalization.",
+  "watchlist": [
+    {
+      "metric": "GB Power 96th percentile, renewable collapse driver",
+      "why": "Thermal dispatch pull extended; monitor wind forecast and interconnector flows for reversal risk into weekend."
+    },
+    {
+      "metric": "Storage refill trajectory vs. seasonal average",
+      "why": "15.6 pp deficit implies tighter winter; pace into Oct determines Cal+1 and Q4 power forward curve anchoring."
+    },
+    {
+      "metric": "Macron-Von der Leyen ceasefire timeline",
+      "why": "Any credible Ukraine-Russia energy truce collapses geopolitical premium in TTF forwards; currently speculative but material tail event."
+    },
+    {
+      "metric": "Corpus Christi LNG Stage 3 ramp-up and US-EU nominations",
+      "why": "Expanded US export capacity increases NW Europe spot gas elasticity; direct TTF arb pass-through within 4\u20138 weeks."
+    },
+    {
+      "metric": "EU windfall tax and German fuel-tax cut implementation",
+      "why": "Fiscal relief dampens power price floor; weakens spark spread support and forward curve valuations across DA and curve."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "Macron\u2013Von der Leyen methane rule suspension decision",
+      "why": "Outcome affects upstream hedging pressure and power baseload dispatch economics over weeks horizon."
+    }
+  ]
+}
