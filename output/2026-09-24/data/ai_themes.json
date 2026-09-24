@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU methane reporting delay removes compliance costs on gas operators; Macron pushes regulatory relief to unlock negotiated Russian supply.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Regulatory cost removal and Russian gas unlocking lower marginal cost of thermal generation, reducing merit-order position for coal and pushing carbon down via lower emissions-intensive dispatch."
+  },
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (272 days old) and clean_dark as of 2025-12-31 (267 days old); fuel-switch economics may not reflect current margins. All other metrics current as of 2026-09-23 or 2026-09-24.",
+  "risk_flags": [
+    "US supplies >50% EU diesel; 90-day ban would compress refinery margins and force power plants to switch to gas (TTF upside 10\u201315% risk).",
+    "Storage 70.24% full, 15.6 pp below 5-yr seasonal; refill pace into Q4 will determine winter heating demand and thermal dispatch risk.",
+    "Macron ceasefire negotiation could unlock Russian supply, collapsing TTF (\u201315\u201320% downside) and GB-DE spread if geopolitical tail-risk reprices.",
+    "Coal at 7th pctile (96 USD/t) but data stale (272 days); clean dark 47th pctile \u2014 fuel switch economics are tight, vulnerable to margin compression."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u20133\u20135%",
+      "summary": "US diesel ban threat priced in; refinery margins tighten moderately; TTF holds 70\u201375 EUR/MWh; GB Power eases 5\u20138%.",
+      "ttf_pct": "\u20132\u20133%"
+    },
+    "downside": {
+      "de_power_pct": "\u201312\u201318%",
+      "summary": "Macron ceasefire negotiation unlocks Russian gas supply; methane reporting delay approved; regulatory floor removed; energy truce reprices geopolitical tail.",
+      "ttf_pct": "\u201315\u201320%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+8\u201312%",
+      "summary": "US diesel ban announced with imminent 90-day timeline; refinery output collapses; power plants forced to gas; storage drawdown accelerates.",
+      "ttf_pct": "+10\u201315%"
+    }
+  },
+  "themes": [
+    "US diesel export ban threatens EU refinery margins and fuel-to-gas switching",
+    "GB Power extended; storage 15.6 pp below seasonal drives winter refill urgency",
+    "Macron energy truce could unlock Russian gas; regulatory relief removes policy floor",
+    "Coal near 7-yr lows; clean spark negative signals thermal dispatch weakness"
+  ],
+  "top_drivers": [
+    "US diesel export ban threat (>50% EU supply at risk) forces power plants to switch to gas; TTF upside 10\u201315% in compression scenario.",
+    "GB Power at 93rd pctile (163.24 EUR/MWh) reflects storage 15.6 pp below seasonal; winter refill urgency lifts thermal dispatch call.",
+    "Macron ceasefire negotiation with Russia could unlock gas supply, creating 15\u201320% downside tail-risk repricing in TTF and power spreads."
+  ],
+  "top_takeaway": "GB Power at 93rd percentile amid US diesel export ban threat and geopolitical energy shock; TTF 74th pctile reflects gas-for-coal switch risk if refinery margins compress.",
+  "watchlist": [
+    {
+      "metric": "US diesel export ban implementation",
+      "why": "90-day timeline triggers refinery-to-gas fuel switch and TTF upside within weeks; direct EU energy security shock."
+    },
+    {
+      "metric": "EU windfall tax on refiners",
+      "why": "Margin compression signals; output risk for power plants and Cal+1 spread widening if passed."
+    },
+    {
+      "metric": "Ukraine\u2013Russia ceasefire and energy corridor terms",
+      "why": "Unlocks Russian gas supply; TTF and power spreads vulnerable to 15\u201320% downside repricing."
+    },
+    {
+      "metric": "Corpus Christi LNG (7th train online)",
+      "why": "US export capacity +1 bcf/d increases LNG arb competition; seasonal supply downside if US shifts to Asian pricing."
+    },
+    {
+      "metric": "EU methane reporting delay decision",
+      "why": "Removes compliance costs on operators, loosens policy floor on European gas incentives; structural support for TTF downside in negotiation scenario."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "US diesel ban 90-day implementation clock starts",
+      "why": "Triggers refinery margin compression and power-plant fuel switching to gas within weeks."
+    }
+  ]
+}

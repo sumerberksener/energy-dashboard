@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 93th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 15.6 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 272,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 267,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 267,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-09-24",
+      "available": true,
+      "daily_change_abs": -55.75,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.34,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -31.62,
+      "monthly_change_abs": -8.84,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 25.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 5.7
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 272,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-09-24",
+      "available": true,
+      "daily_change_pct": -30.88,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.21,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 124.78,
+      "monthly_change_pct": -6.62,
+      "name": "DE Power",
+      "percentile_rank_5y": 69.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -2.79
+    },
+    "eua": {
+      "as_of": "2026-09-23",
+      "available": true,
+      "daily_change_pct": -1.78,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.22,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.65,
+      "monthly_change_pct": -2.72,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 43.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -1.85
+    },
+    "gb_power": {
+      "as_of": "2026-09-24",
+      "available": true,
+      "daily_change_pct": -7.83,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.3,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 163.24,
+      "monthly_change_pct": 16.44,
+      "name": "GB Power",
+      "percentile_rank_5y": 93.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 31.91
+    },
+    "renewable_share": {
+      "as_of": "2026-09-23",
+      "available": true,
+      "daily_change_pct": 13.31,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.23,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.31,
+      "monthly_change_pct": -19.51,
+      "name": "Renewables",
+      "percentile_rank_5y": 29.0,
+      "unit": "% of load",
+      "weekly_change_pct": 45.55
+    },
+    "storage": {
+      "as_of": "2026-09-22",
+      "available": true,
+      "daily_change_pct": 0.14,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.56,
+      "headline": "15.6 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 70.24,
+      "monthly_change_pct": 7.04,
+      "name": "EU Storage",
+      "percentile_rank_5y": 54.0,
+      "unit": "% full",
+      "weekly_change_pct": 1.72
+    },
+    "ttf": {
+      "as_of": "2026-09-23",
+      "available": true,
+      "daily_change_pct": -1.81,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.73,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 72.01,
+      "monthly_change_pct": 5.4,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 74.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -6.9
+    }
+  },
+  "news": {
+    "geopolitics_summary": "US diesel export ban threat and Middle East conflict drive EU fuel crisis; Macron seeks energy truce and regulatory relief.",
+    "themes": [
+      {
+        "commodity": "crude",
+        "headline": "Trump threatens 90-day US diesel export ban; EU supplies >50% from US",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/europe-shrugs-at-trumps-threat-of-diesel-export-ban-despite-shortage-warnings/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "US supplies >50% EU diesel. Ban triggers refinery margin compression, power plant fuel-switching to gas (TTF upside), and storage draw acceleration. Direct EU energy security shock."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "France extends fuel subsidies amid soaring energy prices",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/france-extend-fuel-subsidies-consumers-energy-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Government fuel subsidy caps retail signals, suppressing demand-side price discovery. Indirect downward pressure on wholesale power if heating fuel demand falls; but may extend crisis duration and political pressure for broader rate caps."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Macron seeks energy truce between Ukraine and Russia; pushes regulatory relief",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/emmanuel-macron-pushes-for-energy-truce-between-ukraine-and-russia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Negotiated gas ceasefire could unlock Russian supply, collapsing TTF and power spreads. Methane reporting delay removes compliance costs on operators, loosening policy floor on European gas incentives."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Germany cuts fuel tax; calls for oil company windfall tax amid conflict",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/germany-fuel-tax-middle-east-war-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Tax cuts ease consumer pressure but erode fiscal buffers; windfall tax on refiners compresses refining margins and output, risking power plant fuel availability and Cal+1 spread widening."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Corpus Christi LNG expansion completed; now US second-largest LNG facility",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68144",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "7th train online increases US LNG export capacity ~1 bcf/d. Boosts US-NW Europe LNG arb competitiveness, raising TTF arbitrage competition and potential seasonal supply downside if US prioritizes Asian pricing."
+      }
+    ],
+    "watchlist": [
+      "US diesel export ban announcement and 90-day implementation timeline.",
+      "Macron\u2013von der Leyen energy policy alignment decision on methane reporting delay.",
+      "EU Commission windfall tax proposal on oil/gas refiners; member state adoption pace.",
+      "Ukraine\u2013Russia ceasefire negotiations and any energy corridor agreement terms."
+    ]
+  }
+}

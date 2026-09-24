@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US diesel export ban threat and Middle East conflict drive EU fuel crisis; Macron seeks energy truce and regulatory relief.",
+  "themes": [
+    {
+      "headline": "Trump threatens 90-day US diesel export ban; EU supplies >50% from US",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "US supplies >50% EU diesel. Ban triggers refinery margin compression, power plant fuel-switching to gas (TTF upside), and storage draw acceleration. Direct EU energy security shock.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/europe-shrugs-at-trumps-threat-of-diesel-export-ban-despite-shortage-warnings/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France extends fuel subsidies amid soaring energy prices",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Government fuel subsidy caps retail signals, suppressing demand-side price discovery. Indirect downward pressure on wholesale power if heating fuel demand falls; but may extend crisis duration and political pressure for broader rate caps.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/france-extend-fuel-subsidies-consumers-energy-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Macron seeks energy truce between Ukraine and Russia; pushes regulatory relief",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Negotiated gas ceasefire could unlock Russian supply, collapsing TTF and power spreads. Methane reporting delay removes compliance costs on operators, loosening policy floor on European gas incentives.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/emmanuel-macron-pushes-for-energy-truce-between-ukraine-and-russia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany cuts fuel tax; calls for oil company windfall tax amid conflict",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Tax cuts ease consumer pressure but erode fiscal buffers; windfall tax on refiners compresses refining margins and output, risking power plant fuel availability and Cal+1 spread widening.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-fuel-tax-middle-east-war-prices/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Corpus Christi LNG expansion completed; now US second-largest LNG facility",
+      "source": "EIA Today in Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "7th train online increases US LNG export capacity ~1 bcf/d. Boosts US-NW Europe LNG arb competitiveness, raising TTF arbitrage competition and potential seasonal supply downside if US prioritizes Asian pricing.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68144"
+    }
+  ],
+  "watchlist": [
+    "US diesel export ban announcement and 90-day implementation timeline.",
+    "Macron–von der Leyen energy policy alignment decision on methane reporting delay.",
+    "EU Commission windfall tax proposal on oil/gas refiners; member state adoption pace.",
+    "Ukraine–Russia ceasefire negotiations and any energy corridor agreement terms."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
