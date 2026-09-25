@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale (273 days old, as of 2025-12-26); Clean Dark stale (268 days old, as of 2025-12-31). Current analysis relies on fresh TTF, DE Power, GB Power, EUA, and Renewables snapshots (0\u20131 days old). Coal percentile and Clean Dark spread should not guide near-term trading.",
+  "risk_flags": [
+    "Storage 15.7 pp below 5-yr seasonal average; refill pace into winter will set H2 power risk and gas tightness.",
+    "Trump 90-day diesel export ban on >50% of EU imports forces feedstock substitution, raising power-plant operating costs and fuel-switch incentive.",
+    "GB Power at 174.73 EUR/MWh (96th-percentile), up 93% weekly; Clean Spark 34.27 EUR/MWh (90th-percentile), up 102% monthly\u2014sustained thermal premium.",
+    "Iran war tightens global energy supply; Corpus Christi Stage 3 online increases US LNG export capacity\u2014competing LNG regime shifts TTF arbitrage window."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+1-3%",
+      "summary": "Renewable volatility sustains thermal premium; diesel ban uncertainty weighs on refinery margins, TTF firm.",
+      "ttf_pct": "+2-4%"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Trump delays diesel ban; US LNG (Corpus Christi Stage 3) ramps faster; renewables extend; EU demand softens into autumn.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+15-22%",
+      "summary": "Iran war escalates; Suez disruption redirects LNG, tightens EU supply; diesel ban confirmed. TTF and GB power spike.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB power spike, clean spark extended, coal historically cheap",
+    "Trump diesel ban, EU refinery tightness, thermal backup cost",
+    "Renewable surge (+86% daily), storage 15.7 pp below seasonal",
+    "US LNG capacity ramp, Iran war, geopolitical energy volatility"
+  ],
+  "top_drivers": [
+    "Renewable surge (+86% daily, 85th-percentile) compresses midday merit order; residual load spikes sustain GB Power (96th-percentile) and Clean Spark (90th-percentile) premiums.",
+    "Trump 90-day diesel export ban threatens >50% of EU refinery feedstock; forces fuel switching, raises thermal backup cost, amplifies power-plant operating leverage.",
+    "Storage 15.7 pp below seasonal; combined with geopolitical Iran war risk and Corpus Christi LNG ramp-up, sets up competing forces\u2014EU tightness vs. US supply growth."
+  ],
+  "top_takeaway": "GB Power at 96th-percentile amid renewable surge; diesel export ban threatens EU refinery margins and power plant backup costs\u2014fuel-switch regime tightens.",
+  "watchlist": [
+    {
+      "metric": "Trump diesel export ban implementation",
+      "why": "90-day countdown from ~23 Sep; forces EU refinery margin compression and raises power plant diesel-backup operating cost."
+    },
+    {
+      "metric": "Corpus Christi LNG Stage 3 ramp",
+      "why": "Seventh CCL train increases US export capacity; incremental supply to Europe tightens LNG arbitrage window vs TTF."
+    },
+    {
+      "metric": "EU storage refill pace",
+      "why": "At 70.35% (15.7 pp below seasonal); winter injection/withdrawal trajectory sets thermal dispatch economics and power curve."
+    },
+    {
+      "metric": "Iran war supply disruption risk",
+      "why": "Escalation could redirect LNG flows, tighten crude, and reset Brent-TTF correlation; Suez Canal transit delays amplify."
+    },
+    {
+      "metric": "Renewable intermittency (now 63.92% of load, +86% daily)",
+      "why": "Outsized swings (+2.8\u03c3) compress peaker margins; sustains high Clean Spark and GB Power premiums on residual load volatility."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU diplomatic offensive on US diesel ban",
+      "why": "Negotiation progress on 90-day Trump timeline critical to refinery margin outlook."
+    }
+  ]
+}

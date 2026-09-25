@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Trump 90-day diesel export ban threatens EU supply (>50% US origin); EU diplomatic offensive underway. Iran war tightens global energy.",
+  "themes": [
+    {
+      "headline": "Trump prepares 90-day US diesel export ban; EU imports >50% from US",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Ban forces EU to source diesel elsewhere or bid higher for spot crude. Tightens refinery feedstock, raises power plant diesel backup costs and thermal plant operating margins. Direct TTF/EUA arbitrage risk via fuel switching.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/europe-shrugs-at-trumps-threat-of-diesel-export-ban-despite-shortage-warnings/"
+    },
+    {
+      "headline": "France extends fuel subsidies shielding consumers from skyrocketing energy prices",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Subsidy caps retail fuel costs, reducing demand response signal and potentially supporting demand for heating oil into winter. Masks true scarcity pricing; affects European power/gas margin compression if passed through to industrial users.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/france-extend-fuel-subsidies-consumers-energy-prices/"
+    },
+    {
+      "headline": "US push to flood Balkans with American gas raises EU climate concerns",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased US LNG to Balkans/EU candidates reduces TTF demand; dilutes EU negotiating power on green transition. Indirect downward pressure on gas prices if US LNG volume diverts from spot market to long-term Balkans deals.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/us-push-to-flood-balkans-with-american-gas-sparks-concerns-in-brussels/"
+    },
+    {
+      "headline": "Corpus Christi LNG Stage 3 completed; US now second-largest LNG exporter",
+      "source": "EIA Today in Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Seventh CCL train online increases US LNG export capacity, boosting supply to global market. Structural downward pressure on TTF if additional volumes flow to Europe; LNG arbitrage window tightens.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68144"
+    },
+    {
+      "headline": "Iran war boosts China clean energy exports; China leverage in global energy markets",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Geopolitical shock (Iran war) raises crude volatility and redirects LNG flows. China's energy tech dominance (renewables) indirectly shapes EU power curve via capacity additions. Monitor for further supply disruption or LNG re-routing via Suez.",
+      "horizon": "weeks",
+      "link": "https://www.politico.com/news/2026/09/22/chinese-president-arrives-in-the-u-s-with-new-energy-leverage-as-war-rattles-global-markets-01088268"
+    }
+  ],
+  "watchlist": [
+    "Trump diesel ban announcement/implementation deadline (90 days from ~23 Sep); EU negotiation progress.",
+    "Corpus Christi Stage 3 ramp-up to full capacity; incremental LNG spot volumes to Europe.",
+    "Iran war escalation risk; crude/LNG supply disruption watch; Suez Canal transit delays.",
+    "French fuel subsidy duration & scope; pass-through to industrial power/heating demand."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
