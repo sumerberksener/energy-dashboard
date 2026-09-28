@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal (276 days old, 7th-pctile, 96 USD/t) and Clean Dark spread (271 days old, 27.95 EUR/MWh, 47th-pctile) are stale; merit-order displacement and coal-gas arbitrage cannot be credibly assessed without current numbers. Recommend immediate coal & dark spread refresh before position-sizing any thermal exposure.",
+  "risk_flags": [
+    "GB Power 177.39 EUR/MWh (96th-pctile) \u2014 ban materializes, GB interconnector arbitrage reverses, cascades into DE/EU hubs.",
+    "EU Storage 15.7 pp below seasonal average (70.88% full) \u2014 Q4 refill pace critical; demand-cut signal implies structural demand destruction if supply stress persists.",
+    "Coal data stale (276 days old, 7th-pctile at 96 USD/t) \u2014 merit-order displacement by gas surge not current; verify coal burn assumption.",
+    "Clean Dark stale (271 days old, 27.95 EUR/MWh, 47th-pctile) \u2014 cannot assess dark/spark regime shift credibly without fresh numbers."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-5 to +8%",
+      "summary": "Diesel ban delayed or narrowed by diplomacy; EU demand cuts phased. TTF stable, GB Power retraces 10\u201315%.",
+      "ttf_pct": "-2 to +3%"
+    },
+    "downside": {
+      "de_power_pct": "-12 to -5%",
+      "summary": "US-EU diplomatic deal exempts key EU ports; Henry Hub weakness and ample LNG supply ease LNG arbitrage. TTF softens, renewables sustain.",
+      "ttf_pct": "-6 to -3%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+18 to +28%",
+      "summary": "Trump diesel ban confirmed; EU Commission enforces emergency rationing. Fuel-switch into gas, storage refill halts, TTF spiked.",
+      "ttf_pct": "+12 to +18%"
+    }
+  },
+  "themes": [
+    "Trump diesel ban threat \u2014 EU fuel-switch into gas/coal power",
+    "GB Power extremes vs. EU storage deficit and demand-cut signal",
+    "Renewables spike (85th-pctile, +72.92% daily) masking structural tightness",
+    "TTF stable but vulnerable to geopolitical escalation on ban timeline"
+  ],
+  "top_drivers": [
+    "Trump diesel export ban threat (EU 50%+ import-dependent) forcing immediate fuel-switch calculus into gas/power merit order; GB Power at 96th-pctile pricing in geopolitical tail risk.",
+    "EU Commission demand-cut signal flagging structural supply tightness; storage 15.7 pp below seasonal (70.88%) narrows Q4 refill buffer, raising winter-load risk premium.",
+    "Renewables at 85th-pctile (63.25% of load) masking underlying thermal tightness; mean reversion to seasonal ~50th-pctile would restore 100\u2013150 MW of thermal call on DA."
+  ],
+  "top_takeaway": "GB Power at 96th-percentile amid Trump diesel export ban threat; EU demand-cut signal and 15.7 pp storage deficit intensify fuel-switch risk into winter.",
+  "watchlist": [
+    {
+      "metric": "Trump US diesel export ban scope & effective date",
+      "why": "EU over 50% diesel import-dependent on US; ban triggers immediate fuel-switch into gas/power generation, lifting TTF and GB Power further."
+    },
+    {
+      "metric": "EU Commission demand-reduction mandate rollout",
+      "why": "Structural demand destruction signal; if rationing decrees follow, power DA/Cal+1 spreads compress, TTF forward curves flatten, but storage refill becomes secondary to load shedding."
+    },
+    {
+      "metric": "Renewables forecast for next 10 days (current 85th-pctile after +72.92% daily jump)",
+      "why": "63.25% of load is elevated; mean reversion to 50th-pctile would restore thermal call, supporting TTF and power; watch for any weather outlook shift."
+    },
+    {
+      "metric": "Henry Hub summer pricing (6% below prior year, per EIA)",
+      "why": "Weak US gas reduces LNG export incentive; amps down TTF upside from LNG arb, but diesel ban tailwind offsets \u2014 net geopolitical risk dominates."
+    },
+    {
+      "metric": "UK-US bilateral energy talks post-Starmer (Sept 30+)",
+      "why": "UK diesel supply also at 1/6 risk from ban; bilateral negotiation could soften scope, reducing GB Power pressure; watch for any carve-out or exemption language."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "Trump diesel ban 90-day clock starts (confirm effective date)",
+      "why": "If announced imminently, market reprices fuel-switch mechanics into winter; TTF and GB Power front-month repricing within hours."
+    }
+  ]
+}

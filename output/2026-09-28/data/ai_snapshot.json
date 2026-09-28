@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 96th-percentile of 5-yr range \u2014 historically high; Coal \u2014 7th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 15.7 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 276,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 271,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 271,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-09-28",
+      "available": true,
+      "daily_change_abs": 40.55,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.23,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -5.93,
+      "monthly_change_abs": -5.07,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 44.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 37.36
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 276,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "7th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 7.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-09-28",
+      "available": true,
+      "daily_change_pct": 36.79,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.29,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 150.75,
+      "monthly_change_pct": -3.29,
+      "name": "DE Power",
+      "percentile_rank_5y": 79.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 27.81
+    },
+    "eua": {
+      "as_of": "2026-09-25",
+      "available": true,
+      "daily_change_pct": 0.18,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.56,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.06,
+      "monthly_change_pct": -1.33,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -1.08
+    },
+    "gb_power": {
+      "as_of": "2026-09-28",
+      "available": true,
+      "daily_change_pct": 57.28,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.56,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 177.39,
+      "monthly_change_pct": 10.27,
+      "name": "GB Power",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 26.56
+    },
+    "renewable_share": {
+      "as_of": "2026-09-27",
+      "available": true,
+      "daily_change_pct": 72.92,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.47,
+      "headline": "outsized daily move (+72.92%, 2.2\u03c3)",
+      "is_stale": false,
+      "latest": 63.25,
+      "monthly_change_pct": 0.27,
+      "name": "Renewables",
+      "percentile_rank_5y": 85.0,
+      "unit": "% of load",
+      "weekly_change_pct": -32.91
+    },
+    "storage": {
+      "as_of": "2026-09-26",
+      "available": true,
+      "daily_change_pct": 0.37,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.51,
+      "headline": "15.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 70.88,
+      "monthly_change_pct": 6.44,
+      "name": "EU Storage",
+      "percentile_rank_5y": 55.0,
+      "unit": "% full",
+      "weekly_change_pct": 1.28
+    },
+    "ttf": {
+      "as_of": "2026-09-25",
+      "available": true,
+      "daily_change_pct": -4.04,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.67,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 72.07,
+      "monthly_change_pct": 9.82,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 74.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -7.75
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Trump diesel export ban threat dominates EU supply risk; Commission signals demand-side intervention as global supply tightens.",
+    "themes": [
+      {
+        "commodity": "mixed",
+        "headline": "EU Commission urges member states to cut energy demand amid supply constraints",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-commission-calls-for-gas-electricity-demand-cuts/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Demand destruction signal from Brussels suggests structural tightness in EU gas/power markets. Policy-driven load shedding would depress DA/Cal+1 power spreads and TTF forward curves; risk of emergency measures if supply stress persists."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Trump threatens US diesel export ban; EU imports over half from America",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/eu-launches-diplomatic-offensive-to-stop-trumps-diesel-export-ban/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "US supplies >50% of EU diesel. Ban would force EU to substitute fuel oil/gas for power generation, lifting gas demand and TTF spot/Cal+1. Direct fuel-switch mechanic into EU power stack; acute risk if 90-day ban materializes."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US LNG push into Balkans risks EU climate goals and gas dependency",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/us-push-to-flood-balkans-with-american-gas-sparks-concerns-in-brussels/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "US-backed LNG infrastructure in EU candidate states could lock in long-term gas demand, complicating EU decarbonization and affecting regional hub pricing (e.g., TTF arb spreads to Balkans). Indirect TTF/EUA correlation via policy uncertainty."
+      },
+      {
+        "commodity": "crude",
+        "headline": "UK diesel imports at risk; Trump ban would disrupt one-sixth of UK supply",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/uk-business-minister-jonathan-reynolds-us-diesel-export-ban-significant-concern/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Post-Brexit UK energy security exposed to US export policy. Diesel scarcity forces UK power plants to substitute gas; spillover into NW European hub pricing (TTF/UK virtual) via interconnector rebalancing and fuel arbitrage."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Henry Hub summer gas prices 6% below prior year despite high cooling demand",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68204",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Weak US gas pricing narrative suggests ample North American supply; reduces LNG export incentive from US to Europe, capping upside pressure on TTF. Inverse of TTF \u2014 lower Henry Hub may ease European LNG arb spreads in Q4."
+      }
+    ],
+    "watchlist": [
+      "Trump diesel export ban 90-day timeline \u2014 confirm effective date and scope.",
+      "EU Commission demand-reduction mandate rollout \u2014 watch for emergency gas/power rationing decrees.",
+      "UK-US bilateral energy negotiations post-Starmer Brexit reset speech (Sept 30 or later).",
+      "US LNG FID delays or cancellations; monitor Henry Hub weakness signal."
+    ]
+  }
+}
