@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; GB Power \u2014 91th-percentile of 5-yr range \u2014 historically high; EU Storage \u2014 15.5 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 279,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 274,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 274,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-10-01",
+      "available": true,
+      "daily_change_abs": 25.09,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.53,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 9.01,
+      "monthly_change_abs": -5.83,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 63.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -16.56
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 279,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-10-01",
+      "available": true,
+      "daily_change_pct": 17.79,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.57,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 166.13,
+      "monthly_change_pct": -13.39,
+      "name": "DE Power",
+      "percentile_rank_5y": 82.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -10.58
+    },
+    "eua": {
+      "as_of": "2026-09-30",
+      "available": true,
+      "daily_change_pct": -0.71,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.35,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.7,
+      "monthly_change_pct": -3.16,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 44.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.87
+    },
+    "gb_power": {
+      "as_of": "2026-10-01",
+      "available": true,
+      "daily_change_pct": 15.93,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.14,
+      "headline": "91th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 161.07,
+      "monthly_change_pct": -4.4,
+      "name": "GB Power",
+      "percentile_rank_5y": 91.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -13.33
+    },
+    "renewable_share": {
+      "as_of": "2026-09-30",
+      "available": true,
+      "daily_change_pct": 24.08,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.41,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 61.9,
+      "monthly_change_pct": 11.56,
+      "name": "Renewables",
+      "percentile_rank_5y": 83.0,
+      "unit": "% of load",
+      "weekly_change_pct": 5.26
+    },
+    "storage": {
+      "as_of": "2026-09-29",
+      "available": true,
+      "daily_change_pct": 0.29,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.53,
+      "headline": "15.5 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 71.54,
+      "monthly_change_pct": 6.22,
+      "name": "EU Storage",
+      "percentile_rank_5y": 56.0,
+      "unit": "% full",
+      "weekly_change_pct": 1.26
+    },
+    "ttf": {
+      "as_of": "2026-09-30",
+      "available": true,
+      "daily_change_pct": 3.66,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.62,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 72.36,
+      "monthly_change_pct": 3.65,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 74.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -3.12
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Trump administration pressuring EU on diesel reserves and export policy; winter energy price crisis dominating EU ministerial dialogue.",
+    "themes": [
+      {
+        "commodity": "mixed",
+        "headline": "Trump energy chief proposes EU release >33% diesel reserves",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/trumps-energy-chief-asked-europe-to-release-more-than-a-third-of-its-diesel-reserves/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Forced reserve drawdown would flood diesel market, depress thermal fuel costs, reduce fuel-switching demand for power generation. Direct impact on spark spread and winter generation economics."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Trump threatens diesel export ban; EU seeks price relief measures",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/donald-trump-diesel-export-ban-on-table/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Uncertainty over US diesel export policy creates volatility in transatlantic fuel arbitrage and refinery feedstock costs. Indirect impact on EU power via thermal margin compression if diesel prices spike or collapse."
+      },
+      {
+        "commodity": "power",
+        "headline": "EU energy ministers report limited solutions for winter power bill crisis",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-energy-prices-winter-diesel-exports-gas-costs/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Policy stalemate on price relief signals structural winter power scarcity expectations. Absence of new fiscal/regulatory backstops raises forward power curve risk (Cal+1, Cal+2) and EUA volatility if emissions-intensive generation required."
+      },
+      {
+        "commodity": "power",
+        "headline": "Meloni pushes EU to relax fiscal rules for energy cost mitigation",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/giorgia-meloni-fiscal-rules-spending-plea-energy-crunch-ursula-von-der-leyen/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Fiscal rule flexibility could unlock large-scale price caps or subsidies. If approved, would suppress DA power prices and reduce generation margins; if rejected, signals confidence in market-led resolution and potential upside to spreads."
+      },
+      {
+        "commodity": "renewables",
+        "headline": "EU\u2013Canada partnership pact includes critical minerals and energy cooperation",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-and-canada-to-announce-sweeping-new-partnership-pact/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Expanded critical minerals supply from Canada supports EU green transition and renewable capacity expansion. Long-term bearish for power via accelerated wind/solar capex; near-term neutral. Relevant to EUA trajectory if renewable substitution accelerates."
+      }
+    ],
+    "watchlist": [
+      "US diesel export ban executive order or announcement timeline \u2014 direct EU fuel cost and thermal margin impact.",
+      "EU fiscal rule vote on energy spending relief \u2014 outcome drives power price cap/subsidy probability.",
+      "Winter weather forecasts (Nov\u2013Feb) \u2014 critical for gas demand, storage draws, and power curve shape.",
+      "Trump\u2013EU diesel negotiations outcome \u2014 reserve release or export restrictions materially alter Oct\u2013Nov fuel cost curve."
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale (279 days, as of 2025-12-26) and clean-dark stale (274 days, as of 2025-12-31). Recent TTF, GB Power, DE Power, EUA, and storage metrics current (1\u20132 days old). Coal percentile and trend unreliable; clean-dark spread current status only.",
+  "risk_flags": [
+    "GB Power 91st-percentile; DE Power 82nd-percentile. Storage at 71.5% (15.5 pp below seasonal) signals tight H1 2027 refill trajectory.",
+    "Trump diesel reserve drawdown (>33%) would depress thermal spark spread; export ban creates upside risk to diesel-to-gas switching economics.",
+    "EU energy ministers report 'limited solutions' \u2014 policy vacuum on price caps raises forward (Cal+1, Cal+2) power curve convexity risk.",
+    "Coal at 8th-percentile ($96/t) but data stale (279 days); clean-dark spread (27.95 EUR/MWh, 47th-percentile) suppressed by weak thermal margins."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b13-5%",
+      "summary": "Storage refill pace holds; policy stalemate persists; diesel reserves stable. Power firm at current premium.",
+      "ttf_pct": "\u00b12-4%"
+    },
+    "downside": {
+      "de_power_pct": "+10-15%",
+      "summary": "Fiscal rule relaxation approved; EU price caps implemented. Winter weather turns mild; storage refill ahead of seasonal pace.",
+      "ttf_pct": "+6-10%"
+    },
+    "horizon": "1w | 1m",
+    "upside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Trump orders diesel export ban; EU reserve drawdown fails. Thermal margins compress; TTF follows coal arb lower.",
+      "ttf_pct": "-5-8%"
+    }
+  },
+  "themes": [
+    "Winter power scarcity premium; storage deficit structural",
+    "Trump diesel intervention; transatlantic fuel-cost volatility",
+    "EU fiscal rule debate; price-cap backstop uncertainty",
+    "Coal historically cheap; gas-to-coal switch limited by generation stack"
+  ],
+  "top_drivers": [
+    "GB Power at 91st-percentile reflects tight winter scarcity premium; storage 15.5 pp below seasonal keeps generation call bid.",
+    "Trump diesel intervention (reserve drawdown + export ban threat) creates transatlantic fuel-cost volatility; direct thermal margin impact.",
+    "EU policy stalemate on price relief extends structural power deficit; fiscal rule outcome will determine backstop credibility and forward curve risk."
+  ],
+  "top_takeaway": "GB Power at 91st-percentile (161 EUR/MWh) amid storage 15.5 pp below seasonal; Trump diesel reserve pressure and EU policy stalemate extend winter scarcity premium.",
+  "watchlist": [
+    {
+      "metric": "US diesel export ban executive order",
+      "why": "Direct impact on EU thermal fuel cost and spark-spread economics; shapes Oct\u2013Nov generation dispatch."
+    },
+    {
+      "metric": "EU fiscal rule energy spending relief vote",
+      "why": "Approval unlocks price caps/subsidies; rejection signals market-led resolution and potential upside to generation spreads."
+    },
+    {
+      "metric": "Winter weather forecasts (Nov\u2013Feb)",
+      "why": "Critical for gas demand, storage draw pace, and power curve risk; extends seasonal shortfall if cold."
+    },
+    {
+      "metric": "Trump\u2013EU diesel negotiations outcome",
+      "why": "Reserve release or export restrictions materially alter Oct\u2013Nov fuel-cost curve and thermal merit order."
+    }
+  ],
+  "watchlist_dated": []
+}
