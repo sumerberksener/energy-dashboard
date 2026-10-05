@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Trump diesel export ban threat drives EU reserve releases; Middle East conflict sustains crude/product prices; trade tensions shape EU policy posture.",
+  "themes": [
+    {
+      "headline": "Trump threatens US diesel export ban; EU considers strategic reserve release",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "US diesel export restrictions would tighten European refinery feedstock availability and raise fuel costs, increasing power-generation fuel switching pressure and lifting spark spreads on thermal units.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/donald-trump-diesel-export-ban-on-table/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "G7 agrees oil reserve release after US push; diesel export ban averted",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Coordinated reserve release and avoided US export ban reduce near-term crude/diesel tightness; lowers refinery margins and fuel-cost inflation, easing power plant operating costs over weeks-to-months horizon.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/trump-says-europe-agrees-to-release-massive-amount-of-diesel/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Crude oil, refinery margins rise amid persistent Middle East conflict",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Higher crude and product prices increase power-plant fuel costs and fuel-switching incentives (oil-to-gas arb); elevated refinery margins constrain fuel availability and lift thermal power cost curves.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68245"
+    },
+    {
+      "headline": "US natural gas production hits record high in July 2026",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US natgas production, especially from Permian, supports LNG export potential and strengthens supply chains to Europe via Atlantic arbitrage; downward pressure on TTF if export capacity utilised.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68225"
+    },
+    {
+      "headline": "Italy seeks EU fiscal rule relaxation to fund higher energy costs",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "EU fiscal constraints on energy spending may limit demand-side policy response (price caps, subsidies); affects member-state power purchasing behaviour and DA/Cal+1 curve resilience.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/giorgia-meloni-fiscal-rules-spending-plea-energy-crunch-ursula-von-der-leyen/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "US diesel export restrictions — escalation risk; monitor Trump admin rhetoric and formal proclamations.",
+    "G7 reserve release timing and volume — watch for drawdown impact on global crude/product inventories.",
+    "Middle East geopolitical developments — upstream production disruptions would feed crude curve.",
+    "EU fiscal rules debate outcome — determines scope of member-state energy support capacity."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

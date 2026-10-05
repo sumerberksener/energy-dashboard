@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (283 days old); clean_dark stale as of 2025-12-31 (278 days old). Current trading and scenarios anchor on live TTF, DE/GB power, storage, renewables, and EUA; coal and clean_dark used for contextual range only.",
+  "risk_flags": [
+    "EU storage 15.2 pp below seasonal average at 72.4% full\u2014winter refill pace will determine Q1 2027 power cost curve and LNG import urgency.",
+    "Coal at 96 USD/t (8th-percentile) and clean_dark 27.95 EUR/MWh (47th-percentile) suggest thermal displacement ongoing; fuel-switch economics favour gas if TTF rallies above 80 EUR/MWh.",
+    "Renewables at 23.66% (12th-percentile) on 1-Oct; -20% daily move lifts thermal call and flattens DA curve\u2014watch for wind reversal triggering DA spike.",
+    "Trump diesel export ban threat creates two-way: restriction tightens EU refinery feedstock and raises spark spreads; G7 reserve release offsets if executed, compressing margins and easing power costs."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11-3%",
+      "summary": "Renewables recover modestly; storage refills slowly; TTF holds 72\u201376 EUR/MWh; DA power tracks 155\u2013165 EUR/MWh.",
+      "ttf_pct": "\u00b11-2%"
+    },
+    "downside": {
+      "de_power_pct": "-3-8%",
+      "summary": "G7 reserve release executed; crude/diesel inventory drawn; refinery margins compress; renewables wind forecast improves lifting DA thermal displacement.",
+      "ttf_pct": "-2-5%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+5-12%",
+      "summary": "Trump diesel ban formalised; EU refinery feedstock tightens; spark spreads widen as fuel-switching pressure mounts; crude rally feeds product costs.",
+      "ttf_pct": "+3-7%"
+    }
+  },
+  "themes": [
+    "Coal structurally weak, storage undersupplied",
+    "Trump trade tension vs. G7 reserve coordination",
+    "Renewables at 12th-percentile suppress DA merit order",
+    "TTF steady but storage deficit shapes H2 refill risk"
+  ],
+  "top_drivers": [
+    "Renewables at 12th-percentile (23.66% share) suppress DA merit order and lift thermal dispatch cost\u2014watch for wind reversal signalling DA spike.",
+    "EU storage 15.2 pp below seasonal average; winter refill pace determines H2 2026 and Q1 2027 LNG import urgency and TTF structural support.",
+    "Trump diesel export ban threat vs. G7 reserve release coordination: restriction tightens EU refinery feedstock and raises spark spreads; coordinated reserve drawdown offsets and eases power-plant fuel costs."
+  ],
+  "top_takeaway": "Coal at 8th-percentile historic lows; EU storage 15.2 pp below seasonal trend; Trump diesel ban threat offset by G7 reserve release\u2014power regime hinges on renewable weakness (12th-pctile) and thermal fuel-cost pass-through.",
+  "watchlist": [
+    {
+      "metric": "EU Storage refill pace (% full)",
+      "why": "At 72.4%, 15.2 pp below seasonal; determines winter adequacy and LNG import demand through Q4 2026 and Q1 2027."
+    },
+    {
+      "metric": "Renewable share volatility (wind forecast)",
+      "why": "At 12th-percentile (23.66%); -20% daily swing lifts thermal marginal cost and flattens DA power curve\u2014watch for high-wind episodes reversing merit order."
+    },
+    {
+      "metric": "Trump diesel export ban escalation",
+      "why": "Geopolitical tail-risk; formal proclamation would tighten EU refinery feedstock, raise fuel costs for power plants, and lift spark spreads within 2\u20134 weeks."
+    },
+    {
+      "metric": "G7 reserve release execution (volume & timing)",
+      "why": "Coordinated crude/diesel drawdown mitigates diesel shortage risk and eases refinery margins\u2014monitor announcement for DA power relief within weeks."
+    },
+    {
+      "metric": "Middle East crude supply continuity",
+      "why": "Persistent conflict sustains crude/product price premium; upstream disruption would feed crude curve and raise power-plant operating costs via fuel-switching pressure."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "N/A",
+      "name": "G7 reserve release announcement timeline",
+      "why": "Monitor for formal release schedule; volume and drawdown rate will shape crude/product inventory trends and power fuel-cost dynamics over weeks."
+    }
+  ]
+}
