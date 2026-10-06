@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (284 days old); Clean Dark stale as of 2025-12-31 (279 days old). Coal 8th percentile and Clean Dark spread (27.95 EUR/MWh, 47th pctile) should not be relied upon for tactical decisions until refreshed. All other metrics current as of 2026-10-05 to 2026-10-06.",
+  "risk_flags": [
+    "GB Power +18% daily to 92nd percentile \u2014 outage or demand shock could spike further; monitor GB wind and interconnector flows.",
+    "Storage 15.1pp below 5-yr seasonal (72.67% full) \u2014 refill pace into winter will dictate H1 2027 power range and gas marginal cost.",
+    "US diesel export ban threat could raise NW European heating fuel by 5\u201310 EUR/bbl equivalent; G7 100M barrel release partially offsetting but timing and sequencing unclear.",
+    "EUA extended 2.2\u03c3 below 50d trend at 33.2 EUR/t (39th pctile) \u2014 watch for MSR intake or sectoral allocation news to trigger mean reversion."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b12-4%",
+      "summary": "Storage deficit and GB tightness persist; US diesel ban threat and reserve releases remain in negotiation. TTF stable 72\u201375 EUR/MWh; DE Power 155\u2013165 EUR/MWh.",
+      "ttf_pct": "\u00b12-3%"
+    },
+    "downside": {
+      "de_power_pct": "-5-10%",
+      "summary": "G7 reserve releases executed swiftly and at full scale; US diesel ban deferred or exempts allies. Refined product tightness eases, heating demand softens, power merit-order improves.",
+      "ttf_pct": "-4-6%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+6-12%",
+      "summary": "US diesel export ban announced with limited carve-outs; G7 reserve release delayed or scaled back. Heating fuel costs spike, driving gas-to-heat switching and winter demand.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "GB power extended; EU storage deficit",
+    "US diesel export ban vs. G7 reserve release tug-of-war",
+    "Record US LNG production weakens TTF arb",
+    "Coal historically cheap; EUA in 2.2\u03c3 dip"
+  ],
+  "top_drivers": [
+    "GB Power at 92nd percentile (165.19 EUR/MWh) signals supply tightness or demand spike; +18% daily move warrants outage/weather check.",
+    "Storage 15.1pp below seasonal average (72.67% full) tightens refill headroom and raises winter tail-risk premium in TTF-Cal+1 and power curve.",
+    "US diesel export ban threat (bullish refined products, heating fuel, power demand) offset by G7 100M bbl reserve release (bearish heating margin, demand destruction) \u2014 net regime depends on timing and scope.",
+    "Record US LNG production eroding TTF-HH arb; lower arbitrage reduces European gas tightness but masks tighter near-term storage deficit."
+  ],
+  "top_takeaway": "GB Power at 92nd percentile (165.19 EUR/MWh) and storage 15.1pp below seasonal norm drive tightness; US diesel export ban threat and G7 reserve releases create near-term volatility; coal stale but historically cheap (8th pctile) offers hedging tailwind.",
+  "watchlist": [
+    {
+      "metric": "US diesel export ban scope & timeline",
+      "why": "Full ban could tighten NW European refined products by 500\u2013800 kb/d, pushing heating fuel costs up 5\u201315% and lifting power demand via gas-to-heat switching."
+    },
+    {
+      "metric": "G7 reserve release execution (crude + diesel volumes, phasing)",
+      "why": "100M bbl announced but drawdown schedule affects near-term refined product supply relief and European heating margin compression; bearish for seasonal power demand."
+    },
+    {
+      "metric": "EU storage refill rate (Oct\u2013Dec 2026)",
+      "why": "Currently 15.1pp below seasonal; pace into winter will set H1 2027 gas cost-of-carry and power merit-order stability; watch for demand destruction or supply upside."
+    },
+    {
+      "metric": "LNG export utilization (US, Australia, Qatar)",
+      "why": "Record US production but terminal utilization and re-export capacity vs. domestic demand determine TTF-HH arbitrage spread; bearish signal if arb closes further."
+    },
+    {
+      "metric": "EUA mean reversion near 33.2 EUR/t",
+      "why": "Sitting 2.2\u03c3 below 50d trend; MSR intake data, sectoral allocation votes, or warm weather could snap it 2\u20134% higher toward 34\u201335 EUR/t within 1\u20132 weeks."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "US diesel export ban decision",
+      "why": "Timing and scope critical to NW European refined supply tightness and winter heating demand."
+    },
+    {
+      "day_label": "TBD",
+      "name": "G7 reserve release drawdown schedule",
+      "why": "Phasing of 100M bbl crude + diesel release affects near-term European heating fuel margin and demand destruction risk."
+    },
+    {
+      "day_label": "TBD",
+      "name": "EU fiscal rule review vote",
+      "why": "Outcome impacts state aid caps for energy support and long-term capacity mechanism design; affects investment signals and winter demand elasticity."
+    }
+  ]
+}

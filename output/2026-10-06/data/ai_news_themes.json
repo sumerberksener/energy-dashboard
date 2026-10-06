@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "US diesel export ban threat and G7 reserve release negotiations dominate; Middle East conflict props crude; EU fiscal rule relaxation pressure from energy costs.",
+  "themes": [
+    {
+      "headline": "Trump threatens US diesel export ban; G7 negotiates reserve releases",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "bullish-power",
+      "why_it_matters": "US diesel export ban would tighten NW European refined product supply; upward pressure on heating fuel costs, gas-to-power switching, and demand destruction risk. Reserve releases aim to mitigate but create volatility. Direct impact on European fuel bills and power demand.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/donald-trump-diesel-export-ban-on-table/"
+    },
+    {
+      "headline": "G7 agrees oil and diesel reserve release after US pressure",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Large coordinated reserve releases (100M barrels crude + diesel) ease global refined product tightness, reducing European heating fuel costs and demand for gas-fired generation. Lower heating margin improves power merit-order stack.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/france-floats-major-release-of-oil-and-diesel-reserves-in-response-to-us-pressure/"
+    },
+    {
+      "headline": "Middle East conflict pushes crude and refinery margins higher in Q3 2026",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Rising crude and refinery margins increase European heating fuel costs, amplifying demand for gas-fired generation and lifting power prices via gas-to-power spread and merit-order effect. Indirect TTF pressure via heating demand.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68245"
+    },
+    {
+      "headline": "US natural gas production hits record high in July 2026",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US LNG production capacity potentially increases global LNG supply and weakens TTF vs. Henry Hub spreads. Lower arbitrage incentive eases European gas tightness; bearish for TTF and downstream power. Monitor LNG export terminal utilization.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68225"
+    },
+    {
+      "headline": "EU countries seek fiscal rule relaxation amid persistent energy cost pressures",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Italy and others pushing to loosen overspending caps to fund energy support schemes. Policy uncertainty on state aid, capacity support, and price controls affects long-term power/gas investment signals and storage dynamics.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/giorgia-meloni-fiscal-rules-spending-plea-energy-crunch-ursula-von-der-leyen/"
+    }
+  ],
+  "watchlist": [
+    "US diesel export ban decision timeline and extent of any carve-outs for allies.",
+    "Timing and magnitude of announced G7 / European reserve releases (crude, diesel, strategic stocks).",
+    "LNG export facility utilization data; watch for capacity increases feeding TTF arb.",
+    "EU fiscal rule review vote / outcome; implications for energy support budgets and capacity mechanisms."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
