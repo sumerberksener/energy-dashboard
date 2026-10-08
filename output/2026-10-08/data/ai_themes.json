@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "UK and EU finalize Brexit agreement linking carbon emissions trading systems; expands eligible compliance instruments and reduces segmentation risk.",
+    "polarity": "neutral",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Broader compliance instrument eligibility lowers EUA-UKA arbitrage barriers, reduces ETS price discovery friction, and supports stable long-term curve pricing into 2027 \u2014 modest structural relief on segmentation tail-risk."
+  },
+  "freshness_caveat": "Coal metric stale as of 2025-12-26 (286 days old); Clean Dark stale as of 2025-12-31 (281 days old). Current coal price may not reflect recent thermal dispatch economics or Q4 2026 scarcity.",
+  "risk_flags": [
+    "Storage 72.97% full, 15.1 pp below 5-yr seasonal norm \u2014 refill pace through winter will set H2 2027 power risk envelope.",
+    "Renewables at 21st-pctile (down 25% week-on-week) extend thermal merit-order call; if cold front materializes, gas call can spike hard.",
+    "Coal at 8th-percentile (96 USD/t, stale as of 26-Dec-2025) \u2014 lignite baseload protection intact but price signal may not reflect current scarcity.",
+    "France domestic fuel-price intervention mooted; state price caps or subsidies could suppress DA/Cal+1 spreads and distort cross-border arbs."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Soft coal, weak renewables, tight storage sustain gas-to-power call; TTF stable, DE power tracks 84th-pctile range.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-4-7%",
+      "summary": "G7 reserve releases executed aggressively; crude/diesel margins collapse. Fuel-switch incentive evaporates, gas demand softens, TTF and DE power decline.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5-8%",
+      "summary": "Cold front drives renewables below 15th-pctile; storage refill pace weakens. Gas-fired call surges, TTF rallies on winter heating demand.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Tight EU gas, weak renewables forecast",
+    "G7 reserve releases dampen crude, ease fuel-switch pressure",
+    "EU-UK carbon linkage structural neutral, reduces ETS segmentation",
+    "DE/GB power elevated (84th/83rd pctile) despite soft coal economics"
+  ],
+  "top_drivers": [
+    "Renewables at 21st-pctile (down 25% week-on-week) extending thermal call; storage 15 pp below seasonal tightens gas-to-power transmission.",
+    "G7 crude reserve releases and record US LNG supply dampen refined margins and cap fuel-switch incentive \u2014 TTF downside lever if implemented aggressively.",
+    "EU-UK carbon linkage finalizes \u2014 reduces ETS segmentation, neutral to modest EUA relief on broader eligibility; structural pricing effect into 2027 curve."
+  ],
+  "top_takeaway": "Storage 15 pp below seasonal, renewables at 21st-pctile, and TTF +3.2% daily signal tight autumn gas regime; G7 reserve releases and record US LNG supply cap upside.",
+  "watchlist": [
+    {
+      "metric": "EU storage refill pace",
+      "why": "72.97% full vs 15.1 pp below seasonal average; November\u2013January injection/withdrawal will determine H1 2027 gas-power tightness."
+    },
+    {
+      "metric": "G7 crude reserve releases \u2014 timing & volume",
+      "why": "Bearish diesel/refined margins \u2192 reduces fuel-switch incentive from gas \u2192 TTF downside if drawn down aggressively in Nov\u2013Dec."
+    },
+    {
+      "metric": "US LNG export ramp (record July 2026 production)",
+      "why": "Higher US supply available to EU; lower LNG scarcity premium caps TTF arbitrage upside; monitor cargo flow data."
+    },
+    {
+      "metric": "France intervention measures (price caps, subsidy scope)",
+      "why": "Domestic policy may suppress EDF/gas-fired margins and distort cross-border power-gas spread arbs; watch for legislative signals."
+    },
+    {
+      "metric": "Middle East conflict escalation",
+      "why": "US crude margins elevated on geopolitical premium; any Hormuz disruption will reverse bearish refined-product pressure and trigger fuel-switch rally."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "IEA assessment (oil reserve release trigger)",
+      "why": "Determines EU eligibility for further strategic stock releases post-March accord; timing shapes crude/diesel arb into Nov\u2013Dec."
+    }
+  ]
+}

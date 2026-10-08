@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-UK carbon linkage finalized; G7 oil/diesel reserve releases agreed; trade tensions with China and US persist amid energy policy pressures.",
+  "themes": [
+    {
+      "headline": "UK and EU finalize Brexit agreement linking carbon emissions trading",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "EU ETS linkage with UK system expands eligible compliance instruments and affects EUA price discovery; reduces segmentation risk in carbon market, marginal but structural for curve pricing.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/uk-eu-reach-brexit-agreement-link-carbon-emission-trading-systems/"
+    },
+    {
+      "headline": "G7 agrees to release oil reserves; EU won't release additional stocks beyond March accord",
+      "source": "Politico EU Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Reserve releases dampen crude/petroleum product prices; lower refined product costs ease fuel-switching incentive away from gas, pressuring TTF via lower spark-spread and reduced power-generation gas demand.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-countries-will-release-fresh-oil-stocks-only-after-iea-assessment/"
+    },
+    {
+      "headline": "France PM pledges action on fuel prices amid household energy cost pressure",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Political pressure to manage domestic fuel/energy costs may signal state intervention (price caps, subsidies) that could distort DA/Cal+1 power-gas arbs and suppress price signals across French markets.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/france-prime-minister-sebastien-lecornu-schools-fuel-agriculture-speech/"
+    },
+    {
+      "headline": "US crude prices and refinery margins rose in Q3 amid Middle East conflict persistence",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Higher crude and refined margins increase import costs for EU diesel/fuel; elevated refinery margins can trigger fuel-to-gas switching in power generation, supporting power prices via reduced gas margin.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68245"
+    },
+    {
+      "headline": "US natural gas production hit record in July 2026; record propane exports in H1",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Record US gas and propane output may increase LNG export capacity available to EU; higher US supply reduces LNG scarcity premium, capping TTF via arbitrage and lowering gas-burning generation cost.",
+      "horizon": "months",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68225"
+    }
+  ],
+  "watchlist": [
+    "IEA assessment trigger for any future EU oil/diesel stock releases post-March accord baseline.",
+    "Timing and volume of G7 reserve release implementation; impact on crude/diesel spreads and DA power-fuel arbs.",
+    "France domestic energy intervention measures (price caps, subsidies) and cross-border effects on spot/forward power.",
+    "Middle East geopolitical escalation risks and upstream crude supply disruption scenarios for H4 2026."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

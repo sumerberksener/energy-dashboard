@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 15.1 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 286,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 281,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 281,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-10-08",
+      "available": true,
+      "daily_change_abs": -13.84,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.51,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 9.37,
+      "monthly_change_abs": 31.84,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 63.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -0.74
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 286,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-10-08",
+      "available": true,
+      "daily_change_pct": -7.21,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.69,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 178.0,
+      "monthly_change_pct": 24.57,
+      "name": "DE Power",
+      "percentile_rank_5y": 84.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 2.89
+    },
+    "eua": {
+      "as_of": "2026-10-07",
+      "available": true,
+      "daily_change_pct": 0.83,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.81,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.89,
+      "monthly_change_pct": -2.95,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -1.03
+    },
+    "gb_power": {
+      "as_of": "2026-10-08",
+      "available": true,
+      "daily_change_pct": -24.26,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.33,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 142.02,
+      "monthly_change_pct": 22.55,
+      "name": "GB Power",
+      "percentile_rank_5y": 83.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -1.77
+    },
+    "renewable_share": {
+      "as_of": "2026-10-07",
+      "available": true,
+      "daily_change_pct": 0.57,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.17,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 29.72,
+      "monthly_change_pct": -23.01,
+      "name": "Renewables",
+      "percentile_rank_5y": 21.0,
+      "unit": "% of load",
+      "weekly_change_pct": -25.26
+    },
+    "storage": {
+      "as_of": "2026-10-06",
+      "available": true,
+      "daily_change_pct": 0.18,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.57,
+      "headline": "15.1 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 72.97,
+      "monthly_change_pct": 6.26,
+      "name": "EU Storage",
+      "percentile_rank_5y": 59.0,
+      "unit": "% full",
+      "weekly_change_pct": 1.51
+    },
+    "ttf": {
+      "as_of": "2026-10-07",
+      "available": true,
+      "daily_change_pct": 3.16,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.16,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 78.08,
+      "monthly_change_pct": 2.95,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 77.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.64
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU-UK carbon linkage finalized; G7 oil/diesel reserve releases agreed; trade tensions with China and US persist amid energy policy pressures.",
+    "themes": [
+      {
+        "commodity": "carbon",
+        "headline": "UK and EU finalize Brexit agreement linking carbon emissions trading",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/uk-eu-reach-brexit-agreement-link-carbon-emission-trading-systems/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "EU ETS linkage with UK system expands eligible compliance instruments and affects EUA price discovery; reduces segmentation risk in carbon market, marginal but structural for curve pricing."
+      },
+      {
+        "commodity": "crude",
+        "headline": "G7 agrees to release oil reserves; EU won't release additional stocks beyond March accord",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-countries-will-release-fresh-oil-stocks-only-after-iea-assessment/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "supply",
+        "why_it_matters": "Reserve releases dampen crude/petroleum product prices; lower refined product costs ease fuel-switching incentive away from gas, pressuring TTF via lower spark-spread and reduced power-generation gas demand."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "France PM pledges action on fuel prices amid household energy cost pressure",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/france-prime-minister-sebastien-lecornu-schools-fuel-agriculture-speech/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Political pressure to manage domestic fuel/energy costs may signal state intervention (price caps, subsidies) that could distort DA/Cal+1 power-gas arbs and suppress price signals across French markets."
+      },
+      {
+        "commodity": "crude",
+        "headline": "US crude prices and refinery margins rose in Q3 amid Middle East conflict persistence",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68245",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Higher crude and refined margins increase import costs for EU diesel/fuel; elevated refinery margins can trigger fuel-to-gas switching in power generation, supporting power prices via reduced gas margin."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US natural gas production hit record in July 2026; record propane exports in H1",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68225",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Record US gas and propane output may increase LNG export capacity available to EU; higher US supply reduces LNG scarcity premium, capping TTF via arbitrage and lowering gas-burning generation cost."
+      }
+    ],
+    "watchlist": [
+      "IEA assessment trigger for any future EU oil/diesel stock releases post-March accord baseline.",
+      "Timing and volume of G7 reserve release implementation; impact on crude/diesel spreads and DA power-fuel arbs.",
+      "France domestic energy intervention measures (price caps, subsidies) and cross-border effects on spot/forward power.",
+      "Middle East geopolitical escalation risks and upstream crude supply disruption scenarios for H4 2026."
+    ]
+  }
+}
