@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 96th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 14.9 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 293,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 288,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 288,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-10-15",
+      "available": true,
+      "daily_change_abs": 20.49,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.65,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 13.16,
+      "monthly_change_abs": 37.76,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 69.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 26.52
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 293,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-10-15",
+      "available": true,
+      "daily_change_pct": 11.41,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.09,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 200.0,
+      "monthly_change_pct": 44.8,
+      "name": "DE Power",
+      "percentile_rank_5y": 87.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 29.66
+    },
+    "eua": {
+      "as_of": "2026-10-14",
+      "available": true,
+      "daily_change_pct": -0.99,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.45,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.14,
+      "monthly_change_pct": 0.12,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 49.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 1.96
+    },
+    "gb_power": {
+      "as_of": "2026-10-15",
+      "available": true,
+      "daily_change_pct": -8.75,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.68,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 186.36,
+      "monthly_change_pct": -3.46,
+      "name": "GB Power",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 22.84
+    },
+    "renewable_share": {
+      "as_of": "2026-10-14",
+      "available": true,
+      "daily_change_pct": 0.03,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.22,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 49.23,
+      "monthly_change_pct": 43.47,
+      "name": "Renewables",
+      "percentile_rank_5y": 62.0,
+      "unit": "% of load",
+      "weekly_change_pct": 20.93
+    },
+    "storage": {
+      "as_of": "2026-10-13",
+      "available": true,
+      "daily_change_pct": 0.11,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.53,
+      "headline": "14.9 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 74.02,
+      "monthly_change_pct": 5.38,
+      "name": "EU Storage",
+      "percentile_rank_5y": 61.0,
+      "unit": "% full",
+      "weekly_change_pct": 1.1
+    },
+    "ttf": {
+      "as_of": "2026-10-14",
+      "available": true,
+      "daily_change_pct": -0.1,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.89,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 87.14,
+      "monthly_change_pct": 8.84,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 81.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 11.44
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU-Russia energy ties risk via Slovakia-Putin alignment; methane rule delays favour Big Oil; Ukraine refinery campaign pressures Trump leverage.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Big Oil delayed EU methane rules; further lobbying underway",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/big-oil-persuaded-eu-to-delay-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Methane rule delays reduce upstream emissions oversight, easing supply-side cost for Russian gas entering EU via pipeline\u2014risks TTF floor support and structural decarbonisation cost."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Russia plans to deepen ties with Slovakia under PM Fico",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/russia-plans-revive-slovakia-ties/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Slovakia is major transit hub for Russian gas to EU. Fico alignment with Putin heightens pipeline leverage risk and potential supply disruption volatility\u2014direct impact on central/southern EU power spreads and gas curve."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Ukraine refinery campaign pressures Trump on war leverage",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/trump-europe-ukraine-leverage-war-russia-oil/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Sustained Ukrainian strikes on Russian refineries tighten crude supply globally, raising Brent floor and crude-to-gas switching incentive in EU power stack\u2014indirect upward pressure on power via fuel cost."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU leaders summit agenda includes energy prices and climate rule tension",
+        "horizon": "days",
+        "link": "https://www.politico.eu/article/how-to-watch-the-eu-leaders-summit-like-a-pro/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Summit outcomes on energy policy, green subsidies, and methane enforcement will signal EU commitment to carbon/power regulation. Potential delays or rollbacks affect EUA floor and renewables capex planning."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Germany, Italy seek emergency brake to halt new EU laws",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/germany-italy-request-emergency-brake-power-to-stop-new-eu-laws/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Merz and Meloni push to block or slow EU laws via emergency mechanism. Could derail Green Deal enforcement, carbon cost calibration, and grid infrastructure directives\u2014weakens long-term power market structure."
+      }
+    ],
+    "watchlist": [
+      "EU leaders summit (Oct 15\u201316): energy price, methane rule, green subsidy decisions.",
+      "Slovakia\u2013Russia energy negotiations: pipeline transit, supply security terms.",
+      "German\u2013Italian emergency brake vote: timeline and scope of EU law suspension.",
+      "Ukraine refinery campaign impact on Brent crude and crude-gas arb spread."
+    ]
+  }
+}

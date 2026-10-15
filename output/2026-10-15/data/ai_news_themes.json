@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU-Russia energy ties risk via Slovakia-Putin alignment; methane rule delays favour Big Oil; Ukraine refinery campaign pressures Trump leverage.",
+  "themes": [
+    {
+      "headline": "Big Oil delayed EU methane rules; further lobbying underway",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Methane rule delays reduce upstream emissions oversight, easing supply-side cost for Russian gas entering EU via pipeline—risks TTF floor support and structural decarbonisation cost.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/big-oil-persuaded-eu-to-delay-methane-rules/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia plans to deepen ties with Slovakia under PM Fico",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Slovakia is major transit hub for Russian gas to EU. Fico alignment with Putin heightens pipeline leverage risk and potential supply disruption volatility—direct impact on central/southern EU power spreads and gas curve.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/russia-plans-revive-slovakia-ties/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ukraine refinery campaign pressures Trump on war leverage",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sustained Ukrainian strikes on Russian refineries tighten crude supply globally, raising Brent floor and crude-to-gas switching incentive in EU power stack—indirect upward pressure on power via fuel cost.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/trump-europe-ukraine-leverage-war-russia-oil/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU leaders summit agenda includes energy prices and climate rule tension",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Summit outcomes on energy policy, green subsidies, and methane enforcement will signal EU commitment to carbon/power regulation. Potential delays or rollbacks affect EUA floor and renewables capex planning.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/how-to-watch-the-eu-leaders-summit-like-a-pro/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Germany, Italy seek emergency brake to halt new EU laws",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Merz and Meloni push to block or slow EU laws via emergency mechanism. Could derail Green Deal enforcement, carbon cost calibration, and grid infrastructure directives—weakens long-term power market structure.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/germany-italy-request-emergency-brake-power-to-stop-new-eu-laws/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU leaders summit (Oct 15–16): energy price, methane rule, green subsidy decisions.",
+    "Slovakia–Russia energy negotiations: pipeline transit, supply security terms.",
+    "German–Italian emergency brake vote: timeline and scope of EU law suspension.",
+    "Ukraine refinery campaign impact on Brent crude and crude-gas arb spread."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
