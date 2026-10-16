@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "Von der Leyen EU strategic gas reserves proposal signals acceptance of winter supply shortfall; implies higher dispatch of coal and LNG if gas constrained, raising EUA demand via merit-order widening and extended coal marginal rate.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Strategic reserves move telegraphs EU willingness to burn higher-carbon fuels (coal, gasoil) if gas supply disrupted; shifts merit order and extends coal run-time, raising absolute emissions and EUA compliance need."
+  },
+  "freshness_caveat": "Coal data 294 days stale (as of 2025-12-26); Clean Dark and Clean Spark 289 days stale (as of 2025-12-31). Live TTF, GB Power, Storage, Renewables, DE Power current as of 2026-10-16. Do not rely on stale coal for merit-order or derived-spread trades without live market cross-check.",
+  "risk_flags": [
+    "GB Power 99th percentile (222.24 EUR/MWh) with renewables at 40th percentile (39.58% of load) \u2014 sustained thermal call if wind remains weak.",
+    "Storage 14.8pp below 5-yr seasonal norm at 74.14% full; refill pace into winter will determine H2 thermal baseload risk.",
+    "Slovakia\u2013Russia rapprochement raises direct TTF upside if gas transit flows constrained or diverted; no quantified timeline yet.",
+    "Clean Spark jumped 13.6\u03c3 to 32.64 EUR/MWh (89th percentile); metric stale (coal data from Dec 26, 289 days old) \u2014 verify with live DA prices before position."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Renewables stabilize mid-range; storage refill continues at trend; geopolitical risk priced but not activated.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "-10-15%",
+      "summary": "Wind recovery lifts renewables to 55th+ percentile; storage refill accelerates; EU fiscal intervention announced.",
+      "ttf_pct": "-5-10%"
+    },
+    "horizon": "24-72h",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Slovakia gas transit threatened or Russian reroute confirmed; Ukraine refinery strikes spike crude; EU consensus delays.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "GB power extremes; renewable output collapsing",
+    "EU storage deficit; winter supply risk priced in",
+    "Geopolitical upside: Slovakia gas transit, Ukraine refinery strikes",
+    "Fragmented EU policy response delays intervention clarity"
+  ],
+  "top_drivers": [
+    "Renewables collapse (40th percentile, -19.6% 1d) forcing gas/coal + nuclear dispatch; GB Power 99th percentile reflects structural thermal tightness.",
+    "Storage 14.8pp below seasonal average; refill trajectory now critical for winter baseload cost \u2014 any slowdown reprices TTF upward.",
+    "Geopolitical tail-risk: Slovakia\u2013Russia rapprochement + Ukraine refinery strikes create binary TTF upside scenario (supply disruption or rerouting via non-EU allies)."
+  ],
+  "top_takeaway": "GB Power at 99th percentile amid tight renewables; Storage 14.8pp below seasonal drives winter risk premium; geopolitical uncertainty (Slovakia\u2013Russia, Ukraine strikes) supports TTF floor.",
+  "watchlist": [
+    {
+      "metric": "GB\u2013DE power spread",
+      "why": "GB at 99th percentile vs DE at 89th; widening if UK gas/coal stay tight and renewables diverge further."
+    },
+    {
+      "metric": "EU storage refill rate",
+      "why": "14.8pp deficit means every 0.1pp/day miss compounds winter risk; TTF will reprice on pace deceleration."
+    },
+    {
+      "metric": "Slovakia transit flows & Russian LNG reroute",
+      "why": "Fico\u2013Putin talks could shift gas allocation; direct TTF trigger if Ukraine pipeline stripped or diverted."
+    },
+    {
+      "metric": "Ukraine refinery strike intensity",
+      "why": "Constrains Russian crude export; indirect EU power upside if crude spike forces fuel-mix shift."
+    },
+    {
+      "metric": "Clean Spark volatility & coal data refresh",
+      "why": "Clean Spark at extreme (89th pctile, +13.6\u03c3 daily move) but coal data 294 days stale; reconcile before trading derived spreads."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "EU Council energy consensus vote",
+      "why": "Strategic gas reserves & price intervention policy clarity; sets tone for TTF floor and member-state fiscal support."
+    }
+  ]
+}

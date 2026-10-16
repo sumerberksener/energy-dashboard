@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU energy price tensions dominate Council summit; von der Leyen proposes strategic gas reserves amid winter supply fears; Slovakia's Putin alignment poses gas security risk.",
+  "themes": [
+    {
+      "headline": "Von der Leyen floats EU strategic gas reserves amid winter supply fears",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Formal proposal for EU-wide strategic reserves signals acceptance of potential winter supply shortfall. Supportive of TTF floor but raises headline risk of supply disruption; implies demand destruction / policy intervention ahead.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/von-der-leyen-floats-eu-strategic-reserves-for-gas-amid-winter-supply-fears/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia plans to revive ties with Slovakia; Fico emerges as Putin's EU ally",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Slovakia's strategic role in EU gas transit via Ukrainian pipelines. Fico–Putin rapprochement raises risk of gas supply disruption or political leverage over EU energy policy; direct TTF upside if flows diverted or threatened.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/russia-plans-revive-slovakia-ties/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Ukraine's refinery attacks create leverage risk in Trump Ukraine talks",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Ukrainian strikes on Russian refineries constrain crude/fuel supply into Europe; indirect upside for EU power if crude prices spike or if Russian export bans tighten. Relevant to winter fuel adequacy and EUA correlation via energy-mix shifts.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/trump-europe-ukraine-leverage-war-russia-oil/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Costa's EU summit splits over energy prices, budget expose council tensions",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Energy price disagreements at Council signal fragmented EU policy response to winter risk. Delays or weak consensus on fiscal / price interventions leave spot markets exposed to supply shocks; increases intra-day / DA spread volatility.",
+      "horizon": "days",
+      "link": "https://www.politico.eu/article/antonio-costa-angers-eu-leaders-splits-mar-euco-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU methane law implementation failures blamed on both Brussels and member states",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Weak methane enforcement suggests import controls and leakage standards remain loose. Prolonged supply-side leakage and lack of hard targets indirectly supportive of higher gas prices; relevant to long-term LNG dependency and EUA carbon intensity.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-countries-partly-to-blame-for-failure-on-key-climate-rule/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU Council consensus on winter energy price policy and strategic reserves deployment (days).",
+    "Slovakia–Russia energy & transit negotiations; any signals on gas flow commitments (weeks).",
+    "Ukraine refinery strike campaign and impact on EU crude/fuel availability (intraday–weeks).",
+    "Methane law enforcement updates from EC; import standard tightening timeline (months)."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
