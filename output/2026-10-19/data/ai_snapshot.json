@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 98th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 14.6 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 297,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 292,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 292,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-10-19",
+      "available": true,
+      "daily_change_abs": 12.35,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.34,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 0.33,
+      "monthly_change_abs": -35.68,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 50.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 38.14
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 297,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-10-19",
+      "available": true,
+      "daily_change_pct": 7.04,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.74,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 187.79,
+      "monthly_change_pct": -3.89,
+      "name": "DE Power",
+      "percentile_rank_5y": 85.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 30.94
+    },
+    "eua": {
+      "as_of": "2026-10-16",
+      "available": true,
+      "daily_change_pct": -0.59,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.58,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 33.6,
+      "monthly_change_pct": -2.3,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 43.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.65
+    },
+    "gb_power": {
+      "as_of": "2026-10-19",
+      "available": true,
+      "daily_change_pct": 7.8,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.98,
+      "headline": "98th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 204.74,
+      "monthly_change_pct": 5.88,
+      "name": "GB Power",
+      "percentile_rank_5y": 98.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 24.93
+    },
+    "renewable_share": {
+      "as_of": "2026-10-18",
+      "available": true,
+      "daily_change_pct": 7.89,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.15,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 54.93,
+      "monthly_change_pct": -13.16,
+      "name": "Renewables",
+      "percentile_rank_5y": 73.0,
+      "unit": "% of load",
+      "weekly_change_pct": -27.97
+    },
+    "storage": {
+      "as_of": "2026-10-17",
+      "available": true,
+      "daily_change_pct": 0.22,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.49,
+      "headline": "14.6 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 74.47,
+      "monthly_change_pct": 5.05,
+      "name": "EU Storage",
+      "percentile_rank_5y": 62.0,
+      "unit": "% full",
+      "weekly_change_pct": 0.79
+    },
+    "ttf": {
+      "as_of": "2026-10-16",
+      "available": true,
+      "daily_change_pct": 1.29,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.84,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 87.55,
+      "monthly_change_pct": 14.66,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 81.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 11.64
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU leaders divided on energy prices and budget; Von der Leyen proposes strategic gas reserves amid winter supply concerns; Russia\u2013Slovakia ties emerging risk.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Von der Leyen proposes EU-wide strategic gas reserves for winter",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/von-der-leyen-floats-eu-strategic-reserves-for-gas-amid-winter-supply-fears/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Strategic reserves policy signals demand-side intervention to ease winter storage concerns. If adopted, reduces near-term TTF upside; hedges against supply disruption. Direct EU gas infrastructure play."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Russia plans revival of ties with Slovakia under PM Fico",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/russia-plans-revive-slovakia-ties/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Slovakia is key EU gas transit hub; Fico rapprochement with Putin raises risk of disrupted flows or political leverage. Could tighten winter gas supply and elevate TTF volatility. Indirect but material to EU curve."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU leaders split on energy prices at summit; Costa under fire",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/antonio-costa-angers-eu-leaders-splits-mar-euco-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Political fragmentation on energy pricing policy signals weak consensus on price support mechanisms or intervention. Uncertainty on future policy direction affects medium-term power and gas regulatory risk."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Ukraine's refinery strikes threaten Russia oil supply; leverage in Trump talks",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/trump-europe-ukraine-leverage-war-russia-oil/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Sustained Ukraine refinery campaign disrupts Russian fuel output, tightening global oil supply. Elevated crude prices increase EU fuel-switching risk into power sector; raises coal and LNG demand indirectly."
+      },
+      {
+        "commodity": "gas",
+        "headline": "EU methane law implementation lags; Brussels and member states trade blame",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-countries-partly-to-blame-for-failure-on-key-climate-rule/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Weak methane rule enforcement sustains higher fugitive emissions and leakage in gas supply chain. Could worsen effective supply tightness and elevate TTF risk if LNG suppliers reduce volumes under reputational pressure."
+      }
+    ],
+    "watchlist": [
+      "EU Council energy price and budget vote outcome over next 2 weeks.",
+      "Von der Leyen strategic gas reserve proposal adoption timeline and member state buy-in.",
+      "Slovakia\u2013Russia energy negotiations; any gas transit agreement announcements.",
+      "Ukraine refinery campaign sustainability; oil supply disruption escalation risk."
+    ]
+  }
+}

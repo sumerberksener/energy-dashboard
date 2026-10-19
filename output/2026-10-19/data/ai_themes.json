@@ -1,0 +1,69 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (297 days old); Clean Dark and Clean Spark stale as of 2025-12-31 and 2026-01-01 (292 days old). Tactical coal hedging and spreads unreliable; rely on live power and gas signals for dispatch decisions.",
+  "risk_flags": [
+    "GB Power at 204.74 EUR/MWh (98th-percentile) signals acute tightness; weekly +24.93% and daily +7.8% suggest supply-side stress or cold bias.",
+    "EU storage 14.6 pp below seasonal baseline at 74.47% full \u2014 refill pace into winter will determine H2 thermal dispatch economics and TTF risk premium.",
+    "Slovakia-Russia energy rapprochement under PM Fico could disrupt transit flows or expose EU to political leverage; coal and stale EUA data limit hedging clarity.",
+    "Von der Leyen's strategic reserve proposal is bearish-power if adopted, but EU leader fragmentation signals weak consensus and delayed implementation risk."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u00b11-2%",
+      "summary": "GB premium holds; storage refill steady; TTF tracks seasonal tightness; policy uncertainty sustains mild bid.",
+      "ttf_pct": "+1-3%"
+    },
+    "downside": {
+      "de_power_pct": "-8-15%",
+      "summary": "Von der Leyen strategic reserve proposal gains member state traction; mild weather and storage builds accelerate; demand softens.",
+      "ttf_pct": "-5-10%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+5-12%",
+      "summary": "Slovakia-Russia deal disrupts transit flows or cold weather extends demand; storage refill slows. TTF rallies on supply tail-risk.",
+      "ttf_pct": "+8-15%"
+    }
+  },
+  "themes": [
+    "GB Power premium and EU storage deficit",
+    "Winter supply uncertainty: Slovakia-Russia ties and strategic reserves debate",
+    "TTF climbing on storage concerns and geopolitical risk",
+    "Coal historically cheap but stale data limits tactical value"
+  ],
+  "top_drivers": [
+    "GB Power at 98th-percentile (204.74 EUR/MWh, +24.93% weekly) signals acute supply tightness or cold bias \u2014 structural risk to DA and GB forward curve.",
+    "EU storage 14.6 pp below seasonal baseline; refill pace into winter will determine thermal dispatch economics and TTF upside tail-risk.",
+    "Slovakia-Russia rapprochement and strategic reserve debate introduce geopolitical and policy uncertainty on winter supply security \u2014 TTF risk premium likely to persist."
+  ],
+  "top_takeaway": "GB Power at 98th-percentile, EU storage 14.6 pp below seasonal; Slovakia-Russia rapprochement and strategic reserve proposals create winter supply tail-risk.",
+  "watchlist": [
+    {
+      "metric": "GB Power supply adequacy",
+      "why": "At 98th-percentile (204.74 EUR/MWh); weekly +24.93% suggests structural tightness or weather-driven demand spike \u2014 monitor winter demand and interconnector flows."
+    },
+    {
+      "metric": "EU Storage refill trajectory",
+      "why": "14.6 pp below seasonal at 74.47% full; injection pace into November-December will set thermal merit-order risk and TTF volatility through winter."
+    },
+    {
+      "metric": "Slovakia-Russia gas transit negotiations",
+      "why": "Fico rapprochement with Putin raises disruption or leverage risk on key EU transit hub; any deal or flow disruption will spike TTF and GB spread."
+    },
+    {
+      "metric": "Von der Leyen strategic gas reserve adoption",
+      "why": "Demand-side intervention could ease winter storage pressure and cap TTF upside; member state buy-in and timeline are critical to pricing forward curve."
+    },
+    {
+      "metric": "Ukraine refinery strike campaign",
+      "why": "Sustained Russian fuel output disruption tightens global crude and raises EU fuel-switch risk into power; indirect but material to thermal merit order."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU Council energy price vote outcome",
+      "why": "Member state consensus on price intervention and strategic reserves will shape winter policy regime and TTF forward expectations."
+    }
+  ]
+}
