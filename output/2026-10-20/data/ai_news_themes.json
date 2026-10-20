@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU energy security concerns dominate: winter gas shortage fears drive strategic reserve discussions; Russia–Slovakia ties risk LNG supply disruption; emissions policy tensions between member states.",
+  "themes": [
+    {
+      "headline": "Von der Leyen proposes EU-wide strategic gas reserves amid winter shortage concerns",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Bloc-level gas stockpiling would reduce winter supply risk and support TTF price stability. Direct support for forward curve; reduces tail risk of price spikes in Nov–Mar window.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/von-der-leyen-floats-eu-strategic-reserves-for-gas-amid-winter-supply-fears/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Russia-Slovakia ties strengthening; Fico emerges as Putin's leading EU ally",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Slovakia gateway for Russian gas; Fico proximity to Putin raises LNG import pressure on EU, widening TTF–HH spreads and reducing power curve hedging optionality.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/russia-plans-revive-slovakia-ties/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU leaders clash over energy pricing and budget at summit; Costa under fire",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Member-state divisions on energy price interventions signal fragmented policy response, extending uncertainty on price caps, windfall taxes, and DA power spread intervention through winter.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/antonio-costa-angers-eu-leaders-splits-mar-euco-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "France-Germany strike compromise on car emissions and Made-in-Europe sourcing",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "neutral",
+      "why_it_matters": "Removes roadblock to ETS-linked transport carbon rules; resolves near-term legislative risk for EU emissions trading curve; signals climate policy continuity for EUA forwards.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/macron-and-merz-say-they-agreed-on-made-in-europe-and-car-emissions/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Brussels flags EU methane rule implementation failures; member states partly culpable",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Enforcement delays on methane reporting and limits; if tightened, reduces gas supply visibility and could amplify leakage-driven TTF volatility; indirect EUA upside if tightening accelerates.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-countries-partly-to-blame-for-failure-on-key-climate-rule/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "EU winter gas supply updates and strategic reserve framework rollout (Nov–Dec).",
+    "Slovakia energy policy shifts under Fico; LNG contract renegotiation risk.",
+    "Next EU Council session on energy price interventions and caps (late Oct/Nov).",
+    "Methane rule enforcement tightening; impact on gas supply metrics and reporting."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
