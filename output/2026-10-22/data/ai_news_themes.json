@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU energy sanctions on Russia hold despite US diesel deal; political pressure from far-right parties to resume cheap Russian gas; UK securing additional gas pipeline capacity amid winter supply concerns.",
+  "themes": [
+    {
+      "headline": "Britain secures additional gas pipeline capacity from Europe for winter",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "UK emergency gas imports from Continental Europe reduce residual EU supply available for power generation; increased cross-channel flow pressure implies tighter NW European hub balance and potential TTF support in extreme winter scenarios.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/britain-forced-hike-gas-imports-europe-amid-energy-security-fears-winter/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Von der Leyen confirms Russia energy sanctions remain despite US diesel deal",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Reaffirms EU LNG dependency and rules out near-term Russian gas re-entry; backstops Cal+1 gas curve from sanction relief surprise; however, political headwinds from AfD and National Rally create medium-term policy uncertainty on sanctions longevity.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-ursula-von-der-leyen-russia-energy-sanctions-us-diesel-deal/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU conservatives target carbon price on heating and driving, methane rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "ETS scope expansion under pressure; weakening carbon floor (EUA) would reduce fuel-switching incentive to gas from coal; direct hit to EUA forward curve and TTF-coal arb dynamics for power generators.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/europe-conservatives-new-targets-campaign-weaken-eu-climate-laws/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU leaders' summit fractures over energy prices and climate policy agenda",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Indicates widening political fragmentation on EU energy strategy; delays or weakens coordinated action on carbon/climate regulation; creates uncertainty on near-term EUA path and future supply-side interventions (price caps, strategic reserves).",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/antonio-costa-angers-eu-leaders-splits-mar-euco-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "U.S. refineries run above 95% utilization May–September, highest since 1998",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Tight global refined product margins suggest sustained crude demand; constrains LNG supply flexibility from U.S. (power plants competing for fuel oil); indirect pressure on European gas via reduced arbitrage opportunity for LNG diversion to power sector.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68344"
+    }
+  ],
+  "watchlist": [
+    "UK-EU energy reset negotiations post-summit; monitor gas pipeline agreements.",
+    "EU Council votes on climate/ETS scope revision; EPP dominance may delay EUA cap enforcement.",
+    "AfD and National Rally coalition talks on Russia energy re-engagement; watch for sanctions debate escalation.",
+    "Winter gas supply stress test outcomes; implications for LNG import demand and TTF floor."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

@@ -1,0 +1,168 @@
+{
+  "aggregate_brief": "Today's standouts: Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 14.7 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 300,
+        "key": "coal"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "available": false
+    },
+    "clean_spark": {
+      "available": false
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 300,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "available": false
+    },
+    "eua": {
+      "as_of": "2026-10-21",
+      "available": true,
+      "daily_change_pct": -0.22,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.64,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.01,
+      "monthly_change_pct": -1.16,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -1.07
+    },
+    "gb_power": {
+      "as_of": "2026-10-22",
+      "available": true,
+      "daily_change_pct": -37.14,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.74,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 125.5,
+      "monthly_change_pct": -29.43,
+      "name": "GB Power",
+      "percentile_rank_5y": 64.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -5.73
+    },
+    "renewable_share": {
+      "available": false
+    },
+    "storage": {
+      "as_of": "2026-10-20",
+      "available": true,
+      "daily_change_pct": -0.05,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.38,
+      "headline": "14.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 74.58,
+      "monthly_change_pct": 4.23,
+      "name": "EU Storage",
+      "percentile_rank_5y": 62.0,
+      "unit": "% full",
+      "weekly_change_pct": 0.62
+    },
+    "ttf": {
+      "as_of": "2026-10-21",
+      "available": true,
+      "daily_change_pct": 2.78,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.66,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 87.43,
+      "monthly_change_pct": 19.21,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 81.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.7
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU energy sanctions on Russia hold despite US diesel deal; political pressure from far-right parties to resume cheap Russian gas; UK securing additional gas pipeline capacity amid winter supply concerns.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Britain secures additional gas pipeline capacity from Europe for winter",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/britain-forced-hike-gas-imports-europe-amid-energy-security-fears-winter/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "UK emergency gas imports from Continental Europe reduce residual EU supply available for power generation; increased cross-channel flow pressure implies tighter NW European hub balance and potential TTF support in extreme winter scenarios."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Von der Leyen confirms Russia energy sanctions remain despite US diesel deal",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-ursula-von-der-leyen-russia-energy-sanctions-us-diesel-deal/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Reaffirms EU LNG dependency and rules out near-term Russian gas re-entry; backstops Cal+1 gas curve from sanction relief surprise; however, political headwinds from AfD and National Rally create medium-term policy uncertainty on sanctions longevity."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EU conservatives target carbon price on heating and driving, methane rules",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/europe-conservatives-new-targets-campaign-weaken-eu-climate-laws/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "ETS scope expansion under pressure; weakening carbon floor (EUA) would reduce fuel-switching incentive to gas from coal; direct hit to EUA forward curve and TTF-coal arb dynamics for power generators."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "EU leaders' summit fractures over energy prices and climate policy agenda",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/antonio-costa-angers-eu-leaders-splits-mar-euco-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Indicates widening political fragmentation on EU energy strategy; delays or weakens coordinated action on carbon/climate regulation; creates uncertainty on near-term EUA path and future supply-side interventions (price caps, strategic reserves)."
+      },
+      {
+        "commodity": "crude",
+        "headline": "U.S. refineries run above 95% utilization May\u2013September, highest since 1998",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68344",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Tight global refined product margins suggest sustained crude demand; constrains LNG supply flexibility from U.S. (power plants competing for fuel oil); indirect pressure on European gas via reduced arbitrage opportunity for LNG diversion to power sector."
+      }
+    ],
+    "watchlist": [
+      "UK-EU energy reset negotiations post-summit; monitor gas pipeline agreements.",
+      "EU Council votes on climate/ETS scope revision; EPP dominance may delay EUA cap enforcement.",
+      "AfD and National Rally coalition talks on Russia energy re-engagement; watch for sanctions debate escalation.",
+      "Winter gas supply stress test outcomes; implications for LNG import demand and TTF floor."
+    ]
+  }
+}

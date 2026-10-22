@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU conservatives (EPP) target carbon price on heating and driving, methane rules weakening; ETS scope expansion under political pressure.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Weakening EUA floor reduces fuel-switching incentive from coal to gas in power merit order; direct hit to thermal dispatch economics and gas demand at margin."
+  },
+  "freshness_caveat": "Coal data stale as of 2025-12-26 (300 days old); 8th-percentile reading cannot be used to validate current dark-spread relative value without refresh. All other metrics current as of 2026-10-20 to 2026-10-22.",
+  "risk_flags": [
+    "Coal data 300 days stale (as of 2025-12-26); 8th-percentile reading may not reflect current cost basis for dark spread valuation.",
+    "Storage 14.7pp below seasonal average; refill pace failure into winter could push TTF materially higher if LNG flow disrupted.",
+    "EU political fracture on climate (AfD/National Rally sanctions talk, EPP ambivalence on ETS) creates policy tail-risk to EUA floor and forward curve certainty.",
+    "UK emergency gas imports from Continent signal latent winter stress; sustained Continental outflows could trigger spot TTF spike if LNG supply tightens."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "TTF holds 81st-percentile on sanctions certainty, UK imports steady, storage refill modest; EUA stable mid-range; no shocks.",
+      "ttf_pct": "+1 to +3%"
+    },
+    "downside": {
+      "de_power_pct": "-8 to -14%",
+      "summary": "EU political fracture on sanctions escalates (coalition talks signal Russian gas re-entry); carbon reform weakens ETS floor; thermal merit order collapses.",
+      "ttf_pct": "-6 to -12%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "+12 to +18%",
+      "summary": "Winter weather tightens (early cold snap); LNG delays or supply disruption (refinery outage, shipping); storage refill stalls below 60%. TTF spikes.",
+      "ttf_pct": "+8 to +15%"
+    }
+  },
+  "themes": [
+    "Sanctions regime locks EU into LNG dependency; political fracture on climate/ETS weighs on carbon floor",
+    "Storage deficit + UK emergency imports tighten NW European gas balance heading into winter",
+    "Coal historically cheap but data stale; dark spread asymmetric upside on TTF strength",
+    "Conservative push to weaken ETS scope and carbon pricing reduces fuel-switch incentive"
+  ],
+  "top_drivers": [
+    "Sanctions hold + UK emergency imports reinforce NW European gas tightness; TTF at 81st-percentile reflects winter LNG dependency.",
+    "Storage 14.7pp below seasonal average creates structural call on imported gas; refill pace into Nov\u2013Dec will set Q4-Q1 power curve.",
+    "Conservative political pressure on ETS (EPP, AfD, National Rally) threatens carbon-floor enforcement; weakens fuel-switch incentive and could depress TTF upside if carbon collapses.",
+    "Coal at 8th-percentile nominally attractive vs gas, but 300-day staleness means dark-spread relative value unconfirmed; fresh data essential before sizing thermal hedge."
+  ],
+  "top_takeaway": "TTF at 81st-percentile (+19% M/M) backstopped by sanctions hold and UK emergency imports; coal at 8th-percentile (stale) creates massive dark-spread skew; storage 14.7pp below seasonal average supports winter premium.",
+  "watchlist": [
+    {
+      "metric": "EU Council climate/ETS vote",
+      "why": "EPP dominance may delay or weaken carbon cap enforcement, pressuring EUA forward and reducing gas-vs-coal switching incentive."
+    },
+    {
+      "metric": "UK-EU gas pipeline capacity deal terms",
+      "why": "Emergency import commitment signals winter supply anxiety; sustained reverse flows could strain TTF if LNG import pace falters."
+    },
+    {
+      "metric": "Winter gas supply stress test (LNG, storage refill path)",
+      "why": "At 74.58% full and 14.7pp below seasonal, storage buffer relies on continuous LNG inflow; any supply disruption or weather cold-spell will drive TTF materially higher."
+    },
+    {
+      "metric": "AfD/National Rally coalition talks on Russia sanctions",
+      "why": "Political pressure to resume cheap Russian gas creates medium-term tail-risk to sanctions integrity; any signal of relief would crater TTF and undermine EU LNG negotiating leverage."
+    },
+    {
+      "metric": "Coal price refresh",
+      "why": "Current data (300 days old) is stale; fresh read critical to validate dark-spread opportunity sizing and coal-gas merit-order assumptions for winter."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Mon",
+      "name": "EU Council climate vote (if scheduled this week)",
+      "why": "ETS scope revision outcome feeds directly into EUA floor and gas switch economics."
+    }
+  ]
+}
