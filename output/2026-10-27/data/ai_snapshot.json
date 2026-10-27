@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 1th-percentile of 5-yr range \u2014 historically low; Renewables \u2014 95th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 305,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 300,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 300,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-10-27",
+      "available": true,
+      "daily_change_abs": 12.5,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.97,
+      "headline": "9th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": false,
+      "latest": -77.05,
+      "monthly_change_abs": -115.0,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 9.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -117.55
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 305,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-10-27",
+      "available": true,
+      "daily_change_pct": 10.73,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.45,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 129.07,
+      "monthly_change_pct": -36.01,
+      "name": "DE Power",
+      "percentile_rank_5y": 71.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -54.62
+    },
+    "eua": {
+      "as_of": "2026-10-26",
+      "available": true,
+      "daily_change_pct": 1.64,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.79,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 34.68,
+      "monthly_change_pct": 1.82,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 53.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.62
+    },
+    "gb_power": {
+      "as_of": "2026-10-27",
+      "available": true,
+      "daily_change_pct": -77.94,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -2.41,
+      "headline": "1th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": false,
+      "latest": 41.96,
+      "monthly_change_pct": -81.31,
+      "name": "GB Power",
+      "percentile_rank_5y": 1.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -41.18
+    },
+    "renewable_share": {
+      "as_of": "2026-10-26",
+      "available": true,
+      "daily_change_pct": -31.52,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.3,
+      "headline": "95th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 76.82,
+      "monthly_change_pct": 81.45,
+      "name": "Renewables",
+      "percentile_rank_5y": 95.0,
+      "unit": "% of load",
+      "weekly_change_pct": 38.3
+    },
+    "storage": {
+      "as_of": "2026-10-25",
+      "available": true,
+      "daily_change_pct": 0.28,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.3,
+      "headline": "14.6 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 74.92,
+      "monthly_change_pct": 3.08,
+      "name": "EU Storage",
+      "percentile_rank_5y": 63.0,
+      "unit": "% full",
+      "weekly_change_pct": 0.26
+    },
+    "ttf": {
+      "as_of": "2026-10-26",
+      "available": true,
+      "daily_change_pct": 3.01,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 2.45,
+      "headline": "extended 2.4\u03c3 above the 50d trend",
+      "is_stale": false,
+      "latest": 96.68,
+      "monthly_change_pct": 34.15,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 85.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.82
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU climate/energy policy fracturing: Parliament delays methane rules three years; political fragmentation ahead of major elections hampers unified response to winter crises.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "EU Parliament delays methane emissions rules by three years",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/parliament-votes-to-delay-eu-methane-rules-for-three-years/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Methane regulation delay removes near-term supply-side cost pressure on EU gas production; extends profitable window for high-carbon gas ops, depressing TTF carbon intensity signal and delaying fuel-switch economics favoring power-gen."
+      },
+      {
+        "commodity": "power",
+        "headline": "This summer heat caused 50,000+ deaths across Europe; climate change primary driver",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/this-summer-was-europes-deadliest-on-record-scientists-say/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "weather",
+        "why_it_matters": "Extreme heat episodes drive peak cooling demand and marginal plant outages (thermal derate, river temps). Reinforces volatility risk in summer Cal+1/Cal+2 power contracts; underscores hydro/thermal constraint severity during heatwaves."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Spain defeats \u20ac2 billion energy-subsidy asset-freeze attempt by investors",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/spain-wins-landmark-victory-decades-long-dispute-over-energy-subsidies/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Legal win protects Spanish state energy support schemes; indirectly signals regulatory risk for legacy coal/fossil gen capex writedowns, affecting Spanish power curve and EUA-spread valuation in southern hub nodes (MIBEL)."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Trucker blockades in southern Italy pressuring Meloni over diesel cost relief",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/giorgia-melonu-italy-naples-trucker-blockades-southern-italy-ramp-up-pressure/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Political pressure to subsidize fuel costs signals potential fiscal strain on Italian govt and risk of broader energy subsidy distortions; indirect signal of structural weakness in European supply-chain margins, feeding inflation expectations into winter power demand."
+      },
+      {
+        "commodity": "crude",
+        "headline": "U.S. refinery utilization peaks at 95%+ capacity; tightest since 1998",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68344",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Ultra-tight U.S. refining capacity constrains Atlantic arbitrage flows; props up global product prices, supporting LNG export economics and reducing Atlantic LNG inflows to NW Europe; upward pressure on TTF via reduced supply substitute."
+      }
+    ],
+    "watchlist": [
+      "Montreal summit late Oct: EU\u2013Canada associate-member status negotiation (policy clarity on trade, LNG access risk).",
+      "Major European elections (Spain, France, Greece, Italy) \u2014 autumn\u2013winter 2026: populist/far-right gains threaten energy policy consensus, subsidy rollback risk.",
+      "ECB leadership reshuffle outcome: climate-risk capital requirements tightening or easing (affects green capex financing, power/gas infra buildout pace).",
+      "UK\u2013EU energy/climate reset summit: tuition-fee delay may unlock wider NI protocol & trade deals affecting gas/power interconnect regulation."
+    ]
+  }
+}

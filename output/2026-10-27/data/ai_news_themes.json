@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU climate/energy policy fracturing: Parliament delays methane rules three years; political fragmentation ahead of major elections hampers unified response to winter crises.",
+  "themes": [
+    {
+      "headline": "EU Parliament delays methane emissions rules by three years",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Methane regulation delay removes near-term supply-side cost pressure on EU gas production; extends profitable window for high-carbon gas ops, depressing TTF carbon intensity signal and delaying fuel-switch economics favoring power-gen.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/parliament-votes-to-delay-eu-methane-rules-for-three-years/"
+    },
+    {
+      "headline": "This summer heat caused 50,000+ deaths across Europe; climate change primary driver",
+      "source": "Politico EU Energy",
+      "tag": "weather",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Extreme heat episodes drive peak cooling demand and marginal plant outages (thermal derate, river temps). Reinforces volatility risk in summer Cal+1/Cal+2 power contracts; underscores hydro/thermal constraint severity during heatwaves.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/this-summer-was-europes-deadliest-on-record-scientists-say/"
+    },
+    {
+      "headline": "Spain defeats €2 billion energy-subsidy asset-freeze attempt by investors",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Legal win protects Spanish state energy support schemes; indirectly signals regulatory risk for legacy coal/fossil gen capex writedowns, affecting Spanish power curve and EUA-spread valuation in southern hub nodes (MIBEL).",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/spain-wins-landmark-victory-decades-long-dispute-over-energy-subsidies/"
+    },
+    {
+      "headline": "Trucker blockades in southern Italy pressuring Meloni over diesel cost relief",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Political pressure to subsidize fuel costs signals potential fiscal strain on Italian govt and risk of broader energy subsidy distortions; indirect signal of structural weakness in European supply-chain margins, feeding inflation expectations into winter power demand.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/giorgia-melonu-italy-naples-trucker-blockades-southern-italy-ramp-up-pressure/"
+    },
+    {
+      "headline": "U.S. refinery utilization peaks at 95%+ capacity; tightest since 1998",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bullish-power",
+      "why_it_matters": "Ultra-tight U.S. refining capacity constrains Atlantic arbitrage flows; props up global product prices, supporting LNG export economics and reducing Atlantic LNG inflows to NW Europe; upward pressure on TTF via reduced supply substitute.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68344"
+    }
+  ],
+  "watchlist": [
+    "Montreal summit late Oct: EU–Canada associate-member status negotiation (policy clarity on trade, LNG access risk).",
+    "Major European elections (Spain, France, Greece, Italy) — autumn–winter 2026: populist/far-right gains threaten energy policy consensus, subsidy rollback risk.",
+    "ECB leadership reshuffle outcome: climate-risk capital requirements tightening or easing (affects green capex financing, power/gas infra buildout pace).",
+    "UK–EU energy/climate reset summit: tuition-fee delay may unlock wider NI protocol & trade deals affecting gas/power interconnect regulation."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 14,
+  "error": null
+}
