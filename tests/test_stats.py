@@ -101,9 +101,11 @@ def test_change_over_pct_skip_below_abs_smoothed_filters_window():
 
 
 def test_is_stale():
-    fresh_idx = pd.date_range(end="2026-05-05", periods=3, freq="D")
+    # Built relative to today: a hard-coded "fresh" date turns stale as time passes.
+    today = pd.Timestamp.now().normalize()
+    fresh_idx = pd.date_range(end=today - pd.Timedelta(days=1), periods=3, freq="D")
     fresh = pd.DataFrame({"value": [1.0, 2.0, 3.0]}, index=fresh_idx)
-    old_idx = pd.date_range(end="2025-12-01", periods=3, freq="D")
+    old_idx = pd.date_range(end=today - pd.Timedelta(days=200), periods=3, freq="D")
     old = pd.DataFrame({"value": [1.0, 2.0, 3.0]}, index=old_idx)
 
     assert stats.is_stale(old, threshold_days=5) is True
