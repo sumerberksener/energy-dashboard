@@ -202,7 +202,11 @@ CACHE_TTL_SECONDS = 60 * 60
 
 # Network timeouts, seconds. Every external call must carry one: a call with
 # none can wait forever and stall the whole daily run.
-API_TIMEOUT_S = 60    # ENTSO-E and Anthropic (big or slow responses)
+API_TIMEOUT_S = 60    # Anthropic (the slowest logged call took 26 s)
+# One ENTSO-E request. entsoe-py does not retry a read timeout, so a slow but
+# working answer must not fail the whole source for the day; 180 s still stops a
+# true hang, and the 40 minute job limit is the backstop.
+ENTSOE_TIMEOUT_S = 180
 QUICK_TIMEOUT_S = 10  # RSS feeds and Yahoo downloads (10 s is yfinance's own default)
 
 # Freshness: a series whose latest row is older than this is flagged STALE in

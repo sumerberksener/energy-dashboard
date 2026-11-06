@@ -25,7 +25,7 @@ from datetime import datetime, timedelta, timezone
 import pandas as pd
 import requests
 
-from config import API_TIMEOUT_S, HISTORY_YEARS, QUICK_TIMEOUT_S
+from config import ENTSOE_TIMEOUT_S, HISTORY_YEARS, QUICK_TIMEOUT_S
 
 log = logging.getLogger(__name__)
 
@@ -248,7 +248,7 @@ def _entsoe_client(token: str):
     """ENTSO-E client whose requests time out (entsoe-py's default is to wait forever)."""
     from entsoe import EntsoePandasClient
 
-    return EntsoePandasClient(api_key=token, session=requests.Session(), timeout=API_TIMEOUT_S)
+    return EntsoePandasClient(api_key=token, session=requests.Session(), timeout=ENTSOE_TIMEOUT_S)
 
 
 def _fetch_entsoe_dap(token: str, zone: str) -> pd.DataFrame:

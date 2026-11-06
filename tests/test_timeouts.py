@@ -77,6 +77,7 @@ def silent_server():
 
 def test_configured_timeouts_are_finite_and_modest():
     assert 0 < config.API_TIMEOUT_S <= 120
+    assert 0 < config.ENTSOE_TIMEOUT_S <= 300
     assert 0 < config.QUICK_TIMEOUT_S <= 30
 
 
@@ -113,7 +114,7 @@ def test_every_entsoe_client_is_built_with_a_timeout(monkeypatch, call):
         call()
     (kwargs,) = _RecordingEntsoeClient.built
     assert kwargs["api_key"] == "DUMMY"
-    assert 0 < _timeout_seconds(kwargs.get("timeout")) <= 120
+    assert 0 < _timeout_seconds(kwargs.get("timeout")) <= 300
     assert isinstance(kwargs.get("session"), requests.Session)
 
 
@@ -121,7 +122,7 @@ def test_a_silent_entsoe_server_cannot_block_the_fetch(monkeypatch, silent_serve
     import entsoe.entsoe
 
     monkeypatch.setattr(entsoe.entsoe, "URL", silent_server.url + "/api")
-    monkeypatch.setattr(fetchers, "API_TIMEOUT_S", SHORT, raising=False)
+    monkeypatch.setattr(fetchers, "ENTSOE_TIMEOUT_S", SHORT, raising=False)
     elapsed, outcome = _run_bounded(lambda: fetchers.fetch_de_power("DUMMY"))
     assert isinstance(outcome, requests.exceptions.Timeout), outcome
     assert elapsed < GIVE_UP_S and silent_server.accepted >= 1
