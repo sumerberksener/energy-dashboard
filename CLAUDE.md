@@ -110,6 +110,8 @@ Three free credentials are required for live runs (CLI reads from env, dashboard
 
 GitHub Actions cron in `.github/workflows/daily.yml` runs `scripts/generate_brief.py` at **07:30 UTC weekdays** and commits artifacts back with `[skip ci]`.
 
+The daily job is limited to 40 minutes. Every run logs `run start <UTC time>` and, per data source, `<name>: start` and `<name>: end ok|empty|failed in <N>s`, so a stalled run shows which source it was in. Every external call must carry a finite timeout (`config.API_TIMEOUT_S` for ENTSO-E and Anthropic, `config.QUICK_TIMEOUT_S` for RSS and Yahoo); a call without one can block the whole run indefinitely.
+
 ---
 
 ## Layer invariants (the most important rule in the repo)

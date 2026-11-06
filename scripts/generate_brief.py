@@ -22,6 +22,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -56,15 +57,24 @@ log = logging.getLogger("brief")
 
 
 def _safe_fetch(name: str, fn, *args):
+    # One INFO line when the source starts and one when it ends, so a stalled
+    # run shows which source it was in. Only the name, never args or URLs.
+    log.info("%s: start", name)
+    started = time.monotonic()
+    status = "failed"
     try:
         df = fn(*args)
         if df is None or df.empty:
+            status = "empty"
             log.warning("%s: empty result", name)
             return pd.DataFrame(columns=["value"])
+        status = "ok"
         return df
     except Exception as e:
         log.warning("%s: fetch failed (%s)", name, e)
         return pd.DataFrame(columns=["value"])
+    finally:
+        log.info("%s: end %s in %.1fs", name, status, time.monotonic() - started)
 
 
 def fetch_all() -> dict[str, pd.DataFrame]:
@@ -796,6 +806,7 @@ def main() -> int:
         datefmt="%H:%M:%S",
     )
 
+    log.info("run start %s UTC", datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"))
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out_root = (REPO_ROOT / args.out_root).resolve()
     today_dir = out_root / today

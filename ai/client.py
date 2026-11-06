@@ -29,6 +29,8 @@ from pathlib import Path
 
 import anthropic
 
+from config import API_TIMEOUT_S
+
 log = logging.getLogger(__name__)
 
 
@@ -74,7 +76,7 @@ class AIClient:
         key = api_key or os.environ.get("ANTHROPIC_API_KEY")
         if not key:
             raise NoAPIKey("ANTHROPIC_API_KEY not set")
-        self._client = anthropic.Anthropic(api_key=key)
+        self._client = anthropic.Anthropic(api_key=key, timeout=API_TIMEOUT_S)
         self.model = model
         self.log_dir = Path(log_dir) if log_dir else Path(__file__).parent / "logs"
         self.log_dir.mkdir(parents=True, exist_ok=True)

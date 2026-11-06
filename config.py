@@ -200,6 +200,11 @@ ZSCORE_OUTSIZED = 2.0
 HISTORY_YEARS = 5
 CACHE_TTL_SECONDS = 60 * 60
 
+# Network timeouts, seconds. Every external call must carry one: a call with
+# none can wait forever and stall the whole daily run.
+API_TIMEOUT_S = 60    # ENTSO-E and Anthropic (big or slow responses)
+QUICK_TIMEOUT_S = 10  # RSS feeds and Yahoo downloads (10 s is yfinance's own default)
+
 # Freshness: a series whose latest row is older than this is flagged STALE in
 # the snapshot, the markdown table, and the JSON sent to the AI.
 STALE_AFTER_DAYS = 5

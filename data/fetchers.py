@@ -25,7 +25,7 @@ from datetime import datetime, timedelta, timezone
 import pandas as pd
 import requests
 
-from config import HISTORY_YEARS
+from config import API_TIMEOUT_S, HISTORY_YEARS, QUICK_TIMEOUT_S
 
 log = logging.getLogger(__name__)
 
@@ -59,6 +59,7 @@ def _yahoo(ticker: str) -> pd.DataFrame:
         auto_adjust=False,
         progress=False,
         threads=False,
+        timeout=QUICK_TIMEOUT_S,
     )
     if hist is None or hist.empty:
         raise RuntimeError(f"Yahoo Finance returned empty for {ticker}")
@@ -243,12 +244,17 @@ def fetch_gb_power(token: str | None = None) -> pd.DataFrame:
     return _tidy(eur_per_mwh.dropna())
 
 
+def _entsoe_client(token: str):
+    """ENTSO-E client whose requests time out (entsoe-py's default is to wait forever)."""
+    from entsoe import EntsoePandasClient
+
+    return EntsoePandasClient(api_key=token, session=requests.Session(), timeout=API_TIMEOUT_S)
+
+
 def _fetch_entsoe_dap(token: str, zone: str) -> pd.DataFrame:
     if not token:
         raise RuntimeError("ENTSO-E token missing")
-    from entsoe import EntsoePandasClient
-
-    client = EntsoePandasClient(api_key=token)
+    client = _entsoe_client(token)
     end = pd.Timestamp.now(tz="Europe/Brussels").normalize()
     start = end - pd.DateOffset(years=HISTORY_YEARS)
     ts = client.query_day_ahead_prices(zone, start=start, end=end)
@@ -317,9 +323,7 @@ def fetch_renewable_share(token: str) -> pd.DataFrame:
     """
     if not token:
         raise RuntimeError("ENTSO-E token missing")
-    from entsoe import EntsoePandasClient
-
-    client = EntsoePandasClient(api_key=token)
+    client = _entsoe_client(token)
     end = pd.Timestamp.now(tz="Europe/Brussels").normalize()
     # Renewable forecast history at hourly resolution is heavy — pull 2y.
     start = end - pd.DateOffset(years=2)
@@ -380,9 +384,7 @@ def fetch_cross_border_flow(token: str, from_zone: str, to_zone: str) -> pd.Data
     """
     if not token:
         raise RuntimeError("ENTSO-E token missing")
-    from entsoe import EntsoePandasClient
-
-    client = EntsoePandasClient(api_key=token)
+    client = _entsoe_client(token)
     end = pd.Timestamp.now(tz="Europe/Brussels").normalize()
     # 1y of history is plenty for the regime read; cuts cold-start latency.
     start = end - pd.DateOffset(years=1)

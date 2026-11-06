@@ -10,10 +10,15 @@ Pure pandas, no Streamlit dependency. Returns a tidy DataFrame:
 """
 from __future__ import annotations
 
+import io
 import logging
 from datetime import datetime, timedelta, timezone
+from urllib.parse import urljoin
 
 import pandas as pd
+import requests
+
+from config import QUICK_TIMEOUT_S
 
 log = logging.getLogger(__name__)
 
@@ -52,6 +57,31 @@ DEFAULT_FEEDS: list[tuple[str, str]] = [
 # but a 10-day window catches weekly publications (EIA Natural Gas Weekly).
 MAX_AGE_DAYS_DEFAULT = 10
 
+# The headers feedparser.parse(url) sent, so every feed sees the same client as before.
+_FEED_HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "application/atom+xml,application/rdf+xml,application/rss+xml,"
+              "application/x-netcdf,application/xml;q=0.9,text/xml;q=0.2,*/*;q=0.1",
+    "Accept-Encoding": "gzip, deflate",
+    "A-IM": "feed",
+}
+
+
+def _parse_feed(url: str):
+    """Download one feed with a finite timeout, then parse the bytes.
+
+    feedparser.parse(url) has no timeout and waits forever on a silent server.
+    Like it, this parses whatever body came back (an HTTP error page simply
+    has no entries) and resolves relative links against the final URL.
+    """
+    import feedparser
+
+    resp = requests.get(url, headers=_FEED_HEADERS, timeout=QUICK_TIMEOUT_S)
+    headers = {k.lower(): v for k, v in resp.headers.items()
+               if k.lower() in ("content-type", "content-language")}
+    headers["content-location"] = urljoin(resp.url, resp.headers.get("content-location", ""))
+    return feedparser.parse(io.BytesIO(resp.content), response_headers=headers)
+
 
 def fetch_headlines(
     feeds: list[tuple[str, str]] | None = None,
@@ -66,15 +96,13 @@ def fetch_headlines(
     Network errors per feed are logged and soft-failed — one bad feed never
     breaks the brief.
     """
-    import feedparser
-
     feeds = feeds or DEFAULT_FEEDS
     cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
     rows: list[dict] = []
 
     for source_name, url in feeds:
         try:
-            parsed = feedparser.parse(url, request_headers={"User-Agent": "Mozilla/5.0"})
+            parsed = _parse_feed(url)
         except Exception as e:
             log.warning("news feed %s failed: %s", source_name, e)
             continue
