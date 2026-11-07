@@ -1,0 +1,59 @@
+{
+  "carbon_policy_signal": null,
+  "freshness_caveat": "TTF stale 23 days (as of 2026-10-15); Coal stale 316 days (as of 2025-12-26); Clean Spark stale 18 days (as of 2026-10-20); Clean Dark stale 311 days (as of 2025-12-31). Fuel-switch conviction severely limited until gas/coal updated. Power metrics (GB, DE, renewables, storage) current as of 2026-11-06/07.",
+  "risk_flags": [
+    "GB Power at 97th percentile (232.7 EUR/MWh, -15.88% daily) and DE Power at 92nd percentile (263.84 EUR/MWh, -4.38% daily) \u2014 mean reversion or fresh supply shock both material over 1w.",
+    "EU storage 16.3pp below 5-yr seasonal average (73.39% full); refill pace Dec\u2013Mar will determine H1 2027 power volatility.",
+    "TTF data stale (23 days old, 85.59 EUR/MWh); cannot confirm gas-in-the-money vs coal (coal at 8th percentile, 96 USD/t, but also 316 days stale).",
+    "Colombia hydroelectric stress could tighten Atlantic LNG availability; reduced European LNG arbitrage optionality supports power-up scenario if supply shock hits."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-5 to -8%",
+      "summary": "Power remains elevated; storage refill settles; UK-EU deal talks drag but no shock.",
+      "ttf_pct": "tracks"
+    },
+    "downside": {
+      "de_power_pct": "-15-22%",
+      "summary": "UK-EU electricity deal signed, interconnector arbitrage flows increase; renewables recover; storage refills faster.",
+      "ttf_pct": "-3-5%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Colombian hydro failure tightens Atlantic LNG; Chernobyl cascades into Central EU outage; storage refill pace slows.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Extreme power prices, tight storage",
+    "UK-EU electricity deal bearish for forward curves",
+    "Renewable weakness (24th percentile) supporting thermal call",
+    "Geopolitical tail-risk: Chernobyl damage, Colombia hydro stress on LNG"
+  ],
+  "top_drivers": [
+    "GB and DE power at multi-year highs (97th and 92nd percentiles) \u2014 renewables at 24th percentile (32.08% of load, -17.57% daily) driving thermal call, tight storage (16.3pp below seasonal) supporting price floor.",
+    "UK-EU electricity deal momentum (weeks horizon) will unlock cross-border import elasticity; bearish power forwards once signed.",
+    "Stale TTF and coal data (23 and 316 days old) prevent conviction on fuel-switch regime; next gas/coal update critical for power-margin outlook."
+  ],
+  "top_takeaway": "GB and DE power at 97th and 92nd percentiles respectively; storage 16pp below seasonal average; stale gas/coal data limits conviction on fuel-switch regime.",
+  "watchlist": [
+    {
+      "metric": "UK-EU electricity deal signature",
+      "why": "Deal closes, interconnector capacity increases flow to EU, bearish power forwards via margin compression over weeks."
+    },
+    {
+      "metric": "EU 2027 legislative agenda finalization",
+      "why": "Deregulation priorities may reshape ETS supply or grid codes, affecting power merit order and carbon-power correlation."
+    },
+    {
+      "metric": "Colombian hydro generation forecast (Q4 2026\u2013Q1 2027)",
+      "why": "Drought drives regional LNG import substitution; reduces Atlantic LNG supply available to Europe, tightens TTF via supply-side tail risk."
+    },
+    {
+      "metric": "Chernobyl protective dome repair timeline and funding",
+      "why": "Delays or geopolitical disruption to Ukrainian energy infrastructure could cascade into Central EU power premium if cascade outages occur."
+    }
+  ],
+  "watchlist_dated": []
+}

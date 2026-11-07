@@ -1,0 +1,235 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 97th-percentile of 5-yr range \u2014 historically high; DE Power \u2014 92th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2026-10-15",
+        "days_old": 23,
+        "key": "ttf"
+      },
+      {
+        "as_of": "2025-12-26",
+        "days_old": 316,
+        "key": "coal"
+      },
+      {
+        "as_of": "2026-10-20",
+        "days_old": 18,
+        "key": "clean_spark"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 311,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 311,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-10-20",
+      "available": true,
+      "daily_change_abs": -12.84,
+      "days_old": 18,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": null,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 11.94,
+      "monthly_change_abs": null,
+      "name": "Clean Spark",
+      "percentile_rank_5y": null,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": null
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 316,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-11-07",
+      "available": true,
+      "daily_change_pct": -4.38,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.29,
+      "headline": "92th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 263.84,
+      "monthly_change_pct": 56.8,
+      "name": "DE Power",
+      "percentile_rank_5y": 92.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -3.79
+    },
+    "eua": {
+      "as_of": "2026-11-06",
+      "available": true,
+      "daily_change_pct": -1.76,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.37,
+      "headline": "outsized daily move (-1.76%, 2.1\u03c3)",
+      "is_stale": false,
+      "latest": 34.61,
+      "monthly_change_pct": 1.38,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 53.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.96
+    },
+    "gb_power": {
+      "as_of": "2026-11-07",
+      "available": true,
+      "daily_change_pct": -15.88,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.92,
+      "headline": "97th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 232.7,
+      "monthly_change_pct": 32.3,
+      "name": "GB Power",
+      "percentile_rank_5y": 97.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -3.76
+    },
+    "renewable_share": {
+      "as_of": "2026-11-06",
+      "available": true,
+      "daily_change_pct": -17.57,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.7,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 32.08,
+      "monthly_change_pct": -15.37,
+      "name": "Renewables",
+      "percentile_rank_5y": 24.0,
+      "unit": "% of load",
+      "weekly_change_pct": 73.5
+    },
+    "storage": {
+      "as_of": "2026-11-05",
+      "available": true,
+      "daily_change_pct": -0.47,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.21,
+      "headline": "16.3 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 73.39,
+      "monthly_change_pct": -1.14,
+      "name": "EU Storage",
+      "percentile_rank_5y": 60.0,
+      "unit": "% full",
+      "weekly_change_pct": -1.03
+    },
+    "ttf": {
+      "as_of": "2026-10-15",
+      "available": true,
+      "daily_change_pct": null,
+      "days_old": 23,
+      "delta_unit": "pct",
+      "extension_50d_sigma": null,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 85.59,
+      "monthly_change_pct": null,
+      "name": "TTF Gas",
+      "percentile_rank_5y": null,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": null
+    }
+  },
+  "news": {
+    "geopolitics_summary": "UK-EU electricity deal negotiations ongoing; Brussels pursuing deregulatory agenda for 2027; Chernobyl nuclear damage raises energy security concerns amid Russia conflict.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "EU capitals press Brussels to expedite UK electricity interconnection agreement",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-capitals-urge-brussels-to-swiftly-sign-electricity-deal-with-uk/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "UK electricity deal could increase cross-border power imports to EU, lowering day-ahead and forward power prices via reduced marginal cost and increased supply elasticity on GB-NW Europe interconnectors."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "UK and EU advance toward Brexit reset deal including energy provisions",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/uk-eu-brexit-reset-deal/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Broader Brexit reset likely includes electricity and potentially gas trading frameworks; reduced friction in cross-border power flows supports supply integration and downward pressure on EU power forwards."
+      },
+      {
+        "commodity": "power",
+        "headline": "Chernobyl nuclear facility requires \u20ac500M urgent protective dome repairs",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/damage-chernobyl-nuclear-site-urgent-funding-european-development-bank/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Ukrainian nuclear asset damage deepens Eastern European energy security uncertainty; ongoing conflict risk could disrupt regional power supply and elevate Central EU price premiums if cascading outages occur."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Colombia faces potential hydroelectric drought driving LNG demand surge",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68364",
+        "polarity": "bullish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Colombian hydroelectric stress could boost regional LNG imports, tightening Atlantic LNG availability; reduces LNG volumes available for European arbitrage, supporting TTF forwards via reduced supply-side optionality."
+      },
+      {
+        "commodity": "crude",
+        "headline": "US crude imports from Venezuela reach highest level since 2017",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68425",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Rising US-Venezuela crude trade indirectly affects Atlantic LNG flows; if US refinery demand shifts, less competing demand for Atlantic LNG cargoes, reducing marginal cost of gas-to-power conversion and supporting EU power bearish sentiment."
+      }
+    ],
+    "watchlist": [
+      "UK-EU electricity deal signature and implementation timeline for interconnector agreements.",
+      "French presidential election outcome (M\u00e9lenchon platform) and EU energy policy confrontation risk.",
+      "EU 2027 legislative agenda finalization; deregulation priorities may affect ETS or grid codes.",
+      "Colombian hydroelectric generation forecasts for Q4 2026\u2013Q1 2027; LNG import substitution impact."
+    ]
+  }
+}
