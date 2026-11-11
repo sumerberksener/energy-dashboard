@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Renewables \u2014 2th-percentile of 5-yr range \u2014 historically low; GB Power \u2014 95th-percentile of 5-yr range \u2014 historically high; Clean Spark \u2014 94th-percentile of 5-yr range \u2014 historically high.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 320,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 315,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 315,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 47.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-11-11",
+      "available": true,
+      "daily_change_abs": -121.04,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.61,
+      "headline": "94th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 48.91,
+      "monthly_change_abs": 24.34,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 94.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 38.59
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 320,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-11-11",
+      "available": true,
+      "daily_change_pct": -34.35,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.59,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 231.29,
+      "monthly_change_pct": 9.13,
+      "name": "DE Power",
+      "percentile_rank_5y": 90.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 10.59
+    },
+    "eua": {
+      "as_of": "2026-11-10",
+      "available": true,
+      "daily_change_pct": 0.2,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.23,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 35.11,
+      "monthly_change_pct": 2.64,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 56.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.03
+    },
+    "gb_power": {
+      "as_of": "2026-11-11",
+      "available": true,
+      "daily_change_pct": -18.69,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.3,
+      "headline": "95th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 208.97,
+      "monthly_change_pct": 4.13,
+      "name": "GB Power",
+      "percentile_rank_5y": 95.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.47
+    },
+    "renewable_share": {
+      "as_of": "2026-11-10",
+      "available": true,
+      "daily_change_pct": 8.3,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.38,
+      "headline": "2th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": false,
+      "latest": 11.2,
+      "monthly_change_pct": -77.35,
+      "name": "Renewables",
+      "percentile_rank_5y": 2.0,
+      "unit": "% of load",
+      "weekly_change_pct": -41.14
+    },
+    "storage": {
+      "as_of": "2026-11-09",
+      "available": true,
+      "daily_change_pct": -0.54,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.84,
+      "headline": "17.2 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 72.0,
+      "monthly_change_pct": -3.49,
+      "name": "EU Storage",
+      "percentile_rank_5y": 57.0,
+      "unit": "% full",
+      "weekly_change_pct": -2.12
+    },
+    "ttf": {
+      "as_of": "2026-11-10",
+      "available": true,
+      "daily_change_pct": 2.71,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.29,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 84.73,
+      "monthly_change_pct": 0.45,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 79.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -11.87
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU climate policy momentum faces headwinds from populist election threats; UK-EU energy deal progressing; Mediterranean geopolitical tensions resurface.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "EU backs COP31 electrification target; weak commitment depth evident",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-to-back-cop31-electrification-target/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Electrification pledge accelerates power demand outlook; however, low explicit endorsement count signals weak enforcement risk. Affects multi-year power curve vol and EUA carry."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Spain election snap vote threatens EU's loudest climate-policy champion",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/spain-election-favorites-say-madrid-must-avoid-impossible-climate-timeline/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Conservative victory would relax climate rules, reducing power decarbonization urgency and EUA demand. Direct risk to EU ETS price and Spanish power policy consistency."
+      },
+      {
+        "commodity": "power",
+        "headline": "UK-EU electricity interconnector deal nears completion; price convergence risk",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-capitals-urge-brussels-to-swiftly-sign-electricity-deal-with-uk/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Increased cross-Channel capacity and price convergence could depress continental power prices via arbitrage. Direct DA and Cal+1 curve pressure if UK electricity cheaper than EU."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Turkey-Greece maritime dispute threatens eastern Mediterranean energy corridor",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/turkey-libya-maritime-deal-raises-greece-tensions-eu-leaders-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Mediterranean gas infrastructure dispute could disrupt alternative LNG import routes or gas flow certainty. Indirect TTF risk if supply corridor access limited or regional tensions escalate."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "Populist surge threatens to unwind EU climate policy consensus post-COP31",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/far-right-election-gains-threaten-eu-climate-policy-cop31/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Election gains by far-right parties signal future ETS weakening and decarbonization delays. Downside risk to long-term EUA valuations and power decarbonization path; multi-year curve pressure."
+      }
+    ],
+    "watchlist": [
+      "Spain snap election (later November 2026) \u2014 conservative climate-policy relaxation risk.",
+      "UK-EU electricity deal finalization \u2014 interconnector capacity/price arbitrage impact timing.",
+      "COP31 follow-up enforcement steps \u2014 electrification pledge credibility and EUA trajectory.",
+      "Turkey-Greece maritime dispute escalation \u2014 eastern Mediterranean gas corridor security."
+    ]
+  }
+}

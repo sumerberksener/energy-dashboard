@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU climate policy momentum faces headwinds from populist election threats; UK-EU energy deal progressing; Mediterranean geopolitical tensions resurface.",
+  "themes": [
+    {
+      "headline": "EU backs COP31 electrification target; weak commitment depth evident",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Electrification pledge accelerates power demand outlook; however, low explicit endorsement count signals weak enforcement risk. Affects multi-year power curve vol and EUA carry.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-to-back-cop31-electrification-target/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Spain election snap vote threatens EU's loudest climate-policy champion",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Conservative victory would relax climate rules, reducing power decarbonization urgency and EUA demand. Direct risk to EU ETS price and Spanish power policy consistency.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/spain-election-favorites-say-madrid-must-avoid-impossible-climate-timeline/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "UK-EU electricity interconnector deal nears completion; price convergence risk",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Increased cross-Channel capacity and price convergence could depress continental power prices via arbitrage. Direct DA and Cal+1 curve pressure if UK electricity cheaper than EU.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-capitals-urge-brussels-to-swiftly-sign-electricity-deal-with-uk/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Turkey-Greece maritime dispute threatens eastern Mediterranean energy corridor",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Mediterranean gas infrastructure dispute could disrupt alternative LNG import routes or gas flow certainty. Indirect TTF risk if supply corridor access limited or regional tensions escalate.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/turkey-libya-maritime-deal-raises-greece-tensions-eu-leaders-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Populist surge threatens to unwind EU climate policy consensus post-COP31",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "Election gains by far-right parties signal future ETS weakening and decarbonization delays. Downside risk to long-term EUA valuations and power decarbonization path; multi-year curve pressure.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/far-right-election-gains-threaten-eu-climate-policy-cop31/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "Spain snap election (later November 2026) — conservative climate-policy relaxation risk.",
+    "UK-EU electricity deal finalization — interconnector capacity/price arbitrage impact timing.",
+    "COP31 follow-up enforcement steps — electrification pledge credibility and EUA trajectory.",
+    "Turkey-Greece maritime dispute escalation — eastern Mediterranean gas corridor security."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}
