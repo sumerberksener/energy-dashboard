@@ -1,0 +1,76 @@
+{
+  "carbon_policy_signal": {
+    "item": "Poland court upholds seven major climate laws, rejecting bid to overturn EU ETS compliance and coal phase-out obligations.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Removes rollback risk on coal phase-out and ETS enforcement; supports EUA price floor and reduces downside tail on decarbonisation trajectory through 2030s."
+  },
+  "freshness_caveat": "Coal data stale (321 days old, as of 2025-12-26); disqualifies clean-dark spread and merit-order thermal dispatch analysis. DE Power and TTF unavailable; GB power and renewables current (1 day or less). Clean-spark and clean-dark calculations cannot proceed.",
+  "risk_flags": [
+    "Renewables at 3rd-percentile of 5yr range with -58.6% monthly decline; thermal baseload floor not yet tested.",
+    "GB power at 93rd-percentile (195.26 EUR/MWh) vs EU DA unavailable; interconnector delay (EU-UK electricity deal pending) prolongs premium duration.",
+    "Storage 71.61% full, 17.5pp below seasonal trend; refill trajectory critical for winter power curve shape through Dec-Jan.",
+    "Coal data stale (321 days old, 8th-percentile); disqualifies clean-dark / merit-order analysis until refresh."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Renewables stay subdued; thermal dispatch sustained; GB premium holds elevated; storage refill continues at trend pace.",
+      "ttf_pct": "tracks"
+    },
+    "downside": {
+      "de_power_pct": "+10-15%",
+      "summary": "Renewables extend tail below 10% load; thermal call peaks; Spain election win by climate-skeptic coalition delays coal phase-out.",
+      "ttf_pct": "+5-10%"
+    },
+    "horizon": "24-72h | 1w",
+    "upside": {
+      "de_power_pct": "-15-20%",
+      "summary": "Wind event lifts renewables +8\u201312pp; thermal call collapses 15\u201320%; GB spreads compress on interconnector progress news.",
+      "ttf_pct": "-8-12%"
+    }
+  },
+  "themes": [
+    "Renewables collapse driving thermal dispatch",
+    "GB power premium vs EU widening on tight capacity",
+    "Storage deficit extending into refill season",
+    "Climate policy cohesion tested by populist election cycle"
+  ],
+  "top_drivers": [
+    "Renewables collapse to 3rd-percentile forcing maximum thermal call; thermal baseload floor not yet visible on DA.",
+    "GB power premium (93rd-percentile, 195.26 EUR/MWh) reflects tight capacity and delayed interconnector agreement; spreads likely to widen further if wind stays depressed.",
+    "Storage deficit (17.5pp below seasonal) entering refill season; injection pace through Dec-Jan will anchor winter power curve and set H2 thermal dispatch baseline."
+  ],
+  "top_takeaway": "Renewables at 3rd-percentile (13.18% load) force extreme thermal call; GB power at 93rd-percentile (195.26 EUR/MWh) signals tight capacity; storage 17.5pp below seasonal average underpins H2 refill risk.",
+  "watchlist": [
+    {
+      "metric": "Renewables forecast mean reversion",
+      "why": "3rd-percentile tail extends thermal call; next high-wind event could swing 5\u201310pp load share and 20\u201330 EUR/MWh DA."
+    },
+    {
+      "metric": "GB-EU power spread (DA)",
+      "why": "GB at 93rd-percentile; EU-UK interconnector signing delays widen arbitrage opportunity and exacerbate GB scarcity premium."
+    },
+    {
+      "metric": "EU storage refill pace",
+      "why": "71.61% vs 5yr seasonal +17.5pp deficit; Nov-Dec injection rate will set Jan power floor and Cal+1 risk."
+    },
+    {
+      "metric": "EUA (35.37 EUR/t, 57th-percentile)",
+      "why": "Poland court upholds climate laws (bullish EUA); Spain election (late Nov) threatens EU coal phase-out consensus (bearish EUA); net tilt data-dependent."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Late Nov",
+      "name": "Spain snap election \u2014 climate policy direction",
+      "why": "Conservative victory could relax coal phase-out and renewable auction pace; bearish for EUA floor and power curve."
+    },
+    {
+      "day_label": "TBD",
+      "name": "EU-UK electricity interconnector signing",
+      "why": "Delays prolong GB-EU DA spread arbitrage; signature unlocks cross-border flattening and Cal+1 differential compression."
+    }
+  ]
+}

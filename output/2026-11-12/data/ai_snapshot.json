@@ -1,0 +1,168 @@
+{
+  "aggregate_brief": "Today's standouts: Renewables \u2014 3th-percentile of 5-yr range \u2014 historically low; GB Power \u2014 93th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 321,
+        "key": "coal"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "available": false
+    },
+    "clean_spark": {
+      "available": false
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 321,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "available": false
+    },
+    "eua": {
+      "as_of": "2026-11-11",
+      "available": true,
+      "daily_change_pct": 0.75,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.63,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 35.37,
+      "monthly_change_pct": 2.59,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 57.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.42
+    },
+    "gb_power": {
+      "as_of": "2026-11-12",
+      "available": true,
+      "daily_change_pct": -19.07,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.02,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 195.26,
+      "monthly_change_pct": 12.08,
+      "name": "GB Power",
+      "percentile_rank_5y": 93.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 3.08
+    },
+    "renewable_share": {
+      "as_of": "2026-11-11",
+      "available": true,
+      "daily_change_pct": 17.63,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.26,
+      "headline": "3th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": false,
+      "latest": 13.18,
+      "monthly_change_pct": -58.6,
+      "name": "Renewables",
+      "percentile_rank_5y": 3.0,
+      "unit": "% of load",
+      "weekly_change_pct": -58.67
+    },
+    "storage": {
+      "as_of": "2026-11-10",
+      "available": true,
+      "daily_change_pct": -0.54,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.16,
+      "headline": "17.5 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 71.61,
+      "monthly_change_pct": -3.97,
+      "name": "EU Storage",
+      "percentile_rank_5y": 57.0,
+      "unit": "% full",
+      "weekly_change_pct": -2.28
+    },
+    "ttf": {
+      "available": false
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU climate policy momentum threatened by populist surge in elections; Spain election risks climate rollback; Poland climate laws upheld by court.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "EU backs COP31 electrification target; consensus reached on flagship pledge",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-to-back-cop31-electrification-target/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Stronger EU electrification commitment increases long-term power demand signal and validates power infrastructure investment; supports higher structural power prices and renewable support mechanisms through 2030s."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "Poland court rejects bid to overturn seven major climate laws",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-court-rejects-poland-bid-overturn-7-climate-laws/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Upholds Poland's EU ETS compliance and decarbonisation obligations; removes risk of rollback on coal phase-out, supporting carbon price floor and reducing downside risk to EUA curve."
+      },
+      {
+        "commodity": "mixed",
+        "headline": "Spain election favours conservatives promising relaxed climate rules",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/spain-election-favorites-say-madrid-must-avoid-impossible-climate-timeline/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Potential rollback of Spain's aggressive climate stance (currently EU's loudest champion) could weaken coal phase-out pressure and renewable auction pace; negative for EUA floor and power curve structuring."
+      },
+      {
+        "commodity": "power",
+        "headline": "EU capitals urge Brussels to swiftly sign UK electricity trading agreement",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/eu-capitals-urge-brussels-to-swiftly-sign-electricity-deal-with-uk/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "infrastructure",
+        "why_it_matters": "Electricity interconnector agreement with UK could increase cross-border arbitrage and flatten NW Europe power spreads; bearish for GB-EU DA spreads and Cal+1 differentials if delayed signature."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Global refinery inputs fell 4.8Mb/d in Q2 2026 after Middle East conflict",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68404",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Crude supply disruption from Middle East conflict tightens global oil market; indirect bearish pressure on power via higher fuel-switch costs from gas to oil, but delayed recovery signal moderates near-term EU gas-via-LNG arb."
+      }
+    ],
+    "watchlist": [
+      "Spain snap election late November\u2014climate policy direction for EU coal phase-out and renewable support.",
+      "COP31 electrification commitments finalisation\u2014watches long-term power demand and EUA cap trajectory.",
+      "EU-UK electricity interconnector signing\u2014timing risk for DA spread arbitrage and TTF-GB coupling.",
+      "French election 2027\u2014M\u00e9lenchon manifesto vs Brussels institutional framework may test nuclear/decarbonisation policy."
+    ]
+  }
+}

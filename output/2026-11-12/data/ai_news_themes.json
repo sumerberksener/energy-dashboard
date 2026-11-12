@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU climate policy momentum threatened by populist surge in elections; Spain election risks climate rollback; Poland climate laws upheld by court.",
+  "themes": [
+    {
+      "headline": "EU backs COP31 electrification target; consensus reached on flagship pledge",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Stronger EU electrification commitment increases long-term power demand signal and validates power infrastructure investment; supports higher structural power prices and renewable support mechanisms through 2030s.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-to-back-cop31-electrification-target/"
+    },
+    {
+      "headline": "Poland court rejects bid to overturn seven major climate laws",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bullish-power",
+      "why_it_matters": "Upholds Poland's EU ETS compliance and decarbonisation obligations; removes risk of rollback on coal phase-out, supporting carbon price floor and reducing downside risk to EUA curve.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-court-rejects-poland-bid-overturn-7-climate-laws/"
+    },
+    {
+      "headline": "Spain election favours conservatives promising relaxed climate rules",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Potential rollback of Spain's aggressive climate stance (currently EU's loudest champion) could weaken coal phase-out pressure and renewable auction pace; negative for EUA floor and power curve structuring.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/spain-election-favorites-say-madrid-must-avoid-impossible-climate-timeline/"
+    },
+    {
+      "headline": "EU capitals urge Brussels to swiftly sign UK electricity trading agreement",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Electricity interconnector agreement with UK could increase cross-border arbitrage and flatten NW Europe power spreads; bearish for GB-EU DA spreads and Cal+1 differentials if delayed signature.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-capitals-urge-brussels-to-swiftly-sign-electricity-deal-with-uk/"
+    },
+    {
+      "headline": "Global refinery inputs fell 4.8Mb/d in Q2 2026 after Middle East conflict",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Crude supply disruption from Middle East conflict tightens global oil market; indirect bearish pressure on power via higher fuel-switch costs from gas to oil, but delayed recovery signal moderates near-term EU gas-via-LNG arb.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68404"
+    }
+  ],
+  "watchlist": [
+    "Spain snap election late November—climate policy direction for EU coal phase-out and renewable support.",
+    "COP31 electrification commitments finalisation—watches long-term power demand and EUA cap trajectory.",
+    "EU-UK electricity interconnector signing—timing risk for DA spread arbitrage and TTF-GB coupling.",
+    "French election 2027—Mélenchon manifesto vs Brussels institutional framework may test nuclear/decarbonisation policy."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}
