@@ -1,0 +1,185 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 96th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 17.7 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 322,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 317,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 317,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "available": false
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 322,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-11-13",
+      "available": true,
+      "daily_change_pct": -26.86,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.65,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 145.39,
+      "monthly_change_pct": 5.67,
+      "name": "DE Power",
+      "percentile_rank_5y": 76.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 5.76
+    },
+    "eua": {
+      "as_of": "2026-11-12",
+      "available": true,
+      "daily_change_pct": 0.58,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.92,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 35.58,
+      "monthly_change_pct": 4.22,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 58.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -0.37
+    },
+    "gb_power": {
+      "as_of": "2026-11-13",
+      "available": true,
+      "daily_change_pct": 6.73,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.63,
+      "headline": "96th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 229.11,
+      "monthly_change_pct": 22.92,
+      "name": "GB Power",
+      "percentile_rank_5y": 96.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 2.84
+    },
+    "renewable_share": {
+      "available": false
+    },
+    "storage": {
+      "as_of": "2026-11-11",
+      "available": true,
+      "daily_change_pct": -0.49,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.46,
+      "headline": "17.7 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 71.25,
+      "monthly_change_pct": -4.49,
+      "name": "EU Storage",
+      "percentile_rank_5y": 56.0,
+      "unit": "% full",
+      "weekly_change_pct": -2.34
+    },
+    "ttf": {
+      "available": false
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU climate ambition faces pressure: Spain's conservatives threaten to relax climate rules; EU hints pragmatism on electrification at COP31.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "EU backs COP31 electrification target despite pragmatism signals",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-to-back-cop31-electrification-target/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Electrification pledge drives long-term EU power demand growth and supports merchant power valuations. However, climate chief's hint of 'pragmatism' suggests slower pace\u2014medium-term DA spreads could compress if deployment timelines slip."
+      },
+      {
+        "commodity": "renewables",
+        "headline": "Spain's conservatives pledge to relax climate rules if they win election",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/spain-election-favorites-say-madrid-must-avoid-impossible-climate-timeline/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Spain is EU's largest renewables producer by share. Conservative victory could slow wind/solar deployment, tightening EU power supply and supporting power prices. Snap election later November\u2014outcome has intra-month transmission to Q1 power curve."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "EU court rejects Poland's bid to overturn seven major climate laws",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-court-rejects-poland-bid-overturn-7-climate-laws/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Confirms EU ETS compliance and climate regulations intact in large EU member. Supports EUA price floor; reduces regulatory whipsaw risk for carbon hedging over 2027 calendar."
+      },
+      {
+        "commodity": "power",
+        "headline": "U.S. Southwest hydropower hits record lows amid drought in Colorado Basin",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68445",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "weather",
+        "why_it_matters": "US summer drought reduces hydropower generation, slightly increasing US thermal burn and global LNG demand. Indirect: tighter US LNG export optionality could marginally support TTF via reduced NW Europe LNG supply through winter 2026\u201327."
+      },
+      {
+        "commodity": "crude",
+        "headline": "NATO warns Europe risks jet fuel shortage in major war due to fossil fuel shift",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/europe-risk-run-short-jet-fuel-major-war-nato-study/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Defense-grade energy security concern. Implies EU may need to maintain oil refining / distillate capacity longer than green timeline permits. Indirect risk to power via political pressure to slow coal/gas phase-out\u2014affects long-term CCGT stranding and EUA soft floor."
+      }
+    ],
+    "watchlist": [
+      "Spain snap election later November\u2014potential climate policy reset; monitor gas/power curve impact.",
+      "COP31 electrification pledge enforcement detail\u2014check if binding timelines or soft targets; affects CCGT retirement assumptions.",
+      "Finland mining project decision\u2014critical minerals vs. green resolve; shape EU RES supply chain confidence and industrial power demand."
+    ]
+  }
+}

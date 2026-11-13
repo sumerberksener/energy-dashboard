@@ -1,0 +1,70 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU court rejects Poland's bid to overturn seven major climate laws; ETS compliance and carbon regulations confirmed intact.",
+    "polarity": "bullish-eua",
+    "side": "supply",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Confirms EUA regulatory certainty through 2027 calendar; reduces whipsaw risk and supports carbon floor for power marginal-cost hedging."
+  },
+  "freshness_caveat": "Coal (322 days old, as of 2025-12-26) and Clean Dark (317 days old, as of 2025-12-31) are stale; coal merit-order and thermal economics inference unreliable until refreshed. GB Power, DE Power, EUA, Storage current as of 2026-11-11 to 2026-11-13.",
+  "risk_flags": [
+    "GB Power 96th-percentile and +6.73% daily \u2014 supply tightness or demand surge; monitor LNG/interconnect flows.",
+    "EU Storage 17.7pp below seasonal average \u2014 refill pace through H1 2027 sets marginal gas cost and fuel-switch regime.",
+    "Spain snap election later November could slow RES deployment; transmits to Q1 2027 power curve if conservatives win.",
+    "Coal at 8th-percentile (96 USD/t, stale as of 2025-12-26) \u2014 thermal merit order deeply compressed; watch coal/gas spread on fresh data."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "+2-5%",
+      "summary": "GB supply tightness persists; EU storage refill steady; Spain election outcome uncertain.",
+      "ttf_pct": "tracks"
+    },
+    "downside": {
+      "de_power_pct": "-8-12%",
+      "summary": "Spain socialists maintain power; GB supply normalizes; EU storage refill accelerates on mild weather.",
+      "ttf_pct": "-5-8%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Spain conservatives win, relax RES rules; EU wind output drops; storage refill slows further.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB power spike amid storage deficit",
+    "Spain climate policy reversal tail-risk",
+    "EU regulatory clarity supports carbon floor"
+  ],
+  "top_drivers": [
+    "GB Power at 96th-percentile (229 EUR/MWh +6.73% daily) \u2014 supply stress or demand surge in GB system.",
+    "EU Storage 17.7pp below seasonal normal \u2014 refill deficit constrains gas supply winter 2026\u201327, elevating thermal merit order.",
+    "Spain election (Nov) threatens renewables mandate if conservatives gain power \u2014 intra-month transmission to Q1 curve."
+  ],
+  "top_takeaway": "GB Power at 96th-percentile (229 EUR/MWh) dominates; EU storage 17.7pp below seasonal average tightens winter gas call; Spain election risk to renewables deployment.",
+  "watchlist": [
+    {
+      "metric": "Spain election outcome (Nov 2026)",
+      "why": "Conservative victory could relax renewables mandates, tightening EU power supply curve into Q1 2027."
+    },
+    {
+      "metric": "GB Power structural driver",
+      "why": "96th-percentile reading suggests either low renewable output, high demand, or low interconnect inflow \u2014 directional signal for GB-DE spread."
+    },
+    {
+      "metric": "EU Storage refill trajectory",
+      "why": "At 71.25% and 17.7pp below seasonal \u2014 if refill pace slows, gas marginal cost rises and fuel-switch shifts thermal dispatch."
+    },
+    {
+      "metric": "COP31 electrification detail (enforcement)",
+      "why": "Soft vs. binding timelines affect CCGT retirement schedules and 2027\u20132030 power supply expectations."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Nov",
+      "name": "Spain snap election \u2014 RES policy vote",
+      "why": "Conservative win risks climate rule relaxation, slowing wind/solar deployment and tightening 2027 power supply."
+    }
+  ]
+}
