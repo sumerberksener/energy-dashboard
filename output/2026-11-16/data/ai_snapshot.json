@@ -1,0 +1,212 @@
+{
+  "aggregate_brief": "Today's standouts: GB Power \u2014 93th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EUA Carbon \u2014 outsized daily move (-1.91%, 2.1\u03c3).",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 325,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 320,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 320,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-11-16",
+      "available": true,
+      "daily_change_abs": 5.68,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.8,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -49.75,
+      "monthly_change_abs": 39.81,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 16.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -147.02
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 325,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-11-16",
+      "available": true,
+      "daily_change_pct": 4.08,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.67,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 145.0,
+      "monthly_change_pct": 24.39,
+      "name": "DE Power",
+      "percentile_rank_5y": 76.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -44.4
+    },
+    "eua": {
+      "as_of": "2026-11-13",
+      "available": true,
+      "daily_change_pct": -1.91,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.77,
+      "headline": "outsized daily move (-1.91%, 2.1\u03c3)",
+      "is_stale": false,
+      "latest": 34.9,
+      "monthly_change_pct": 3.25,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 54.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": 0.01
+    },
+    "gb_power": {
+      "as_of": "2026-11-16",
+      "available": true,
+      "daily_change_pct": -15.21,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.19,
+      "headline": "93th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 210.48,
+      "monthly_change_pct": 9.48,
+      "name": "GB Power",
+      "percentile_rank_5y": 93.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -12.25
+    },
+    "renewable_share": {
+      "as_of": "2026-11-15",
+      "available": true,
+      "daily_change_pct": 32.94,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.88,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 65.27,
+      "monthly_change_pct": -41.82,
+      "name": "Renewables",
+      "percentile_rank_5y": 87.0,
+      "unit": "% of load",
+      "weekly_change_pct": 162.33
+    },
+    "storage": {
+      "available": false
+    },
+    "ttf": {
+      "as_of": "2026-11-13",
+      "available": true,
+      "daily_change_pct": -1.42,
+      "days_old": 3,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.89,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 90.95,
+      "monthly_change_pct": 5.23,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 81.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -3.04
+    }
+  },
+  "news": {
+    "geopolitics_summary": "COP31 negotiating immediate fossil-fuel transition language; EU climate ambitions wavering on electrification; Russia Arctic LNG reroute to Asia from 2027 reduces EU supply pressure.",
+    "themes": [
+      {
+        "commodity": "power",
+        "headline": "EU may soften clean power electrification push at COP31",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-climate-chief-wopke-hoekstra-hints-bloc-may-drop-clean-power-push-at-cop31/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Weakened electrification targets reduce long-term structural demand for EU power; delays coal/gas phase-out assumptions underlying forward curve risk premiums."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Russia reroutes Arctic LNG to Asia; Europe no longer buying from 2027",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/cut-off-europe-russia-rewire-arctic-gas-trade-lng-eu-ban/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Elimination of Russian LNG supply narrows EU gas import sources; tightens TTF curve, raises LNG swing supply reliance on Atlantic basin and re-export routes; supports power baseload costs."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "COP31 draft text signals immediate fossil fuel transition commitment",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/draft-cop31-text-suggests-immediate-fossil-fuel-transition/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Strengthened global climate commitments increase EUA risk premium via tighter EU ETS Phase 2 outlook; supports coal displacement and power fuel-switch margin compression."
+      },
+      {
+        "commodity": "power",
+        "headline": "Southwest US hydropower generation hits record lows in 2026 summer",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68445",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "weather",
+        "why_it_matters": "Drought-driven US hydro collapse reduces Henry Hub pressure from marginal gas burn; indirect upside to US LNG export margins, constraining available Atlantic swing supply to EU TTF."
+      },
+      {
+        "commodity": "gas",
+        "headline": "COP31 negotiators target methane super-pollutant reduction agreement",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/cop31-methane-super-pollutants-climate-deal/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Methane reduction commitments may tighten supply-side compliance for gas producers; supports carbon costs and fuel-switching economics in power generation."
+      }
+    ],
+    "watchlist": [
+      "COP31 final text release and fossil-fuel transition language binding status.",
+      "EU LNG import data post-2027 as Russian Yamal volumes redirect; monitor TTF seasonal curve impact.",
+      "EIA winter 2026\u201327 gas storage and Northeast heating demand updates.",
+      "Poland climate law enforcement timeline post-court ruling; EUA compliance calendar."
+    ]
+  }
+}

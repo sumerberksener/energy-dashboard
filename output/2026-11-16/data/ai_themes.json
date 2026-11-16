@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "COP31 draft text signals immediate fossil fuel transition commitment; EU Phase 2 ETS compliance tightens if binding.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Binding coal phase-out language accelerates thermal displacement and raises EUA floor via stricter carbon budgets; supports fuel-switch margin compression in power generation."
+  },
+  "freshness_caveat": "Coal (8th-percentile) and Clean Dark spread are stale as of 2025-12-26 and 2025-12-31 respectively (320\u2013325 days old); merit-order and thermal dispatch signals cannot be confirmed with current data. TTF, GB Power, Renewables, and EUA are fresh (0\u20133 days old).",
+  "risk_flags": [
+    "Coal data stale (325 days old, as of 2025-12-26); latest 8th-percentile but no fresh signal for merit-order merit shifts this week.",
+    "Clean Dark also stale (320 days old); cannot confirm whether coal-gas spread has tightened since year-end.",
+    "GB Power -15.21% intraday yet still 93rd-percentile: indicates structural tightness not weather-driven; check grid constraints or capacity margin data.",
+    "EUA 2.1\u03c3 move lower despite COP31 bullish rhetoric suggests profit-taking or carbon-budget repricing; watch Phase 2 auction calendar (MSR intake sensitivity)."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "-3 to -8%",
+      "summary": "COP31 final text moderate on immediacy; GB grid stabilizes; renewables mean-revert to 55\u201360%. TTF flat to +2%, power -5% from highs.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "-15-22%",
+      "summary": "COP31 fossil language watered down; EU electrification softening confirmed; mild winter. EUA -6-10%, power -15-22%, coal repricing higher.",
+      "ttf_pct": "-4-7%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "COP31 binding coal phase-out language + UK cold snap drives GB constraint tighter. EUA +8-12%, TTF +6-10%, power +12-18%.",
+      "ttf_pct": "+6-10%"
+    }
+  },
+  "themes": [
+    "GB-DE power divergence: GB at decade highs amid tight GB-specific constraints",
+    "Arctic LNG exit narrows EU gas sources, lifts TTF curve risk premium",
+    "COP31 fossil-transition language vs. EU electrification softening creates policy asymmetry",
+    "Renewables at 87th-percentile (65% load share today) suppressing thermal dispatch"
+  ],
+  "top_drivers": [
+    "GB Power extremes (93rd-percentile, -15% intraday): grid constraint or demand anomaly signaling structural tightness, not weather-driven mean reversion.",
+    "Arctic LNG reroute to Asia (2027): eliminates Russian swing supply, narrows EU LNG optionality, props TTF seasonal curve and supports power baseload.",
+    "COP31 fossil-transition text vs. EU electrification softening: policy cross-current creating EUA repricing (down 1.91% despite bullish headlines) and coal displacement uncertainty."
+  ],
+  "top_takeaway": "GB Power at 93rd-percentile, EUA selling off (-1.91%, 2.1\u03c3) despite COP31 fossil-transition rhetoric; Arctic LNG reroute to Asia from 2027 tightens EU gas supply and supports power baseload.",
+  "watchlist": [
+    {
+      "metric": "GB Power intraday volatility",
+      "why": "93rd-percentile yet down 15% today and -12.25% weekly; constraint-driven or demand shock \u2014 if structural, supports premium longer-term."
+    },
+    {
+      "metric": "TTF seasonal curve post-Arctic LNG reroute",
+      "why": "Russian LNG to Asia from 2027 narrows swing supply; monitor Q2 2027 forward spreads and LNG import routes (Atlantic swing availability)."
+    },
+    {
+      "metric": "COP31 final fossil-fuel transition text",
+      "why": "If binding language on immediate coal phase-out, lifts coal displacement risk and EUA floor; if vague, EUA repricing lower likely continues."
+    },
+    {
+      "metric": "Renewable share momentum",
+      "why": "65% load today (87th-percentile, +33% daily); if sustained >60% through winter, thermal baseload margins compress; watch daily intraday spread."
+    },
+    {
+      "metric": "EU electrification softening (Politico hint)",
+      "why": "If COP31 final text waters down long-term clean-power targets, forward power curve risk premium deflates; bearish for Cal+2 and beyond."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Thu",
+      "name": "COP31 fossil-fuel transition final text",
+      "why": "Binding language on immediate coal phase-out or vague language reshapes EUA compliance curve and power fuel-switch economics near-term."
+    }
+  ]
+}
