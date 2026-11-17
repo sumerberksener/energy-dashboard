@@ -1,0 +1,71 @@
+{
+  "carbon_policy_signal": {
+    "item": "COP31 draft text signals immediate fossil fuel transition; methane deal emerging; EU court upholds Poland's 7 climate laws, reinforcing coal phase-out trajectory and EUA structural demand.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Strengthened global climate commitment and EU coal phase-out durability raise long-dated EUA floor and power decarbonization pathway; methane rules tighten upstream gas economics."
+  },
+  "freshness_caveat": "Coal (326 days old, as of 2025-12-26) and Clean Dark (321 days old, as of 2025-12-31) are stale; latest TTF, GB Power, DE Power, Clean Spark, Renewables, Storage, and EUA current as of 2026-11-16\u201317. Coal and Clean Dark price-dependent analysis unreliable.",
+  "risk_flags": [
+    "Storage 18 pp below 5-yr seasonal average; refill pace through winter will set H1 2027 power risk and TTF curve shape.",
+    "GB Power at 91st-percentile (-16.6% daily pullback suggests mean reversion risk); renewable share at 89th-percentile (312.66% weekly swing indicates volatility in thermal dispatch).",
+    "EU bans Russian Yamal LNG from 2027 (~5 mtpa); no alternative announced \u2014 timing and rerouting logistics will drive TTF forward premium.",
+    "TTF outsized daily move (-6.82%, 2.1\u03c3) coincides with LNG ban news; watch for volatility spillover into Cal+1 and calendar spreads."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22125\u20138%",
+      "summary": "Storage refill proceeds at seasonal pace; LNG rerouting priced into TTF forward; GB power normalizes toward median.",
+      "ttf_pct": "+2\u20135%"
+    },
+    "downside": {
+      "de_power_pct": "\u221212\u201318%",
+      "summary": "Mild winter, accelerated storage refill, demand softening; Trump policy eases LNG supply uncertainty; thermal dispatch weakens.",
+      "ttf_pct": "\u22128\u201312%"
+    },
+    "horizon": "1m",
+    "upside": {
+      "de_power_pct": "+5\u201312%",
+      "summary": "Cold front delays storage refill; LNG rerouting logistics confirm higher Atlantic cost; GB supply tightens.",
+      "ttf_pct": "+8\u201315%"
+    }
+  },
+  "themes": [
+    "GB power premium sustained by storage tightness and renewables volatility",
+    "EU-Russia LNG trade severing; marginal cost of supply shifting to costlier Atlantic/Pacific routes",
+    "Coal structural collapse masks firm thermal baseload requirement",
+    "COP31 climate framework durability underpins long-term EUA floor"
+  ],
+  "top_drivers": [
+    "EU bans Russian Yamal LNG from 2027 (~5 mtpa); marginal rerouting to Atlantic/Pacific costlier routes lifts TTF forward curve and power fuel cost.",
+    "Storage 18 pp below 5-yr seasonal; tight winter refill pace forces thermal dispatch reliance and sustains GB Power premium (91st-percentile).",
+    "Coal at 8th-percentile historically low offsets firm baseload need; thermal merit order recalibration on renewables volatility (89th-percentile, 312% weekly swing)."
+  ],
+  "top_takeaway": "GB Power at 91st-percentile amid tight storage (-18 pp seasonal) offsets collapsing coal (8th-percentile); EU bans Russian LNG from 2027, raising TTF forward curve via Atlantic/Pacific rerouting.",
+  "watchlist": [
+    {
+      "metric": "EU 2027 Russian LNG ban enforcement & spot LNG procurement",
+      "why": "Loss of ~5 mtpa forces marginal sourcing from Atlantic/Pacific at higher cost; TTF forward curve repricing horizon is 12\u201324 months."
+    },
+    {
+      "metric": "COP31 final fossil fuel transition text & methane rules",
+      "why": "EUA floor expectations and gas cost risk premium locked into final language; could shift power merit order and storage withdrawal strategy."
+    },
+    {
+      "metric": "EU Storage refill trajectory through Dec\u2013Jan",
+      "why": "Currently 18 pp below seasonal; slow refill or demand surge would force gas-to-coal switch, lifting both TTF and thermal spreads into spring."
+    },
+    {
+      "metric": "Trump post-inauguration energy policy clarity",
+      "why": "US LNG export licensing and sanctions posture unresolved; risk to Atlantic supply cost assumptions underpinning EU forward curve."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "COP31 final text adoption",
+      "why": "Fossil fuel transition language and methane rules finalization; signals EUA structural demand and gas sector cost pressure."
+    }
+  ]
+}
