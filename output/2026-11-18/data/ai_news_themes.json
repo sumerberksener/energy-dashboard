@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "EU sanctions on Russian LNG (effective 2027) and COP31 climate diplomacy signal hardening climate policy, but EU climate chief hints pragmatism on electrification may temper ambition.",
+  "themes": [
+    {
+      "headline": "Russia redirects Arctic LNG away from Europe from 2027 onwards",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "EU LNG import ban forces Russian volumes to Asia via longer, costlier routes. Tightens Atlantic arbitrage, reduces LNG supply to NW Europe; supports TTF and power forwards as alternative gas sources become scarcer.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/cut-off-europe-russia-rewire-arctic-gas-trade-lng-eu-ban/"
+    },
+    {
+      "headline": "EU methane regulation delayed amid industry lobbying complaints",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delay in methane rules reduces near-term pressure on gas supply-side costs and emissions compliance. Softer climate enforcement prolongs cheaper (dirtier) gas availability; suppresses EUA upside and power spreads.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/critics-say-oil-industry-exaggeration-led-to-eu-methane-rule-delay/"
+    },
+    {
+      "headline": "EU climate chief hints pragmatism on clean power electrification targets",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Signal of eased EU electrification ambition at COP31 suggests slower renewable build-out and power demand growth. Reduces structural tailwind for power prices and RES-based generation capacity expansion.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-climate-chief-wopke-hoekstra-hints-bloc-may-drop-clean-power-push-at-cop31/"
+    },
+    {
+      "headline": "U.S. natural gas storage ends injection season above five-year average",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Elevated US gas storage (3,810 Bcf, +2% vs. 5-yr avg) eases LNG export availabilty and suppresses US gas prices. Increases LNG export capacity to Europe; lowers TTF via transatlantic arb pressure.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484"
+    },
+    {
+      "headline": "EU Court upholds climate laws against Poland's legal challenges",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bullish-power",
+      "why_it_matters": "Judicial reinforcement of EU climate framework credibility. Strengthens EUA floor expectations and support for carbon-intensive plant retirement; supports power price via higher implicit carbon costs.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-court-rejects-poland-bid-overturn-7-climate-laws/"
+    }
+  ],
+  "watchlist": [
+    "COP31 final text on methane, electrification and fossil fuel language (outcome effect on EUA, power demand narrative)",
+    "Russian LNG supply reroute to Asia (Jan 2027 onwards – monitor transatlantic LNG arb and TTF seasonality)",
+    "EU methane rule implementation timeline (regulatory clarification expected Q4 2026 / Q1 2027)",
+    "US weekly gas storage drawdown pace (monitor rate; impacts LNG export volume to Europe through winter)"
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

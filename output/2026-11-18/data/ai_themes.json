@@ -1,0 +1,75 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU Court upholds climate laws against Poland legal challenges; judicial credibility for ETS framework and coal retirement pathway reinforced.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Judicial validation of EU climate framework removes legal overhang and supports EUA floor expectations; strengthens carbon-cost assumptions in thermal dispatch merit order and encourages retirement of coal-fired capacity."
+  },
+  "freshness_caveat": "Coal (as of 2025-12-26, 327 days old) and Clean Dark (as of 2025-12-31, 322 days old) are stale. Coal and thermal merit-order positioning unreliable; treat fuel-switch signals with caution. All other metrics current as of 2026-11-17 to 2026-11-18.",
+  "risk_flags": [
+    "GB Power at 207 EUR/MWh (93rd pctile) \u2014 tail risk of demand destruction if sustained; monitor GB-DE spread blowout on interconnector constraints.",
+    "Clean Spark at \u221274.59 EUR/MWh (10th pctile) \u2014 coal has zero economic dispatch headroom; any renewable shortfall or cold snap could flip merit order violently.",
+    "Storage 70.15% (18 pp below 5-yr seasonal) \u2014 refill velocity into H2 2027 is critical with Russian LNG ban looming; supply tightness could rear in Q1 2027 if winter demand runs hot.",
+    "Coal data stale (as of 2025-12-26, 327 days old) \u2014 cannot confirm current merit order or fuel-switch dynamics; use with caution in position modeling."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22125% to +3%",
+      "summary": "GB power elevated on island constraint; renewables volatile; coal out-of-merit persists. TTF range-bound; storage refill normal.",
+      "ttf_pct": "\u22121% to +2%"
+    },
+    "downside": {
+      "de_power_pct": "\u221210% to \u221220%",
+      "summary": "Sustained high renewables, mild weather, US LNG export surge via Atlantic arb suppresses TTF. GB demand destruction at 207 EUR/MWh. Coal stays stranded.",
+      "ttf_pct": "\u22123% to \u22128%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8% to +18%",
+      "summary": "Cold snap drives heating demand, renewable shortfall forces coal back in merit. Russian LNG ban narrative accelerates. EUA rallies.",
+      "ttf_pct": "+5% to +12%"
+    }
+  },
+  "themes": [
+    "GB power extreme premium; coal collapsed out of merit",
+    "Russian LNG ban 2027 tightens Atlantic arbitrage; US storage easing near-term pressure",
+    "EU climate policy credibility upheld; methane rule delay softens near-term enforcement",
+    "Storage 18 pp below seasonal; refill pace will shape H2 power risk"
+  ],
+  "top_drivers": [
+    "GB Power at 93rd percentile (207 EUR/MWh) \u2014 island supply constraint or demand spike; coupled with low renewables volatility (242% weekly swing), sets tone for forward curve risk.",
+    "Coal at 8th percentile and Clean Spark at 10th pctile \u2014 thermal generation economically compressed; any shortfall in renewables or cold snap will trigger violent merit-order flip and power spike.",
+    "Russian LNG ban effective 2027 \u2014 geopolitical supply shock forcing reroute to Asia; combined with US storage surplus (3,810 Bcf, +2% avg), creates competing LNG demand; near-term TTF support, long-term risk to H2 2027 refill."
+  ],
+  "top_takeaway": "GB Power at 93rd percentile (207 EUR/MWh) dominates; Clean Spark at 10th percentile signals coal totally out-of-merit amid high renewables and low carbon. Russian LNG ban from 2027 threatens TTF structural support.",
+  "watchlist": [
+    {
+      "metric": "GB-DE Power Spread",
+      "why": "GB premium widening to 93rd percentile signals interconnector stress or island isolation premium; spreads >100 EUR/MWh risk demand destruction or hedging flows."
+    },
+    {
+      "metric": "TTF vs LNG Arb (Brent \u2192 LNG fob \u2192 TTF)",
+      "why": "Russian LNG ban 2027 and elevated US storage (3,810 Bcf, +2% 5-yr avg) are pulling transatlantic arbitrage tighter; watch for LNG swing towards Asia, tightening NW Europe supply."
+    },
+    {
+      "metric": "EU Storage Refill Pace (% weekly change)",
+      "why": "Storage 18 pp below seasonal average (70.15% full); winter withdrawal rate and spring/summer refill speed will unlock H2 2027 TTF and power risk around Russian ban enforcement."
+    },
+    {
+      "metric": "EUA (34.37 EUR/tCO2, 51st pctile)",
+      "why": "EU Court upheld climate laws and methane rule delayed; watch for EUA floor firming on policy credibility whilst delayed enforcement suppresses near-term upside."
+    },
+    {
+      "metric": "Renewable Share Weekly Change (242.9% weekly pct move)",
+      "why": "Extreme weekly swing in renewables (-28.36% daily); if sustained at high levels, suppresses power prices further and extends coal out-of-merit regime."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "COP31",
+      "name": "COP31 final text \u2014 fossil, methane, electrification language",
+      "why": "Outcome on EU electrification ambition and methane commitments will reset power demand and EUA curve expectations. Pragmatism signal already in flow; final text may soften or harden."
+    }
+  ]
+}
