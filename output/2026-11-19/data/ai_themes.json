@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "COP31 draft text signals immediate fossil fuel transition language; final outcome will determine investor risk premium on legacy coal/gas power infrastructure and EUA long-curve pricing.",
+    "polarity": "bullish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "If finalized with strong fossil-transition clause, heightens EU decarbonization credibility and raises marginal cost of unabated coal dispatch; supports EUA floor and accelerates power-to-renewable substitution merit-order shift."
+  },
+  "freshness_caveat": "Coal (328 days old, as_of 2025-12-26) and Clean Dark (323 days old, as_of 2025-12-31) are stale; reliance on these metrics for intraday trading decisions is not recommended. All other snapshots are current (\u22642 days).",
+  "risk_flags": [
+    "Storage 69.95% (18pp below 5-yr seasonal) \u2014 refill pace into winter 2026\u201327 is critical; <65% would force demand destruction.",
+    "Renewables at 78.88% (95th-pctile) suppress DA spreads today; reversion risk if winter weather turns dry.",
+    "Russia Arctic LNG (~10% global supply) cut from EU 2027 \u2014 reroute to Asia widens LNG transport arbitrage, supports TTF structurally but introduces geopolitical timeline execution risk.",
+    "EUA -4.54% yesterday (4.7\u03c3) on COP31 stall \u2014 fossil-transition text outcome critical; long-dated EUA curve vulnerable to negotiation breakdown."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Renewables sustain 90th+; storage drifts 1\u20132pp lower; TTF ranges 78\u201383 EUR/MWh.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "-8-14%",
+      "summary": "Renewables sustain 95th; mild weather reduces storage drawdown; US LNG export surge widens arb. TTF softens on oversupply signal.",
+      "ttf_pct": "-6-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+12-18%",
+      "summary": "Cold front drives storage drawdown acceleration to 65%; renewables revert to 50th-pctile; LNG call lifts. TTF rallies on supply tightness.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Renewables-driven DA compression vs. tight storage refill",
+    "Russia LNG sanctions tighten medium-term European gas supply",
+    "Coal at 8th-percentile; clean dark spread neutral \u2014 fuel switch regime dormant",
+    "COP31 fossil-fuel transition language signals long-term EUA support"
+  ],
+  "top_drivers": [
+    "Renewables at 95th-pctile (78.88% of load) drive DA power collapse and compress front spreads; mean reversion to 40\u201350% would flip the regime.",
+    "Storage 18pp below seasonal (69.95%) tightens winter 2026\u201327 refill urgency; any demand spike or supply loss forces LNG call or rationing into TTF.",
+    "Russia Arctic LNG ban from 2027 removes ~10% of global supply from EU, reroutes to Asia, widens LNG transport arb, and structurally supports TTF via supply tightness."
+  ],
+  "top_takeaway": "Renewables at 95th-percentile suppress DA power; storage 18pp below seasonal normal tightens H2 outlook; Russia Arctic LNG ban from 2027 supports TTF via supply loss.",
+  "watchlist": [
+    {
+      "metric": "COP31 final text \u2014 fossil-fuel transition clause",
+      "why": "Determines investor risk premium on legacy coal/gas; EUA long-curve pricing hinge. Failure to include strong language eases near-term power decarbonization pressure."
+    },
+    {
+      "metric": "EU Storage refill velocity through Dec 2026",
+      "why": "At 69.95% and 18pp below seasonal, any demand shock or supply outage into winter 2026\u201327 forces LNG call or rationing. Daily tracking of storage net withdrawal/injection critical."
+    },
+    {
+      "metric": "Russia Arctic LNG sanctions enforcement timeline Jan 2027",
+      "why": "Current news signals 2027 start date; delays or carve-outs would weaken TTF support narrative. Logistics and third-party insurance scrutiny will reveal true enforcement tightness."
+    },
+    {
+      "metric": "US LNG export margin and TTF arb strength",
+      "why": "US storage 2% above 5-yr average reduces winter export urgency; weakens Henry Hub\u2192TTF arb and limits downward TTF pressure. Monitor competing bids into NW Europe."
+    },
+    {
+      "metric": "Renewables forecast reversion",
+      "why": "Current 95th-pctile (78.88%) is structural tail; any shift to median (40\u201350%) would lift DA power price by 15\u201325% and tighten spark spreads."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "COP31 fossil-fuel transition text finalization",
+      "why": "EUA pricing inflection point; determines long-curve carbon cost assumption for power-dispatch models."
+    },
+    {
+      "day_label": "TBD",
+      "name": "EU methane rule compliance roadmap release",
+      "why": "If timeline accelerated, increases operational discipline on gas infrastructure; bears power-to-gas switching narrative."
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Renewables \u2014 95th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 18.0 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 328,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 323,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 323,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-11-19",
+      "available": true,
+      "daily_change_abs": 21.28,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.2,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": -6.24,
+      "monthly_change_abs": -111.05,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 43.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": -98.48
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 328,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-11-19",
+      "available": true,
+      "daily_change_pct": 14.55,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.38,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 167.53,
+      "monthly_change_pct": -46.79,
+      "name": "DE Power",
+      "percentile_rank_5y": 81.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -29.93
+    },
+    "eua": {
+      "as_of": "2026-11-18",
+      "available": true,
+      "daily_change_pct": -4.54,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -2.49,
+      "headline": "outsized daily move (-4.54%, 4.7\u03c3)",
+      "is_stale": false,
+      "latest": 32.81,
+      "monthly_change_pct": -3.74,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 36.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -1.83
+    },
+    "gb_power": {
+      "as_of": "2026-11-19",
+      "available": true,
+      "daily_change_pct": -23.52,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.43,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 180.82,
+      "monthly_change_pct": -29.66,
+      "name": "GB Power",
+      "percentile_rank_5y": 86.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": -5.49
+    },
+    "renewable_share": {
+      "as_of": "2026-11-18",
+      "available": true,
+      "daily_change_pct": 65.98,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 1.39,
+      "headline": "95th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 78.88,
+      "monthly_change_pct": 156.69,
+      "name": "Renewables",
+      "percentile_rank_5y": 95.0,
+      "unit": "% of load",
+      "weekly_change_pct": 125.67
+    },
+    "storage": {
+      "as_of": "2026-11-17",
+      "available": true,
+      "daily_change_pct": -0.29,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -2.23,
+      "headline": "18.0 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 69.95,
+      "monthly_change_pct": -6.68,
+      "name": "EU Storage",
+      "percentile_rank_5y": 54.0,
+      "unit": "% full",
+      "weekly_change_pct": -1.78
+    },
+    "ttf": {
+      "as_of": "2026-11-18",
+      "available": true,
+      "daily_change_pct": -5.33,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.35,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 80.85,
+      "monthly_change_pct": -4.95,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 77.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 0.94
+    }
+  },
+  "news": {
+    "geopolitics_summary": "EU methane rules delayed 2 years under US pressure; Russia Arctic LNG cut from EU from 2027; COP31 climate diplomacy stalls on fossil fuel transition language.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "EU delays methane rules two years following US political pressure",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-extends-delay-of-key-methane-rules-to-two-years-after-us-pressure/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Deferred compliance reduces near-term methane abatement costs for gas suppliers; extends lower operational discipline, potentially increasing leaked gas volumes. Softens EU climate stringency signal; supports gas narrative vs. power decarbonization through 2028."
+      },
+      {
+        "commodity": "gas",
+        "headline": "Russia Arctic LNG cut from EU from 2027; gas rerouted to Asia",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/cut-off-europe-russia-rewire-arctic-gas-trade-lng-eu-ban/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "EU sanctions ban removes ~10% of global LNG supply from European market. Rerouting to Asia (longer voyage, higher transport cost) narrows LNG arb and tightens TTF. Reduces competitive LNG inflow; supports gas prices and power-to-coal switching risk."
+      },
+      {
+        "commodity": "gas",
+        "headline": "US natural gas storage ends injection season 2% above five-year average",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Above-normal US storage cushion reduces winter export urgency and LNG export margin; weakens arbitrage incentive for US\u2192EU LNG cargoes. Indirect downward pressure on TTF via lower competing LNG bids into NW Europe."
+      },
+      {
+        "commodity": "carbon",
+        "headline": "COP31 draft text signals immediate fossil fuel transition language",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/draft-cop31-text-suggests-immediate-fossil-fuel-transition/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "If finalized, heightened international climate commitment increases investor risk premium on legacy coal/gas assets; supports EU EUA price floor expectations and accelerates power-to-renewable substitution narrative. EUA long-dated curve risk."
+      },
+      {
+        "commodity": "crude",
+        "headline": "Middle East oil chokepoint flows surged 19% in Q3 2026",
+        "horizon": "months",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=",
+        "polarity": "neutral",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Higher global crude flow through Strait of Hormuz improves LNG project economics (lower Brent support = wider LNG margins) and alleviates geopolitical supply-shock risk. Marginal reduction in energy security premium; indirect mild TTF relief via LNG."
+      }
+    ],
+    "watchlist": [
+      "COP31 final text release and fossil fuel transition clause finalization",
+      "EU methane rule implementation timeline; industry compliance roadmap",
+      "Russian Yamal LNG rerouting logistics; sanctions enforcement timeline from Jan 2027",
+      "US LNG export capacity utilization and TTF arbitrage strength through winter 2026\u201327"
+    ]
+  }
+}
