@@ -1,0 +1,65 @@
+{
+  "carbon_policy_signal": {
+    "item": "COP31 draft text signals weakening commitment to immediate fossil-fuel phase-out; EU methane rules delayed 2 years following US pressure campaign.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Softened fossil-fuel language and methane-compliance deferrals reduce regulatory urgency for thermal-to-renewable fuel switching; structural EUA support weakens as market reprices lower decarbonization compliance cost."
+  },
+  "freshness_caveat": "Coal (as_of 2025-12-26, 329 days old) and Clean Dark (as_of 2025-12-31, 324 days old) are stale; analyses exclude these series. All forward-looking scenarios rely on fresh TTF, DE Power, GB Power, Storage, Renewable Share, and EUA data (as_of 2026-11-19 to 2026-11-20, 0\u20131 days old).",
+  "risk_flags": [
+    "EU storage 17.8 pp below seasonal; refill pace will anchor winter power curve and TTF forward risk.",
+    "Clean Spark 93rd percentile yet monthly change is -60.9 EUR/MWh \u2014 high volatility suggests mean reversion tail risk.",
+    "EU methane rules delayed 2 years; compliance cost pressure on gas disappears, undermining structural TTF support.",
+    "COP31 fossil-fuel language softening increases likelihood of prolonged coal/gas dispatch globally; EUA (35th percentile, -2.5\u03c3) reflects this policy discount."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Gas in-the-money, storage deficit sustains thermal support; policy drift eases EUA upside.",
+      "ttf_pct": "+2-4%"
+    },
+    "downside": {
+      "de_power_pct": "-3-5%",
+      "summary": "COP31 fossil-fuel text finalizes with weak language; methane-rule delay signals policy retreat; EUA reprices lower.",
+      "ttf_pct": "-4-6%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5-8%",
+      "summary": "Sanctions escalation on Russia isolates winter gas supply; EU refill pace misses seasonal; TTF reprices tighter.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "Gas firmly in-the-money; storage deficit sustains thermal call",
+    "COP31 and methane-rule delay weaken long-term decarbonization urgency",
+    "Sanctions posture hardening on Russia; winter supply tail-risk rising",
+    "US LNG inventory surplus reduces winter export arbitrage"
+  ],
+  "top_drivers": [
+    "Clean Spark at 93rd percentile (43.91 EUR/MWh) reflects sustained gas-in-the-money thermal premium despite -60.9 EUR/MWh monthly reversion.",
+    "EU storage deficit (69.83%, 17.8 pp below seasonal) anchors winter thermal-call and TTF structural support; refill pace will drive H1 2027 risk.",
+    "COP31 fossil-fuel language and EU methane-rule 2-year delay remove medium-term decarbonization compliance cost pressure; bearish for EUA (35th percentile, extended -2.5\u03c3) and power-curve steepness."
+  ],
+  "top_takeaway": "Clean Spark at 93rd percentile signals sustained gas-in-the-money regime; EU storage 17.8 pp below seasonal average underpins structural thermal support, offset by delayed EU methane rules and COP31 fossil-fuel language softening.",
+  "watchlist": [
+    {
+      "metric": "COP31 final text (fossil-fuel language)",
+      "why": "Outcome determines whether immediate phase-out language resurfaces; material for EUA curve and power-generation marginal cost expectations."
+    },
+    {
+      "metric": "EU sanctions envoy mandate (Russia energy isolation)",
+      "why": "Escalation over next 2\u20134 weeks could reprrice winter gas supply premium; direct transmission to TTF and German/GB power forwards."
+    },
+    {
+      "metric": "EU storage refill trajectory (Nov\u2013Dec 2026)",
+      "why": "Currently 17.8 pp below seasonal; refill speed will determine whether thermal dispatch headroom persists into H1 2027."
+    },
+    {
+      "metric": "US LNG export economics (Hormuz flows, storage surplus)",
+      "why": "Above-average US inventories + 19% Hormuz throughput surge reduce arbitrage pull to EU; indirect bearish transmission to TTF spot."
+    }
+  ],
+  "watchlist_dated": []
+}

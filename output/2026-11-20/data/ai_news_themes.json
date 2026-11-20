@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "COP31 climate negotiations weakening on fossil-fuel language; EU methane rules delayed 2 years under US/industry pressure; sanctions posture hardening.",
+  "themes": [
+    {
+      "headline": "EU methane rules delayed two years following US pressure campaign",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delay postpones upstream methane abatement costs, reducing upward pressure on gas prices. Extends timeline for EU gas decarbonization targets; TTF structural support weakens as compliance deadlines recede.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-extends-delay-of-key-methane-rules-to-two-years-after-us-pressure/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "COP31 draft text signals weakening commitment to immediate fossil-fuel phase-out",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "bearish-power",
+      "why_it_matters": "Softened language on fossil-fuel transition increases likelihood of prolonged coal/gas usage globally. Reduces regulatory tail-risk on EU EUA prices and delays urgency of fuel-switching in power generation.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/draft-cop31-text-suggests-immediate-fossil-fuel-transition/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US natural gas storage ends injection season 2% above five-year average",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Above-normal US inventories (3,810 Bcf) reduce winter export arbitrage incentive. Lower US-to-EU LNG economics weaken TTF support; indirect bearish transmission via global LNG spot competition.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484"
+    },
+    {
+      "headline": "Middle East chokepoint oil flows surged 19% in Q3 2026",
+      "source": "EIA Today in Energy",
+      "tag": "geopolitics",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Increased Strait of Hormuz throughput reduces supply-shock tail-risk on crude and indirect knock-on to European energy margin. Materially lower geopolitical premium supports thermal coal/gas substitution margin.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id="
+    },
+    {
+      "headline": "EU appoints Swedish diplomat as sanctions envoy amid Russia posture hardening",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Sanctions escalation escalates risk of Russian gas/coal supply disruption or pricing volatility. Structural risk to European power stability; EUA and power forwards likely to reprice higher if sanctions tighten winter supply.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-to-appoint-swedish-diplomat-lars-danielsson-as-sanctions-envoy/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    }
+  ],
+  "watchlist": [
+    "COP31 final text conclusion (Antalya); outcome on fossil-fuel language carries EUA / power curve implications.",
+    "UK-EU summit outcome: energy cooperation / trade reset; potential impact on GB-EU power interconnects and arbitrage.",
+    "EU methane rule implementation review in 2028; market will begin pricing delayed compliance risk post-2026.",
+    "Sanctions envoy mandate clarity: monitor for Russia energy isolation escalation over next 2–4 weeks."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
