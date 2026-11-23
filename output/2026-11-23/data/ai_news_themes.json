@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "COP31 climate talks collapsed without fossil fuel phase-out deal; EU methane rules delayed two years under US pressure; Russia sanctions escalate.",
+  "themes": [
+    {
+      "headline": "EU methane reporting rules delayed two years following US lobbying pressure",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delay weakens EU climate stringency and reduces upward pressure on gas prices from stricter emissions reporting. Bullish for gas supply, bearish for carbon/power spreads and EUA prices.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-extends-delay-of-key-methane-rules-to-two-years-after-us-pressure/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Global COP31 climate talks collapse without fossil fuel agreement",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "Failed commitment to fossil fuel phase-out signals weakened global climate ambition, reducing long-term demand destruction for gas and coal. Pressures EUA forward curve and Cal+1 decarbonisation premium.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/climate-deal-collapses-amid-fossil-fuel-rows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Europe recognizes refining's strategic role; must act to avoid import dependency",
+      "source": "Politico EU Energy",
+      "tag": "infrastructure",
+      "commodity": "crude",
+      "polarity": "neutral",
+      "why_it_matters": "Signals EU policy focus on refining capacity and energy independence. Indirect: refined product costs feed power plant operating economics and backup fuel switch decisions in day-ahead dispatch.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/sponsored-content/europe-recognizes-refinings-strategic-role-now-it-must-act/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU targets Russian banks, soldiers, athletes in new sanctions escalation",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "bullish-power",
+      "why_it_matters": "Escalated EU sanctions on Russia heighten geopolitical risk premium in gas markets and reduce near-term LNG import expectations. Tightens TTF and power spreads via fuel cost inflation.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-to-target-russian-ex-soldiers-banks-and-sports-in-new-sanctions-push/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "US natural gas storage ends injection season 2% above five-year average",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Above-normal US storage reduces LNG export urgency and global pricing pressure. Lower global LNG spot prices reduce EU TTF import value and support bearish arbitrage to Asia.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484"
+    }
+  ],
+  "watchlist": [
+    "EU-UK energy cooperation outcomes from recent summit; potential North Sea coordination.",
+    "COP31 final outcome and any binding fossil fuel language re-negotiation timeline.",
+    "US LNG export permit decisions under Trump admin; impact on 2027 European supply curves.",
+    "EUA auction calendar and market reaction to weakened climate policy backdrop."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 15,
+  "error": null
+}

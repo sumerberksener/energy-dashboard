@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU methane reporting rules delayed two years under US pressure; COP31 climate talks collapse without fossil fuel phase-out agreement.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Delay weakens EU climate stringency and signals global fossil fuel phase-out ambition failure. Reduces long-term demand destruction for gas and coal, pressuring EUA forward curve into 2027."
+  },
+  "freshness_caveat": "Coal data 332 days stale (as_of 2025-12-26); Clean Dark 327 days stale (as_of 2025-12-31). Dispatch margin assessment and thermal merit-order positioning rely on these gaps. TTF, DE Power, GB Power, Storage, Renewable Share, and EUA current as of 2026-11-20 to 2026-11-23.",
+  "risk_flags": [
+    "EU storage 17.5pp below 5-yr seasonal \u2014 refill pace will drive H2 2027 power risk; currently 68.89% full vs historical norms.",
+    "EUA extended 2.3\u03c3 below 50d trend (32.65 EUR/tCO2, -5.14% weekly) \u2014 COP31 fossil fuel phase-out failure and methane rule delays weaken medium-term ETS demand drivers.",
+    "GB Power at 207.69 EUR/MWh (92nd pctile) while DE Power 195 EUR/MWh (85th pctile) \u2014 structural GB premium reflects LNG import reliance and cross-channel constraint.",
+    "Coal at 96 USD/t (8th pctile, 332 days stale) \u2014 data gap limits near-term dispatch margin assessment; last signal shows thermal compression into spring 2026."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "tracks",
+      "summary": "Tight storage backdrop persists; GB Power holds elevated premium; EUA consolidates near 32.5 EUR/tCO2 pending methane rule detail.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "-5-8%",
+      "summary": "Milder-than-normal weather or wind recovery lifts renewables; EUA decline extends on policy uncertainty confirmation; thermal call fades. Power spreads compress.",
+      "ttf_pct": "-4-6%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+3-5%",
+      "summary": "Cold front or additional Russia sanctions escalation; thermal dispatch extends; storage refill pace slows. TTF and GB Power rally on heating demand spike.",
+      "ttf_pct": "+5-8%"
+    }
+  },
+  "themes": [
+    "GB Power premium sustained by tight EU storage backdrop",
+    "Carbon policy uncertainty pressures EUA forward curve post-COP31 collapse",
+    "EU methane rules delay bullish for gas supply, bearish for power decarbonisation premium",
+    "Russia sanctions escalation supports TTF geopolitical risk premium"
+  ],
+  "top_drivers": [
+    "GB Power premium sustained by storage -17.5pp below seasonal and LNG import reliance amid Russia sanctions escalation.",
+    "EUA weakness driven by COP31 fossil fuel phase-out collapse and EU methane rules delay \u2014 signals weakened medium-term decarbonisation ambition and ETS demand.",
+    "Renewable share collapsed 45% daily to 21st pctile; thermal call window open \u2014 watch for weather reversal or wind recovery to reset merit order."
+  ],
+  "top_takeaway": "GB Power at 92nd percentile amid storage -17.5pp below seasonal; EUA extended 2.3\u03c3 below trend as COP31 collapse signals weakened climate ambition and delayed EU methane rules.",
+  "watchlist": [
+    {
+      "metric": "EUA forward curve shape",
+      "why": "COP31 collapse without fossil fuel phase-out agreement pressures Cal+1 and Cal+2 decarbonisation premium; weakened climate stringency signals multi-year EUA downside."
+    },
+    {
+      "metric": "TTF-TTF spread and LNG arbitrage",
+      "why": "US storage 2% above 5-yr average reduces LNG export urgency; combined with EU sanctions escalation and methane rule delay, arbitrage value softens near-term EU import incentive."
+    },
+    {
+      "metric": "GB Power-DE Power spread",
+      "why": "GB at 92nd pctile vs DE at 85th pctile; sustained premium signals cross-channel constraint tightness and LNG import premium; watch for winter demand destruction or interconnector maintenance."
+    },
+    {
+      "metric": "Renewable share recovery trajectory",
+      "why": "Renewable share fell 45.09% daily to 30.63% (21st pctile, 1 day old); weather-driven collapse suggests multi-day thermal call window; next cold front or wind recovery critical for merit-order shift."
+    },
+    {
+      "metric": "EU methane rules implementation timeline",
+      "why": "Two-year delay signals policy retreat; impacts long-cycle investment in carbon capture and power plant retrofit \u2014 watch for delayed coal phase-out announcements that extend thermal merit-order duration."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "TBD",
+      "name": "COP31 fossil fuel re-negotiation timeline announced",
+      "why": "Failed phase-out agreement leaves window for revised commitment; timing and binding language will set EUA curve repricing trajectory into 2027."
+    },
+    {
+      "day_label": "TBD",
+      "name": "EU methane rules finalized detail \u2014 January 2027 delay confirmation",
+      "why": "Confirms two-year delay; allows market to price in longer-cycle gas support and reduced climate stringency drag on power spreads."
+    }
+  ]
+}
