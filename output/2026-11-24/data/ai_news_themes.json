@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "COP31 climate talks collapsed without fossil fuel phase-out agreement; EU methane reporting delayed amid Trump-Big Oil lobbying; sanctions on Russia intensify but exclude energy sector directly.",
+  "themes": [
+    {
+      "headline": "EU methane emissions reporting for fossil fuels delayed by Trump lobby",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "Delay weakens EU ETS enforcement signal and methane-reduction incentives. Lower regulatory pressure on oil/gas operators reduces fuel-switching pressure away from fossil generation, capping upside on power prices via reduced decarbonization urgency.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/how-big-oil-trump-administration-outwitted-brussels-delay-eu-climate-law/"
+    },
+    {
+      "headline": "Global climate talks collapse; COP31 fails to agree fossil fuel phase-out",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "mixed",
+      "polarity": "neutral",
+      "why_it_matters": "Weakened global climate consensus reduces long-term pressure for rapid EU decarbonization, but immaterial to near-term power/gas curve (weeks–months). Signals political risk to EU ETS carbon floor assumptions and renewable subsidy momentum.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/climate-deal-collapses-amid-fossil-fuel-rows/"
+    },
+    {
+      "headline": "EU targets Russian banks, soldiers, athletes in new sanctions round",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Sanctions package focuses on banks and visa restrictions, not energy infrastructure. Unlikely direct impact on Russian gas flows to EU. Monitors continued political will for energy decoupling but no immediate TTF or storage transmission mechanism.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/eu-to-target-russian-ex-soldiers-banks-and-sports-in-new-sanctions-push/"
+    },
+    {
+      "headline": "U.S. natural gas storage ends injection season 2% above five-year average",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Above-average US nat gas inventories (3,810 Bcf vs five-year mean) increase LNG export availability and depress global LNG spot prices, reducing TTF via lower arbitrage incentive for US→Europe flows in coming winter.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484"
+    },
+    {
+      "headline": "Middle East oil flows through chokepoints surge 19% in Q3 2026",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "crude",
+      "polarity": "bearish-power",
+      "why_it_matters": "Higher Strait of Hormuz throughput reduces geopolitical risk premium on crude; lower Brent supports fuel-oil and coal-to-gas switching economics. Modest downward pressure on EU generation costs via cheaper backup fuel.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id="
+    }
+  ],
+  "watchlist": [
+    "EU budget vote (Patriots for Europe revolt risk); timeline unclear but could delay green-funding allocations.",
+    "UK-EU summit outcomes on energy/trade alignment; implications for GB power price decoupling.",
+    "COP31 fallout: watch for EU regulatory response (ETS tightening) in Dec–Jan.",
+    "US LNG export capacity utilization; monitor if above-average storage triggers Q4–Q1 shipment surge to Europe."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 16,
+  "error": null
+}

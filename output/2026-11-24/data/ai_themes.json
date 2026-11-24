@@ -1,0 +1,74 @@
+{
+  "carbon_policy_signal": {
+    "item": "EU methane emissions reporting for fossil fuels delayed by Trump-administration lobbying; COP31 fossil phase-out collapse weakens global climate consensus and long-term EU ETS enforcement urgency.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Delay reduces near-term regulatory pressure on fossil-fuel operators to invest in abatement and fuel-switching; weakens medium-term demand for carbon allowances and power-generation decarbonization, capping EUA upside and supporting thermal-dispatch margins."
+  },
+  "freshness_caveat": "Coal (333 days stale, as_of 2025-12-26) and Clean Dark spread (328 days stale, as_of 2025-12-31) undermine thermal merit-order and fuel-switch signals; thermal stack assessment requires urgent data refresh. All other metrics current as of 2026-11-23\u201324.",
+  "risk_flags": [
+    "Coal data 333 days old (as of 2025-12-26); Clean Dark stale since 2025-12-31 \u2014 thermal spread signals unreliable until fresh data surfaces.",
+    "GB Power at 88th percentile (215.72 EUR/MWh) vs DE Power (88th percentile, 215.72 EUR/MWh) \u2014 synchronized highs suggest GB-DE spread compression driven by common drivers (storage, renewables share 18th-percentile), not bilateral dysfunction.",
+    "EU storage 68.41% (17.7pp below seasonal) + renewable share 29.51% (18th-percentile) = tight winter gas call; refill pace failure through Dec will force sustained high thermal capacity-factor.",
+    "COP31 fossil-phase-out collapse + methane-reporting delay (Trump lobby) structurally reduce EU decarbonization urgency, capping long-dated carbon and power upside via weakened policy enforcement signal."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22122-4%",
+      "summary": "Storage deficit sustains 70+ TTF and 80\u201395th-percentile power; renewables remain depressed; coal cheap but merit-order opaque pending data refresh.",
+      "ttf_pct": "\u00b11-3%"
+    },
+    "downside": {
+      "de_power_pct": "\u22128-12%",
+      "summary": "Mild weather + wind recovery lift renewable share to 40th-pctile; US LNG export surge to Europe floods arbitrage window; storage refill catches up to seasonal.",
+      "ttf_pct": "\u22126-10%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+5-8%",
+      "summary": "Cold front + wind drought extend renewable deficit into Dec; storage drain accelerates to 1pp/day; thermal runs hard, TTF rallies into supply-tight regime.",
+      "ttf_pct": "+8-12%"
+    }
+  },
+  "themes": [
+    "GB power extended; EU storage shortfall structurally supports thermal",
+    "Coal historically cheap; gas-to-coal merit-order flip unlikely near-term",
+    "Climate policy headwinds: COP31 collapse, methane reporting delay weaken EU ETS enforcement",
+    "US LNG inventory surplus caps TTF via arbitrage suppression"
+  ],
+  "top_drivers": [
+    "GB power at 92nd-percentile (212.34 EUR/MWh) driven by EU storage deficit (68.41%, \u221217.7pp seasonal) forcing sustained thermal dispatch into winter.",
+    "Coal at 8th-percentile (96 USD/t) + clean dark 328-days stale undermines merit-order confidence; suggests coal structurally cheap but data gap prevents thermal-stack assessment.",
+    "Renewable share collapsed to 18th-percentile (29.51% of load, \u221238.69% weekly) lifting thermal call; if wind remains depressed through Dec, power prices sustain 85\u201395th-percentile regime.",
+    "US LNG storage surplus (3,810 Bcf, +2% five-year avg) suppresses TTF arbitrage; reduces Q4\u2013Q1 2026\u201327 export premium, capping European gas front-month rally despite storage shortfall."
+  ],
+  "top_takeaway": "GB power 92nd-percentile amid storage deficit 17.7pp below seasonal; coal at 8th-percentile signals tight thermal economics and fuel-switch regime despite stale coal data.",
+  "watchlist": [
+    {
+      "metric": "Coal spot (ARA)",
+      "why": "333 days stale; thermal merit-order signal unreliable until refresh. Priority refresh needed to confirm 8th-percentile sustainability."
+    },
+    {
+      "metric": "Clean Dark spread (coal-to-gas merit order)",
+      "why": "328 days stale as of 2025-12-31; cannot assess fuel-switch breakeven with confidence. Stale until 2026-12 vintage data arrives."
+    },
+    {
+      "metric": "EU Storage refill pace (Nov\u2013Dec 2026)",
+      "why": "Currently 17.7pp below seasonal; if refill rate < 0.5pp/day, winter tight-gas regime locks in; triggers sustained 100+ EUR/MWh power and 70+ EUR/MWh TTF."
+    },
+    {
+      "metric": "US LNG export utilization (Q4 2026\u2013Q1 2027)",
+      "why": "EIA reports above-average nat gas storage (3,810 Bcf); expect elevated Q4\u2013Q1 shipment surge to Europe, depressing TTF arbitrage window and capping front-month upside."
+    },
+    {
+      "metric": "GB-DE power spread",
+      "why": "Currently tracking (both 88th-percentile); if GB renewable curtailment or interconnector maintenance widens spread above 20 EUR/MWh, signals GB-specific capacity crunch."
+    },
+    {
+      "metric": "EUA (32.99 EUR/tCO2, 37th-percentile)",
+      "why": "Methane-reporting delay + COP31 collapse weaken medium-term policy signal; watch for further EUA weakness (bearish) if EU regulatory response stalls through Dec."
+    }
+  ],
+  "watchlist_dated": []
+}
