@@ -1,0 +1,80 @@
+{
+  "carbon_policy_signal": {
+    "item": "COP31 collapse weakens international fossil-fuel commitments; EU ETS auction outcomes on Wed\u2013Thu will test whether carbon price holds above 30 EUR/tCO2 or slides on reduced regulatory pressure.",
+    "polarity": "bearish-eua",
+    "side": "policy",
+    "source": "Politico EU Energy",
+    "why_it_matters": "Failed climate accord reduces enforcement risk and near-term decarbonization urgency; weaker carbon floor supports coal marginal cost economics and pressures EUA into seasonal winter trough, lifting thermal dispatch."
+  },
+  "freshness_caveat": "Coal (8th-percentile) and clean_dark (48th-percentile) are stale as of 2025-12-26 and 2025-12-31 respectively (334 and 329 days old); latest live metrics (TTF, GB Power, DE Power, renewables, storage) are dated 2026-11-24 to 2026-11-25. All headline inferences draw on current market data where available.",
+  "risk_flags": [
+    "Renewables at 21% of load (9th-percentile, \u221243% week-on-week) forces coal and gas to cover load; coal at 96 USD/t (8th-percentile) suggests limited downside cushion if wind recovers suddenly.",
+    "GB power 206.75 EUR/MWh (91st-percentile) vs DE 226.53 EUR/MWh (89th-percentile) \u2014 tight GB-DE spread narrows interconnect arbitrage; flows at risk if GB stability improves.",
+    "EU storage 68.4% full (17.7pp below 5-yr seasonal) \u2014 refill pace must accelerate into spring or H2 2027 winter will face structural tightness; TTF at 91.67 EUR/MWh (82nd-percentile) leaves limited upside headroom.",
+    "COP31 collapse and EU permitting relaxation create binary regulatory tail \u2014 EUA under pressure (38th-percentile, \u22126% week); near-term cliff risk if coal recall accelerates despite low carbon price."
+  ],
+  "scenarios": {
+    "base": {
+      "de_power_pct": "\u22125% to +2%",
+      "summary": "Renewables recover modestly; storage injection pace normalizes; thermal dispatch gradually eases as wind/solar mean-revert.",
+      "ttf_pct": "\u22122% to +3%"
+    },
+    "downside": {
+      "de_power_pct": "\u221212% to \u22126%",
+      "summary": "Wind output recovers sharply; mild weather eases heating load; US LNG supply glut depresses arbitrage; EUA stays sub-32 EUR/tCO2 \u2014 coal uncompetitive.",
+      "ttf_pct": "\u22128% to \u22124%"
+    },
+    "horizon": "1w",
+    "upside": {
+      "de_power_pct": "+8% to +15%",
+      "summary": "Renewable forecast worsens (wind cuts deepen); storage injection stalls; cold snap drives space-heating demand; EUA regulatory cliff triggers coal recall surge.",
+      "ttf_pct": "+5% to +12%"
+    }
+  },
+  "themes": [
+    "Renewable scarcity driving thermal baseload",
+    "GB power premium widens; interconnect risk",
+    "Storage deficit vs seasonal norm; winter refill concern",
+    "COP31 collapse weakens emissions regulation; coal/gas marginal cost support"
+  ],
+  "top_drivers": [
+    "Renewable scarcity (21% load, 9th-percentile): Coal and gas forced into merit order; low-carbon-price regime (38th-percentile EUA) reduces decarbonization incentive \u2014 coal at 8th-percentile offers minimal hedge value.",
+    "GB power premium (91st-percentile, 206.75 EUR/MWh): Tight GB-DE spread signals interconnect transmission stress; French nuclear or Benelux outages could widen further, but mean reversion risk if wind recovers.",
+    "Storage undershot seasonal (68.4%, \u221217.7pp): Refill pace must sustain >0.5% daily injection through spring; TTF at 82nd-percentile offers limited upside buffer if winter demand spike or supply shock materializes."
+  ],
+  "top_takeaway": "Renewables at 9th-percentile crush merit order; GB power 91st-percentile signals tight interconnect; storage 17.7pp below seasonal average threatens H2 refill pace amid stalled climate policy.",
+  "watchlist": [
+    {
+      "metric": "Renewable wind/solar forecast",
+      "why": "9th-percentile call lifts thermal dispatch; 1\u20132 pp swing in renewable share moves DE power 5\u20138 EUR/MWh; monitor 10-day outlook for mean reversion risk."
+    },
+    {
+      "metric": "GB\u2013DE power spread",
+      "why": "91st-percentile GB premium signals interconnect transmission congestion; tactical spread trades possible if French nuclear or Benelux gen changes."
+    },
+    {
+      "metric": "EU storage injection pace",
+      "why": "17.7pp below seasonal average; Nov\u2013Dec injection rate will set Apr\u2013May refinancing risk and spring power curve shape; below 0.5% daily inject triggers structural tightness signal."
+    },
+    {
+      "metric": "TTF\u2013LNG arb (TotIce) spread",
+      "why": "US nat-gas storage 2% above 5-yr avg; sustained high US export availability may cap TTF upside; monitor Henry Hub and Singapore LNG spot for arbitrage widening."
+    },
+    {
+      "metric": "EUA carbon (COP31 fallout)",
+      "why": "COP31 collapse weakens near-term decarbonization pressure; coal support could accelerate if EUA falls below 30 EUR/tCO2; watch auctions Wed/Thu for supply reaction."
+    }
+  ],
+  "watchlist_dated": [
+    {
+      "day_label": "Wed",
+      "name": "EU ETS auctions (Phase 4)",
+      "why": "COP31 collapse likely to depress bid tone; carbon price reaction tests 30-32 EUR/tCO2 support."
+    },
+    {
+      "day_label": "Fri",
+      "name": "Ukraine peace-talk update",
+      "why": "VdL energy-ceasefire signal; any escalation risk reset lifts TTF geopolitical premium into weekend."
+    }
+  ]
+}

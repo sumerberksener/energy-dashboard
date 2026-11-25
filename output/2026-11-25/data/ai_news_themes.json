@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Von der Leyen signals energy ceasefire as Ukraine peace-talk metric; COP31 collapse raises climate policy uncertainty; EU nature-law relaxation debate signals pro-industry shift.",
+  "themes": [
+    {
+      "headline": "Von der Leyen: Energy ceasefire key signal of Putin peace intent",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Renewed focus on Russia–Ukraine energy negotiations signals potential TTF volatility around peace-talk momentum. Any ceasefire agreement could ease winter gas supply fears and support Cal+1 curve flattening, but remains highly uncertain.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/von-der-leyen-energy-ceasefire-would-show-putin-is-serious-about-peace-talks/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "EU Parliament relaxes nature laws; accelerates permitting for industry",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Faster environmental permitting reduces barriers to renewable and infrastructure projects; structural positive for near-term renewable capacity additions, putting downward pressure on power curve in 2027–28 horizon.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/right-wing-majority-votes-to-speed-up-environmental-permitting-rules-for-industry/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "COP31 collapses; climate negotiations fail on fossil fuel commitments",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "carbon",
+      "polarity": "bearish-power",
+      "why_it_matters": "Failed global climate accord weakens international consensus on emissions reduction, increasing regulatory risk for EU ETS carbon price; reduced near-term pressure on decarbonization targets supports coal/gas marginal economics and pressures EUA.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/climate-deal-collapses-amid-fossil-fuel-rows/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "Big Oil and Trump officials delayed EU methane-reporting climate law",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Delay in fossil-fuel methane disclosure rules reduces enforcement risk and cost for European gas producers; minor support for supply-side economics but immaterial to current TTF pricing given existing LNG glut.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/how-big-oil-trump-administration-outwitted-brussels-delay-eu-climate-law/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+    },
+    {
+      "headline": "U.S. natural gas storage ends injection season 2% above five-year average",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Above-normal US nat-gas inventories (3,810 Bcf) reduce structural support for Henry Hub; likely increases LNG export availability into NW Europe spot market, strengthening TTF arbitrage supply and capping winter upside.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484"
+    }
+  ],
+  "watchlist": [
+    "Ukraine peace negotiations; track VdL signals on energy ceasefire mechanics and timing.",
+    "EU ETS auction outcomes; monitor carbon price reaction to COP31 collapse and green-permitting policy mix.",
+    "LNG export flows from US Gulf; above-avg storage may sustain higher TotIce/TTF arb into Dec–Jan.",
+    "EU budget negotiations; right-wing coalition could delay green-transition funding or renewable subsidy alignment."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}
