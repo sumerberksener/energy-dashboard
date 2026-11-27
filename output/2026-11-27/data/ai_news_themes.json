@@ -1,0 +1,65 @@
+{
+  "geopolitics_summary": "Spain's Nov. 29 election may swing policy rightward on climate; EU nature laws face relaxation pressure; Ukraine energy ceasefire remains pivotal for Russian negotiation signals.",
+  "themes": [
+    {
+      "headline": "Von der Leyen signals energy ceasefire as Ukraine peace-talk litmus test",
+      "source": "Politico EU Energy",
+      "tag": "geopolitics",
+      "commodity": "gas",
+      "polarity": "neutral",
+      "why_it_matters": "Any Russia–Ukraine energy ceasefire would directly reduce war-risk premium on EU gas; hypothetical LNG displacement from long-haul contracts if Russian flows resume. Monitor negotiation outcomes for TTF volatility.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/von-der-leyen-energy-ceasefire-would-show-putin-is-serious-about-peace-talks/"
+    },
+    {
+      "headline": "Spain's PP-Vox right-wing coalition risks climate-policy reversal post-Nov. 29 vote",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bearish-power",
+      "why_it_matters": "Spain is EU's largest wind/solar capacity; climate-skeptic government could slow renewables deployment, reduce grid flexibility, raise thermal switching. Material for Iberian power baseload and EUA floor risk.",
+      "horizon": "weeks",
+      "link": "https://www.politico.eu/article/spain-looming-right-wing-pivot-on-climate-is-already-playing-out-in-valencia/"
+    },
+    {
+      "headline": "EU Parliament relaxes nature laws under right-wing pressure, accelerates industrial permitting",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "power",
+      "polarity": "bullish-power",
+      "why_it_matters": "Faster permitting for industrial infrastructure (esp. gas peakers, gas plants) increases supply-side flexibility; reduces renewable curtailment risk; could lower Cal+1 power and ease capacity-constrained spreads.",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/right-wing-majority-votes-to-speed-up-environmental-permitting-rules-for-industry/"
+    },
+    {
+      "headline": "EU green bond issuance target at risk; €100bn shortfall within one month",
+      "source": "Politico EU Energy",
+      "tag": "policy",
+      "commodity": "renewables",
+      "polarity": "bearish-power",
+      "why_it_matters": "Shortfall in green financing delays renewable capex deployment across EU; slower grid modernization and storage build-out pressures near-term power baseload and storage arbitrage windows (peak/off-peak spreads).",
+      "horizon": "months",
+      "link": "https://www.politico.eu/article/eu-falling-drastically-short-of-green-spending-target/"
+    },
+    {
+      "headline": "U.S. natural gas storage exits injection season 2% above five-year average",
+      "source": "EIA Today in Energy",
+      "tag": "supply",
+      "commodity": "gas",
+      "polarity": "bearish-power",
+      "why_it_matters": "Above-normal US storage reduces LNG export urgency; indirect downward pressure on US HH prices → lower arbitrage spread to TTF. Keeps NW Europe LNG import appetite modest heading into winter draw season.",
+      "horizon": "weeks",
+      "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484"
+    }
+  ],
+  "watchlist": [
+    "Spain election Nov. 29; monitor PP-Vox coalition formation and climate policy stance.",
+    "EU green bond issuance deadline (early December); impact on renewable capex velocity.",
+    "Ukraine peace talks next round; watch for energy ceasefire language and LNG flow implications.",
+    "EU nature law / permitting finalization; gas plant acceleration timeline."
+  ],
+  "source": "claude",
+  "model": "claude-haiku-4-5",
+  "n_headlines_in": 17,
+  "error": null
+}

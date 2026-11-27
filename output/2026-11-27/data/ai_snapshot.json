@@ -1,0 +1,225 @@
+{
+  "aggregate_brief": "Today's standouts: Clean Spark \u2014 94th-percentile of 5-yr range \u2014 historically high; Coal \u2014 8th-percentile of 5-yr range \u2014 historically low; EU Storage \u2014 18.2 pp below the 5-yr seasonal average.",
+  "freshness": {
+    "any_stale": true,
+    "stale_metrics": [
+      {
+        "as_of": "2025-12-26",
+        "days_old": 336,
+        "key": "coal"
+      },
+      {
+        "as_of": "2025-12-31",
+        "days_old": 331,
+        "key": "clean_dark"
+      }
+    ]
+  },
+  "metrics": {
+    "clean_dark": {
+      "as_of": "2025-12-31",
+      "available": true,
+      "daily_change_abs": -0.56,
+      "days_old": 331,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": -0.42,
+      "headline": "Within typical range",
+      "is_stale": true,
+      "latest": 27.95,
+      "monthly_change_abs": 8.67,
+      "name": "Clean Dark",
+      "percentile_rank_5y": 48.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 11.63
+    },
+    "clean_spark": {
+      "as_of": "2026-11-27",
+      "available": true,
+      "daily_change_abs": -56.34,
+      "days_old": 0,
+      "delta_unit": "EUR/MWh",
+      "extension_50d_sigma": 0.5,
+      "headline": "94th-percentile of 5-yr range \u2014 historically high",
+      "is_stale": false,
+      "latest": 48.75,
+      "monthly_change_abs": -14.3,
+      "name": "Clean Spark",
+      "percentile_rank_5y": 94.0,
+      "unit": "EUR/MWh",
+      "weekly_change_abs": 47.12
+    },
+    "coal": {
+      "as_of": "2025-12-26",
+      "available": true,
+      "daily_change_pct": -0.57,
+      "days_old": 336,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.18,
+      "headline": "8th-percentile of 5-yr range \u2014 historically low",
+      "is_stale": true,
+      "latest": 96.0,
+      "monthly_change_pct": -0.1,
+      "name": "Coal",
+      "percentile_rank_5y": 8.0,
+      "unit": "USD/t",
+      "weekly_change_pct": 0.08
+    },
+    "de_power": {
+      "as_of": "2026-11-27",
+      "available": true,
+      "daily_change_pct": -19.31,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.43,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 235.43,
+      "monthly_change_pct": -8.53,
+      "name": "DE Power",
+      "percentile_rank_5y": 90.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 26.65
+    },
+    "eua": {
+      "as_of": "2026-11-25",
+      "available": true,
+      "daily_change_pct": -0.89,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -1.83,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 32.81,
+      "monthly_change_pct": -5.58,
+      "name": "EUA Carbon",
+      "percentile_rank_5y": 36.0,
+      "unit": "EUR/tCO2",
+      "weekly_change_pct": -4.62
+    },
+    "gb_power": {
+      "as_of": "2026-11-27",
+      "available": true,
+      "daily_change_pct": -22.77,
+      "days_old": 0,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.19,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 203.29,
+      "monthly_change_pct": -26.73,
+      "name": "GB Power",
+      "percentile_rank_5y": 90.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 7.33
+    },
+    "renewable_share": {
+      "as_of": "2026-11-26",
+      "available": true,
+      "daily_change_pct": -18.33,
+      "days_old": 1,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -0.55,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 31.87,
+      "monthly_change_pct": -18.13,
+      "name": "Renewables",
+      "percentile_rank_5y": 24.0,
+      "unit": "% of load",
+      "weekly_change_pct": -40.27
+    },
+    "storage": {
+      "as_of": "2026-11-25",
+      "available": true,
+      "daily_change_pct": -0.93,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": -2.45,
+      "headline": "18.2 pp below the 5-yr seasonal average",
+      "is_stale": false,
+      "latest": 67.2,
+      "monthly_change_pct": -8.86,
+      "name": "EU Storage",
+      "percentile_rank_5y": 49.0,
+      "unit": "% full",
+      "weekly_change_pct": -2.14
+    },
+    "ttf": {
+      "as_of": "2026-11-25",
+      "available": true,
+      "daily_change_pct": -4.76,
+      "days_old": 2,
+      "delta_unit": "pct",
+      "extension_50d_sigma": 0.33,
+      "headline": "Within typical range",
+      "is_stale": false,
+      "latest": 87.3,
+      "monthly_change_pct": -9.12,
+      "name": "TTF Gas",
+      "percentile_rank_5y": 80.0,
+      "unit": "EUR/MWh",
+      "weekly_change_pct": 1.71
+    }
+  },
+  "news": {
+    "geopolitics_summary": "Spain's Nov. 29 election may swing policy rightward on climate; EU nature laws face relaxation pressure; Ukraine energy ceasefire remains pivotal for Russian negotiation signals.",
+    "themes": [
+      {
+        "commodity": "gas",
+        "headline": "Von der Leyen signals energy ceasefire as Ukraine peace-talk litmus test",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/von-der-leyen-energy-ceasefire-would-show-putin-is-serious-about-peace-talks/",
+        "polarity": "neutral",
+        "source": "Politico EU Energy",
+        "tag": "geopolitics",
+        "why_it_matters": "Any Russia\u2013Ukraine energy ceasefire would directly reduce war-risk premium on EU gas; hypothetical LNG displacement from long-haul contracts if Russian flows resume. Monitor negotiation outcomes for TTF volatility."
+      },
+      {
+        "commodity": "power",
+        "headline": "Spain's PP-Vox right-wing coalition risks climate-policy reversal post-Nov. 29 vote",
+        "horizon": "weeks",
+        "link": "https://www.politico.eu/article/spain-looming-right-wing-pivot-on-climate-is-already-playing-out-in-valencia/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Spain is EU's largest wind/solar capacity; climate-skeptic government could slow renewables deployment, reduce grid flexibility, raise thermal switching. Material for Iberian power baseload and EUA floor risk."
+      },
+      {
+        "commodity": "power",
+        "headline": "EU Parliament relaxes nature laws under right-wing pressure, accelerates industrial permitting",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/right-wing-majority-votes-to-speed-up-environmental-permitting-rules-for-industry/",
+        "polarity": "bullish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Faster permitting for industrial infrastructure (esp. gas peakers, gas plants) increases supply-side flexibility; reduces renewable curtailment risk; could lower Cal+1 power and ease capacity-constrained spreads."
+      },
+      {
+        "commodity": "renewables",
+        "headline": "EU green bond issuance target at risk; \u20ac100bn shortfall within one month",
+        "horizon": "months",
+        "link": "https://www.politico.eu/article/eu-falling-drastically-short-of-green-spending-target/",
+        "polarity": "bearish-power",
+        "source": "Politico EU Energy",
+        "tag": "policy",
+        "why_it_matters": "Shortfall in green financing delays renewable capex deployment across EU; slower grid modernization and storage build-out pressures near-term power baseload and storage arbitrage windows (peak/off-peak spreads)."
+      },
+      {
+        "commodity": "gas",
+        "headline": "U.S. natural gas storage exits injection season 2% above five-year average",
+        "horizon": "weeks",
+        "link": "https://www.eia.gov/todayinenergy/detail.php?id=68484",
+        "polarity": "bearish-power",
+        "source": "EIA Today in Energy",
+        "tag": "supply",
+        "why_it_matters": "Above-normal US storage reduces LNG export urgency; indirect downward pressure on US HH prices \u2192 lower arbitrage spread to TTF. Keeps NW Europe LNG import appetite modest heading into winter draw season."
+      }
+    ],
+    "watchlist": [
+      "Spain election Nov. 29; monitor PP-Vox coalition formation and climate policy stance.",
+      "EU green bond issuance deadline (early December); impact on renewable capex velocity.",
+      "Ukraine peace talks next round; watch for energy ceasefire language and LNG flow implications.",
+      "EU nature law / permitting finalization; gas plant acceleration timeline."
+    ]
+  }
+}
